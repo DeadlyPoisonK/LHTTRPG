@@ -11,3 +11,9 @@ Thumbs.db
 
 # Editor
 .vscode/
+
+# Claude Code cross-session notes (local only)
+.claude/
+
+# graphify knowledge-graph index (local dev tool cache, regenerate with /graphify)
+graphify-out/

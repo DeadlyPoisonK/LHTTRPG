@@ -1602,6 +1602,9 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 }
 
 .lhtrpg .inventory-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: flex-start;
   gap: 10px;
   margin: 6px 15px 0 20px;
