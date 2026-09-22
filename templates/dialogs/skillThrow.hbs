@@ -1,0 +1,74 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="grid grid-card  ">
+      <img class="card-img" src="{{img}}" data-edit="img" title="{{item.name}}" />
+      <h1 class="card-name">
+        <span name="name" type="text" value="{{name}}" placeholder="Name">{{name}}</span>
+        </h1>
+      </div>
+  </header>
+
+  <section class="sheet-stats card-grid1">
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
+      <input class="card-input" type="text" name="system.checkType" value="{{system.checkType}}"
+        placeholder="{{localize 'LHTRPG.Skill.Placeholder.Check'}}" data-dtype="text" disabled>
+    </div>
+  </section>
+
+  <section class="sheet-stats card-grid">
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.SR'}}</label>
+      <div>
+        <input class="card-input" type="text" name="system.skillRank.value" value="{{system.skillRank.value}}/{{system.skillRank.max}}"
+          placeholder="0" data-dtype="Number" maxlength="2" disabled>
+      </div>
+    </div>
+
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Timing'}}</label>
+      <input class="card-input" type="text" name="system.timing" value="{{system.timing}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Timing'}}"
+        data-dtype="text" disabled>
+    </div>
+
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Target'}}</label>
+      <input class="card-input" type="text" name="system.target" value="{{system.target}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Target'}}"
+        data-dtype="text" disabled>
+    </div>
+
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Range'}}</label>
+      <input class="card-input" type="text" name="system.range" value="{{system.range}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Range'}}"
+        data-dtype="text" disabled>
+    </div>
+
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Cost'}}</label>
+      <input class="card-input" type="text" name="system.cost" value="{{system.cost}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Cost'}}" data-dtype="text" disabled>
+    </div>
+
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Skill.Label.Limit'}}</label>
+      <input class="card-input" type="text" name="system.limit" value="{{system.limit}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Limit'}}"
+        data-dtype="text" disabled>
+    </div>
+  </section>
+
+
+    <section class="sheet-stats card-grid1">
+    <div class="card-div">
+      <label>{{localize 'LHTRPG.Description.Label'}}</label>
+    <footer class="card-description" name="description" type="text" value="{{system.description}}" placeholder="" readonly>
+     {{{system.description}}}
+    </footer>
+    </div>
+  </section>
+  
+</form>
+
+
+
+
+
+

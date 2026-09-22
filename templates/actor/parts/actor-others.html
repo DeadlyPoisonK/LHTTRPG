@@ -1,0 +1,75 @@
+<h4 class="tab-title">
+	OTHERS
+</h4>
+<div class="stats grid grid-6col">
+	<div class="grid-span-3 status-row">
+		<div class="status-input flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/regen.png" title="{{regen}}" width="24" height="24" /></img>
+			<label for="system.bad-status.regen">{{localize 'LHTRPG.Label.Regen'}}</label>
+			<input class="neffect" type="number" name="system.bad-status.regen" value="{{system.bad-status.regen}}" 
+			placeholder="0" maxlength="2" data-dtype="Number" />
+		</div>
+		<div class="status-input flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/cancel.png" title="{{cancel}}" width="24" height="24" /></img>
+			<label for="system.bad-status.cancel">{{localize 'LHTRPG.Label.Cancel'}}</label>
+			<input class="neffect" type="number" name="system.bad-status.cancel" value="{{system.bad-status.cancel}}" 
+			placeholder="0" maxlength="2" data-dtype="Number" />
+		</div>
+		<div class="status-input flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/barrier.png" title="{{barrier}}" width="24" height="24" /></img>
+			<label for="system.bad-status.barrier">{{localize 'LHTRPG.Label.Barrier'}}</label>
+			<input class="neffect" type="number" name="system.bad-status.barrier" value="{{system.bad-status.barrier}}" 
+			placeholder="0" maxlength="2" data-dtype="Number" />
+		</div>
+		<div class="status-input flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/decay.png" title="{{decay}}" width="24" height="24" /></img>
+			<label for="system.bad-status.decay">{{localize 'LHTRPG.Label.Decay'}}</label>
+			<input class="neffect" type="number" name="system.bad-status.decay" value="{{system.bad-status.decay}}" 
+			placeholder="0" maxlength="2" data-dtype="Number" />
+		</div>
+		<div class="status-input flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/pursuit.png" title="{{pursuit}}" width="24" height="24" /></img>
+			<label for="system.bad-status.pursuit">{{localize 'LHTRPG.Label.Pursuit'}}</label>
+			<input class="neffect" type="number" name="system.bad-status.pursuit" value="{{system.bad-status.pursuit}}" 
+			placeholder="0" maxlength="2" data-dtype="Number" />
+		</div>
+	</div>
+<div class="grid-span-3 status-row">
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/dazed.png" title="{{dazed}}" width="24" height="24" /></img>
+			<label for="system.bad-status.dazed">{{localize 'LHTRPG.Label.Dazed'}}</label>
+			<input type="checkbox" name="system.bad-status.dazed" {{checked system.bad-status.dazed}}
+			data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/rigor.png" title="{{rigor}}" width="24" height="24" /></img>
+			<label for="system.bad-status.rigor">{{localize 'LHTRPG.Label.Rigor'}}</label>
+			<input type="checkbox" name="system.bad-status.rigor" {{checked system.bad-status.rigor}}
+			data-dtype="Boolean" />
+		</div>	
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/confused.png" title="{{confused}}" width="24" height="24" /></img>
+			<label for="system.bad-status.confused">{{localize 'LHTRPG.Label.Confused'}}</label>
+			<input type="checkbox" name="system.bad-status.confused" {{checked system.bad-status.confused}}
+			data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/staggered.png" title="{{staggered}}" width="24" height="24" /></img>			
+			<label for="system.bad-status.staggered">{{localize 'LHTRPG.Label.Staggered'}}</label>
+			<input type="checkbox" name="system.bad-status.staggered" {{checked system.bad-status.staggered}}
+			data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/afflicted.png" title="{{afflicted}}" width="24" height="24" /></img>
+			<label for="system.bad-status.afflicted">{{localize 'LHTRPG.Label.Afflicted'}}</label>
+			<input type="checkbox" name="system.bad-status.afflicted" {{checked system.bad-status.afflicted}}
+			data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<img style="flex: 0; margin-right: 5px;" src="systems/lhtrpg/assets/ui/effects/overconfident.png" title="{{overconfident}}" width="24" height="24" /></img>
+			<label for="system.bad-status.overconfident">{{localize 'LHTRPG.Label.Overconfident'}}</label>
+			<input type="checkbox" name="system.bad-status.overconfident"
+			{{checked system.bad-status.overconfident}} data-dtype="Boolean" />
+		</div>
+	</div>
+</div>
