@@ -1,0 +1,29 @@
+<div class="lhtrpg chat-card skill-chat-card">
+	<header class="chat-card-header">
+		<img class="chat-card-img" src="{{img}}" alt="{{name}}" />
+		<div class="chat-card-title">
+			<h3>{{name}}</h3>
+			<span class="chat-card-type">{{localize 'TYPES.ITEM.TypeSkill'}}</span>
+		</div>
+	</header>
+
+	{{#if system.tags.length}}
+	<div class="chat-card-tags">
+		{{#each system.tags as |tag|}}<span class="tag">{{tag}}</span>{{/each}}
+	</div>
+	{{/if}}
+
+	<div class="chat-card-stats">
+		{{#if system.checkType}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{system.checkType}}</span></div>{{/if}}
+		{{#if system.skillRank.max}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.SR'}}</span><span class="chat-stat-value">{{system.skillRank.value}}/{{system.skillRank.max}}</span></div>{{/if}}
+		{{#if system.timing}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Timing'}}</span><span class="chat-stat-value">{{system.timing}}</span></div>{{/if}}
+		{{#if system.target}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Target'}}</span><span class="chat-stat-value">{{system.target}}</span></div>{{/if}}
+		{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Range'}}</span><span class="chat-stat-value">{{system.range}}</span></div>{{/if}}
+		{{#if system.cost}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{system.cost}}</span></div>{{/if}}
+		{{#if system.limit}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Limit'}}</span><span class="chat-stat-value">{{system.limit}}</span></div>{{/if}}
+	</div>
+
+	{{#if enrichedDescription}}
+	<div class="chat-card-description">{{{enrichedDescription}}}</div>
+	{{/if}}
+</div>
