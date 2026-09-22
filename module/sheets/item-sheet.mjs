@@ -50,7 +50,8 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     context.flags = itemData.flags;
 
     context.enrichments = {
-      "description": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.description, {async: true})
+      "description": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.description, {async: true}),
+      "skillText": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.skillText ?? "", {async: true})
     };
 
     context.effects = prepareActiveEffectCategories(this.item.effects);

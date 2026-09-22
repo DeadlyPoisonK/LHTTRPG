@@ -20,6 +20,8 @@
 
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html",
+    "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html",
+    "systems/lhtrpg/templates/actor/parts/skills/skills-grid.html",
 
     "systems/lhtrpg/templates/actor/parts/monster-skills.html",
     "systems/lhtrpg/templates/actor/parts/monster-effects.html",

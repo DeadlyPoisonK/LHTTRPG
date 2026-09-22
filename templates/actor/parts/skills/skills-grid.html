@@ -1,0 +1,22 @@
+<h4 class="tab-title">
+	SKILLS
+</h4>
+
+<div class="skills-grid">
+	{{#each skills as |item id|}}
+		<div class="item skill-tile" data-item-id="{{item._id}}">
+			<a class="item-control item-throw item-image" title="{{item.name}} — {{item.system.timing}} — {{item.system.checkType}}">
+				<img src="{{item.img}}" width="48" height="48" />
+			</a>
+			<div class="items-control">
+				<a class="item-control item-edit" title=""><i class="fas fa-edit"></i></a>
+				<a class="item-control item-delete" title=""><i class="fas fa-trash"></i></a>
+			</div>
+			<span class="slot-label">{{item.name}}</span>
+		</div>
+	{{/each}}
+	<a class="item skill-tile add-tile item-create" data-type="skill" data-subtype="{{subtype}}" title="{{localize 'LHTRPG.Add'}}">
+		<div class="item-image add-icon"><i class="fas fa-plus"></i></div>
+		<span class="slot-label">{{localize "LHTRPG.Add"}}</span>
+	</a>
+</div>

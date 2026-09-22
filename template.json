@@ -206,7 +206,8 @@
       "itemBase": {
         "rank": 1,
         "price": 0,
-        "equipped": false
+        "equipped": false,
+        "skillText": ""
       },
       "defenses": {
         "pdef": 0,

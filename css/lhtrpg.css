@@ -431,6 +431,14 @@ div.app.lhtrpg.actor section.window-content {
   overflow: visible;
 }
 
+/* The Skills and Items tabs use a variant background with the section-title
+   underline removed, since that line used to cross their tab-title text and
+   made it unreadable. Other tabs keep the original artwork. */
+div.app.lhtrpg.actor:has(.tab[data-tab="skills"].active) section.window-content,
+div.app.lhtrpg.actor:has(.tab[data-tab="items"].active) section.window-content {
+  background-image: url("../assets/ui/bg_charsheet_notitle.webp");
+}
+
 div.app.lhtrpg.actor .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 285px;
@@ -707,6 +715,7 @@ div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a {
   line-height: 45px;
   height: 45px;
   width: 120px;
+  color: #fff;
   -webkit-filter: grayscale(100%) opacity(50%);
   filter: grayscale(100%) opacity(50%);
   -webkit-transition: -webkit-filter 0.3s ease-in;
@@ -1316,6 +1325,115 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   max-height: 210px;
 }
 
+/* Skills are shown as an icon grid (like the Items equipment slots) instead
+   of a spreadsheet-style list, so the icons assigned to each skill are the
+   focal point. The Skills tab's background variant has no mid-content
+   divider line, so it can use the full ~280px budget. */
+.lhtrpg .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-auto-rows: auto;
+  gap: 12px 8px;
+  margin: 10px 15px 0 15px;
+  max-height: 280px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.lhtrpg .skills-grid .item.skill-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  position: relative;
+}
+
+.lhtrpg .skills-grid .item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  background-image: url("../assets/ui/inventory/item-bg.webp");
+  background-size: 56px;
+  border: none;
+}
+
+.lhtrpg .skills-grid .item-image img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.lhtrpg .skills-grid .item.skill-tile:hover .item-image {
+  -webkit-filter: brightness(1.4);
+  filter: brightness(1.4);
+}
+
+.lhtrpg .skills-grid .items-control {
+  display: none;
+  position: absolute;
+  top: 38px;
+  width: 56px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.lhtrpg .skills-grid .item.skill-tile:hover .items-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lhtrpg .skills-grid .items-control a.item-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #488e56;
+  width: 20px;
+  height: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.lhtrpg .skills-grid .items-control .item-edit {
+  color: #222222;
+}
+
+.lhtrpg .skills-grid .items-control .item-delete {
+  color: #c6515d;
+}
+
+.lhtrpg .skills-grid .slot-label {
+  font-family: "Noto Serif JP", serif;
+  font-size: 10px;
+  color: #d6ffda;
+  text-align: center;
+  line-height: 1.15;
+  max-width: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lhtrpg .skills-grid .add-tile .item-image.add-icon {
+  border: 1px dashed rgba(214, 255, 218, 0.4);
+  background-image: none;
+  opacity: 0.6;
+  font-size: 20px;
+  color: #d6ffda;
+}
+
+.lhtrpg .skills-grid .add-tile:hover .item-image.add-icon {
+  opacity: 1;
+  border-color: #d6ffda;
+}
+
 .lhtrpg .items-list .item-list {
   list-style: none;
   margin: 0;
@@ -1483,20 +1601,116 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   border-radius: 5px;
 }
 
-.lhtrpg .inventory-list {
-  list-style: none;
-  margin: 10px 20px 0 20px;
-  padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
+.lhtrpg .inventory-layout {
+  align-items: flex-start;
+  gap: 10px;
+  margin: 6px 15px 0 20px;
+}
+
+.lhtrpg .equipment-slots {
+  flex: 0 0 auto;
+}
+
+.lhtrpg .equipment-title {
+  margin: 0 0 6px 0;
+  font-family: "Noto Serif JP", serif;
+  font-size: 14px;
+  text-align: center;
   color: #d6ffda;
-  max-height: 216px;
+}
+
+.lhtrpg .equip-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 56px);
+  grid-auto-rows: auto;
+  gap: 12px;
+}
+
+.lhtrpg .equip-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 3px;
 }
 
+.lhtrpg .equip-slot.center-slot {
+  grid-column: 2;
+}
+
+.lhtrpg .equip-slot .item,
+.lhtrpg .equip-slot .empty-slot {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.lhtrpg .equip-slot .empty-slot {
+  border: 1px dashed rgba(214, 255, 218, 0.4);
+  border-radius: 5px;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.lhtrpg .equip-slot .empty-slot .slot-placeholder {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.lhtrpg .equip-slot.drag-over {
+  filter: brightness(1.4);
+}
+
+.lhtrpg .equip-slot.drag-over .empty-slot {
+  border-color: #d6ffda;
+  opacity: 1;
+}
+
+.lhtrpg .equip-slot .slot-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #d6ffda;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 1;
+}
+
+.lhtrpg .inventory-panel {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lhtrpg .inventory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  grid-auto-rows: 56px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #d6ffda;
+  max-height: 280px;
+  gap: 6px;
+}
+
 .lhtrpg .inventory-list .item {
-  height: 60px;
-  width: 60px;
+  height: 56px;
+  width: 56px;
+  position: relative;
+}
+
+.lhtrpg .inventory-list .empty-slot {
+  height: 56px;
+  width: 56px;
+  border: 1px dashed rgba(214, 255, 218, 0.25);
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .lhtrpg .inventory-list .item:hover {
@@ -1504,19 +1718,21 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   filter: brightness(1.5);
 }
 
-.lhtrpg .inventory-list .item:hover .items-control {
+.lhtrpg .inventory-list .item:hover .items-control,
+.lhtrpg .equip-slot .item:hover .items-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 40px;
-  width: 60px;
+  top: 38px;
+  width: 56px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.lhtrpg .inventory-list .item:hover a.item-control {
+.lhtrpg .inventory-list .item:hover a.item-control,
+.lhtrpg .equip-slot .item:hover a.item-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1531,15 +1747,18 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   align-items: center;
 }
 
-.lhtrpg .inventory-list .item:hover .item-equip {
+.lhtrpg .inventory-list .item:hover .item-equip,
+.lhtrpg .equip-slot .item:hover .item-equip {
   color: #222222;
 }
 
-.lhtrpg .inventory-list .item:hover .item-delete {
+.lhtrpg .inventory-list .item:hover .item-delete,
+.lhtrpg .equip-slot .item:hover .item-delete {
   color: #c6515d;
 }
 
-.lhtrpg .inventory-list .item-image {
+.lhtrpg .inventory-list .item-image,
+.lhtrpg .equip-slot .item-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1550,39 +1769,47 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
-  height: 60px;
-  background-size: 60px;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+  height: 50px;
+  background-size: 50px;
   border: none;
   background-image: url("../assets/ui/inventory/item-bg.webp");
+}
+
+.lhtrpg .inventory-list .item-image img,
+.lhtrpg .equip-slot .item-image img {
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .lhtrpg .inventory-list .item-image img {
   border: none;
 }
 
-.lhtrpg .inventory-list .items-control {
+.lhtrpg .inventory-list .items-control,
+.lhtrpg .equip-slot .items-control {
   display: none;
 }
 
-.lhtrpg .inventory-list .item.equipped a.item-control {
+.lhtrpg .inventory-list .item.equipped a.item-control,
+.lhtrpg .equip-slot .item.equipped a.item-control {
   background-color: #6251ba;
 }
 
-.lhtrpg .inventory-list .item.equipped .item-image {
+.lhtrpg .inventory-list .item.equipped .item-image,
+.lhtrpg .equip-slot .item.equipped .item-image {
   background-image: url("../assets/ui/inventory/equipped-bg.webp");
 }
 
 .lhtrpg .inventory-infos {
-  position: absolute;
-  top: 228px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5px 25px;
-  font-size: 36px;
-  height: 72px;
+  margin: 6px 5px 0 5px;
+  font-size: 22px;
+  height: auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1592,17 +1819,17 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 }
 
 .lhtrpg .inventory-infos input {
-  height: 36px;
+  height: 26px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 70px;
-  flex: 0 0 70px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
 }
 
 .lhtrpg .inventory-infos img {
   border: none;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 36px;
-  flex: 0 0 36px;
+  -ms-flex: 0 0 26px;
+  flex: 0 0 26px;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
@@ -1640,13 +1867,14 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg .inventory-infos .invSpace-input,
 .lhtrpg .inventory-infos .gold-input {
   text-align: right;
+  font-family: "Edu SA Beginner", cursive;
 }
 
 .lhtrpg .inventory-infos .gold-input {
-  font-size: 24px;
+  font-size: 18px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 120px;
-  flex: 0 0 120px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
 }
 
 .lhtrpg .inventory-infos .max {
@@ -1671,16 +1899,44 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg .inventory-infos .addItem .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
-  background-color: rgba(26, 41, 34, 0.9);
-  min-width: 160px;
+  min-width: 150px;
+  background-color: rgba(26, 41, 34, 0.95);
   border: 2px solid rgba(255, 255, 255, 0.5);
-  top: -100px;
+  top: -224px;
   left: -6px;
   border-radius: 5px;
+  padding: 4px 0;
   -webkit-box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
   z-index: 1;
+}
+
+.lhtrpg .inventory-infos .addItem .dropdown-content a.item-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.lhtrpg .inventory-infos .addItem .dropdown-content a.item-control:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.lhtrpg .inventory-infos .addItem .dropdown-content a.item-control img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+}
+
+.lhtrpg .inventory-infos .addItem .dropdown-content a.item-control span {
+  font-size: 14px;
+  color: #d6ffda;
 }
 
 .lhtrpg .inventory-infos .addItem .show {
@@ -1733,21 +1989,30 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg.sheet.item section,
 .lhtrpg.sheet.monster section {
-  color: #444;
+  color: #d6ffda;
   background-image: none;
-  background-color: #F9F9F9;
+  background-color: #1a2922;
   padding: 0;
 }
 
 .lhtrpg.sheet.item nav,
 .lhtrpg.sheet.monster nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1a2922;
   padding: 0;
 }
 
 .lhtrpg.sheet.item nav a.item,
 .lhtrpg.sheet.monster nav a.item {
-  width: 50%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+  width: auto;
+  text-align: center;
   padding: 5px 0 5px 0;
+  color: #d6ffda;
 }
 
 .lhtrpg.sheet.item nav a.item.active,
@@ -1759,7 +2024,7 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg.sheet.item .sheet-header,
 .lhtrpg.sheet.monster .sheet-header {
-  background-color: #222222;
+  background-color: #1a2922;
   color: white;
   padding: 8px;
 }
@@ -1806,7 +2071,7 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg.sheet.item .sheet-stats input,
 .lhtrpg.sheet.monster .sheet-stats input {
-  color: #444;
+  color: #d6ffda;
 }
 
 .lhtrpg.sheet.item .sheet-stats .stat-div,
@@ -1949,24 +2214,41 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg.sheet.item .items-header,
 .lhtrpg.sheet.monster .items-header {
-  color: #444;
+  color: #d6ffda;
+}
+
+/* Other modules (e.g. LocknKey) inject their own tabs into this sheet using
+   Foundry's default form styling, which assumes a light background. Keep
+   their labels and hint text readable against our dark green theme too. */
+.lhtrpg.sheet.item .tab label,
+.lhtrpg.sheet.monster .tab label,
+.lhtrpg.sheet.item .tab h3,
+.lhtrpg.sheet.monster .tab h3 {
+  color: #d6ffda;
+}
+
+.lhtrpg.sheet.item .tab p.hint,
+.lhtrpg.sheet.monster .tab p.hint,
+.lhtrpg.sheet.item .tab .hint,
+.lhtrpg.sheet.monster .tab .hint {
+  color: rgba(214, 255, 218, 0.7);
 }
 
 .lhtrpg.sheet.item .items-list,
 .lhtrpg.sheet.monster .items-list {
   margin-top: 0;
-  color: #444;
+  color: #d6ffda;
   max-height: 100%;
 }
 
 .lhtrpg.sheet.item .items-list .item,
 .lhtrpg.sheet.monster .items-list .item {
-  color: #444;
+  color: #d6ffda;
 }
 
 .lhtrpg.sheet.item .items-list .item .item-name,
 .lhtrpg.sheet.monster .items-list .item .item-name {
-  color: #444;
+  color: #d6ffda;
 }
 
 .lhtrpg.sheet.monster .status-row {
@@ -2008,8 +2290,141 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 
 .lhtrpg.chat-card {
+  font-family: "Noto Serif JP", serif;
   font-style: normal;
   font-size: 12px;
+  color: #d6ffda;
+  background-color: rgba(26, 41, 34, 0.9);
+  border: 1px solid rgba(214, 255, 218, 0.5);
+  border-radius: 6px;
+  padding: 8px;
+  -webkit-box-shadow: 0 0 4px rgba(214, 255, 218, 0.25);
+  box-shadow: 0 0 4px rgba(214, 255, 218, 0.25);
+}
+
+.lhtrpg.chat-card .chat-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(214, 255, 218, 0.35);
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lhtrpg.chat-card .chat-card-title {
+  min-width: 0;
+}
+
+.lhtrpg.chat-card .chat-card-title h3 {
+  margin: 0;
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 18px;
+  color: #d6ffda;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lhtrpg.chat-card .chat-card-type {
+  font-size: 11px;
+  color: #d6ffda;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.lhtrpg.chat-card .chat-card-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.chat-card .chat-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 44px;
+  padding: 3px 6px;
+  border: 1px solid rgba(214, 255, 218, 0.3);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.lhtrpg.chat-card .chat-stat-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #d6ffda;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.lhtrpg.chat-card .chat-stat-value {
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 16px;
+  color: #d6ffda;
+}
+
+.lhtrpg.chat-card .chat-card-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-tags .tag {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background-color: rgba(214, 255, 218, 0.15);
+  color: #d6ffda;
+  border: 1px solid rgba(214, 255, 218, 0.35);
+}
+
+.lhtrpg.chat-card .chat-card-description {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #e8fff0;
+  border-top: 1px solid rgba(214, 255, 218, 0.25);
+  padding-top: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-description p:first-child {
+  margin-top: 0;
+}
+
+.lhtrpg.chat-card .chat-card-description p:last-child {
+  margin-bottom: 0;
 }
 .dnd5e.chat-card .card-header {
   padding: 3px 0;

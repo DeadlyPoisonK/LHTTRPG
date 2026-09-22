@@ -24,6 +24,11 @@
       "SkillsDone": "API Import - Skills importation done!"
     }
   },
+  "INVENTORY": {
+    "Notif": {
+      "WrongItemType": "{item} ({type}) cannot be equipped in the {slot} slot."
+    }
+  },
   "LHTRPG": {
     "Add": "Add",
     "Biography": {
@@ -81,6 +86,7 @@
         "Price": "Price",
         "Range": "Range",
         "Rank": "Rank",
+        "Skill": "Skill",
         "Target": "Target",
         "Timing": "Timing"
       }
@@ -93,6 +99,8 @@
       "Dazed": "Dazed",
       "Decay": "Decay",
       "Defense": "Defense",
+      "EmptySlot": "Empty",
+      "Equipment": "Equipment",
       "Fate": "Fate",
       "Fatigue": "FATIGUE",
       "Guild": "Guild",
@@ -100,6 +108,7 @@
       "Hate": "HATE",
       "ImportItems": "Import Items from lhrpg.com",
       "ImportSkills": "Import Skills from lhrpg.com",
+      "Inventory": "Inventory",
       "Overconfident": "Overconfident",
       "Power": "Offense",
       "Pursuit": "Pursuit",

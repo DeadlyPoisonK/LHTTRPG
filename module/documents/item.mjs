@@ -7,12 +7,12 @@ export class LHTrpgItem extends Item {
   
   chatTemplate = {
     "skill": "systems/lhtrpg/templates/dialogs/skillThrow.hbs",
-    "weapon": "systems/lhtrpg/templates/item/item-weapon-sheet.html",
-    "armor": "systems/lhtrpg/templates/item/item-armor-sheet.html",
-    "shield": "systems/lhtrpg/templates/item/item-shield-sheet.html",
-    "accessory": "systems/lhtrpg/templates/item/item-accessory-sheet.html",
-    "bag": "systems/lhtrpg/templates/item/item-bag-sheet.html",
-    "gear": "systems/lhtrpg/templates/item/item-gear-sheet.html",
+    "weapon": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "armor": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "shield": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "accessory": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "bag": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "gear": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "valuable": "systems/lhtrpg/templates/item/item-valuable-sheet.html",
     "connection": "systems/lhtrpg/templates/item/item-connection-sheet.html",
     "union": "systems/lhtrpg/templates/item/item-union-sheet.html",
@@ -128,15 +128,26 @@ export class LHTrpgItem extends Item {
         speaker: ChatMessage.getSpeaker(),
     };
 
+    const enrichedDescription = system.description
+      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, { async: true })
+      : "";
+
     let cardData = {
         ...element.toObject(),
-        owner: element.actor.id
+        owner: element.actor.id,
+        typeLabel: game.i18n.localize(`TYPES.ITEM.Type${element.type.capitalize()}`),
+        isWeapon: element.type === "weapon",
+        isArmor: element.type === "armor",
+        isShield: element.type === "shield",
+        isAccessory: element.type === "accessory",
+        isBag: element.type === "bag",
+        isGear: element.type === "gear",
+        enrichedDescription
     };
 
     // Renderizar la plantilla del chat
     chatData.content = await foundry.applications.handlebars.renderTemplate(this.chatTemplate[element.type], cardData);
     chatData.roll = true;
-    console.log(chatData);
     return ChatMessage.create(chatData);
 }
 }

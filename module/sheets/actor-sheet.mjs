@@ -19,7 +19,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
       { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }],
       dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
-      {dragSelector: ".inventory-list .item", dropSelector: null}]
+      {dragSelector: ".inventory-list .item", dropSelector: null},
+      {dragSelector: ".equip-slots-grid .item", dropSelector: null}]
     });
   }
 
@@ -198,6 +199,17 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "gear": itemsGear,
     }
 
+    // Unequipped items fill the general inventory grid, one slot each, up to
+    // the bag-derived maxSpace. Remaining slots render as empty placeholders
+    // so the right-hand panel always shows the actual carrying capacity.
+    const carriedItems = [].concat(itemsWeapon, itemsArmor, itemsShield, itemsAccessory, itemsBag, itemsGear);
+    const maxSpace = context.system.inventory?.maxSpace ?? carriedItems.length;
+    const inventorySlots = carriedItems.slice(0, maxSpace);
+    for (let i = inventorySlots.length; i < maxSpace; i++) {
+      inventorySlots.push(null);
+    }
+    context.inventorySlots = inventorySlots;
+
     context.social = {
       "connections": itemsConnection,
       "unions": itemsUnion
@@ -306,6 +318,120 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+
+    // Equip an item by dragging it onto one of the equipment slots.
+    html.find('.equip-slot').each((i, slot) => {
+      slot.addEventListener("dragover", ev => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        slot.classList.add("drag-over");
+      });
+      slot.addEventListener("dragleave", () => slot.classList.remove("drag-over"));
+      slot.addEventListener("drop", ev => {
+        slot.classList.remove("drag-over");
+        this._onEquipSlotDrop(ev, slot);
+      });
+    });
+
+    // Unequip an item by dragging it back onto the general inventory grid.
+    const inventoryList = html.find('.inventory-list')[0];
+    if (inventoryList) {
+      inventoryList.addEventListener("dragover", ev => ev.preventDefault());
+      inventoryList.addEventListener("drop", ev => this._onInventoryDrop(ev));
+    }
+  }
+
+  /**
+   * Extract the drag payload from a drop event, regardless of which API is
+   * available on this Foundry version.
+   * @param {DragEvent} event
+   * @returns {object|null}
+   * @private
+   */
+  _getDropData(event) {
+    let data;
+    try {
+      data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+    } catch (err) {
+      data = null;
+    }
+    if (!data || !Object.keys(data).length) {
+      try {
+        data = JSON.parse(event.dataTransfer.getData("text/plain"));
+      } catch (err) {
+        return null;
+      }
+    }
+    return data;
+  }
+
+  /**
+   * Handle dropping an Item back onto the general inventory grid, unequipping
+   * it if it was equipped. Newly dropped items and simple reordering are left
+   * to the sheet's default drop handling.
+   * @param {DragEvent} event
+   * @private
+   */
+  async _onInventoryDrop(event) {
+    event.preventDefault();
+
+    const data = this._getDropData(event);
+    if (!data || data.type !== "Item") return;
+
+    const item = await Item.implementation.fromDropData(data);
+    if (!item) return;
+
+    if (item.parent?.id === this.actor.id && item.system.equipped === true) {
+      event.stopPropagation();
+      await item.update({ "system.equipped": false });
+    }
+  }
+
+  /**
+   * Handle dropping an Item onto one of the equipment slots, equipping it
+   * if its type matches the slot and swapping out whatever previously
+   * occupied that slot.
+   * @param {DragEvent} event
+   * @param {HTMLElement} slot
+   * @private
+   */
+  async _onEquipSlotDrop(event, slot) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const data = this._getDropData(event);
+    if (!data || data.type !== "Item") return;
+
+    let item = await Item.implementation.fromDropData(data);
+    if (!item) return;
+
+    // Copy the item onto this actor first if it isn't already owned by it.
+    if (item.parent?.id !== this.actor.id) {
+      const [created] = await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
+      item = created;
+    }
+
+    const slotType = slot.dataset.slotType;
+    const slotIndex = Number(slot.dataset.slotIndex ?? 0);
+
+    if (item.type !== slotType) {
+      ui.notifications.warn(game.i18n.format("INVENTORY.Notif.WrongItemType", {
+        item: item.name,
+        type: game.i18n.localize(`TYPES.ITEM.Type${item.type.capitalize()}`),
+        slot: game.i18n.localize(`TYPES.ITEM.Type${slotType.capitalize()}`)
+      }));
+      return;
+    }
+
+    // Whatever currently sits in this exact slot (by equip order) gets
+    // unequipped and returned to the general inventory.
+    const equippedOfType = this.actor.items.filter(i => i.type === slotType && i.system.equipped === true && i.id !== item.id);
+    const occupant = equippedOfType[slotIndex] ?? null;
+
+    const updates = [];
+    if (occupant) updates.push({ _id: occupant.id, "system.equipped": false });
+    if (item.system.equipped !== true) updates.push({ _id: item.id, "system.equipped": true });
+    if (updates.length) await this.actor.updateEmbeddedDocuments("Item", updates);
   }
 
   /**
