@@ -12,6 +12,7 @@
       "TypeGear": "Gear",
       "TypeShield": "Shield",
       "TypeSkill": "Skill",
+      "TypeTicket": "Ticket",
       "TypeUnion": "Union",
       "TypeWeapon": "Weapon"
     }
@@ -84,10 +85,12 @@
         "Main": "Main Weapon",
         "PDef": "Phys. Def.",
         "Price": "Price",
+        "Quantity": "Quantity",
         "Range": "Range",
         "Rank": "Rank",
         "Skill": "Skill",
         "Target": "Target",
+        "ThrowToChat": "Send to Chat",
         "Timing": "Timing"
       }
     },
@@ -100,6 +103,7 @@
       "Decay": "Decay",
       "Defense": "Defense",
       "EmptySlot": "Empty",
+      "Equip": "Equip",
       "Equipment": "Equipment",
       "Fate": "Fate",
       "Fatigue": "FATIGUE",
@@ -114,9 +118,11 @@
       "Pursuit": "Pursuit",
       "Race": "Race",
       "Regen": "Regen",
+      "Remove": "Remove",
       "Rigor": "Rigor",
       "Staggered": "Staggered",
       "Tags": "Tags",
+      "Tickets": "Tickets",
       "Type": "Type",
       "afflicted": "Afflicted",
       "barrier": "Barrier",
@@ -173,6 +179,14 @@
         "Combat": "Combat",
         "General": "General",
         "Monster": "Monster"
+      }
+    },
+    "Ticket": {
+      "Type": {
+        "Treasure": "Treasure Ticket",
+        "Fate": "Fate Ticket",
+        "Connection": "Connection Ticket",
+        "Reset": "Reset Ticket"
       }
     },
     "Status": {

@@ -4,45 +4,42 @@
   <section class="sheet-stats">
 
     <div class="stat-div">
+      <label>{{localize 'LHTRPG.Label.Type'}}</label>
+      <div>
+        <select name="system.subtype" value="{{system.subtype}}">
+          {{#select system.subtype}}
+            <option value="Treasure">{{localize 'LHTRPG.Ticket.Type.Treasure'}}</option>
+            <option value="Fate">{{localize 'LHTRPG.Ticket.Type.Fate'}}</option>
+            <option value="Connection">{{localize 'LHTRPG.Ticket.Type.Connection'}}</option>
+            <option value="Reset">{{localize 'LHTRPG.Ticket.Type.Reset'}}</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Quantity'}}</label>
+      <div>
+        <input class="itemQuantity-input" type="text" name="system.quantity" value="{{system.quantity}}" placeholder="1"
+          data-dtype="Number" maxlength="3">
+      </div>
+    </div>
+
+    <div class="stat-div">
       <label>{{localize 'LHTRPG.Item.Label.Rank'}}</label>
       <div>
-        <input class="itemRank-input" type="text" name="system.rank" value="{{system.rank}}"
-          placeholder="0" data-dtype="Number" maxlength="2">
-      </div>
-    </div>
-
-    <div class="stat-div">
-      <label>{{localize 'LHTRPG.Item.Label.PDef'}}</label>
-      <div>
-        <input class="itemPDef-input" type="text" name="system.pdef" value="{{system.pdef}}"
-          placeholder="0" data-dtype="Number" maxlength="2">
-      </div>
-    </div>
-
-    <div class="stat-div">
-      <label>{{localize 'LHTRPG.Item.Label.MDef'}}</label>
-      <div>
-        <input class="itemMDef-input" type="text" name="system.mdef" value="{{system.mdef}}"
-          placeholder="0" data-dtype="Number" maxlength="2">
+        <input class="itemRank-input" type="text" name="system.rank" value="{{system.rank}}" placeholder="0"
+          data-dtype="Number" maxlength="2">
       </div>
     </div>
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Item.Label.Price'}}</label>
       <div>
-        <input class="itemPrice-input" type="text" name="system.price" value="{{system.price}}"
-          placeholder="0" data-dtype="Number">
+        <input class="itemPrice-input" type="text" name="system.price" value="{{system.price}}" placeholder="0"
+          data-dtype="Number">
       </div>
     </div>
-
-    <div class="stat-div">
-      <label>{{localize 'LHTRPG.Item.Label.Equipped'}}</label>
-      <div>
-      <input class="itemEquipped-input" type="checkbox" name="system.equipped" {{checked system.equipped}} data-dtype="Boolean" />
-      </div>
-    </div>
-
-    {{> "systems/lhtrpg/templates/item/parts/item-linked-skill.html"}}
 
   </section>
 
@@ -53,7 +50,7 @@
   </nav>
 
   {{!-- Sheet Body --}}
-  <section class="sheet-body itemShield">
+  <section class="sheet-body itemTicket">
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">

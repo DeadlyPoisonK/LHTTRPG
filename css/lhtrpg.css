@@ -683,7 +683,8 @@ div.app.lhtrpg.actor .sheet-body .stats {
 
 div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs,
 div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs {
+div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs,
+div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,7 +704,8 @@ div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs {
 
 div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a,
 div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs a,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a {
+div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a,
+div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs a {
   background: url("../assets/ui/confirm-tab.webp");
   background-size: 100%;
   background-position: center;
@@ -727,7 +729,8 @@ div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a {
 
 div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a.active,
 div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs a.active,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a.active {
+div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a.active,
+div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs a.active {
   -webkit-filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
   filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
 }
@@ -1681,6 +1684,72 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   line-height: 1;
 }
 
+.lhtrpg .ticket-slots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 460px;
+  height: 260px;
+  margin: 6px auto 0;
+}
+
+.lhtrpg .ticket-slot {
+  position: relative;
+}
+
+.lhtrpg .ticket-slot .empty-slot {
+  cursor: pointer;
+}
+
+.lhtrpg .ticket-slot .slot-quantity {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  min-width: 16px;
+  padding: 0 3px;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: #052b0f;
+  background: #d6ffda;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+.lhtrpg .ticket-slot .slot-stack-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.lhtrpg .ticket-slot .slot-stack-controls a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: bold;
+  color: #d6ffda;
+  background: rgba(214, 255, 218, 0.12);
+  border: 1px solid rgba(214, 255, 218, 0.4);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.lhtrpg .ticket-slot .slot-stack-controls a:hover {
+  background: rgba(214, 255, 218, 0.3);
+}
+
+.lhtrpg .ticket-slot .slot-stack-controls a.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
 .lhtrpg .inventory-panel {
   flex: 1 1 auto;
   min-width: 0;
@@ -1706,6 +1775,30 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   height: 56px;
   width: 56px;
   position: relative;
+}
+
+.lhtrpg .equip-slot .item .linked-skill-throw-badge,
+.lhtrpg .inventory-list .item .linked-skill-throw-badge {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 9px;
+  color: #052b0f;
+  background: #d6ffda;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.lhtrpg .equip-slot .item .linked-skill-throw-badge:hover,
+.lhtrpg .inventory-list .item .linked-skill-throw-badge:hover {
+  filter: brightness(1.2);
 }
 
 .lhtrpg .inventory-list .empty-slot {
@@ -2120,6 +2213,13 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   width: 150px;
 }
 
+.lhtrpg.sheet.item .sheet-stats .stat-div select {
+  width: 150px;
+  color: #d6ffda;
+  background-color: #1f1f1f;
+  border: 1px solid #666666;
+}
+
 .lhtrpg.sheet.item .sheet-stats .stat-div input.itemEquipped-input,
 .lhtrpg.sheet.item .sheet-stats .stat-div input.itemMain-input,
 .lhtrpg.sheet.monster .sheet-stats .stat-div input.itemEquipped-input,
@@ -2218,6 +2318,97 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg.sheet.item .items-header,
 .lhtrpg.sheet.monster .items-header {
   color: #d6ffda;
+}
+
+.lhtrpg.sheet.item .stat-div.linked-skill-stat {
+  flex: 1 1 100%;
+}
+
+.lhtrpg.sheet.item .stat-div.linked-skill-stat .linked-skill-content {
+  flex: 1 1 auto;
+  padding: 2px 8px;
+}
+
+.lhtrpg.sheet.item .linked-skill-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  min-height: 24px;
+}
+
+.lhtrpg.sheet.item .linked-skill-row.empty {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease-in;
+}
+
+.lhtrpg.sheet.item .linked-skill-row.empty:hover {
+  opacity: 1;
+}
+
+.lhtrpg.sheet.item .linked-skill-icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.lhtrpg.sheet.item .linked-skill-row.empty .linked-skill-icon {
+  filter: grayscale(100%);
+}
+
+.lhtrpg.sheet.item .linked-skill-empty-label {
+  font-size: 11px;
+  color: #d6ffda;
+  opacity: 0.8;
+}
+
+.lhtrpg.sheet.item .linked-skill-name {
+  flex: 1 1 auto;
+  font-size: 12px;
+  color: #d6ffda;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lhtrpg.sheet.item .linked-skill-name:hover {
+  text-decoration: underline;
+}
+
+.lhtrpg.sheet.item .linked-skill-controls {
+  display: none;
+  flex-direction: row;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.lhtrpg.sheet.item .linked-skill-row:hover .linked-skill-controls {
+  display: flex;
+}
+
+.lhtrpg.sheet.item .linked-skill-controls a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  color: #d6ffda;
+  background: rgba(214, 255, 218, 0.12);
+  border: 1px solid rgba(214, 255, 218, 0.4);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.lhtrpg.sheet.item .linked-skill-controls a:hover {
+  background: rgba(214, 255, 218, 0.3);
+}
+
+.lhtrpg.sheet.item .linked-skill-row.drag-over {
+  outline: 1px dashed #d6ffda;
+  outline-offset: 3px;
 }
 
 /* Other modules (e.g. LocknKey) inject their own tabs into this sheet using

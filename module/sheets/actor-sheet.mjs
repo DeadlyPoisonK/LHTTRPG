@@ -17,6 +17,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
       { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" },
       { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
+      { navSelector: ".items-tabs", contentSelector: ".items-body", initial: "equipment" },
       { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }],
       dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
       {dragSelector: ".inventory-list .item", dropSelector: null},
@@ -104,6 +105,11 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     const itemsBag = [];
     const itemsGear = [];
 
+    const itemsTicketTreasure = [];
+    const itemsTicketFate = [];
+    const itemsTicketConnection = [];
+    const itemsTicketReset = [];
+
     const itemsConnection = [];
     const itemsUnion = [];
 
@@ -165,6 +171,19 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       else if (i.system.equipped === false && i.type === 'gear') {
         itemsGear.push(i);
       }
+      // Append to Tickets.
+      else if (i.type === 'ticket' && i.system.subtype === 'Treasure') {
+        itemsTicketTreasure.push(i);
+      }
+      else if (i.type === 'ticket' && i.system.subtype === 'Fate') {
+        itemsTicketFate.push(i);
+      }
+      else if (i.type === 'ticket' && i.system.subtype === 'Connection') {
+        itemsTicketConnection.push(i);
+      }
+      else if (i.type === 'ticket' && i.system.subtype === 'Reset') {
+        itemsTicketReset.push(i);
+      }
       // Append to Connections.
       else if (i.type === 'connection') {
         itemsConnection.push(i);
@@ -199,6 +218,13 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "gear": itemsGear,
     }
 
+    context.tickets = {
+      "treasure": itemsTicketTreasure,
+      "fate": itemsTicketFate,
+      "connection": itemsTicketConnection,
+      "reset": itemsTicketReset
+    }
+
     // Unequipped items fill the general inventory grid, one slot each, up to
     // the bag-derived maxSpace. Remaining slots render as empty placeholders
     // so the right-hand panel always shows the actual carrying capacity.
@@ -224,6 +250,15 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     html.find('.item-throw').click(this._onItemThrow.bind(this));
 
+    // Send an equipment's linked skill to chat without opening the item.
+    html.find('.linked-skill-throw-badge').click(async ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      const skill = item?.system.linkedSkillUuid ? await fromUuid(item.system.linkedSkillUuid) : null;
+      if (skill) skill.ItemThrow();
+    });
 
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(ev => {
@@ -298,6 +333,33 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       item.delete();
       li.slideUp(200, () => this.render(false));
+    });
+
+    // Increase a ticket's stack quantity, creating the ticket if the slot is empty
+    html.find('.ticket-increment').click(ev => {
+      ev.preventDefault();
+      const itemId = ev.currentTarget.dataset.itemId;
+      const item = itemId ? this.actor.items.get(itemId) : null;
+      if (item) {
+        const quantity = Number(item.system.quantity) || 0;
+        item.update({ 'system.quantity': quantity + 1 });
+      } else {
+        const subtype = ev.currentTarget.dataset.subtype;
+        Item.create({ name: 'New Ticket', type: 'ticket', system: { subtype } }, { parent: this.actor });
+      }
+    });
+
+    // Decrease a ticket's stack quantity, removing the item once it hits 0
+    html.find('.ticket-decrement').click(ev => {
+      ev.preventDefault();
+      const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+      if (!item) return;
+      const quantity = Number(item.system.quantity) || 0;
+      if (quantity <= 1) {
+        item.delete();
+      } else {
+        item.update({ 'system.quantity': quantity - 1 });
+      }
     });
 
     // Active Effect management

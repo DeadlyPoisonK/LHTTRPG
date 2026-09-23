@@ -12,6 +12,7 @@
       "TypeGear": "装備",
       "TypeShield": "盾",
       "TypeSkill": "特技",
+      "TypeTicket": "チケット",
       "TypeUnion": "ユニオン",
       "TypeWeapon": "武器"
     }
@@ -24,16 +25,10 @@
       "SkillsDone": "API Import - Skills importation done!"
     }
   },
-  "ITEM": {
-    "TypeAccessory": "補助",
-    "TypeArmor": "防具",
-    "TypeBag": "収納",
-    "TypeConnection": "コネクション",
-    "TypeGear": "装備",
-    "TypeShield": "盾",
-    "TypeSkill": "特技",
-    "TypeUnion": "ユニオン",
-    "TypeWeapon": "武器"
+  "INVENTORY": {
+    "Notif": {
+      "WrongItemType": "{item}({type})は{slot}スロットに装備できません。"
+    }
   },
   "LHTRPG": {
     "Add": "Add",
@@ -90,9 +85,12 @@
         "Main": "Main Weapon",
         "PDef": "物理防御力",
         "Price": "価格",
+        "Quantity": "数量",
         "Range": "射程",
         "Rank": "ランク",
+        "Skill": "特技",
         "Target": "対象",
+        "ThrowToChat": "チャットに送信",
         "Timing": "タイミング"
       }
     },
@@ -104,6 +102,9 @@
       "Dazed": "放心",
       "Decay": "衰弱",
       "Defense": "防御力",
+      "EmptySlot": "空き",
+      "Equip": "装備",
+      "Equipment": "装備",
       "Fate": "因果力",
       "Fatigue": "疲労",
       "Guild": "所属ギルド",
@@ -111,15 +112,29 @@
       "Hate": "ヘイト",
       "ImportItems": "lhrpg.com からアイテムをインポートする",
       "ImportSkills": "lhrpg.com から特技をインポート",
+      "Inventory": "所持品",
       "Overconfident": "慢心",
       "Power": "攻撃力",
       "Pursuit": "追撃",
       "Race": "種族",
       "Regen": "再生",
+      "Remove": "削除",
       "Rigor": "硬直",
       "Staggered": "萎縮",
       "Tags": "タグ",
-      "Type": "種別"
+      "Tickets": "チケット",
+      "Type": "種別",
+      "afflicted": "重篤",
+      "barrier": "障壁",
+      "cancel": "軽減",
+      "confused": "惑乱",
+      "dazed": "放心",
+      "decay": "衰弱",
+      "overconfident": "慢心",
+      "pursuit": "追撃",
+      "regen": "再生",
+      "rigor": "硬直",
+      "staggered": "萎縮"
     },
     "Modifier": "修正値",
     "Monster": {
@@ -144,6 +159,7 @@
         "Check": "判定",
         "Cost": "コスト",
         "Limit": "制限",
+        "MacroEffect": "マクロ",
         "Range": "射程",
         "SR": "SR",
         "Target": "対象",
@@ -153,6 +169,7 @@
         "Check": "-",
         "Cost": "-",
         "Limit": "-",
+        "MacroEffect": "-",
         "Range": "-",
         "Target": "-",
         "Timing": "-"
@@ -164,8 +181,19 @@
         "Monster": "モンスター"
       }
     },
+    "Ticket": {
+      "Type": {
+        "Treasure": "財宝チケット",
+        "Fate": "因果チケット",
+        "Connection": "コネクションチケット",
+        "Reset": "リセットチケット"
+      }
+    },
     "Status": {
       "Label": "Status"
+    },
+    "Others": {
+      "Label": "その他"
     },
     "Str": "STR",
     "Tooltip": {

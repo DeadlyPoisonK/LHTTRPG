@@ -1,0 +1,20 @@
+<div class="stat-div linked-skill-stat">
+	<label>{{localize 'LHTRPG.Item.Label.Skill'}}</label>
+	<div class="linked-skill-content">
+		{{#if linkedSkill}}
+			<div class="linked-skill-row" data-item-id="{{linkedSkill.id}}">
+				<img class="linked-skill-icon" src="{{linkedSkill.img}}" title="{{linkedSkill.name}}" width="24" height="24" />
+				<a class="linked-skill-name item-throw" title="{{localize 'LHTRPG.Item.Label.ThrowToChat'}}">{{linkedSkill.name}}</a>
+				<div class="linked-skill-controls">
+					<a class="item-control linked-skill-edit" title=""><i class="fas fa-edit"></i></a>
+					<a class="item-control linked-skill-delete" title=""><i class="fas fa-trash"></i></a>
+				</div>
+			</div>
+		{{else}}
+			<a class="item-control linked-skill-create linked-skill-row empty" title="{{localize 'LHTRPG.Item.Label.Skill'}}">
+				<img class="linked-skill-icon slot-placeholder" src="{{item.img}}" alt="" height="24" width="24" />
+				<span class="linked-skill-empty-label">{{localize 'LHTRPG.Add'}}</span>
+			</a>
+		{{/if}}
+	</div>
+</div>

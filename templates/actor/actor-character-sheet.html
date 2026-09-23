@@ -135,7 +135,20 @@
 
 		{{!-- Inventory Tab --}}
 		<div class="tab stats grid-span-6" data-group="primary" data-tab="items">
-			{{> "systems/lhtrpg/templates/actor/parts/actor-inventory.html"}}
+
+			<nav class="items-tabs tabs" data-group="items">
+				{{!-- Default tab is specified in actor-sheet.mjs --}}
+				<a class="item" data-tab="equipment">{{toUpperCase (localize 'LHTRPG.Label.Equip')}}</a>
+				<a class="item" data-tab="tickets">{{toUpperCase (localize 'LHTRPG.Label.Tickets')}}</a>
+			</nav>
+			<section class="items-body">
+				<div class="tab items" data-group="items" data-tab="equipment">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-inventory.html"}}
+				</div>
+				<div class="tab items" data-group="items" data-tab="tickets">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-tickets.html"}}
+				</div>
+			</section>
 		</div>
 
 				{{!-- Inventory Tab --}}

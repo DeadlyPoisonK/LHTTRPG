@@ -189,6 +189,7 @@
       "accessory",
       "bag",
       "gear",
+      "ticket",
       "connection",
       "union"
     ],
@@ -207,7 +208,8 @@
         "rank": 1,
         "price": 0,
         "equipped": false,
-        "skillText": ""
+        "skillText": "",
+        "linkedSkillUuid": ""
       },
       "defenses": {
         "pdef": 0,
@@ -280,6 +282,14 @@
         "itemBase",
         "infos"
       ]
+    },
+    "ticket": {
+      "templates": [
+        "base",
+        "itemBase"
+      ],
+      "subtype": "Treasure",
+      "quantity": 1
     },
     "connection": {
       "templates": [

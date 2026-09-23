@@ -1,0 +1,25 @@
+<div class="equip-slot ticket-slot" data-slot-type="{{subtype}}">
+	{{#if item}}
+		<li class="item equipped" data-item-id="{{item._id}}">
+			<div class="item-name">
+				<div class="item-control item-edit item-image">
+					<img src="{{item.img}}" title="{{item.name}}" width="48" height="48" />
+				</div>
+				<div class="items-control">
+					<a class="item-control item-delete" title=""><i class="fas fa-trash"></i></a>
+				</div>
+			</div>
+		</li>
+		<span class="slot-quantity">{{item.system.quantity}}</span>
+		<span class="slot-label">{{item.name}}</span>
+	{{else}}
+		<a class="item-control item-create empty-slot" data-type="ticket" data-subtype="{{subtype}}" title="{{localize typeLabel}}">
+			<img class="slot-placeholder" src="{{icon}}" alt="" height="32" width="32" />
+		</a>
+		<span class="slot-label">{{localize typeLabel}}</span>
+	{{/if}}
+	<div class="slot-stack-controls">
+		<a class="item-control ticket-decrement {{#unless item}}disabled{{/unless}}" data-item-id="{{item._id}}" data-subtype="{{subtype}}" title="{{localize 'LHTRPG.Label.Remove'}}">−</a>
+		<a class="item-control ticket-increment" data-item-id="{{item._id}}" data-subtype="{{subtype}}" title="{{localize 'LHTRPG.Add'}}">+</a>
+	</div>
+</div>

@@ -42,9 +42,16 @@
 			{{#if system.check}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Check'}}</span><span class="chat-stat-value">{{system.check}}</span></div>{{/if}}
 			{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Range'}}</span><span class="chat-stat-value">{{system.range}}</span></div>{{/if}}
 		{{/if}}
+		{{#if isTicket}}
+			<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Quantity'}}</span><span class="chat-stat-value">{{system.quantity}}</span></div>
+		{{/if}}
 		<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Rank'}}</span><span class="chat-stat-value">{{system.rank}}</span></div>
 		{{#if system.price}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Price'}}</span><span class="chat-stat-value">{{system.price}}G</span></div>{{/if}}
 	</div>
+
+	{{#if enrichedSkillText}}
+	<div class="chat-card-description chat-card-skill-text">{{{enrichedSkillText}}}</div>
+	{{/if}}
 
 	{{#if enrichedDescription}}
 	<div class="chat-card-description">{{{enrichedDescription}}}</div>

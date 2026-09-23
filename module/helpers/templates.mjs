@@ -10,6 +10,7 @@
     "systems/lhtrpg/templates/actor/parts/actor-stats.html",
     "systems/lhtrpg/templates/actor/parts/actor-effects.html",
     "systems/lhtrpg/templates/actor/parts/actor-inventory.html",
+    "systems/lhtrpg/templates/actor/parts/actor-tickets.html",
     "systems/lhtrpg/templates/actor/parts/actor-biography.html",
     "systems/lhtrpg/templates/actor/parts/actor-bio-connections.html",
     "systems/lhtrpg/templates/actor/parts/actor-bio-unions.html",
@@ -21,6 +22,7 @@
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html",
+    "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html",
     "systems/lhtrpg/templates/actor/parts/skills/skills-grid.html",
 
     "systems/lhtrpg/templates/actor/parts/monster-skills.html",
@@ -29,5 +31,6 @@
     //Items partials
     "systems/lhtrpg/templates/item/parts/item-effects.html",
     "systems/lhtrpg/templates/item/parts/item-header.html",
+    "systems/lhtrpg/templates/item/parts/item-linked-skill.html",
   ]);
 };

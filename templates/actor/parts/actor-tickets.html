@@ -1,0 +1,10 @@
+<h4 class="tab-title">
+	ITEMS
+</h4>
+
+<div class="ticket-slots-grid">
+	{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html" subtype="Treasure" typeLabel="LHTRPG.Ticket.Type.Treasure" icon="icons/sundries/flags/banner-pink.webp" item=tickets.treasure.[0] }}
+	{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html" subtype="Fate" typeLabel="LHTRPG.Ticket.Type.Fate" icon="icons/sundries/flags/banner-green.webp" item=tickets.fate.[0] }}
+	{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html" subtype="Connection" typeLabel="LHTRPG.Ticket.Type.Connection" icon="icons/sundries/flags/banner-purple.webp" item=tickets.connection.[0] }}
+	{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html" subtype="Reset" typeLabel="LHTRPG.Ticket.Type.Reset" icon="icons/sundries/flags/banner-blue.webp" item=tickets.reset.[0] }}
+</div>

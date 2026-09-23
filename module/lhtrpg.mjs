@@ -107,6 +107,27 @@ Hooks.on("renderCompendiumDirectory", (app, html) => createSkillImportButton(app
 Hooks.on("renderCompendiumDirectory", (app, html) => createItemsImportButton(app, html));
 
 /* -------------------------------------------- */
+/*  Ticket Stacking                             */
+/* -------------------------------------------- */
+
+// Tickets stack by subtype: receiving one (loot, trade, drag & drop, etc.)
+// while the actor already carries one of that subtype adds to its quantity
+// instead of creating a duplicate item.
+Hooks.on("preCreateItem", (item, data, options, userId) => {
+  if (item.type !== "ticket") return;
+  const actor = item.parent;
+  if (!(actor instanceof Actor)) return;
+
+  const subtype = item.system.subtype;
+  const existing = actor.items.find(i => i.type === "ticket" && i.system.subtype === subtype);
+  if (!existing) return;
+
+  const addedQuantity = Number(item.system.quantity) || 1;
+  existing.update({ "system.quantity": (Number(existing.system.quantity) || 0) + addedQuantity });
+  return false;
+});
+
+/* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 

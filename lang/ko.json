@@ -1,10 +1,10 @@
 {
   "TYPES": {
-    "Actor": {
+    "ACTOR": {
       "TypeCharacter": "플레이어 캐릭터",
       "TypeMonster": "몬스터"
     },
-    "Item": {
+    "ITEM": {
       "TypeAccessory": "악세서리",
       "TypeArmor": "방어구",
       "TypeBag": "가방",
@@ -12,6 +12,7 @@
       "TypeGear": "장비",
       "TypeShield": "방패",
       "TypeSkill": "특기",
+      "TypeTicket": "티켓",
       "TypeUnion": "유니온",
       "TypeWeapon": "무기"
     }
@@ -23,21 +24,11 @@
       "Skills": "API 불러오기 - 공식 웹사이트의 스킬 API를 불러오는 중입니다...",
       "SkillsDone": "API 불러오기 - 스킬 정보 불러오기 완료!"
     }
-  },    
-  "Actor": {
-    "TypeCharacter": "플레이어 캐릭터",
-    "TypeMonster": "몬스터"
   },
-  "Item": {
-    "TypeAccessory": "악세서리",
-    "TypeArmor": "방어구",
-    "TypeBag": "가방",
-    "TypeConnection": "커넥션",
-    "TypeGear": "장비",
-    "TypeShield": "방패",
-    "TypeSkill": "특기",
-    "TypeUnion": "유니온",
-    "TypeWeapon": "무기"
+  "INVENTORY": {
+    "Notif": {
+      "WrongItemType": "{item}({type})은(는) {slot} 슬롯에 장착할 수 없습니다."
+    }
   },
   "LHTRPG": {
     "Add": "추가",
@@ -94,9 +85,12 @@
         "Main": "주무기",
         "PDef": "물리 방어력",
         "Price": "가격",
+        "Quantity": "수량",
         "Range": "사정거리",
         "Rank": "랭크",
+        "Skill": "특기",
         "Target": "대상",
+        "ThrowToChat": "채팅으로 보내기",
         "Timing": "타이밍"
       }
     },
@@ -108,6 +102,9 @@
       "Dazed": "방심",
       "Decay": "쇠약",
       "Defense": "방어력",
+      "EmptySlot": "비어 있음",
+      "Equip": "장착",
+      "Equipment": "장비",
       "Fate": "인과력",
       "Fatigue": "피로",
       "Guild": "소속길드",
@@ -115,15 +112,29 @@
       "Hate": "헤이트",
       "ImportItems": "lhrpg.com에서 아이템 데이터 가져오기",
       "ImportSkills": "lhrpg.com에서 스킬 데이터 가져오기",
+      "Inventory": "소지품",
       "Overconfident": "자만",
       "Power": "공격력",
       "Pursuit": "추격",
       "Race": "종족",
       "Regen": "재생",
+      "Remove": "제거",
       "Rigor": "경직",
       "Staggered": "위축",
       "Tags": "태그",
-      "Type": "종류"
+      "Tickets": "티켓",
+      "Type": "종류",
+      "afflicted": "위독",
+      "barrier": "방벽",
+      "cancel": "취소",
+      "confused": "혼란",
+      "dazed": "방심",
+      "decay": "쇠약",
+      "overconfident": "자만",
+      "pursuit": "추격",
+      "regen": "재생",
+      "rigor": "경직",
+      "staggered": "위축"
     },
     "Modifier": "수정치",
     "Monster": {
@@ -148,6 +159,7 @@
         "Check": "판정",
         "Cost": "비용",
         "Limit": "제한",
+        "MacroEffect": "매크로",
         "Range": "사정거리",
         "SR": "SR",
         "Target": "대상",
@@ -157,6 +169,7 @@
         "Check": "-",
         "Cost": "-",
         "Limit": "-",
+        "MacroEffect": "-",
         "Range": "-",
         "Target": "-",
         "Timing": "-"
@@ -168,8 +181,19 @@
         "Monster": "몬스터"
       }
     },
+    "Ticket": {
+      "Type": {
+        "Treasure": "보물 티켓",
+        "Fate": "인과 티켓",
+        "Connection": "커넥션 티켓",
+        "Reset": "리셋 티켓"
+      }
+    },
     "Status": {
       "Label": "상태"
+    },
+    "Others": {
+      "Label": "기타"
     },
     "Str": "STR",
     "Tooltip": {

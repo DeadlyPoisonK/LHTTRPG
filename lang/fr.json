@@ -1,179 +1,218 @@
 {
   "TYPES": {
     "ACTOR": {
-      "TypeCharacter": "Player Character",
-      "TypeMonster": "Monster"
+      "TypeCharacter": "Personnage joueur",
+      "TypeMonster": "Monstre"
     },
     "ITEM": {
-      "TypeAccessory": "Accessory",
-      "TypeArmor": "Armor",
-      "TypeBag": "Bag",
-      "TypeConnection": "Connection",
-      "TypeGear": "Gear",
-      "TypeShield": "Shield",
-      "TypeSkill": "Skill",
+      "TypeAccessory": "Accessoire",
+      "TypeArmor": "Armure",
+      "TypeBag": "Sac",
+      "TypeConnection": "Connexion",
+      "TypeGear": "Équipement",
+      "TypeShield": "Bouclier",
+      "TypeSkill": "Compétence",
+      "TypeTicket": "Ticket",
       "TypeUnion": "Union",
-      "TypeWeapon": "Weapon"
+      "TypeWeapon": "Arme"
     }
   },
   "IMPORT": {
     "Notif": {
-      "Items": "API Import - Beginning the importation of Items from the official website's API...",
-      "ItemsDone": "API Import - Items importation done!",
-      "Skills": "API Import - Beginning the importation of Skills from the official website's API...",
-      "SkillsDone": "API Import - Skills importation done!"
+      "Items": "Import API - Début de l'importation des objets depuis l'API du site officiel...",
+      "ItemsDone": "Import API - Importation des objets terminée !",
+      "Skills": "Import API - Début de l'importation des compétences depuis l'API du site officiel...",
+      "SkillsDone": "Import API - Importation des compétences terminée !"
+    }
+  },
+  "INVENTORY": {
+    "Notif": {
+      "WrongItemType": "{item} ({type}) ne peut pas être équipé dans l'emplacement {slot}."
     }
   },
   "LHTRPG": {
-    "Add": "Add",
+    "Add": "Ajouter",
     "Biography": {
       "Label": "Bio."
     },
     "ButtonLabel": {
-      "Cancel": "Cancel",
-      "Roll": "Roll",
+      "Cancel": "Annuler",
+      "Roll": "Lancer",
       "Tag": {
-        "Add": "Add"
+        "Add": "Ajouter"
       }
     },
     "Check": {
-      "Accuracy": "Accuracy",
-      "Analysis": "Analysis",
-      "Athletics": "Athletics",
-      "Disable": "Disable",
+      "Accuracy": "Précision",
+      "Analysis": "Analyse",
+      "Athletics": "Athlétisme",
+      "Disable": "Neutralisation",
       "Endurance": "Endurance",
-      "Evasion": "Evasion",
-      "Knowledge": "Knowledge",
-      "Negotiation": "Negotiation",
-      "Operation": "Operation",
+      "Evasion": "Esquive",
+      "Knowledge": "Connaissance",
+      "Negotiation": "Négociation",
+      "Operation": "Manipulation",
       "Perception": "Perception",
-      "Resistance": "Resistance"
+      "Resistance": "Résistance"
     },
     "Connection": {
-      "Label": "Connect.",
-      "Name": "Name"
+      "Label": "Connex.",
+      "Name": "Nom"
     },
     "Description": {
       "Label": "Description"
     },
     "Dex": "DEX",
     "Effect": {
-      "Label": "Effects"
+      "Label": "Effets"
     },
-    "EffectCreate": "Create Effect",
-    "EffectDelete": "Delete Effect",
-    "EffectEdit": "Edit Effect",
-    "EffectToggle": "Toggle Effect",
+    "EffectCreate": "Créer un effet",
+    "EffectDelete": "Supprimer l'effet",
+    "EffectEdit": "Modifier l'effet",
+    "EffectToggle": "Activer/désactiver l'effet",
     "Int": "INT",
     "Item": {
       "Label": {
-        "Accuracy": "Accuracy",
-        "Attack": "Attack",
-        "BagLimit": "Storage Limit",
-        "BagSpace": "Space",
-        "Check": "Check",
-        "Equipped": "Equipped",
+        "Accuracy": "Précision",
+        "Attack": "Attaque",
+        "BagLimit": "Limite de stockage",
+        "BagSpace": "Espace",
+        "Check": "Test",
+        "Equipped": "Équipé",
         "Initiative": "Initiative",
-        "MDef": "M. Def.",
-        "Magic": "Magic",
-        "Main": "Main Weapon",
-        "PDef": "Phys. Def.",
-        "Price": "Price",
-        "Range": "Range",
-        "Rank": "Rank",
-        "Target": "Target",
+        "MDef": "Déf. Mag.",
+        "Magic": "Magie",
+        "Main": "Arme principale",
+        "PDef": "Déf. Phys.",
+        "Price": "Prix",
+        "Quantity": "Quantité",
+        "Range": "Portée",
+        "Rank": "Rang",
+        "Skill": "Compétence",
+        "Target": "Cible",
+        "ThrowToChat": "Envoyer au chat",
         "Timing": "Timing"
       }
     },
     "Label": {
-      "Afflicted": "Afflicted",
-      "Barrier": "Barrier",
-      "Cancel": "Cancel",
-      "Confused": "Confused",
-      "Dazed": "Dazed",
-      "Decay": "Decay",
-      "Defense": "Defense",
-      "Fate": "Fate",
+      "Afflicted": "Affligé",
+      "Barrier": "Barrière",
+      "Cancel": "Annuler",
+      "Confused": "Confus",
+      "Dazed": "Étourdi",
+      "Decay": "Déclin",
+      "Defense": "Défense",
+      "EmptySlot": "Vide",
+      "Equip": "Équiper",
+      "Equipment": "Équipement",
+      "Fate": "Destin",
       "Fatigue": "FATIGUE",
-      "Guild": "Guild",
+      "Guild": "Guilde",
       "HP": "HP",
-      "Hate": "HATE",
-      "ImportItems": "Import Items from lhrpg.com",
-      "ImportSkills": "Import Skills from lhrpg.com",
-      "Overconfident": "Reckless",
-      "Power": "Offense",
-      "Pursuit": "Pursuit",
+      "Hate": "HAINE",
+      "ImportItems": "Importer les objets depuis lhrpg.com",
+      "ImportSkills": "Importer les compétences depuis lhrpg.com",
+      "Inventory": "Inventaire",
+      "Overconfident": "Présomptueux",
+      "Power": "Attaque",
+      "Pursuit": "Poursuite",
       "Race": "Race",
-      "Regen": "Regen",
-      "Rigor": "Rigor",
-      "Staggered": "Staggered",
-      "Tags": "Tags",
-      "Type": "Type"
+      "Regen": "Régén.",
+      "Remove": "Retirer",
+      "Rigor": "Rigidité",
+      "Staggered": "Chancelant",
+      "Tags": "Étiquettes",
+      "Tickets": "Tickets",
+      "Type": "Type",
+      "afflicted": "Affligé",
+      "barrier": "Barrière",
+      "cancel": "Annuler",
+      "confused": "Confus",
+      "dazed": "Étourdi",
+      "decay": "Déclin",
+      "overconfident": "Présomptueux",
+      "pursuit": "Poursuite",
+      "regen": "Régén.",
+      "rigor": "Rigidité",
+      "staggered": "Chancelant"
     },
-    "Modifier": "Modifier",
+    "Modifier": "Modificateur",
     "Monster": {
-      "HateMultiplier": "Hate Mult.",
-      "Identification": "ID Difficulty",
+      "HateMultiplier": "Mult. haine",
+      "Identification": "Difficulté d'identification",
       "Initiative": "Initiative",
-      "MDef": "M. Def.",
-      "PDef": "Phys. Def.",
-      "Rank": "Rank",
-      "Skills": "Skills",
-      "Speed": "Speed"
+      "MDef": "Déf. Mag.",
+      "PDef": "Déf. Phys.",
+      "Rank": "Rang",
+      "Skills": "Compétences",
+      "Speed": "Vitesse"
     },
     "Placeholder": {
-      "Class": "Class",
-      "Name": "Name",
+      "Class": "Classe",
+      "Name": "Nom",
       "Race": "Race",
-      "SubClass": "Subclass"
+      "SubClass": "Sous-classe"
     },
     "Pow": "POW",
     "Skill": {
       "Label": {
-        "Check": "Check",
-        "Cost": "Cost",
-        "Limit": "Limit",
-        "Range": "Range",
+        "Check": "Test",
+        "Cost": "Coût",
+        "Limit": "Limite",
+        "MacroEffect": "Macro",
+        "Range": "Portée",
         "SR": "SR",
-        "Target": "Target",
+        "Target": "Cible",
         "Timing": "Timing"
       },
       "Placeholder": {
         "Check": "-",
         "Cost": "-",
         "Limit": "-",
+        "MacroEffect": "-",
         "Range": "-",
         "Target": "-",
         "Timing": "-"
       },
       "Type": {
-        "Basic": "Basic",
+        "Basic": "De base",
         "Combat": "Combat",
-        "General": "General",
-        "Monster": "Monster"
+        "General": "Général",
+        "Monster": "Monstre"
+      }
+    },
+    "Ticket": {
+      "Type": {
+        "Treasure": "Ticket de trésor",
+        "Fate": "Ticket de destin",
+        "Connection": "Ticket de connexion",
+        "Reset": "Ticket de réinitialisation"
       }
     },
     "Status": {
-      "Label": "Status"
+      "Label": "État"
+    },
+    "Others": {
+      "Label": "Autres"
     },
     "Str": "STR",
     "Tooltip": {
-      "AttackPower": "Attack Power",
+      "AttackPower": "Puissance d'attaque",
       "Initiative": "Initiative",
-      "MagicDefense": "Magic defense",
-      "MagicPower": "Magic Power",
-      "PhysDefense": "Physical Defense",
-      "RestorationPower": "Restoration Power",
-      "Speed": "Speed"
+      "MagicDefense": "Défense magique",
+      "MagicPower": "Puissance magique",
+      "PhysDefense": "Défense physique",
+      "RestorationPower": "Puissance de restauration",
+      "Speed": "Vitesse"
     },
     "Union": {
       "Label": "Unions",
       "Name": "Union"
     },
     "WindowTitle": {
-      "AbilityCheck": "Ability Score Check",
+      "AbilityCheck": "Test de caractéristique",
       "Tag": {
-        "AddNewTag": "Add a new tag"
+        "AddNewTag": "Ajouter une nouvelle étiquette"
       }
     }
   }

@@ -1,4 +1,7 @@
 <li class="item" data-item-id="{{item._id}}">
+        {{#if item.system.linkedSkillUuid}}
+        <a class="item-control linked-skill-throw-badge" title="{{localize 'LHTRPG.Item.Label.ThrowToChat'}}"><i class="fas fa-comment-dots"></i></a>
+        {{/if}}
         <div class="item-name">
                 <div class="item-control item-edit item-image">
                         <img src="{{item.img}}" title="{{item.name}}" width="48" height="48" />

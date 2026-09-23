@@ -13,6 +13,7 @@ export class LHTrpgItem extends Item {
     "accessory": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "bag": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "gear": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "ticket": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "valuable": "systems/lhtrpg/templates/item/item-valuable-sheet.html",
     "connection": "systems/lhtrpg/templates/item/item-connection-sheet.html",
     "union": "systems/lhtrpg/templates/item/item-union-sheet.html",
@@ -40,16 +41,36 @@ export class LHTrpgItem extends Item {
   }
 
   /**
+   * Default name/icon per ticket subtype, matching the core Foundry banner
+   * icons so no custom art needs to ship with the system.
+   */
+  static TICKET_PRESETS = {
+    Treasure: { name: "Treasure Ticket", img: "icons/sundries/flags/banner-pink.webp" },
+    Fate: { name: "Fate Ticket", img: "icons/sundries/flags/banner-green.webp" },
+    Connection: { name: "Connection Ticket", img: "icons/sundries/flags/banner-purple.webp" },
+    Reset: { name: "Reset Ticket", img: "icons/sundries/flags/banner-blue.webp" }
+  }
+
+  /**
    * Make adjustments before Item creation, like an item type default picture
    */
   async _preCreate(createData, options, user) {
     await super._preCreate(createData, options, user);
 
+    if (this.type === "ticket") {
+      const preset = LHTrpgItem.TICKET_PRESETS[this.system.subtype] ?? LHTrpgItem.TICKET_PRESETS.Treasure;
+      const updateData = {};
+      if (!this.name || this.name === "New Ticket") updateData['name'] = preset.name;
+      if (this.img === 'icons/svg/item-bag.svg') updateData['img'] = preset.img;
+      if (Object.keys(updateData).length) await this.updateSource(updateData);
+      return;
+    }
+
     // add item default picture depending on type
     if (this.img === 'icons/svg/item-bag.svg') {
       const updateData = {};
       updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
-      
+
       await this.updateSource(updateData);
     }
   }
@@ -131,10 +152,13 @@ export class LHTrpgItem extends Item {
     const enrichedDescription = system.description
       ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, { async: true })
       : "";
+    const enrichedSkillText = system.skillText
+      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.skillText, { async: true })
+      : "";
 
     let cardData = {
         ...element.toObject(),
-        owner: element.actor.id,
+        owner: element.actor?.id,
         typeLabel: game.i18n.localize(`TYPES.ITEM.Type${element.type.capitalize()}`),
         isWeapon: element.type === "weapon",
         isArmor: element.type === "armor",
@@ -142,7 +166,9 @@ export class LHTrpgItem extends Item {
         isAccessory: element.type === "accessory",
         isBag: element.type === "bag",
         isGear: element.type === "gear",
-        enrichedDescription
+        isTicket: element.type === "ticket",
+        enrichedDescription,
+        enrichedSkillText
     };
 
     // Renderizar la plantilla del chat

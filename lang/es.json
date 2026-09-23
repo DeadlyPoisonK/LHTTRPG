@@ -1,0 +1,219 @@
+{
+  "TYPES": {
+    "ACTOR": {
+      "TypeCharacter": "Personaje Jugador",
+      "TypeMonster": "Monstruo"
+    },
+    "ITEM": {
+      "TypeAccessory": "Accesorio",
+      "TypeArmor": "Armadura",
+      "TypeBag": "Bolsa",
+      "TypeConnection": "Conexión",
+      "TypeGear": "Equipo",
+      "TypeShield": "Escudo",
+      "TypeSkill": "Habilidad",
+      "TypeTicket": "Ticket",
+      "TypeUnion": "Unión",
+      "TypeWeapon": "Arma"
+    }
+  },
+  "IMPORT": {
+    "Notif": {
+      "Items": "Importación API - Iniciando la importación de objetos desde la API del sitio oficial...",
+      "ItemsDone": "Importación API - ¡Importación de objetos completada!",
+      "Skills": "Importación API - Iniciando la importación de habilidades desde la API del sitio oficial...",
+      "SkillsDone": "Importación API - ¡Importación de habilidades completada!"
+    }
+  },
+  "INVENTORY": {
+    "Notif": {
+      "WrongItemType": "{item} ({type}) no se puede equipar en el espacio de {slot}."
+    }
+  },
+  "LHTRPG": {
+    "Add": "Añadir",
+    "Biography": {
+      "Label": "Biog."
+    },
+    "ButtonLabel": {
+      "Cancel": "Cancelar",
+      "Roll": "Tirar",
+      "Tag": {
+        "Add": "Añadir"
+      }
+    },
+    "Check": {
+      "Accuracy": "Precisión",
+      "Analysis": "Análisis",
+      "Athletics": "Atletismo",
+      "Disable": "Desactivar",
+      "Endurance": "Resistencia",
+      "Evasion": "Evasión",
+      "Knowledge": "Conocimiento",
+      "Negotiation": "Negociación",
+      "Operation": "Manejo",
+      "Perception": "Percepción",
+      "Resistance": "Resistencia"
+    },
+    "Connection": {
+      "Label": "Conex.",
+      "Name": "Nombre"
+    },
+    "Description": {
+      "Label": "Descripción"
+    },
+    "Dex": "DEX",
+    "Effect": {
+      "Label": "Efectos"
+    },
+    "EffectCreate": "Crear Efecto",
+    "EffectDelete": "Eliminar Efecto",
+    "EffectEdit": "Editar Efecto",
+    "EffectToggle": "Activar/Desactivar Efecto",
+    "Int": "INT",
+    "Item": {
+      "Label": {
+        "Accuracy": "Precisión",
+        "Attack": "Ataque",
+        "BagLimit": "Límite de Almacenaje",
+        "BagSpace": "Espacio",
+        "Check": "Chequeo",
+        "Equipped": "Equipado",
+        "Initiative": "Iniciativa",
+        "MDef": "Def. Mág.",
+        "Magic": "Magia",
+        "Main": "Arma Principal",
+        "PDef": "Def. Fís.",
+        "Price": "Precio",
+        "Quantity": "Cantidad",
+        "Range": "Alcance",
+        "Rank": "Rango",
+        "Skill": "Habilidad",
+        "Target": "Objetivo",
+        "ThrowToChat": "Enviar al Chat",
+        "Timing": "Momento"
+      }
+    },
+    "Label": {
+      "Afflicted": "Afligido",
+      "Barrier": "Barrera",
+      "Cancel": "Cancelar",
+      "Confused": "Confundido",
+      "Dazed": "Aturdido",
+      "Decay": "Decadencia",
+      "Defense": "Defensa",
+      "EmptySlot": "Vacío",
+      "Equip": "Equipar",
+      "Equipment": "Equipo",
+      "Fate": "Destino",
+      "Fatigue": "FATIGA",
+      "Guild": "Gremio",
+      "HP": "HP",
+      "Hate": "ODIO",
+      "ImportItems": "Importar Objetos desde lhrpg.com",
+      "ImportSkills": "Importar Habilidades desde lhrpg.com",
+      "Inventory": "Inventario",
+      "Overconfident": "Confiado",
+      "Power": "Ataque",
+      "Pursuit": "Persecución",
+      "Race": "Raza",
+      "Regen": "Regen.",
+      "Remove": "Eliminar",
+      "Rigor": "Rigidez",
+      "Staggered": "Tambaleante",
+      "Tags": "Etiquetas",
+      "Tickets": "Tickets",
+      "Type": "Tipo",
+      "afflicted": "Afligido",
+      "barrier": "Barrera",
+      "cancel": "Cancelar",
+      "confused": "Confundido",
+      "dazed": "Aturdido",
+      "decay": "Decadencia",
+      "overconfident": "Confiado",
+      "pursuit": "Persecución",
+      "regen": "Regen.",
+      "rigor": "Rigidez",
+      "staggered": "Tambaleante"
+    },
+    "Modifier": "Modificador",
+    "Monster": {
+      "HateMultiplier": "Mult. Odio",
+      "Identification": "Dificultad de Identificación",
+      "Initiative": "Iniciativa",
+      "MDef": "Def. Mág.",
+      "PDef": "Def. Fís.",
+      "Rank": "Rango",
+      "Skills": "Habilidades",
+      "Speed": "Velocidad"
+    },
+    "Placeholder": {
+      "Class": "Clase",
+      "Name": "Nombre",
+      "Race": "Raza",
+      "SubClass": "Subclase"
+    },
+    "Pow": "POW",
+    "Skill": {
+      "Label": {
+        "Check": "Chequeo",
+        "Cost": "Coste",
+        "Limit": "Límite",
+        "MacroEffect": "Macro",
+        "Range": "Alcance",
+        "SR": "SR",
+        "Target": "Objetivo",
+        "Timing": "Momento"
+      },
+      "Placeholder": {
+        "Check": "-",
+        "Cost": "-",
+        "Limit": "-",
+        "MacroEffect": "-",
+        "Range": "-",
+        "Target": "-",
+        "Timing": "-"
+      },
+      "Type": {
+        "Basic": "Básico",
+        "Combat": "Combate",
+        "General": "General",
+        "Monster": "Monstruo"
+      }
+    },
+    "Ticket": {
+      "Type": {
+        "Treasure": "Ticket del Tesoro",
+        "Fate": "Ticket del Destino",
+        "Connection": "Ticket de Conexión",
+        "Reset": "Ticket de Reinicio"
+      }
+    },
+    "Status": {
+      "Label": "Estado"
+    },
+    "Others": {
+      "Label": "Otros"
+    },
+    "Str": "STR",
+    "Tooltip": {
+      "AttackPower": "Poder de Ataque",
+      "Initiative": "Iniciativa",
+      "MagicDefense": "Defensa Mágica",
+      "MagicPower": "Poder Mágico",
+      "PhysDefense": "Defensa Física",
+      "RestorationPower": "Poder de Recuperación",
+      "Speed": "Velocidad"
+    },
+    "Union": {
+      "Label": "Uniones",
+      "Name": "Unión"
+    },
+    "WindowTitle": {
+      "AbilityCheck": "Chequeo de Característica",
+      "Tag": {
+        "AddNewTag": "Añadir una nueva etiqueta"
+      }
+    }
+  }
+}
