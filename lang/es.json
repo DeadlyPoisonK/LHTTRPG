@@ -253,6 +253,9 @@
       "life": "Estado Vital",
       "combat": "Estado de Combate",
       "other": "Otros Estados"
+    },
+    "Stats": {
+      "Label": "Stats"
     }
   }
 }

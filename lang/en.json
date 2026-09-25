@@ -253,6 +253,9 @@
       "life": "Life Status",
       "combat": "Combat Status",
       "other": "Other Status"
+    },
+    "Stats": {
+      "Label": "Stats"
     }
   }
 }

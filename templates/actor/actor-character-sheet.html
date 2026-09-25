@@ -92,19 +92,19 @@
 
 			<nav class="status-tabs tabs" data-group="stats">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="status">{{toUpperCase (localize 'LHTRPG.Status.Label')}}</a>
+				<a class="item" data-tab="stats">{{toUpperCase (localize 'LHTRPG.Stats.Label')}}</a>
 				<a class="item" data-tab="effects">{{toUpperCase (localize 'LHTRPG.Effect.Label')}}</a>
-				<a class="item" data-tab="others">{{toUpperCase (localize 'LHTRPG.Others.Label')}}</a>
+				<a class="item" data-tab="status">{{toUpperCase (localize 'LHTRPG.Status.Label')}}</a>
 			</nav>
 			<section class="status-body">
-				<div class="tab status" data-group="stats" data-tab="status">
+				<div class="tab stats" data-group="stats" data-tab="stats">
 					{{> "systems/lhtrpg/templates/actor/parts/actor-stats.html"}}
 				</div>
 				<div class="tab effects" data-group="stats" data-tab="effects">
 					{{> "systems/lhtrpg/templates/actor/parts/actor-effects.html"}}
 				</div>
-				<div class="tab others" data-group="stats" data-tab="others">
-					{{> "systems/lhtrpg/templates/actor/parts/actor-others.html"}}
+				<div class="tab status" data-group="stats" data-tab="status">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-status.html"}}
 				</div>
 			</section>
 		</div>

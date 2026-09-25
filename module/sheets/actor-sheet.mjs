@@ -26,7 +26,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       width: 700,
       height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
-      { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" },
+      { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "stats" },
       { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
       { navSelector: ".items-tabs", contentSelector: ".items-body", initial: "equipment" },
       { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }],

@@ -8,7 +8,7 @@
  * updates the field. Statuses without a field are stored only as the effect.
  */
 
-const EFFECTS_PATH = "systems/lhtrpg/assets/ui/effects";
+const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
 
 /**
  * @typedef {object} LHStatus
@@ -23,32 +23,32 @@ const EFFECTS_PATH = "systems/lhtrpg/assets/ui/effects";
 /** @type {LHStatus[]} */
 export const LH_STATUSES = [
   // Life Statuses
-  { id: "fatigue", group: "life", img: "icons/svg/downgrade.svg", path: "infos.fatigue", rated: true, types: ["character"] },
-  { id: "weakness", group: "life", img: `${EFFECTS_PATH}/weakness.png`, path: "bad-status.weakness", rated: true },
-  { id: "incapacitated", group: "life", img: "icons/svg/unconscious.svg" },
-  { id: "dead", group: "life", img: "icons/svg/skull.svg" },
+  { id: "fatigue", group: "life", img: `${ICONS_PATH}/fatigue.svg`, path: "infos.fatigue", rated: true, types: ["character"] },
+  { id: "weakness", group: "life", img: `${ICONS_PATH}/weakness.svg`, path: "bad-status.weakness", rated: true },
+  { id: "incapacitated", group: "life", img: `${ICONS_PATH}/incapacitated.svg` },
+  { id: "dead", group: "life", img: `${ICONS_PATH}/dead.svg` },
   // Bad Statuses
-  { id: "staggered", group: "bad", img: `${EFFECTS_PATH}/staggered.png`, path: "bad-status.staggered" },
-  { id: "dazed", group: "bad", img: `${EFFECTS_PATH}/dazed.png`, path: "bad-status.dazed" },
-  { id: "rigor", group: "bad", img: `${EFFECTS_PATH}/rigor.png`, path: "bad-status.rigor" },
-  { id: "confused", group: "bad", img: `${EFFECTS_PATH}/confused.png`, path: "bad-status.confused" },
-  { id: "decay", group: "bad", img: `${EFFECTS_PATH}/decay.png`, path: "bad-status.decay", rated: true },
-  { id: "pursuit", group: "bad", img: `${EFFECTS_PATH}/pursuit.png`, path: "bad-status.pursuit", rated: true },
-  { id: "afflicted", group: "bad", img: `${EFFECTS_PATH}/afflicted.png`, path: "bad-status.afflicted" },
-  { id: "overconfident", group: "bad", img: `${EFFECTS_PATH}/overconfident.png`, path: "bad-status.overconfident" },
+  { id: "staggered", group: "bad", img: `${ICONS_PATH}/staggered.svg`, path: "bad-status.staggered" },
+  { id: "dazed", group: "bad", img: `${ICONS_PATH}/dazed.svg`, path: "bad-status.dazed" },
+  { id: "rigor", group: "bad", img: `${ICONS_PATH}/rigor.svg`, path: "bad-status.rigor" },
+  { id: "confused", group: "bad", img: `${ICONS_PATH}/confused.svg`, path: "bad-status.confused" },
+  { id: "decay", group: "bad", img: `${ICONS_PATH}/decay.svg`, path: "bad-status.decay", rated: true },
+  { id: "pursuit", group: "bad", img: `${ICONS_PATH}/pursuit.svg`, path: "bad-status.pursuit", rated: true },
+  { id: "afflicted", group: "bad", img: `${ICONS_PATH}/afflicted.svg`, path: "bad-status.afflicted" },
+  { id: "overconfident", group: "bad", img: `${ICONS_PATH}/overconfident.svg`, path: "bad-status.overconfident" },
   // Combat Statuses
-  { id: "regen", group: "combat", img: `${EFFECTS_PATH}/regen.png`, path: "bad-status.regen", rated: true },
-  { id: "cancel", group: "combat", img: `${EFFECTS_PATH}/cancel.png`, path: "bad-status.cancel", rated: true },
-  { id: "barrier", group: "combat", img: `${EFFECTS_PATH}/barrier.png`, path: "bad-status.barrier", rated: true },
+  { id: "regen", group: "combat", img: `${ICONS_PATH}/regen.svg`, path: "bad-status.regen", rated: true },
+  { id: "cancel", group: "combat", img: `${ICONS_PATH}/cancel.svg`, path: "bad-status.cancel", rated: true },
+  { id: "barrier", group: "combat", img: `${ICONS_PATH}/barrier.svg`, path: "bad-status.barrier", rated: true },
   // Other Statuses
-  { id: "hidden", group: "other", img: "icons/svg/invisible.svg" },
-  { id: "swimming", group: "other", img: "icons/svg/waterfall.svg" },
-  { id: "flying", group: "other", img: "icons/svg/wing.svg" },
-  { id: "identified", group: "other", img: "icons/svg/eye.svg", types: ["monster"] },
-  { id: "standby", group: "other", img: "icons/svg/clockwork.svg" },
-  { id: "hateTop", group: "other", img: "icons/svg/target.svg" },
-  { id: "hateUnder", group: "other", img: "icons/svg/down.svg" },
-  { id: "absent", group: "other", img: "icons/svg/door-exit.svg" }
+  { id: "hidden", group: "other", img: `${ICONS_PATH}/hidden.svg` },
+  { id: "swimming", group: "other", img: `${ICONS_PATH}/swimming.svg` },
+  { id: "flying", group: "other", img: `${ICONS_PATH}/flying.svg` },
+  { id: "identified", group: "other", img: `${ICONS_PATH}/identified.svg`, types: ["monster"] },
+  { id: "standby", group: "other", img: `${ICONS_PATH}/standby.svg` },
+  { id: "hateTop", group: "other", img: `${ICONS_PATH}/hateTop.svg` },
+  { id: "hateUnder", group: "other", img: `${ICONS_PATH}/hateUnder.svg` },
+  { id: "absent", group: "other", img: `${ICONS_PATH}/absent.svg` }
 ];
 
 /** Status that hides the token from everyone but its owners and the GM. */
@@ -58,7 +58,7 @@ export const HIDDEN_STATUS = "hidden";
 export const LH_STATUS_GROUPS = ["bad", "life", "combat", "other"];
 
 const STATUS_BY_ID = new Map(LH_STATUSES.map(s => [s.id, s]));
-const MIGRATION_VERSION = 2;
+const MIGRATION_VERSION = 3;
 
 /* -------------------------------------------- */
 /*  Registration                                */
@@ -75,16 +75,13 @@ export function registerStatuses() {
     type: Number,
     default: 0
   });
-  // Per-world icon overrides ({statusId: img}), e.g. imported from Combat Utility Belt.
-  game.settings.register("lhtrpg", "statusIcons", {
-    scope: "world",
-    config: false,
-    type: Object,
-    default: {},
-    onChange: _configureStatusEffects
-  });
-
-  _configureStatusEffects();
+  CONFIG.statusEffects = LH_STATUSES.map(s => ({
+    id: s.id,
+    // Static id: a status can only exist once per actor, even with concurrent toggles.
+    _id: `lh${s.id}`.padEnd(16, "0"),
+    name: `LHTRPG.StatusEffect.${s.id}`,
+    img: s.img
+  }));
   CONFIG.specialStatusEffects.DEFEATED = "dead";
 
   Hooks.on("updateActor", _onUpdateActor);
@@ -99,26 +96,6 @@ export function registerStatuses() {
   Hooks.on("createActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
   Hooks.on("deleteActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
   Hooks.once("ready", _migrateStatuses);
-}
-
-function _configureStatusEffects() {
-  CONFIG.statusEffects = LH_STATUSES.map(s => ({
-    id: s.id,
-    // Static id: a status can only exist once per actor, even with concurrent toggles.
-    _id: `lh${s.id}`.padEnd(16, "0"),
-    name: `LHTRPG.StatusEffect.${s.id}`,
-    img: getStatusIcon(s.id)
-  }));
-}
-
-/**
- * The icon of a status, honoring the world's overrides.
- * @param {string} statusId
- * @returns {string}
- */
-export function getStatusIcon(statusId) {
-  const overrides = game.settings.get("lhtrpg", "statusIcons") ?? {};
-  return overrides[statusId] || STATUS_BY_ID.get(statusId)?.img;
 }
 
 /* -------------------------------------------- */
@@ -144,7 +121,7 @@ export function getStatusPanel(actor) {
         return {
           id: s.id,
           label: game.i18n.localize(`LHTRPG.StatusEffect.${s.id}`),
-          img: getStatusIcon(s.id),
+          img: s.img,
           field: s.path ? `system.${s.path}` : null,
           rated: !!s.rated,
           value: s.rated ? (Number(value) || 0) : value,
@@ -296,7 +273,8 @@ async function _migrateStatuses() {
   if (!game.user.isActiveGM) return;
   if (game.settings.get("lhtrpg", "statusMigrationVersion") >= MIGRATION_VERSION) return;
 
-  await _importCUBIcons();
+  // Icon overrides imported from Combat Utility Belt (third-party art) are no longer used.
+  await game.settings.storage.get("world").find(s => s.key === "lhtrpg.statusIcons")?.delete();
 
   const actors = [...game.actors];
   for (const scene of game.scenes) {
@@ -356,31 +334,10 @@ export async function migrateActorStatuses(actor) {
   const iconUpdates = [];
   for (const effect of actor.effects) {
     if (effect.statuses.size !== 1) continue;
-    const img = getStatusIcon([...effect.statuses][0]);
-    if (img && (effect.img !== img) && STATUS_BY_ID.has([...effect.statuses][0])) iconUpdates.push({ _id: effect.id, img });
+    const img = STATUS_BY_ID.get([...effect.statuses][0])?.img;
+    if (img && (effect.img !== img)) iconUpdates.push({ _id: effect.id, img });
   }
   if (iconUpdates.length) await actor.updateEmbeddedDocuments("ActiveEffect", iconUpdates);
-}
-
-/**
- * Use the icons of the world's Combat Utility Belt condition map, if the world had one.
- */
-async function _importCUBIcons() {
-  const current = game.settings.get("lhtrpg", "statusIcons") ?? {};
-  if (!foundry.utils.isEmpty(current)) return;
-  const setting = game.settings.storage.get("world").find(s => s.key === "combat-utility-belt.activeConditionMap");
-  let conditions = setting?.value;
-  if (typeof conditions === "string") {
-    try { conditions = JSON.parse(conditions); } catch (err) { return; }
-  }
-  if (!Array.isArray(conditions)) return;
-
-  const icons = {};
-  for (const condition of conditions) {
-    const status = _statusFromCUBName(condition.name);
-    if (status && condition.icon && !icons[status.id]) icons[status.id] = condition.icon;
-  }
-  if (!foundry.utils.isEmpty(icons)) await game.settings.set("lhtrpg", "statusIcons", icons);
 }
 
 /**

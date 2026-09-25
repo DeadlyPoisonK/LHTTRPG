@@ -220,6 +220,9 @@
       "Tag": {
         "AddNewTag": "새 태그를 추가"
       }
+    },
+    "Stats": {
+      "Label": "Stats"
     }
   }
 }
