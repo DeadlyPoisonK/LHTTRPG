@@ -305,44 +305,61 @@ async function _migrateStatuses() {
     }
   }
 
+  let failed = 0;
   for (const actor of actors) {
-    const legacy = actor.effects.filter(e => {
-      const statusId = e.getFlag("core", "statusId");
-      return statusId && STATUS_BY_ID.has(statusId) && !e.statuses.size;
-    });
-    const cub = actor.effects.filter(e => e.getFlag("combat-utility-belt", "conditionId"));
-    const toDelete = [...legacy, ...cub].map(e => e.id);
-    if (toDelete.length) await actor.deleteEmbeddedDocuments("ActiveEffect", toDelete);
-
-    // Combat Utility Belt conditions become the matching LH status (by name).
-    const fieldUpdates = {};
-    for (const effect of cub) {
-      const status = _statusFromCUBName(effect.name);
-      if (!status) continue;
-      if (status.path) {
-        const value = _fieldValue(actor, status);
-        if (value !== undefined && !_isFieldActive(status, value)) fieldUpdates[`system.${status.path}`] = status.rated ? 1 : true;
-      }
-      else await actor.toggleStatusEffect(status.id, { active: true });
+    try {
+      await migrateActorStatuses(actor);
+    } catch (err) {
+      failed++;
+      console.error(`Log Horizon TRPG | Could not migrate the statuses of ${actor.uuid}`, err);
     }
-    if (!foundry.utils.isEmpty(fieldUpdates)) await actor.update(fieldUpdates, { render: false, lhStatusMigration: true });
-
-    for (const status of LH_STATUSES) {
-      if (status.path) await _syncEffectFromField(actor, status);
-    }
-
-    // Status effects created before an icon change keep their old icon.
-    const iconUpdates = [];
-    for (const effect of actor.effects) {
-      if (effect.statuses.size !== 1) continue;
-      const img = getStatusIcon([...effect.statuses][0]);
-      if (img && (effect.img !== img) && STATUS_BY_ID.has([...effect.statuses][0])) iconUpdates.push({ _id: effect.id, img });
-    }
-    if (iconUpdates.length) await actor.updateEmbeddedDocuments("ActiveEffect", iconUpdates);
   }
 
   await game.settings.set("lhtrpg", "statusMigrationVersion", MIGRATION_VERSION);
-  console.log(`Log Horizon TRPG | Migrated statuses of ${actors.length} actors`);
+  console.log(`Log Horizon TRPG | Migrated statuses of ${actors.length - failed}/${actors.length} actors`);
+}
+
+/**
+ * Migrate one actor's statuses: replace legacy and Combat Utility Belt effects with LH status
+ * effects, create the effects of fields that are already set, and refresh status icons.
+ * @param {Actor} actor
+ */
+export async function migrateActorStatuses(actor) {
+  const legacy = actor.effects.filter(e => {
+    const statusId = e.getFlag("core", "statusId");
+    return statusId && STATUS_BY_ID.has(statusId) && !e.statuses.size;
+  });
+  // Combat Utility Belt conditions with a LH equivalent (by name) are replaced by that status;
+  // the rest (e.g. Asleep) are left as they are. CUB is not active, so getFlag() would throw.
+  const cub = actor.effects
+    .filter(e => foundry.utils.getProperty(e.flags, "combat-utility-belt.conditionId"))
+    .map(effect => ({ effect, status: _statusFromCUBName(effect.name) }))
+    .filter(c => c.status);
+  const toDelete = [...legacy, ...cub.map(c => c.effect)].map(e => e.id);
+  if (toDelete.length) await actor.deleteEmbeddedDocuments("ActiveEffect", toDelete);
+
+  const fieldUpdates = {};
+  for (const { status } of cub) {
+    if (status.path) {
+      const value = _fieldValue(actor, status);
+      if (value !== undefined && !_isFieldActive(status, value)) fieldUpdates[`system.${status.path}`] = status.rated ? 1 : true;
+    }
+    else await actor.toggleStatusEffect(status.id, { active: true });
+  }
+  if (!foundry.utils.isEmpty(fieldUpdates)) await actor.update(fieldUpdates, { render: false, lhStatusMigration: true });
+
+  for (const status of LH_STATUSES) {
+    if (status.path) await _syncEffectFromField(actor, status);
+  }
+
+  // Status effects created before an icon change keep their old icon.
+  const iconUpdates = [];
+  for (const effect of actor.effects) {
+    if (effect.statuses.size !== 1) continue;
+    const img = getStatusIcon([...effect.statuses][0]);
+    if (img && (effect.img !== img) && STATUS_BY_ID.has([...effect.statuses][0])) iconUpdates.push({ _id: effect.id, img });
+  }
+  if (iconUpdates.length) await actor.updateEmbeddedDocuments("ActiveEffect", iconUpdates);
 }
 
 /**
