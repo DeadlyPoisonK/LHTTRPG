@@ -1,5 +1,6 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {onManageTags} from "../helpers/tags.mjs";
+import {getStatusPanel} from "../helpers/statuses.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -73,6 +74,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
+    context.statusPanel = getStatusPanel(this.actor);
 
     return context;
   }
@@ -299,28 +301,14 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // Roll skill
     html.find('.rollableSkill').click(this._onRollSkill.bind(this));
 
-    html.find('.neffect').on("change", (event) => {
-      const input = event.currentTarget;
-      const effectName = input.name.split(".").pop(); // Extrae el nombre del efecto
-      const value = parseInt(input.value) || 0; // Obtiene el valor del input o 0 si está vacío
-  
-      this._updateEffect(effectName, value);
-    });
-
-    
-    html.find('input[type="checkbox"]').on("change", (event) => {
-      const input = event.currentTarget;
-      const effectName = input.name.split(".").pop(); // Extrae el nombre del efecto
-      const isChecked = input.checked;
-  
-      this._toggleEffect(effectName, isChecked);
-    });
-
-      // Escucha cambios en los cuadros de entrada tipo number
-    
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
+
+    // Toggle statuses that have no data field (the others sync from their inputs)
+    html.find('.status-toggle').on("change", ev => {
+      this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
+    });
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -656,66 +644,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     item.ItemThrow();
 }
-
-
-
-async _toggleEffect(effectName, isChecked) {
-  const actor = this.actor;
-
-  // Busca si ya existe un efecto con ese nombre
-  const existingEffect = actor.effects.find(e => e.getFlag("core", "statusId") === effectName);
-
-  if (isChecked && !existingEffect) {
-    // Crear nuevo efecto
-    const effectData = {
-      name: game.i18n.localize(`LHTRPG.Label.${effectName}`), // Traducir el nombre
-      img: `systems/lhtrpg/assets/ui/effects/${effectName}.png`, // Ruta del icono
-      changes: [], // Cambios mecánicos si aplica // Duración de ejemplo
-      flags: { core: { statusId: effectName } } // Identificador único
-    };
-
-    await actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
-  } else if (!isChecked && existingEffect) {
-    // Eliminar el efecto existente
-    await actor.deleteEmbeddedDocuments("ActiveEffect", [existingEffect.id]);
-  }
-}
-
-async _updateEffect(effectName, value) {
-  const actor = this.actor;
-
-  // Busca si ya existe un efecto con ese nombre
-  const existingEffect = actor.effects.find(e => e.getFlag("core", "statusId") === effectName);
-
-  if (value > 0) {
-    if (existingEffect) {
-      // Actualiza el efecto existente
-      await existingEffect.update({ "flags.core.value": value });
-    } else {
-      // Crear nuevo efecto
-      const effectData = {
-        name: game.i18n.localize(`LHTRPG.Label.${effectName}`), // Traducir el nombre
-        img: `systems/lhtrpg/assets/ui/effects/${effectName}.png`, // Ruta del icono
-        changes: [
-          {
-            key: `flags.custom.${effectName}`,
-            mode: CONST.ACTIVE_EFFECT_MODES.ADD,
-            value: value,
-            priority: 20
-          }
-        ],
-        duration: { seconds: 3600 }, // Ejemplo de duración
-        flags: { core: { statusId: effectName, value } } // Identificador único con valor
-      };
-
-      await actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
-    }
-  } else if (existingEffect) {
-    // Eliminar el efecto si el valor es 0 o vacío
-    await actor.deleteEmbeddedDocuments("ActiveEffect", [existingEffect.id]);
-  }
-}
-
 
 
 

@@ -134,7 +134,9 @@
       "pursuit": "Persecución",
       "regen": "Regen.",
       "rigor": "Rigidez",
-      "staggered": "Tambaleante"
+      "staggered": "Tambaleante",
+      "Weakness": "Debilidad",
+      "weakness": "Debilidad"
     },
     "Modifier": "Modificador",
     "Monster": {
@@ -220,6 +222,37 @@
       "Tag": {
         "AddNewTag": "Añadir una nueva etiqueta"
       }
+    },
+    "StatusEffect": {
+      "fatigue": "Fatiga",
+      "weakness": "Debilidad",
+      "incapacitated": "Incapacitado",
+      "dead": "Muerto",
+      "staggered": "Tambaleante",
+      "dazed": "Aturdido",
+      "rigor": "Rigidez",
+      "confused": "Confundido",
+      "decay": "Decadencia",
+      "pursuit": "Persecución",
+      "afflicted": "Afligido",
+      "overconfident": "Confiado",
+      "regen": "Regen.",
+      "cancel": "Cancelar",
+      "barrier": "Barrera",
+      "hidden": "Oculto",
+      "swimming": "Nadando",
+      "flying": "Volando",
+      "identified": "Identificado",
+      "standby": "En espera",
+      "hateTop": "Odio Máximo",
+      "hateUnder": "Odio Inferior",
+      "absent": "Ausente de la escena"
+    },
+    "StatusGroup": {
+      "bad": "Estado Negativo",
+      "life": "Estado Vital",
+      "combat": "Estado de Combate",
+      "other": "Otros Estados"
     }
   }
 }

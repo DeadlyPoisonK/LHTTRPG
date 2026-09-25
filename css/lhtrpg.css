@@ -2779,3 +2779,121 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .dice-roll .dice-total.fumble {
   color: red;
 }
+
+/* -------------------------------------------- */
+/*  Status panel (actor-status-panel.html)      */
+/* -------------------------------------------- */
+
+.lhtrpg.sheet .lh-status-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "bad life other"
+    "bad combat other";
+  grid-template-rows: auto 1fr;
+  column-gap: 10px;
+  padding: 4px 8px;
+  color: #d6ffda;
+  font-size: 12px;
+}
+
+.lhtrpg.sheet .lh-status-group--bad { grid-area: bad; }
+.lhtrpg.sheet .lh-status-group--life { grid-area: life; }
+.lhtrpg.sheet .lh-status-group--combat { grid-area: combat; }
+.lhtrpg.sheet .lh-status-group--other { grid-area: other; }
+
+.lhtrpg.sheet .lh-status-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.lhtrpg.sheet .lh-status-group-title {
+  margin: 2px 0 1px;
+  padding: 0 0 1px;
+  border: none;
+  border-bottom: 1px solid rgba(74, 208, 179, 0.5);
+  color: #4ad0b3;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 20px;
+  padding: 0 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.1s, background-color 0.1s;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status:hover {
+  opacity: 0.85;
+  background: rgba(74, 208, 179, 0.12);
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status.active {
+  opacity: 1;
+  background: rgba(212, 160, 23, 0.25);
+  box-shadow: inset 2px 0 0 #d4a017;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status img {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The whole row is the toggle: hide the checkbox itself */
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-check {
+  display: none;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 17px;
+  padding: 0 2px;
+  border: 1px solid rgba(214, 255, 218, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Monster sheet has more room */
+.lhtrpg.sheet.monster .lh-status-panel {
+  margin-top: 6px;
+  padding: 6px 4px;
+  border-top: 1px solid rgba(214, 255, 218, 0.2);
+  font-size: 13px;
+}
+
+div.app.lhtrpg.monster .lh-status-panel .lh-status {
+  height: 22px;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-inner-spin-button,
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

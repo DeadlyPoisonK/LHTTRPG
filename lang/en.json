@@ -134,7 +134,9 @@
       "pursuit": "Pursuit",
       "regen": "Regen",
       "rigor": "Rigor",
-      "staggered": "Staggered"
+      "staggered": "Staggered",
+      "Weakness": "Weakness",
+      "weakness": "Weakness"
     },
     "Modifier": "Modifier",
     "Monster": {
@@ -165,7 +167,7 @@
         "Check": "Check",
         "Cost": "Cost",
         "Limit": "Limit",
-        "MacroEffect":"Macro",
+        "MacroEffect": "Macro",
         "Range": "Range",
         "SR": "SR",
         "Target": "Target",
@@ -220,6 +222,37 @@
       "Tag": {
         "AddNewTag": "Add a new tag"
       }
+    },
+    "StatusEffect": {
+      "fatigue": "Fatigue",
+      "weakness": "Weakness",
+      "incapacitated": "Incapacitated",
+      "dead": "Dead",
+      "staggered": "Staggered",
+      "dazed": "Dazed",
+      "rigor": "Rigor",
+      "confused": "Confused",
+      "decay": "Decay",
+      "pursuit": "Pursuit",
+      "afflicted": "Afflicted",
+      "overconfident": "Overconfident",
+      "regen": "Regen",
+      "cancel": "Cancel",
+      "barrier": "Barrier",
+      "hidden": "Hidden",
+      "swimming": "Swimming",
+      "flying": "Flying",
+      "identified": "Identified",
+      "standby": "Standby",
+      "hateTop": "Hate Top",
+      "hateUnder": "Hate Under",
+      "absent": "Absent From Scene"
+    },
+    "StatusGroup": {
+      "bad": "Bad Status",
+      "life": "Life Status",
+      "combat": "Combat Status",
+      "other": "Other Status"
     }
   }
 }

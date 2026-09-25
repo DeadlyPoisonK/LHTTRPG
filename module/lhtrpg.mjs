@@ -11,6 +11,8 @@ import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { _createItemsCompendiums, _createSkillsCompendiums } from "./helpers/api-import.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
+import { registerStatuses } from "./helpers/statuses.mjs";
+import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -47,6 +49,10 @@ Hooks.once('init', async function () {
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
+  CONFIG.Token.objectClass = LHTrpgToken;
+
+  // Log Horizon statuses (Token HUD, token icons, sheet sync, [Hidden])
+  registerStatuses();
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
   // Time passing per round

@@ -1,5 +1,6 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 import { onManageTags } from "../helpers/tags.mjs";
+import { getStatusPanel } from "../helpers/statuses.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -13,7 +14,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
             classes: ["lhtrpg", "sheet", "monster"],
             template: "systems/lhtrpg/templates/actor/actor-monster-sheet.html",
             width: 520,
-            height: 550,
+            height: 730,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
             { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" }],
             dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
@@ -57,6 +58,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
 
         // Prepare active effects
         context.effects = prepareActiveEffectCategories(this.actor.effects);
+        context.statusPanel = getStatusPanel(this.actor);
 
         return context;
     }
@@ -134,6 +136,11 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         // -------------------------------------------------------------
         // Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
+
+        // Toggle statuses that have no data field (the others sync from their inputs)
+        html.find('.status-toggle').on("change", ev => {
+            this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
+        });
 
         // Add Inventory Item
         html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -239,15 +246,11 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         event.preventDefault();
         const actor = this.actor;
         const system = actor.system;
-        const badStatus = system['bad-status'] ?? {};
-
-        const conditions = [];
-        for (const key of ['dazed', 'rigor', 'confused', 'staggered', 'afflicted', 'overconfident']) {
-            if (badStatus[key]) conditions.push(game.i18n.localize(`LHTRPG.Label.${key.capitalize()}`));
-        }
-        for (const key of ['regen', 'cancel', 'barrier', 'decay', 'pursuit']) {
-            if (badStatus[key]) conditions.push(`${game.i18n.localize(`LHTRPG.Label.${key.capitalize()}`)} ${badStatus[key]}`);
-        }
+        // Condition = every LS/BS/CS/OS on the monster, ratings included in the effect name.
+        // [Hidden] is left out: the players would not know about it.
+        const conditions = actor.effects
+            .filter(e => e.active && e.statuses.size && !e.statuses.has("hidden"))
+            .map(e => e.name);
 
         const pdef = system['battle-status']?.defense?.phys ?? 0;
         const mdef = system['battle-status']?.defense?.magic ?? 0;

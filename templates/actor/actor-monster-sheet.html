@@ -174,39 +174,8 @@
           </div>
         </div>
 
-        <div class="grid grid-6col grid-span-6 status-row">
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.dazed">{{localize 'LHTRPG.Label.Dazed'}}</label>
-            <input type="checkbox" name="system.bad-status.dazed" {{checked system.bad-status.dazed}}
-              data-dtype="Boolean" />
-          </div>
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.rigor">{{localize 'LHTRPG.Label.Rigor'}}</label>
-            <input type="checkbox" name="system.bad-status.rigor" {{checked system.bad-status.rigor}}
-              data-dtype="Boolean" />
-          </div>
-
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.confused">{{localize 'LHTRPG.Label.Confused'}}</label>
-            <input type="checkbox" name="system.bad-status.confused" {{checked system.bad-status.confused}}
-              data-dtype="Boolean" />
-          </div>
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.staggered">{{localize 'LHTRPG.Label.Staggered'}}</label>
-            <input type="checkbox" name="system.bad-status.staggered" {{checked system.bad-status.staggered}}
-              data-dtype="Boolean" />
-          </div>
-
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.afflicted">{{localize 'LHTRPG.Label.Afflicted'}}</label>
-            <input type="checkbox" name="system.bad-status.afflicted" {{checked system.bad-status.afflicted}}
-              data-dtype="Boolean" />
-          </div>
-          <div class="status-checkbox flexcol">
-            <label for="system.bad-status.overconfident">{{localize 'LHTRPG.Label.Overconfident'}}</label>
-            <input type="checkbox" name="system.bad-status.overconfident" {{checked system.bad-status.overconfident}}
-              data-dtype="Boolean" />
-          </div>
+        <div class="grid-span-6">
+          {{> "systems/lhtrpg/templates/actor/parts/actor-status-panel.html"}}
         </div>
 
       </section>

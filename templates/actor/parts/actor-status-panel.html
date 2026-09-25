@@ -1,0 +1,27 @@
+{{!-- All Log Horizon statuses, by group. Statuses backed by a data field submit it with the form
+      (and sync to the status effect); the others toggle the status effect directly. --}}
+<div class="lh-status-panel">
+	{{#each statusPanel}}
+	<div class="lh-status-group lh-status-group--{{id}}">
+		<h4 class="lh-status-group-title">{{label}}</h4>
+		{{#each statuses}}
+		<label class="lh-status{{#if active}} active{{/if}}" title="{{label}}">
+			{{#if rated}}
+			<img src="{{img}}" alt="" />
+			<span class="lh-status-label">{{label}}</span>
+			<input class="lh-status-rating" type="number" name="{{field}}" value="{{value}}" min="0"
+				placeholder="0" data-dtype="Number" />
+			{{else}}
+			{{#if field}}
+			<input class="lh-status-check" type="checkbox" name="{{field}}" {{checked value}} data-dtype="Boolean" />
+			{{else}}
+			<input class="lh-status-check status-toggle" type="checkbox" data-status-id="{{id}}" {{checked active}} />
+			{{/if}}
+			<img src="{{img}}" alt="" />
+			<span class="lh-status-label">{{label}}</span>
+			{{/if}}
+		</label>
+		{{/each}}
+	</div>
+	{{/each}}
+</div>

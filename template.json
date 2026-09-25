@@ -74,6 +74,7 @@
           "barrier": 0,
           "decay": 0,
           "pursuit": 0,
+          "weakness": 0,
           "dazed": false,
           "rigor": false,
           "confused": false,

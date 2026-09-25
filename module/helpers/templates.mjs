@@ -18,6 +18,7 @@
     "systems/lhtrpg/templates/actor/parts/actor-skills-combat.html",
     "systems/lhtrpg/templates/actor/parts/actor-skills-general.html",
     "systems/lhtrpg/templates/actor/parts/actor-others.html",
+    "systems/lhtrpg/templates/actor/parts/actor-status-panel.html",
 
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html",
