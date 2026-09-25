@@ -14,7 +14,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
             classes: ["lhtrpg", "sheet", "monster"],
             template: "systems/lhtrpg/templates/actor/actor-monster-sheet.html",
             width: 520,
-            height: 730,
+            height: 550,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
             { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" }],
             dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},

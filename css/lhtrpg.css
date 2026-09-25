@@ -2882,9 +2882,7 @@ div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating {
 
 /* Monster sheet has more room */
 .lhtrpg.sheet.monster .lh-status-panel {
-  margin-top: 6px;
   padding: 6px 4px;
-  border-top: 1px solid rgba(214, 255, 218, 0.2);
   font-size: 13px;
 }
 
