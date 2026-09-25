@@ -138,12 +138,18 @@
     },
     "Modifier": "수정치",
     "Monster": {
+      "Condition": "상태",
+      "DefenseEqual": "동일",
+      "DefenseMagical": "마법",
+      "DefensePhysical": "물리",
       "HateMultiplier": "헤이트 배율",
       "Identification": "식별 난이도",
       "Initiative": "행동력",
+      "LowerDefense": "낮은 방어력",
       "MDef": "마법 방어력",
       "PDef": "물리 방어력",
       "Rank": "랭크",
+      "SendToChat": "정보를 채팅으로 보내기",
       "Skills": "특기",
       "Speed": "이동력"
     },

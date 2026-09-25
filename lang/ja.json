@@ -138,12 +138,18 @@
     },
     "Modifier": "修正値",
     "Monster": {
+      "Condition": "状態",
+      "DefenseEqual": "同じ",
+      "DefenseMagical": "魔法",
+      "DefensePhysical": "物理",
       "HateMultiplier": "ヘイト倍率",
       "Identification": "識別難易度",
       "Initiative": "行動力",
+      "LowerDefense": "低い方の防御力",
       "MDef": "魔法防御力",
       "PDef": "物理防御力",
       "Rank": "ランク",
+      "SendToChat": "情報をチャットに送信",
       "Skills": "特技",
       "Speed": "移動力"
     },

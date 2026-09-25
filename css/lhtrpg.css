@@ -2151,6 +2151,25 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   background-color: #666666;
 }
 
+.lhtrpg.sheet.monster .sheet-header .monster-send-to-chat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 4px 0 8px;
+  padding: 3px 8px;
+  font-size: 11px;
+  color: #d6ffda;
+  background-color: #2a4536;
+  border: 1px solid #4a7a5d;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lhtrpg.sheet.monster .sheet-header .monster-send-to-chat:hover {
+  background-color: #396b4c;
+  text-shadow: none;
+}
+
 .lhtrpg.sheet.item .sheet-stats,
 .lhtrpg.sheet.monster .sheet-stats {
   display: -webkit-box;
@@ -2603,6 +2622,69 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   background-color: rgba(214, 255, 218, 0.15);
   color: #d6ffda;
   border: 1px solid rgba(214, 255, 218, 0.35);
+}
+
+.lhtrpg.chat-card .chat-card-condition {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-condition .chat-stat-label {
+  text-transform: uppercase;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.lhtrpg.chat-card .chat-card-monster-skills h4 {
+  margin: 6px 0 4px;
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 14px;
+  color: #d6ffda;
+  border-top: 1px solid rgba(214, 255, 218, 0.35);
+  padding-top: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-skill {
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed rgba(214, 255, 218, 0.2);
+}
+
+.lhtrpg.chat-card .chat-card-skill:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lhtrpg.chat-card .chat-card-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.lhtrpg.chat-card .chat-card-skill-img {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.lhtrpg.chat-card .chat-card-skill-header h5 {
+  margin: 0;
+  font-size: 13px;
+  color: #d6ffda;
+}
+
+.lhtrpg.chat-card .chat-card-skill-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: 3px;
 }
 
 .lhtrpg.chat-card .chat-card-description {

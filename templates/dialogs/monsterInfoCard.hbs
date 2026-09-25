@@ -1,0 +1,53 @@
+<div class="lhtrpg chat-card monster-chat-card">
+	<header class="chat-card-header">
+		<img class="chat-card-img" src="{{img}}" alt="{{name}}" />
+		<div class="chat-card-title">
+			<h3>{{name}}</h3>
+			<span class="chat-card-type">{{localize 'TYPES.ACTOR.TypeMonster'}}</span>
+		</div>
+	</header>
+
+	{{#if tags.length}}
+	<div class="chat-card-tags">
+		{{#each tags as |tag|}}<span class="tag">{{tag}}</span>{{/each}}
+	</div>
+	{{/if}}
+
+	<div class="chat-card-stats">
+		<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Monster.Rank'}}</span><span class="chat-stat-value">{{rank}}</span></div>
+		<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Monster.LowerDefense'}}</span><span class="chat-stat-value">{{lowerDefense}}</span></div>
+		<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Monster.HateMultiplier'}}</span><span class="chat-stat-value">{{hateMultiplier}}</span></div>
+	</div>
+
+	<div class="chat-card-condition">
+		<span class="chat-stat-label">{{localize 'LHTRPG.Monster.Condition'}}</span>
+		<span class="chat-card-condition-value">
+			{{#if conditions.length}}{{#each conditions}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}{{else}}—{{/if}}
+		</span>
+	</div>
+
+	{{#if skills.length}}
+	<div class="chat-card-monster-skills">
+		<h4>{{localize 'LHTRPG.Monster.Skills'}}</h4>
+		{{#each skills as |skill|}}
+		<div class="chat-card-skill">
+			<div class="chat-card-skill-header">
+				<img class="chat-card-skill-img" src="{{skill.img}}" alt="{{skill.name}}" />
+				<h5>{{skill.name}}</h5>
+			</div>
+			<div class="chat-card-skill-stats">
+				{{#if skill.system.timing}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Timing'}}</span><span class="chat-stat-value">{{skill.system.timing}}</span></span>{{/if}}
+				{{#if skill.system.checkType}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{skill.system.checkType}}</span></span>{{/if}}
+				{{#if skill.system.target}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Target'}}</span><span class="chat-stat-value">{{skill.system.target}}</span></span>{{/if}}
+				{{#if skill.system.range}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Range'}}</span><span class="chat-stat-value">{{skill.system.range}}</span></span>{{/if}}
+				{{#if skill.system.cost}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{skill.system.cost}}</span></span>{{/if}}
+				{{#if skill.system.limit}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Limit'}}</span><span class="chat-stat-value">{{skill.system.limit}}</span></span>{{/if}}
+			</div>
+			{{#if skill.enrichedDescription}}
+			<div class="chat-card-description">{{{skill.enrichedDescription}}}</div>
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+	{{/if}}
+</div>

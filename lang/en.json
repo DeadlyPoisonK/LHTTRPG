@@ -138,12 +138,18 @@
     },
     "Modifier": "Modifier",
     "Monster": {
+      "Condition": "Condition",
+      "DefenseEqual": "Equal",
+      "DefenseMagical": "Magical",
+      "DefensePhysical": "Physical",
       "HateMultiplier": "Hate Mult.",
       "Identification": "ID Difficulty",
       "Initiative": "Initiative",
+      "LowerDefense": "Lower Defense",
       "MDef": "M. Def.",
       "PDef": "Phys. Def.",
       "Rank": "Rank",
+      "SendToChat": "Send Info to Chat",
       "Skills": "Skills",
       "Speed": "Speed"
     },

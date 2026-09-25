@@ -106,6 +106,8 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         
         html.find('.item-throw').click(this._onItemThrow.bind(this));
 
+        html.find('.monster-send-to-chat').click(this._onSendToChat.bind(this));
+
         // Render the item sheet for viewing/editing prior to the editable check.
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
@@ -221,6 +223,66 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
             });
             return roll;
         }
+    }
+
+    /**
+     * Send the monster's Identify info to chat: the GM clicks this after the
+     * party succeeds an Identification check. Per the rules, this reveals
+     * name/rank/tags/condition (always visible on sight) plus, once
+     * Identified, which Defense is lower, the Hate Multiplier, and Skill
+     * details. Exact attributes, HP/Fate, Evasion/Resistance and the raw
+     * defense values are never shown to players.
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    async _onSendToChat(event) {
+        event.preventDefault();
+        const actor = this.actor;
+        const system = actor.system;
+        const badStatus = system['bad-status'] ?? {};
+
+        const conditions = [];
+        for (const key of ['dazed', 'rigor', 'confused', 'staggered', 'afflicted', 'overconfident']) {
+            if (badStatus[key]) conditions.push(game.i18n.localize(`LHTRPG.Label.${key.capitalize()}`));
+        }
+        for (const key of ['regen', 'cancel', 'barrier', 'decay', 'pursuit']) {
+            if (badStatus[key]) conditions.push(`${game.i18n.localize(`LHTRPG.Label.${key.capitalize()}`)} ${badStatus[key]}`);
+        }
+
+        const pdef = system['battle-status']?.defense?.phys ?? 0;
+        const mdef = system['battle-status']?.defense?.magic ?? 0;
+        let lowerDefense;
+        if (pdef < mdef) lowerDefense = game.i18n.localize('LHTRPG.Monster.DefensePhysical');
+        else if (mdef < pdef) lowerDefense = game.i18n.localize('LHTRPG.Monster.DefenseMagical');
+        else lowerDefense = game.i18n.localize('LHTRPG.Monster.DefenseEqual');
+
+        const skills = await Promise.all(actor.items.filter(i => i.type === 'skill').map(async item => ({
+            ...item.toObject(),
+            enrichedDescription: item.system.description
+                ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(item.system.description, { async: true })
+                : ""
+        })));
+
+        const cardData = {
+            name: actor.name,
+            img: actor.img,
+            rank: system.rank,
+            tags: system.tags,
+            conditions,
+            lowerDefense,
+            hateMultiplier: system.hateMultiplier,
+            skills
+        };
+
+        const content = await foundry.applications.handlebars.renderTemplate(
+            "systems/lhtrpg/templates/dialogs/monsterInfoCard.hbs", cardData
+        );
+
+        return ChatMessage.create({
+            user: game.user.id,
+            speaker: ChatMessage.getSpeaker({ actor }),
+            content
+        });
     }
 
     _onItemThrow(event) {
