@@ -93,6 +93,11 @@ export function registerStatuses() {
   for (const hook of ["createActiveEffect", "updateActiveEffect", "deleteActiveEffect"]) {
     Hooks.on(hook, _refreshHiddenTokens);
   }
+  // Combat tracker "hide" <-> [Hidden]
+  Hooks.on("updateCombatant", _onUpdateCombatant);
+  Hooks.on("preCreateCombatant", _onPreCreateCombatant);
+  Hooks.on("createActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
+  Hooks.on("deleteActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
   Hooks.once("ready", _migrateStatuses);
 }
 
@@ -237,6 +242,45 @@ function _refreshHiddenTokens(effect) {
   if (!(actor instanceof Actor)) return;
   for (const token of actor.getActiveTokens()) {
     token.renderFlags.set({ refreshVisibility: true, refreshState: true });
+  }
+}
+
+/* -------------------------------------------- */
+/*  Combat tracker                              */
+/* -------------------------------------------- */
+
+/**
+ * Hiding/revealing a combatant from the combat tracker toggles [Hidden] on its token.
+ */
+function _onUpdateCombatant(combatant, changes, options, userId) {
+  if ((userId !== game.user.id) || !("hidden" in changes)) return;
+  const actor = combatant.actor;
+  if (!actor || (actor.statuses.has(HIDDEN_STATUS) === changes.hidden)) return;
+  actor.toggleStatusEffect(HIDDEN_STATUS, { active: changes.hidden });
+}
+
+/**
+ * A token already under [Hidden] enters combat hidden in the tracker too.
+ */
+function _onPreCreateCombatant(combatant) {
+  if (combatant.actor?.statuses.has(HIDDEN_STATUS) && !combatant.hidden) {
+    combatant.updateSource({ hidden: true });
+  }
+}
+
+/**
+ * [Hidden] added/removed: hide/reveal the actor's combatants in every combat.
+ */
+function _syncCombatantsHidden(effect, userId) {
+  if ((userId !== game.user.id) || !effect.statuses.has(HIDDEN_STATUS)) return;
+  const actor = effect.parent;
+  if (!(actor instanceof Actor)) return;
+  const hidden = actor.statuses.has(HIDDEN_STATUS);
+  for (const combat of game.combats) {
+    const updates = combat.combatants
+      .filter(c => (c.actor?.uuid === actor.uuid) && (c.hidden !== hidden) && c.canUserModify(game.user, "update"))
+      .map(c => ({ _id: c.id, hidden }));
+    if (updates.length) combat.updateEmbeddedDocuments("Combatant", updates);
   }
 }
 
