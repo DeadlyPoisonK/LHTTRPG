@@ -5,6 +5,16 @@ import {onManageTags} from "../helpers/tags.mjs";
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
+// Number of equipment slots available per item type, mirroring the slots
+// rendered in actor-inventory.html. Types not listed here have no slot cap.
+const EQUIP_SLOT_CAPACITY = {
+  weapon: 1,
+  armor: 1,
+  shield: 1,
+  bag: 1,
+  accessory: 3
+};
+
 export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
   /** @override */
@@ -319,11 +329,23 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.item-equip').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      let equipped = item.system.equipped;
-      equipped = !equipped;
-      item.update(
-        { 'system.equipped': equipped}
-      )
+      const equipped = !item.system.equipped;
+      const updates = [{ _id: item.id, "system.equipped": equipped }];
+
+      // When equipping, unequip whatever exceeds this type's slot capacity
+      // so items can't stack past the equipment slots shown on the sheet.
+      const capacity = EQUIP_SLOT_CAPACITY[item.type];
+      if (equipped && capacity) {
+        const othersEquipped = this.actor.items.filter(
+          i => i.type === item.type && i.system.equipped === true && i.id !== item.id
+        );
+        const overflow = othersEquipped.length - (capacity - 1);
+        for (let i = 0; i < overflow; i++) {
+          updates.push({ _id: othersEquipped[i].id, "system.equipped": false });
+        }
+      }
+
+      this.actor.updateEmbeddedDocuments("Item", updates);
       li.slideUp(200, () => this.render(false));
     });
 
