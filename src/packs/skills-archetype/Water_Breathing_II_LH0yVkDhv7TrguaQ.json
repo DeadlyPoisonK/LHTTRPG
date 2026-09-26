@@ -1,0 +1,43 @@
+{
+  "name": "Water Breathing II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. The target gains the [Aquatic] tag, and [Cancel (Aquatic): 20]. Treat this effect as a Combat Status.</p>\n<p>(CR21): Increase the [Cancel] to 30.<br>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A magic that grants the protection of water to your friends and yourself, allowing them to move freely in the water as well as on land, if not more.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LH0yVkDhv7TrguaQ",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!LH0yVkDhv7TrguaQ"
+}

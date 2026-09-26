@@ -1,0 +1,46 @@
+{
+  "name": "Bamboo Staff",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Wand for magicians. Characterized by inlaid precious metal patterns.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Staff]"
+    ],
+    "initiative": -2,
+    "rank": 5,
+    "price": 180,
+    "equipped": false,
+    "attack": 12,
+    "magic": 12,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "fwSagHiszKgVOAQO",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!fwSagHiszKgVOAQO"
+}

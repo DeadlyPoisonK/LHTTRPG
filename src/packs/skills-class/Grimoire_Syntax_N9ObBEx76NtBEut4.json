@@ -1,0 +1,41 @@
+{
+  "name": "Grimoire Syntax",
+  "type": "skill",
+  "system": {
+    "description": "<p>Your [Initiative] will be 0 until the end of the round. From your line of sight, designate Sq of [Target: Wide (SRx 2)] (A) / Range: 4 Sq] as the target. If you do a [Magic Attack] in the first main process of this round with [Target: Area], the target of that attack is changed to [existing in all Sq specified as target (indiscriminate)].</p>\n<hr>\n<p>A special skill that draws a three-dimensional magic formation by accumulating magical power around it while chanting. Dramatically increases the area of ​​effect of magic, but fine control becomes impossible.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Hate 3",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "N9ObBEx76NtBEut4",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!N9ObBEx76NtBEut4"
+}

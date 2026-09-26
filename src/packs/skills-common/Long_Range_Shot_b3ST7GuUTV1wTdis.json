@@ -1,0 +1,41 @@
+{
+  "name": "Long Range Shot",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Bombadier, Hunter, or Nomad.</p>\n<p>Use at the same time as [Timing: Major / Target: Single] and with [Range: 1Sq or higher] attack. The range of attack increases by +2 Sq. and +1D to [Accuracy].</p>\n<hr>\n<p>A special ability to aim and shoot prey at a greater distance. Read the wind, see the movement, sharpen your concentration, and shoot through enemies from afar.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "b3ST7GuUTV1wTdis",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!b3ST7GuUTV1wTdis"
+}

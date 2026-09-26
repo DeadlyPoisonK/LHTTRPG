@@ -1,0 +1,43 @@
+{
+  "name": "Road Mirage",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] of [[Speed] -1] Sq. After that, you become [Hidden] and you can make a [Safe Move] of 1 Sq. while maintaining it.</p>\n<hr>\n<p>A skill for moving through the gaps in an enemy's attention and senses to hide yourself. Enemies will lose sight of you as if you had been an illusion.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "SR/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1l31WrnLeRBIZEbH",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!1l31WrnLeRBIZEbH"
+}

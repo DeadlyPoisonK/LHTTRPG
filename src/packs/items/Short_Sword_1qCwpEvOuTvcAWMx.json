@@ -1,0 +1,47 @@
+{
+  "name": "Short Sword",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A double-edged sword with a blade length of about 50 cm. easy to handle.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]",
+      "[Light]"
+    ],
+    "initiative": 0,
+    "rank": 2,
+    "price": 60,
+    "equipped": false,
+    "attack": 3,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1qCwpEvOuTvcAWMx",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!1qCwpEvOuTvcAWMx"
+}

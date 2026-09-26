@@ -1,0 +1,43 @@
+{
+  "name": "Symbol of the Sun",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target is immune to damage with the [Fire] [Cold] or [Shock] tags that comes from Props or [Gimmicks]. Treat this effect as a Combat Status.&nbsp;</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A skill that protects oneself from various disasters with the protection of the sun.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SpPA6JCUWy9r2evF",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!SpPA6JCUWy9r2evF"
+}

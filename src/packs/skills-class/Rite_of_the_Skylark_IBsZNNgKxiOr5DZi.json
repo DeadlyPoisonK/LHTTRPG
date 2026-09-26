@@ -1,0 +1,43 @@
+{
+  "name": "Rite of the Skylark",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [1D + (Attack Power)] physical damage to the target.</p>\n<p>(Success): You may make a [Normal Move] of up to 2 Sq.<br>(SR2): The [Normal Move] becomes a [Safe Move].&nbsp;<br>(SR3): The [Normal Move] becomes a [Teleport].</p>\n<hr>\n<p>A special skill that blows up skylark wings at the same time as attacking and moves while hiding in them. The divine protection of the skylark, which is known as the Angel of Heaven, will tell you the way to heaven.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "IBsZNNgKxiOr5DZi",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!IBsZNNgKxiOr5DZi"
+}

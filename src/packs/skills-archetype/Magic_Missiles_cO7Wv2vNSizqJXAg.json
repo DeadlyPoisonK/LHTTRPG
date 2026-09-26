@@ -1,0 +1,43 @@
+{
+  "name": "Magic Missiles",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR + 3)D + (Magical power)] magical damage.&nbsp;</p>\n<p>(Critical): Increase the damage by +2D.</p>\n<hr>\n<p>A spell that shoots out arrows with converged magical power. Because it is a simple technique, the kneading of the magical power is directly linked to its power, and if it can be invoked with high accuracy, its effectiveness will dramatically increase.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "cO7Wv2vNSizqJXAg",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!cO7Wv2vNSizqJXAg"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Cat Reflextion",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you receive [Pursuit], reduce the rating by -5. If the rating drops to 0 or lower, you do not receive [Pursuit].</p>\n<p>(CR11): Reduce the rating by -10 instead.<br>(CR21): Reduce the rating by -15 instead.</p>\n<hr>\n<p>With your unparalleled reflexes, you can take special ukemi to escape the impact received.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3WsOe43Aq3BgVppE",
+  "folder": "qBo2B5iIARPEcvtd",
+  "_key": "!items!3WsOe43Aq3BgVppE"
+}

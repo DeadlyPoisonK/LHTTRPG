@@ -1,0 +1,46 @@
+{
+  "name": "Hex Card III",
+  "type": "gear",
+  "system": {
+    "description": "<p>During this Main Process, the target gains a +6D bonus to [Magic Attack] damage rolls. The effect of multiple Hex Cards (regardless of rank) do not stack.</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 21,
+    "price": 750,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6EaERuUL1KDjnkiN",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!6EaERuUL1KDjnkiN"
+}

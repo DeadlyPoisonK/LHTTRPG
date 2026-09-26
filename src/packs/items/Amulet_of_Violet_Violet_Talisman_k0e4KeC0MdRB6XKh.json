@@ -1,0 +1,44 @@
+{
+  "name": "Amulet of Violet (Violet Talisman)",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A small talisman inspired by the strength of violets, which can take root even in gaps between solid rocks and endure the wind and snow.</p>",
+    "tags": [
+      "[Accessory]"
+    ],
+    "pdef": 0,
+    "mdef": 16,
+    "rank": 28,
+    "price": 1900,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "k0e4KeC0MdRB6XKh",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!k0e4KeC0MdRB6XKh"
+}

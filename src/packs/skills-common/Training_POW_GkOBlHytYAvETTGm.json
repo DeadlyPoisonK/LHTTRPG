@@ -1,0 +1,88 @@
+{
+  "name": "Training: POW",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain +3 to POW.</p>\n<hr>\n<p>You are accumulating training to hone yourself every day. Extending your strengths, compensating for your weaknesses, and the steady accumulation of these efforts, though different in form, will become the sustenance that supports you.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.common-skill.GkOBlHytYAvETTGm",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "H2w2TVG5FUWawG8g",
+      "changes": [
+        {
+          "key": "system.attributes.pow.value",
+          "mode": 2,
+          "value": "3",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "POW +3",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!GkOBlHytYAvETTGm.H2w2TVG5FUWawG8g"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "GkOBlHytYAvETTGm",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!GkOBlHytYAvETTGm"
+}

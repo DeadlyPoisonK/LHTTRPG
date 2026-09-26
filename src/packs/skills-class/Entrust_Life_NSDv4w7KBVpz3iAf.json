@@ -1,0 +1,41 @@
+{
+  "name": "Entrust Life",
+  "type": "skill",
+  "system": {
+    "description": "<p>You take 20 direct damage. The target recovers the same amount of HP you lost through this skill's effect.</p>\n<p>(CR4): The direct damage increases to 30.<br>(CR8): The direct damage increases to 40.<br>(CR11): The direct damage increases to 50.</p>\n<hr>\n<p>A special skill that puts vitality on the air that circulates in the earth and atmosphere, and takes over the wounds inflicted on the target.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NSDv4w7KBVpz3iAf",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!NSDv4w7KBVpz3iAf"
+}

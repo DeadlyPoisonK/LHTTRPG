@@ -1,0 +1,44 @@
+{
+  "name": "Anchor Howl",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain [Cancel: (STR Mod)]. This effect lasts until the end of the round.</p>\n<p>(Hate Top): You recover 5 HP.</p>\n<hr>\n<p>A special skill that raises the roar of the fabric and arouses the hostility of the enemy towards himself. It also has the effect of preparing for enemy attacks by encouraging oneself.</p>",
+    "tags": [
+      "Combat",
+      "Auto"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2d5v2xmjmJNfAQfk",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!2d5v2xmjmJNfAQfk"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Fatal Ambush",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target. You may only use this skill on a round you have declared [Standby].</p>\n<p>(Self: Hidden): Roll this skill's check twice and take either result.<br>(Critical): The damage becomes penetrating.</p>\n<hr>\n<p>A special skill that takes time to find the opponent's openings and unleashes a single blow. It takes some time to unleash, but if you release it while stealthed, it's a deadly surprise.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QvgyQsQU6gKCo36T",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!QvgyQsQU6gKCo36T"
+}

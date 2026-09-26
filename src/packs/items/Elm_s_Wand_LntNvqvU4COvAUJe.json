@@ -1,0 +1,46 @@
+{
+  "name": "Elm's Wand",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Wand for magicians. A crystal is set at the tip.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 3,
+    "price": 120,
+    "equipped": false,
+    "attack": 3,
+    "magic": 5,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 7400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LntNvqvU4COvAUJe",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!LntNvqvU4COvAUJe"
+}

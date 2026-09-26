@@ -1,0 +1,267 @@
+{
+  "_id": "1UnbrYWynvESkazH",
+  "name": "Living Idol",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "sort": 0,
+  "system": {
+    "health": {
+      "value": 192,
+      "max": 192,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 4,
+      "max": 4,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Boss",
+      "Construct",
+      "Night Vision",
+      "Gimmick"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 16,
+        "magic": 6
+      },
+      "speed": 2,
+      "initiative": 3
+    },
+    "rank": 3,
+    "idendification": "7",
+    "hateMultiplier": "5",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 1
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 3
+      }
+    },
+    "description": ""
+  },
+  "items": [
+    {
+      "_id": "GASmsbRDoUvxfbg0",
+      "name": "Sitting Position",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 100,
+      "folder": null,
+      "system": {
+        "description": "<p>When this enemy takes [Spirit] damage, it takes an additional [Pursuit: 5] and [Dazed]. This enemy may not [Dash] or [Shift].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!1UnbrYWynvESkazH.GASmsbRDoUvxfbg0"
+    },
+    {
+      "_id": "K5URRrNZTLc4KOdM",
+      "name": "Repeat Action",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 200,
+      "folder": null,
+      "system": {
+        "description": "<p>Once per round, when this enemy becomes [Post-Action], it immediately becomes [Pre-Action] again. After that, until the end of the round, its [Initiative] becomes 0.</p>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Round",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!1UnbrYWynvESkazH.K5URRrNZTLc4KOdM"
+    },
+    {
+      "_id": "EOYdcxFWuvSw6UE8",
+      "name": "Evil Idol's Halo",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 300,
+      "folder": null,
+      "system": {
+        "description": "<p>The target takes 5 direct damage. If the target has [Pursuit], it activates 1 stack (treat it as if the target had failed their defense roll). This enemy may remove 1 bad status from itself.</p>",
+        "tags": [],
+        "timing": "Cleanup",
+        "checkType": "Auto",
+        "range": "Wide Area 20",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!1UnbrYWynvESkazH.EOYdcxFWuvSw6UE8"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Living Idol",
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg"
+    },
+    "flags": {}
+  },
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "DZa0LbCEve8eidVi",
+  "_key": "!actors!1UnbrYWynvESkazH"
+}

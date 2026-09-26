@@ -1,0 +1,43 @@
+{
+  "name": "Art of the Plum Path",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Teleport] up to [SR+1] Sq.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A magic that moves beyond space with the help of a plum tree that is said to have flown through the heavens to reach its master.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VBPR8nYgFJY3FFTZ",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!VBPR8nYgFJY3FFTZ"
+}

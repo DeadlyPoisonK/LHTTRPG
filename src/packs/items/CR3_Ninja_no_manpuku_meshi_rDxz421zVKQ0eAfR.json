@@ -1,0 +1,48 @@
+{
+  "name": "(CR3) Ninja no manpuku meshi",
+  "type": "gear",
+  "system": {
+    "description": "<p>Your [Fatigue] is reduced by 20 points. This effect does not have to be received immediately upon use, and can be received at any time. However, if it is not received by the end of the scenario, it becomes ineffective.\nThe Iga Ninja's Rations are a food item carried by the ninjas of the Hidden Village of Iga when they are sent on missions to distant places. It resembles a large plum in appearance, but by simply eating one piece, the ninja can continue moving without feeling hungry for an entire day. Due to the inclusion of secret herbs and animal organs, the taste is incredibly bad, and improvement of the flavor is urgently needed.</p><hr><p>々 [Core Material](40G)+ (35G)×3+[ 3](25G)×3+Crafting Cost(115G)</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Not For Sale",
+      "M6"
+    ],
+    "rank": 3,
+    "price": 335,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 3000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rDxz421zVKQ0eAfR",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!rDxz421zVKQ0eAfR"
+}

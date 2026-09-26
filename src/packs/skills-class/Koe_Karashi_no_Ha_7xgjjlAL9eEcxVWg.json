@@ -1,0 +1,41 @@
+{
+  "name": "Koe Karashi no Ha",
+  "type": "skill",
+  "system": {
+    "description": "<p>Used at the same time as \"Shrike's Thorn\".</p>\n<p>(Add Effect): The target can not perform an action with [Magic Attack] tag. This effect is handled as Bad Status, and it continues until the target's ends their next main process. If \"Shrike's Thorn\" did not damage the target, the skill does not consume its limit.</p>\n<hr>\n<p>A special skill that hinders the use of magic by accurately damaging the throat, which is the key to casting spells, and the organ that converges magic power.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7xgjjlAL9eEcxVWg",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!7xgjjlAL9eEcxVWg"
+}

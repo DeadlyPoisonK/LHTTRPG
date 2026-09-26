@@ -1,0 +1,41 @@
+{
+  "name": "Silent Sniper",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +[SRx5] bonus to [Ranged Attack] damage rolls.</p>\n<hr>\n<p>A special skill that stops movement on the spot, concentrates, and quietly aims so as not to be distracted by the enemy.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UAbYgymLp9YVfFzn",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!UAbYgymLp9YVfFzn"
+}

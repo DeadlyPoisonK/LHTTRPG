@@ -1,0 +1,49 @@
+{
+  "name": "R13 M5 Alchemist's Spirit Sword",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Setup] [Fantasy Beast][Fairy][Artificial] choose one. You gain [Cancel (selected tag):30]. This effect lasts until the end of the round. Once per scenario.\nAlchemist's Safety Dagger A short sword carried by alchemists as a talisman when performing dangerous experiments. By pressing the switch on the handle, it provides a brief moment of protection from the repercussions of the experiment, shielding the user from rampaging fairies and magical creatures, and granting just enough time to escape. Some anxious alchemists are said to carry dozens of these daggers with them.</p><hr><p>Yin-Yang Mercury [Core Material] (300G) + Baselard (440G) + Scroll of High Protection (Basic) (250G) + [Magic Catalyst 13] (170G) ×3 + Crafting Cost (640G)</p>",
+    "tags": [
+      "One-Handed",
+      "Light",
+      "Blade",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 1,
+    "rank": 13,
+    "price": 2140,
+    "equipped": false,
+    "attack": 18,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FvEFLC9mADsPUHZr",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!FvEFLC9mADsPUHZr"
+}

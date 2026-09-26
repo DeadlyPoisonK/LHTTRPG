@@ -1,0 +1,45 @@
+{
+  "name": "Inverness",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A cloak that combines a long coat with a cloak that covers the shoulders.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Cloak]"
+    ],
+    "pdef": 3,
+    "mdef": 3,
+    "rank": 13,
+    "price": 470,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Rj0uInmIxhcMLZKD",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Rj0uInmIxhcMLZKD"
+}

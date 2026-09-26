@@ -1,0 +1,41 @@
+{
+  "name": "Grandstand",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target must make a [Safe Move (forced)] to the square that you occupy.</p>\n<hr>\n<p>A skill that draws the attention of the enemy by carrying the weapon on the shoulder in the middle of a battle and making a flashy appearance. Those around you will be captivated by its power, and will be drawn towards you.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "Automatic",
+    "range": "Close",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "otFwVtjACiZI264t",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!otFwVtjACiZI264t"
+}

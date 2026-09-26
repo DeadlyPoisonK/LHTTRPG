@@ -1,0 +1,43 @@
+{
+  "name": "Standby Caution",
+  "type": "skill",
+  "system": {
+    "description": "<p>You immediately perform &laquo;Detect Unusual&raquo; as well as one other [Timing: Setup] action (you choose the order to perform them).</p>\n<hr>\n<p>A skill that prepares for battle while paying attention to its surroundings. While you are on the battlefield, you do not miss any changes or abnormalities in the situation.</p>",
+    "tags": [
+      "Swift"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JsRsDXq5ZIe0UXKh",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!JsRsDXq5ZIe0UXKh"
+}

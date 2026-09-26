@@ -1,0 +1,47 @@
+{
+  "name": "Mass Enchant Scroll III",
+  "type": "gear",
+  "system": {
+    "description": "<p>Choose one: [Flame] [Cold] [Shock] [Holy] [Blight] or [Spirit]. The target's [Weapon Attack] deal magical damage of the chosen tag type. Treat this effect as a Combat Status. You take [Fatigue: Base STR x 2].</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 27,
+    "price": 1100,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (Select)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 4300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "e2T3B4zUXnC8fOmA",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!e2T3B4zUXnC8fOmA"
+}

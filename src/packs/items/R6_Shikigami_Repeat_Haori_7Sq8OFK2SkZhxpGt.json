@@ -1,0 +1,46 @@
+{
+  "name": "R6 Shikigami Repeat Haori",
+  "type": "armor",
+  "system": {
+    "description": "<p>Kannagi Exclusive. [Physical Defense] 9. [Magic Defense] 17. [Trigger: Immediately After Check] You may reroll the check you just performed. This effect cannot be used during combat. 1 scene [you may use this effect [SR of \"Shikigami Master\" you currently have] times.\nA haori adorned with the seal pattern left behind by a rare onmyōji who was said to have commanded a hundred spirits. It strengthens the bond between the wearer and their onmyō, allowing them to more effectively harness their power.</p><hr><p>Glossy Cocoon [Core Material] (80G) + Hunter's Cloth (180G) + White Hitokata (Basic) (40G) ×2 + [Magic Catalyst 6] (50G) ×3 + Crafting Cost (180G)</p>",
+    "tags": [
+      "Light Armor",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 9,
+    "mdef": 17,
+    "initiative": 0,
+    "rank": 6,
+    "price": 670,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7Sq8OFK2SkZhxpGt",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!7Sq8OFK2SkZhxpGt"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "R20 Black Mami Lucky Bag",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have 20 inventory slots. [Trigger: Rest Time] You make as many treasure rolls on the \"Treasure Table (Magic Materials)\" as you have empty [Inventory Slots] (max 20). Afterwards this [Bag] is destroyed and disappears.\nA rare treasure found occasionally in the large settlements of the Chromami race. Its plump shape is its charm point. It can be used as a bag, but it is rarely used for that purpose. A dial (dimpled shape) is attached to the front panel, and by pouring magic power and turning it once, an item is born inside the bag. However, to take out its contents, it must be torn open.</p><hr><p>Harpy Feather [Core Material] (740G) + Delivery Okamochi (820G) + [Magic Catalyst 20] (370G) ×6 + Crafting Cost (1480G)</p>",
+    "tags": [
+      "Bag",
+      "One-Handed",
+      "Not For Sale",
+      "M6"
+    ],
+    "rank": 20,
+    "price": 5260,
+    "equipped": false,
+    "bagSpace": 0,
+    "limit": "",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "E2m16U50he1a06sn",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!E2m16U50he1a06sn"
+}

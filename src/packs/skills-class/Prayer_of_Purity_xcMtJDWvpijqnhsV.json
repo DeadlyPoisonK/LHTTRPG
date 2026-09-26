@@ -1,0 +1,41 @@
+{
+  "name": "Prayer of Purity",
+  "type": "skill",
+  "system": {
+    "description": "<p>Select one from the following: [Staggered] [Dazed] [Rigor] [Confusion] or [Decay]. Remove the chosen Bad Status from the target. Until the end of the round, the target cannot receive that Bad Status again.</p>\n<hr>\n<p>A magic that gives blessings to many companions to avoid specific disasters by chanting the prayer of the ritual of exorcism.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 4 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xcMtJDWvpijqnhsV",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!xcMtJDWvpijqnhsV"
+}

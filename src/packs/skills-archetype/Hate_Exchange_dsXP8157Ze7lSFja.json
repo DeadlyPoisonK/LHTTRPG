@@ -1,0 +1,41 @@
+{
+  "name": "Hate Exchange",
+  "type": "skill",
+  "system": {
+    "description": "<p>Target an ally with higher [Hate] than yourself. You trade [Hate] values with the target.</p>\n<hr>\n<p>A special skill that intimidates the enemy as if to protect an ally who has attracted too much attention from the enemy, and accepts all hostility instead.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dsXP8157Ze7lSFja",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!dsXP8157Ze7lSFja"
+}

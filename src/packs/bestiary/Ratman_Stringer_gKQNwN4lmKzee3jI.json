@@ -1,0 +1,335 @@
+{
+  "name": "Ratman Stringer",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 34,
+      "max": 34,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Humanoid",
+      "Ratman",
+      "Night Vision"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 4,
+        "magic": 7
+      },
+      "speed": 2,
+      "initiative": 5
+    },
+    "rank": 2,
+    "idendification": "7",
+    "hateMultiplier": "2",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 1
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 0
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt; height: 63px;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"height: 21px;\">\n<td class=\"xl66\" style=\"height: 21px; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">1~5</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\">String Rosin [Magic Catalyst 2] (20G)</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">6</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\">Fine Catgut [Valuable] (70G)</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<p>[[/gmr 2d6 + 1]]{[Evasion]}<br>[[/gmr 2d6]]{[Resistance]}</p>"
+  },
+  "prototypeToken": {
+    "name": "Ratman Stringer",
+    "displayName": 0,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Rat-Fu",
+      "type": "skill",
+      "system": {
+        "description": "<p>This enemy's [Normal Moves] always count as [Safe Moves].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "r58fC2NM1RYfabgD",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!gKQNwN4lmKzee3jI.r58fC2NM1RYfabgD"
+    },
+    {
+      "name": "Gangup Attack",
+      "type": "skill",
+      "system": {
+        "description": "<p>[[/gmr 3d6 + 3]]{CHECK}</p>\n<p>[[/gmr 2d6 + 25]]{[2D+25]} Phys Damage to the target.&nbsp;<br>(Minor): If the target is in the same square as an enemy with the [Ratman] tag, the target takes [Pursuit: 7]</p>",
+        "tags": [
+          "Special Attack"
+        ],
+        "timing": "Major",
+        "checkType": "Opposed (3D+3 vs Resistance)",
+        "range": "4 Sq",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "E84iNhQGdPlhhOF4",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!gKQNwN4lmKzee3jI.E84iNhQGdPlhhOF4"
+    },
+    {
+      "name": "Fever Rapunzel",
+      "type": "skill",
+      "system": {
+        "description": "<p>This skill can only target characters with [Decay].&nbsp;<br>The target takes three stacks of [Pursuit] with a rating equal to the [Decay] condition currently affecting the target.</p>",
+        "tags": [],
+        "timing": "Cleanup",
+        "checkType": "Automatic",
+        "range": "4 Sq. ",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Scene",
+        "macroeffect": ""
+      },
+      "_id": "eSilwRh1JasPknxg",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!gKQNwN4lmKzee3jI.eSilwRh1JasPknxg"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "gKQNwN4lmKzee3jI",
+  "folder": "W1zVCzpYGWA3r6Yt",
+  "_key": "!actors!gKQNwN4lmKzee3jI"
+}

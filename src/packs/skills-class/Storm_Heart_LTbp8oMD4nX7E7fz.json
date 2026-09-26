@@ -1,0 +1,43 @@
+{
+  "name": "Storm Heart",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can only target an ally, not yourself. At the end of this main process, you may lower the target's [Hate]. The [Hate] reduction is equal to [the number of enemies who were damaged in your main process with your [Melee Attack]].</p>\n<hr>\n<p>A special skill that temporarily attracts the gaze of nearby enemies with a violent storm-like attack, suppressing hostility toward allies.</p>",
+    "tags": [
+      "Two-Handed"
+    ],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LTbp8oMD4nX7E7fz",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!LTbp8oMD4nX7E7fz"
+}

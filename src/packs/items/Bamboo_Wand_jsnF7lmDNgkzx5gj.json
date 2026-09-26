@@ -1,0 +1,46 @@
+{
+  "name": "Bamboo Wand",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A wand that uses precious metals to enhance its magical power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 7,
+    "price": 260,
+    "equipped": false,
+    "attack": 7,
+    "magic": 12,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 17900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jsnF7lmDNgkzx5gj",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!jsnF7lmDNgkzx5gj"
+}

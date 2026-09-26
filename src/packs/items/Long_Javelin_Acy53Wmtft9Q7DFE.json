@@ -1,0 +1,46 @@
+{
+  "name": "Long Javelin",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A straight hand spear with little frills. It has a long handle and excellent reach and power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Spear]"
+    ],
+    "initiative": 1,
+    "rank": 16,
+    "price": 740,
+    "equipped": false,
+    "attack": 17,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 4100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Acy53Wmtft9Q7DFE",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Acy53Wmtft9Q7DFE"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "R7 Full moon feldspar bangle",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You gain +10 to [Magic Power] when you land a critical hit with [Magic Attack], adding +20 to the damage roll. [Trigger: Setup] This effect lasts until the end of the round. Once per scene.\nA bracelet adorned with a magic stone that emits a blue glow like a full moon. It has an effect that enhances the wearer's magic power.</p><hr><p>[Core Material](100G)+ (210G)×2+[ 7](60G)×2+Crafting Cost(250G)</p>",
+    "tags": [
+      "Accessory",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 7,
+    "price": 890,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aqFBrHjaeRP7e839",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!aqFBrHjaeRP7e839"
+}

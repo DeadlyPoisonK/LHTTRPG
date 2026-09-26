@@ -1,0 +1,46 @@
+{
+  "name": "Oak Wand",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A simple staff that grants the user a minimal amount of magical power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 1,
+    "price": 90,
+    "equipped": false,
+    "attack": 1,
+    "magic": 2,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "GB0cH8SKG5VWeqFo",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!GB0cH8SKG5VWeqFo"
+}

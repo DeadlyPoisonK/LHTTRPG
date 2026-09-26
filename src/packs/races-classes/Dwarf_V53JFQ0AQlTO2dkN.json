@@ -1,0 +1,39 @@
+{
+  "_id": "V53JFQ0AQlTO2dkN",
+  "name": "Dwarf",
+  "type": "race",
+  "sort": 0,
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "dwarf",
+    "attributes": {
+      "str": 1,
+      "dex": 0,
+      "pow": 1,
+      "int": 0
+    },
+    "hp": 16,
+    "fate": 0,
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "eaCC6bYflF5Xl5sD",
+  "_key": "!items!V53JFQ0AQlTO2dkN"
+}

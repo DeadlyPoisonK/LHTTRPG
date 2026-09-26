@@ -1,0 +1,44 @@
+{
+  "name": "Shield Other Stance",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains [Cancel]. You gain [Weakness].<br>Both [Cancel] and [Weakness] rating are equal to [(INT Mod) &times; SR].<br>This [Cancel] and [Weakness] are canceled only by ending this skill.</p>\n<hr>\n<p>A stance to focus on protecting others without regard for their own danger. With this stance, you become a shield for someone.</p>",
+    "tags": [
+      "Preparation",
+      "Stance"
+    ],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HcKq1a5HckgUnPU7",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!HcKq1a5HckgUnPU7"
+}

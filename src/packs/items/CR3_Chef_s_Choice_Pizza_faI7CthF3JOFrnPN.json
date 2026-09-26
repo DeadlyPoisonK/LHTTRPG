@@ -1,0 +1,48 @@
+{
+  "name": "(CR3) Chef's Choice Pizza",
+  "type": "gear",
+  "system": {
+    "description": "<p>-10 to the strength of the target's [Fatigue] state.</p>",
+    "tags": [
+      "[Food]",
+      "[Consumable]",
+      "[Preparation]",
+      "[Rare]"
+    ],
+    "rank": 3,
+    "price": 60,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "faI7CthF3JOFrnPN",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!faI7CthF3JOFrnPN"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Hatred Charge II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 16 or higher. During this Main Process, you gain a +6 bonus to [Weapon Attack] damage rolls.</p>\n<p>(Hate 1): The bonus to damage rolls changes to +12.</p>\n<hr>\n<p>A special skill that increases the power of attacks by concentrating for a short period of time and accumulating energy. You can also unleash a powerful blow in exchange for a gap.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "I3xj8JmECjJZGJRf",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!I3xj8JmECjJZGJRf"
+}

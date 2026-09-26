@@ -1,0 +1,41 @@
+{
+  "name": "Taunting Shout",
+  "type": "skill",
+  "system": {
+    "description": "<p>Target an ally other than yourself who was just damaged by an attack. The target may reduce their [Hate] by -1.</p>\n<hr>\n<p>A feat that diverts attention from the enemy to the allies by yelling at the enemies attacking allies.</p>",
+    "tags": [],
+    "timing": "After Damage",
+    "checkType": "None",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "O3llAl4sOn0GJz3z",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!O3llAl4sOn0GJz3z"
+}

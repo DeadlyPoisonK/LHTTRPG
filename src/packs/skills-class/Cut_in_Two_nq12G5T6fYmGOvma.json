@@ -1,0 +1,41 @@
+{
+  "name": "Cut in Two",
+  "type": "skill",
+  "system": {
+    "description": "<p>Your [Weapon Attack] damage rolls gain a +[(CRx2) + 10] bonus.</p>\n<hr>\n<p>A special skill that draws out your own power to the limit by clearing away distractions and concentrating on a single blow. Techniques unleashed in this state exhibit power that is incomparably greater than usual, cutting the enemy in two.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nq12G5T6fYmGOvma",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!nq12G5T6fYmGOvma"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Expertise",
+  "type": "skill",
+  "system": {
+    "description": "<p>Only acquired with CR 11 or higher. The [Dodge Check] penalty for &laquo;Assault Stance&raquo; becomes -1 instead of -2.</p>\n<p>(SR2 &amp; CR16): The penalty is removed.</p>\n<hr>\n<p>Even though you take a stance that emphasizes attack, you have mastered the movement of offense and defense that does not neglect defense.</p>",
+    "tags": [
+      "CR11"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oW8TziVg3B6TUUY3",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!oW8TziVg3B6TUUY3"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Call Servant",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately use one [Summon Servant] skill. However, you may not use a [Summon Servant] skill currently in effect.</p>\n<p>(Fate 1): You may use a [Summon Servant] skill currently in effect.</p>\n<hr>\n<p>A feat that quickly swaps out a summoned squire with another squire. If it's up to you, it's easy to flexibly manage your followers according to the situation.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Md5Q1YzhL3yxBayF",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!Md5Q1YzhL3yxBayF"
+}

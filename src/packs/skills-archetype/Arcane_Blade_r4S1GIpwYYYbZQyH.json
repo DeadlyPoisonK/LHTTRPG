@@ -1,0 +1,43 @@
+{
+  "name": "Arcane Blade",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Attack Power)] &nbsp;Physical or Magical Damage (you select). If you do not have an enemy other than the target in the same Sq as you, target also recieves [Pursuit: [DEX mod] &times; SR].</p>\n<hr>\n<p>A special skill that creates magical blades from weapons and hands, slashing enemies to pieces in a single flash. The color and shape of the blade vary slightly depending on the user's preference.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "r4S1GIpwYYYbZQyH",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!r4S1GIpwYYYbZQyH"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Dealing Card",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when a target other than yourself begins their Main Process. You may immediately use one [Target: Self] [Charm], with the target of the Charm changing to the target of this skill.</p>\n<p>(Fate 1 &amp; Self: Talismancer, Rune Knight): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that uses the effects of amulets on others. You can cast amulets on distant opponents by throwing them, projecting spells, and so on.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VC0rm49nWYVnykut",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!VC0rm49nWYVnykut"
+}

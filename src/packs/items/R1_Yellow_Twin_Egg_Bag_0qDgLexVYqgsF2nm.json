@@ -1,0 +1,49 @@
+{
+  "name": "R1 Yellow Twin Egg Bag",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have seven inventory slots.</p>\n<p>[Trigger: Preplay] Select one item with the [Exchange] tag from your inventory. If you keep the item in this [bag] until afterplay, never take it out, and keep it in your possession without using it or losing it, you can get one item that is the same as the item you selected during afterplay.</p>\n<p>A magical bag with two egg-shaped pockets. If you keep an important item in one pocket, the same item will be in the other pocket before you know it.</p>\n<hr>\n<p>Smooth film [core material] (30G) + mini pouch (50G) + [magic catalyst 1] (15G) x 4 + Crafting Cost (60G)</p>",
+    "tags": [
+      "Bag",
+      "Accessory",
+      "Not For Sale",
+      "M5"
+    ],
+    "rank": 1,
+    "price": 200,
+    "equipped": false,
+    "bagSpace": 7,
+    "limit": "7",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0qDgLexVYqgsF2nm",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!0qDgLexVYqgsF2nm"
+}

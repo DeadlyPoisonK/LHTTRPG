@@ -1,0 +1,48 @@
+{
+  "name": "Silver Shooting Star",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action] You use this when you perform a [Special Attack] with \"Target: Wide Area 1 (Select)/Range: Close\" at the same time. This changes the [Special Attack] to \"Target: Straight Line 4 (Select)\". Once per scenario.\nA clockwork guitar characterized by a sharp silhouette and a rigid tone. When the strings are scraped, silver shooting stars fly around, and the number increases as the beat becomes more intense.</p><hr><p>[Core Material](120G)+ (110G)+[ 8](70G)×4+Crafting Cost(220G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Instrument",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 0,
+    "rank": 8,
+    "price": 730,
+    "equipped": false,
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "-",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wcMklVYmthBG978m",
+  "folder": "9YxL5WbMCfR5GnFP",
+  "_key": "!items!wcMklVYmthBG978m"
+}

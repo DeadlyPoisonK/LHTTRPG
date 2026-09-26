@@ -1,0 +1,47 @@
+{
+  "name": "Kukri",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A dagger with a unique, shallow curve. It was used by the hill tribes and has undergone a unique evolution.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]",
+      "[Light]"
+    ],
+    "initiative": 0,
+    "rank": 19,
+    "price": 890,
+    "equipped": false,
+    "attack": 18,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 13100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZoqKtgRvaSFmVAV5",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!ZoqKtgRvaSFmVAV5"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Strong Bow: Beat Claw",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Samurai Exclusive. [Trigger: Move] This main process adds +2Sq to the range of this weapon's [Ranged Attack] that you perform with it. Additionally, the target of [Ranged Attack] cannot roll two or more dice for [Defense Check].\nA twisted bow made from the bones of a monster. It has a cursed ability that allows it to pierce targets from any distance by binding them.</p><hr><p>Twisted Horn [Core Material] (120G) + Composite Bow (230G) + [Magic Catalyst 7] (60G) × 3 + Crafting Cost (230G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 0,
+    "rank": 7,
+    "price": 760,
+    "equipped": false,
+    "attack": 20,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 1000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2TmfESYCTPT0I1ph",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!2TmfESYCTPT0I1ph"
+}

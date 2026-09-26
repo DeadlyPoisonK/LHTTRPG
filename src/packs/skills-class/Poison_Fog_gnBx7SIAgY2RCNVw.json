@@ -1,0 +1,41 @@
+{
+  "name": "Poison Fog",
+  "type": "skill",
+  "system": {
+    "description": "<p>Up to the number of Squares equal to [SR &times; 2] is targeted. The target Squares must all be connected, and all Squares must be within range. Install prop [Poison Fog] to target Sq. PR is equal to [CR + \"Deadly Poison\" SR].</p>\n<hr>\n<p>A skill that fills a space by spraying atomized poison.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Auto",
+    "range": "6Sq",
+    "target": "Refer",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gnBx7SIAgY2RCNVw",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!gnBx7SIAgY2RCNVw"
+}

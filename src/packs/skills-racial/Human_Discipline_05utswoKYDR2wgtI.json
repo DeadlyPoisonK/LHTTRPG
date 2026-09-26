@@ -1,0 +1,106 @@
+{
+  "name": "Human Discipline",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain +1 to all [Base Stats].</p>\n<hr>\n<p>You are honing your general-purpose ability, which is a characteristic of humans, through training.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.racial-humano.05utswoKYDR2wgtI",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "DwS9vldd8BIF4HKQ",
+      "changes": [
+        {
+          "key": "system.attributes.dex.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.attributes.int.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.attributes.pow.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.attributes.str.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+1 All Stats",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!05utswoKYDR2wgtI.DwS9vldd8BIF4HKQ"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "05utswoKYDR2wgtI",
+  "folder": "t90nIcsq9hGP0Bqt",
+  "_key": "!items!05utswoKYDR2wgtI"
+}

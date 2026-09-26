@@ -1,0 +1,337 @@
+{
+  "name": "Pixie",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 34,
+      "max": 34,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Fairy",
+      "Shock"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 6,
+        "magic": 4
+      },
+      "speed": 2,
+      "initiative": 3
+    },
+    "rank": 1,
+    "idendification": "",
+    "hateMultiplier": "",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 2
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 1
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl67\" style=\"height: 15.75pt; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">1~5</td>\n<td class=\"xl66\" colspan=\"5\">Hydromel [Magic Catalyst 1](15G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">6</td>\n<td class=\"xl66\" colspan=\"5\">Dusk Wings [Core Material](30G)</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<ul>\n<li>[[/gmr 2d6 + 2]]{[Evasion ]}</li>\n<li>[[/gmr 2d6 + 1]]{[Resistance]}</li>\n</ul>"
+  },
+  "prototypeToken": {
+    "name": "Pixie",
+    "displayName": 0,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Spirit of the Wind",
+      "type": "skill",
+      "system": {
+        "description": "<p>This enemy always has [Cancel (Shock): 5] and [Flying], immune to [Rigor]<br>Whenever this enemy takes [Blight] damage, treat its defense as 0.</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "D5yGpe3oG5vXf0lJ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!eI2ltaMZcEfAziLD.D5yGpe3oG5vXf0lJ"
+    },
+    {
+      "name": "Shocking Sting",
+      "type": "skill",
+      "system": {
+        "description": "<p>[[/gmr 3d6 + 3]]{[3D+3]}</p>\n<p>[[/gmr 2d6 + 25]]{[25+2D]} Phys Damage<br>(Self: Hidden): Target takes [Staggered]</p>",
+        "tags": [
+          "Melee Attack",
+          "Shock"
+        ],
+        "timing": "Major",
+        "checkType": "Opposed (3+3D vs Evasion)",
+        "range": "Close",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "iBnJSUljRlyTSktF",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!eI2ltaMZcEfAziLD.iBnJSUljRlyTSktF"
+    },
+    {
+      "name": "Hidden Flight",
+      "type": "skill",
+      "system": {
+        "description": "<p>Enemy becomes [Hidden]<br>(Minor): Enemy can make a [Safe Move] up to 2sq. without losing [Hidden]</p>",
+        "tags": [
+          "Movement"
+        ],
+        "timing": "Move",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Scene",
+        "macroeffect": ""
+      },
+      "_id": "JrKBXRD6uEAWGG3U",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!eI2ltaMZcEfAziLD.JrKBXRD6uEAWGG3U"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "eI2ltaMZcEfAziLD",
+  "folder": "69lZ2fcL5y3AA5lb",
+  "_key": "!actors!eI2ltaMZcEfAziLD"
+}

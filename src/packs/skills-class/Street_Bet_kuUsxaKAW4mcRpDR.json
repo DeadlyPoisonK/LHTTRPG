@@ -1,0 +1,43 @@
+{
+  "name": "Street Bet",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target.</p>\n<hr>\n<p>A special skill that throws countless throwing weapons in succession and sweeps away enemies in a row.</p>",
+    "tags": [
+      "Ranged Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Line 2",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "kuUsxaKAW4mcRpDR",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!kuUsxaKAW4mcRpDR"
+}

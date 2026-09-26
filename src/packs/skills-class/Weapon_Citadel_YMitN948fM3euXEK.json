@@ -1,0 +1,41 @@
+{
+  "name": "Weapon Citadel",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this when the target receives HP damage. Lose any number of [Illusion Weapons] tags as the cost. The number of HP damage that the target will receive is [(POW Mod) &times; [number of Illusion Weapons] tags used].</p>\n<hr>\n<p>Magic that uses illusion weapons to block enemy attacks. It can be used in various ways, such as changing its shape into a shield, cutting down incoming arrows and magic, but the phantom weapon used disappears</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YMitN948fM3euXEK",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!YMitN948fM3euXEK"
+}

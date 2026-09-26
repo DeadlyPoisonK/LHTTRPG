@@ -1,0 +1,88 @@
+{
+  "name": "Flash Edge Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have two [One-Handed] melee weapons equipped. You gain the [Dual Wield] condition, and your [Attack Power] becomes [Both Weapons' (Attack Power) combined].</p>\n<p>(SR 2): When [Pursuit] is activated by your [Melee Attack], give [Target: Single unit / Range: 2 Sq] as a secondary target and deal direct damge equal to one stack of [Pursuit] that was triggered.</p>\n<hr>\n<p>A fighting style in which two weapons are manipulated at a flashing speed and a series of attacks are fired.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.swashbuckler.RVYPNSGEYvXAfi3T",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "kRJINpkOdzuYSdeD",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Two Weapons Bonus",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!RVYPNSGEYvXAfi3T.kRJINpkOdzuYSdeD"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RVYPNSGEYvXAfi3T",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!RVYPNSGEYvXAfi3T"
+}

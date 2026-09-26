@@ -1,0 +1,41 @@
+{
+  "name": "Elemental Bolt II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Deal [SR x [STR mod]] direct damage to the target. This damage triggers [Weakness] on the secondary target, as if they had failed their [Dodge Check]. You may only use this skill when you have the [Fairy] tag.</p>\n<hr>\n<p>A special skill that commands the summoned spirits to attack the enemy with magic arrows. The attack of the spirit, which has increased its ability through synchronization, exhibits a power that is distinct from that of a mediocre one.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Rutu6rc6Oc2V13Kt",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!Rutu6rc6Oc2V13Kt"
+}

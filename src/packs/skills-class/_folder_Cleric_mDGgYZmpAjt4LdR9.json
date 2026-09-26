@@ -1,0 +1,23 @@
+{
+  "_id": "mDGgYZmpAjt4LdR9",
+  "name": "Cleric",
+  "type": "Item",
+  "sorting": "a",
+  "sort": 400000,
+  "folder": null,
+  "color": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!mDGgYZmpAjt4LdR9"
+}

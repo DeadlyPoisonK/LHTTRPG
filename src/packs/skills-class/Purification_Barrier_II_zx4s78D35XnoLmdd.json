@@ -1,0 +1,43 @@
+{
+  "name": "Purification Barrier II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Replace &laquo;Pruification Barrier&raquo; with this skill at CR11 or higher. The target gains [Barrier: (Magic Power x 2) + (Recovery)].</p>\n<p>(Fate 1): Increase the rating of the [Barrier] by +[POW base].</p>\n<hr>\n<p>Magic that creates a mirror-like barrier around allies to protect them from enemy attacks. A blessing that embodies your determination to protect your allies grows in strength according to your willpower.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zx4s78D35XnoLmdd",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!zx4s78D35XnoLmdd"
+}

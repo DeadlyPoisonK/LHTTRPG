@@ -1,0 +1,48 @@
+{
+  "name": "R11 Dolce Muse",
+  "type": "weapon",
+  "system": {
+    "description": "<p>The hate increase value from skills with the [Instrument] tag that you use is -1 (minimum 0). (CR17) This effect does not apply.\nIt is a lute whose sound slowly seeps into the ears, possessing a very sweet and gentle tone. So natural is its sound that it makes one forget they are listening, soothing a wounded heart and driving away hostility. The beautifully curved body of the instrument fits comfortably in the player's hands, and while some seek it as a magic item, others simply desire it as a musical instrument in its own right.</p><hr><p>Seashell of the Surf [Core Material] (220G) + Quality Instrument (110G) + Deft Finger Charm (Intermediate) (230G) ×2 + [Magic Catalyst 11] (120G) ×2 + Crafting Cost (450G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Instrument",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 11,
+    "price": 1480,
+    "equipped": false,
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "-",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xitPMgxpXleR6A0r",
+  "folder": "9YxL5WbMCfR5GnFP",
+  "_key": "!items!xitPMgxpXleR6A0r"
+}

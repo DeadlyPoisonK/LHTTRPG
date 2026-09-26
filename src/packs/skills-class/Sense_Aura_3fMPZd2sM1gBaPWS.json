@@ -1,0 +1,41 @@
+{
+  "name": "Sense Aura",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just before you make a [Perception Check]. You gain a +2D bonus to that check.</p>\n<hr>\n<p>A special skill that concentrates magical power on the sensory organs and sensitively senses the signs emitted by living things and objects.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3fMPZd2sM1gBaPWS",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!3fMPZd2sM1gBaPWS"
+}

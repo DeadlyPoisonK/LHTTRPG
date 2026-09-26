@@ -1,0 +1,41 @@
+{
+  "name": "Native Operator",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to [Operate Checks].</p>\n<hr>\n<p>You are good at operating various tools such as machines and instruments. Anything from driving a carriage to manipulating the defense mechanisms of ancient ruins can be a subject of any complexity.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "cwZLSDZ4mFtTDpMR",
+  "folder": "owQa7Kg6xt2S2kAy",
+  "_key": "!items!cwZLSDZ4mFtTDpMR"
+}

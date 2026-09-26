@@ -1,0 +1,43 @@
+{
+  "name": "Multiple Darts",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target, and the target takes [Afflicted].</p>\n<hr>\n<p>A skill that exacerbates the enemy's ailments by throwing throwing weapons at the enemy's weak points and wounds.</p>",
+    "tags": [
+      "Ranged Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oSWeF6HxdGuUhcMl",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!oSWeF6HxdGuUhcMl"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Mage Hand",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you make a [Disable Check]. You gain a +1D bonus to the check. While affected by this skill, you may use &laquo;Prop Disable&raquo; with [Range: 4 Sq.]</p>\n<hr>\n<p>Magic that creates an invisible hand that moves freely with magical power and performs detailed work. Disarm dangerous traps from a distance.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SRx3)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "K2vKkXWpgy8TBWve",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!K2vKkXWpgy8TBWve"
+}

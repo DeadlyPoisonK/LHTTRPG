@@ -1,0 +1,41 @@
+{
+  "name": "Duet II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR16 or higher. Use this skill just before an attack other than your own would deal HP Damage, and only when you are equipped with a melee weapon. Increase the expected HP Damage the target would receive by +[SRx8].</p>\n<hr>\n<p>A special skill that unleashes a flash with a combination that matches the timing of the attacks of allies, as if performing a duet. The battlefield becomes a stage with the two leading actors in that collaboration that breathes.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "Automatic",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MKIdzMUNeeLLh833",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!MKIdzMUNeeLLh833"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "R17 Burke of Spruce",
+  "type": "armor",
+  "system": {
+    "description": "<p>You gain the [High Protection] tag. When you use \"Entrust Life\", the [HP] you recover stays the same, but the [HP] you spend as its cost is reduced by 30.\nA rare armor crafted from enchanted tree bark. Unshaken by summer heat or winter cold, it holds the magic of the fir tree that, as lord of the forest, keeps watch over all living things.</p><hr><p>Shining Ore [Core Material] (560G) + Brigandine (1100G) ×2 + Scroll of High Protection (Basic) (250G) + [Magic Catalyst 17] (280G) ×3 + Crafting Cost (910G)</p>",
+    "tags": [
+      "Medium Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 35,
+    "mdef": 25,
+    "initiative": 0,
+    "rank": 17,
+    "price": 4760,
+    "equipped": false,
+    "checkType": "-",
+    "range": "Close",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "95jAJ5yCGKfiT78F",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!95jAJ5yCGKfiT78F"
+}

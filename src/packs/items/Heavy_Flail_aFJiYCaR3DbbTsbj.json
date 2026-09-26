@@ -1,0 +1,46 @@
+{
+  "name": "Heavy Flail",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Tangzao weapon that connects metal rods and strikes with centrifugal force and weight.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Hafted]"
+    ],
+    "initiative": -2,
+    "rank": 19,
+    "price": 1400,
+    "equipped": false,
+    "attack": 52,
+    "magic": 0,
+    "accuracy": -2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 13400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aFJiYCaR3DbbTsbj",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!aFJiYCaR3DbbTsbj"
+}

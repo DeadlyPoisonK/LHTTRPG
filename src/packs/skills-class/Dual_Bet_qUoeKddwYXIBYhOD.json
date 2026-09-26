@@ -1,0 +1,44 @@
+{
+  "name": "Dual Bet",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Attack Power)] physical damage to the target.</p>\n<p>(Extra): The target takes [(SRx4) + 5] direct damage. This damage triggers [Pursuit] one time, as if the target had failed their [Dodge Check].</p>\n<hr>\n<p>A special skill that uses two swords to unleash a series of unnoticed attacks. It interweaves diversions and favourites, and definitely deals damage.</p>",
+    "tags": [
+      "Melee Attack",
+      "Dual Wield"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qUoeKddwYXIBYhOD",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!qUoeKddwYXIBYhOD"
+}

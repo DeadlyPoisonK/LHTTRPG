@@ -1,0 +1,56 @@
+{
+  "_id": "krL2eq8R6b1ukYwI",
+  "name": "Assassin",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Assassin_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "assassin",
+    "archetype": "weaponAttacker",
+    "attributes": {
+      "str": 1,
+      "dex": 4,
+      "pow": 3,
+      "int": 1
+    },
+    "hp": 40,
+    "hpPerRank": 5,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.ImQ0sqqKTHn4AZjj"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.YmLp9HanziyKXuhq"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-archetype.Item.ruw72IRPwNUOQ3ge"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!krL2eq8R6b1ukYwI"
+}

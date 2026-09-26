@@ -1,0 +1,48 @@
+{
+  "name": "R2 M5 Big Shot",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Initiative] You can use this when your [Hate] is 7 or more. You gain [Barrier: 20]. 1/Scenario</p>\n<p>A large spear that doubles as a battle flag, appearing in the folklore of Takemi, an ancient hero known to the &lt;Earthlings&gt; as the hero of subjugating demi-humans. A flag that flutters with every wave inspires allies and attracts the attention of enemies, and the power of prayer contained in the flag turns hostility into protective power. It was popular during the game era because you can write your favorite emblem on one side.</p>\n<hr>\n<p>Living Spirit Stone [Core Material] (30G) + Long Spear (80G) + [Magic Catalyst 2] (20G) x 4 + Crafting Cost (100G)</p>",
+    "tags": [
+      "M5",
+      "Two-Handed",
+      "Spear",
+      "Not for Sale"
+    ],
+    "initiative": 2,
+    "rank": 2,
+    "price": 290,
+    "equipped": false,
+    "attack": 14,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "fhVF9LXreqgLkajr",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!fhVF9LXreqgLkajr"
+}

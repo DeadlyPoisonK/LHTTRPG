@@ -1,0 +1,41 @@
+{
+  "name": "Trap Cover",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when a target other than yourself receives damage from a Prop or [Gimmick]. During the [Damage Apply Step], you receive the expected HP damage that the target would have received. The target receives no damage. You can only use this skill once in response to any given attack.</p>\n<hr>\n<p>A special skill that protects allies from damage caused by traps and the like, and accepts the damage instead.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QPQ1NnDmomiclRYp",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!QPQ1NnDmomiclRYp"
+}

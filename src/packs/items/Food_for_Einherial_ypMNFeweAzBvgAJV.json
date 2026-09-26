@@ -1,0 +1,48 @@
+{
+  "name": "Food for Einherial",
+  "type": "gear",
+  "system": {
+    "description": "<p>Target's [Fatigue] is reduced by -10, and additionally [Cancel (Poison, Mind):10] is applied.\nThe dish served by the warrior maid to the warriors facing a great battle. It is said to heighten combat spirit and strengthen body and mind, but due to its surprisingly terrible taste, its reputation is poor.</p><hr><p>Bitter Liver [Core Material] (180G) + Master Topoto's Croquette (90G) ×2 + [Magic Catalyst 9] (90G) ×2 + Crafting Cost (290G)</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Not For Sale",
+      "M4"
+    ],
+    "rank": 9,
+    "price": 830,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "6 Targets",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 3200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ypMNFeweAzBvgAJV",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!ypMNFeweAzBvgAJV"
+}

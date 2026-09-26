@@ -1,0 +1,48 @@
+{
+  "name": "Amulet Ointment (Intermediate)",
+  "type": "gear",
+  "system": {
+    "description": "<p>+1 to the target's [resistance] and -1 to [hit]. This effect is treated as CS. [CR21] This item has no effect.</p>",
+    "tags": [
+      "Potion",
+      "Consumable",
+      "Not For Sale",
+      "Preparation"
+    ],
+    "rank": 14,
+    "price": 480,
+    "equipped": false,
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aXGZqjqvlZARz8we",
+  "folder": "JfJ4EfRXtde1y5GE",
+  "_key": "!items!aXGZqjqvlZARz8we"
+}

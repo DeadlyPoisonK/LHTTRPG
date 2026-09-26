@@ -1,0 +1,41 @@
+{
+  "name": "Void Spell",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when the target uses a skill. The effects of the used skill are negated.</p>\n<hr>\n<p>Magic that nullifies the enemy's actions by manifesting a void that neutralizes all power. Even an attack that crushes mountains and divides the sea is nothing more than one existence that must be offset in front of true nothingness.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "H(3) + F(1)",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "s5yFFWyNa0LrpKe2",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!s5yFFWyNa0LrpKe2"
+}

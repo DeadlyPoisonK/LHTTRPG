@@ -1,0 +1,56 @@
+{
+  "_id": "SRwCcct42dzSGXhD",
+  "name": "Guardian",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Guardian_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "guardian",
+    "archetype": "warrior",
+    "attributes": {
+      "str": 4,
+      "dex": 2,
+      "pow": 1,
+      "int": 3
+    },
+    "hp": 50,
+    "hpPerRank": 8,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.4hJtuI2sEskQeXrN"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.2d5v2xmjmJNfAQfk"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.2oWZ1v67Yy4ApRJF"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!SRwCcct42dzSGXhD"
+}

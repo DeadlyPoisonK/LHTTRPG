@@ -1,0 +1,41 @@
+{
+  "name": "True Guide",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains a +2 bonus to their next [Hit Check]. This effect lasts until the end of the scene, or until it has been applied once. This skill may be used multiple times in the same Main Process.&nbsp;</p>\n<p>(Fate 1): This skill may be used with [Target: Area (P)].</p>\n<hr>\n<p>A magic that creates a target that supports attacks in front of allies and makes them perform accurate attacks.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pAso04dSJJOVuWtd",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!pAso04dSJJOVuWtd"
+}

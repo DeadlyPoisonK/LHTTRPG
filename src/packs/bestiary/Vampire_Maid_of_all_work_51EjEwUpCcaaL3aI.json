@@ -1,0 +1,367 @@
+{
+  "name": "Vampire Maid-of-all-work",
+  "type": "monster",
+  "_id": "51EjEwUpCcaaL3aI",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 21,
+      "max": 21,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Mob",
+      "Undead",
+      "Night-Vision"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "weakness": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 8,
+        "magic": 12
+      },
+      "speed": 2,
+      "initiative": 3
+    },
+    "rank": 4,
+    "idendification": "8",
+    "hateMultiplier": "3",
+    "checks": {
+      "evasion": {
+        "dice": 0,
+        "mod": 8
+      },
+      "resistance": {
+        "dice": 0,
+        "mod": 9
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl66\" style=\"height: 15.75pt; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">Fixed</td>\n<td class=\"xl67\" colspan=\"5\">Lady's Maid Uniform [Valuable] (30G)</td>\n</tr>\n</tbody>\n</table>"
+  },
+  "prototypeToken": {
+    "name": "Vampire Maid-of-all-work",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Night's Blood Ties",
+      "type": "skill",
+      "system": {
+        "description": "<p>When this enemy takes [Holy] damage, its defences drop to 0 and it takes [Rigor].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "llfymPHh3Rl7gFUJ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!51EjEwUpCcaaL3aI.llfymPHh3Rl7gFUJ"
+    },
+    {
+      "name": "Maid's Profit-Sharing",
+      "type": "skill",
+      "system": {
+        "description": "<p>Target takes [Pursuit: (target's attack power)]</p>",
+        "tags": [],
+        "timing": "Move",
+        "checkType": "Automatic",
+        "range": "4sq",
+        "target": "single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/scene",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "I9uwcjUpDQwoRYcf",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!51EjEwUpCcaaL3aI.I9uwcjUpDQwoRYcf"
+    },
+    {
+      "name": "Numbing Wasp's Kill",
+      "type": "skill",
+      "system": {
+        "description": "<p>35+4D magic damage.&nbsp;<br>(Minor) The target takes a -3 penalty to [Initiative]. Treat this effect as a Bad Status.</p>",
+        "tags": [
+          "Magic attack",
+          "Blight"
+        ],
+        "timing": "Major",
+        "checkType": "12 (fixed) v resistance",
+        "range": "Close",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "QDcIIHMM0zdqxmrW",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!51EjEwUpCcaaL3aI.QDcIIHMM0zdqxmrW"
+    }
+  ],
+  "effects": [],
+  "sort": 900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "BYxZ63EnUjLpWg6M",
+  "_key": "!actors!51EjEwUpCcaaL3aI"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Excellent Arts",
+  "type": "skill",
+  "system": {
+    "description": "<p>Requires CR11 or higher. Increase the damage of &laquo;Shadowless Kick&raquo;, &laquo;Silent Palm&raquo;, and &laquo;Beat Up&raquo; by +[DEX mod].</p>\n<hr>\n<p>With your physical abilities honed through countless battles, your fists and feet will become even more powerful.</p>",
+    "tags": [
+      "Training",
+      "CR11"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "957LVMLDUw7CSgCr",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!957LVMLDUw7CSgCr"
+}

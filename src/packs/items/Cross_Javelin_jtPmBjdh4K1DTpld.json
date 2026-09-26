@@ -1,0 +1,46 @@
+{
+  "name": "Cross Javelin",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A two-handed spear with a cross-shaped tip and increased power.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Spear]"
+    ],
+    "initiative": 2,
+    "rank": 24,
+    "price": 2000,
+    "equipped": false,
+    "attack": 44,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 18000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jtPmBjdh4K1DTpld",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!jtPmBjdh4K1DTpld"
+}

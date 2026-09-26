@@ -1,0 +1,45 @@
+{
+  "name": "Mana Crystal",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+14 to your [Magic Power]. Accessories that use crystals that emit strong magical power.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Gloves]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 29,
+    "price": 2200,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZO10UjcVQgWKIf3x",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!ZO10UjcVQgWKIf3x"
+}

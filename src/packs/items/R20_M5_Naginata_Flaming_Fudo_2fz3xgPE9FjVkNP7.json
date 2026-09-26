@@ -1,0 +1,49 @@
+{
+  "name": "R20 M5 Naginata: Flaming Fudo",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When you are in [Riding] status, this weapon gives +10 to [Melee Attack] damage rolls. You gain [Cancel (Cold): 20].\nA great naginata with a deeply curved blade, easy to wield even on horseback. It holds the blessing of a fire god: when its wielder enters combat they are wreathed in flames, their resistance to cold rises and their attacks gain the fire element. The wielder never feels the heat, nor is burned by the flames.</p><hr><p>Tuft of the Hellfire Wolf [Core Material] (680G) + Dōtanuki (1700G) + Flame Talisman (620G) + [Magic Catalyst 20] (370G) ×3 + Crafting Cost (1490G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Katana",
+      "Flame",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -1,
+    "rank": 20,
+    "price": 5600,
+    "equipped": false,
+    "attack": 39,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2fz3xgPE9FjVkNP7",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!2fz3xgPE9FjVkNP7"
+}

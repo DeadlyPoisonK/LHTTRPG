@@ -1,0 +1,43 @@
+{
+  "name": "Boomerang Saucer",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this main process you can add a [Throwing] tag to one [Shield] you're equipped with and use it as a weapon with [Range: 2Sq.] that can use [Ranged attack]. That [Attack Power] is equal to [Physical Defense] of [Shield].</p>\n<hr>\n<p>A skill that throws a shield to attack distant enemies. By attaching a chain to pull it, or by devising a way to throw it like a boomerang, the shield will immediately return to your hand.</p>",
+    "tags": [
+      "Shield"
+    ],
+    "timing": "Instant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "SR/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ogYuoou0SGN6BHyQ",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!ogYuoou0SGN6BHyQ"
+}

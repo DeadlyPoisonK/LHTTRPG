@@ -1,0 +1,44 @@
+{
+  "name": "Hail Wind",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target, and the target takes [Dazed].</p>\n<hr>\n<p>Attack magic that blows a gust of hail over a wide area to freeze the enemy. A strong headwind temporarily slows down enemy reactions.</p>",
+    "tags": [
+      "Magic Attack",
+      "Cold"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t\t",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2OSX7LgP4fDPUKcV",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!2OSX7LgP4fDPUKcV"
+}

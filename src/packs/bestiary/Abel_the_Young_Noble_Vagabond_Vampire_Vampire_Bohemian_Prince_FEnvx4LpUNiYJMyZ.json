@@ -1,0 +1,433 @@
+{
+  "_id": "FEnvx4LpUNiYJMyZ",
+  "name": "Abel the Young Noble Vagabond Vampire (Vampire Bohemian Prince)",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "sort": 0,
+  "system": {
+    "health": {
+      "value": 216,
+      "max": 216,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 4,
+      "max": 4,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Boss",
+      "Undead",
+      "Night vision"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "weakness": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 11,
+        "magic": 9
+      },
+      "speed": 2,
+      "initiative": 5
+    },
+    "rank": 4,
+    "idendification": "8",
+    "hateMultiplier": "5",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 3
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 2
+      }
+    },
+    "description": ""
+  },
+  "items": [
+    {
+      "_id": "8cVjVXsCAtTU2uVT",
+      "name": "Night's Blood Ties",
+      "sort": 100,
+      "system": {
+        "description": "<p>When this enemy takes [radiant] damage, its defences drop to 0 and it takes [rigor].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.8cVjVXsCAtTU2uVT"
+    },
+    {
+      "_id": "TDrfC9qaaKNDAuQo",
+      "name": "Seduction of the Evil Eye",
+      "sort": 200,
+      "system": {
+        "description": "<p>A target in the same square as this enemy is forced to leave the square. The target takes weakness 5 until the end of the main process.&nbsp;</p>",
+        "tags": [],
+        "timing": "Move",
+        "checkType": "",
+        "range": "4sq",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Scene",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": "auto"
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.TDrfC9qaaKNDAuQo"
+    },
+    {
+      "_id": "SMM1LfZwgQ076xOl",
+      "name": "Blood-sucking Ribcage",
+      "sort": 300,
+      "system": {
+        "description": "<p>This enemy heals for 6 HP.</p>\n<p>Fate point 1: The target also takes [rigor], which is not able to be canceled until the target leaves the enemy's square.</p>",
+        "tags": [],
+        "timing": "",
+        "checkType": "",
+        "range": "Close",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 3,
+          "mod": 4,
+          "vs": "evasion"
+        },
+        "damage": {
+          "dice": 3,
+          "mod": 35,
+          "type": "physical"
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.SMM1LfZwgQ076xOl"
+    },
+    {
+      "_id": "PPNIsMd7oNiiDn3O",
+      "name": "Scattering Cloud Mist",
+      "sort": 400,
+      "system": {
+        "description": "<p>Triggered when this enemy fails a defence roll. Proceed as if the enemy had rolled a critical success; they may also move up to 4 squares as an instantaneous reaction.</p>\n<p>May be used 1/scenario; fate points 2: 2/scenario. \" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+        "tags": [],
+        "timing": "Fail a defence roll",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Scenario",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.PPNIsMd7oNiiDn3O"
+    },
+    {
+      "_id": "mlIDyrN87bBNYZmG",
+      "name": "Repeat Action",
+      "sort": 500,
+      "system": {
+        "description": "<p>Once per round, when this enemy becomes [post-action], it immediately becomes [pre-action] again. After that, until the round is completed, its initiative drops to 0.</p>",
+        "tags": [],
+        "timing": "Post-action",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.mlIDyrN87bBNYZmG"
+    },
+    {
+      "_id": "6OdS89SvmAI49eVG",
+      "name": "Forest of Severed Spines",
+      "sort": 600,
+      "system": {
+        "description": "<p>Target(s) take 5 points of direct damage, and this enemy may remove one bad status affecting them.</p>",
+        "tags": [],
+        "timing": "Cleanup",
+        "checkType": "",
+        "range": "Close",
+        "target": "Area(P)",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": "auto"
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "type": "skill",
+      "folder": null,
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!FEnvx4LpUNiYJMyZ.6OdS89SvmAI49eVG"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Abel the Young Noble Vagabond Vampire (Vampire Bohemian Prince)",
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg"
+    },
+    "flags": {}
+  },
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "DZa0LbCEve8eidVi",
+  "_key": "!actors!FEnvx4LpUNiYJMyZ"
+}

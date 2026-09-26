@@ -1,0 +1,41 @@
+{
+  "name": "Analyzer",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to [Hit Checks], and checks made against a character's [Identification Difficulty], when those checks include characters with the [Construct] tag.</p>\n<hr>\n<p>You are an expert in man-made weapons, products of an ancient heritage. The artificial beings have no choice but to be exterminated against the existence that draws the blood of the former creator Arv.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZDZjMb0JOFGs0oDu",
+  "folder": "owQa7Kg6xt2S2kAy",
+  "_key": "!items!ZDZjMb0JOFGs0oDu"
+}

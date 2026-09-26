@@ -1,0 +1,46 @@
+{
+  "name": "Mystic Wing Gemstone I",
+  "type": "gear",
+  "system": {
+    "description": "<p>Increase your Hate by +1. The target gains [Flight]. Treat this effect as a Combat Status. (CR13): This item has no effect.</p>",
+    "tags": [
+      "Gem",
+      "Consumable"
+    ],
+    "rank": 3,
+    "price": 50,
+    "equipped": false,
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4q4T6yv0kPZKVIjw",
+  "folder": "NuJVdhNIcPgDEV3i",
+  "_key": "!items!4q4T6yv0kPZKVIjw"
+}

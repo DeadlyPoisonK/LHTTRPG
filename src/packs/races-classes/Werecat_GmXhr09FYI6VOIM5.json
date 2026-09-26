@@ -1,0 +1,39 @@
+{
+  "_id": "GmXhr09FYI6VOIM5",
+  "name": "Werecat",
+  "type": "race",
+  "sort": 0,
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "werecat",
+    "attributes": {
+      "str": 1,
+      "dex": 1,
+      "pow": 0,
+      "int": 0
+    },
+    "hp": 8,
+    "fate": 1,
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "eaCC6bYflF5Xl5sD",
+  "_key": "!items!GmXhr09FYI6VOIM5"
+}

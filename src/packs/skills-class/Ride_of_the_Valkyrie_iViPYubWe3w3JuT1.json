@@ -1,0 +1,41 @@
+{
+  "name": "Ride of the Valkyrie",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill cannot effect you. The targets immediately performs a [Timing: Move] action with [Movement] tag once.</p>\n<hr>\n<p>A special skill that makes a melody resonate when a battle maiden carries the soul of a warrior, and moves her companions quickly.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20(P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "iViPYubWe3w3JuT1",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!iViPYubWe3w3JuT1"
+}

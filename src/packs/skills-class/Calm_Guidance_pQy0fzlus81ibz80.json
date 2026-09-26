@@ -1,0 +1,41 @@
+{
+  "name": "Calm Guidance",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you are not equipped with [Heavy Armor], you gain a +1D bonus to [Analyze Checks].</p>\n<hr>\n<p>A special skill that clears the mind in a relaxed and calm state and makes calm judgments.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pQy0fzlus81ibz80",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!pQy0fzlus81ibz80"
+}

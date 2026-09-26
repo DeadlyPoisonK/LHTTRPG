@@ -1,0 +1,49 @@
+{
+  "name": "R7 Scroll of thunder that divides the heavens",
+  "type": "gear",
+  "system": {
+    "description": "<p>Each target rolls 1D. On a 6, it rolls another 1D and adds it (up to 3D). The target takes [total of the dice ×10] magic damage with the [Shock] tag. No Drop Items can be obtained from a target that becomes [Incapacitated] by this damage.\nA powerful artifact-level scroll made with rare materials. It summons countless lightning bolts that split the sky and cover the earth, scorching the entire field of view. It cannot target specific enemies, making it difficult to use effectively, and since it is a consumable, there are few actual recorded uses. However, its power is truly formidable.</p><hr><p>Lightning's Crimson Blood[Core Material](100G)+Sweep Scroll (Intermediate)(100G)×3+[Magic Catalyst 7](60G)×2+Crafting Cost(180G)</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation",
+      "Not For Sale",
+      "M5"
+    ],
+    "rank": 7,
+    "price": 700,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Wide Area 20 (Indiscriminate)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 4400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "e58fgomV3FbFZWVX",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!e58fgomV3FbFZWVX"
+}

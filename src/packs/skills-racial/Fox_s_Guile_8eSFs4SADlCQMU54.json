@@ -1,0 +1,43 @@
+{
+  "name": "Fox's Guile",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain +4 [Base POW].</p>\n<hr>\n<p>You have honed the high mental powers that are characteristic of the fox-tail tribe and have an inner charm that is alluring to the point of fascination.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8eSFs4SADlCQMU54",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!8eSFs4SADlCQMU54"
+}

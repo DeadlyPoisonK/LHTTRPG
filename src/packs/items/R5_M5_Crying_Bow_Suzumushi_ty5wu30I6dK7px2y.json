@@ -1,0 +1,48 @@
+{
+  "name": "R5 M5 Crying Bow: Suzumushi",
+  "type": "weapon",
+  "system": {
+    "description": "<p>This weapon's [Ranged Attack] will prevent any character who takes 1 or more HP damage from entering the [Hidden] state. This effect lasts until the end of the scene.\nA magical bow that rings with the clear sound of a bell when drawn. The sound of the bell continues to echo even after the arrow is fired, revealing the location of those who are struck.</p><hr><p>Wind-Singing Bell [Core Material] (80G) + Short Bow (150G) + Far-Hearing Earring (40G) + Firefly Gem (40G) + [Magic Catalyst 5] (40G) ×3 + Crafting Cost (150G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 5,
+    "price": 580,
+    "equipped": false,
+    "attack": 17,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 21900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ty5wu30I6dK7px2y",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!ty5wu30I6dK7px2y"
+}

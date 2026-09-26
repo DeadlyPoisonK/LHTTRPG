@@ -1,0 +1,48 @@
+{
+  "name": "R3 M5 Tundra Reclaimer",
+  "type": "weapon",
+  "system": {
+    "description": "<p>At the start of a scene, you gain [Cancel (Cold): 20]. When this weapon is used in a [Melee Attack] against a target with the [Nature] or [Fairy] tags, you gain a +3D bonus to the damage roll.</p>\n<p>A hatchet said to contain the souls of northern pioneers. Gives the wielder the power to repel cold and fend off the raging fury of nature.</p>\n<hr>\n<p>Molten Nail [core material] (50G) + Handaxe (50G) x 2 + [magic catalyst 3] (25G) x 3 + Crafting Cost (85G)</p>",
+    "tags": [
+      "M5",
+      "One-Handed",
+      "Hafted",
+      "Not for Sale"
+    ],
+    "initiative": -1,
+    "rank": 3,
+    "price": 310,
+    "equipped": false,
+    "attack": 9,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 23700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xI9cng8DzJvdnb3h",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!xI9cng8DzJvdnb3h"
+}

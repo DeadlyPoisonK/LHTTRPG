@@ -1,0 +1,43 @@
+{
+  "name": "Summoning Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you make an attack that requires you to have the [Fairy] [Undead] [Construct] or [Mythic] tags, you gain a +[(SR)D] bonus to the damage rolls of those skills.</p>\n<hr>\n<p>You have a strong emotional connection with your servants. The power of the bond will further enhance their abilities.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "AHv19ALfCWCWWqsq",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!AHv19ALfCWCWWqsq"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Adoration",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may only target willing characters with this skill. Exchange your [HP] with the target's [HP].</p>\n<hr>\n<p>Magic that recites a scripture that shows praise for life and adapts the target and life force. Your prayers and beliefs transcend the boundaries of your physical body.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Gubxh39ZZeVOpqBf",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!Gubxh39ZZeVOpqBf"
+}

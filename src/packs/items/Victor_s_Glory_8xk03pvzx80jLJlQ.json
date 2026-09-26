@@ -1,0 +1,48 @@
+{
+  "name": "Victor's Glory",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Body] Use this when you have successfully [Melee Attack] and [Incapacitate] your target. Your [Recovery] increases by +20. This effect is treated as a CS and lasts until the end of the next round.\nName: Grand Silver Sword Type: Sword Class: Weapon Weight: 10 kg Attack Power: 150 Physical Defense: 50 Speed: 8 A beautifully decorated silver greatsword. This ceremonial sword is used in rituals honoring knights and holy warriors who have earned their fame, but its power can be fully utilized by an adventurer's strength.</p><hr><p>[Core Material](440G)+ (1000G)+[ 16](250G)×5+Crafting Cost(810G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Blade",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 16,
+    "price": 3500,
+    "equipped": false,
+    "attack": 42,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 3700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8xk03pvzx80jLJlQ",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!8xk03pvzx80jLJlQ"
+}

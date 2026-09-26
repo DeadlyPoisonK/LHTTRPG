@@ -1,0 +1,44 @@
+{
+  "name": "Spark Shot",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target.</p>\n<p>(Extra): Secondary targets within a range of [Target: Area (P) / Range: Close] centered on the initial target take [DEX Mod] direct damage. This damage triggers [Weakness] on the secondary target, as if they had failed their [Dodge Check].</p>\n<hr>\n<p>A special skill that envelops an arrow in lightning and shoots it. When hit, lightning bursts like a spider's web and attacks the surroundings.</p>",
+    "tags": [
+      "Ranged Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rEEC5EmwvmU5LVEX",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!rEEC5EmwvmU5LVEX"
+}

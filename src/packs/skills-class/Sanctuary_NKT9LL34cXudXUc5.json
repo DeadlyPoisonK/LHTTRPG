@@ -1,0 +1,41 @@
+{
+  "name": "Sanctuary",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains a +[SRx2] bonus to [Physical Defense] and [Magical Defense]. This effect lasts until the beginning of your next Main Process, or until the target leaves the square you are in.</p>\n<hr>\n<p>Magic that creates a sanctuary that wards off disasters and protects nearby allies.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NKT9LL34cXudXUc5",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!NKT9LL34cXudXUc5"
+}

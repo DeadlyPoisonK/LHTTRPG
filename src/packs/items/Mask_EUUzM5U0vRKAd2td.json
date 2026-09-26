@@ -1,0 +1,45 @@
+{
+  "name": "Mask",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Please use it as a souvenir when you travel far away. Luxury items are used for balls. It's suspicious to wear it in the city, so let's stop it.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Helm]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 1,
+    "price": 5,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EUUzM5U0vRKAd2td",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!EUUzM5U0vRKAd2td"
+}

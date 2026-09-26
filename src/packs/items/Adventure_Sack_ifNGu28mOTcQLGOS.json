@@ -1,0 +1,46 @@
+{
+  "name": "Adventure Sack",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have 8 inventory slots. In addition, it has 5 inventory slots dedicated to [Consumables].</p>",
+    "tags": [
+      "[Bag]"
+    ],
+    "rank": 15,
+    "price": 480,
+    "equipped": false,
+    "bagSpace": 0,
+    "limit": "",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ifNGu28mOTcQLGOS",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!ifNGu28mOTcQLGOS"
+}

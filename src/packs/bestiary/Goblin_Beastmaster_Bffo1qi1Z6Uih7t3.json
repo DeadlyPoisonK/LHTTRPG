@@ -1,0 +1,365 @@
+{
+  "name": "Goblin Beastmaster",
+  "type": "monster",
+  "_id": "Bffo1qi1Z6Uih7t3",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 78,
+      "max": 78,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Humanoid",
+      "Goblin"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 5,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 4,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "weakness": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 22,
+        "magic": 9
+      },
+      "speed": 2,
+      "initiative": 6
+    },
+    "rank": 8,
+    "idendification": "5",
+    "hateMultiplier": "2",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 3
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 5
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl66\" style=\"height: 15.75pt; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">1~5</td>\n<td class=\"xl67\" colspan=\"5\">Mountain Goat Hunting Horn (Mountain Goat's Horn Flute. Magic Catalyst 8, 70G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">6</td>\n<td class=\"xl68\" colspan=\"5\">Uncanny Pelt (valuable 60G) x3</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<hr>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+  },
+  "prototypeToken": {
+    "name": "Goblin Beastmaster",
+    "displayName": 50,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "width": 0.5,
+    "height": 0.5,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0,
+      "color": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Beast Puppet",
+      "type": "skill",
+      "system": {
+        "description": "<p>Targets enemies with the [nature], [cryptid] tags.&nbsp;Target immediately becomes [pre-initiative]. This skill can be used when this enemy's HP drops below 40.&nbsp;</p>",
+        "tags": [],
+        "timing": "Initiative",
+        "checkType": "",
+        "range": "4 sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": " 1/scene",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "l7CCQPr09MEatnup",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Bffo1qi1Z6Uih7t3.l7CCQPr09MEatnup"
+    },
+    {
+      "name": "Gobhorn",
+      "type": "skill",
+      "system": {
+        "description": "<p>10 pts [piercing] damage. <br>As a minor: target takes [pursuit] 15.&nbsp;</p>",
+        "tags": [
+          "Special"
+        ],
+        "timing": "Major",
+        "checkType": "7+2D vs Resistance",
+        "range": "2 sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "V2WmnIYiQCg0ZwgG",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Bffo1qi1Z6Uih7t3.V2WmnIYiQCg0ZwgG"
+    },
+    {
+      "name": "Goblin Rage",
+      "type": "skill",
+      "system": {
+        "description": "<p>Immediately following damage calculation, if this enemy takes [spirit] damage. This enemy can immediately use &lt;Beast Puppet&gt;. If the HP requirement is met, the frequency restriction can be ignored.&nbsp;</p>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "1QeKDiLrAGbUlHfb",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Bffo1qi1Z6Uih7t3.1QeKDiLrAGbUlHfb"
+    }
+  ],
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "A8N2nQKDCQVC2B0y",
+  "_key": "!actors!Bffo1qi1Z6Uih7t3"
+}

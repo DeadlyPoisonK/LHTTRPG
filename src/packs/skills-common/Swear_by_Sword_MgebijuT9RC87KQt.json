@@ -1,0 +1,43 @@
+{
+  "name": "Swear-by-Sword",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Knight, Hero, or Wuxia.</p>\n<p>Only those who agree other than you can be targeted. When you use \"Protect\" as a target, it will be [Range: 1 Sq.] and you do not become [Post-Action] and can be used even in [Post-Action]. This effect lasts until the end of the scenario.</p>\n<hr>\n<p>A special skill that makes a vow of protection with one's own sword. As long as I have this oath, I will never let any blade reach me.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MgebijuT9RC87KQt",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!MgebijuT9RC87KQt"
+}

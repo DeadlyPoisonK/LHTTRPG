@@ -1,0 +1,44 @@
+{
+  "name": "Drag Fang",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "system": {
+    "description": "<p>If you do [Weapon Attack] with [Target: Single / Range: Close] in this main process and the target fails their [Dodge Check], you may [Safe Move] 1 Sq at the end of the main process . Also, at the same time your target is [Safe Move (force)] to the same Square as you.</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Minor",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "bPFuwHRIBk9sMA0B",
+  "folder": null,
+  "_key": "!items!bPFuwHRIBk9sMA0B"
+}

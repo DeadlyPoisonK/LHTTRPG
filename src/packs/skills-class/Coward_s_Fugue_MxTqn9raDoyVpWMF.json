@@ -1,0 +1,43 @@
+{
+  "name": "Coward's Fugue",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill may only target an ally other than yourself. The target may reduce their [Hate] by -1 during each Cleanup Process.</p>\n<p>(SR2): This skill gains the [Preparation] tag.<br>(SR3): You may choose to target yourself with this skill.</p>\n<hr>\n<p>A support song that skillfully diverts hostility with a complex fugue that layers various melodies as if to cover up the theme.</p>",
+    "tags": [
+      "Harmony"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MxTqn9raDoyVpWMF",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!MxTqn9raDoyVpWMF"
+}

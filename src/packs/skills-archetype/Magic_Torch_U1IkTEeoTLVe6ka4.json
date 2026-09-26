@@ -1,0 +1,43 @@
+{
+  "name": "Magic Torch",
+  "type": "skill",
+  "system": {
+    "description": "<p>All [Dim Light] [Night] and [Darkness] effects within range end. This effect lasts until the end of the scene.</p>\n<hr>\n<p>A spell that summons a magical light and illuminates the area brightly. The amount of light can be freely controlled to some extent according to the operator's will.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20 (A)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "3/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "U1IkTEeoTLVe6ka4",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!U1IkTEeoTLVe6ka4"
+}

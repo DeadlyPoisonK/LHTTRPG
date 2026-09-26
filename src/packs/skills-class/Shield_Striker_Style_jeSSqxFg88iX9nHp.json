@@ -1,0 +1,43 @@
+{
+  "name": "Shield Striker Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are equipped with a [Shield]. You gain a +[SRx4] bonus to your [Attack Power].</p>\n<hr>\n<p>A fighting style that skillfully combines weapon and shield techniques and applies them to attacks.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jeSSqxFg88iX9nHp",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!jeSSqxFg88iX9nHp"
+}

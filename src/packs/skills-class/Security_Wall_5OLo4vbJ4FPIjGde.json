@@ -1,0 +1,43 @@
+{
+  "name": "Security Wall",
+  "type": "skill",
+  "system": {
+    "description": "<p>When the targets next receives a status with the [Sealed] tag, it is removed immediately. Treat this effect as a Combat Status that is removed after being applied once.</p>\n<hr>\n<p>Support magic that scrutinizes the protection of allies, finds spiritual vulnerabilities, and implements multiple countermeasures in advance.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 4(P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Fate 1",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5OLo4vbJ4FPIjGde",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!5OLo4vbJ4FPIjGde"
+}

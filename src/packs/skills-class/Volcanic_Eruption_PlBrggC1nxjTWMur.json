@@ -1,0 +1,44 @@
+{
+  "name": "Volcanic Eruption",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target.</p>\n<p>(Effect): Give direct damage of [INT Mod &times; SR] as extra damage, to \"What is present in all Sq specified at the time of selection of this skill (indiscriminate)\" in the Cleanup Process of this round.&nbsp;</p>\n<hr>\n<p>An offensive magic that activates the magic of the earth and creates explosive flames like a volcanic eruption. The flames soar to the heavens and then fall back down to the earth, turning the surrounding area into scorched earth.</p>",
+    "tags": [
+      "Magic Attack",
+      "Flame"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 5",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PlBrggC1nxjTWMur",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!PlBrggC1nxjTWMur"
+}

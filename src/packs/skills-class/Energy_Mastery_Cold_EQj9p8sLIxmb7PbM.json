@@ -1,0 +1,43 @@
+{
+  "name": "Energy Mastery: Cold",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +[(SR)D] bonus to damage rolls of attacks that have the [Cold] tag. Each attack cannot receive the effect of more than one &laquo;Energy Mastery&raquo; skill at a time.</p>\n<hr>\n<p>You have focused your training on handling the cold attribute. The power of the magic that manipulates them is unmatched by others.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EQj9p8sLIxmb7PbM",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!EQj9p8sLIxmb7PbM"
+}

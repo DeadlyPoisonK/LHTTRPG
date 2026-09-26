@@ -1,0 +1,267 @@
+{
+  "_id": "0Gmd94qhWyunBcPh",
+  "name": "Mizkun of Shadows",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "sort": 0,
+  "system": {
+    "health": {
+      "value": 146,
+      "max": 146,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 4,
+      "max": 4,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Boss",
+      "Humanoid",
+      "Genius",
+      "Night Vision"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 14,
+        "magic": 7
+      },
+      "speed": 2,
+      "initiative": 3
+    },
+    "rank": 3,
+    "idendification": "13",
+    "hateMultiplier": "5",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 2
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 1
+      }
+    },
+    "description": ""
+  },
+  "items": [
+    {
+      "_id": "imXwkc9OfGD9Fvbb",
+      "name": "Renew Action II",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 100,
+      "folder": null,
+      "system": {
+        "description": "<p>Use this skill on a target who has just become [Post-Action]. The target immediately becomes [Pre-Action], and their [Initiative] becomes 0 until the end of the round.</p>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "4 Sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Round",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!0Gmd94qhWyunBcPh.imXwkc9OfGD9Fvbb"
+    },
+    {
+      "_id": "lOqGWwgbXt2CORL9",
+      "name": "Hidden Mastermind",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 200,
+      "folder": null,
+      "system": {
+        "description": "<p>When this enemy appears in a scene, any two enemies that are CR3 or lower with the [Humanoid] or [Human] tags may optionally appear with it. One enemy and two [Mob] enemies with CR3 and the [Humanoid] or [Human] tags may be used instead. The enemies that appear because of this effect do not produce Drop Items.</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!0Gmd94qhWyunBcPh.lOqGWwgbXt2CORL9"
+    },
+    {
+      "_id": "Bj8nYrlwBKrHI50u",
+      "name": "Genius Talisman",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 300,
+      "folder": null,
+      "system": {
+        "description": "<p>When this enemy appears in a scene, it appears [Hidden]. When this enemy makes [Normal Moves] or [Safe Moves], it does not lose [Hidden]. When this enemy takes [Blight] damage, it also takes [Staggered].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!0Gmd94qhWyunBcPh.Bj8nYrlwBKrHI50u"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Mizkun of Shadows",
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg"
+    },
+    "flags": {}
+  },
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "DZa0LbCEve8eidVi",
+  "_key": "!actors!0Gmd94qhWyunBcPh"
+}

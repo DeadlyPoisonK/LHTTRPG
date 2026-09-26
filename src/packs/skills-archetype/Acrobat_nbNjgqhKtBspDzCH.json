@@ -1,0 +1,86 @@
+{
+  "name": "Acrobat",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to [Athletics Checks].</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">You've got the knack of exercising that doesn't rely solely on strength.</span></p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.weapon-master-archetype-class.nbNjgqhKtBspDzCH",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "NMOMewxMWRO1sC8n",
+      "changes": [
+        {
+          "key": "system.checks.athletics.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Athletics +1",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!nbNjgqhKtBspDzCH.NMOMewxMWRO1sC8n"
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "nbNjgqhKtBspDzCH",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!nbNjgqhKtBspDzCH"
+}

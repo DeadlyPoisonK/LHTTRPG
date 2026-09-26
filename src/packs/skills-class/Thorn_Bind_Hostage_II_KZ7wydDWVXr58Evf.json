@@ -1,0 +1,43 @@
+{
+  "name": "Thorn Bind Hostage II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. The target takes two stacks of [Pursuit] with a rating equal to [[INT Base]].</p>\n<p>(Fate 1): The target takes three stacks of instead of two.</p>\n<hr>\n<p>Magic that binds the enemy with magical thorns that shine in azure color. Thorns explode on impact, dealing mortal damage to enemies with magical spikes and explosions.</p>",
+    "tags": [
+      "Special Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KZ7wydDWVXr58Evf",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!KZ7wydDWVXr58Evf"
+}

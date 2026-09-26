@@ -1,0 +1,43 @@
+{
+  "name": "Shield Striker Style II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. This skill only produces an effect when you are equipped with a [Shield]. The damage you take from &laquo;Protect&raquo; and &laquo;Take Over&raquo; is reduced by [SRx8].</p>\n<p>(SR2): Increase your [Attack Power] by +[STR mod].<br>(SR3): One shield you are equipped with increases its [Physical Defense] by +[INT mod].</p>\n<hr>\n<p>A fighting style that skillfully combines weapon and shield techniques and applies them to attacks. Its defensiveness shows its true value when protecting allies.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Ft9RxktI9lY6d969",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!Ft9RxktI9lY6d969"
+}

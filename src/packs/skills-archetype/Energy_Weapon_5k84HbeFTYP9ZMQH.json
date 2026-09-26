@@ -1,0 +1,43 @@
+{
+  "name": "Energy Weapon",
+  "type": "skill",
+  "system": {
+    "description": "<p>Select one from: [Flame] [Cold] [Shock]. The target's [Weapon Attack] damage changes to magical damage, and gains the chosen tag. Treat this effect as a Combat Status.</p>\n<p>(Fate 1): You may use this skill with [Target: Area (P)].<br>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A spell that casts a spell on an ally's weapon, enveloping it in fire, cold, and thunder.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5k84HbeFTYP9ZMQH",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!5k84HbeFTYP9ZMQH"
+}

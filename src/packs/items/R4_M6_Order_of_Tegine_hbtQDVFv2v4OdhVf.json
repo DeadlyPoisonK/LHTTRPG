@@ -1,0 +1,48 @@
+{
+  "name": "R4 M6 Order of Tegine",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Scene's first round only, your [Speed] is +2 and damage roll is +5.\n</p><hr><p>[Core Material](50G)+ (90G)+[ 4](30G)×6+Crafting Cost(170G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Spear",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 2,
+    "rank": 4,
+    "price": 490,
+    "equipped": false,
+    "attack": 14,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hbtQDVFv2v4OdhVf",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!hbtQDVFv2v4OdhVf"
+}

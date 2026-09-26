@@ -1,0 +1,43 @@
+{
+  "name": "Inspiration",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Fortune Teller, Astrologer, or Scholar.&nbsp;</p>\n<p>You can ask a question to GM once. GM should answer with either \"yes\", \"no\" or \"neither\". If GM does not want to answer, they may refuse to answer. If the GM refuses answers, you gain +2 [Fate Points].</p>\n<hr>\n<p>A special ability to get closer to the truth by accumulated knowledge or by intuition like divine revelation.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Puy1MStUkpJzEWPF",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!Puy1MStUkpJzEWPF"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Flanker Fang",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just before the target makes a [Dodge Check]. Reduce the result of that check by -2. This skill may only be used when you have a [Servant Summon] skill in effect.</p>\n<hr>\n<p>A special skill that gives instructions to the servant who is in charge and performs a pincer attack with breath. The cooperation will surely hunt the prey.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "Automatic\t\t",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NwgiUbN0ICAv8Yzg",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!NwgiUbN0ICAv8Yzg"
+}

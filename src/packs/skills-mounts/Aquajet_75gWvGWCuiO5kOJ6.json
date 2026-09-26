@@ -1,0 +1,44 @@
+{
+  "_id": "75gWvGWCuiO5kOJ6",
+  "name": "Aquajet",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>You may make a [Normal Move] of 2 Sq.</p><p>(Minor): If there are props with [Underwater] tag and similar effects in all Sq passing from the start to the end of movement, the travel distance is + 4 Sq.</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!75gWvGWCuiO5kOJ6"
+}

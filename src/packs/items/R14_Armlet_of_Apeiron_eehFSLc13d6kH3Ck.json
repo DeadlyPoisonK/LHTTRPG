@@ -1,0 +1,47 @@
+{
+  "name": "R14 Armlet of Apeiron",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Magic Power +6. [Trigger: Immediately After Check] Use this when you roll a 6 on your [Accuracy Check]. You gain a number of [Phantom Weapon] tags equal to the number 6.\nA crystal bracelet that holds the power to create something from nothing. When the user casts a spell, it solidifies the dissipating magic into an illusionary blade or shield that can be manipulated. Currently, only limited copies can be crafted, whereas the lost original was said to be able to create infinite illusionary weapons. When casting a spell solidifies the dissipating magic into an illusionary blade or shield Crystal Shard Magical Essence Crystal Shard Magical Essence</p><hr><p>Writhing Petals [Core Material] (380G) + Magister Gloves (370G) + Orange Ring (640G) + [Magic Catalyst 14] (190G) ×2 + Crafting Cost (310G)</p>",
+    "tags": [
+      "Accessory",
+      "Arms",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 14,
+    "price": 2080,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "eehFSLc13d6kH3Ck",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!eehFSLc13d6kH3Ck"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "R15 Epicurean Bag",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have 10 [Inventory Slots]. When you receive the effect of [Food], the rating of your [Fatigue] is further reduced by 15. [Trigger: Refer] Use when combat begins. You gain [Cancel (Poison, Radiance): 40]. At the end of combat you must roll once on the \"Consumption Table: Goods\".\nA bag that houses the Fairy of Gastronomy. Food placed inside becomes delicious beyond belief, and grants a blessing during battle. However, the fairy is a big eater, and will leave if not given offerings.</p><hr><p>Supple Leather of the Divine Horse [Core Material] (380G) + Adventure Sack (480G) ×3 + [Magic Catalyst 15] (220G) ×3 + Crafting Cost (640G)</p>",
+    "tags": [
+      "Bag",
+      "Accessory",
+      "Not For Sale",
+      "M6"
+    ],
+    "rank": 15,
+    "price": 3120,
+    "equipped": false,
+    "bagSpace": 0,
+    "limit": "",
+    "checkType": "-",
+    "range": "Close",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KS8425iUGtQixPp8",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!KS8425iUGtQixPp8"
+}

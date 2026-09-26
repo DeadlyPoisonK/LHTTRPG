@@ -1,0 +1,44 @@
+{
+  "name": "Amber Elephant Stance",
+  "type": "skill",
+  "system": {
+    "description": "<p>You must have either &laquo;Covering&raquo; or &laquo;Long Range Cover&raquo; in order to acquire this skill. Select a secondary target within a range of [Target: Single / Range: 2 Sq.] from yourself. When using &laquo;Covering&raquo; or &laquo;Long Range Cover&raquo; on the secondary target, that use does not reduce the number of times the skill can be used, and you may use the skill even if you have exhausted all of its uses. In addition, you take a -1 penalty to [Speed].</p>\n<hr>\n<p>A special skill that allows you to stand up against your enemies like a calm giant elephant and take a stance to protect your allies.</p>",
+    "tags": [
+      "Stance",
+      "Preparation"
+    ],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FaCaZcY1MvKnYldR",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!FaCaZcY1MvKnYldR"
+}

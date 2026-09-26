@@ -1,0 +1,41 @@
+{
+  "name": "Sweeper",
+  "type": "skill",
+  "system": {
+    "description": "<p>If the target's HP is equal to or less than your [[POW Mod] x 3], it becomes [Incapacitated] or [Dead] (your choice). If the target could not be made [Incapacitated] or [Dead] through this skill, then the [Hate] cost of this skill is 0.</p>\n<p>(Target: Mob): Regardless of HP, the target becomes [Incapacitated] or [Dead] (your choice).</p>\n<hr>\n<p>A special skill that sneaks up with the minimum necessary movement and stabs the finish. Neutralize dying opponents and lower-ranked enemies.</p>",
+    "tags": [],
+    "timing": "Cleanup",
+    "checkType": "Automatic\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YmLp9HanziyKXuhq",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!YmLp9HanziyKXuhq"
+}

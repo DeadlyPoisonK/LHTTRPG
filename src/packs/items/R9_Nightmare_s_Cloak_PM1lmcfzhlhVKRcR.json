@@ -1,0 +1,47 @@
+{
+  "name": "R9 Nightmare's Cloak",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You receive a +1 SR bonus for your skills tagged with [Support][Song of Aid] (this can exceed the maximum SR). If your attack target is in the [Dazed][Confused][Afflicted] status, you gain a +2D bonus to the damage roll against that target.\nFairy-Weaving Cloak, a magical coat said to be worn by fairies who traverse human dreams. Grants the wearer the ability to accurately read an enemy's mental weaknesses.</p><hr><p>[Core Material](140G)+ [Core Material](140G)+ (170G)×3[ 9](90G)×4+Crafting Cost(180G)</p>",
+    "tags": [
+      "Accessory",
+      "Cloak",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 2,
+    "mdef": 2,
+    "rank": 9,
+    "price": 1330,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PM1lmcfzhlhVKRcR",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!PM1lmcfzhlhVKRcR"
+}

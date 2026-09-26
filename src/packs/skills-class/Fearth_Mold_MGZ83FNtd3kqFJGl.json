@@ -1,0 +1,43 @@
+{
+  "name": "Fearth Mold",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Attack Power)] &nbsp;physical damage to the target.</p>\n<p>(Successful Hit): Give target [Weakness (Magic): 10]. Treat this [Weakness] as a Bad status.</p>\n<p>(CR 16): The [Weakness] increases to 15.&nbsp;<br>(Fate 1): The strength of [Weakness] is doubled.</p>\n<hr>\n<p>A special skill that envelops poisonous-colored spores in weapon attacks and erodes the target's body with the blow. Enemies infested with spores lose much of their resistance to magic.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MGZ83FNtd3kqFJGl",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!MGZ83FNtd3kqFJGl"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Enable Valleable Eye",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Tracker, Spy, or Detective.</p>\n<p>[Boss], [Raid] appearing in the next scene, Set 1 enemy (selected by GM) to the [identified] state and get information. If there is no applicable enemy, the skill failed but does not count towards the limit.&nbsp;</p>\n<p>(Fumble): Enemy notices the scout.</p>\n<hr>\n<p>A special skill that detects the presence of a formidable enemy before fighting and researches that information in advance. No enemy can escape your sight.</p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Perception vs Identification Diff +2)\t\t",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pFT1oeWiXDZOHwvw",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!pFT1oeWiXDZOHwvw"
+}

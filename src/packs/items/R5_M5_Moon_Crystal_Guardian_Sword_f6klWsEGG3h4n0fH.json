@@ -1,0 +1,48 @@
+{
+  "name": "R5 M5 Moon Crystal Guardian Sword",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Text & Fate 1] Used when you remove a BS. Select one from the BS you just removed and give it to a target that is \"Single/Range: 2Sq\" from you.\nA short sword that reflects light like the moon. It is equipped with a strong defense against curses, and those who attempt to harm its wielder are lured into the two holes.</p><hr><p>[Core Material](80G)+ (90G)+ (60G)×2+[ 5](40G)×2+Crafting Cost(180G)</p>",
+    "tags": [
+      "One-Handed",
+      "Katana",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -1,
+    "rank": 5,
+    "price": 550,
+    "equipped": false,
+    "attack": 10,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "f6klWsEGG3h4n0fH",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!f6klWsEGG3h4n0fH"
+}

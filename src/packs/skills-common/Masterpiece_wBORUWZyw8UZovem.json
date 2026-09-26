@@ -1,0 +1,41 @@
+{
+  "name": "Masterpiece",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Painter, Novelist, Counterfeiter, or Connoisseur. One item of your choice from your inventory acquires the [Extra Value n] tag. Make one roll on [Treasure Table: Money]; the rating of [Extra Value n] is equal to the amount of money rolled. When selling the item, increase the selling price of that item by the rating.</p>\n<hr>\n<p>A feat that adds your own ingenuity to an item, adding value as a work of art.</p>",
+    "tags": [],
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wBORUWZyw8UZovem",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!wBORUWZyw8UZovem"
+}

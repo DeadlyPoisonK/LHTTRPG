@@ -1,0 +1,48 @@
+{
+  "name": "R4 M4 Lightning Blaster",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Damage Roll] This is used for the \"Target: Single\" [Melee Attack] damage roll with this weapon. The damage dealt is magic damage with the [Shock] tag, and is further increased by +10. Once per scenario.\nOne-handed spear made of an unknown metal, with a tip resembling lightning. As its shape suggests, it can release electric shocks from its tip by chanting a keyword. Since even weapon attack classes can deal magical damage with this, it is popular among adventurers. However, due to its relation to base damage, it does not have high demand among high-level players.</p><hr><p>[Core Material](60G)+ (100G)+[ 4](30G)×3+Crafting Cost(90G)</p>",
+    "tags": [
+      "One-Handed",
+      "Spear",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 1,
+    "rank": 4,
+    "price": 340,
+    "equipped": false,
+    "attack": 8,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 19500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nF51c0pQXGZmrJT3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!nF51c0pQXGZmrJT3"
+}

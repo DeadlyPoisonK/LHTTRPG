@@ -1,0 +1,41 @@
+{
+  "name": "Bistou Vision",
+  "type": "skill",
+  "system": {
+    "description": "<p>Choose either [Weapon Attack] or [Magic Attack]. The target gains + 1D to their [Accuracy Check] ti skills with the selected tag. You gain -1D to [Accuracy Check] to skills with the selected tag. This effect lasts until the end of the round.</p>\n<hr>\n<p>A spell that allows you to share your concentration with allies and unleash a sharp blow.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1quigEmKne0jW1Vy",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!1quigEmKne0jW1Vy"
+}

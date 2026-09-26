@@ -1,0 +1,43 @@
+{
+  "name": "Ritardando",
+  "type": "skill",
+  "system": {
+    "description": "<p>After the end of this Main Process, you may make a [Normal Move] up to your [Speed] Sq.</p>\n<p>(Minor): Reduce the distance moved by -1 Sq, and the move becomes a [Safe Move].</p>\n<hr>\n<p>A special skill that gradually slows its pace so that it is not noticed, outwits the enemy's expectations, and moves through obstacles.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "43fvwyqxMUYQ5PeK",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!43fvwyqxMUYQ5PeK"
+}

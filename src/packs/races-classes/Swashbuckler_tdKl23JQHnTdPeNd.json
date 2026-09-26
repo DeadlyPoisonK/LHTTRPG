@@ -1,0 +1,57 @@
+{
+  "_id": "tdKl23JQHnTdPeNd",
+  "name": "Swashbuckler",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Swashbuckler_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "swashbuckler",
+    "archetype": "weaponAttacker",
+    "attributes": {
+      "str": 3,
+      "dex": 4,
+      "pow": 2,
+      "int": 1
+    },
+    "hp": 40,
+    "hpPerRank": 6,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-archetype.Item.ruw72IRPwNUOQ3ge"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.imNGiUNCG9UT3Pjy"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.QEXGPgVkszg3FJT6",
+          "Compendium.lhtrpg.skills-class.Item.14Jr0KAlWgKiCpRB"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!tdKl23JQHnTdPeNd"
+}

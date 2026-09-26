@@ -1,0 +1,41 @@
+{
+  "name": "Reactive Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +[(SR)D] bonus to the amount of HP recovered when using &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo;.</p>\n<hr>\n<p>You specialize in reaction activation recovery, which is the unique magic of &lt;Treatment Priest&gt;. Your prayers invoke greater healing power.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "otX3p1oYOERYjMyv",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!otX3p1oYOERYjMyv"
+}

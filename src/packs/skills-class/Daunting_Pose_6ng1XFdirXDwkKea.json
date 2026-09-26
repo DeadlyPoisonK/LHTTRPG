@@ -1,0 +1,41 @@
+{
+  "name": "Daunting Pose",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after the target makes an [Attack Check] for an attack with [Target: Area] that includes the square you are in. Change the target's attack to [Target: Single] with you as the target.&nbsp;</p>\n<p>(Hate Top): You may use this skill against attacks with [Target: Wide, Line] as well.</p>\n<hr>\n<p>A special skill that allows you to protect your allies from behind by standing in front of the enemy. You can stop even attacks that involve those around you by yourself.</p>",
+    "tags": [],
+    "timing": "After Check",
+    "checkType": "Automatic\t\t",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6ng1XFdirXDwkKea",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!6ng1XFdirXDwkKea"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Kasha's Blade II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Deal [(SRx2)D + (Attack Power)] physical damage to the target. If there are no other enemies in the same square as you except the target, increase the damage by +[STR mod].</p>\n<hr>\n<p>A special skill that drives in a series of fire-like momentum while moving in a circle to constantly go around the enemy's blind spots. Its ferocious attack becomes a chariot of fire that drags the enemy to death.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 4
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Q1GVsYmHVDSOxQa8",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!Q1GVsYmHVDSOxQa8"
+}

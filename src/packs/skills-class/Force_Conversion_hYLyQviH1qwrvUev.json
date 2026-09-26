@@ -1,0 +1,41 @@
+{
+  "name": "Force Conversion",
+  "type": "skill",
+  "system": {
+    "description": "<p>Requires &laquo;Reactive Mastery&raquo; to use. You can not use &laquo;Reactive Heal&raquo;, but gain +[&laquo;Reactive Mastery&raquo;'s SR &times; 5] to a damage roll you do. This effect lasts until the end of the round.</p>\n<hr>\n<p>A special skill that diverts the magical power of reaction activation recovery and increases the power by enveloping it in a weapon. However, it is necessary to be careful that the original recovery effect cannot be used.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hYLyQviH1qwrvUev",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!hYLyQviH1qwrvUev"
+}

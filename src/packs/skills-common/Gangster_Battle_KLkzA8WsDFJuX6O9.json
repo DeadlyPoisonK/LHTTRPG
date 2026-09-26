@@ -1,0 +1,43 @@
+{
+  "name": "Gangster Battle",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Pirate, Outlaw, or Phantom Thief.<br>Deal &nbsp;[2D + (Attack power)] physical damage.&nbsp;</p>\n<p>(Successful Hit): Target drops one item, roll on their loot table. It can not be used more than once on the target that dropped the item in the same scenario.</p>\n<p>(Miss): Your [Hate] is increased by 1, but the skill can be used again.</p>\n<hr>\n<p>A special skill that steals valuable items from the opponent at the same time as attacking.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KLkzA8WsDFJuX6O9",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!KLkzA8WsDFJuX6O9"
+}

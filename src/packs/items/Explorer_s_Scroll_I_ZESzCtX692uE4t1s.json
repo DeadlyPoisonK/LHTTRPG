@@ -1,0 +1,47 @@
+{
+  "name": "Explorer's Scroll I",
+  "type": "gear",
+  "system": {
+    "description": "<p>Choose one: [Flame] [Cold] [Shock] [Blight] [Spirit]. The target takes no damage from Props with the chosen tag. Treat this effect as a Combat Status. You take [Fatigue: (Base STR x 2)]. (CR12): This item has no effect.&nbsp;</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 2,
+    "price": 40,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 3800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZESzCtX692uE4t1s",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!ZESzCtX692uE4t1s"
+}

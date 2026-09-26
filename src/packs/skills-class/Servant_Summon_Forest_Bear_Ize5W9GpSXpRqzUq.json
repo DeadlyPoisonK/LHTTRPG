@@ -1,0 +1,45 @@
+{
+  "name": "Servant Summon: Forest Bear",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain the [Nature] tag. Gain + [SR &times; 4] to the physical damage rolls you do.&nbsp;</p>\n<p>(Effect): You gain [Barrier: [STR base]].&nbsp;<br>(CR 11): Becomes + [SR &times; 5] instead of + [SR &times; 4].&nbsp;<br>(CR 21): + [SR &times; 7].</p>\n<hr>\n<p>A special skill that summons and uses the ancestral spirit Forest Bear, which embodies the magnificence of nature and the calmness of the forest. A raging guardian, the Forest Bear protects you and slays your foes.</p>",
+    "tags": [
+      "Servant Summon",
+      "Nature",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Ize5W9GpSXpRqzUq",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!Ize5W9GpSXpRqzUq"
+}

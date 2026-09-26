@@ -1,0 +1,43 @@
+{
+  "name": "Dismissal",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect if it targets enemies with [Mob]. The target becomes [Incapacitated] or [Dead] (your choice).</p>\n<hr>\n<p>A magic that borrows authority by praying to the existence that protects oneself, and neutralizes a lower-ranked opponent.</p>",
+    "tags": [
+      "Special Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy + 1 vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6NVcZ3MqL9IPr3Fx",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!6NVcZ3MqL9IPr3Fx"
+}

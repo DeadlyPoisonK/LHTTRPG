@@ -1,0 +1,48 @@
+{
+  "name": "Side Winder",
+  "type": "weapon",
+  "system": {
+    "description": "<p>You are treated as having obtained \"Assist Attack\" at SR1. If you already have it, your \"Assist Attack\" [Accuracy Check] is increased by +1. [Trigger: Action] Use this at the same time as your \"Assist Attack\". Consume 1 point of [Fate] as a cost. If your \"Assist Attack\" is successful, you also inflict [Rigor] on the target.\nA whip named after the venomous serpent, a predator of the desert. It seems to have its own will, entangling enemies and taking away their freedom.</p><hr><p>Broken Shaft [Core Material] (60G) + Neck Hanger (55G) + [Magic Catalyst 4] (30G) ×5 + Crafting Cost (115G)</p>",
+    "tags": [
+      "One-Handed",
+      "Whip",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 4,
+    "price": 380,
+    "equipped": false,
+    "attack": 9,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EU3cO96fgQAa0pF3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!EU3cO96fgQAa0pF3"
+}

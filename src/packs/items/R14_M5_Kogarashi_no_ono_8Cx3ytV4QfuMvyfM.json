@@ -1,0 +1,48 @@
+{
+  "name": "R14 M5 Kogarashi no ono",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A target dealt at least 1 point of damage by a [Melee Attack] with this weapon cannot benefit from [Regen] effects that round. When you use \"Healing Breeze\", you may make a [Normal Move] of 2 Sq. either before or after its effect.\n</p><hr><p>Heart of the Undying King [Core Material] (340G) + Broad Axe (410G) + [Magic Catalyst 14] (190G) ×4 + Crafting Cost (800G)</p>",
+    "tags": [
+      "One-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -1,
+    "rank": 14,
+    "price": 2310,
+    "equipped": false,
+    "attack": 25,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 3500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8Cx3ytV4QfuMvyfM",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!8Cx3ytV4QfuMvyfM"
+}

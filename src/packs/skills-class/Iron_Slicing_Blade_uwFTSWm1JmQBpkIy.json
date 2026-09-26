@@ -1,0 +1,43 @@
+{
+  "name": "Iron-Slicing Blade",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill can only target a Prop or [Gimmick] with HP. If the target's Rank is equal to or less than your [CR], then it becomes [Incapacitated].</p>\n<p>(Fate 1): If the target's Rank is equal to or less than your [CR+2], then it becomes [Incapacitated].</p>\n<hr>\n<p>A special skill that cuts through obstructive obstacles with a single stroke. You can cut any hard object by finding the weak point in the object and severing it.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uwFTSWm1JmQBpkIy",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!uwFTSWm1JmQBpkIy"
+}

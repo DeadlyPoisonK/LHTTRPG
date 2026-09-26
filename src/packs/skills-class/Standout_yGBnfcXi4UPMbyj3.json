@@ -1,0 +1,41 @@
+{
+  "name": "Standout",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill may only target an ally with [Hate Top]. Increase your [Hate] to [Target's (Hate) + 1].</p>\n<hr>\n<p>Special skills that attract attention on the battlefield, such as standing on the spot and provoking loudly. Enraged enemies will forget to attack their allies and rush towards you.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "yGBnfcXi4UPMbyj3",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!yGBnfcXi4UPMbyj3"
+}

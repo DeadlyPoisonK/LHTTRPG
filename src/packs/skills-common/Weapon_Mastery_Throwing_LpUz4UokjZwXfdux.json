@@ -1,0 +1,43 @@
+{
+  "name": "Weapon Mastery: Throwing",
+  "type": "skill",
+  "system": {
+    "description": "<p>Add +[(SR)D] to [weapon attack] damage rolls with the [Throwing] tag. You can acquire this skill multiple times, but each time must be under a different name with its own separate SR. &nbsp;Each attack cannot receive the effect of more than one &laquo;Weapon Mastery&raquo; at a time.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">You are good at handling throwing weapons.</span></p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LpUz4UokjZwXfdux",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!LpUz4UokjZwXfdux"
+}

@@ -1,0 +1,94 @@
+{
+  "name": "Forestall Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have nothing equipped to your [Hand Slots]. You gain a +4 bonus to [Initiative].</p>\n<p>(SR2): You gain a +2 bonus to [Accuracy].<br>(SR3): You gain a +4 bonus to [Magic Power].</p>\n<hr>\n<p>A fighting style in which both hands are used to make a mark to stabilize the magic power, and the magic is used quickly and accurately.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.mage-archetype-class.9QzlHV7TgzsKGPKA",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "oaZ9x7K0OBluYjwo",
+      "changes": [
+        {
+          "key": "system.battle-status.initiative.mod",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        },
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Forestall Style",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.oaZ9x7K0OBluYjwo"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "9QzlHV7TgzsKGPKA",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!9QzlHV7TgzsKGPKA"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Activation",
+  "type": "skill",
+  "system": {
+    "description": "<p>Choose one skill with [Limit: n/Scenario] that you have already used at least once, and recover a use of that skill.</p>\n<hr>\n<p>A special skill that excites the powerful pattern functions of the whole body and forcibly activates the mind and body. With this, you can continuously use magic and martial arts with a large cost and gap.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "J7SkcA2DfsnpNt2V",
+  "folder": "JaIwHkni8H4K25DD",
+  "_key": "!items!J7SkcA2DfsnpNt2V"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Mystical Path",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Teleport] of 1 Sq.</p>\n<hr>\n<p>A special skill that applies the &lt;Fairy Ring&gt; system that is scattered around the world and teleports short distances. You can wield special magic that accesses Arv's legacy.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wy1W4ajBEd87A18N",
+  "folder": "owQa7Kg6xt2S2kAy",
+  "_key": "!items!wy1W4ajBEd87A18N"
+}

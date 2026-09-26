@@ -1,0 +1,41 @@
+{
+  "name": "Sore Spot",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +2D bonus to [Melee Attack] damage rolls.</p>\n<hr>\n<p>A special skill that lays the groundwork for giving a deep blow by identifying the vital point and aiming. As an assassin, you are adept at spotting any enemy's weak spots.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0oaKczKLkCYpwzgl",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!0oaKczKLkCYpwzgl"
+}

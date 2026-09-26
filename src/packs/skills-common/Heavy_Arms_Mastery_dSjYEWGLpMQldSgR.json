@@ -1,0 +1,86 @@
+{
+  "name": "Heavy Arms Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>The negative [Initiative] modifiers on all items you have equipped become 0.</p>\n<hr>\n<p>You are not slowed down by wearing heavy weapons and armor. There are various reasons for this, such as the ingenuity in equipment and the results of training.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.common-skill.dSjYEWGLpMQldSgR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "2ytwPYfxYrHyfIrA",
+      "changes": [
+        {
+          "key": "system.battle-status.initiative.mod",
+          "mode": 2,
+          "value": "0",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Heavy Arms",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!dSjYEWGLpMQldSgR.2ytwPYfxYrHyfIrA"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dSjYEWGLpMQldSgR",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!dSjYEWGLpMQldSgR"
+}

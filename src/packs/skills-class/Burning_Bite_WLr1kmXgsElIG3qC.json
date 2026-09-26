@@ -1,0 +1,44 @@
+{
+  "name": "Burning Bite",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+2)D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Any Bad Status): Increase the damage by +8.</p>\n<hr>\n<p>A special skill that envelops the attack with a weapon with fiery fangs, inflicting burns as well as damage from blows.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Flame"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WLr1kmXgsElIG3qC",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!WLr1kmXgsElIG3qC"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R19 Ring of Da Squeuin",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Summoner Exclusive. [Trigger: Setup] You can use \"Servant Summon: Slime\". At this time, it is treated as if SR is 8, and it can be used even if you do not have any skills. Once per scenario.\nA ring created by Da Skuwin, an alchemist of the ancient Alve. It can summon an exceptionally large slime of abnormal size. According to one account, he used this to clean his room due to his extreme laziness. Summons a massive slime of abnormal size in an area selected by the caster. Crafting Cost: 100</p><hr><p>Dawn-Colored Nephrite [Core Material] (680G) + Red Ring (1100G) + [Magic Catalyst 19] (340G) ×4 + Crafting Cost (1360G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 19,
+    "price": 4500,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 40,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "w80v6mSZH93PRvJX",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!w80v6mSZH93PRvJX"
+}

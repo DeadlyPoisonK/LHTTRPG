@@ -1,0 +1,46 @@
+{
+  "name": "R6 Mist Kasumi Uchikake",
+  "type": "armor",
+  "system": {
+    "description": "<p>Kannagi Exclusive. [Trigger: Text] Use this when you start your main process. You may [Instant Teleport] up to 2Sq. When your main process ends, you will return to the Sq where you were when you started your main process using [Instant Teleport]. Once per scenario.\n- Light armor embroidered with the pattern of the Misty Script, exclusive to Kannagi. It possesses a pseudo-teleportation ability, allowing for instantaneous movement over short distances, but the user will be returned to their original position after a certain period of time.</p><hr><p>Mist Kasuri Cloth [Core Material] (80G) + Traveler's Tunic (270G) + [Magic Catalyst 6] (50G) ×2 + Crafting Cost (220G)</p>",
+    "tags": [
+      "Light Armor",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 10,
+    "mdef": 12,
+    "initiative": 0,
+    "rank": 6,
+    "price": 670,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "BU4VCvPgfguKCOdA",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!BU4VCvPgfguKCOdA"
+}

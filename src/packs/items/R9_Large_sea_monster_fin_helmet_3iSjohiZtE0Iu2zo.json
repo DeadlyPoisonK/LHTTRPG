@@ -1,0 +1,47 @@
+{
+  "name": "R9 Large sea monster fin helmet",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Warrior Archi class only. You gain the [Aquatic] tag. [Self: Hate Top] You gain [Barrier:10] at the start of each round's Setup phase. This [Barrier] does not overwrite the [Barrier] you are already receiving, but adds to its intensity.\nA helmet modeled after the Sky-Splitting Dorsal Fin, a symbol of the Sahuagin King. The fin, towering toward the sky, grows stronger and more resilient in accordance with the user's heightened emotions.</p><hr><p>Pale Shield Scale [Core Material] (180G) + Bascinet (160G) + Scroll of Underwater Action (Basic) (50G) ×2 + [Magic Catalyst 9] (90G) ×3 + Crafting Cost (290G)</p>",
+    "tags": [
+      "Accessory",
+      "Head",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 7,
+    "mdef": 0,
+    "rank": 9,
+    "price": 1000,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3iSjohiZtE0Iu2zo",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!3iSjohiZtE0Iu2zo"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R10 M5 Bakukon no ō shaku",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Body] It activates when you put an enemy into [Incapacitated][Dead] status through a [Magic Attack]. Your [Magic Attack] damage roll gains +(the CR of the defeated enemy × 2 + 5). This effect lasts until the end of your next main process as a CS.\nWand of the Terrifying Death Magic</p><hr><p>Fresh Blood Jewel [Core Material] (220G) + Cedar Staff (400G) + Summoning Gem (Basic) (20G) ×4 + [Magic Catalyst 10] (110G) ×3 + Crafting Cost (520G)</p>",
+    "tags": [
+      "One-Handed",
+      "Staff",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 10,
+    "price": 1550,
+    "equipped": false,
+    "attack": 9,
+    "magic": 20,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 18600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "koWJHWmfyf6kHdBm",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!koWJHWmfyf6kHdBm"
+}

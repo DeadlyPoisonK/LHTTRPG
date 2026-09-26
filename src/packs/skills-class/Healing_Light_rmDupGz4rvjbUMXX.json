@@ -1,0 +1,41 @@
+{
+  "name": "Healing Light",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target recovers [(Recovery) + (SRx3)] HP.</p>\n<p>[[/r 3d6 +(@system.rmDupGz4rvjbUMXX.skillRank.value*3) + @battle-status.power.restoration.total]]{[(Recovery) + (SRx3)] HP}</p>\n<p>&nbsp;</p>\n<hr>\n<p>Simple recovery magic that activates with a very short chant and movement. The effect is small, but can be done with various actions.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rmDupGz4rvjbUMXX",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!rmDupGz4rvjbUMXX"
+}

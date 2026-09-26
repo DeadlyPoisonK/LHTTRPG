@@ -1,0 +1,86 @@
+{
+  "name": "Good Sailor",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Fisherman, Pirate, or Admiral.</p>\n<p>You gain the [Aquatic] tag. If the target of your attack has the [Aquatic] tag, you gain +10 to damage roll of that attack.&nbsp;</p>\n<p>(CR 11): &nbsp;Increase the damage by +5.<br>(CR 21): &nbsp;Increase the damage by an additional +5.</p>\n<hr>\n<p>You are an expert swimmer, and you are also good at fighting in water, such as seas and rivers. The water is your fishing ground.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.common-skill.vuaHDTzyt6lpEX5u",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "W721F0dDiBiYRFVb",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Aquatic]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "[Aquatic] tag",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!vuaHDTzyt6lpEX5u.W721F0dDiBiYRFVb"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vuaHDTzyt6lpEX5u",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!vuaHDTzyt6lpEX5u"
+}

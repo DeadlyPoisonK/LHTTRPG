@@ -1,0 +1,41 @@
+{
+  "name": "Afterwards",
+  "type": "skill",
+  "system": {
+    "description": "<p>You must be in [Standby]. Your [Weapon Attack] damage rolls gain a + [[DEX mod] &times; SR] &nbsp;bonus.</p>\n<hr>\n<p>A special skill that examines the enemy's movements, searches for openings, and unleashes a well-aimed blow. It is the secret of martial arts to get ahead of the enemy while moving from behind.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 4
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "sR7mw8UWlMt3jP7F",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!sR7mw8UWlMt3jP7F"
+}

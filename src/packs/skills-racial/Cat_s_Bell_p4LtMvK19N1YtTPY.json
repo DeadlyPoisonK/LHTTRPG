@@ -1,0 +1,41 @@
+{
+  "name": "Cat's Bell",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill with any kind of action. During that action, you gain a +[Your (Hate) x 3] bonus to [Recovery].</p>\n<p>(CR16): The multiplier bonus becomes x4.</p>\n<hr>\n<p>A special skill that transforms hostility towards life force and wields powerful healing power. The shining cat's bell emits a high and clear tone that attracts the attention of those around it.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "p4LtMvK19N1YtTPY",
+  "folder": "qBo2B5iIARPEcvtd",
+  "_key": "!items!p4LtMvK19N1YtTPY"
+}

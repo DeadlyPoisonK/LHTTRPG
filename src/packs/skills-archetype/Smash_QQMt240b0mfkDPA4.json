@@ -1,0 +1,41 @@
+{
+  "name": "Smash",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +[SRx3] bonus to [Weapon Attack] damage rolls.</p>\n<hr>\n<p>A skill that raises the power of subsequent attacks by swinging the weapon around.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QQMt240b0mfkDPA4",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!QQMt240b0mfkDPA4"
+}

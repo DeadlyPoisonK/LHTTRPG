@@ -1,0 +1,44 @@
+{
+  "name": "Serpent Bolt",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Magic Power)] magical damage to the target.</p>\n<p>(Extra): A secondary target within a range of [Target: Single / Range: 2 Sq.] from the initial target takes [SRx5] direct damage. This damage triggers [Weakness] on the secondary target, as if they had failed their [Dodge Check].</p>\n<hr>\n<p>Attack magic that shoots a bundle of converged lightning. The lightning strike explodes on impact, damaging nearby enemies.</p>",
+    "tags": [
+      "Magic Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MIhVZafdGWEflzAk",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!MIhVZafdGWEflzAk"
+}

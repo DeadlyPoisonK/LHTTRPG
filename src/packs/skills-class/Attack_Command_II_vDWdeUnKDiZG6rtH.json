@@ -1,0 +1,41 @@
+{
+  "name": "Attack Command II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. During this Main Process, you gain a +[CR] bonus to physical damage.</p>\n<hr>\n<p>A special skill that increases the power of physical attacks performed by summoned servants by giving precise instructions or orders with high spirits. A squire with a strong bond will respond to your call and show power beyond its limits.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vDWdeUnKDiZG6rtH",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!vDWdeUnKDiZG6rtH"
+}

@@ -1,0 +1,268 @@
+{
+  "_id": "g3znqYjSkv2mtONk",
+  "name": "Kitsune Pickpocket",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "sort": 0,
+  "system": {
+    "health": {
+      "value": 25,
+      "max": 25,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Mob",
+      "Humanoid",
+      "Night-Vision"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 7,
+        "magic": 10
+      },
+      "speed": 2,
+      "initiative": 7
+    },
+    "rank": 3,
+    "idendification": "6",
+    "hateMultiplier": "1",
+    "checks": {
+      "evasion": {
+        "dice": 0,
+        "mod": 8
+      },
+      "resistance": {
+        "dice": 0,
+        "mod": 8
+      }
+    },
+    "description": ""
+  },
+  "items": [
+    {
+      "_id": "jXvh9UECUBbz74qb",
+      "name": "Agile Footwork",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 100,
+      "folder": null,
+      "system": {
+        "description": "<p>At the beginning of each round, this enemy removes one stack of [Pursuit].</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!g3znqYjSkv2mtONk.jXvh9UECUBbz74qb"
+    },
+    {
+      "_id": "rT2voFxxnwU861kl",
+      "name": "Begging for Mercy",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 200,
+      "folder": null,
+      "system": {
+        "description": "<p>This enemy immediately enters [Standby] and rolls 1D (the result is not revealed to the players). A character that makes an [Attack Check] against this enemy and deals damage to it increases their [Hate] by +[the rolled result ÷ 2]. This effect lasts until the end of the round.</p>",
+        "tags": [],
+        "timing": "Setup",
+        "checkType": "",
+        "range": "",
+        "target": "Self",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!g3znqYjSkv2mtONk.rT2voFxxnwU861kl"
+    },
+    {
+      "_id": "SPgvcUKHAMMhnMvf",
+      "name": "Upside-Down Bag",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "sort": 300,
+      "folder": null,
+      "system": {
+        "description": "<p>The target drops all items in their [Inventory Slots] at their feet. Picking the items up counts as part of \"Change Equipment\".<br>(Minor): The target takes [Pursuit: 3].</p>",
+        "tags": [
+          "Special Attack"
+        ],
+        "timing": "Major",
+        "checkType": "Opposed (12 Fixed vs Resistance)",
+        "range": "4 Sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": "",
+        "check": {
+          "dice": 0,
+          "mod": 12,
+          "vs": "resistance"
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!g3znqYjSkv2mtONk.SPgvcUKHAMMhnMvf"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Kitsune Pickpocket",
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg"
+    },
+    "flags": {}
+  },
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "XAj2Q8ZzBvNAwxtG",
+  "_key": "!actors!g3znqYjSkv2mtONk"
+}

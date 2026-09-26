@@ -1,0 +1,47 @@
+{
+  "name": "R19 Subterranean Fairy Shoes",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You take no damage from Props with the [Spatial] tag. However, this effect does not work while you are in the [Flight] state.\nA pointed wooden shoe with a distinctive shape favored by mischievous fairies. Those who wear them receive the protection of the earth spirits and will not be subjected to malice from beneath their feet as long as they remain grounded. However, this protection is only valid while they are in contact with the earth, so please be careful. Even the slightest flight into the air will mean that the earth's blessing does not reach them.</p><hr><p>Spirit Tree Root [Core Material] (680G) + Leggings (730G) + Scroll of High Protection (Intermediate) (520G) + [Magic Catalyst 19] (340G) ×2 + Crafting Cost (1000G)</p>",
+    "tags": [
+      "Accessory",
+      "Legs",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 19,
+    "price": 3610,
+    "equipped": false,
+    "initiative": 8,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JsXTa2nxXkskleBl",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!JsXTa2nxXkskleBl"
+}

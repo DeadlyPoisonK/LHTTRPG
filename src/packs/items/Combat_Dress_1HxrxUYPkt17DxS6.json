@@ -1,0 +1,44 @@
+{
+  "name": "Combat Dress",
+  "type": "armor",
+  "system": {
+    "description": "<p>Cloth armor designed not to get in the way even in intense battles. Many of them look beautiful.</p>",
+    "tags": [
+      "[Light Armor]"
+    ],
+    "pdef": 36,
+    "mdef": 53,
+    "initiative": 0,
+    "rank": 27,
+    "price": 3400,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1HxrxUYPkt17DxS6",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!1HxrxUYPkt17DxS6"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R13 M5 Hayate no kirifuda",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Minor] You immediately perform the action \"Timing: Minor Action\" twice. This weapon gains the [Broken] tag until the end of this scene.\n</p><hr><p>Dream Fortune Cards [Core Material] (300G) + Eight-Pointed Shuriken (230G) + Quick Card (Basic) (170G) ×3 + [Magic Catalyst 13] (170G) ×3 + Crafting Cost (580G)</p>",
+    "tags": [
+      "One-Handed",
+      "Throwing",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 4,
+    "rank": 13,
+    "price": 2130,
+    "equipped": false,
+    "attack": 20,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DqxH8rXaXWDuyYh3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!DqxH8rXaXWDuyYh3"
+}

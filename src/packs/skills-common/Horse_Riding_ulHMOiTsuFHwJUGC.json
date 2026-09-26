@@ -1,0 +1,43 @@
+{
+  "name": "Horse Riding",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Riding: Riding Horse]. Also, during the [Riding: Riding Horse] state, you can use the EX Power &lt;&lt;Horse Trot&gt;&gt;. [SR2] In addition, the EX Power &lt;&lt;Horse Kick&gt;&gt; becomes available. [CR10] You can use 《Wartrot》 instead of 《Horstrot》.</p>\n<hr>\n<p>A feat that shows that you have excellent riding skills and a horse of your own. Of course, fighting on horseback is also a skill.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Instant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ulHMOiTsuFHwJUGC",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!ulHMOiTsuFHwJUGC"
+}

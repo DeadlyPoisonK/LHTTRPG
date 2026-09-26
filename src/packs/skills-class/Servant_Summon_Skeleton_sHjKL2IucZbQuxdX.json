@@ -1,0 +1,46 @@
+{
+  "_id": "sHjKL2IucZbQuxdX",
+  "name": "Servant Summon: Skeleton",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>You gain the [Undead] tag. You gain a + (STR Mod) to Damage roll for Physical Attacks done by you.</p><p>(Effect): Secondary targets within range of [Target: [SR] / Range: 2 Sq.] from you take [Pursuit: 7]. If you are [Hidden] when you inflict [Pursuit] with this skill, you do not lose [Hidden].</p>",
+    "tags": [
+      "Combat",
+      "Servant Summon",
+      "Preparation",
+      "Undead"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!sHjKL2IucZbQuxdX"
+}

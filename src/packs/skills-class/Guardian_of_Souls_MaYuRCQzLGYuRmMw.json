@@ -1,0 +1,86 @@
+{
+  "name": "Guardian of Souls",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +2 Bonus to [Accuracy]. During the Setup Process of every round, you may choose one of your [Timing: Setup] skills and reduce the [Hate] cost of that skill by -2 (minimum 0).</p>\n<hr>\n<p>The spirits who watch over you at all times have given you the power to ward off disaster and destroy your enemies.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.kannagi.MaYuRCQzLGYuRmMw",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "5yAAczPtCpH8dZaX",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Guardian of Souls",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!MaYuRCQzLGYuRmMw.5yAAczPtCpH8dZaX"
+    }
+  ],
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MaYuRCQzLGYuRmMw",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!MaYuRCQzLGYuRmMw"
+}

@@ -1,0 +1,43 @@
+{
+  "_id": "mAl4fPFH0ICuVBBg",
+  "name": "Twice Exhaustion",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>During the next scene, any time a PC would roll on the Exhaustion Table, they make two rolls and apply both results.</p>",
+    "tags": [
+      "GM"
+    ],
+    "timing": "Interlude",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Fate 6",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!mAl4fPFH0ICuVBBg"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Mind Shock",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target, and the target takes [Confusion].</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">An offensive magic that causes an explosion that has a large impact on the mind as well as the body, and disturbs many enemies. Its soul-crushing brilliance plunges enemy forces into chaos.</span></p>",
+    "tags": [
+      "Magic Attack",
+      "Spirit"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t",
+    "range": "4Sq",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 4",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Hpl8XzeIPjwij1wG",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!Hpl8XzeIPjwij1wG"
+}

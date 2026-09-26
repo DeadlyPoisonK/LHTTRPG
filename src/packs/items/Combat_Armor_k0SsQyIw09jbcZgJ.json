@@ -1,0 +1,44 @@
+{
+  "name": "Combat Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>Armor for infantry that uses plenty of metal parts to increase defense.</p>",
+    "tags": [
+      "[Heavy Armor]"
+    ],
+    "pdef": 36,
+    "mdef": 21,
+    "initiative": -2,
+    "rank": 15,
+    "price": 1200,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 4900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "k0SsQyIw09jbcZgJ",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!k0SsQyIw09jbcZgJ"
+}

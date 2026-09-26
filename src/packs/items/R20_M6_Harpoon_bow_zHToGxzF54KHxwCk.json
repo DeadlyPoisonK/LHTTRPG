@@ -1,0 +1,48 @@
+{
+  "name": "R20 M6 Harpoon bow",
+  "type": "weapon",
+  "system": {
+    "description": "<p>You gain the [Aquatic] tag. When the target of an attack using this weapon is in [Water] or under the effect of a similar prop, add +20 to the damage roll. [Trigger: Move] You can [Instant Teleport] to a square that contains [Water] or a similar prop within 8Sq. Once per scene.\n<A name=\"0000000000000000000000000000000</p><hr><p>[Core Material](680G)+ (1400G)×2+[ 20](370G)×3+Crafting Cost(1450G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 0,
+    "rank": 20,
+    "price": 6040,
+    "equipped": false,
+    "attack": 40,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 25000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zHToGxzF54KHxwCk",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!zHToGxzF54KHxwCk"
+}

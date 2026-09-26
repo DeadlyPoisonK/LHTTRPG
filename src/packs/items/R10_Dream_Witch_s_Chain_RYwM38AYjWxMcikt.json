@@ -1,0 +1,47 @@
+{
+  "name": "R10 Dream Witch's Chain",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Action] Use this when you perform a [Magic Attack]. If the [Magic Attack] inflicts [Dazed][Rigor][Staggered], it also inflicts [Afflicted]. You take [Pursuit:20].\nA ring with an intricate design of a deep coloration where blood and darkness have melted together. The magic power overflowing from this ring greatly enhances the effects of mental-interference type magic.</p><hr><p>Jet-Black Shard [Core Material] (180G) + Yellow Ring (360G) + Convulsion Poison (Intermediate) (140G) ×2 + [Magic Catalyst 10] (110G) ×2 + Crafting Cost (420G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 10,
+    "price": 1460,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 22,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RYwM38AYjWxMcikt",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!RYwM38AYjWxMcikt"
+}

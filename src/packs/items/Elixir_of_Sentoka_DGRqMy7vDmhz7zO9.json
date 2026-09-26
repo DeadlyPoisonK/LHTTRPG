@@ -1,0 +1,49 @@
+{
+  "name": "Elixir of Sentoka",
+  "type": "gear",
+  "system": {
+    "description": "<p>Target's [Magic Power] +3, [Cancel (Undead, Poison): 20]. This effect is treated as a CS. [1D:5 or higher]. This item will not be lost even if used as if it had the [Consumable] tag.\nA purifying elixir created from the Holy Peach Fruit, which grants protection against impure monsters and allows one to gain abundant magic power by simply swallowing a few drops. When poured into water or tea, it has the flavor of peaches and is delicious, making it a popular delicacy as well.</p><hr><p>Immortal Peach [Core Material] (120G) + Ironbody Salve (Basic) (90G) ×2 + Anti-Magic Salve (Basic) (90G) ×2 + [Magic Catalyst 7] (60G) ×2 + Crafting Cost (230G)</p>",
+    "tags": [
+      "Potion",
+      "Consumable",
+      "Not For Sale",
+      "Preparation",
+      "M6"
+    ],
+    "rank": 7,
+    "price": 810,
+    "equipped": false,
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DGRqMy7vDmhz7zO9",
+  "folder": "JfJ4EfRXtde1y5GE",
+  "_key": "!items!DGRqMy7vDmhz7zO9"
+}

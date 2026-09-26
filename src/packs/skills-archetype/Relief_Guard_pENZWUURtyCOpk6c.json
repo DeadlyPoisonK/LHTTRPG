@@ -1,0 +1,43 @@
+{
+  "name": "Relief Guard",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] up to your [Speed] Sq. After you end your movement, if there are any allies in the same square as you, they each may reduce their [Hate] by -2.</p>\n<p>(Minor): Increase the distance moved by +1 Sq.</p>\n<hr>\n<p>A special skill that moves in a position that protects allies, and focuses the enemy's attention on himself.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pENZWUURtyCOpk6c",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!pENZWUURtyCOpk6c"
+}

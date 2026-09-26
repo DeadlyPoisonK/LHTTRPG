@@ -1,0 +1,41 @@
+{
+  "name": "Reactive Cure",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill at the same time as &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo;. Remove any Bad Status the target of &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo; just received from an attack.</p>\n<hr>\n<p>Magic that emits a purifying light that heals allies' ailments at the same time as reaction-activated recovery.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oB8RoIOCvCcs3ZfG",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!oB8RoIOCvCcs3ZfG"
+}

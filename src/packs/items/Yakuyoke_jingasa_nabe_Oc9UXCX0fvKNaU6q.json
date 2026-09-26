@@ -1,0 +1,49 @@
+{
+  "name": "Yakuyoke jingasa nabe",
+  "type": "gear",
+  "system": {
+    "description": "<p>Target's [Fatigue] intensity is reduced by -10, and additionally [Cancel (Poison, Mind):10] is applied.\nA stew cooked with vegetables in a pot made from an iron helmet. In ancient battlefields, it was said to bring good fortune by eating this dish.</p><hr><p>Iron Jingasa [Core Material] (30G) + Seasonal Vegetable Pot-au-feu (20G) + Panacea (Basic) (35G) + [Magic Catalyst 1] (15G) ×2 + Crafting Cost (55G)</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Preparation",
+      "Not For Sale",
+      "M5"
+    ],
+    "rank": 1,
+    "price": 170,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "6 Targets",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Oc9UXCX0fvKNaU6q",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!Oc9UXCX0fvKNaU6q"
+}

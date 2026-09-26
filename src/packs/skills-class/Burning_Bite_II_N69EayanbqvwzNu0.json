@@ -1,0 +1,44 @@
+{
+  "name": "Burning Bite II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. Deal [4D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Any Bad Status): Increase the damage by +16.<br>(CR21 &amp; Target: Any Bad Status): Damage is increased by an additional +10.</p>\n<hr>\n<p>A skill that unleashes a powerful blow by enveloping a weapon attack with fangs of fire. The fiery fang, a symbol of destruction, burns even more violently with the pain of the enemy as fuel.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Flame"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "N69EayanbqvwzNu0",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!N69EayanbqvwzNu0"
+}

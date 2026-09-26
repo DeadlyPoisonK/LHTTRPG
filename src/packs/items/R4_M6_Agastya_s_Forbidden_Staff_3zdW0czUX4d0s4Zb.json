@@ -1,0 +1,48 @@
+{
+  "name": "R4 M6 Agastya's Forbidden Staff",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Setup] Designate one enemy within 4Sq from you. The target will be unable to use [Causal Power] unless they immediately pay 1 point of [Causal Power]. This effect lasts until the end of the round. 1/Scene&nbsp;</p>\n<hr>\n<p>A cane carved with a geometric pattern resembling 14 plant leaves. It seems that it was originally a part built into some other large machine, but now it is used as a weapon due to the usefulness of its internal magic circuits. When the circuit is activated, it can transmit a wavelength that obstructs the surrounding magical power.</p>\n<hr>\n<table style=\"border-collapse: collapse; width: 185pt;\" border=\"0\" width=\"245\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 1792; width: 37pt;\" span=\"5\" width=\"49\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl66\" style=\"border-right: .5pt solid black; height: 12.75pt; width: 185pt;\" colspan=\"5\" width=\"245\" height=\"17\">Logic Circuit [Core Material] (60G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl66\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">2x Elm Staff (110G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl66\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">3x [Magic Catalyst 4] (30G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl66\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">-</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl70\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Construction (140G)</td>\n</tr>\n</tbody>\n</table>",
+    "tags": [
+      "M6",
+      "Two-Handed",
+      "Staff",
+      "Unmarketable"
+    ],
+    "initiative": -2,
+    "rank": 4,
+    "price": 510,
+    "equipped": false,
+    "attack": 14,
+    "magic": 18,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3zdW0czUX4d0s4Zb",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!3zdW0czUX4d0s4Zb"
+}

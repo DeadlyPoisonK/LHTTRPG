@@ -1,0 +1,41 @@
+{
+  "name": "Trample Command",
+  "type": "skill",
+  "system": {
+    "description": "<p>The number of targets of this skill is equal to the SR of \"Servant Combination\" skill. Give direct damage of [(POW Mod) + 5] to the target.&nbsp;<br>This damage triggers [Weakness] on the target, as if the target had failed their [Dodge Check].</p>\n<hr>\n<p>A skill in which summoned creatures that receive your command run across the battlefield, overrunning enemies one after another. The stronger the bond between you and your squire, the stronger the attack.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Auto",
+    "range": "4Sq",
+    "target": "Auto\t\t",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "a7HWtRWa4clyibo8",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!a7HWtRWa4clyibo8"
+}

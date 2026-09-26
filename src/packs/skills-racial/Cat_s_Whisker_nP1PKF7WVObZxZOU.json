@@ -1,0 +1,41 @@
+{
+  "name": "Cat's Whisker",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a bonus +1D to [Perception Checks].</p>\n<hr>\n<p>You have an excellent sense of your surroundings. If there is an anomaly, the cat's whiskers will snap.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nP1PKF7WVObZxZOU",
+  "folder": "qBo2B5iIARPEcvtd",
+  "_key": "!items!nP1PKF7WVObZxZOU"
+}

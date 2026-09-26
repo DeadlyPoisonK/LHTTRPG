@@ -1,0 +1,48 @@
+{
+  "name": "Dun's Amber",
+  "type": "gear",
+  "system": {
+    "description": "<p>[Trigger: Instant] You enter the [Riding: Amber Mountain Cat] status. While in the [Riding: Amber Mountain Cat] status, your [Magic Defense] is increased by +2, and you can use the EX Power \"Beast Dash\" and \"Beast Jump\". (CR11) This item has no effect.\nSmall bell said to have been carved from a magic stone left behind by an old mountain cat. It can call a young mountain cat if it is jingled.</p><hr><p>Ligurian Spirit Stone [Core Material] (30G) + Hollyhock Charm (60G) + [Magic Catalyst 1] (15G) ×3 + Crafting Cost (65G)</p>",
+    "tags": [
+      "Preparation",
+      "Summoning Whistle",
+      "Untradeable",
+      "M2"
+    ],
+    "rank": 1,
+    "price": 200,
+    "equipped": false,
+    "timing": "Instant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 2,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KCgzt7imtwXnrgTm",
+  "folder": "R3aN9gLP5Cgrpn1O",
+  "_key": "!items!KCgzt7imtwXnrgTm"
+}

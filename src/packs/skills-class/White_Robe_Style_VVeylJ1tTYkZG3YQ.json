@@ -1,0 +1,88 @@
+{
+  "name": "White Robe Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are not equipped with [Heavy Armor] or a [Shield]. You gain a +[SRx3] bonus to [Recovery], and a +[SRx3] bonus to the amount of HP recovered when using &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo;.</p>\n<hr>\n<p>A battle style that uses simple clothing without armor or shields, devotes itself to prayer, and wields powerful healing powers.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.cleric.VVeylJ1tTYkZG3YQ",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "wOKqHFDcIg9GXuDd",
+      "changes": [
+        {
+          "key": "system.battle-status.power.restoration.mod",
+          "mode": 0,
+          "value": "+3",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+[SRx3] Recovery",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!VVeylJ1tTYkZG3YQ.wOKqHFDcIg9GXuDd"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VVeylJ1tTYkZG3YQ",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!VVeylJ1tTYkZG3YQ"
+}

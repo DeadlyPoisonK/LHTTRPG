@@ -1,0 +1,44 @@
+{
+  "name": "Electrical Fuzz",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [Decay] with a rating equal to [(Magic Power) + (SRx3)].</p>\n<hr>\n<p>A special attack magic that creates several fist-sized thunderballs and clings to the enemy. The thunderball discharges at regular intervals and continuously deals damage.</p>",
+    "tags": [
+      "Special Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t\t",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SFwauhFqcGEDzRkq",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!SFwauhFqcGEDzRkq"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Pure Eye Card I",
+  "type": "gear",
+  "system": {
+    "description": "<p>The next time the target performs Prop Analyze, they gain a +1D bonus to the check. The effect of multiple Pure Eye Cards (regardless of grade) do not stack, and the effect is removed after being applied once, or at the end of the scene. (CR9): This item has no effect.&nbsp;</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 2,
+    "price": 60,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7eGigS0BNxPElD4A",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!7eGigS0BNxPElD4A"
+}

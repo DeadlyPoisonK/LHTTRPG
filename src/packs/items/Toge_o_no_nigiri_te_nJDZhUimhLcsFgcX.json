@@ -1,0 +1,49 @@
+{
+  "name": "Toge o no nigiri-te",
+  "type": "weapon",
+  "system": {
+    "description": "<p>(Self: Hate Top) [Cancel (Shock)] has no effect against the damage of [Melee Attacks] with this weapon. [Trigger: Immediately After Damage] Move one of the attack's targets up to 2 Sq. with [Instant Move (Forced)] and deal it 15 direct damage. This damage triggers [Weakness] as if the secondary target had failed its [Defense Check]. Once per scene.\nWyvern's Steel-Tail Spike Pick A pick shaped like a fist gripping the spines of a Steel-Tailed Wyvern. When a truly bold warrior wields it, the spines emit a surge of purple lightning, piercing through enemies just as if they were real.</p><hr><p>Purple Lightning Spine [Core Material] (180G) + Morning Star (200G) + Burst Agent (Intermediate) (100G) ×3 + [Magic Catalyst 10] (110G) ×3 + Crafting Cost (540G)</p>",
+    "tags": [
+      "One-Handed",
+      "Hafted",
+      "Shock",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -1,
+    "rank": 10,
+    "price": 1550,
+    "equipped": false,
+    "attack": 18,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 19700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nJDZhUimhLcsFgcX",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!nJDZhUimhLcsFgcX"
+}

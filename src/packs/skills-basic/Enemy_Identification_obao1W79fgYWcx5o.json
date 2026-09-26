@@ -1,0 +1,41 @@
+{
+  "name": "Enemy Identification",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill can only target a character with an [Identification Difficulty]. The target becomes [Identified].</p>\n<p>[[/r (@checks.knowledge.dice)d6 +@checks.knowledge.total ]]{Knowledge}</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "Basic (Knowledge vs Identification Difficulty)",
+    "range": "20 Sq.",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1300000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "obao1W79fgYWcx5o",
+  "folder": null,
+  "_key": "!items!obao1W79fgYWcx5o"
+}

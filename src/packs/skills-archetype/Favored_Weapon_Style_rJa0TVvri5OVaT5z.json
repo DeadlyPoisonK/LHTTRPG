@@ -1,0 +1,43 @@
+{
+  "name": "Favored Weapon Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have a single [One-Handed] weapon equipped to a [Hand Slot]. Your [Attack Power] becomes [Weapon's (Attack Power) x2]. During the first round of a scene, reduce the [Hate] cost of your [Weapon Attacks] by -1 (minimum 0).</p>\n<p>(SR2): Instead of during the first round of a scene, you always apply the [Hate] cost reduction.</p>\n<hr>\n<p>A battle style that combines offense and defense, using one-handed weapons to attack and the other to use healing magic.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rJa0TVvri5OVaT5z",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!rJa0TVvri5OVaT5z"
+}

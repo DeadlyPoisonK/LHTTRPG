@@ -1,0 +1,47 @@
+{
+  "name": "Stiletto",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A dagger dedicated to piercing, with no blades on the left and right sides of the blade.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]",
+      "[Light]"
+    ],
+    "initiative": 0,
+    "rank": 4,
+    "price": 90,
+    "equipped": false,
+    "attack": 5,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 17200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hd9Bv0uUEXaOoGqr",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!hd9Bv0uUEXaOoGqr"
+}

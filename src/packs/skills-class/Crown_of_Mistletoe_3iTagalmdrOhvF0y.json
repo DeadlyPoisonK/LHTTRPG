@@ -1,0 +1,41 @@
+{
+  "name": "Crown of Mistletoe",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect if the target already has [Regen]. The target's [Regen] rating increases by +[Magic Power].</p>\n<hr>\n<p>Magic that enhances the regenerative power that circulates within the target's body. With the divine protection of mistletoe, the thing that binds it, it connects and resonates the life force of the earth with the target, giving life force that seems infinite.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3iTagalmdrOhvF0y",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!3iTagalmdrOhvF0y"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Careful Traveler",
+  "type": "skill",
+  "system": {
+    "description": "<p>If you make any check as a result of a lookup table roll, add 2 to that check.</p>\n<hr>\n<p>You can, consciously or unconsciously, be very attentive to your surroundings. Various realizations will help you on your adventure.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dj9gMvrOwDK2Z9GE",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!dj9gMvrOwDK2Z9GE"
+}

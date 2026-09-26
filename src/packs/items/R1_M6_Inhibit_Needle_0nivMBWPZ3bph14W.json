@@ -1,0 +1,48 @@
+{
+  "name": "R1 M6 Inhibit Needle",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Give the [Curse] tag to the target hit by a [Shooting Attack] by this weapon. A target with this tag always has a -1 to their [Dodge Check]. This effect is treated as a Life Status.</p>\n<p>A jet-black dart engraved with a cursed rune.&nbsp; A weapon developed with reference to the obstruction magic used by &lt;Enchantment Sorcerers&gt;, it imposes a curse on the opponent it pierces and hinders its movement.</p>\n<hr>\n<p>[Core Material](30G)+ (50G)+[ 1](15G)&times;5+Crafting Cost(75G)</p>",
+    "tags": [
+      "M6",
+      "Throwing",
+      "One Hand",
+      "Not for Sale"
+    ],
+    "initiative": 3,
+    "rank": 1,
+    "price": 230,
+    "equipped": false,
+    "attack": 6,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0nivMBWPZ3bph14W",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!0nivMBWPZ3bph14W"
+}

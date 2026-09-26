@@ -1,0 +1,43 @@
+{
+  "name": "Resonance Beat",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target.</p>\n<p>(Extra): The target take [Pursuit] with a rating equal to your [Initiative].</p>\n<hr>\n<p>A special skill that imbues a melody in a weapon and uses that vibration to drive in attacks. The vibration propagated to the opponent through the weapon, and the next impact triggers a large wound.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dIbtyhZUCNnfNUEn",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!dIbtyhZUCNnfNUEn"
+}

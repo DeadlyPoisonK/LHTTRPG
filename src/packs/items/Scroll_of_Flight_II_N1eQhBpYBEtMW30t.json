@@ -1,0 +1,47 @@
+{
+  "name": "Scroll of Flight II",
+  "type": "gear",
+  "system": {
+    "description": "<p>The target gains [Flying]. Treat this effect as a Combat Status. You take [Fatigue: (Base STR x 2)]. (CR24): This item has no effect.</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 14,
+    "price": 320,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "N1eQhBpYBEtMW30t",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!N1eQhBpYBEtMW30t"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R8 True Emerald",
+  "type": "accessory",
+  "system": {
+    "description": "<p>\"Item Appraisal\"\"Enemy Identification\" +2 。[Trigger: Action] \"Astral Bind\" 。\"Astral Bind\" 「 :3 」 。Once per scenario.\nA piece of jewelry infused with magic power into the Jade of True Insight, said to possess the power to see through truths. Grants the wearer the ability to uncover hidden information.</p><hr><p>Large Magic Crystal [Core Material] (120G) + White Ring (210G) + Monster Encyclopedia (Basic) (40G) ×3 + Encyclopedia (40G) ×3 + [Magic Catalyst 8] (70G) ×3 + Crafting Cost (310G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 8,
+    "price": 1090,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 20,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vnnKe4lCQReAPwMJ",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!vnnKe4lCQReAPwMJ"
+}

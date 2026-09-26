@@ -1,0 +1,43 @@
+{
+  "name": "Astral Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +[(SR)D] bonus to damage rolls of attacks with the [Spirit] tag.</p>\n<hr>\n<p>You are adept at the magic and feats that inflict mental scars on your foes, one of the Enchanter's hallmarks.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FDmBSqH6GVLcBxDr",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!FDmBSqH6GVLcBxDr"
+}

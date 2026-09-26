@@ -1,0 +1,132 @@
+{
+  "name": "Eternal Battlefield",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +2 bonus to [Accuracy]. During the first round of a scene, you gain a +5 bonus to [Initiative].</p>\n<hr>\n<p>As a samurai, you are always ready for battle, no matter where you are or what you are doing. That attitude is especially apparent in the reaction immediately after the start of the battle.</p>",
+    "tags": [
+      "Auto"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.samurai.DQTGSNiiFyw5gQmf",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "JhAgFL8nb8UTs1hF",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+2 Accuracy",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!DQTGSNiiFyw5gQmf.JhAgFL8nb8UTs1hF"
+    },
+    {
+      "origin": "Compendium.world.samurai.DQTGSNiiFyw5gQmf",
+      "duration": {
+        "startTime": 240,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "3YhtfXZsX1vWiQsd",
+      "changes": [
+        {
+          "key": "system.battle-status.initiative.mod",
+          "mode": 2,
+          "value": "5",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+5 Iniciative",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!DQTGSNiiFyw5gQmf.3YhtfXZsX1vWiQsd"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DQTGSNiiFyw5gQmf",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!DQTGSNiiFyw5gQmf"
+}

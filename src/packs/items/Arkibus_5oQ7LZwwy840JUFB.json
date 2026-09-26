@@ -1,0 +1,44 @@
+{
+  "name": "Arkibus",
+  "type": "armor",
+  "system": {
+    "description": "<p>Armor that reinforces the vital points of the upper body in preparation for sniping.</p>",
+    "tags": [
+      "[Medium Armor]"
+    ],
+    "pdef": 53,
+    "mdef": 44,
+    "initiative": 0,
+    "rank": 30,
+    "price": 4300,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5oQ7LZwwy840JUFB",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!5oQ7LZwwy840JUFB"
+}

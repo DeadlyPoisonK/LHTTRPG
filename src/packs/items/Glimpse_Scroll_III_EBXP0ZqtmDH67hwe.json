@@ -1,0 +1,47 @@
+{
+  "name": "Glimpse Scroll III",
+  "type": "gear",
+  "system": {
+    "description": "<p>This scroll targets the next scene. Compare your check result against the [Identification Difficulty] of each enemy appearing in the next scene. For each success, you learn the name and appearance of that enemy. You take [Fatigue: Base STR]. (Fumble): The enemy notices your scouting.</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Scout"
+    ],
+    "rank": 15,
+    "price": 370,
+    "equipped": false,
+    "timing": "Briefing",
+    "checkType": "Basic (11+2D vs Identification Difficulty)",
+    "range": "Refer",
+    "target": "Refer",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EBXP0ZqtmDH67hwe",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!EBXP0ZqtmDH67hwe"
+}

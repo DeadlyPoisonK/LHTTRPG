@@ -1,0 +1,56 @@
+{
+  "_id": "NG4KmNyHeOmB8bUq",
+  "name": "Monk",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Monk_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "monk",
+    "archetype": "warrior",
+    "attributes": {
+      "str": 4,
+      "dex": 4,
+      "pow": 2,
+      "int": 0
+    },
+    "hp": 55,
+    "hpPerRank": 9,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.RuDLukkxGLWIPGXe"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.W6MXJRl4rF47hyMj"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.lH2KpDSXYNc7UmFV"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!NG4KmNyHeOmB8bUq"
+}

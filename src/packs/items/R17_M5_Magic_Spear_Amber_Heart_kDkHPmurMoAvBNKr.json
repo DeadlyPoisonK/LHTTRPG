@@ -1,0 +1,48 @@
+{
+  "name": "R17 M5 Magic Spear Amber Heart",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Druid exclusive. Increases the amount of HP recovered by \"Healing Breeze\" and \"Healing Wind\" you use by +20. When you are in [Regen] status, adds +3D to damage rolls for [Melee Attacks] with this weapon.\nItem Name: Nazatt's Twin Spear - The Spear of the Forest King Type: One-Handed Spear Class: Weapon Stats: +10 Accuracy, +10 Magic Power, +5 Recovery A legendary spear said to have been used by Nazatt, the Hero of the Ancient Race and King of the Forest. The spear's tip is a crystal infused with the power of nature, sharper than steel. Two decorative cords are attached, with amber embedded at their base. This weapon increases recovery and, when used, emits a pleasant aroma of amber, making it a secret favorite among female druids.</p><hr><p>Amber Gem [Core Material] (500G) + Corsesca (730G) + Summoning Gem (Intermediate) (120G) ×3 + [Magic Catalyst 17] (280G) ×4 + Crafting Cost (1090G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Spear",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 4,
+    "rank": 17,
+    "price": 3800,
+    "equipped": false,
+    "attack": 38,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 18300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "kDkHPmurMoAvBNKr",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!kDkHPmurMoAvBNKr"
+}

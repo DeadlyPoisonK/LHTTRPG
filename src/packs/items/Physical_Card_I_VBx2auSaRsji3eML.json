@@ -1,0 +1,46 @@
+{
+  "name": "Physical Card I",
+  "type": "gear",
+  "system": {
+    "description": "<p>During the target's current Main Process, magical damage they deal changes to physical damage. (CR13): This item has no effect.&nbsp;</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 3,
+    "price": 50,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VBx2auSaRsji3eML",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!VBx2auSaRsji3eML"
+}

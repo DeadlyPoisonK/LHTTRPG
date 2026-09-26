@@ -1,0 +1,41 @@
+{
+  "name": "Hermit Blood",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you receive the effect of Healing Potion (any grade). Reduce your [Fatigue] rating by an amount equal to the HP you recovered.</p>\n<p>(Bonus): You gain +8 Max HP.</p>\n<hr>\n<p>You are well versed in the art of regulating your mind and body through medicine and food.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ajIyJ0MHzJc8iLyd",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!ajIyJ0MHzJc8iLyd"
+}

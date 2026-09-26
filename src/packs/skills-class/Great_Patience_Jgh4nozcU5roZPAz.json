@@ -1,0 +1,43 @@
+{
+  "name": "Great Patience",
+  "type": "skill",
+  "system": {
+    "description": "<p>You remove any [Fatigue] you are currently affected by. However, at the end of the scene, you take [Fatigue]. The rating of this [Fatigue] is equal to [Removed (Fatigue) Rating + 10].</p>\n<p>(Bonus): You gain +8 [Max HP].</p>\n<hr>\n<p>A special skill that demonstrates extraordinary physical strength and pushes away fatigue to forcefully move the body. For a while, you can move around energetically, but fatigue will hit you later.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Cleanup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Jgh4nozcU5roZPAz",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!Jgh4nozcU5roZPAz"
+}

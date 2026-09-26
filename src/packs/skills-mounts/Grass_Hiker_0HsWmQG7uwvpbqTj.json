@@ -1,0 +1,44 @@
+{
+  "_id": "0HsWmQG7uwvpbqTj",
+  "name": "Grass Hiker",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>You may make a [Normal Move] of 3 Sq. If you in a terrain prop with the [Natural] tag, this movement becomes [Safe Move].</p><p>(Minor): The travel distance is +1 Sq.</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!0HsWmQG7uwvpbqTj"
+}

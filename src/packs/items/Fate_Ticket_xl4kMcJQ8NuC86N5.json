@@ -1,0 +1,35 @@
+{
+  "name": "Fate Ticket",
+  "type": "ticket",
+  "_id": "xl4kMcJQ8NuC86N5",
+  "img": "icons/sundries/flags/banner-green.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "rank": 1,
+    "price": 0,
+    "equipped": false,
+    "skillText": "",
+    "subtype": "Fate",
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!xl4kMcJQ8NuC86N5"
+}

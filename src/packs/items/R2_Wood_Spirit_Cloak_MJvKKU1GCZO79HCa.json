@@ -1,0 +1,47 @@
+{
+  "name": "R2 Wood Spirit Cloak",
+  "type": "accessory",
+  "system": {
+    "description": "<p>When you are touching a prop that has both a natural tag and a terrain tag, you get +1 on all checks except defense checks. [CR11] Modifications to the judgment are invalid.</p>\n<hr>\n<p>A cloak imbued with the blessings of a tree spirit. When you wear this, plants and wind will bestow upon you a little help.</p>\n<hr>\n<p>Young green sprouts [core material] (30G) + cloak (60G) + Aoi amulet (60G) + [Magic catalyst 2] (20G) x 3 + Crafting Cost (100G)</p>",
+    "tags": [
+      "Accessory",
+      "Cloak",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 3,
+    "rank": 2,
+    "price": 310,
+    "equipped": false,
+    "initiative": 1,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MJvKKU1GCZO79HCa",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!MJvKKU1GCZO79HCa"
+}

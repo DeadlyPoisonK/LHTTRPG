@@ -1,0 +1,43 @@
+{
+  "name": "High Feeding",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Food Fighter, Explorer, or Frontier Guard. When you receive the effect of [Food] items, reduce your [Fatigue] by an additional -[5 + (Recovery)]. This effect lasts until the end of the scene.</p>\n<p>(CR11): Reduce your [Fatigue] by an additional -10.<br>(CR21): Reduce your [Fatigue] by yet another -10.</p>\n<hr>\n<p>A special skill that efficiently recovers from fatigue with tips to eat various ingredients deliciously and survival techniques.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jcjaTIAm9RPxZeqY",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!jcjaTIAm9RPxZeqY"
+}

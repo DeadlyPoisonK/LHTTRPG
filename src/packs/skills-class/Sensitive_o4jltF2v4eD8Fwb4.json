@@ -1,0 +1,41 @@
+{
+  "name": "Sensitive",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just before making a [Perception Check]. You gain a +2D bonus to the check.</p>\n<hr>\n<p>A special skill that allows you to quickly detect various abnormalities and changes in signs by concentrating your mind.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "o4jltF2v4eD8Fwb4",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!o4jltF2v4eD8Fwb4"
+}

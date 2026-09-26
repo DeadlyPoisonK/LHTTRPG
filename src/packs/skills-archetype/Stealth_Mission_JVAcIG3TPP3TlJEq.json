@@ -1,0 +1,41 @@
+{
+  "name": "Stealth Mission",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill immediately after the target has performed a roll on a search table. The result of the search table roll does not occur.</p>\n<hr>\n<p>A special skill that avoids dangerous terrain and monsters that block the path of your companions during the adventure by hiding yourself and leading a covert march.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JVAcIG3TPP3TlJEq",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!JVAcIG3TPP3TlJEq"
+}

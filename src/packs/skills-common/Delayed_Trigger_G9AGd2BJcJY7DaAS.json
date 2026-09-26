@@ -1,0 +1,43 @@
+{
+  "name": "Delayed Trigger",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you use this skill, you may consume one [Charm] item. At the beginning of your first Main Process in the next scene, you gain the effect of the consumed [Charm].</p>\n<p>(Fate 1): Choose an additional [Charm] different from the first consumed [Charm], and consume it. At the beginning of your first Main Process in the next scene, you gain the effect of both consumed [Charms].</p>\n<hr>\n<p>A special skill that prepares amulets in advance so that they can be effective later. For you, even the face down cards you don't have in your hand are part of your strength.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Briefing",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "G9AGd2BJcJY7DaAS",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!G9AGd2BJcJY7DaAS"
+}

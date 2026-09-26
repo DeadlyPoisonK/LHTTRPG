@@ -1,0 +1,48 @@
+{
+  "name": "R8 M5 Dead End",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Sweeper\" can target \"[POW]×3+10 or lower\" instead of \"[POW]×3 or lower\".\n「Welcome to your domain.」A magical crossbow with a special scope engraved with childlike ancient Elven script. The quarrel it fires spins as it flies, giving it high attack power. Furthermore, it has a piercing effect, so it is sometimes able to defeat relatively weak enemies with a single hit.</p><hr><p>Tyrant's Jagged Teeth [Core Material] (140G) + Light Crossbow (230G) + Deadly Poison (Intermediate) (60G) ×3 + [Magic Catalyst 8] (70G) ×3 + Crafting Cost (280G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -4,
+    "rank": 8,
+    "price": 1040,
+    "equipped": false,
+    "attack": 30,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 6500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JfSNn4TY0SDRwIQL",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!JfSNn4TY0SDRwIQL"
+}

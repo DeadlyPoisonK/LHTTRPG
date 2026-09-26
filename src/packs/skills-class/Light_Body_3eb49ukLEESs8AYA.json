@@ -1,0 +1,41 @@
+{
+  "name": "Light Body",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain [Initiative] equal to [SR &times; 3]. This effect lasts until the end of the round.</p>\n<hr>\n<p>A special skill that enhances physical abilities and gives tremendous instantaneous strength. When it comes to being proactive, there are few people like you.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3eb49ukLEESs8AYA",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!3eb49ukLEESs8AYA"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Nailing Curse",
+  "type": "skill",
+  "system": {
+    "description": "<p>Nailing Curse is used when the target loses Bad Status affecting them. Lose one [Illusion Weapon] tag as cost. The removing of the Bad Status is invalid.</p>\n<hr>\n<p>A magic that strengthens a disorder by shooting an illusion weapon into the enemy's body and pouring magical power directly into it. Used phantom weapons disappear.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jOlKHi5hWyxgX8wm",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!jOlKHi5hWyxgX8wm"
+}

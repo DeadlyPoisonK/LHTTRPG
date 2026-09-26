@@ -1,0 +1,47 @@
+{
+  "name": "R10 Friend Feather",
+  "type": "accessory",
+  "system": {
+    "description": "<p>At the start of the scene you gain [Cancel (Dragon, Giant, Fairy): 20]. Your \"Healing Light\", \"Healing Wind\" and \"Prayer of Recovery\" are treated as having +1 SR (they may exceed their max SR).\nA headpiece created by infusing magic into the feather, a symbol of a free soul. It strengthens the bond between companions and enhances healing magic.</p><hr><p>Flashy Plume [Core Material] (220G) + Feather Hat (50G) ×2 (100G) + Hachigane (80G) ×2 + [Magic Catalyst 10] (110G) ×3 + Crafting Cost (330G)</p>",
+    "tags": [
+      "Accessory",
+      "Head",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 10,
+    "price": 1140,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "totzlxfLzsepLf4Q",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!totzlxfLzsepLf4Q"
+}

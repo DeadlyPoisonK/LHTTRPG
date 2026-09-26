@@ -1,0 +1,41 @@
+{
+  "name": "Pinpoint II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. During this Main Process, you gain a +[SRx5] bonus to [Weapon Attack] damage rolls.</p>\n<p>(CR21): The bonus changes to [SRx7].</p>\n<hr>\n<p>A special skill that increases the power of attacks by accurately aiming. Your senses instantly see through the point that brings destruction to the target.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "n5iNiLzvlsupyd2o",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!n5iNiLzvlsupyd2o"
+}

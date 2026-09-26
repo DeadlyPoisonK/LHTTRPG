@@ -1,0 +1,41 @@
+{
+  "name": "Treasure Hunt",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just before you make a roll on the Treasure Table. You gain a +[SRx5] bonus to that roll.</p>\n<hr>\n<p>Special ability to find hidden treasures by making full use of the five senses and intuition. You won't miss the hidden treasures everywhere, such as the bottom of the treasure chest and the shadow of the big rock.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "O6yE6yl2Vvc8Iy49",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!O6yE6yl2Vvc8Iy49"
+}

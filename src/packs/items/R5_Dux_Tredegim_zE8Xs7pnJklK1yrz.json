@@ -1,0 +1,46 @@
+{
+  "name": "R5 Dux Tredegim",
+  "type": "armor",
+  "system": {
+    "description": "<p>The \"Silent Sniper\" you have acquired is treated as having a +1 SR (maximum SR is acceptable). If you do not have it, it is treated as having SR1.\nA leather armor modeled after the armor of a general renowned as the best archer of the ancient kingdom. The center of gravity and joints are designed to facilitate shooting, allowing for powerful single shots.</p><hr><p>Soul-Cutting Scissors[Core Material](60G)+Studded Leather(180G)+[Magic Catalyst 5](40G)×3+Crafting Cost(180G)</p>",
+    "tags": [
+      "Medium Armor",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 14,
+    "mdef": 11,
+    "initiative": 0,
+    "rank": 5,
+    "price": 540,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 6100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zE8Xs7pnJklK1yrz",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!zE8Xs7pnJklK1yrz"
+}

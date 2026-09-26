@@ -1,0 +1,23 @@
+{
+  "_id": "R3aN9gLP5Cgrpn1O",
+  "name": "Summons",
+  "type": "Item",
+  "sorting": "a",
+  "sort": 1300000,
+  "folder": null,
+  "color": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!R3aN9gLP5Cgrpn1O"
+}

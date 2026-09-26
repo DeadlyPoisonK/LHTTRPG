@@ -1,0 +1,41 @@
+{
+  "name": "Speedy Walk",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately perform &laquo;Prop Analyze&raquo; or &laquo;Prop Disable&raquo;.</p>\n<hr>\n<p><span class=\"Y2IQFc\" lang=\"en\">A special skill that investigates the structure of traps and tricks with sleight of hand, and neutralizes them. You can do tricks like disarming traps while wielding your weapon.</span></p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "C2dp8qMUVcTTEg2W",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!C2dp8qMUVcTTEg2W"
+}

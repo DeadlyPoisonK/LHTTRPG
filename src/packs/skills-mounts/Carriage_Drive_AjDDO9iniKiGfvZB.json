@@ -1,0 +1,44 @@
+{
+  "name": "Carriage Drive",
+  "type": "skill",
+  "_id": "AjDDO9iniKiGfvZB",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "system": {
+    "description": "<p>You may make a [Normal Move] of 2 Sq. You may [Save move (forced)] &nbsp;[Target: Two / Range: Close] willing targets at the beginning of your move to the end of your move.&nbsp;</p>\n<p>(Minor): The travel distance is +1 Sq.</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!AjDDO9iniKiGfvZB"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Magic Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +[SRx2] bonus to your [Magic Power].</p>\n<hr>\n<p>You don't miss your magic training on a regular basis. Your magic will be more powerful than other &lt;adventurers&gt;.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OE226ClfICNAzm6P",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!OE226ClfICNAzm6P"
+}

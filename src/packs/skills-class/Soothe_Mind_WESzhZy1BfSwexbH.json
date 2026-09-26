@@ -1,0 +1,41 @@
+{
+  "name": "Soothe Mind",
+  "type": "skill",
+  "system": {
+    "description": "<p>Reduce your [Hate] by -1.</p>\n<p>(Minor): You may make a [Safe Move] of 1 Sq. This additional effect cannot be activated if you have the [Rigor] condition.</p>\n<hr>\n<p>Magic that creates blind spots in the enemy's consciousness and distracts them. You can also use this opportunity to move around the enemy.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WESzhZy1BfSwexbH",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!WESzhZy1BfSwexbH"
+}

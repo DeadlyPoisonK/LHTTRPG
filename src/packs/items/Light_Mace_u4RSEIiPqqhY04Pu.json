@@ -1,0 +1,46 @@
+{
+  "name": "Light Mace",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A striking weapon with a metal head at the tip.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Hafted]"
+    ],
+    "initiative": -1,
+    "rank": 1,
+    "price": 40,
+    "equipped": false,
+    "attack": 4,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 22000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "u4RSEIiPqqhY04Pu",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!u4RSEIiPqqhY04Pu"
+}

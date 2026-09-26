@@ -1,0 +1,47 @@
+{
+  "name": "Yakisoba Bread",
+  "type": "gear",
+  "system": {
+    "description": "<p>-30 to the strength of the target's [Fatigue] state.</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 11,
+    "price": 150,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "k2b8ZHcLtDRxBRT4",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!k2b8ZHcLtDRxBRT4"
+}

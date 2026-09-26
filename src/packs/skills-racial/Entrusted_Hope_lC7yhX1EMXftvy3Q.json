@@ -1,0 +1,142 @@
+{
+  "name": "Entrusted Hope",
+  "type": "skill",
+  "system": {
+    "description": "<p>During a combat scene, if an ally within 20 Sq. of you is [Incapacitated], you gain a +1D bonus to all checks.</p>\n<p>(Bonus): You gain +8 [Max HP].</p>\n<hr>\n<p>You are the owner of the underlying strength that shows your power as much as you are in a predicament. The wishes and will entrusted to you by your fallen comrades double your power.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.racial-humano.lC7yhX1EMXftvy3Q",
+      "duration": {
+        "startTime": 240,
+        "seconds": null,
+        "combat": null,
+        "rounds": 1,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "160Iq5AVNEdv84Pf",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.evasion.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.resistance.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+1D Checks",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!lC7yhX1EMXftvy3Q.160Iq5AVNEdv84Pf"
+    },
+    {
+      "origin": "Compendium.world.racial-humano.Item.lC7yhX1EMXftvy3Q",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "name": "+8 HP",
+      "img": "icons/svg/aura.svg",
+      "_id": "hsupQ2iH8nVpFior",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.health.effect",
+          "mode": 2,
+          "value": "8",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!items.effects!lC7yhX1EMXftvy3Q.hsupQ2iH8nVpFior"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lC7yhX1EMXftvy3Q",
+  "folder": "t90nIcsq9hGP0Bqt",
+  "_key": "!items!lC7yhX1EMXftvy3Q"
+}

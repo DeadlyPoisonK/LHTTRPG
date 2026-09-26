@@ -1,0 +1,44 @@
+{
+  "name": "Holy Shield",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(Your &laquo;Reactive Mastery&raquo; SR + 1)D + (One [Shield] you are equipped with's (Magical Defense))] penetrating damage to the target.</p>\n<hr>\n<p>A special skill that applies the shield's concept of \"reflecting attacks\" to reverse the effect of reaction-activated recovery and scrape away the target's vitality.</p>",
+    "tags": [
+      "Shield",
+      "Special Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zgPEiSZZd2Qzy6oH",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!zgPEiSZZd2Qzy6oH"
+}

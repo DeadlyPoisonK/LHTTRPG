@@ -1,0 +1,41 @@
+{
+  "name": "Final Blow",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Mercenary, Berserker, or Avenger.</p>\n<p>If the target of the attack is either either [Staggered], [Dazed], [Decay], or [Confusion], and receives at least one point of damage, they gain the [Afflicted] tag.</p>\n<hr>\n<p>A special skill that doesn't miss when the enemy flinched and launches a follow-up attack. On the battlefield, those who show an opening will disappear. This technique is a symbol of that iron rule.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UpveDn9717piHzdH",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!UpveDn9717piHzdH"
+}

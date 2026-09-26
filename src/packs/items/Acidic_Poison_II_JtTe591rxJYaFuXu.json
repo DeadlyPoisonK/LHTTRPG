@@ -1,0 +1,47 @@
+{
+  "name": "Acidic Poison II",
+  "type": "gear",
+  "system": {
+    "description": "<p>Deal [2D + 26] physical damage to the target. This damage always has the [Blight] tag, even if another effect would overwrite it.</p>",
+    "tags": [
+      "Toxin",
+      "Consumable",
+      "Poison"
+    ],
+    "rank": 9,
+    "price": 120,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Opposed (6+2D vs Resistance)",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JtTe591rxJYaFuXu",
+  "folder": "P3CHM7TLfmSJrJpY",
+  "_key": "!items!JtTe591rxJYaFuXu"
+}

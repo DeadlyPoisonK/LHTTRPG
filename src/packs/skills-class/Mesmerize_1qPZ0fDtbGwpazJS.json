@@ -1,0 +1,43 @@
+{
+  "name": "Mesmerize",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can not target enemies with the [Boss] tag. The target can not be in the [Pre-Action] state in the setup process of every round. This effect is handled as Life Status with the [Sealed] tag, and it continues until the target consumes 2 [Fate Points] or until the effect is canceled by the [Enchantment] tag restriction.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">A special skill that puts the target's mind into a hypnotic state and renders it inoperable.</span></p>",
+    "tags": [
+      "Enchantment"
+    ],
+    "timing": "Setup",
+    "checkType": "Auto",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1qPZ0fDtbGwpazJS",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!1qPZ0fDtbGwpazJS"
+}

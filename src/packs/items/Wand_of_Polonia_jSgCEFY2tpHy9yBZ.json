@@ -1,0 +1,46 @@
+{
+  "name": "Wand of Polonia",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A wand that has been polished and engraved with magic silver on its surface.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 30,
+    "price": 3400,
+    "equipped": false,
+    "attack": 23,
+    "magic": 49,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 17700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jSgCEFY2tpHy9yBZ",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!jSgCEFY2tpHy9yBZ"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Haste",
+  "type": "skill",
+  "system": {
+    "description": "<p>During each of the target's Main Processes, the target gains an additional Minor Action.</p>\n<hr>\n<p>Support magic that increases the action speed of allies and allows them to take various actions.</p>",
+    "tags": [
+      "Preparation",
+      "Enchantment"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "D9JXUJOTMhCeZGsy",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!D9JXUJOTMhCeZGsy"
+}

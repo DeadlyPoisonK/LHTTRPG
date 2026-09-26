@@ -1,0 +1,43 @@
+{
+  "name": "Razor Edge",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [1D + (Attack Power)] physical damage to the target.</p>\n<p>(Success): The target takes a -[SRx2] penalty to [Physical Defense]. Treat this effect as a Bad Status.</p>\n<hr>\n<p>A special skill that targets and attacks the head and similar vital points, rendering the enemy defenseless with pain and impact.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "luI6M79bNz43fUvx",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!luI6M79bNz43fUvx"
+}

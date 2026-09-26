@@ -1,0 +1,48 @@
+{
+  "name": "Spirit Sword: Toki no Tamashii",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When you use \"Split-Second Awareness\" and [Hate Top], you gain +20 to your next damage roll.\nA loyal knight who pledged his life to a princess received this spiritual sword directly from her hands. It creates a moment of stillness within the narrow gap of time, granting the wielder an ideal opportunity.</p><hr><p>[Core Material](40G)+ (130G)+[ 3](25G)×4+Crafting Cost(130G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Katana",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -1,
+    "rank": 3,
+    "price": 400,
+    "equipped": false,
+    "attack": 14,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "eyL8F64sGlgptt2Z",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!eyL8F64sGlgptt2Z"
+}

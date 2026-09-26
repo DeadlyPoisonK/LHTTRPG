@@ -1,0 +1,48 @@
+{
+  "name": "R12 M5 Certainty Bow Alva",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action & Fate 1] This is used simultaneously with the [Ranged Attack] made by this weapon. The attack range is increased by +1Sq. [Trigger: Minor] This is used when the target of the [Ranged Attack] made by this weapon becomes [Incapacitated]. The target cannot use actions or effects that would normally be available. This effect is treated as an [Seal] tagged LS, and can be dispelled by consuming 2 points of [Fate].\nA magic crossbow that fires amethyst bolts. Infusing it with magic increases its range, and it carries a curse that seals abilities triggered by a foe's desperate counterattack or death, so it is used in named and raid battles to finish off minions with troublesome abilities.</p><hr><p>Crystal Casket [Core Material] (240G) + Repeater (510G) + Oblivion Poison (Intermediate) (60G) ×5 + [Magic Catalyst 12] (150G) ×4 + Crafting Cost (660G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -4,
+    "rank": 12,
+    "price": 2310,
+    "equipped": false,
+    "attack": 40,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 2600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5vj2kKL5UckULZ39",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!5vj2kKL5UckULZ39"
+}

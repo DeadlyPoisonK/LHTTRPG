@@ -1,0 +1,44 @@
+{
+  "name": "Overrunner",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains a +1 bonus to [Speed]. This skill can be used multiple times when used during the same Briefing.</p>\n<hr>\n<p>Support magic that strengthens the target's speed and increases mobility.</p>",
+    "tags": [
+      "Enchantment",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR+1)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "odlmqJGE3CdigLzB",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!odlmqJGE3CdigLzB"
+}

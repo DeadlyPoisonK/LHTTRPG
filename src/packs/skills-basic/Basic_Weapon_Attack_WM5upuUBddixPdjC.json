@@ -1,0 +1,43 @@
+{
+  "name": "Basic Weapon Attack",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 1d6 + @battle-status.power.attack.total]]{[Attack Power + 1D]} physical damage.</p>\n<hr>\n<p>Weapon Attack Mele</p>\n<p>Weapon Attack Range</p>\n<p>Basic Weapon Attack</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "-",
+    "macroeffect": "uIW9aGui82UJfjzb"
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "WM5upuUBddixPdjC",
+  "folder": null,
+  "_key": "!items!WM5upuUBddixPdjC"
+}

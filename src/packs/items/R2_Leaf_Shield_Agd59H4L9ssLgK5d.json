@@ -1,0 +1,48 @@
+{
+  "name": "R2 Leaf Shield",
+  "type": "shield",
+  "system": {
+    "description": "<p>You gain a +3 bonus to [Recovery]. <br>You always have [Weakness (Flame): 10]. <br>This item can be equipped by Druids.</p>\n<hr>\n<p>It's a shield made by attaching a handle to a leaf from a giant tree monster. Despite its simple design, it offers high defense against both physical and magical attacks, but its weakness to fire is a drawback.</p>\n<hr>\n<ul>\n<li>Leaf of Life [Core Material] (40G)</li>\n<li>Buckler (50G)</li>\n<li>[Magic Catalyst 2] (20G) &times; 3</li>\n<li>Crafting Cost (70G)</li>\n</ul>",
+    "tags": [
+      "One-Handed",
+      "Shield",
+      "Rare",
+      "Not for Sale",
+      "M4"
+    ],
+    "pdef": 6,
+    "mdef": 6,
+    "rank": 2,
+    "price": 220,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/shield.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Agd59H4L9ssLgK5d",
+  "folder": "nDWJQ58O5e8dNPs2",
+  "_key": "!items!Agd59H4L9ssLgK5d"
+}

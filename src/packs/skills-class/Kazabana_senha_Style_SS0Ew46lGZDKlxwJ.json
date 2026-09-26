@@ -1,0 +1,43 @@
+{
+  "name": "Kazabana-senha Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>[Female] only. When your [Armor Slot] is empty, your [Physical Defense] and [Magic Defense] becomes [CR + (DEX Mod)].</p>\n<p>(SR 2): When you have only a single [One-Handed] [Katana] equipped to a [Hand Slot], your [Attack Power] and [Magical Power] becomes [Attack Power of Weapon x 2], and add the [Magic Stone] tag to [Katana].</p>\n<hr>\n<p>A fighting style that manipulates the sword with a light movement like a petal dancing in a whirlwind. Your determination and will dwell in the sword you wield, giving you the power to destroy your enemies.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SS0Ew46lGZDKlxwJ",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!SS0Ew46lGZDKlxwJ"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Survivability",
+  "type": "skill",
+  "system": {
+    "description": "<p>When the target rolls on [Exhaustion Table: Stamina, Items], reduce the result of the roll by -1.</p>\n<p>(Bonus): You gain +10 [Max HP].</p>\n<hr>\n<p>You are adept at surviving in harsh environments. Your comrades will be able to get out of the dead zone safely.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "Constant",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aBRxIeTqahFQ1eMs",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!aBRxIeTqahFQ1eMs"
+}

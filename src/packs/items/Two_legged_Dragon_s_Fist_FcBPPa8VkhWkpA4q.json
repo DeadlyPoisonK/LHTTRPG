@@ -1,0 +1,48 @@
+{
+  "name": "Two-legged Dragon's Fist",
+  "type": "gear",
+  "system": {
+    "description": "<p>You are put in the [Riding: Dinosaur] state. You can use EX power &laquo;Sharp Sense&raquo; and &laquo;Train Dash&raquo;. (CR16): This item has no effect.</p>",
+    "tags": [
+      "Preparation",
+      "Summoning Whistle",
+      "Not For Sale",
+      "M2"
+    ],
+    "rank": 6,
+    "price": 150,
+    "equipped": false,
+    "timing": "Instant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FcBPPa8VkhWkpA4q",
+  "folder": "R3aN9gLP5Cgrpn1O",
+  "_key": "!items!FcBPPa8VkhWkpA4q"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Hunting Hawk",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target. You may make the target make a [Safe Move (forced)] of 1 Sq.</p>\n<hr>\n<p>A special skill that allows a throwing weapon imbued with fighting spirit to freely fly through the air like a bird of prey on a falconry. Its blow, which resembles the appearance of a shining bird, drives its prey in all directions, toying with it.</p>",
+    "tags": [
+      "Ranged Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MGFXVcP9iSPu5OIW",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!MGFXVcP9iSPu5OIW"
+}

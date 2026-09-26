@@ -1,0 +1,46 @@
+{
+  "name": "Focus Card III",
+  "type": "gear",
+  "system": {
+    "description": "<p>During the target's current Main Process, the target's [Normal Moves] become [Safe Moves].</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 26,
+    "price": 1100,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "AwWR3EY6yInpCLB4",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!AwWR3EY6yInpCLB4"
+}

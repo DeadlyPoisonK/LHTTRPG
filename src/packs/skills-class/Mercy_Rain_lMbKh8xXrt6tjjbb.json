@@ -1,0 +1,41 @@
+{
+  "name": "Mercy Rain",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target remove all [Pursuit] and [Decay] conditions currently affecting them.&nbsp;</p>\n<p>(Fate 1): Reduce the [Hate] of the target by 1, other then you.</p>\n<hr>\n<p>A spell that spreads a rain of grace that purifies poisons and curses. After the rain stops, a small rainbow appears over the battlefield, slightly distracting enemies.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 20(P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lMbKh8xXrt6tjjbb",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!lMbKh8xXrt6tjjbb"
+}

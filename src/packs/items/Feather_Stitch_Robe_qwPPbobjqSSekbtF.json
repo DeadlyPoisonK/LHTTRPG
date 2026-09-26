@@ -1,0 +1,44 @@
+{
+  "name": "Feather Stitch Robe",
+  "type": "armor",
+  "system": {
+    "description": "<p>A robe embroidered with magical power that dramatically increases defense.</p>",
+    "tags": [
+      "[Light Armor]"
+    ],
+    "pdef": 40,
+    "mdef": 59,
+    "initiative": 0,
+    "rank": 30,
+    "price": 4200,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 5500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qwPPbobjqSSekbtF",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!qwPPbobjqSSekbtF"
+}

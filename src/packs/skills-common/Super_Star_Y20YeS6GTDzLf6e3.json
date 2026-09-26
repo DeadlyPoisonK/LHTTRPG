@@ -1,0 +1,41 @@
+{
+  "name": "Super Star",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Chindon'ya, Idol, Acrobat, or Demon Lord. You may make one roll on the [Treasure Table: Valuables]. For each Connection you have, you gain a +1 bonus to this roll (up to a maximum of +10).</p>\n<hr>\n<p>A feat that represents the owner of exceptional skill and charisma. You will receive gifts from fans.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Y20YeS6GTDzLf6e3",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!Y20YeS6GTDzLf6e3"
+}

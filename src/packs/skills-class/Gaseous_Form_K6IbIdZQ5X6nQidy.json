@@ -1,0 +1,43 @@
+{
+  "name": "Gaseous Form",
+  "type": "skill",
+  "system": {
+    "description": "<p>[Dodge Checks] opposing your [Target: Single] attacks gain a +2 bonus, and [Dodge Checks] opposing your [Target: Area, Wide, Line] attacks take a -2 penalty. Treat this effect as a Combat Status.</p>\n<hr>\n<p>A magic that changes your body like fog or smoke, disturbing the enemy's aim. However, the unstable body becomes weak against attacks that blow away the surroundings at once.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "K6IbIdZQ5X6nQidy",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!K6IbIdZQ5X6nQidy"
+}

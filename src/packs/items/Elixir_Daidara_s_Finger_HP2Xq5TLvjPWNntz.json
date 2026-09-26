@@ -1,0 +1,99 @@
+{
+  "name": "Elixir: Daidara's Finger",
+  "type": "gear",
+  "system": {
+    "description": "<p>The target's [Evasion Check] is reduced by 1, and all of the target's [Melee Attacks] with the range \"Close\" become \"1 Sq\" range. This effect is treated as a Combat Skill (CS).</p>\n<p>(1D: 5 or above): This item can be used without being consumed, as if it does not have the [Consumable] tag.</p>\n<hr>\n<ul>\n<li>Suspicious Pill [Core Material] (30G)</li>\n<li>Bottle of Strength (Beginner) &times; 2 (40G each)</li>\n<li>[Magic Catalyst 2] &times; 2 (20G each)</li>\n<li>Crafting Fee (55G)</li>\n</ul>",
+    "tags": [
+      "M4",
+      "Medicine",
+      "Consumable",
+      "Not for sale"
+    ],
+    "rank": 2,
+    "price": 205,
+    "equipped": false,
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.medicine.Item.HP2Xq5TLvjPWNntz",
+      "duration": {
+        "rounds": 1,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "name": "Daidara's Finger",
+      "_id": "TVR9A7l5fPnRHAPv",
+      "changes": [
+        {
+          "key": "system.checks.evasion.mod",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.resistance.mod",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "img": "icons/consumables/potions/round-decorated-snake-green.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!HP2Xq5TLvjPWNntz.TVR9A7l5fPnRHAPv"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HP2Xq5TLvjPWNntz",
+  "folder": "JfJ4EfRXtde1y5GE",
+  "_key": "!items!HP2Xq5TLvjPWNntz"
+}

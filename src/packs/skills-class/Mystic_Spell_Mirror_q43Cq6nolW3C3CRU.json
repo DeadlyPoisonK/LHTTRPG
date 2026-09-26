@@ -1,0 +1,43 @@
+{
+  "name": "Mystic Spell: Mirror",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [3D + (Magic Power)] magical damage to the target. A secondary target within a range of [Target: Single / Range: 4 Sq.] from the initial target recovers [(Recovery) + (SRx4)]</p>\n<hr>\n<p>An attack magic that shoots the enemy with the brilliance of a mirror created by concentrating the spirit and steals their vitality. The mirror does not lead to replacement. The vitality bitten off by the brilliance is transferred to allies.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "q43Cq6nolW3C3CRU",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!q43Cq6nolW3C3CRU"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "White Construct III",
+  "type": "gear",
+  "system": {
+    "description": "<p>When the target next applies a [Barrier], increase the rating of that [Barrier] by +6D. The effect of multiple White Constructs (regardless of rank) do not stack, and this effect is removed after being applied once, or at the end of the scene.</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 21,
+    "price": 750,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "U2nEYpg0oij9gk9L",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!U2nEYpg0oij9gk9L"
+}

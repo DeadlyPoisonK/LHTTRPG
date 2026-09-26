@@ -1,0 +1,91 @@
+{
+  "name": "Servant Summon: Undine",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain the [Fairy] and [Cold] tags. You gain a +[SRx5] bonus to the damage roll of attacks that have the [Cold] tag.</p>\n<p>(Effect): A secondary target within a range of [Target: Single / Range: 4 Sq.] from you takes 5 direct damage.</p>\n<hr>\n<p>A special skill that summons Undine, a water spirit in the form of a beautiful maiden, and uses it. Her streams and cold air freeze enemies.</p>",
+    "tags": [
+      "Servant Summon",
+      "Preparation",
+      "Fairy",
+      "Cold"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.summoner.EhqdBAC40BKu6kkF",
+      "duration": {
+        "rounds": 1,
+        "startTime": 240,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "yIE2KkN1rrTCVwxe",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Fairy][Cold]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Undine",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!EhqdBAC40BKu6kkF.yIE2KkN1rrTCVwxe"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EhqdBAC40BKu6kkF",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!EhqdBAC40BKu6kkF"
+}

@@ -1,0 +1,453 @@
+{
+  "name": "Occupation Leader",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 89,
+      "max": 92,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 4,
+      "max": 4,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Boss",
+      "Humanoid",
+      "Goblin"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 12,
+        "magic": 10
+      },
+      "speed": 2,
+      "initiative": 5
+    },
+    "rank": 4,
+    "idendification": "14",
+    "hateMultiplier": "5",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 3
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 3
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt; height: 101px;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"width: 527px;\" span=\"6\" width=\"88\"></colgroup>\n<tbody>\n<tr style=\"height: 21px;\">\n<td class=\"xl64\" style=\"height: 21px; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl63\" style=\"height: 21px;\" height=\"21\">1~3</td>\n<td class=\"xl65\" style=\"height: 21px;\" colspan=\"5\">Spider's Eyes&nbsp; [Magic Catalyst 3] (25G) x 8</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"height: 17px;\">4-5</td>\n<td style=\"height: 17px;\" colspan=\"5\">Beast Tamer's Horn</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl63\" style=\"height: 21px;\" height=\"21\">6</td>\n<td class=\"xl65\" style=\"height: 21px;\" colspan=\"5\">Dual-Gob-Bow&nbsp;</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl63\" style=\"height: 21px;\" height=\"21\">Fixed</td>\n<td class=\"xl65\" style=\"height: 21px;\" colspan=\"5\">Gloomweb [Core Material] (60G)</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li>Evasion &nbsp;[[/gmr 2d6 + 3]]{[2D+3]}</li>\n<li>Resistance &nbsp;[[/gmr 2d6 + 3]]{[2D+3]}</li>\n</ul>\n<p>&nbsp;</p>"
+  },
+  "prototypeToken": {
+    "name": "Occupation Leader",
+    "displayName": 0,
+    "actorLink": true,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Goblin Occupation Platoon",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "system": {
+        "description": "<p>When this enemy enters the Scene of two Goblin Hatchet-man or Goblin Priest units spawn.&nbsp;<br>Either may be replaced with two Goblin Curse Callers.&nbsp;<br>Enemies that appear due to this effect do not produce drop items&nbsp;</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_id": "qUbvFy14L2NwqiRA",
+      "_key": "!actors.items!2XQ0riyKt6rm2PLv.qUbvFy14L2NwqiRA"
+    },
+    {
+      "name": "Re-mobilization II",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "system": {
+        "description": "<p>Use when target becomes [Post Action]. Target becomes [Pre-Action] with an [Initiative] of 0.&nbsp;</p>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "4 Sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Round",
+        "macroeffect": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_id": "H6DXOCpZQKNz430a",
+      "_key": "!actors.items!2XQ0riyKt6rm2PLv.H6DXOCpZQKNz430a"
+    },
+    {
+      "name": "Goblin Rage (Refer)",
+      "type": "skill",
+      "system": {
+        "description": "<ul>\n<li>Use this skill when this enemy takes [Spirit] damage.&nbsp;</li>\n<li>This enemy immediately uses Double Bow-Gun.&nbsp;</li>\n<li>Increase the targets of Double Bow-Gun to [Target: 4].<hr></li>\n<li>Opposed [[/gmr 3d6 +2 ]]{[3D+2]}</li>\n<li>Deal [[/gmr 2d6+45+4]]{[2D+45+4]} physical damage.</li>\n</ul>",
+        "tags": [],
+        "timing": "After Damage",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Combat",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 2200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_id": "oNpArIqPfF7Mq5IG",
+      "_key": "!actors.items!2XQ0riyKt6rm2PLv.oNpArIqPfF7Mq5IG"
+    },
+    {
+      "name": "Goblin Command",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "system": {
+        "description": "<p>Targets this unit and one more unit with the [Goblin] tag. These two targets may clear one bad status each.&nbsp;<br>(Self: Mounted) This enemy gets [Barrier: 10]</p>",
+        "tags": [],
+        "timing": "Cleanup",
+        "checkType": "",
+        "range": "2 Sq.",
+        "target": "2 Targets",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_id": "jB6AsymbDkPbBR9u",
+      "_key": "!actors.items!2XQ0riyKt6rm2PLv.jB6AsymbDkPbBR9u"
+    },
+    {
+      "name": "Double Bow-Gun",
+      "type": "skill",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "system": {
+        "description": "<p>[2D+45] Physical Damage<br>(Minor) This attack becomes [Range: 3 Sq.]<br>(Fate 1) +5 damage.</p>\n<hr>\n<ul>\n<li>Opposed [[/gmr 3d6 +2 ]]{[3D+2]}</li>\n<li>Deal [[/gmr 2d6+45]]{[2D+45]} physical damage.</li>\n</ul>",
+        "tags": [
+          "Ranged Attack"
+        ],
+        "timing": "Major",
+        "checkType": "Opposed 3D+2 vs Evasion",
+        "range": "2 Sq",
+        "target": "Two Targets",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_id": "bHbLzTKd2v6mxXr9",
+      "_key": "!actors.items!2XQ0riyKt6rm2PLv.bHbLzTKd2v6mxXr9"
+    }
+  ],
+  "effects": [
+    {
+      "flags": {},
+      "changes": [],
+      "duration": {
+        "startTime": 348,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": 4,
+        "startTurn": 7
+      },
+      "_id": "KiJXeFyh3gq9SUeX",
+      "disabled": false,
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": false,
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Barrier",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!actors.effects!2XQ0riyKt6rm2PLv.KiJXeFyh3gq9SUeX"
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "2XQ0riyKt6rm2PLv",
+  "folder": "DZa0LbCEve8eidVi",
+  "_key": "!actors!2XQ0riyKt6rm2PLv"
+}

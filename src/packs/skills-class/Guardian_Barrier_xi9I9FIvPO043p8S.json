@@ -1,0 +1,41 @@
+{
+  "name": "Guardian Barrier",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains [Barrier: (Magic Power) + (Recovery)].</p>\n<hr>\n<p>A special skill that deploys countless barriers one after another and uses damage blocking magic on allies in a wide range. A magical shield that covers the battlefield is the embodiment of determination to protect all allies.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 4 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 4",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xi9I9FIvPO043p8S",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!xi9I9FIvPO043p8S"
+}

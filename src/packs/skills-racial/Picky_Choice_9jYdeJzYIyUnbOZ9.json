@@ -1,0 +1,41 @@
+{
+  "name": "Picky Choice",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just before you make a Treasure Roll. You may make the Treasure Roll twice, and take either result.</p>\n<hr>\n<p>A special ability to select expensive bargains from treasures with intuition and connoisseurs.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "9jYdeJzYIyUnbOZ9",
+  "folder": "t90nIcsq9hGP0Bqt",
+  "_key": "!items!9jYdeJzYIyUnbOZ9"
+}

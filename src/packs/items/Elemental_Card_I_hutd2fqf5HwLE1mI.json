@@ -1,0 +1,46 @@
+{
+  "name": "Elemental Card I",
+  "type": "gear",
+  "system": {
+    "description": "<p>Select one: [Flame] [Cold] [Shock] [Blight] [Holy] or [Spirit]. During the target's Main Process, they deal damage of the chosen tag. (CR11): This item has no effect.</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 1,
+    "price": 40,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 3400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hutd2fqf5HwLE1mI",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!hutd2fqf5HwLE1mI"
+}

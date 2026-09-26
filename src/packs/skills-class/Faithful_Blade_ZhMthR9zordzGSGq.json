@@ -1,0 +1,44 @@
+{
+  "name": "Faithful Blade",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+2)D + (Attack Power)] physical damage to the target.</p>\n<p>(Fate 1): Increase the damage by +[POW mod].<br>(Fate 2): Increase the damage by +[POW Base].</p>\n<hr>\n<p>A special skill that innocently swings the blade while maintaining beliefs and beliefs. That foolish blow is sometimes guided by karma and opens up even destiny.</p>",
+    "tags": [
+      "Melee Attack",
+      "Blade"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZhMthR9zordzGSGq",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!ZhMthR9zordzGSGq"
+}

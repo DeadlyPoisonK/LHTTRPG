@@ -1,0 +1,47 @@
+{
+  "name": "Mini-Pouch",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have two inventory slots.</p>",
+    "tags": [
+      "[Bag]",
+      "[Accessory]"
+    ],
+    "rank": 1,
+    "price": 50,
+    "equipped": false,
+    "bagSpace": 2,
+    "limit": "2",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8mjjryTD7T9DudtF",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!8mjjryTD7T9DudtF"
+}

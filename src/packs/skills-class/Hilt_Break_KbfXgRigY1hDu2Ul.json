@@ -1,0 +1,41 @@
+{
+  "name": "Hilt Break",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [STR base] &nbsp;direct damage. This damage activates one stack of [Pursuit] as if the target had failed a [Dodge Check].&nbsp;</p>\n<p>(SR 2): You can [Normal Move] up to 1 Sq before the effect is exerted. However, you can not move when you are in [Rigor] state.&nbsp;<br>(SR 3): The moving distance is increased up to 2 Sq.</p>\n<hr>\n<p>A special skill that strikes the enemy with the guard or handle of the weapon. It can also be used for restraint while closing the gap.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Auto",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KbfXgRigY1hDu2Ul",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!KbfXgRigY1hDu2Ul"
+}

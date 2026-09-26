@@ -1,0 +1,43 @@
+{
+  "name": "Elemental Shell",
+  "type": "skill",
+  "system": {
+    "description": "<p>Select one from: [Flame] [Cold] [Shock] [Blight] [Holy] [Spirit]. The target gains [Cancel (Chosen Tag): 40]. This Cancel effect is removed after applying its effects once.</p>\n<p>(Fate 1): You can use this skill with [Timing: Instant].</p>\n<hr>\n<p>A magic that envelops the target with a barrier that cancels out various attributes. The attacks that can be prevented are limited, but they demonstrate a high defensive effect against those that respond.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NJMhQLOfdEjrZNsM",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!NJMhQLOfdEjrZNsM"
+}

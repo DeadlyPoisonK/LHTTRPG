@@ -1,0 +1,49 @@
+{
+  "name": "R16 Phoenix Dance Vest",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Instant] This item loses one [Embroidery] tag as a cost. If the [Embroidery] tag reaches zero, the [Broken] tag is added to this item at the end of the scene. You gain the [Flight] state and can use the EX Power \"Air Dive\". This effect lasts until the end of the scene.\nA sleeveless torso garment made of rich red fabric with a golden thread embroidery of a phoenix. By releasing the power embedded in the embroidery, the wearer can freely float in the air for a short time.</p><hr><p>True Sulfur [Core Material] (500G) + Quilted Armor (1100G) + Scroll of Flight (Intermediate) (320G) + [Magic Catalyst 16] (250G) ×2 + Crafting Cost (780G)</p>",
+    "tags": [
+      "Light Armor",
+      "Not For Sale",
+      "Embroidery",
+      "Embroidery",
+      "Embroidery",
+      "M4"
+    ],
+    "pdef": 25,
+    "mdef": 30,
+    "initiative": 0,
+    "rank": 16,
+    "price": 3200,
+    "equipped": false,
+    "checkType": "-",
+    "range": "Close",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 4000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "czC6mpr9x5TKMNri",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!czC6mpr9x5TKMNri"
+}

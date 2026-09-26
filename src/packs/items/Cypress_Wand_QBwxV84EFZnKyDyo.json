@@ -1,0 +1,46 @@
+{
+  "name": "Cypress Wand",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A wand that has undergone multiple alchemical treatments to further enhance its magical power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 14,
+    "price": 810,
+    "equipped": false,
+    "attack": 11,
+    "magic": 23,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 9200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QBwxV84EFZnKyDyo",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!QBwxV84EFZnKyDyo"
+}

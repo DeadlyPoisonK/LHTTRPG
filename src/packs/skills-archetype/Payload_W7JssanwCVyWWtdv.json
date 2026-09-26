@@ -1,0 +1,41 @@
+{
+  "name": "Payload",
+  "type": "skill",
+  "system": {
+    "description": "<p>Increase your [Inventory Slots] by +[SRx4].</p>\n<hr>\n<p>You can carry a lot of luggage. The body trained as a protector is useful even in such a place.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "W7JssanwCVyWWtdv",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!W7JssanwCVyWWtdv"
+}

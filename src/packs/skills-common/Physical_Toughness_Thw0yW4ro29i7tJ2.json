@@ -1,0 +1,88 @@
+{
+  "name": "Physical Toughness",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain +16 [Max HP].</p>\n<hr>\n<p>You have a very tough body No matter what kind of adversity, if you stand to the end, you can manage it.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.common-skill.Item.Thw0yW4ro29i7tJ2",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "name": "+16 HP",
+      "img": "icons/svg/aura.svg",
+      "_id": "FVvbt5NpcTuO8HVi",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "system.healt.effect",
+          "mode": 2,
+          "value": "16",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!items.effects!Thw0yW4ro29i7tJ2.FVvbt5NpcTuO8HVi"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Thw0yW4ro29i7tJ2",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!Thw0yW4ro29i7tJ2"
+}

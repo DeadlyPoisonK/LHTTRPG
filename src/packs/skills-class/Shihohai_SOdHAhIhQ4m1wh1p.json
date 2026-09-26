@@ -1,0 +1,41 @@
+{
+  "name": "Shihohai",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains [Barrier: 4D + (Magic Power) + (Recovery)].</p>\n<hr>\n<p>A magic that informally performs a secret ceremony to pray for good health and wraps a certain space with a solid barrier.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SOdHAhIhQ4m1wh1p",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!SOdHAhIhQ4m1wh1p"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R8 Lightning Protection",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Your [Attack Power] increases by +3. You gain [Cancel (attacks from those with lower [Initiative] than you):5] at the start of a scene.\nA gauntlets engraved with the crest of an ancient hero known for his speed. Grants the wearer exceptional speed and the ability to predict and evade attacks from opponents slower than themselves.</p><hr><p>Unbound Soul [Core Material] (140G) + Arm Guard (120G) ×2 + [Magic Catalyst 8] (70G) ×2 + Crafting Cost (260G)</p>",
+    "tags": [
+      "Accessory",
+      "Arms",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 8,
+    "price": 780,
+    "equipped": false,
+    "initiative": 4,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vrahucK95iJzvded",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!vrahucK95iJzvded"
+}

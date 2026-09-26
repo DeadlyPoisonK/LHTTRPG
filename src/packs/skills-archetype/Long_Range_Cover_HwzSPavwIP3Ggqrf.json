@@ -1,0 +1,41 @@
+{
+  "name": "Long Range Cover",
+  "type": "skill",
+  "system": {
+    "description": "<p>During the [Damage Apply Step], you receive the expected HP damage that a target other than yourself would have received. The target receives no damage. You can only use this skill once in response to any given attack.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that blocks attacks from distant allies instead. You are prepared for unexpected attacks from a distance.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HwzSPavwIP3Ggqrf",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!HwzSPavwIP3Ggqrf"
+}

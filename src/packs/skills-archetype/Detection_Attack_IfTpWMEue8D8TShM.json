@@ -1,0 +1,43 @@
+{
+  "name": "Detection Attack",
+  "type": "skill",
+  "system": {
+    "description": "\n        <p>[Attack Power +1D] physical damage. [Accuracy Check Success] The target becomes [Identified] status. [Hate 1] This skill's [Accuracy Check] is +2.</p>\n        <hr>\n        <p>A skill that delivers a strike to test the opponent's reaction, accurately discerning the enemy's strength.</p>\n        ",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "IfTpWMEue8D8TShM",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!IfTpWMEue8D8TShM"
+}

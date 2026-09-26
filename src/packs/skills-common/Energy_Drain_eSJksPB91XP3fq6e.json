@@ -1,0 +1,43 @@
+{
+  "name": "Energy Drain",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Vampnella, or Cursed Blade.</p>\n<p>Give subjects [Decay], you gain [Regen]. Both ratings are equal to your [(STR Mod) &times; 2].&nbsp;</p>\n<p>(Target: Rigor, Dazed): Both ratings are increased to &nbsp;[(STR Mod) &times; 3].</p>\n<hr>\n<p>A skill that casts a curse that steals the target's vitality. Your opponent will continue to be slowly drained of life force, and eventually they will run out of strength and collapse, and will serve as food to satisfy your hunger.</p>",
+    "tags": [
+      "Special Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "eSJksPB91XP3fq6e",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!eSJksPB91XP3fq6e"
+}

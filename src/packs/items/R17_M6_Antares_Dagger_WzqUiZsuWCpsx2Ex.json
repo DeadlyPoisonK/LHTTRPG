@@ -1,0 +1,50 @@
+{
+  "name": "R17 M6 Antares Dagger",
+  "type": "weapon",
+  "system": {
+    "description": "<p>The intensity of the [Decay] you inflict is increased by +20. If your attack triggers [Vulnerability (Poison)], treat the intensity as double.\nA short sword with a black handle and a bright red gemstone that catches the eye. Said to have the power of a giant-killing scorpion's single strike, it possesses magic that transforms the wielder's poison into a deadly toxin.</p><hr><p>Vermilion-Lacquered Arrow [Core Material] (500G) + Dirk (640G) + Deadly Poison (Advanced) (250G) ×3 + Decay Poison (Advanced) (280G) ×3 + [Magic Catalyst 17] (280G) ×2 + Crafting Cost (790G)</p>",
+    "tags": [
+      "One-Handed",
+      "Light",
+      "Blade",
+      "Poison",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 0,
+    "rank": 17,
+    "price": 4080,
+    "equipped": false,
+    "attack": 22,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 11900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WzqUiZsuWCpsx2Ex",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!WzqUiZsuWCpsx2Ex"
+}

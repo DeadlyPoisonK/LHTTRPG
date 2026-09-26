@@ -1,0 +1,43 @@
+{
+  "name": "Fish to Catch",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you receive damage from the target. You may make the target make a [Safe Move (forced)] of 1 Sq. This movement must bring the target closer to you.</p>\n<p>(Hate Top): Increase the distance the target moves by +1 Sq.</p>\n<hr>\n<p>A special skill that pulls the enemy closer to you while restraining them with your weapon when attacked. In the case of a bow, the enemy is guided by a warning shot.</p>",
+    "tags": [
+      "Two-Handed"
+    ],
+    "timing": "After Damage",
+    "checkType": "Auto",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "iWR6ccHJskLgrC0g",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!iWR6ccHJskLgrC0g"
+}

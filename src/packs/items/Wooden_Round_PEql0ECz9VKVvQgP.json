@@ -1,0 +1,45 @@
+{
+  "name": "Wooden Round",
+  "type": "shield",
+  "system": {
+    "description": "<p>wooden shield. Large enough to cover the upper body.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Shield]"
+    ],
+    "pdef": 5,
+    "mdef": 4,
+    "rank": 5,
+    "price": 100,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/shield.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PEql0ECz9VKVvQgP",
+  "folder": "nDWJQ58O5e8dNPs2",
+  "_key": "!items!PEql0ECz9VKVvQgP"
+}

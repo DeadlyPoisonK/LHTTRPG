@@ -1,0 +1,41 @@
+{
+  "name": "Elemental Bolt",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SRx2) + 2] direct damage to the target. This damage triggers [Weakness] on the secondary target, as if they had failed their [Dodge Check]. You may only use this skill when you have the [Fairy] tag.</p>\n<hr>\n<p>A special skill that commands the summoned spirits to attack the enemy with magic arrows. There are few openings, and you can order other attacks in succession.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "AIFbdhizYvS4Y67g",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!AIFbdhizYvS4Y67g"
+}

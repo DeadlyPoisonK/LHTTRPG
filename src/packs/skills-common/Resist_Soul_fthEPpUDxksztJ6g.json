@@ -1,0 +1,41 @@
+{
+  "name": "Resist Soul",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can use it whenever you like. Instantly removes one status with the [Seal] tag you are receiving.</p>\n<hr>\n<p>A special skill that bounces off special restraints on the soul. &lt;Adventurers&gt; have wings in their souls. Your soul will transcend the horizon of cause and effect, and will soar freely.</p>",
+    "tags": [],
+    "timing": "",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "1/Scene",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "fthEPpUDxksztJ6g",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!fthEPpUDxksztJ6g"
+}

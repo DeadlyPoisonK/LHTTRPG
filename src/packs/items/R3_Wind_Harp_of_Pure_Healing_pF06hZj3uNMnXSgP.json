@@ -1,0 +1,49 @@
+{
+  "name": "R3 Wind Harp of Pure Healing",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When using the \"Serenade to the Goddess\" skill, this item increases the HP recovery amount by +10</p>\n<hr>\n<p>Purrified Eye &nbsp;[Core Material] (50G)</p>\n<p>Simple Instrument (60G)</p>\n<p>Black Ring (90G)</p>\n<p>3x [Magic Catalyst 3] (25G)</p>\n<p>Construction (105G)</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\" data-ved=\"2ahUKEwi0xd-ok-GDAxWJIbkGHb8EABwQ3ewLegQIBRAQ\"><span class=\"Y2IQFc\" lang=\"en\">A wind-powered keyboard organ decorated with four small statues of goddesses. The goddess statue has a magical fan that rotates by catching even the slightest breeze. By supplying wind to the linked power sources, the organ produces a rich tone. It seems that some of the more legendary models can change the tone, but their existence has not yet been confirmed.</span></p>",
+    "tags": [
+      "Two-Handed",
+      "Instrument",
+      "Holy",
+      "Rare",
+      "M6"
+    ],
+    "initiative": 0,
+    "rank": 3,
+    "price": 380,
+    "equipped": false,
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "-",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pF06hZj3uNMnXSgP",
+  "folder": "9YxL5WbMCfR5GnFP",
+  "_key": "!items!pF06hZj3uNMnXSgP"
+}

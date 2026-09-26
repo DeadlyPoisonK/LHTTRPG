@@ -1,0 +1,43 @@
+{
+  "name": "Trade",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can move an item from your [Inventory Slot] into a willing target's [Inventory Slot]. If the target has no empty [Inventory Slots], the item is dropped in the same square as the target. You can use this basic skill any number of times during a Briefing.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "sDoZ2vHmSG9V6X4Z",
+  "folder": null,
+  "_key": "!items!sDoZ2vHmSG9V6X4Z"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Tiger Stance",
+  "type": "skill",
+  "system": {
+    "description": "<p>The rating of [Pursuit] you give is + [SR &times; 2]. You gain [Weakness (Boss, Raid)] with rating is equal to your [DEX mod].</p>\n<hr>\n<p>A special skill that prepares you to unleash wild attacks in all directions, like a tiger's claw tearing apart its prey. Your defense will be a little weaker, but you won't be able to catch a chance against a half-hearted enemy.</p>",
+    "tags": [
+      "Stance",
+      "Preparation"
+    ],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HRGHCuGwmbSuuo2R",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!HRGHCuGwmbSuuo2R"
+}

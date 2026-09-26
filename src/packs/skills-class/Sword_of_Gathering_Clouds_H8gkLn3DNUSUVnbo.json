@@ -1,0 +1,43 @@
+{
+  "name": "Sword of Gathering Clouds",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after the target makes a damage roll. Reduce the result of the target's damage roll by -[Your (Attack Power)].</p>\n<hr>\n<p>A special skill that cuts off the enemy's attack with your own weapon and offsets it. Your katana banishes misfortunes to your allies, like a divine sword that quelled a raging wildfire.</p>",
+    "tags": [
+      "Katana"
+    ],
+    "timing": "Refer",
+    "checkType": "Automatic",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "H8gkLn3DNUSUVnbo",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!H8gkLn3DNUSUVnbo"
+}

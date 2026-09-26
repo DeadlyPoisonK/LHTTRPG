@@ -1,0 +1,44 @@
+{
+  "name": "Orb of Larva",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target.</p>\n<hr>\n<p>An offensive spell that crushes a group of enemies by creating a mass of hot lava and flying it around freely.</p>",
+    "tags": [
+      "Magic Attack",
+      "Flame"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "CkG8Wg2xgXXFFi63",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!CkG8Wg2xgXXFFi63"
+}

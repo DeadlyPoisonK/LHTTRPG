@@ -1,0 +1,41 @@
+{
+  "name": "Battle Commander",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may not target yourself with this skill. The target may immediately perform one [Timing: Major] action with the [Weapon Attack] [Magic Attack] or [Special Attack] tag. Reduce the [Hate] cost of that action by -2 (minimum 0).</p>\n<hr>\n<p>A special skill that gives accurate instructions to allies and makes them attack on your behalf.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4f15Th8qDJlMlBv8",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!4f15Th8qDJlMlBv8"
+}

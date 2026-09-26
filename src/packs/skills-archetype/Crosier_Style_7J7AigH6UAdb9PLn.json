@@ -1,0 +1,43 @@
+{
+  "name": "Crosier Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become able to equip weapons with the [Staff] tag. You may only equip [Staff] weapons with an Item Rank equal to or lower than [CR-2 (minimum 1)].</p>\n<p>(SR2): You may equip [Staff] weapons with an IR equal to your CR.</p>\n<hr>\n<p>A fighting style that draws power from a ceremonial staff and wields powerful magic.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7J7AigH6UAdb9PLn",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!7J7AigH6UAdb9PLn"
+}

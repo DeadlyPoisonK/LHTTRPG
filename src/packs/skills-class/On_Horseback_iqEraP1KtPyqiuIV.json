@@ -1,0 +1,43 @@
+{
+  "name": "On Horseback",
+  "type": "skill",
+  "system": {
+    "description": "<p>Your [Speed] increases by 1. This effect is treated as Combat Status and lasts until the end of the round.</p>\n<hr>\n<p>A special skill that runs through the battlefield faster than anyone else and cuts into enemy lines. A one-on-one race is the flower of battle. It's the true heart of a samurai.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "iqEraP1KtPyqiuIV",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!iqEraP1KtPyqiuIV"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R16 M4 Guardian Staff: Fate Guarder",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Setup] All allies within 20Sq of you receive a +1D instead of +2 to \"Defense Checks when in Hate\" for the duration of this effect, which lasts until the end of the round. Once per scenario.\nA staff that binds the power of moonlight and blowing wind with strong threads, sealing it within. It is said to provide moonlight to those lost in the night and a following wind to those confused by calm. When the password is spoken and the sealed knot is undone, a luminous white mist fills the surroundings, granting the \"Power to Resist Adversity.\" Many large guilds carry it as a talisman.</p><hr><p>Strong Core Material (500G) + Cypress Staff (850G) + Stealth Scroll (Intermediate) (460G) + [Magic Catalyst 16] (250G) ×2 + Crafting Cost (690G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Staff",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -2,
+    "rank": 16,
+    "price": 3000,
+    "equipped": false,
+    "attack": 29,
+    "magic": 40,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 11500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Wgm4a0hyqGcFiug2",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Wgm4a0hyqGcFiug2"
+}

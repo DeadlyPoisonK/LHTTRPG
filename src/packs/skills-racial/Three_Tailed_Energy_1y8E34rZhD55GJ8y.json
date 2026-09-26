@@ -1,0 +1,43 @@
+{
+  "name": "Three-Tailed Energy",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when a skill would cost you a single [Fate Point]. The effect of that skill activates without you spending the [Fate Point].</p>\n<hr>\n<p>You can temporarily draw out the true value of your magic and skills with the blessing of the fox-tail tribe's tail, which holds the power of demons.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Refer",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "3/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1y8E34rZhD55GJ8y",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!1y8E34rZhD55GJ8y"
+}

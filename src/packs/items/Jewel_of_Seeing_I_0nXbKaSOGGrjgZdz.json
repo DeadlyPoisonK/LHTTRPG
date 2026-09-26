@@ -1,0 +1,46 @@
+{
+  "name": "Jewel of Seeing I",
+  "type": "gear",
+  "system": {
+    "description": "<p>Increase your Hate by +1. This jewel targets all Props within range that have the [Nature] tag as well as a [Detection Difficulty]. The target's [Concealed] status is removed. (Fate 1): All targeted Props also take a -2 penalty to their [Analysis Difficulty] and [Disable Difficulty]. (CR15): This item has no effect.</p>",
+    "tags": [
+      "Gem",
+      "Consumable"
+    ],
+    "rank": 5,
+    "price": 80,
+    "equipped": false,
+    "timing": "Setup",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Wide Area 20 (Indiscriminate)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0nXbKaSOGGrjgZdz",
+  "folder": "NuJVdhNIcPgDEV3i",
+  "_key": "!items!0nXbKaSOGGrjgZdz"
+}

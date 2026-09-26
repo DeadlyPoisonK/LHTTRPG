@@ -1,0 +1,43 @@
+{
+  "name": "Dash",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] up to your [Speed] + 2 Sq. &nbsp;Immediately after, you lose a Minor Action. If you have no Minor Action to lose, you cannot use this skill.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "Ql4JC6Et0zoSMkEL",
+  "folder": null,
+  "_key": "!items!Ql4JC6Et0zoSMkEL"
+}

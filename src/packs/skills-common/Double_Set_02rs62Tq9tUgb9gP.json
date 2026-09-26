@@ -1,0 +1,43 @@
+{
+  "name": "Double Set",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately use two [Timing: Setup] actions.</p>\n<hr>\n<p>A special skill that allows you to quickly prepare the battle situation by preparing in advance and exploiting the enemy's openings. It's not uncommon for the difference in strategy to make a move influence the battle situation.</p>",
+    "tags": [
+      "Swift"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "02rs62Tq9tUgb9gP",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!02rs62Tq9tUgb9gP"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Prismize",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, if you make a [Magic Attack] with the [Spirit] tag that hits the target but fails to deal even 1 point of HP Damage, you may change that attack to having any one of the following tags: [Flame] [Cold] [Shock] [Holy] or [Blight].</p>\n<hr>\n<p>A special skill that transforms magical power into various properties, changing the attributes and characteristics of familiar magic. The magical power you freely manipulate appears to emit seven colors of brilliance.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "m9XQTBtlkWl9bdwi",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!m9XQTBtlkWl9bdwi"
+}

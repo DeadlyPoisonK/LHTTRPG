@@ -1,0 +1,43 @@
+{
+  "name": "Energy Protection Ⅱ",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Choose one of the following tags: [Flame] [Cold] [Shock] [Blight] [Holy] [Spirit]. The target gains [Cancel (Chosen Tag)] with a rating equal to [[INT mod]xSR].</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A magic that develops a powerful force field around you that conflicts with specific attributes, and grants various resistances to surrounding allies.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xTfdDUPxNTG1hbxt",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!xTfdDUPxNTG1hbxt"
+}

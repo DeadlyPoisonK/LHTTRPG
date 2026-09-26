@@ -1,0 +1,335 @@
+{
+  "name": "Goblin Artillery",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 28,
+      "max": 28,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Mob",
+      "Humanoid",
+      "Goblin"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 4,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 15,
+        "magic": 12
+      },
+      "speed": 2,
+      "initiative": 7
+    },
+    "rank": 6,
+    "idendification": "4",
+    "hateMultiplier": "3",
+    "checks": {
+      "evasion": {
+        "dice": 0,
+        "mod": 9
+      },
+      "resistance": {
+        "dice": 0,
+        "mod": 8
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt; height: 42px;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"height: 21px;\">\n<td class=\"xl66\" style=\"height: 21px; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">Fixed</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\">Strange Bone Helmet[Valuable] (30G)</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<hr>\n<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">▼Explanation</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">A raiding force of Green Goblins attacks a village of Earthlings.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">During this time, the Green Goblin is summoned to destroy the barrier.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">artillerymen&gt;.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">The portable stone trebuchet he carried on his back was from Midori Elementary School.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">A type of weapon created by Oni's engineers, which can be used for bows and magic.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">It is possible to fire unilaterally from a short distance.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Usually a cannonball is a stone about the size of an armful, but the surrounding</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Throw away anything that can be used, such as debris and junk.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">It's coming.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Bombing enemy groups in addition to attacking bases</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">He does not hesitate to involve his allies at the point of impact.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Because they cannot protect themselves if approached, they often attack other</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">A demon is accompanying him as a bodyguard.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">In particular, it supports artillery bombardment.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">The collaboration with the Green Goblin Observer is outstanding, and the adventure</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">It would also be a threat to people.</span></span></p>"
+  },
+  "prototypeToken": {
+    "name": "Goblin Artilleryman",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Goblin Rage",
+      "type": "skill",
+      "system": {
+        "description": "<ul>\n<li>Use this skill when this enemy takes [Spirit] damage.&nbsp;</li>\n<li>This enemy immediately uses Mobile Catapult.&nbsp;</li>\n<li>Increase the damage of Mobile Catapult by +5.</li>\n</ul>",
+        "tags": [],
+        "timing": "After Damage",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Combat",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "C5dwhoRBS5t8Tbmk",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!PDrLwH8v5vDH5PKL.C5dwhoRBS5t8Tbmk"
+    },
+    {
+      "name": "Defense Formation",
+      "type": "skill",
+      "system": {
+        "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">This enemy </span></span><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">gains [barrier].</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Its strength is ``this energy and</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Goblin] in the same Sq, excluding this enemy</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Equivalent to the number of enemies with the tag x 10.</span></span></p>",
+        "tags": [],
+        "timing": "Setup",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Scene",
+        "macroeffect": ""
+      },
+      "_id": "4DacoOq8AN9ARncj",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!PDrLwH8v5vDH5PKL.4DacoOq8AN9ARncj"
+    },
+    {
+      "name": "Mobile Catapult",
+      "type": "skill",
+      "system": {
+        "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[40+2</span></span><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">D] inflicts physical damage.</span></span></p>\n<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Minor] This skill</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">becomes &ldquo;Target: Area(A)&rdquo;</span></span></p>",
+        "tags": [
+          "Shooting Attack"
+        ],
+        "timing": "Major",
+        "checkType": "Opposed (13 Fixed vs Evasion)",
+        "range": "6 Sq",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "CW5wwqP6zssTh51Y",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!PDrLwH8v5vDH5PKL.CW5wwqP6zssTh51Y"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PDrLwH8v5vDH5PKL",
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  },
+  "folder": "4DWuzi8LwFa0NIND",
+  "_key": "!actors!PDrLwH8v5vDH5PKL"
+}

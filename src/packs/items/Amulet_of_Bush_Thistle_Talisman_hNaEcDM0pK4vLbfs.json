@@ -1,0 +1,44 @@
+{
+  "name": "Amulet of Bush (Thistle Talisman)",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A talisman adorned with a bright thistle that protects itself with sharp thorns.</p>",
+    "tags": [
+      "[Accessory]"
+    ],
+    "pdef": 0,
+    "mdef": 9,
+    "rank": 17,
+    "price": 760,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hNaEcDM0pK4vLbfs",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!hNaEcDM0pK4vLbfs"
+}

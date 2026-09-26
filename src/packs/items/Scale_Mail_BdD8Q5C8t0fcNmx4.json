@@ -1,0 +1,44 @@
+{
+  "name": "Scale Mail",
+  "type": "armor",
+  "system": {
+    "description": "<p>An armor made of many scale-like metal pieces sewn onto a leather jacket.</p>",
+    "tags": [
+      "[Medium Armor]"
+    ],
+    "pdef": 23,
+    "mdef": 18,
+    "initiative": 0,
+    "rank": 12,
+    "price": 780,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "BdD8Q5C8t0fcNmx4",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!BdD8Q5C8t0fcNmx4"
+}

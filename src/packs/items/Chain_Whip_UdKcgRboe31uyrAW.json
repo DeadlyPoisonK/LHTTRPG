@@ -1,0 +1,46 @@
+{
+  "name": "Chain Whip",
+  "type": "weapon",
+  "system": {
+    "description": "<p>metal whip. It became heavier and more destructive.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Whip]"
+    ],
+    "initiative": 2,
+    "rank": 5,
+    "price": 100,
+    "equipped": false,
+    "attack": 7,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 10600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UdKcgRboe31uyrAW",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!UdKcgRboe31uyrAW"
+}

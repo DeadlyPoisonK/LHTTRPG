@@ -1,0 +1,46 @@
+{
+  "name": "Short Spear",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A hand spear with a shorter handle for easier handling.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Spear]"
+    ],
+    "initiative": 1,
+    "rank": 1,
+    "price": 60,
+    "equipped": false,
+    "attack": 3,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 8500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NJvXZVz5vZOvOhjT",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!NJvXZVz5vZOvOhjT"
+}

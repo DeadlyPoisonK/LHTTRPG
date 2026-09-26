@@ -1,0 +1,43 @@
+{
+  "name": "Bladesinger Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are equipped with only a single [One-Handed] or [Two-Handed] melee weapon. During the Cleanup Process of a round in which you have dealt damage with a [Melee Attack], you may reduce the total cleanup [Hate] cost of your [Harmony] skills by -[SR] (minimum 0). You gain a +[[POW Mod] x 2] bonus to your equipped [One-Handed] weapon.</p>\n<hr>\n<p>A battle style that plays music on the battlefield while wielding weapons in the vanguard. Its appearance encourages allies and frightens enemies.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nmSNujBPoAKZ6Nq9",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!nmSNujBPoAKZ6Nq9"
+}

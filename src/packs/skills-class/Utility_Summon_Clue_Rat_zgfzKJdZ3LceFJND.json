@@ -1,0 +1,43 @@
+{
+  "_id": "zgfzKJdZ3LceFJND",
+  "name": "Utility Summon: Clue Rat",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>You may re-roll the check you just made.</p>",
+    "tags": [
+      "General"
+    ],
+    "timing": "After Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!zgfzKJdZ3LceFJND"
+}

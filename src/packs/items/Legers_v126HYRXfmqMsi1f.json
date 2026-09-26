@@ -1,0 +1,45 @@
+{
+  "name": "Legers",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Metal armor that protects from the ankle to the knee, centering on the shin.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Boots]"
+    ],
+    "pdef": 1,
+    "mdef": 1,
+    "rank": 17,
+    "price": 730,
+    "equipped": false,
+    "initiative": 6,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "v126HYRXfmqMsi1f",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!v126HYRXfmqMsi1f"
+}

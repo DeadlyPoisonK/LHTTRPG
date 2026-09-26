@@ -1,0 +1,41 @@
+{
+  "name": "Opening Gambit",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [SR] stacks of [Pursuit: 7]. These [Pursuit] stacks may be divided amongst characters within range as you please.</p>\n<p>(Fate 1): Add +1 to the number of [Pursuit] stacks.&nbsp;<br>(Fate 2): Add +2 to the number of [Pursuit] stacks.&nbsp;<br>(CR11): The [Pursuit] rating increases to 15.&nbsp;<br>(CR21): The [Pursuit] rating increases to 24.</p>\n<hr>\n<p>A special skill that destroys the enemy's defense by throwing one strategy after another according to the tactical standard. Attacks aimed at a disturbed posture inflict deep damage on the enemy.</p>",
+    "tags": [],
+    "timing": "Instant",
+    "checkType": "Automatic",
+    "range": "Weapon",
+    "target": "Refer",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QEXGPgVkszg3FJT6",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!QEXGPgVkszg3FJT6"
+}

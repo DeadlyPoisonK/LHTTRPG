@@ -1,0 +1,41 @@
+{
+  "name": "Mist Maker",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Artificer, Sigilmancer, Alchemist, Wand Master, or Machinist.</p>\n<p>You receive one basic item with the [Magic Stone] or [Magic] tag whose IR is less than [CR - 2 (at least 1)].&nbsp;</p>\n<p>(SR2): You can receive an item with an IR up to your CR.</p>\n<p>(Connection: Craftsman, Collector, Magician): The fate cost is 0 instead of 1.</p>\n<hr>\n<p>A special skill that puts magical power into various tools and creates special magic tools.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Fate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vk5TZUE1gZZhaClc",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!vk5TZUE1gZZhaClc"
+}

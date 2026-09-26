@@ -1,0 +1,43 @@
+{
+  "name": "Slashing Arrows",
+  "type": "skill",
+  "system": {
+    "description": "<p>You must be in [Standby]. Use this skill when you make an Evasion or Resistance check against an attack with the tags [Target: Single] and [Ranged Attack] or [Magic Attack]. In the case of successful [Dodge Check], not only will the attack fail but also damage the attacker as if they hit themselves.</p>\n<hr>\n<p>A special skill that instantly repels arrows that aim at you. A flash of a samurai who has reached the secret can even cut down magic.</p>",
+    "tags": [
+      "Standby"
+    ],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "tgU1rgcnc0ZD5cIJ",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!tgU1rgcnc0ZD5cIJ"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R3 M5 Mana Eater",
+  "type": "weapon",
+  "system": {
+    "description": "<p>At the start of a scene, you gain [Cancel (Magic Attacks): 10].</p>\n<p>A large sword with an inscription that neutralizes hostile magic. Attenuates the power of magic attacks against the owner.</p>\n<hr>\n<p>Anti-Magic Mercury [Core Material] (40G) + Zweihander (110G) + [Magic Catalyst 3] (25G) x 5 + Crafting Cost (95G)</p>",
+    "tags": [
+      "M5",
+      "Two-Handed",
+      "Blade",
+      "Not for Sale"
+    ],
+    "initiative": 0,
+    "rank": 3,
+    "price": 370,
+    "equipped": false,
+    "attack": 16,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 23300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vb8hmVXPtQgRoEAF",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!vb8hmVXPtQgRoEAF"
+}

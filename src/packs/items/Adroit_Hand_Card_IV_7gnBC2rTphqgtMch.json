@@ -1,0 +1,46 @@
+{
+  "name": "Adroit Hand Card IV",
+  "type": "gear",
+  "system": {
+    "description": "<p>The next time the target performs Prop Disable, they gain a +1D bonus to the check. The effect of multiple Adroit Hand Cards (regardless of grade) do not stack, and the effect is removed after being applied once, or at the end of the scene.</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 16,
+    "price": 560,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7gnBC2rTphqgtMch",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!7gnBC2rTphqgtMch"
+}

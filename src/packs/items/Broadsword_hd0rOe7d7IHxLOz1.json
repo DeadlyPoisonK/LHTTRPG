@@ -1,0 +1,46 @@
+{
+  "name": "Broadsword",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A straight sword with a wide blade.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 10,
+    "price": 330,
+    "equipped": false,
+    "attack": 13,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 17100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hd0rOe7d7IHxLOz1",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!hd0rOe7d7IHxLOz1"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Fortune's Path",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target may make a [Teleport] up to 2 Sq.</p>\n<hr>\n<p>Magic that guides allies in the direction of auspiciousness and moves them to more ideal positions.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "XBDoFTWUalvPFr7i",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!XBDoFTWUalvPFr7i"
+}

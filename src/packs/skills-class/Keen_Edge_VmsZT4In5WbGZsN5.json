@@ -1,0 +1,44 @@
+{
+  "name": "Keen Edge",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains a +[SRx3] bonus to damage rolls. This skill can be used multiple times when used during the same Briefing.</p>\n<hr>\n<p>Support magic that strengthens weapons and increases power. It is a magic that enhances the function as a tool instead of strengthening physically, and by casting it on staffs and magic stones, the power of attack magic also increases.</p>",
+    "tags": [
+      "Enchantment",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VmsZT4In5WbGZsN5",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!VmsZT4In5WbGZsN5"
+}

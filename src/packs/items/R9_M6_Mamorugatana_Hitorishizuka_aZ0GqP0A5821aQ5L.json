@@ -1,0 +1,48 @@
+{
+  "name": "R9 M6 Mamorugatana Hitorishizuka",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Instant] You gain [Barrier:40]. Additionally, you gain +1 to [Defense Check] against attacks other than Close range (this effect is treated as a CS, and this effect is lost at the same time as the [Barrier] from this effect is lost). Once per scene.\nA slender wakizashi whose blade is sheathed in ice crystals that scatter when drawn. The frost that resides within the blade envelops its wielder, forming an ice wall that blocks and deflects enemy attacks, protecting the wielder's body.</p><hr><p>Blizzard Crystal [Core Material] (140G) + Nagamaki (490G) + Barrier Gem (Basic) (40G) ×4 + [Magic Catalyst 9] (90G) ×3 + Crafting Cost (510G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Katana",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -1,
+    "rank": 9,
+    "price": 1570,
+    "equipped": false,
+    "attack": 23,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 13700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aZ0GqP0A5821aQ5L",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!aZ0GqP0A5821aQ5L"
+}

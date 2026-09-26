@@ -1,0 +1,47 @@
+{
+  "name": "R3 Sorcerer's Gauntlet",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You gain +3 [Magic Power].</p>\n<p>When you use Enhance Code, change the +(SRx3) effect to +(SRx5).</p>\n<hr>\n<p>A gauntlet inlaid with a jewel that charges the magical power of the attribute controlled by the wearer. It has the effect of increasing the owner's mental power, allowing them to concentrate their magical power more deeply in a short amount of time.</p>\n<hr>\n<p>Crimson Magic Stone [Core Material] (40G) + Sigil Guard (60G) x 2 + [Magic Catalyst 3] (25G) x 4 + Crafting Cost (120G)</p>",
+    "tags": [
+      "Accesory",
+      "Gloves",
+      "Rare",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 3,
+    "price": 380,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 3,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uMjQ5mOLR50fPAwN",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!uMjQ5mOLR50fPAwN"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R16 Warding Cloak",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You have the [High Protection] tag. [Trigger: Text] Used when your main process ends. If your [Hate] is 6 or higher, you will enter the [Hidden] state. Once per scene.\nA cloak used to protect important figures such as royalty from curses and poisons. It blocks strong malice directed toward the one wearing it, and temporarily makes the wearer unrecognized by enemies.</p><hr><p>Golden Mane [Core Material] (500G) + Inverness (470G) + Scroll of High Protection (Basic) (250G) ×2 + Scroll of Stealth (Intermediate) (460G) + [Magic Catalyst 16] (250G) ×3 + Crafting Cost (1000G)</p>",
+    "tags": [
+      "Accessory",
+      "Cloak",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 4,
+    "mdef": 4,
+    "rank": 16,
+    "price": 3680,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pMfQjiEMcGQp5gXQ",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!pMfQjiEMcGQp5gXQ"
+}

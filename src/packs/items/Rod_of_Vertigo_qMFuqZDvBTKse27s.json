@@ -1,0 +1,48 @@
+{
+  "name": "Rod of Vertigo",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Mesmerize\" has a range of \"6Sq\".\nA short staff with a distinctive gemstone embedded at the tip, featuring swirling patterns. The waves emitted from the gemstone cause intense dizziness and hinder movement. Effective against undead and golems, this item was a staple among Enchanters skilled in cloud control since the game era.</p><hr><p>Immature Dragon Orb [Core Material] (300G) + Cedar Wand (450G) + Exhausting Poison (Intermediate) (140G) ×2 + [Magic Catalyst 12] (150G) ×3 + Crafting Cost (630G)</p>",
+    "tags": [
+      "One-Handed",
+      "Staff",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 12,
+    "price": 2110,
+    "equipped": false,
+    "attack": 10,
+    "magic": 27,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 20700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qMFuqZDvBTKse27s",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!qMFuqZDvBTKse27s"
+}

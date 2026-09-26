@@ -1,0 +1,41 @@
+{
+  "name": "Parado Riposte",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill can only be used when at least one of your [Hand Slot] is empty. Use this when you succeed in [Dodge Check] against an attack from target. It gives direct damage to the target equal to your [Attack Power].</p>\n<hr>\n<p>A special skill that restrains the enemy with your free hand, parries the enemy's attack with a fine line, and unleashes a counterattack.</p>",
+    "tags": [],
+    "timing": "After Check",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NHT11KxOARRRcXDJ",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!NHT11KxOARRRcXDJ"
+}

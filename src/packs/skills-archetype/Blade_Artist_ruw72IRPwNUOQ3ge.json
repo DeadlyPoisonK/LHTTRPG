@@ -1,0 +1,88 @@
+{
+  "name": "Blade Artist",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to [Hit Checks].</p>\n<hr>\n<p>Your weapons are like your limbs. The blade in his hand captures the enemy's body beautifully and accurately.</p>",
+    "tags": [
+      "Auto"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.weapon-master-archetype-class.ruw72IRPwNUOQ3ge",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "ISBOm3pbP4ELivnT",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "+1D [Hit Checks].",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!ruw72IRPwNUOQ3ge.ISBOm3pbP4ELivnT"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ruw72IRPwNUOQ3ge",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!ruw72IRPwNUOQ3ge"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Mysterious Item 3",
+  "type": "gear",
+  "system": {
+    "description": "<p>A magical catalyst used to create magic items. Rank 3.</p>",
+    "tags": [
+      "Magic Catalyst 3"
+    ],
+    "rank": 3,
+    "price": 25,
+    "equipped": false,
+    "timing": "-",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "sIQlqF1Du4YEZVLK",
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!sIQlqF1Du4YEZVLK"
+}

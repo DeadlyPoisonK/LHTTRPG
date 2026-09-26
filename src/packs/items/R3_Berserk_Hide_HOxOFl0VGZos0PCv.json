@@ -1,0 +1,46 @@
+{
+  "name": "R3 Berserk Hide",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Setup]: You gain a +5 bonus to your next damage roll. Treat this effect as a Combat Status that is removed after applying once. You also take [Weakness: 10]. Treat this effect as a Bad Status that lasts until the end of the round.</p>\n<p>An ancient warrior's costume passed down in Ezzo. Dressed in bearskins, they were said to have gone mad in battle and defeated their enemies at the expense of themselves.</p>\n<hr>\n<p>Mad Bear Fur [Core Material] (40G) + Hide Armor (130G) + [Magic Catalyst 3] (25G) x 3 + Crafting Cost (105G)</p>",
+    "tags": [
+      "M4",
+      "Med. Armor",
+      "Rare"
+    ],
+    "pdef": 8,
+    "mdef": 6,
+    "initiative": 0,
+    "rank": 3,
+    "price": 350,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HOxOFl0VGZos0PCv",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!HOxOFl0VGZos0PCv"
+}

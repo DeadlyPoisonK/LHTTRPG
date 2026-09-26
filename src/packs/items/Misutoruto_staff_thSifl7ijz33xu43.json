@@ -1,0 +1,46 @@
+{
+  "name": "Misutoruto staff",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A long mistletoe staff made with emphasis on transmitting magical power.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Staff]"
+    ],
+    "initiative": -2,
+    "rank": 24,
+    "price": 2300,
+    "equipped": false,
+    "attack": 41,
+    "magic": 46,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 21700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "thSifl7ijz33xu43",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!thSifl7ijz33xu43"
+}

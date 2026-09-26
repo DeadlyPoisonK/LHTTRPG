@@ -1,0 +1,47 @@
+{
+  "name": "R2 Coat of arms double ring",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Action] Use at the same time as your [Magic attack] with \"Range: 2Sq\" or more. The range of that attack is +1Sq. Can be used once per scene.</p>\n<hr>\n<p>A ring shaped like two rings intertwined and connected. Its shape itself depicts a crest that amplifies magical power.</p>\n<hr>\n<p>Bond Medal [Core Material] (30G) + Ash Ring (70G) x 2 + [Magic Catalyst 2] (20G) x 2 + Crafting Cost (70G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 2,
+    "price": 280,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 8,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "K9Bozrl3M9P6V7Vv",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!K9Bozrl3M9P6V7Vv"
+}

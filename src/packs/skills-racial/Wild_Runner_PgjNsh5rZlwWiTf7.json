@@ -1,0 +1,41 @@
+{
+  "name": "Wild Runner",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you are not equipped with [Heavy Armor] or [Medium Armor], you gain a +1 bonus to [Speed].</p>\n<hr>\n<p>You have strong legs. Its power, which derives from the blood of the Wolf Fang tribe, is demonstrated only when wearing light clothing that is close to its natural appearance.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PgjNsh5rZlwWiTf7",
+  "folder": "Cm0dIMlUPNihp8rO",
+  "_key": "!items!PgjNsh5rZlwWiTf7"
+}

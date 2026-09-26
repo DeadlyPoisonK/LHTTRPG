@@ -1,0 +1,41 @@
+{
+  "name": "Troubadour",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +2 bonus to [Negotiation Checks] and [Operate Checks].</p>\n<p>(SR2): The bonus becomes +1D.</p>\n<hr>\n<p>You are worthy of the name Bard, with knowledge of the etiquette of various venues and the dexterity to handle any musical instrument.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "omnqmst0W3C6y5Qi",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!omnqmst0W3C6y5Qi"
+}

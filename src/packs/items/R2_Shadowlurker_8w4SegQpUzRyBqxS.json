@@ -1,0 +1,46 @@
+{
+  "name": "R2 Shadowlurker",
+  "type": "armor",
+  "system": {
+    "description": "<p>At the start of a scene, you gain [Cancel (Blight): 20]. [Self: Hidden]: When you participate in an opposed check as the aggressor, the defender takes a -1D penalty.</p>\n<p>A costume woven from a special material that does not reflect light. The wearer's appearance melts into the darkness, making it difficult to see.</p>\n<hr>\n<p>Dusk Wings [Core Material] (30G) + Martial Arts Dress (120G) + [Magic Catalyst 2] (20G) x 3 + Crafting Cost (110G)</p>",
+    "tags": [
+      "M5",
+      "Light Armor",
+      "Rare"
+    ],
+    "pdef": 4,
+    "mdef": 6,
+    "initiative": 0,
+    "rank": 2,
+    "price": 320,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8w4SegQpUzRyBqxS",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!8w4SegQpUzRyBqxS"
+}

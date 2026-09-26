@@ -1,0 +1,41 @@
+{
+  "name": "Scapedoll",
+  "type": "skill",
+  "system": {
+    "description": "<p>Usable only when you have [Construct] tag. During the [Damage Apply Step], you receive the expected HP damage that a target other than yourself would have received. The target receives no damage. You can only use this skill once in response to any given attack.</p>\n<hr>\n<p>A special skill that orders artificial creatures that are summoning servants to protect their allies. The damage will be fed back to you, but the decision will often save the entire party.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "[SR]Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "kWJO2QZdQHWkLlrz",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!kWJO2QZdQHWkLlrz"
+}

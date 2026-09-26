@@ -1,0 +1,43 @@
+{
+  "name": "Scouting",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill targets the next scene. Make your [Athletics Check] once. Compare the result to every enemy appearing in the next scene's [Identification Difficulty]. For each success, you learn that enemy's name, appearance, rank, and tags. You take [Fatigue: (Base STR)].</p>\n<p>(Fumble): The enemy notices your scouting.</p>\n<hr>\n<p><span class=\"Y2IQFc\" lang=\"en\">A special skill that conducts preliminary reconnaissance before entering battle and conveys information about the enemy you encounter to your allies.</span></p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Athletics vs. Refer)\t\t",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dLKPTWnJN8RaKK6T",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!dLKPTWnJN8RaKK6T"
+}

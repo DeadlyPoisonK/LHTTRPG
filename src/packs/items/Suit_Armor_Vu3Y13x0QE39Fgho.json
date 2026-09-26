@@ -1,0 +1,44 @@
+{
+  "name": "Suit Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>Plate armor that covers the whole body without any gaps and protects the user from all attacks.</p>",
+    "tags": [
+      "[Heavy Armor]"
+    ],
+    "pdef": 46,
+    "mdef": 28,
+    "initiative": -2,
+    "rank": 19,
+    "price": 1900,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 3500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Vu3Y13x0QE39Fgho",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!Vu3Y13x0QE39Fgho"
+}

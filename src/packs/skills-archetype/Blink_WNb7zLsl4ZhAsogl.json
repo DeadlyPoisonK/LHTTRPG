@@ -1,0 +1,43 @@
+{
+  "name": "Blink",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Safe Move] up to [SRx2] Sq.&nbsp;</p>\n<p>(Minor): Increase the distance moved by +1 Sq.</p>\n<hr>\n<p>A magic that creates a flow of magical power and transfers to another place without being disturbed by riding it.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WNb7zLsl4ZhAsogl",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!WNb7zLsl4ZhAsogl"
+}

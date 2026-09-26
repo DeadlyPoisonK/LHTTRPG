@@ -1,0 +1,43 @@
+{
+  "name": "Treatment Skills",
+  "type": "skill",
+  "system": {
+    "description": "<p>Increase your [Recovery] by +[INT mod].</p>\n<hr>\n<p><span class=\"Y2IQFc\" lang=\"en\">You are skilled not only in the art of wounding and defeating enemies with weapons, but also in the skill of using first aid and medicine to heal the wounds of allies. It is truly a work that embodies the inextricability of life and death.</span></p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zTndE9gMk7r0OQ38",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!zTndE9gMk7r0OQ38"
+}

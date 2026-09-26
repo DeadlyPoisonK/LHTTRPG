@@ -1,0 +1,44 @@
+{
+  "name": "Hide Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>Leather armor made from the fur of large beasts.</p>",
+    "tags": [
+      "[Medium Armor]"
+    ],
+    "pdef": 6,
+    "mdef": 4,
+    "initiative": 0,
+    "rank": 2,
+    "price": 130,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 4300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gcXMpJ3odxuAy2rn",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!gcXMpJ3odxuAy2rn"
+}

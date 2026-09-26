@@ -1,0 +1,518 @@
+{
+  "name": "Goblin Champion",
+  "type": "monster",
+  "_id": "ThzHgLQY63AmV3Fh",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 448,
+      "max": 448,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 2,
+      "max": 2,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Boss",
+      "Humanoid",
+      "Goblin"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 5,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 4,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "weakness": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 18,
+        "magic": 9
+      },
+      "speed": 2,
+      "initiative": 6
+    },
+    "rank": 8,
+    "idendification": "10",
+    "hateMultiplier": "7",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 4
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 3
+      }
+    },
+    "description": "<table style=\"border-collapse: collapse; width: 396pt;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl67\" style=\"height: 15.75pt; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">1~4</td>\n<td class=\"xl66\" colspan=\"5\">Magic sword fragment [Magic Catalyst 9] (90G) x 3</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">5~6</td>\n<td class=\"xl66\" colspan=\"5\">Stolen Magic Sword [valuable] (180G) x 3</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 15.75pt;\">\n<td class=\"xl65\" style=\"height: 15.75pt;\" height=\"21\">Fixed</td>\n<td class=\"xl66\" colspan=\"5\">Fixed: Broken Sword [Core Material] (140G)</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<p>[[/gmr 2d6 + 4]]{[Evasion]}<br>[[/gmr 2d6 + 3]]{[Resistance]}</p>"
+  },
+  "prototypeToken": {
+    "name": "Goblin Champion",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0,
+      "color": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Goblin Rage",
+      "type": "skill",
+      "system": {
+        "description": "<ul>\n<li>Use this skill when this enemy takes [Spirit/Mental] damage.&nbsp;</li>\n<li>This enemy immediately uses Furious Blade Lightning.&nbsp;</li>\n<li>Increase the damage of Furious Blade Lightning by +5.</li>\n</ul>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "SK8y88jIkikUM12Y",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.SK8y88jIkikUM12Y"
+    },
+    {
+      "name": "Re-action",
+      "type": "skill",
+      "system": {
+        "description": "<p>Use when it becomes [Post Action]. This enemy becomes [Pre-Action] with an [Initiative] of 0.&nbsp;</p>",
+        "tags": [],
+        "timing": "",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/Round",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "nkfw3UnqreZQKgOL",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.nkfw3UnqreZQKgOL"
+    },
+    {
+      "name": "Bloody Roar",
+      "type": "skill",
+      "system": {
+        "description": "<ul>\n<li>This action is treated as an EX power.</li>\n<li>Use immediately when this enemy's [HP] drops to 220 or less.</li>\n<li>This enemy gains 2 Fate Points and 50 Barriers.</li>\n<li><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Furthermore, he immediately uses 《Furious Blade Lightning》.</span></span></li>\n<li><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">At this time, the direct damage inflicted by Furious Blade Lightning will be 20 points instead of 10 points.</span></span></li>\n</ul>\n<p>&nbsp;</p>",
+        "tags": [],
+        "timing": "Refer",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1 Scene",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "INuhT6coSa5NXvCn",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.INuhT6coSa5NXvCn"
+    },
+    {
+      "name": "Furious Blade Lightning",
+      "type": "skill",
+      "system": {
+        "description": "<p>This enemy [instantaneous teleportation] to the same Sq as the target and deals 10 points of direct damage to the target.</p>\n<p>You can use this skill to select one BS that you are receiving and cancel it.</p>\n<p>After this action ends, this enemy may use Furious Blade Lightning again (as many times as necessary) if possible.</p>\n<p>However, even if you use Furious Blade Lightning multiple times in one cleanup, you cannot select the same target again.</p>",
+        "tags": [],
+        "timing": "Cleanup",
+        "checkType": "Automatic",
+        "range": "2 sq.",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "pAuWnOPVE8sS8tQc",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.pAuWnOPVE8sS8tQc"
+    },
+    {
+      "name": "Intimidation Sword Wind",
+      "type": "skill",
+      "system": {
+        "description": "<p>Cannot be used on the main process where this enemy has \"moved\".</p>\n<p>[[/r 2d6 +7]]{[2D+7]}</p>\n<p>[[/gmr 2d6 + 40]]{[2D+40]} physical damage.</p>\n<p>[Causal Power 1] If the target's hate is 4 or less, the target immediately loses the will to fight and enters the [Acted] state.</p>",
+        "tags": [
+          "Mele Attack"
+        ],
+        "timing": "Major",
+        "checkType": "7+2D/Evasion",
+        "range": "Close",
+        "target": "Wide(P)",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "4DZgwPwe75JX8Rgo",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": -100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.4DZgwPwe75JX8Rgo"
+    },
+    {
+      "name": "Goblin Sword King",
+      "type": "skill",
+      "system": {
+        "description": "<p>[[/r 2d6 +7]]{[2D+7]}</p>\n<p>[[/gmr 2d6 + 40]]{[2D+40]} physical damage.</p>\n<p>[Minor] This special skill has a \"Range: 2Sq\".</p>\n<p>[Fate 1] Gives an additional [Pursuit: 10] to the target.</p>",
+        "tags": [
+          "Mele Attack"
+        ],
+        "timing": "Major",
+        "checkType": "7+2D/Evasion",
+        "range": "Close",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "check": {
+          "dice": 0,
+          "mod": 0,
+          "vs": ""
+        },
+        "damage": {
+          "dice": 0,
+          "mod": 0,
+          "type": ""
+        },
+        "macroeffect": ""
+      },
+      "_id": "7vopuYc74Sq71W8N",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": -200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ThzHgLQY63AmV3Fh.7vopuYc74Sq71W8N"
+    }
+  ],
+  "effects": [],
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "DZa0LbCEve8eidVi",
+  "_key": "!actors!ThzHgLQY63AmV3Fh"
+}

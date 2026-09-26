@@ -1,0 +1,43 @@
+{
+  "name": "Moonlight Veil",
+  "type": "skill",
+  "system": {
+    "description": "<p>While you are [Hate Top], you gain [Cancel: (SRx3)].</p>\n<hr>\n<p>You demonstrate a strong life force when your life is targeted by the enemy. The crisis awakens the survival instinct and activates the lunar magic that was sleeping in the Wolf Fang Tribe.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "a4x28jQAY9ysIgfS",
+  "folder": "Cm0dIMlUPNihp8rO",
+  "_key": "!items!a4x28jQAY9ysIgfS"
+}

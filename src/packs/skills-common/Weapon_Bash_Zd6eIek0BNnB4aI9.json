@@ -1,0 +1,43 @@
+{
+  "name": "Weapon Bash",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+3)D + (Attack Power)] physical damage to the target.</p>\n<p>(Critical): Increase the damage by +2D.</p>\n<hr>\n<p>A special skill that attacks the enemy by wielding a weapon with all one's strength. A simple but heavy blow that deals a huge blow if it hits directly.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Zd6eIek0BNnB4aI9",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!Zd6eIek0BNnB4aI9"
+}

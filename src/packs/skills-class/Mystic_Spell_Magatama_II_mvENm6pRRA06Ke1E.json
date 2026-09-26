@@ -1,0 +1,43 @@
+{
+  "name": "Mystic Spell: Magatama II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Deal [3D + (Magic Power)] magical damage to the target, and the target takes [Decay: [INT mod]]. This [Decay] does not overwrite [Decay] effect the target is already affected by, and instead adds to its rating.</p>\n<hr>\n<p>An offensive magic that releases the raging soul and the soul that seeks peace from a formation that imitates a magatama, and shoots through the enemy with its torrent. The rivalry of the yin and yang magatama is reduced while looking at the existence of the object.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t\t",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 2800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "mvENm6pRRA06Ke1E",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!mvENm6pRRA06Ke1E"
+}

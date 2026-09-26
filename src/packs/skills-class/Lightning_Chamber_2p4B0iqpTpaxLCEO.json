@@ -1,0 +1,44 @@
+{
+  "name": "Lightning Chamber",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [8D + (Magic Power)] magical damage to the target.</p>\n<p>(Failure): The use of this skill does not count towards your Limit.</p>\n<hr>\n<p>An attack magic that confines the enemy in a barrier and burns them by scattering countless lightning rays within it. The pentagram-shaped lightning barrier becomes a cage that captures the enemy's lifeline.</p>",
+    "tags": [
+      "Magic Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "5Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2p4B0iqpTpaxLCEO",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!2p4B0iqpTpaxLCEO"
+}

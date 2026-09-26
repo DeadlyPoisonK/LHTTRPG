@@ -1,0 +1,41 @@
+{
+  "name": "Twilight Mantle",
+  "type": "skill",
+  "system": {
+    "description": "<p>Reduce your [Hate] by -2.</p>\n<hr>\n<p>A magic that manipulates light and hides itself so that it melts into the darkness. Although the effect is only momentary, the Cloak of Invisibility Darkness is effective enough to distract foes.</p>",
+    "tags": [],
+    "timing": "Cleanup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HUzAZSlBsbdRbHEB",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!HUzAZSlBsbdRbHEB"
+}

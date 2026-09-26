@@ -1,0 +1,48 @@
+{
+  "name": "Raging Warmonger",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When you start the main process and your [Hate] is 10 or more, your [HP] recovers by 40 points, and one of the BS you are currently receiving is removed.\n「Work, work, and work on」—a two-handed sword with child-like, faded Alvean script carved across its blade like a pattern. The lost ancient magic continuously gives its wielder vitality solely for the purpose of battle. This curse-like effect becomes more active the more intense the combat, restoring the wielder's health while being bombarded with hostility and pushing away harmful influences.</p><hr><p>Ancient Charm Fragment [Core Material] (680G) + Espadon (1400G) + [Magic Catalyst 20] (370G) ×3 + Crafting Cost (1370G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Blade",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 1,
+    "rank": 20,
+    "price": 4560,
+    "equipped": false,
+    "attack": 55,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 9100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Pip3W95nvQmtviIj",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Pip3W95nvQmtviIj"
+}

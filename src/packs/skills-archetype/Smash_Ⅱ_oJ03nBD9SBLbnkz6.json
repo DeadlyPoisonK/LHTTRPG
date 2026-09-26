@@ -1,0 +1,41 @@
+{
+  "name": "Smash Ⅱ",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. During this Main Process, you gain a +[SRx4] bonus to [Weapon Attack] damage rolls.</p>\n<p>(CR17): Increase the bonus to +[SRx5].<br>(CR23): Increase the bonus to +[SRx7].</p>\n<hr>\n<p>A skill that raises the power of subsequent attacks by swinging the weapon around. Accumulated experience turns a mere preliminary movement into a deadly strategy.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oJ03nBD9SBLbnkz6",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!oJ03nBD9SBLbnkz6"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Potion Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You will be able to use [Potion] with an IR of [CR+2] or less. The \"recovery medicine (regardless of grade)\" you use will be added to the [HP] recovery amount + [INT base value]. The \"regenerative medicine (regardless of grade)\" you use is +[INT] to the strength of [regenerate].</p>\n<hr>\n<p>You are good at handling potions. If you know how to store and use your medicines, your medicines will work wonders.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YnJI3hBpZOWpXAAj",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!YnJI3hBpZOWpXAAj"
+}

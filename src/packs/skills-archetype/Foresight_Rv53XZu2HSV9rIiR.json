@@ -1,0 +1,41 @@
+{
+  "name": "Foresight",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill as a result of the search table roll that causes the target to make a Check. The target gains +2 for that check.</p>\n<hr>\n<p>A spell that allows you to foresee what awaits in your path with the magic of distant vision. Any danger is easy to deal with if you know it in advance.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Rv53XZu2HSV9rIiR",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!Rv53XZu2HSV9rIiR"
+}

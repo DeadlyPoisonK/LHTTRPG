@@ -1,0 +1,41 @@
+{
+  "name": "Blessing of Subjugation",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +4D bonus to damage rolls.</p>\n<hr>\n<p>A special skill that draws down the spirits of many warriors who have stood at the forefront of demon subjugation, gaining the power to defeat the enemy.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8SLKCJxjYJFamKfx",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!8SLKCJxjYJFamKfx"
+}

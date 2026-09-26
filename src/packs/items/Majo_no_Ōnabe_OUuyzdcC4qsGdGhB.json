@@ -1,0 +1,49 @@
+{
+  "name": "Majo no Ōnabe",
+  "type": "gear",
+  "system": {
+    "description": "<p>Reduce the target's [Fatigue] intensity by -60. The target may select one skill from the skills they currently possess that has the [Magic Attack] tag and increase its SR by 1 (cannot exceed the maximum SR. This effect is treated as a CS).\nVarious potions that raise magic power have been thrown into a big pot and boiled to a bubbling mess. Though the appearance is grotesque, for some reason it is extremely delicious. However, you'd be better off not knowing what the ingredients are.</p><hr><p>Snow Peach [Core Material] (440G) + Chicken Box (200G) + Panacea (Intermediate) (220G) + Vial of Magic Spirit (Intermediate) (260G) + [Magic Catalyst 15] (220G) ×3 + Crafting Cost (580G)</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Preparation",
+      "Not For Sale",
+      "M4"
+    ],
+    "rank": 15,
+    "price": 2360,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide Area 1 (Select)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OUuyzdcC4qsGdGhB",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!OUuyzdcC4qsGdGhB"
+}

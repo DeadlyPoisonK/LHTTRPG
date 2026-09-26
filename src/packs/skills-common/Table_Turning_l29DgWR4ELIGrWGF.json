@@ -1,0 +1,41 @@
+{
+  "name": "Table Turning",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Gambler, Duelist, Survivor, or Tactician. Use this skill when you and the target make an Opposed Check. Exchange all the dice you rolled with all dice the target rolled in order to determine both parties' new achievement values, as well as who wins and who loses.</p>\n<hr>\n<p>A special skill that unleashes a move to revive.</p>",
+    "tags": [],
+    "timing": "After Check",
+    "checkType": "Auto",
+    "range": "20Sq",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "l29DgWR4ELIGrWGF",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!l29DgWR4ELIGrWGF"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Nine-Tailed Seduction",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you acquire this skill, select [Male] or [Female]. Change the name of this skill to be like &laquo;Nine-Tailed Seduction: Male&raquo;. You can acquire this skill multiple times, but each time must be under a different name. When you make a [Negotiation Check] opposed by a character with the chosen tag, you gain a +2D bonus to that check. However, if the GM decides this skill isn't valid against the opponent, it cannot be used.</p>\n<hr>\n<p>A special skill that allows the negotiation to proceed favorably due to a charm that can be described as magical.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self\t",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "3/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JMQ7sXW4Ydhl1nXA",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!JMQ7sXW4Ydhl1nXA"
+}

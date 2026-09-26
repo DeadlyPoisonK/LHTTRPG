@@ -1,0 +1,41 @@
+{
+  "name": "Nature's Companion",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately use one [Summon Servant] skill. However, you may not use a [Summon Servant] skill currently in effect.</p>\n<p>(Fate 1): You may use a [Summon Servant] skill currently in effect.</p>\n<hr>\n<p>He is familiar with the various aspects of nature and skillfully uses the ancestral spirits that embody them.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hqUXusfQDo5OIJ0h",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!hqUXusfQDo5OIJ0h"
+}

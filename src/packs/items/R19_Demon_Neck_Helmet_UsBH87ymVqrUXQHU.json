@@ -1,0 +1,47 @@
+{
+  "name": "R19 Demon Neck Helmet",
+  "type": "accessory",
+  "system": {
+    "description": "<p>SamuraiMonk Exclusive. At the start of battle, your [Hate] increases by +2. Your [Negotiation Check] is -1D. If you succeed in a [Negotiation Check] confrontation, the opponent becomes [Staggered].\nA helmet that completely covers the head, shaped like a demon's head. It has a terrifying face with teeth bared, and even animals and monsters are made to shrink in fear. Because it is too terrifying, it is not recommended to wear it in the city.</p><hr><p>Refined Sigil Plate[Core Material](680G)+Guardian Headband (830G)+Black Kabuto (440G)×2+[Magic Catalyst 19](340G)×3+Crafting Cost(1470G)</p>",
+    "tags": [
+      "Accessory",
+      "Head",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 15,
+    "mdef": 0,
+    "rank": 19,
+    "price": 4880,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UsBH87ymVqrUXQHU",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!UsBH87ymVqrUXQHU"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Falcon Stack",
+  "type": "skill",
+  "system": {
+    "description": "<p>[Mob] can only be targeted. If you have not performed an attack on the target during this round, it becomes [Incapacitated] or [Dead] (your choice).</p>\n<hr>\n<p>A special skill that deals a killing blow to an enemy who has lost their will to fight. His well-trained fists do not miss any chance of showing cowardice.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Cleanup",
+    "checkType": "Auto\t\t",
+    "range": "1Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ezsfPF0HOXaVEa4X",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!ezsfPF0HOXaVEa4X"
+}

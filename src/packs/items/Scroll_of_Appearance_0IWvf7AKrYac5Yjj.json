@@ -1,0 +1,48 @@
+{
+  "name": "Scroll of Appearance",
+  "type": "gear",
+  "system": {
+    "description": "<p>This functions in the next scene. You can identify enemies with an identification difficulty of 14 or less as [Identified] and know their abilities. As a cost, you will receive [Fatigue: [STR Base Value] + 10].</p>\n<p>For sub-classes like Star Reader and Fortune Teller, the identification difficulty is not 14 or less, but 16 or less. This is a scroll that, when opened and concentrated upon, displays the form of the enemy you will likely encounter next. It reproduces the style of their attacks in full-color animation, allowing not only the discernment of their names and appearances but also their abilities.</p>\n<hr>\n<p>Seven-Colored Dye [Core Material] (30G) + Glimpse Scroll (Beginner) (30G) + [Magic Catalyst 1] (15G) &times; 3 + Crafting Cost (45G)</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation",
+      "M4"
+    ],
+    "rank": 1,
+    "price": 150,
+    "equipped": false,
+    "timing": "Briefing",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0IWvf7AKrYac5Yjj",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!0IWvf7AKrYac5Yjj"
+}

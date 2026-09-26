@@ -1,0 +1,43 @@
+{
+  "name": "Observation",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill targets the next scene. The difficulty of the check is equal to the lowest [Identification Difficulty] among all enemies appearing in the scene. You learn the name, appearance, rank, and tags of two enemies appearing in the scene (GM's choice). You take [Fatigue: (Base POW)].&nbsp;</p>\n<p>(Fumble): The enemy notices your scouting.</p>\n<hr>\n<p>A special skill that reveals the identity of the next enemy to face by observing the situation from a distance.</p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Perception vs. Identification Difficulty)",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "690CDges5ynl4dZ5",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!690CDges5ynl4dZ5"
+}

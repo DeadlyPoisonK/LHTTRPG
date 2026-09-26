@@ -1,0 +1,43 @@
+{
+  "name": "Enemy Scouting",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you attempt to acquire information about enemies in the next scene.</p>\n<p>[[/r (@checks.athletics.dice)d6 +@checks.athletics.total ]]{Athletics}</p>\n<p>(Result: 10) You learn the number of enemies appearing.<br>(Result: 20) You learn the name of the lowest ranked enemy (if there are several tied for the same rank, GM's choice), along with whether they have the [Boss] or [Mob] tags.<br>(Fumble): The enemy notices your scouting.</p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Athletics)",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1400000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "pLccgRPUqH0oIYYE",
+  "folder": null,
+  "_key": "!items!pLccgRPUqH0oIYYE"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Flip Gate",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target of this skill must be willing. Choose any square up to 5 Sq. away. The target makes a [Teleport] to that square.</p>\n<hr>\n<p>Magic that creates a gate that allows short-distance teleportation. Multiple people can pass through the gate at the same time, but it disappears in a very short time.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "syBH0Mn2rSlHhDCB",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!syBH0Mn2rSlHhDCB"
+}

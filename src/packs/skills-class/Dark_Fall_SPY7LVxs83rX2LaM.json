@@ -1,0 +1,41 @@
+{
+  "name": "Dark Fall",
+  "type": "skill",
+  "system": {
+    "description": "<p>Target Square. Set Prop [Dim Light] in Squares selected as a target. The tag of this prop becomes [Magical].&nbsp;</p>\n<p>(SR 2): This skill becomes [Range: 4 Sq].&nbsp;<br>(SR 3): This skill becomes [Target: Wide 2 (P)].</p>\n<hr>\n<p>Magic that spreads darkness with magical power and obstructs vision.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "Auto",
+    "range": "2Sq",
+    "target": "Wide 1(P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SPY7LVxs83rX2LaM",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!SPY7LVxs83rX2LaM"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Leg Guard",
+  "type": "accessory",
+  "system": {
+    "description": "<p>The so-called shin guard. Focused protection below the knees.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Boots]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 12,
+    "price": 390,
+    "equipped": false,
+    "initiative": 4,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HjiCTMumfsFNIhpr",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!HjiCTMumfsFNIhpr"
+}

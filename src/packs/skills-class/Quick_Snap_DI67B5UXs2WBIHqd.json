@@ -1,0 +1,41 @@
+{
+  "name": "Quick Snap",
+  "type": "skill",
+  "system": {
+    "description": "<p>Choose from your inventory one [Throwing] weapon you can equip with IR [CR-5 (at least 1)] or more. During this main process, you can use the range of the selected [Throwing] weapon to do a Ranged Attack as if you had a [Throwing] tag.</p>\n<hr>\n<p>A special skill that allows him to pull out a thrown weapon at speeds that are unnoticeable. You can skillfully use hitting and throwing.</p>",
+    "tags": [],
+    "timing": "Instant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DI67B5UXs2WBIHqd",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!DI67B5UXs2WBIHqd"
+}

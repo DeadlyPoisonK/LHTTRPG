@@ -1,0 +1,41 @@
+{
+  "name": "Overdrive",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill at the same time as a skill with [Timing: Major]. Treat that skill as though it had +2 SR (the Max SR may be exceeded).</p>\n<hr>\n<p>A special skill that pours a huge amount of magical power into a powerful pattern, instantly enhancing the properties of magic and martial arts. It is the trump card of the legal tribe that cannot be used frequently.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "V8S3vXlWdFPq2Nxe",
+  "folder": "JaIwHkni8H4K25DD",
+  "_key": "!items!V8S3vXlWdFPq2Nxe"
+}

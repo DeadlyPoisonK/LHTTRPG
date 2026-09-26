@@ -1,0 +1,47 @@
+{
+  "name": "R9 Black Eagle Boots",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Action] Used at the same time as your \"Dash\". That movement becomes [Instant Teleport]. Once per scenario.\nBoots imbued with magic that controls the wind, adorned with the wings of a large hawk. They allow for instantaneous jumps and high-speed movement through the air.</p><hr><p>Huge Wind-Cutting Feather [Core Material] (140G) + Greaves (130G) ×3 + [Magic Catalyst 9] (90G) ×4 + Crafting Cost (430G)</p>",
+    "tags": [
+      "Accessory",
+      "Legs",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 9,
+    "price": 1320,
+    "equipped": false,
+    "initiative": 6,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "c0KUiIIHCb7JOvPF",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!c0KUiIIHCb7JOvPF"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Katzbalger",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A wide straight sword with an S-shaped or eight-shaped tsuba and a pommel shaped like a fish tail.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 30,
+    "price": 2500,
+    "equipped": false,
+    "attack": 33,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3a5sTawZzBuzOVe3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!3a5sTawZzBuzOVe3"
+}

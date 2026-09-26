@@ -1,0 +1,46 @@
+{
+  "name": "R2 Assault Force Badge",
+  "type": "accessory",
+  "system": {
+    "description": "<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\" data-ved=\"2ahUKEwiTqvTroOuDAxW9FLkGHVHWCfsQ3ewLegQIBRAQ\"><span class=\"Y2IQFc\" lang=\"en\">Assassinate, Opening Gambit, and Maestro Echo you have acquired are treated as having +1 SR (they may exceed the maximum SR). This item cannot be equipped on two or more at the same time. [CR12] The effect of increasing SR by 1 is invalidated.</span></p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\" data-ved=\"2ahUKEwiTqvTroOuDAxW9FLkGHVHWCfsQ3ewLegQIBRAQ\"><span class=\"Y2IQFc\" lang=\"en\">A talisman worn by soldiers fighting on the front lines. It contains magic that eases the fear of battle and allows you to demonstrate more power than usual.</span></p>\n<hr>\n<p>Small piece of rotten silver [core material] (30G) +&nbsp;</p>\n<p>Aoi's amulet (60G) +</p>\n<p>[Magic Catalyst 2] (20G) x 3 +</p>\n<p>Crafting Cost (80G)</p>",
+    "tags": [
+      "Accesory",
+      "Rare",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 5,
+    "rank": 2,
+    "price": 230,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "x1jJC7GLEme1T9vF",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!x1jJC7GLEme1T9vF"
+}

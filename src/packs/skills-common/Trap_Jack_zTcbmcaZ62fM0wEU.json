@@ -1,0 +1,41 @@
+{
+  "name": "Trap Jack",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Trap Master, Designer, or Carpenter.</p>\n<p>You can target a [Gimmick] in the [Processed] state. The target instantly takes a [Timing: Major] action once. The action and target of the action is decided by you.</p>\n<hr>\n<p>A special skill that instantly grasps the structure of traps and tricks and temporarily manipulates their movements at will.</p>",
+    "tags": [],
+    "timing": "Instant",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zTcbmcaZ62fM0wEU",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!zTcbmcaZ62fM0wEU"
+}

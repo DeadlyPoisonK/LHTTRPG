@@ -1,0 +1,41 @@
+{
+  "name": "Golden Chalice of the Undead",
+  "type": "accessory",
+  "_id": "gT9rM6LqAgyIAMhc",
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "system": {
+    "description": "<p>When casting spells that deal [Decay] damage, increase the damage by +5.</p>\n<hr>\n<p>A golden chalice adorned with ancient runes and encrusted with dark gemstones. This chalice is said to have been used in rituals by necromancers to commune with the dead and harness their power. It emits an eerie glow and seems to hum with an unsettling energy when held.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Magic Stone]",
+      "[Rare]",
+      "[M5]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 4,
+    "price": 110,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 10
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!gT9rM6LqAgyIAMhc"
+}

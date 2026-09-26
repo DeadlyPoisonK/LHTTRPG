@@ -1,0 +1,46 @@
+{
+  "name": "R10 Prismatic Mail",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Instant] You remove one [Pursuit] you are receiving and gain a [Barrier] of the same intensity. Once per scene.\nA lamellar armor in which magic that shifts the direction of impact is infused into each iron plate. It can store the impact received from an attack, reverse it, and nullify the next incoming attack.</p><hr><p>Biased-Element Magic Crystal [Core Material] (220G) + Lamellar Armor (530G) + Madder Charm (140G) + [Magic Catalyst 10] (110G) ×3 + Crafting Cost (510G)</p>",
+    "tags": [
+      "Heavy Armor",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 35,
+    "mdef": 15,
+    "initiative": -2,
+    "rank": 10,
+    "price": 1730,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 6200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zoVmFJyM8gghy4ER",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!zoVmFJyM8gghy4ER"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "R5 Reactive Mail",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Immediately After Damage] Used when you receive damage with the [Mental][Radiance][Poison] tag. You gain [Cancel (same tag as received damage):10]. If this effect is triggered multiple times, the [Cancel] is not overwritten, but the intensity is added.\nMagic-armored armor that grants pseudo-life through magic. It can generate a field to reduce damage based on specific attributes.</p><hr><p>Liquefied Magic Crystal [Core Material] (60G) + Splint Mail (200G) + [Magic Catalyst 5] (40G) ×5 + Crafting Cost (260G)</p>",
+    "tags": [
+      "Heavy Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 19,
+    "mdef": 5,
+    "initiative": -2,
+    "rank": 5,
+    "price": 720,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 5300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "np6iVGkVK9HA2xhz",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!np6iVGkVK9HA2xhz"
+}

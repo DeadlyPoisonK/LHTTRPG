@@ -1,0 +1,88 @@
+{
+  "name": "Keep the Team",
+  "type": "skill",
+  "system": {
+    "description": "<p>When the target rolls on the [Exhaustion Table: Stamina or Energy], reduce the result of that roll by -1.</p>\n<p>(Bonus): You gain +10 [Max HP].</p>\n<hr>\n<p>You are good at managing groups efficiently. It will alleviate the mental and physical exhaustion that comes from various predicaments.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.healer-archetype-class.wnr7Uv0qqeEBz4vX",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "qZegJFD2eFoanmKe",
+      "changes": [
+        {
+          "key": "system.health.max",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "HP+10",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!wnr7Uv0qqeEBz4vX.qZegJFD2eFoanmKe"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wnr7Uv0qqeEBz4vX",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!wnr7Uv0qqeEBz4vX"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R6 M6 Medusa Gaze",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Instant] \"Target: Single / Range: 4Sq\" used against a target. Gives [Rigor] to the target. If the target does not receive any HP damage during this main process, the [Rigor] is removed upon the end of the main process. Once per scene.\nArrow of Maleficent Gaze An arrow crafted to release curses along with its shaft, imbued with a magic stone said to possess the power of maleficent gaze. Those who witness its shot have their souls pierced, and are subjected to an invisible binding.</p><hr><p>Snake-Eye Stone [Core Material] (100G) + Light Crossbow (230G) ×2 + [Magic Catalyst 6] (50G) ×2 + Crafting Cost (230G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -4,
+    "rank": 6,
+    "price": 890,
+    "equipped": false,
+    "attack": 23,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "etkXh6NgJycO4RXs",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!etkXh6NgJycO4RXs"
+}

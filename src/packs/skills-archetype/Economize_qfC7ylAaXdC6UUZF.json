@@ -1,0 +1,41 @@
+{
+  "name": "Economize",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after the target rolls on [Exhaustion Table: Energy, Money]. The result of the roll becomes 0.</p>\n<p>(Bonus): You gain +1 Starting Fate Points.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">Ability to follow up on teammates' failures with quick reaction and save money and fatigue loss.</span></p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qfC7ylAaXdC6UUZF",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!qfC7ylAaXdC6UUZF"
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "sbPUZ7aKIPFr1Wyf",
+  "name": "Kannagi",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Kannagi_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "kannagi",
+    "archetype": "healer",
+    "attributes": {
+      "str": 1,
+      "dex": 3,
+      "pow": 4,
+      "int": 2
+    },
+    "hp": 40,
+    "hpPerRank": 5,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.MaYuRCQzLGYuRmMw"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.FvixZGsRP4cywsBz"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-archetype.Item.lnQdXjvLnxpLoqTd"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!sbPUZ7aKIPFr1Wyf"
+}

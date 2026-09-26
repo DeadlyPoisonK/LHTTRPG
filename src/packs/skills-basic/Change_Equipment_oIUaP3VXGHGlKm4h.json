@@ -1,0 +1,41 @@
+{
+  "name": "Change Equipment",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can move an item from a [Inventory Slot] to an [Equipment Slot], or vice versa. You may also drop or pick up an item in your square or change a piece of equipment. There is no limit to the number of equipment changes you may perform with a single action. You can use this basic skill any number of times during a Briefing.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1200000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "oIUaP3VXGHGlKm4h",
+  "folder": null,
+  "_key": "!items!oIUaP3VXGHGlKm4h"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Espadon",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A double-edged two-handed sword with a long handle that can be used with both hands.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 19,
+    "price": 1400,
+    "equipped": false,
+    "attack": 40,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 3300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7svG7yA1Xg6W3e8E",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!7svG7yA1Xg6W3e8E"
+}

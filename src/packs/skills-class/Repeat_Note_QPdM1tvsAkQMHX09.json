@@ -1,0 +1,41 @@
+{
+  "name": "Repeat Note",
+  "type": "skill",
+  "system": {
+    "description": "<p>You cannot target yourself with this skill. The target may immediately perform one [Timing: Major] action with the [Weapon Attack] [Magic Attack] or [Special Attack] tag. You assume the [Hate] cost of the target's action.</p>\n<p>(Fate 1): Reduce the assumed [Hate] cost by -2 (minimum 0).</p>\n<hr>\n<p>A special skill that makes allies move and attack with a repetitive rhythm. As the commander of the battlefield, you are a threat in the eyes of your enemies.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QPdM1tvsAkQMHX09",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!QPdM1tvsAkQMHX09"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "True Sight Card III",
+  "type": "gear",
+  "system": {
+    "description": "<p>This item targets everything in range that has a [Detection Difficulty]. The target removes [Concealed] or [Hidden]. You do not have to apply this effect to your allies.&nbsp;</p>",
+    "tags": [
+      "Charm",
+      "Consumable"
+    ],
+    "rank": 25,
+    "price": 1000,
+    "equipped": false,
+    "timing": "Move",
+    "checkType": "Basic (14+2D vs Detection Difficulty)",
+    "range": "Close",
+    "target": "Wide Area 20 (Indiscriminate)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 4100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rJAZ0ICE8YvKssxK",
+  "folder": "wiuis6KCFZl34ZQw",
+  "_key": "!items!rJAZ0ICE8YvKssxK"
+}

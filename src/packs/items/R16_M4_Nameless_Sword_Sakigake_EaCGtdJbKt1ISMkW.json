@@ -1,0 +1,48 @@
+{
+  "name": "R16 M4 Nameless Sword: Sakigake",
+  "type": "weapon",
+  "system": {
+    "description": "<p>You have your \"Accel Fang\" and \"Lone Charge\" SR increased by +1 (it may exceed the maximum SR).\nA sword crafted by a certain swordsmith as a farewell gift for a hero who had been exiled from his country. Though it has no signature and a simple design, its sharpness is exceptional, and it grants the user a speed and agility akin to a gust of wind.</p><hr><p>Tamahagane Ingot [Core Material] (440G) + Shinuchi Katana (870G) + Scroll of Acceleration (Intermediate) (280G) ×2 + [Magic Catalyst 16] (250G) ×2 + Crafting Cost (500G)</p>",
+    "tags": [
+      "One-Handed",
+      "Katana",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -1,
+    "rank": 16,
+    "price": 2870,
+    "equipped": false,
+    "attack": 23,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EaCGtdJbKt1ISMkW",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!EaCGtdJbKt1ISMkW"
+}

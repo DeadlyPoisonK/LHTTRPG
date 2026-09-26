@@ -1,0 +1,44 @@
+{
+  "_id": "xYqaNP3wnCljzQvA",
+  "name": "Wolf Drive",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Available when you are in [Riding: Dire Wolf] state. You may make a [Normal Move] of 3 Sq.</p><p>(Minor): When you move more than 1 Sq. with this action, after the end of the move, use [target: Single / Range: Close] and inflict [Pursuit: (Base DEX)].</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!xYqaNP3wnCljzQvA"
+}

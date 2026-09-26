@@ -1,0 +1,43 @@
+{
+  "_id": "5NRJTPHgcgJCXBki",
+  "name": "Surprise Attack",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Use this skill immediately after you succeed an action with the [Scout] tag. An enemy with [Mob] tag appearing in the next scene 1 enemy (selected by GM) is targeted. At the beginning of the next scene you will appear in the same Square as the target, after which the subject can be immediately set to [Dead] or [Incapcitated]. If [Mob] does not appear, this skill fails but does not use up the limit.</p>",
+    "tags": [
+      "EX Power"
+    ],
+    "timing": "After Check",
+    "checkType": "Auto",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!5NRJTPHgcgJCXBki"
+}

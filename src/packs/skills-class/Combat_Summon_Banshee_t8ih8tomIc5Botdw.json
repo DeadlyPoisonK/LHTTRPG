@@ -1,0 +1,45 @@
+{
+  "_id": "t8ih8tomIc5Botdw",
+  "name": "Combat Summon: Banshee",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Deal [(SRx2)D + (Magic Power)] magical damage to the target.</p><p>(Hate 1 & Target: Mob): The target becomes [Incapacitated] or [Dead] (your choice).</p>",
+    "tags": [
+      "Combat",
+      "Magic Attack",
+      "Blight"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4 Sq.",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!t8ih8tomIc5Botdw"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Blade Opera",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill at the same time as a [Melee Attack] with [Target: Single]. That attack becomes [Target: Wide 1 (P)].</p>\n<hr>\n<p>A special skill that allows you to slash freely like the main character in a swordplay, such as by raising your voice sonorously and taking a splendid stance. In that moment, the battlefield becomes a stage for you.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "quxhDKuvkPzOJezk",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!quxhDKuvkPzOJezk"
+}

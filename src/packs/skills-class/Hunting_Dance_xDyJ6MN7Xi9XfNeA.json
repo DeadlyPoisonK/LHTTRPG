@@ -1,0 +1,43 @@
+{
+  "name": "Hunting Dance",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+2)D + (Magic Power)] physical damage to the target, and the target takes [Dazed]. You may only use this skill when you have the [Mythic] tag.</p>\n<hr>\n<p>Attack magic that strengthens the phantom beast you are summoning by sharing your magical power, and tears the enemy apart with its claws and fangs. The phantom beast bounces freely across the battlefield, confusing the enemy.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xDyJ6MN7Xi9XfNeA",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!xDyJ6MN7Xi9XfNeA"
+}

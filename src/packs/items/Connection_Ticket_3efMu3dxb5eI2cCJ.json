@@ -1,0 +1,35 @@
+{
+  "name": "Connection Ticket",
+  "type": "ticket",
+  "_id": "3efMu3dxb5eI2cCJ",
+  "img": "icons/sundries/flags/banner-purple.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "rank": 1,
+    "price": 0,
+    "equipped": false,
+    "skillText": "",
+    "subtype": "Connection",
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!3efMu3dxb5eI2cCJ"
+}

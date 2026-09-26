@@ -1,0 +1,482 @@
+{
+  "name": "Enemy Creation Data Guide",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "About This Document",
+      "type": "text",
+      "_id": "aEn2IgFNAZxrqj3l",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This document is a support material for developers who want to create their own enemy data.</p><p>The enemies in \"LHZ\" have their approximate numerical abilities calculated based on several fundamental pieces of information. While the final release involves adjustments by developers, I thought that providing a template in the creation process could be supportive for developers.</p><p>As this document is intended for developers, it is not something typically needed by players or GMs. It is specifically for developers who want to create their own enemy data. Due to its nature, there may be parts lacking sufficient explanation, especially in the document sections. Please understand that this is due to prioritization in the support project.</p><p>Given its nature, updates may occur without prior notice. Additionally, support for this document may have a lower density compared to support for rulebooks. Please keep this in mind.</p><p>The goal and role of \"LHZ\" developers are to create content surrounding sessions, enrich the developer's environment, and find joy and happiness in the process. While enemies directly confront PCs, thinking narrowly might reduce it to a simple power struggle. However, the true purpose of enemies is to provide players with interesting challenges, thereby enhancing the excitement of the session. Excellent enemy design focuses on being a target for PC challenges at that CR, bringing out the PCs' strengths to the fullest. It is not about negating PC strengths or merely being powerful.</p><p>The \"LHZ\" development team believes that the free and open activities of developers contribute to the liveliness of the scene. Many developers who provide excellent data can use this document to create rivals that enhance adventures. I hope this document, along with ongoing support, proves to be helpful for developers in their endeavors.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.aEn2IgFNAZxrqj3l"
+    },
+    {
+      "sort": 200000,
+      "name": "I. Basic data of the enemy",
+      "type": "text",
+      "_id": "D2Yng4WtnvEVfWTU",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p></p><h3>I.a. Name</h3><p>　The name of the enemy. you need to put it on. The structure of &lt;Kanji name&gt; + ruby ​​is adopted in \"LHZ\", but this has two aspects: one is to take advantage of the image-evoking power of kanji, and the other is to follow the original work.</p><hr /><p></p><h3>I.b. CR</h3><p>　This is the enemy's rank (enemies are also characters, so use the character rank). CR has a big impact on all of that enemy's abilities. In \"LHZ\", PCs are expected and encouraged to fight against enemies of the same rank.</p><hr /><p></p><h3>I.c. Large race</h3><p>　Internal basic data. All enemies belong to one of the eight major races. These are humanoid, natural, spirit, phantom beast, immortal, artificial, human, and gimmick (from \"LHZ\" P378), and each enemy will have one of these tags.</p><p>　Gimmicks are an exception and will be explained later, but the seven major races of humanoid, natural, spirit, mythical beast, immortal, artificial, and human do not affect the basic calculation of enemy data.</p><p>　The gimmick not only has 50% HP, but also has the following \"large race characteristics\". The unlock difficulty level n is based on \"Difficult\" in \"LHZ\" P403.</p><p>《Mechanism without Will》_Always_ This enemy's attacks do not cause hate damage, nor do they receive the defense bonus of [Hate Under]. Also, if you successfully perform a \"prop removal\" on this enemy with \"removal difficulty: n\", this enemy becomes [incapable of battle]. Additionally, this enemy has no move action.</p><hr /><p></p><h3>I.d. Familiarity</h3><p>　Internal basic data. All enemies have an internal reputation. The value obtained by adding [(CR-1)÷3+1] (rounded down) to this basic value based on popularity becomes the enemy's \"Identification Difficulty\".</p><p>　\"Identification difficulty\" is an important value in \"LHZ\" enemies. Especially in environments with CR3 or higher, knowing the enemy's abilities and being able to take countermeasures in advance will have a big impact on the difficulty of battle. Developers should be careful when handling names such as \"anonymous\" and \"secret.\" If you handle these popularity for worldview or image reasons, the enemy may be more ferocious in the session than the numerical value.</p><p></p><table style=\"border-collapse:collapse;color:rgb(0, 0, 0);font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;font-size:13.44px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\"><tbody><tr><th style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal;background-color:rgb(221, 221, 221);width:60px\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>Popularity</strong></span></p></th><th style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal;background-color:rgb(221, 221, 221)\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>Basic value of identification difficulty</strong></span></p></th></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>super famous</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>automatic</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>famous</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>2</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>general</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>4</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>usually</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>6</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>rare</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>7</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>anonymous</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>9</strong></span></p></td></tr><tr><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\" data-colwidth=\"160\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\"><strong>secret</strong></span></p></td><td style=\"border:1px solid black;padding:3px;line-height:14px;text-align:left;font-weight:normal\"><p><span style=\"font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif\">12</span></p></td></tr></tbody></table><hr /><p></p><h3>I.e. E type</h3><p>　Internal base data. The E type represents the basic character of the enemy, and following CR, it has a great influence on the basic calculation of the enemy's enemy data. There are nine types of E-types, each named Armorer, Fencer, Grappler, Supporter, Healer, Spear, Archer, Shooter, and Bomber.</p><p>　This material is in a style that lists the basic calculations of enemy data for each E type/CR.</p><p></p><p>• Armorer:</p><p>A low-action enemy excelling in Physical Defense and Max HP. Similar to the Guardian Warrior class, it should be given skills to protect allies and hinder PC movement. While difficult to defeat individually, this E-Type is not suitable for instilling a sense of threat in PCs. Overuse can lead to session stagnation. Also, not suitable for solo bosses. A representative enemy mentioned in \"LHZ\" is the Ironclad Green Ogre (P444).</p><hr /><p></p><p>• Fencer:</p><p>An enemy with high Physical Defense and Max HP, albeit lower than Armorer, with low action. Similar to the Samurai class, it should be given skills to protect allies and counterattack. This E-Type is suitable for making PCs feel they should defeat it first. Relatively suitable for solo bosses. A representative enemy mentioned in \"LHZ\" is the Vampire (P457).</p><hr /><p></p><p>• Grappler:</p><p>An enemy excelling in Max HP and Defense Checks but with low Defense. Similar to the Martial Artist class, it should be given skills to protect allies, hinder PCs, and counterattack. While challenging to defeat, it is not suitable for instilling a sense of threat in PCs. Similar to the Martial Artist class, but the existence of Hate rules differentiates the roles and designs of enemies. Also not suitable for the main boss. A representative enemy mentioned in \"LHZ\" is the Corpse-Eating Girl (P436).</p><hr /><p></p><p>• Supporter:</p><p>An enemy excelling in Resistance and Action Points but weak against physical attacks. Similar to the Bard or Enchanting Mage classes, it should be given skills to support allies and impose various hindrances on PCs. In CR3 and above environments, it may have powerful BS or terrain-controlling elements. This E-Type is not particularly threatening to PCs individually. Suitable for group bosses. A representative enemy mentioned in \"LHZ\" is the Thorny Bushy Badger (P424).</p><hr /><p></p><p>• Healer:</p><p>An enemy excelling in Resistance, with somewhat high Defense, but not very resilient overall. Similar to the Healing Priest, Forest Curse User, or Divinity Official classes, it should be given skills to protect allies. This E-Type is not good at direct attacks, making it challenging to instill a sense of threat in PCs individually. Similar to the Healing Priest, Forest Curse User, or Divinity Official classes, but excessive healing abilities can lead to combat stagnation. Creative adjustments are needed for support abilities. Suitable for group bosses. A representative enemy mentioned in \"LHZ\" is the Unicorn (P449).</p><hr /><p></p><p>• Spear:</p><p>An enemy with high Evasion, capable of dealing the highest physical damage. Similar to the Assassin or Thief classes, it should be given skills to provide BS, additional damage, and enhance its own movement. This E-Type is suitable for instilling a sense of threat in PCs, making it versatile for enemy attackers from low to high CR. Suitable for both solo and group bosses. A representative enemy mentioned in \"LHZ\" is the Bladed Masqalwin (P467).</p><hr /><p></p><p>• Archer:</p><p>An enemy using ranged attacks, dealing physical damage from a distance of 3-4 squares. Somewhat excels in Magic Defense but struggles with attacks on the same square. Similar to the Assassin class, it should be given skills to force PC movement and additional damage. Design this E-Type with cooperation with other enemies in mind. Compared to the Spear type, it features the advantage of not requiring movement and allowing concentrated attacks. Caution is needed in creation. Suitable for both solo and group bosses. A representative enemy mentioned in \"LHZ\" is the Clockwork Dragonfly (P433).</p><hr /><p></p><p>• Shooter:</p><p>An enemy using single-target Magic Attacks, dealing magic damage from a distance. Excels in \"Attack Checks\" and action points but has low HP and Physical Defense. Similar to the Mystic or Summoner classes, it should be given skills to provide BS and additional damage. This E-Type excels in attacks but is vulnerable to damage, requiring design considerations, including weaknesses. Suitable for both solo and group bosses. A representative enemy mentioned in \"LHZ\" is the Enchanting Caster of Small Fangs (P422).</p><hr /><p></p><p>• Bomber:</p><p>An enemy using area-effect Magic Attacks, dealing magic damage from a distance. Similar to the Mystic class, it excels in \"Attack Checks\" but has relatively low HP and Physical Defense. Design this E-Type with skills for performing area-effect (selective) magic attacks and providing BS. This E-Type has the ability to influence the battlefield, so careful planning is needed, including weaknesses. A representative enemy mentioned in \"LHZ\" is the Heiglott of the White Princess (P465).</p><p></p><hr /><hr />"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.D2Yng4WtnvEVfWTU"
+    },
+    {
+      "sort": 300000,
+      "name": "II. How to create your own enemy",
+      "type": "text",
+      "_id": "hrY5X3idj8WiCJvc",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p></p><h3>Step 1: Determine the base data</h3><p>　First, let's determine the enemy's base data. Keeping a note of this on hand will help you proceed more smoothly later.</p><p>• Name: A name is required.</p><p>• CR: It is best to match the rank of the required scenario and the rank of the PC to fight.</p><p>• Large race: Choose from humanoid, natural, spirit, mythical beast, immortal, artificial, human, and gimmick.</p><p>• Familiarity: If you don't have any particular preferences, choose from common, normal, and rare.</p><p>• E type: Choose from Armorer, Fencer, Grappler, Supporter, Healer, Spear, Archer, Shooter, and Bomber. Consider that having multiple E-types in a single battle will make the challenge more rewarding. In \"LHZ\", the number of encounters for each E type does not have to be equal. In particular, supporters, healers, grapplers, bombers, etc. are difficult to control in environments with CR2 or lower, so it is best not to force them to use them.</p><p>• Enemy rank: Select one from mob, normal, or boss.</p><hr /><p></p><h3>Step 2: Copy the basic calculation part of enemy data.</h3><p>　From the second half of this document, use the E type and CR as a reference to find the \"basic calculation part of enemy data\" and transcribe it into your memo.</p><p>　Add the name and major race tags. Also, calculate the difficulty of identification based on the popularity level and add it.</p><hr /><p></p><h3>Step 3: Give a special skill</h3><p>　Give a special skill to the enemy. Normal and mob enemies should be given 2-3 special abilities. One of these should be a special skill that uses a major action as an attack method.</p><p>　When designing special skills, it is best to consider two ways: arranging special skills for this major action, and giving other special skills. For both, the ``E Type Explanation'' and the ``LHZ'' rulebook will be helpful.</p><p>　Consider using the [minor] execution condition for special skills used in major actions. At least a majority of enemies should have this action option. This is because an enemy that does not have this execution condition can remove BS such as [Hard] or [Severe] at a low cost, so the value of the BS will decrease relatively.</p><hr /><p></p><h3>Step 4: Adjustment as a mob (for mobs only)</h3><p>　Mob enemies have exactly the same data as normal enemies, except that they are easier to eliminate and have simplified judgment.</p><p>　After designing a normal enemy, halve its [HP] and replace it with a fixed value of 3 for each die used for judgment (especially [attack judgment] and [defense judgment]). Also add [mob] to the tag.</p><p>　Please also note that mob enemies cannot have the execution condition of [achievement value n] due to their characteristics.</p><hr /><p></p><h3>Step 5: Adjustment as a boss (only for bosses)</h3><p>　Boss enemies have more attack methods and more actions than normal enemies, and their [HP] is significantly strengthened. He also possesses 3 to 6 points of [Causal Power]. In principle, the amount of damage generated is the same as normal enemies.</p><p>　Boss enemies can be roughly divided into two types: solo bosses that appear alone, and group bosses that appear accompanied by normal enemies (and sometimes mob enemies).</p><p>　A solo boss is a boss that (basically) appears alone in front of the PC. Make the HP 4 times that of the normal enemy. Since it requires few moves and is easily blocked by BS, it should be equipped with a special skill that can deal damage over a wide area and remove BS during setup or cleanup. For CR4 and above, a more powerful design that includes multiple BS removal and forced movement is required.</p><p>　A group boss is a boss that appears in front of the PC with 2 to 4 subordinates. HP is twice that of normal enemies. These subordinates only appear as part of the group boss' abilities, so they do not drop items. Group bosses appear with their subordinates, so it will be easier to function in battle if you give them the ability to support their subordinates or the ability to cooperate with their subordinates.</p><p>　Due to their characteristics, bosses tend to take fewer actions than the PCs as a whole. Therefore, it is essential to increase the number of actions represented by \"re-action\". Also, since he possesses the boss' characteristic [Causal Power], you will need a special skill that uses this as a cost. The easiest thing to do is to bring in the execution condition of ``[Causal Power 1] Make this feat ``Target: Range (Selection)'''' into a major feat. Also, since it is easy to increase [Attack Judgment] with [Causal Power], it will be easy to use attacks whose power increases with [Achievement Value N] etc.</p><hr /><p></p><h3>Step 6: Determining the drop table</h3><p>　The enemy drop table is created so that it can be determined in 1D.</p><p>　You can design based on the amount in this document, ``Expected Drop Value.'' When biasing by probability, the sum of all 1D results should fall within the \"expected drop value\".</p><p>　It is best to round off the price of drop items with the [Cash Exchange] tag to a multiple of 5 or 10. Also, when placing general items, please note that items other than [consumables] are calculated at 1/10 of the item price.</p><p>　Mob enemy drop items are fixed and half price. Let's further halve the average amount of dropped items that we calculated earlier.</p><p>　Boss enemy drop items are 4 times more expensive than normal enemies. One of the drop items should be a [Magic Catalyst] that has a strength that is 1 higher than the boss enemy's CR. Also, in addition to regular drop items, it would be a good idea to have a [core material] with an IR equal to the enemy's CR as a fixed drop item. This [core material] can be the same as an existing enemy, or it can be something you create yourself.</p><hr /><p></p><h3>Step 7: Write the explanation</h3><p>　Finally, write the explanation. The explanation should include information that gives a strong image of the enemy, such as the enemy's external characteristics, ecology, and area of ​​activity, and that will help in actually operating it as an enemy. There's no need to write long explanations.</p><p>　The explanation is a message from the developer who created the enemy to the developer who uses the enemy. If this part is written correctly, it will be easier to share the image of the enemy you created. This will make it easier for other developers to include it when creating scenarios.</p><p>　Appropriate explanations also provide support to the GM. Enemies with excellent descriptions can have a positive impact on the GM's descriptions during sessions and decisions made during battle.</p><p></p><hr /><hr />",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.hrY5X3idj8WiCJvc"
+    },
+    {
+      "sort": 400000,
+      "name": "III. Armorer",
+      "type": "text",
+      "_id": "cWsAX47LViLdPLi6",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<hr /><p></p><p>◆〈Type-1 Armorer CR1〉</p><p>　[STR] 2 [DEX] 1 [POW] 1 [INT] 1</p><p>　[Evasion] 1 + 2D [Resistance] 1 + 2D [Physical Defense] 10 [Magic Defense] 3</p><p>　[Maximum HP] 56 [ Hate multiplier] × 1 [Action power] 1 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (4+2D/evasion)_Single_target_Close_Inflicts physical damage of [12+2D] .</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p></p><p>◆〈Type-1 Armorer CR2〉</p><p>　[STR] 3 [DEX] 1 [POW] 2 [INT] 1</p><p>　[Evasion] 2+2D [Resistance] 1+2D [Physical Defense] 12 [Magic Defense] ] 5</p><p>　[Maximum HP] 65 [Hate multiplier] x 1 [Action power] 2 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (5+2D/evasion)_Single_Close-in_ Deals [16+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 28G</p><hr /><p></p><p>◆〈Type-1 Armorer CR3〉</p><p>　[STR] 3 [DEX] 2 [POW] 2 [INT] 1</p><p>　[Evasion] 2 + 2D [Resistance] 1 + 2D [Physical Defense] 14 [Magic Defense] ] 7</p><p>　[Maximum HP] 73 [Hate multiplier] x 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (5+2D/Evasion)_Single_Close_ Deals [19+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 35G</p><hr /><p></p><p>◆〈Type-1 Armorer CR4〉</p><p>　[STR] 3 [DEX] 2 [POW] 2 [INT] 2</p><p>　[Evasion] 2 + 2D [Resistance] 2 + 2D [Physical Defense] 16 [Magic Defense] ] 8</p><p>　[Maximum HP] 82 [Hate multiplier] x 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close_ Deals [23+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p></p><p>◆〈Type-1 Armorer CR5〉</p><p>　[STR] 4 [DEX] 2 [POW] 3 [INT] 2</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 19 [Magic Defense] ] 10</p><p>　[Maximum HP] 90 [Hate multiplier] x 1 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Melee attack]_Major_Confrontation (6+2D/evasion)_Single_Close_ Inflicts [26+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 52G</p><hr /><p></p><p>◆〈Type-1 Armorer CR6〉</p><p>　[STR] 4 [DEX] 3 [POW] 3 [INT] 2</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 21 [Magic Defense] ] 12</p><p>　[Maximum HP] 99 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_Close-in_ Deals [30+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 63G</p><hr /><p></p><p>◆〈Type-1 Armorer CR7〉</p><p>　[STR] 4 [DEX] 3 [POW] 3 [INT] 3</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 23 [Magic Defense] ] 13</p><p>　[Maximum HP] 107 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (6+2D/evasion)_Single_Close-in_ Inflicts [33+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 75G</p><hr /><p></p><p>◆〈Type-1 Armorer CR8〉</p><p>　[STR] 5 [DEX] 3 [POW] 4 [INT] 3</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 25 [Magic Defense] ] 15</p><p>　[Maximum HP] 116 [Hate multiplier] x 2 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_Close_ Inflicts [37+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 89G</p><hr /><p></p><p>◆〈Type-1 Armorer CR9〉</p><p>　[STR] 5 [DEX] 4 [POW] 4 [INT] 3</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 27 [Magic Defense] ] 17</p><p>　[Maximum HP] 124 [Hate multiplier] x 2 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_Close_ Deals [40+2D] physical damage.</p><p>▼Drop Item</p><p>Expected drop value: 104G</p><hr /><p></p><p>◆〈Type-1 Armorer CR10〉</p><p>　[STR] 5 [DEX] 4 [POW] 4 [INT] 4</p><p>　[Evasion] 5 + 2D [Resistance] 4 + 2D [Physical Defense] 30 [Magic Defense] ] 19</p><p>　[Maximum HP] 133 [Hate multiplier] x 2 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 1》_[Hand-to-hand attack]_Major_Confrontation (8+2D/evasion)_Single_Close-in_ Inflicts [44+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p><hr /><hr />"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.cWsAX47LViLdPLi6"
+    },
+    {
+      "sort": 500000,
+      "name": "IV. Fencer",
+      "type": "text",
+      "_id": "kzNwZVyDuyZtUL0G",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<hr /><p></p><p>◆〈Type-2 Fencer CR1〉</p><p>　[STR] 2 [DEX] 1 [POW] 1 [INT] 1</p><p>　[Evasion] 1 + 2D [Resistance] 1 + 2D [Physical Defense] 6 [Magic Defense] 2</p><p>　[Maximum HP] 53 [ Hate multiplier] × 1 [Action power] 1 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Hand-to-hand attack]_Major_Confrontation (4+2D/Evasion)_Single target_Close_Inflicts physical damage of [12+2D] .</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p></p><p>◆〈Type-2 Fencer CR2〉</p><p>　[STR] 3 [DEX] 2 [POW] 1 [INT] 1</p><p>　[Evasion] 2+2D [Resistance] 1+2D [Physical Defense] 8 [Magic Defense] ] 4</p><p>　[Maximum HP] 61 [Hate multiplier] x 1 [Action power] 2 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close-in_ Deals [16+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 28G</p><hr /><p></p><p>◆〈Type-2 Fencer CR3〉</p><p>　[STR] 3 [DEX] 2 [POW] 1 [INT] 2</p><p>　[Evasion] 2+2D [Resistance] 1+2D [Physical Defense] 10 [Magic Defense] ] 6</p><p>　[Maximum HP] 70 [Hate multiplier] × 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close-in_ Deals [19+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 35G</p><hr /><p></p><p>◆〈Type-2 Fencer CR4〉</p><p>　[STR] 3 [DEX] 2 [POW] 2 [INT] 2</p><p>　[Evasion] 2+2D [Resistance] 2+2D [Physical Defense] 11 [Magic Defense] ] 7</p><p>　[Maximum HP] 78 [Hate multiplier] x 2 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close_ Deals [23+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 42G</p><hr /><p></p><p>◆〈Type-2 Fencer CR5〉</p><p>　[STR] 4 [DEX] 3 [POW] 2 [INT] 2</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 13 [Magic Defense] ] 9</p><p>　[Maximum HP] 87 [Hate multiplier] x 2 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_Close_ Inflicts [26+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 52G</p><hr /><p></p><p>◆〈Type-2 Fencer CR6〉</p><p>　[STR] 4 [DEX] 3 [POW] 2 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 15 [Magic Defense] ] 11</p><p>　[Maximum HP] 95 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Melee attack]_Major_Confrontation (6+2D/evasion)_Single_Close_ Deals [30+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 63G</p><hr /><p></p><p>◆〈Type-2 Fencer CR7〉</p><p>　[STR] 4 [DEX] 3 [POW] 3 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 3 + 2D [Physical Defense] 16 [Magic Defense] ] 12</p><p>　[Maximum HP] 103 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Hand-to-hand attack]_Major_Confrontation (6+2D/Evasion)_Single_Close-in_ Inflicts [33+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 75G</p><hr /><p></p><p>◆〈Type-2 Fencer CR8〉</p><p>　[STR] 5 [DEX] 4 [POW] 3 [INT] 3</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 18 [Magic Defense] ] 14</p><p>　[Maximum HP] 112 [Hate multiplier] x 2 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_Close_ Inflicts [37+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 89G</p><hr /><p></p><p>◆〈Type-2 Fencer CR9〉</p><p>　[STR] 5 [DEX] 4 [POW] 3 [INT] 4</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 20 [Magic Defense] ] 16</p><p>　[Maximum HP] 120 [Hate multiplier] x 2 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_Close_ Deals [40+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 104G</p><hr /><p></p><p>◆〈Type-2 Fencer CR10〉</p><p>　[STR] 5 [DEX] 4 [POW] 4 [INT] 4</p><p>　[Evasion] 5 + 2D [Resistance] 4 + 2D [Physical Defense] 22 [Magic Defense] ] 18</p><p>　[Maximum HP] 129 [Hate multiplier] x 3 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 2》_[Hand-to-hand attack]_Major_Confrontation (8+2D/evasion)_Single_Close-in_ Inflicts [44+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p><hr /><hr />"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.kzNwZVyDuyZtUL0G"
+    },
+    {
+      "sort": 600000,
+      "name": "V. Grappler",
+      "type": "text",
+      "_id": "MJh1osekz8C8Wpqv",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<hr /><p></p><p>◆〈Type-3 Grappler CR1〉</p><p>　[STR] 2 [DEX] 1 [POW] 1 [INT] 1</p><p>　[Evasion] 1 + 3D [Resistance] 1 + 3D [Physical Defense] 2 [Magic Defense] 4</p><p>　[Maximum HP] 52 [ Hate multiplier] × 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Hand-to-hand attack]_Major_Confrontation (4+2D/Evasion)_Single target_Close_Inflicts physical damage of [12+2D] .</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p></p><p>◆〈Type-3 Grappler CR2〉</p><p>　[STR] 3 [DEX] 2 [POW] 1 [INT] 1</p><p>　[Evasion] 1 + 3D [Resistance] 2 + 3D [Physical Defense] 3 [Magic Defense] ] 5</p><p>　[Maximum HP] 60 [Hate multiplier] x 1 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close_ Deals [16+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 28G</p><hr /><p></p><p>◆〈Type-3 Grappler CR3〉</p><p>　[STR] 3 [DEX] 2 [POW] 1 [INT] 2</p><p>　[Evasion] 1 + 3D [Resistance] 2 + 3D [Physical Defense] 4 [Magic Defense] ] 6</p><p>　[Maximum HP] 67 [Hate multiplier] × 1 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close_ Deals [19+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 35G</p><hr /><p></p><p>◆〈Type-3 Grappler CR4〉</p><p>　[STR] 3 [DEX] 2 [POW] 2 [INT] 2</p><p>　[Evasion] 2 + 3D [Resistance] 2 + 3D [Physical Defense] 5 [Magic Defense] ] 8</p><p>　[Maximum HP] 75 [Hate multiplier] x 1 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_Close-in_ Deals [23+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p></p><p>◆〈Type-3 Grappler CR5〉</p><p>　[STR] 4 [DEX] 3 [POW] 2 [INT] 2</p><p>　[Evasion] 2 + 3D [Resistance] 3 + 3D [Physical Defense] 6 [Magic Defense] ] 9</p><p>　[Maximum HP] 82 [Hate multiplier] × 1 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_Close_ Inflicts [26+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 52G</p><hr /><p></p><p>◆〈Type-3 Grappler CR6〉</p><p>　[STR] 4 [DEX] 3 [POW] 2 [INT] 3</p><p>　[Evasion] 2+3D [Resistance] 3+3D [Physical Defense] 7 [Magic Defense] ] 10</p><p>　[Maximum HP] 90 [Hate multiplier] x 2 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (6+2D/evasion)_Single_Close_ Deals [30+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 63G</p><hr /><p></p><p>◆〈Type-3 Grappler CR7〉</p><p>　[STR] 4 [DEX] 3 [POW] 3 [INT] 3</p><p>　[Evasion] 3 + 3D [Resistance] 3 + 3D [Physical Defense] 8 [Magic Defense] ] 12</p><p>　[Maximum HP] 97 [Hate multiplier] x 2 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Hand-to-hand attack]_Major_Confrontation (6+2D/evasion)_Single_Close-in_ Inflicts [33+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 75G</p><hr /><p></p><p>◆〈Type-3 Grappler CR8〉</p><p>　[STR] 5 [DEX] 4 [POW] 3 [INT] 3</p><p>　[Evasion] 3 + 3D [Resistance] 4 + 3D [Physical Defense] 9 [Magic Defense] ] 13</p><p>　[Maximum HP] 105 [Hate multiplier] x 2 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_Close_ Inflicts [37+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 89G</p><hr /><p></p><p>◆〈Type-3 Grappler CR9〉</p><p>　[STR] 5 [DEX] 4 [POW] 3 [INT] 4</p><p>　[Evasion] 3 + 3D [Resistance] 4 + 3D [Physical Defense] 10 [Magic Defense] ] 14</p><p>　[Maximum HP] 112 [Hate multiplier] x 2 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Hand-to-hand attack]_Major_Confrontation (7+2D/Evasion)_Single_Close-in_ Deals [40+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 104G</p><hr /><p></p><p>◆〈Type-3 Grappler CR10〉</p><p>　[STR] 5 [DEX] 4 [POW] 4 [INT] 4</p><p>　[Evasion] 4 + 3D [Resistance] 5 + 3D [Physical Defense] 11 [Magic Defense] ] 16</p><p>　[Maximum HP] 120 [Hate multiplier] x 2 [Action power] 10 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 3》_[Melee attack]_Major_Confrontation (8+2D/evasion)_Single_Close_ Inflicts [44+2D] physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p><hr /><hr />"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.MJh1osekz8C8Wpqv"
+    },
+    {
+      "sort": 700000,
+      "name": "VI. Supporter",
+      "type": "text",
+      "_id": "MYWk4CpPusPopqGV",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-4 Supporter CR1〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 1</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 4 [Magic Defense] 6</p><p>　[Maximum HP] 40 [ Hate multiplier] x 1 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (4+2D/Resistance)_Inflicts 4 Sq_[4+2D] magic damage on a single target.</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p>◆〈Type-4 Supporter CR2〉</p><p>　[STR] 2 [DEX] 1 [POW] 3 [INT] 1</p><p>　[Evasion] 1 + 2D [Resistance] 3 + 2D [Physical Defense] 6 [Magic Defense] ] 8</p><p>　[Maximum HP] 45 [Hate multiplier] × 1 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (5+2D/Resistance)_Single_4Sq_[8+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 28G</p><hr /><p>◆〈Type-4 Supporter CR3〉</p><p>　[STR] 2 [DEX] 1 [POW] 3 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 3 + 2D [Physical Defense] 7 [Magic Defense] ] 10</p><p>　[Maximum HP] 50 [Hate multiplier] × 1 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (5+2D/Resistance)_Single_4Sq_[11+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 35G</p><hr /><p>◆〈Type-4 Supporter CR4〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 2</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 9 [Magic Defense] ] 12</p><p>　[Maximum HP] 55 [Hate multiplier] × 1 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (5+2D/Resistance)_Single_4Sq_[15+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p>◆〈Type-4 Supporter CR5〉</p><p>　[STR] 3 [DEX] 2 [POW] 4 [INT] 2</p><p>　[Evasion] 2 + 2D [Resistance] 4 + 2D [Physical Defense] 10 [Magic Defense] ] 14</p><p>　[Maximum HP] 60 [Hate multiplier] × 1 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (6+2D/Resistance)_Single_4Sq_[18+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 52G</p><hr /><p>◆〈Type-4 Supporter CR6〉</p><p>　[STR] 3 [DEX] 2 [POW] 4 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 12 [Magic Defense] ] 15</p><p>　[Maximum HP] 65 [Hate multiplier] × 2 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (6+2D/Resistance)_Single_4Sq_[22+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 63G</p><hr /><p>◆〈Type-4 Supporter CR7〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 13 [Magic Defense] ] 17</p><p>　[Maximum HP] 70 [Hate multiplier] × 2 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (6+2D/Resistance)_Single_4Sq_[25+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 75G</p><hr /><p>◆〈Type-4 Supporter CR8〉</p><p>　[STR] 4 [DEX] 3 [POW] 5 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 5 + 2D [Physical Defense] 15 [Magic Defense] ] 19</p><p>　[Maximum HP] 75 [Hate multiplier] x 2 [Action power] 10 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (7+2D/Resistance)_Single_4Sq_[29+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 89G</p><hr /><p>◆〈Type-4 Supporter CR9〉</p><p>　[STR] 4 [DEX] 3 [POW] 5 [INT] 4</p><p>　[Evasion] 4 + 2D [Resistance] 5 + 2D [Physical Defense] 16 [Magic Defense] ] 21</p><p>　[Maximum HP] 80 [Hate multiplier] x 2 [Action power] 11 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (7+2D/Resistance)_Single_4Sq_[32+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 104G</p><hr /><p>◆〈Type-4 Supporter CR10〉</p><p>　[STR] 4 [DEX] 4 [POW] 5 [INT] 4</p><p>　[Evasion] 4 + 2D [Resistance] 6 + 2D [Physical Defense] 18 [Magic Defense] ] 23</p><p>　[Maximum HP] 85 [Hate multiplier] × 2 [Action power] 12 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 4》_[Magic attack]_Major_Confrontation (8+2D/Resistance)_Single_4Sq_[36+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.MYWk4CpPusPopqGV"
+    },
+    {
+      "sort": 800000,
+      "name": "VII. Healer",
+      "type": "text",
+      "_id": "RRjI3pWZvY1adNPc",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-5 Healer CR1〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 1</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 9 [Magic Defense] 2</p><p>　[Maximum HP] 36 [ Hate multiplier] x 1 [Action power] 1 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Hand-to-hand attack]_Major_Confrontation (4+2D/Evasion)_Inflicts physical damage of single_2Sq_[12+2D].</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p>◆〈Type-5 Healer CR2〉</p><p>　[STR] 1 [DEX] 1 [POW] 3 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 3 + 2D [Physical Defense] 11 [Magic Defense] ] 4</p><p>　[Maximum HP] 42 [Hate multiplier] x 1 [Action power] 2 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_2Sq_[16+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 28G</p><hr /><p>◆〈Type-5 Healer CR3〉</p><p>　[STR] 2 [DEX] 1 [POW] 3 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 3 + 2D [Physical Defense] 13 [Magic Defense] ] 6</p><p>　[Maximum HP] 48 [Hate multiplier] × 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_2Sq_[19+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 35G</p><hr /><p>◆〈Type-5 Healer CR4〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 2</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 15 [Magic Defense] ] 7</p><p>　[Maximum HP] 54 [Hate multiplier] × 1 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (5+2D/Evasion)_Single_2Sq_[23+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 42G</p><hr /><p>◆〈Type-5 Healer CR5〉</p><p>　[STR] 2 [DEX] 2 [POW] 4 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 4 + 2D [Physical Defense] 17 [Magic Defense] ] 9</p><p>　[Maximum HP] 60 [Hate multiplier] × 1 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_2Sq_[26+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 52G</p><hr /><p>◆〈Type-5 Healer CR6〉</p><p>　[STR] 3 [DEX] 2 [POW] 4 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 18 [Magic Defense] ] 11</p><p>　[Maximum HP] 66 [Hate multiplier] × 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_2Sq_[30+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 63G</p><hr /><p>◆〈Type-5 Healer CR7〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 3</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 20 [Magic Defense] ] 12</p><p>　[Maximum HP] 72 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (6+2D/Evasion)_Single_2Sq_[33+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 75G</p><hr /><p>◆〈Type-5 Healer CR8〉</p><p>　[STR] 3 [DEX] 3 [POW] 5 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 5 + 2D [Physical Defense] 22 [Magic Defense] ] 14</p><p>　[Maximum HP] 78 [Hate multiplier] x 2 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Hand-to-hand attack]_Major_Confrontation (7+2D/Evasion)_Single_2Sq_[37+2D ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 89G</p><hr /><p>◆〈Type-5 Healer CR9〉</p><p>　[STR] 4 [DEX] 3 [POW] 5 [INT] 4</p><p>　[Evasion] 4 + 2D [Resistance] 5 + 2D [Physical Defense] 24 [Magic Defense] ] 16</p><p>　[Maximum HP] 84 [Hate multiplier] x 2 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Hand-to-hand attack]_Major_Confrontation (7+2D/evasion)_Single_2Sq_[40+2D] ] inflicts physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 104G</p><hr /><p>◆〈Type-5 Healer CR10〉</p><p>　[STR] 4 [DEX] 4 [POW] 5 [INT] 4</p><p>　[Evasion] 4 + 2D [Resistance] 6 + 2D [Physical Defense] 26 [Magic Defense] ] 18</p><p>　[Maximum HP] 90 [Hate multiplier] x 2 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 5》_[Melee attack]_Major_Confrontation (8+2D/Evasion)_Single_2Sq_[44+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.RRjI3pWZvY1adNPc"
+    },
+    {
+      "sort": 900000,
+      "name": "VIII. Spear",
+      "type": "text",
+      "_id": "9b23Ty4dbRd5HBNc",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-6 Spear CR1〉</p><p>　[STR] 1 [DEX] 2 [POW] 1 [INT] 1</p><p>　[Evasion] 2 + 2D [Resistance] 1 + 2D [Physical Defense] 6 [Magic Defense] 4</p><p>　[Maximum HP] 36 [ Hate multiplier] x 2 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Hand-to-hand attack]_Major_Confrontation (3+3D/evasion)_Single_target_Close_Inflicts physical damage of [25+2D] .</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p>◆〈Type-6 Spear CR2〉</p><p>　[STR] 2 [DEX] 3 [POW] 1 [INT] 1</p><p>　[Evasion] 3 + 2D [Resistance] 1 + 2D [Physical Defense] 8 [Magic Defense] ] 6</p><p>　[Maximum HP] 42 [Hate multiplier] x 2 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (4+3D/Evasion)_Single_Close_ Inflicts [31+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 28G</p><hr /><p>◆〈Type-6 Spear CR3〉</p><p>　[STR] 2 [DEX] 3 [POW] 1 [INT] 2</p><p>　[Evasion] 3 + 2D [Resistance] 1 + 2D [Physical Defense] 10 [Magic Defense] ] 7</p><p>　[Maximum HP] 48 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (4+3D/Evasion)_Single_Close_ Inflicts [37+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 35G</p><hr /><p>◆〈Type-6 Spear CR4〉</p><p>　[STR] 2 [DEX] 3 [POW] 2 [INT] 2</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 11 [Magic Defense] ] 9</p><p>　[Maximum HP] 54 [Hate multiplier] x 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (4+3D/Evasion)_Single_Close_ Inflicts [43+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 42G</p><hr /><p>◆〈Type-6 Spear CR5〉</p><p>　[STR] 3 [DEX] 4 [POW] 2 [INT] 2</p><p>　[Evasion] 4 + 2D [Resistance] 2 + 2D [Physical Defense] 13 [Magic Defense] ] 10</p><p>　[Maximum HP] 60 [Hate multiplier] x 2 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (5+3D/evasion)_Single_Close_ Inflicts [49+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 52G</p><hr /><p>◆〈Type-6 Spear CR6〉</p><p>　[STR] 3 [DEX] 4 [POW] 2 [INT] 3</p><p>　[Evasion] 4 + 2D [Resistance] 2 + 2D [Physical Defense] 15 [Magic Defense] ] 12</p><p>　[Maximum HP] 66 [Hate multiplier] x 3 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Hand-to-hand attack]_Major_Confrontation (5+3D/evasion)_Single_Close-in_ Deals [55+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 63G</p><hr /><p>◆〈Type-6 Spear CR7〉</p><p>　[STR] 3 [DEX] 4 [POW] 3 [INT] 3</p><p>　[Evasion] 5 + 2D [Resistance] 3 + 2D [Physical Defense] 16 [Magic Defense] ] 13</p><p>　[Maximum HP] 72 [Hate multiplier] x 3 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Hand-to-hand attack]_Major_Confrontation (5+3D/evasion)_Single_Close-in_ Inflicts [61+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 75G</p><hr /><p>◆〈Type-6 Spear CR8〉</p><p>　[STR] 4 [DEX] 5 [POW] 3 [INT] 3</p><p>　[Evasion] 5 + 2D [Resistance] 3 + 2D [Physical Defense] 18 [Magic Defense] ] 15</p><p>　[Maximum HP] 78 [Hate multiplier] x 3 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Hand-to-hand attack]_Major_Confrontation (6+3D/evasion)_Single_Close-in_ Inflicts [67+2D] physical damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 89G</p><hr /><p>◆〈Type-6 Spear CR9〉</p><p>　[STR] 4 [DEX] 5 [POW] 3 [INT] 4</p><p>　[Evasion] 5 + 2D [Resistance] 3 + 2D [Physical Defense] 20 [Magic Defense] ] 16</p><p>　[Maximum HP] 84 [Hate multiplier] x 3 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (6+3D/evasion)_Single_Close-in_ Inflicts [73+2D] physical damage.</p><p>▼Drop items</p><p>Expected drop value: 104G</p><hr /><p>◆〈Type-6 Spear CR10〉</p><p>　[STR] 4 [DEX] 5 [POW] 4 [INT] 4</p><p>　[Evasion] 6 + 2D [Resistance] 4 + 2D [Physical Defense] 22 [Magic Defense] 18</p><p>　[ Maximum HP] 90 [Hate multiplier] × 3 [Action power] 10 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 6》_[Melee attack]_Major_Confrontation (7+3D/Evasion)_Single_Close_[79+2D] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.9b23Ty4dbRd5HBNc"
+    },
+    {
+      "sort": 1000000,
+      "name": "IX. Archer",
+      "type": "text",
+      "_id": "B0lk50K4HtzPhnAV",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-7 Archer CR1〉</p><p>　[STR] 1 [DEX] 1 [POW] 1 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 1 + 2D [Physical Defense] 7 [Magic Defense] 6</p><p>　[Maximum HP] 31 [ Hate multiplier] x 2 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (2+3D/Evasion)_Inflicts physical damage of single_3Sq_[25+2D].</p><p>▼Drop item</p><p>Expected drop value: 23G</p><hr /><p>◆〈Type-7 Archer CR2〉</p><p>　[STR] 1 [DEX] 2 [POW] 1 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 1 + 2D [Physical Defense] 9 [Magic Defense] ] 8</p><p>　[Maximum HP] 36 [Hate multiplier] x 2 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (3+3D/Evasion)_Single_3Sq_[31+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 28G</p><hr /><p>◆〈Type-7 Archer CR3〉</p><p>　[STR] 2 [DEX] 2 [POW] 1 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 1 + 2D [Physical Defense] 10 [Magic Defense] ] 10</p><p>　[Maximum HP] 41 [Hate multiplier] × 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (3+3D/Evasion)_Single_3Sq_[37+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 35G</p><hr /><p>◆〈Type-7 Archer CR4〉</p><p>　[STR] 2 [DEX] 2 [POW] 2 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 2 + 2D [Physical Defense] 12 [Magic Defense] ] 12</p><p>　[Maximum HP] 46 [Hate multiplier] x 3 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (3+3D/evasion)_Single_3Sq_[43+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p>◆〈Type-7 Archer CR5〉</p><p>　[STR] 2 [DEX] 3 [POW] 2 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 14 [Magic Defense] ] 14</p><p>　[Maximum HP] 51 [Hate multiplier] × 3 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (4+3D/Evasion)_Single_3Sq_[49+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 52G</p><hr /><p>◆〈Type-7 Archer CR6〉</p><p>　[STR] 3 [DEX] 3 [POW] 2 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 2 + 2D [Physical Defense] 15 [Magic Defense] ] 16</p><p>　[Maximum HP] 56 [Hate multiplier] x 3 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (4+3D/Evasion)_Single_3Sq_[55+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 63G</p><hr /><p>◆〈Type-7 Archer CR7〉</p><p>　[STR] 3 [DEX] 3 [POW] 3 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 3 + 2D [Physical Defense] 17 [Magic Defense] ] 18</p><p>　[Maximum HP] 61 [Hate multiplier] x 3 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (4+3D/evasion)_Single_3Sq_[61+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 75G</p><hr /><p>◆〈Type-7 Archer CR8〉</p><p>　[STR] 3 [DEX] 4 [POW] 3 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 18 [Magic Defense] ] 20</p><p>　[Maximum HP] 66 [Hate multiplier] x 3 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (5+3D/Evasion)_Single_3Sq_[67+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 89G</p><hr /><p>◆〈Type-7 Archer CR9〉</p><p>　[STR] 4 [DEX] 4 [POW] 3 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 3 + 2D [Physical Defense] 20 [Magic Defense] ] 22</p><p>　[Maximum HP] 71 [Hate multiplier] x 3 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (5+3D/evasion)_Single_3Sq_[73+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 104G</p><hr /><p>◆〈Type-7 Archer CR10〉</p><p>　[STR] 4 [DEX] 4 [POW] 4 [INT] 5</p><p>　[Evasion] 5 + 2D [Resistance] 4 + 2D [Physical Defense] 22 [Magic Defense] ] 24</p><p>　[Maximum HP] 76 [Hate multiplier] x 4 [Action power] 10 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 7》_[Blast attack]_Major_Confrontation (6+3D/evasion)_Single_3Sq_[79+2D ] inflicts physical damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.B0lk50K4HtzPhnAV"
+    },
+    {
+      "sort": 1100000,
+      "name": "X. Shooter",
+      "type": "text",
+      "_id": "jklrwJPf3FEltx1R",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-8 Shooter CR1〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 4 [Magic Defense] 6</p><p>　[Maximum HP] 30 [ Hate multiplier] x 2 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (2+3D/Resistance)_Inflicts 4Sq_[17+2D] of magic damage to a single target.</p><p>▼Drop Item</p><p>Expected Drop Value: 23G</p><hr /><p>◆〈Type-8 Shooter CR2〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 3</p><p>　[Evasion] 1+2D [Resistance] 2+2D [Physical Defense] 5 [Magic Defense] ] 8</p><p>　[Maximum HP] 34 [Hate multiplier] × 2 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (3+3D/Resistance)_Single_4Sq_[23+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 28G</p><hr /><p>◆〈Type-8 Shooter CR3〉</p><p>　[STR] 2 [DEX] 1 [POW] 2 [INT] 3</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 6 [Magic Defense] ] 10</p><p>　[Maximum HP] 38 [Hate multiplier] × 2 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (3+3D/Resistance)_Single_4Sq_[29+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 35G</p><hr /><p>◆〈Type-8 Shooter CR4〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 8 [Magic Defense] ] 12</p><p>　[Maximum HP] 42 [Hate multiplier] x 3 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (3+3D/Resistance)_Single_4Sq_[35+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p>◆〈Type-8 Shooter CR5〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 4</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 9 [Magic Defense] ] 14</p><p>　[Maximum HP] 46 [Hate multiplier] x 3 [Action power] 7 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (4+3D/Resistance)_Single_4Sq_[41+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 52G</p><hr /><p>◆〈Type-8 Shooter CR6〉</p><p>　[STR] 3 [DEX] 2 [POW] 3 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 3 + 2D [Physical Defense] 10 [Magic Defense] ] 16</p><p>　[Maximum HP] 50 [Hate multiplier] × 3 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (4+3D/Resistance)_Single_4Sq_[47+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 63G</p><hr /><p>◆〈Type-8 Shooter CR7〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 12 [Magic Defense] ] 18</p><p>　[Maximum HP] 54 [Hate multiplier] × 3 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack means Type 8》_[Magic attack]_Major_Confrontation (4+3D/Resistance)_Single_4Sq_[53+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 75G</p><hr /><p>◆〈Type-8 Shooter CR8〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 5</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 13 [Magic Defense] ] 20</p><p>　[Maximum HP] 58 [Hate multiplier] × 3 [Action power] 9 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (5+3D/Resistance)_Single_4Sq_[59+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 89G</p><hr /><p>◆〈Type-8 Shooter CR9〉</p><p>　[STR] 4 [DEX] 3 [POW] 4 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 4 + 2D [Physical Defense] 14 [Magic Defense] ] 22</p><p>　[Maximum HP] 62 [Hate multiplier] x 3 [Action power] 10 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (5+3D/Resistance)_Single_4Sq_[65+2D ] deals magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 104G</p><hr /><p>◆〈Type-8 Shooter CR10〉</p><p>　[STR] 4 [DEX] 4 [POW] 5 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 5 + 2D [Physical Defense] 16 [Magic Defense] ] 24</p><p>　[Maximum HP] 66 [Hate multiplier] × 4 [Action power] 11 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 8》_[Magic attack]_Major_Confrontation (6+3D/Resistance)_Single_4Sq_[71+2D ] deals magic damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.jklrwJPf3FEltx1R"
+    },
+    {
+      "sort": 1200000,
+      "name": "XI. Bomber",
+      "type": "text",
+      "_id": "XXv3RnSOM9cGNbgL",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>◆〈Type-9 Bomber CR1〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 2</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 4 [Magic Defense] 6</p><p>　[Maximum HP] 30 [ Hate multiplier] × 2 [Action power] 1 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (2+3D/resistance)_Area (selection)_4Sq_[17+2D] of magic damage give.</p><p>▼Drop item</p><p>Expected drop value: 23G</p><hr /><p>◆〈Type-9 Bomber CR2〉</p><p>　[STR] 1 [DEX] 1 [POW] 2 [INT] 3</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 5 [Magic Defense] ] 8</p><p>　[Maximum HP] 34 [Hate multiplier] x 2 [Action power] 2 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (3+3D/resistance)_Range (selection) Deals _4Sq_[23+2D] magic damage.</p><p>▼Drop items</p><p>Expected drop value: 28G</p><hr /><p>◆〈Type-9 Bomber CR3〉</p><p>　[STR] 2 [DEX] 1 [POW] 2 [INT] 3</p><p>　[Evasion] 1 + 2D [Resistance] 2 + 2D [Physical Defense] 6 [Magic Defense] ] 10</p><p>　[Maximum HP] 38 [Hate multiplier] x 2 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (3+3D/resistance)_Area (selection) Deals _4Sq_[29+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 35G</p><hr /><p>◆〈Type-9 Bomber CR4〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 3</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 8 [Magic Defense] ] 12</p><p>　[Maximum HP] 42 [Hate multiplier] x 3 [Action power] 3 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (3+3D/resistance)_Area (selection) Deals _4Sq_[35+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 42G</p><hr /><p>◆〈Type-9 Bomber CR5〉</p><p>　[STR] 2 [DEX] 2 [POW] 3 [INT] 4</p><p>　[Evasion] 2 + 2D [Resistance] 3 + 2D [Physical Defense] 9 [Magic Defense] ] 14</p><p>　[Maximum HP] 46 [Hate multiplier] x 3 [Action power] 4 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (4+3D/resistance)_Range (selection) Deals _4Sq_[41+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 52G</p><hr /><p>◆〈Type-9 Bomber CR6〉</p><p>　[STR] 3 [DEX] 2 [POW] 3 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 3 + 2D [Physical Defense] 10 [Magic Defense] ] 16</p><p>　[Maximum HP] 50 [Hate multiplier] x 3 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (4+3D/resistance)_Area (selection) Deals _4Sq_[47+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 63G</p><hr /><p>◆〈Type-9 Bomber CR7〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 4</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 12 [Magic Defense] ] 18</p><p>　[Maximum HP] 54 [Hate multiplier] x 3 [Action power] 5 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (4+3D/resistance)_Range (selection) Deals _4Sq_[53+2D] magic damage.</p><p>▼Drop Item</p><p>Expected Drop Value: 75G</p><hr /><p>◆〈Type-9 Bomber CR8〉</p><p>　[STR] 3 [DEX] 3 [POW] 4 [INT] 5</p><p>　[Evasion] 3 + 2D [Resistance] 4 + 2D [Physical Defense] 13 [Magic Defense] ] 20</p><p>　[Maximum HP] 58 [Hate multiplier] x 3 [Action power] 6 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (5+3D/resistance)_Area (selection) Deals _4Sq_[59+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 89G</p><hr /><p>◆〈Type-9 Bomber CR9〉</p><p>　[STR] 4 [DEX] 3 [POW] 4 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 4 + 2D [Physical Defense] 14 [Magic Defense] ]22</p><p>　[Maximum HP]62 [Hate multiplier]×3 [Action power]7 [Movement power]2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (5+3D/Resistance)_Area (selection)_4Sq_[65+2D] of magic damage.</p><p>▼Drop item</p><p>Expected drop value: 104G</p><hr /><p>◆〈Type-9 Bomber CR10〉</p><p>　[STR] 4 [DEX] 4 [POW] 5 [INT] 5</p><p>　[Evasion] 4 + 2D [Resistance] 5 + 2D [Physical Defense] 16 [Magic Defense] ] 24</p><p>　[Maximum HP] 66 [Hate multiplier] x 4 [Action power] 8 [Movement power] 2</p><p>▼Special skill</p><p>《Basic attack method Type 9》_[Magic attack]_Major_Confrontation (6+3D/resistance)_Range (selection) Deals _4Sq_[71+2D] magic damage.</p><p>▼Drop item</p><p>Expected drop value: 120G</p><p></p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "category": null,
+      "_key": "!journal.pages!ZlZsjhYIdg0BaUkB.XXv3RnSOM9cGNbgL"
+    }
+  ],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZlZsjhYIdg0BaUkB",
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "categories": [],
+  "folder": null,
+  "_key": "!journal!ZlZsjhYIdg0BaUkB"
+}

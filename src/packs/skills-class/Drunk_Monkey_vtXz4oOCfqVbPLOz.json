@@ -1,0 +1,41 @@
+{
+  "name": "Drunk Monkey",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Dazed]. You can not be [Staggered], [Rigor], or [Confused] until this [Dazed] is removed. You may choose to continue to be [Dazed] after the end of your main process.</p>\n<hr>\n<p>A special skill that allows one to lazily parry attacks by putting one's mind and body into a state of inebriation, as if one were drunk.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vtXz4oOCfqVbPLOz",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!vtXz4oOCfqVbPLOz"
+}

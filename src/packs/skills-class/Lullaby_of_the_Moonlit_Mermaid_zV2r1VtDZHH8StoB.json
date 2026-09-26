@@ -1,0 +1,45 @@
+{
+  "name": "Lullaby of the Moonlit Mermaid",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D] penetrating damage to the target, and the target takes [Dazed]. This skill's [Hate] cost is equal to [Number of Targets + 1].</p>\n<hr>\n<p>A special skill that plays a melody with feelings of tranquility and soothing, and deprives the target of their fighting spirit. The subject's consciousness will fall asleep, and he will lose his ability to react quickly.</p>",
+    "tags": [
+      "Special Attack",
+      "Spirit",
+      "Instrument"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "Close",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zV2r1VtDZHH8StoB",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!zV2r1VtDZHH8StoB"
+}

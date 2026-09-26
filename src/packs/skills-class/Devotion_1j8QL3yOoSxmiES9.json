@@ -1,0 +1,41 @@
+{
+  "name": "Devotion",
+  "type": "skill",
+  "system": {
+    "description": "<p>During the [Damage Apply Step], you receive the expected HP damage that a target other than yourself would have received. The target receives no damage. You do not receive any Bad Statuses as a result of this substitution. You can only use this skill once in response to any given attack.</p>\n<hr>\n<p>The moment an ally receives a wound, it is a magic that transfers it to yourself. A devotional prayer saves a friend from danger.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR+1)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1j8QL3yOoSxmiES9",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!1j8QL3yOoSxmiES9"
+}

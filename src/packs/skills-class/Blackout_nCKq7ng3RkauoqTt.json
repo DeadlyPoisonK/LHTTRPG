@@ -1,0 +1,41 @@
+{
+  "name": "Blackout",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect against [Mob] enemies that have any kind of Bad Status. The target becomes [Incapacitated] or [Dead] (your choice).</p>\n<hr>\n<p>Magic that amplifies the enemy's ailments and neutralizes the target. It's not just weapons and bodies that the enchanter enhances.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nCKq7ng3RkauoqTt",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!nCKq7ng3RkauoqTt"
+}

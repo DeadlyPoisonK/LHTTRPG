@@ -1,0 +1,47 @@
+{
+  "name": "Holy Water II",
+  "type": "gear",
+  "system": {
+    "description": "<p>Deal [1D + 3] penetrating damage to the target. This damage always has the [Holy] tag, even if another effect would overwrite it.</p>",
+    "tags": [
+      "Toxin",
+      "Consumable",
+      "Radiance"
+    ],
+    "rank": 6,
+    "price": 60,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Opposed (6+2D vs Resistance)",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TazeL4HQPb0qywgi",
+  "folder": "P3CHM7TLfmSJrJpY",
+  "_key": "!items!TazeL4HQPb0qywgi"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Blood Letter",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 2d6 + @battle-status.power.attack.total]]{[2D + (Attack Power)]} physical damage. This attack triggers [SR+1] stacks of [Pursuit] instead of one.</p>\n<p>(Critical): [Pursuit] triggered by this attack are not removed.</p>\n<hr>\n<p>A special skill that performs a series of sharp slashes. The trajectory of the slash will remain like blood letters on the enemy's body, dealing further damage.</p>",
+    "tags": [
+      "Melee Attack",
+      "Blade"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy+1D vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4ZUnQ80KBs8qrbGg",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!4ZUnQ80KBs8qrbGg"
+}

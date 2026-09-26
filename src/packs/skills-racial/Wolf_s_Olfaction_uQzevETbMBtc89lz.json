@@ -1,0 +1,41 @@
+{
+  "name": "Wolf's Olfaction",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may treat characters with [Hidden] as if they did not have that condition, and may recognize and target them with actions.</p>\n<p>(Bonus): You gain +1 [Starting Fate Point].</p>\n<hr>\n<p>You have a keen sense of smell and can spot hidden opponents. Your senses as a Wolffang hunter are sharpened more than others.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uQzevETbMBtc89lz",
+  "folder": "Cm0dIMlUPNihp8rO",
+  "_key": "!items!uQzevETbMBtc89lz"
+}

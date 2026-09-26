@@ -1,0 +1,45 @@
+{
+  "name": "Servant Summon: Gray Wolf",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain the [Nature] tag. When you make a damage roll and deal at least 1 point of HP Damage, the target of that attack takes [Pursuit: SRx4].</p>\n<p>(Effect): You may make a [Safe Move] of 1 Sq.&nbsp;<br>(CR8): The rating of the [Pursuit] becomes [SR x6].<br>(CR20): The rating of the [Pursuit] becomes [SR x8]</p>\n<hr>\n<p>A special skill that summons and employs the ancestral spirit, Gray Wolf, which is the embodiment of nature's wildness and ferocity. The gray wolf will coordinate with you to hunt down prey.</p>",
+    "tags": [
+      "Servant Summon",
+      "Nature",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TRl1raE1omi8ixS8",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!TRl1raE1omi8ixS8"
+}

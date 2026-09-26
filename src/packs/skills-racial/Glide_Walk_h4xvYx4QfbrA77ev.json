@@ -1,0 +1,43 @@
+{
+  "name": "Glide Walk",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Safe Move] up to your [Speed] Sq.</p>\n<p>(Minor): Increase the distance moved by +1 Sq.</p>\n<hr>\n<p>A special skill that slips past enemy interference with supple, gliding movements. There is not much that can interfere with the light movements of the catkin.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "h4xvYx4QfbrA77ev",
+  "folder": "qBo2B5iIARPEcvtd",
+  "_key": "!items!h4xvYx4QfbrA77ev"
+}

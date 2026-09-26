@@ -1,0 +1,44 @@
+{
+  "name": "Cross Slash",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes two stacks of [Pursuit] with a rating equal to [(Attack Power) + (SR&times;2)].</p>\n<hr>\n<p>A special skill that quickly swings the sword vertically and horizontally, slashing like drawing a cross. It's not flashy, but it consistently delivers effective hits even to well-protected enemies.</p>",
+    "tags": [
+      "Blade",
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Nj5f0RgMxnCwhoIm",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!Nj5f0RgMxnCwhoIm"
+}

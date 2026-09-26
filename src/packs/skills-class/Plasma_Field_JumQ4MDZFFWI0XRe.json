@@ -1,0 +1,44 @@
+{
+  "name": "Plasma Field",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magical power)] magic damage. You gain [Barrier: (POW Mod) &times; SR].</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">An offensive spell that clads itself in powerful lightning magic and slams it into the enemy. The protection of lightning can also be used as armor to protect yourself.</span></p>",
+    "tags": [
+      "Magic Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "JumQ4MDZFFWI0XRe",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!JumQ4MDZFFWI0XRe"
+}

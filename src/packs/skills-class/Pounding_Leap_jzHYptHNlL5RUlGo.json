@@ -1,0 +1,43 @@
+{
+  "name": "Pounding Leap",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] of 2 Sq. At this time, if the difference in [Height] of the destination is within 2, the effect can be ignored and moved.</p>\n<p>(Minor): The moving distance is +2 Sq. Furthermore, if you finish moving with a Sq. whose [Height] is 3 or more lower than the Sq. that started the moving, add [STR Mod] to the damage roll of a [Melee Attack] of this main process.</p>\n<hr>\n<p>A special ability to move over obstacles by handling the body as if ignoring gravity. The enemy will be caught off guard by the approaching attack with an unconventional trajectory.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jzHYptHNlL5RUlGo",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!jzHYptHNlL5RUlGo"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Twin Bird Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have two [Throwing] weapons equipped to your [Hand Slots]. Your [Attack Power] is the sum of the two weapons and your Range is equal to the lowest range of the two.</p>\n<p>(SR2): Gain +2 [Accuracy].<br>(SR3): Your \"Shadowless Kick\" becomes [Range: 1 Sq].</p>\n<hr>\n<p>A fighting style that uses thrown weapons with both hands and fires continuously.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "scl1yLqczkZCgUKk",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!scl1yLqczkZCgUKk"
+}

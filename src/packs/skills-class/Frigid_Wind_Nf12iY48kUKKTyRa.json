@@ -1,0 +1,44 @@
+{
+  "name": "Frigid Wind",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 1d6 +@battle-status.power.magic.total]]{[(SR)D + (Magic Power)]}&nbsp; magical damage to the target, and the target takes [Dazed].</p>\n<hr>\n<p>Attack magic that blows a gust of extremely low temperature and freezes enemies within range. Enemies frozen in the cold lose their judgment and become easy targets.</p>",
+    "tags": [
+      "Magic Attack",
+      "Cold"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Nf12iY48kUKKTyRa",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!Nf12iY48kUKKTyRa"
+}

@@ -1,0 +1,335 @@
+{
+  "name": "Clockwork Saberlion",
+  "type": "monster",
+  "img": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+  "system": {
+    "health": {
+      "value": 48,
+      "max": 48,
+      "mod": 0,
+      "rc": 0,
+      "jb": 0,
+      "effect": 0
+    },
+    "fate": {
+      "value": 0,
+      "max": 0,
+      "rc": 0,
+      "effect": 0
+    },
+    "tags": [
+      "Artificial",
+      "Inanimate",
+      "Clockwork"
+    ],
+    "biography": "",
+    "race": "",
+    "attributes": {
+      "str": {
+        "value": 0,
+        "mod": 3,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "dex": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "pow": {
+        "value": 0,
+        "mod": 1,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      },
+      "int": {
+        "value": 0,
+        "mod": 2,
+        "total": 0,
+        "effect": 0,
+        "jb": 0,
+        "rc": 0
+      }
+    },
+    "bad-status": {
+      "regen": 0,
+      "cancel": 0,
+      "barrier": 0,
+      "decay": 0,
+      "pursuit": 0,
+      "dazed": false,
+      "rigor": false,
+      "confused": false,
+      "staggered": false,
+      "afflicted": false,
+      "overconfident": false
+    },
+    "battle-status": {
+      "defense": {
+        "phys": 10,
+        "magic": 7
+      },
+      "speed": 2,
+      "initiative": 5
+    },
+    "rank": 3,
+    "idendification": "7",
+    "hateMultiplier": "2",
+    "checks": {
+      "evasion": {
+        "dice": 2,
+        "mod": 3
+      },
+      "resistance": {
+        "dice": 2,
+        "mod": 1
+      }
+    },
+    "description": "<table style=\"font-family: var(--font-primary); font-size: var(--font-size-14); width: 396pt; height: 84px;\" border=\"0\" width=\"528\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 3218; width: 66pt;\" span=\"6\" width=\"88\"></colgroup>\n<tbody>\n<tr style=\"height: 21px;\">\n<td class=\"xl66\" style=\"height: 21px; width: 396pt;\" colspan=\"6\" width=\"528\" height=\"21\">Drop Items</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">1-3</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\">Tiny Screw [Valuable] (25G)</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">4-5</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\">Darkness-Permeating Medicine (p219)</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td class=\"xl65\" style=\"height: 21px;\" height=\"21\">6</td>\n<td class=\"xl67\" style=\"height: 21px;\" colspan=\"5\"></td>\n</tr>\n</tbody>\n</table>\n<hr>\n<p>[[/gmr 2d6 + 2]]{[Evasion]}<br>[[/gmr 2d6 + 1]]{[Resistance]}</p>"
+  },
+  "prototypeToken": {
+    "name": "Clockwork Saberlion",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "systems/lhtrpg/assets/ui/actors_icons/monster.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "fate"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0,
+      "color": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "items": [
+    {
+      "name": "Clockwork Existence",
+      "type": "skill",
+      "system": {
+        "description": "<p>Every time this enemy takes [flame] damage, it must move 3 squares and takes [rigor] and [afflicted].&nbsp;</p>",
+        "tags": [],
+        "timing": "Constant",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "6nJNNoaQKAsDUOVq",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Kb1wQByQIumckIc1.6nJNNoaQKAsDUOVq"
+    },
+    {
+      "name": "Aeon Booster",
+      "type": "skill",
+      "system": {
+        "description": "<p>This target is in [flight] and may move up to 3 squares. If it deals damage during this main process, its target also takes [rigor] and [dazed].&nbsp;</p>",
+        "tags": [],
+        "timing": "Move",
+        "checkType": "",
+        "range": "",
+        "target": "",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "1/scene",
+        "macroeffect": ""
+      },
+      "_id": "6QvlwJYwVR6F0bFm",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Kb1wQByQIumckIc1.6QvlwJYwVR6F0bFm"
+    },
+    {
+      "name": "Super High Frequency Saber",
+      "type": "skill",
+      "system": {
+        "description": "<p>37+2D physical damage. If the attack result is over 21, the target loses 1 Fate Point. If the target cannot pay the Fate Point cost, they are [incapacitated].</p>",
+        "tags": [
+          "Physical Attack"
+        ],
+        "timing": "",
+        "checkType": "6+3D vs Evasion",
+        "range": "Close",
+        "target": "Single",
+        "subtype": "Basic",
+        "skillRank": {
+          "value": 1,
+          "max": 1
+        },
+        "cost": "",
+        "limit": "",
+        "macroeffect": ""
+      },
+      "_id": "xxhgkxVtgFjH1Cae",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!Kb1wQByQIumckIc1.xxhgkxVtgFjH1Cae"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Kb1wQByQIumckIc1",
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "folder": "XAj2Q8ZzBvNAwxtG",
+  "_key": "!actors!Kb1wQByQIumckIc1"
+}

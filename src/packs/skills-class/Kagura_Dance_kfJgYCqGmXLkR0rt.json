@@ -1,0 +1,43 @@
+{
+  "name": "Kagura Dance",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately use two [Timing: Setup] Kannagi or Healer Archetype skills.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that activates two magics at once by performing different chants at the same time, replacing the magic chant by dancing kagura, which is a collection of actions with various meanings and prayers.</p>",
+    "tags": [
+      "Swift"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 2500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "kfJgYCqGmXLkR0rt",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!kfJgYCqGmXLkR0rt"
+}

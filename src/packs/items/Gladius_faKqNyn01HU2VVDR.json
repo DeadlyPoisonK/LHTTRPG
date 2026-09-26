@@ -1,0 +1,46 @@
+{
+  "name": "Gladius",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A thick sword said to have been used by ancient Roman foot soldiers. It features solid construction and robustness.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 27,
+    "price": 2000,
+    "equipped": false,
+    "attack": 30,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "faKqNyn01HU2VVDR",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!faKqNyn01HU2VVDR"
+}

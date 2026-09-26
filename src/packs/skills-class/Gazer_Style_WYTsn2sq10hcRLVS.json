@@ -1,0 +1,43 @@
+{
+  "name": "Gazer Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are not equipped with items that have the [Helm] or [Cloak] tag. When you apply a Bad Status to a target, you may also deal [SRx2] direct damage to the target per Bad Status applied.</p>\n<hr>\n<p>A battle style that strengthens various curses through the medium of gaze. It is also called a magic eye or an evil eye user.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WYTsn2sq10hcRLVS",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!WYTsn2sq10hcRLVS"
+}

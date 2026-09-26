@@ -1,0 +1,44 @@
+{
+  "name": "Brain Vice",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+3)D + (Magic Power)] magical damage to the target. The target reduces the range of their [Range: 2 Sq.] or better actions by -1. Treat this effect as a Bad Status that interacts with [Afflicted].</p>\n<hr>\n<p>An attack magic that envelops the enemy in a pillar of jet-black light that torments the mind and inflicts damage on the target from the intangible side. Enemies hit by this magic lose their concentration, and the accuracy of their shooting and magic is greatly reduced.</p>",
+    "tags": [
+      "Magic Attack",
+      "Spirit"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t\t",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "XxrNHHbYU7m2R9Ro",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!XxrNHHbYU7m2R9Ro"
+}

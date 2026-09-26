@@ -1,0 +1,43 @@
+{
+  "name": "Quick Assault",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target.</p>\n<p>(Success): During the Initiative Process for the next Round, you are treated as the character with the highest [Initiative].</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">A special skill that attacks with a quick step while holding a weapon. It is characterized by a small movement gap, and can immediately move to the next attack.</span></p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0sqKuE5Umk7zvy6j",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!0sqKuE5Umk7zvy6j"
+}

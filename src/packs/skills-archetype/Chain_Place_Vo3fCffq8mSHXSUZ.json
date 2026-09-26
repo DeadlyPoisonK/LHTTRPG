@@ -1,0 +1,41 @@
+{
+  "name": "Chain Place",
+  "type": "skill",
+  "system": {
+    "description": "<p>Select up to [SR &times; 2] Squares as the target. The Squares must connect and all Square's must be within range. Target Squares become [Mire of Binding] Prop.</p>\n<hr>\n<p>A magic that creates a bad footing space by making the feet muddy and deploying magical chains.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Auto",
+    "range": "5Sq",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Vo3fCffq8mSHXSUZ",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!Vo3fCffq8mSHXSUZ"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Mage Howling",
+  "type": "skill",
+  "system": {
+    "description": "<p>Your [Magic Attack] damage rolls gain a +[(CRx2)+10] bonus.</p>\n<hr>\n<p>A special skill that pours in a large amount of magical power and releases magic of tremendous power. A torrent of power on the verge of going out of control roars and swallows the enemy.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "b47l7VnNGizgZE6Y",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!b47l7VnNGizgZE6Y"
+}

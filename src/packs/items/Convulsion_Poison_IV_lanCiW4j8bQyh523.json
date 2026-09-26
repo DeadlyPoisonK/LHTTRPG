@@ -1,0 +1,46 @@
+{
+  "name": "Convulsion Poison IV",
+  "type": "gear",
+  "system": {
+    "description": "<p>The target takes [Staggered].</p>",
+    "tags": [
+      "Toxin",
+      "Consumable"
+    ],
+    "rank": 30,
+    "price": 1050,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Opposed (8+2D vs Resistance)",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 3800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lanCiW4j8bQyh523",
+  "folder": "P3CHM7TLfmSJrJpY",
+  "_key": "!items!lanCiW4j8bQyh523"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Servant Summon: Alraune",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain the [Nature] tag. You gain a +[SRx3] bonus to [Recovery].</p>\n<p>(Effect): Secondary targets with [Mob] within a range of [Target: Wide 4 (P) / Range: Close] centered on you take [Staggered].</p>\n<hr>\n<p>A special skill that summons the ancestral spirit, Alraune, who embodies the fertility and fascination of nature, and uses it. Alraune takes the form of a beautiful girl leaning out of various kinds of petals.</p>",
+    "tags": [
+      "Servant Summon",
+      "Nature",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 2,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.druid.XeRGlQPhVm4XPJ2c",
+      "duration": {
+        "rounds": null,
+        "startTime": 240,
+        "seconds": null,
+        "combat": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "_id": "BdmEjLAXvWG2j2Ya",
+      "changes": [
+        {
+          "key": "system.battle-status.power.restoration.mod",
+          "mode": 2,
+          "value": "6",
+          "priority": null
+        },
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Nature]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Alraune",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!XeRGlQPhVm4XPJ2c.BdmEjLAXvWG2j2Ya"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "XeRGlQPhVm4XPJ2c",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!XeRGlQPhVm4XPJ2c"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Guardian Headwear",
+  "type": "accessory",
+  "system": {
+    "description": "<p>&lt;Samurai&gt; &lt;Martial Artist&gt; only. A headband with a coat of arms written on its surface to pray for various blessings.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Helm]"
+    ],
+    "pdef": 11,
+    "mdef": 0,
+    "rank": 17,
+    "price": 830,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Am2gqzWe87NlEt8H",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Am2gqzWe87NlEt8H"
+}

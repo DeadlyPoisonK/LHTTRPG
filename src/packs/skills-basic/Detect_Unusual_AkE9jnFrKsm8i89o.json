@@ -1,0 +1,41 @@
+{
+  "name": "Detect Unusual",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill targets everything in range that has a [Detection Difficulty]. The target removes any [Concealed] or [Hidden] effects. You do not have to remove these effects from your allies.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "Basic (Perception vs Detection Difficulty)",
+    "range": "Close",
+    "target": "Wide 20 (A)",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "AkE9jnFrKsm8i89o",
+  "folder": null,
+  "_key": "!items!AkE9jnFrKsm8i89o"
+}

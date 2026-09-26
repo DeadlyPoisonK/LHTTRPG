@@ -1,0 +1,41 @@
+{
+  "name": "Cure",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target removes all Bad Statuses currently affecting them.</p>\n<p>(Fate 1): This skill can be used with [Timing: Instant].</p>\n<hr>\n<p>A magic that envelops you in pure magic and heals your allies' ailments.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "I2uCIJvlrOMnRPCY",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!I2uCIJvlrOMnRPCY"
+}

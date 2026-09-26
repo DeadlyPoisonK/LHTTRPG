@@ -1,0 +1,45 @@
+{
+  "name": "Sircoat",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A beautifully decorated coat that a knight wears over his armor.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Cloak]"
+    ],
+    "pdef": 7,
+    "mdef": 7,
+    "rank": 25,
+    "price": 1500,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UHk3hzDXocN0HBIl",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!UHk3hzDXocN0HBIl"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Elemental Ray",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 1d6 +@system.int.mod ]]{[(SR)D + [INT Mod]]}&nbsp; penetrating damage to the target. You may only use this skill when you have the [Fairy] tag.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">An offensive spell that commands a spirit that is summoning a follower to emit a ray imbued with the power of an attribute. The light of the color that symbolizes the attribute mows down the enemy.</span></p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hV8DKhwHmTGzAo0S",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!hV8DKhwHmTGzAo0S"
+}

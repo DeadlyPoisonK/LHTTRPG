@@ -1,0 +1,41 @@
+{
+  "name": "Break Trigger",
+  "type": "skill",
+  "system": {
+    "description": "<p>You trigger all [Pursuit] stacks the target of your attack has, rather than just one.</p>\n<hr>\n<p>A special skill that performs countless follow-up attacks with unstoppable, god-speed continuous attacks. Even if it's just for a moment, the fierce attack is still sweet, and the enemy falls to the ground without even understanding what happened.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pxw7dK03zqZrjcmR",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!pxw7dK03zqZrjcmR"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "R9 M5 Haunting Flame",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Magic Attack Class Only. Adds +2 to your [Magic Power]. [Trigger: Cleanup] Deals [your Hate] points of direct damage to targets in [Wide Area 2 (Select)] / [Close Range]. If the target is in [Identified] status, the damage is further increased by 10.\nA short sword with a beautiful blade pattern that flickers like fire. For those who direct strong hatred toward its wielder, it becomes a real flame, burning their body with the fire of hatred.</p><hr><p>Unending Flame Core Material (180G) + Katras (200G) + White Ring (210G) + [Magic Catalyst 9] (90G) ×2 + Crafting Cost (370G)</p>",
+    "tags": [
+      "One-Handed",
+      "Blade",
+      "Light",
+      "Flame",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 9,
+    "price": 1140,
+    "equipped": false,
+    "attack": 10,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 24700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "yafLnYdAMue42iLf",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!yafLnYdAMue42iLf"
+}

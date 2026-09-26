@@ -1,0 +1,44 @@
+{
+  "name": "Shrike's Thorn II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Deal [2D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Post-Action): The target takes [Decay: (INT base)].</p>\n<p>(Target: Pre-Action): The target's [Initiative] becomes 0. This effect lasts until the end of the round.</p>\n<hr>\n<p>A special skill that pierces the enemy's vital points with precision like passing a needle through, hindering their actions. An enemy deprived of freedom becomes a shrike's premature sacrifice waiting to be pierced and pecked by a branch.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Two-Handed"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "AM1mlOqmWX0GwyBq",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!AM1mlOqmWX0GwyBq"
+}

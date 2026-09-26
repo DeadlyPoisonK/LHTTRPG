@@ -1,0 +1,46 @@
+{
+  "name": "R7 Battle Maiden Breastplate",
+  "type": "armor",
+  "system": {
+    "description": "<p>Female Only. Gives +1D to [Negotiation Check] against any opposite sex. [Trigger: Text] Can be used at any time. You gain one connection with any opposite sex. This connection is lost during afterplay. Once per scenario. [Trigger: Initiative] You gain 2 points of [Fate]. Then, add the [Broken] tag to this item.\nArmor modeled after the garb of the valkyries, said to inspire the spirits of heroes in the afterlife. It heightens its wearer's charm, making it hard for the opposite sex to ignore their words.</p><hr><p>[Core Material](100G)+ (140G)×3+[ 7](60G)×3+Crafting Cost(350G)</p>",
+    "tags": [
+      "Medium Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 12,
+    "mdef": 20,
+    "initiative": 0,
+    "rank": 7,
+    "price": 1050,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FOoFeAlorPZ9BlEc",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!FOoFeAlorPZ9BlEc"
+}

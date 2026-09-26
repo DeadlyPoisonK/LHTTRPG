@@ -1,0 +1,41 @@
+{
+  "name": "Pickpocket",
+  "type": "skill",
+  "system": {
+    "description": "<p>Can only be used when one or more of your [Hand Slots] are empty. Select one item from the enemy's loot table other than \"Fixed\" and obtain that item. It can not be used more than once on each target in the same scenario.</p>\n<p>(Critical): Hate becomes 0, and increases to two different items from the enemy's loot other than \"fixed\".</p>\n<hr>\n<p>Ability to steal items with your free hand from enemies who are preoccupied with weapons.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "Opposed (Operate vs Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "XxnqPA1FTyxEIkEe",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!XxnqPA1FTyxEIkEe"
+}

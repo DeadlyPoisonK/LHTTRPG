@@ -1,0 +1,56 @@
+{
+  "_id": "cRLhBYjRus27sJhU",
+  "name": "Sorcerer",
+  "type": "class",
+  "sort": 0,
+  "img": "systems/lhtrpg/assets/ui/classes/Sorcerer_Logo.png",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "sorcerer",
+    "archetype": "mage",
+    "attributes": {
+      "str": 0,
+      "dex": 3,
+      "pow": 3,
+      "int": 4
+    },
+    "hp": 35,
+    "hpPerRank": 4,
+    "grants": [
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-archetype.Item.MvcPYED8J5ebfOzi"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.ZfwK9SOPMWUC6t8a"
+        ]
+      },
+      {
+        "uuids": [
+          "Compendium.lhtrpg.skills-class.Item.v0GirKGdNvQg917v"
+        ]
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "hurBWR1sa0VcfDpc",
+  "_key": "!items!cRLhBYjRus27sJhU"
+}

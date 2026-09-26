@@ -1,0 +1,43 @@
+{
+  "name": "Grand Finale II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR16 or higher. Deal [(SRx2)D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Dazed, Rigor, Staggered): Increase the damage by +[INT base].</p>\n<hr>\n<p>A special skill that is worthy of the name of curtain puller, and unleashes a full blow with loud accompaniment. A splendid technique that fascinates those who see it, if it hits directly, it will surely tell the end of the enemy.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3nc0kaX9HUM66T6C",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!3nc0kaX9HUM66T6C"
+}

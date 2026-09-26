@@ -1,0 +1,48 @@
+{
+  "name": "R3 M4 Harvester",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Refer]: Use this effect after you have made a non-[Mob] enemy [Incapacitated] or [Dead]. You gain a +6 bonus to [Recovery]. This effect lasts until the end of the scene.</p>\n<p>A jet-black scythe said to reap life. Defeating an enemy causes them to tremble with glee, transmuting their vitality into healing power.</p>\n<hr>\n<p>Ancient Skull [Core Material] (40G) + Battle Ax (90G) + Long Spear (80G) + [Magic Catalyst 3] (25G) + Crafting Cost (85G)</p>",
+    "tags": [
+      "M4",
+      "Two-Handed",
+      "Hafted",
+      "Not for Sale"
+    ],
+    "initiative": -2,
+    "rank": 3,
+    "price": 320,
+    "equipped": false,
+    "attack": 17,
+    "magic": 0,
+    "accuracy": -2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 10100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SInRDagRyFV5nUCv",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!SInRDagRyFV5nUCv"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Grizzly Slam",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target. You may make the target make a [Safe Move (forced)] of 1 Sq.</p>\n<hr>\n<p>Like a grizzly bear, this is a throwing technique that firmly captures the enemy with both arms and slams them into the ground. You can also throw the enemy far away to get out of range.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Dk1RdkUYVHguR0XR",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!Dk1RdkUYVHguR0XR"
+}

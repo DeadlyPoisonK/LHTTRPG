@@ -1,0 +1,46 @@
+{
+  "name": "Pinwheel",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A throwing weapon with a blade that spreads in all directions.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Throwing]"
+    ],
+    "initiative": 2,
+    "rank": 9,
+    "price": 230,
+    "equipped": false,
+    "attack": 11,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 8100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MruRUv1Ggcy3ZkTn",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!MruRUv1Ggcy3ZkTn"
+}

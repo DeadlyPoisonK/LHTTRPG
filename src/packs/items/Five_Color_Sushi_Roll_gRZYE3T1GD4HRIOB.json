@@ -1,0 +1,47 @@
+{
+  "name": "Five Color Sushi Roll",
+  "type": "gear",
+  "system": {
+    "description": "<p>Reduces target's [Fatigue] strength by -55.</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 20,
+    "price": 460,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gRZYE3T1GD4HRIOB",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!gRZYE3T1GD4HRIOB"
+}

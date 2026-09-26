@@ -1,0 +1,48 @@
+{
+  "name": "Resonance Crusher",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When you use \"Silent Palm\", you may give the target [Staggered] instead of direct damage. This effect can be used once per scene.\nAlvian Armored Gauntlets Armor Common A pair of massive silver gauntlets that cover up to the elbows, one of the series that incorporates Alvian daily items into weaponry. Combining construction magic devices and gauntlets made from stakes found in Alvian ruins and materials from a powerful beast, this item realizes a new function of generating powerful vibrations. The flashy display of the palms glowing with a rainbow hue when activating the device has made it popular among Adventurers who care more about aesthetics than performance. 15 8 7 5 6 Vibrant Vibration Active 3 Generates powerful vibrations that can disrupt enemy balance and reduce their defense temporarily. The effect is strongest when used in conjunction with other armor pieces from the same series. Defense Down -2 2 Self Alvian Stake Beast Scale Magical Core Basic Metal Ingot 100 1</p><hr><p>[Core Material](340G)+ (680G)+[ 14](190G)×4+Crafting Cost(900G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Martial Arts",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 14,
+    "price": 2680,
+    "equipped": false,
+    "attack": 35,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 19300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "mT937itePuIWRTug",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!mT937itePuIWRTug"
+}

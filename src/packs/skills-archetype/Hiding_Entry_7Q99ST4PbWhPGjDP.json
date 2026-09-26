@@ -1,0 +1,43 @@
+{
+  "name": "Hiding Entry",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you appear in a scene. You appear in that scene with [Hidden]. While [Hidden] as a result of this skill, [Normal Move] and [Safe Move] will not remove [Hidden]. This skill may not be used if the GM rules that it is not possible to make a hidden entry into the scene.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">A special skill that allows you to act without being distracted by your surroundings by holding your breath to cut off your presence and blending into the surrounding scenery.</span></p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Refer",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7Q99ST4PbWhPGjDP",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!7Q99ST4PbWhPGjDP"
+}

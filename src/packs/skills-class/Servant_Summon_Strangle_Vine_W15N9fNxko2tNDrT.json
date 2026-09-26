@@ -1,0 +1,41 @@
+{
+  "name": "Servant Summon: Strangle Vine",
+  "type": "skill",
+  "system": {
+    "description": "<p>Target one prop with the [Natural] tag and the [Terrain] or [Trap] tag. Stop the undesirable effect of the that prop till the end of the round.</p>\n<hr>\n<p>Magic that summons wild vines that are entwined to cover quagmire or bridge cracks to temporarily nullify dangerous terrain.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "Auto\t\t",
+    "range": "4Sq",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "W15N9fNxko2tNDrT",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!W15N9fNxko2tNDrT"
+}

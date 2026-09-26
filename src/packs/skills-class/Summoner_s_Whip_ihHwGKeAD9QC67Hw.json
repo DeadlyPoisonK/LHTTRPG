@@ -1,0 +1,43 @@
+{
+  "name": "Summoner's Whip",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, your [Magic Attacks] with [Target: Single] change to [Target: Two].</p>\n<hr>\n<p>A special skill that uses the sound of a whip to reprimand and encourage the summoned attendant. Agitated, your buddy rampages more violently than usual, showing double the normal performance.</p>",
+    "tags": [
+      "Whip"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ihHwGKeAD9QC67Hw",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!ihHwGKeAD9QC67Hw"
+}

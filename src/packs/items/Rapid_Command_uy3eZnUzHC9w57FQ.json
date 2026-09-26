@@ -1,0 +1,48 @@
+{
+  "name": "Rapid Command",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your [Magic Power] increases by +4. [Trigger: Move] Select one skill you possess with the [Summon Servant] tag. Immediately activate that skill's \"Fixed Effect.\" Once per scene.\nA special whip created to give commands to monsters. Its tip splits into three parts, each ending in a statue resembling the head of a serpent, the symbol of the earth's ruler, a raging bull representing the power of the land, and an eagle, the king of the skies. These statues amplify the wielder's magic power. Monsters commanded by this whip will immediately carry out their orders. 10 8 5 Increases the effectiveness of commands given to monsters.</p><hr><p>True Steel Wire [Core Material] (440G) + Chain Sickle (460G) + Iron Carriage Whistle (750G) + [Magic Catalyst 16] (250G) ×3 + Crafting Cost (1190G)</p>",
+    "tags": [
+      "One-Handed",
+      "Whip",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 2,
+    "rank": 16,
+    "price": 3590,
+    "equipped": false,
+    "attack": 20,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 22700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uy3eZnUzHC9w57FQ",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!uy3eZnUzHC9w57FQ"
+}

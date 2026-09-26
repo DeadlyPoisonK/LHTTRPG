@@ -1,0 +1,44 @@
+{
+  "name": "Onslaught",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+4)D + (Attack Power)] physical damage to the target. You gain a +1D bonus to your next [Hit Check]. Treat this effect as a Combat Status that is removed after being applied once.</p>\n<hr>\n<p>A special skill that wields a large two-handed weapon and performs a tremendous onslaught. Enemies lose their balance due to its momentum and impact, and subsequent attacks will easily hit.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Two Handed"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "W891DO0N8giaV0T6",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!W891DO0N8giaV0T6"
+}

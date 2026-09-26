@@ -1,0 +1,47 @@
+{
+  "name": "R15 Rosenschild",
+  "type": "shield",
+  "system": {
+    "description": "<p>Your [Attack Power] increases by +4. The strength of the [Barrier] you gain from \"Swashbuckler\" increases by +10.\nA small shield shaped like a rose. The petals, woven from fabric imbued with magic power, protect against blades, and the thorns arranged around the perimeter can also be used as a weapon. Its elegant appearance makes it popular as a fashion accessory, but it is also a first-rate utility item.</p><hr><p>Goblin Army War Banner [Core Material] (380G) + Cross Shield (470G) + Baselard (440G) ×2 + [Magic Catalyst 15] (220G) ×2 + Crafting Cost (560G)</p>",
+    "tags": [
+      "One-Handed",
+      "Shield",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 10,
+    "mdef": 10,
+    "rank": 15,
+    "price": 2730,
+    "equipped": false,
+    "checkType": "-",
+    "range": "Close",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/shield.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "bzp4sHTDcTvTIBEH",
+  "folder": "nDWJQ58O5e8dNPs2",
+  "_key": "!items!bzp4sHTDcTvTIBEH"
+}

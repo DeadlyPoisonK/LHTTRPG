@@ -1,0 +1,41 @@
+{
+  "name": "Substitute Tail",
+  "type": "skill",
+  "system": {
+    "description": "<p>You acquire one skill from a skill list other than from your Archetype Class, Main Class, or Race. You can acquire only one General-tagged skill, but may raise that skill's SR normally.</p>\n<p>(Bonus): Reduce your [Max HP] by -10.</p>\n<hr>\n<p>You can &ldquo;disguise&rdquo; yourself as another race or occupation and use your special skills with the blessing of the tail of the fox-tail tribe, which holds the power of transformation.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ILMuIpVW75XwluoH",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!ILMuIpVW75XwluoH"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Search Enemy",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill targets the next scene. The difficulty of the check is equal to the lowest [Identification Difficulty] amongst all enemies appearing in the scene. You learn the number of enemies appearing, as well as each enemy's Rank, and whether they have the [Boss] or [Mob] tags.&nbsp;</p>\n<p>(Fumble): The enemy notices your scouting.</p>\n<hr>\n<p>A special skill that scouts the surroundings and grasps the number and rough strength of the enemy. On rare occasions, the enemy will notice you.</p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Athletics vs Identification Difficulty)",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "3/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "1bWDhPMb2IwXTnqX",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!1bWDhPMb2IwXTnqX"
+}

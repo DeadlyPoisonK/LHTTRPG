@@ -1,0 +1,41 @@
+{
+  "name": "Lattice Syntax",
+  "type": "skill",
+  "system": {
+    "description": "<p>During your first Main Process this round, your [Magic Attacks] with [Target: Single (or more), Area (P)] change to [Target: Wide 1 (P)].</p>\n<hr>\n<p>A special skill that spreads magic widely on the ground to develop a huge planar magic circle, and by reacting with the range attack magic to be used next, it is a skill that spreads the effect over a wide area.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 3",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5Aeiyt2aFMjFWeA7",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!5Aeiyt2aFMjFWeA7"
+}

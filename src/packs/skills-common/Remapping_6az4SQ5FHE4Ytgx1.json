@@ -1,0 +1,43 @@
+{
+  "name": "Remapping",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Cartographer, Scout, or Explorer.</p>\n<p>Effects next battle scene. You can see the encounter sheet to use in the next battle. Among the props that appear, the Prop of &ldquo;Detection Difficulty: Automatic&rdquo; gets information as it saw.</p>\n<p>(Fumble): Enemy notices reconnaissance.</p>\n<hr>\n<p>A special skill that scouts the surrounding terrain and quickly draws up a sketch.</p>",
+    "tags": [
+      "Scout"
+    ],
+    "timing": "Briefing",
+    "checkType": "Basic (Analysis vs 10)\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6az4SQ5FHE4Ytgx1",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!6az4SQ5FHE4Ytgx1"
+}

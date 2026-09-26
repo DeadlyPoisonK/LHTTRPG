@@ -1,0 +1,44 @@
+{
+  "_id": "GdZKUBAdlNM1ZSga",
+  "name": "Beast Jump",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>You gain the [Flying] tag and you may make a [Normal Move] of 2 Sq. After the move, you lose the [Flying] tag.</p><p>(Minor): After the end of the movement, you may do [Normal Move] up to 2 Sq.</p>",
+    "tags": [
+      "EX Power",
+      "Move"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!GdZKUBAdlNM1ZSga"
+}

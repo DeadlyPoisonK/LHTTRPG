@@ -1,0 +1,46 @@
+{
+  "name": "R18 Amulet of Yulara",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You gain [Cancel (Flight, Aquatic): 50]. Your [Recovery] increases by +5.\nLand's Blessing Amulet A talisman beloved throughout Celdecia, blessed by the earth maiden Yurara. It grants both the blessing of a bountiful land and protection from creatures that do not dwell upon the earth. Because it is not something that the people of the land can easily obtain, many travelers carry replicas that merely mimic its appearance as a talisman.</p><hr><p>Endless Suction Tube [Core Material] (620G) + Thistle Charm (760G) + Scroll of Area Flight (Intermediate) (570G) + Scroll of Underwater Action (Intermediate) (320G) + [Magic Catalyst 18] (310G) ×2 + Crafting Cost (440G)</p>",
+    "tags": [
+      "Accessory",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 18,
+    "price": 3330,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zO9uSW1rfaUTnwTV",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!zO9uSW1rfaUTnwTV"
+}

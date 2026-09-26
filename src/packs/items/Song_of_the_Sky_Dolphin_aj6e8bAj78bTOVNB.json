@@ -1,0 +1,48 @@
+{
+  "name": "Song of the Sky Dolphin",
+  "type": "gear",
+  "system": {
+    "description": "<p>You are put in the [Riding: Kelpie] state. You can use EX power &laquo;Aqua Jet&raquo;, &laquo;Big Wave&raquo; and gain the [Aquatic] tag. &nbsp;(CR22): This item has no effect.</p>",
+    "tags": [
+      "Preparation",
+      "Summoning Whistle",
+      "Not For Sale",
+      "M2"
+    ],
+    "rank": 12,
+    "price": 450,
+    "equipped": false,
+    "timing": "Instant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aj6e8bAj78bTOVNB",
+  "folder": "R3aN9gLP5Cgrpn1O",
+  "_key": "!items!aj6e8bAj78bTOVNB"
+}

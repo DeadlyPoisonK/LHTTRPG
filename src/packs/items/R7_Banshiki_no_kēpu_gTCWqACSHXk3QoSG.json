@@ -1,0 +1,47 @@
+{
+  "name": "R7 Banshiki no kēpu",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Text] Use this when you are targeted by [Block Ability]. Gives [Dazed] to a target with \"Target: Area (Select)/Range: Close\" and allows you to continue without losing movement. Once per scene.〔Self: Artist〕Adds +2 to your [Negotiation Check].\nthat changes color according to the wearer's intent. It is said to contain the soul of a wandering jester who despises all constraints, and it deceives those who attempt to hinder its bearer.</p><hr><p>Vividly Colored Scale [Core Material] (120G) + Cape (170G) + Scroll of Stealth (Basic) (100G) + [Magic Catalyst 7] (60G) ×2 + Crafting Cost (260G)</p>",
+    "tags": [
+      "Accessory",
+      "Cloak",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 2,
+    "mdef": 2,
+    "rank": 7,
+    "price": 770,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gTCWqACSHXk3QoSG",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!gTCWqACSHXk3QoSG"
+}

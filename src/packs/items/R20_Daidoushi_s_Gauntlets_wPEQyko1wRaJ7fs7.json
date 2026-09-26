@@ -1,0 +1,47 @@
+{
+  "name": "R20 Daidoushi's Gauntlets",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+8 to [Magic Power]. Add +2 to the SR of your \"Enhance Code\" (may exceed maximum SR). Add the [Radiance] tag to your \"Magic Missile\".\nA gauntlet that can only be worn by those who have mastered all forms of magic and earned the title of Grand Magus. In reality, it is a refined version of the beginner's item, the Magician's Gauntlet, and the words \"Even a master should not forget his beginning\" are engraved upon it as a warning.</p><hr><p>Diamond Powder [Core Material] (740G) + Magician's Gauntlet (380G) + Red Ring (1100G) + [Magic Catalyst 20] (370G) ×4 + Crafting Cost (1740G)</p>",
+    "tags": [
+      "Accessory",
+      "Arms",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 20,
+    "price": 5440,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wPEQyko1wRaJ7fs7",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!wPEQyko1wRaJ7fs7"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Mana Channeling",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target may select one skill with [Timing: n/Scene] that they have already used, and recover one use of that skill. A target who could not recover a use of a skill instead gains +1 [Fate Point]. You may not target yourself with this skill.</p>\n<hr>\n<p>A magic that connects you with your allies through an invisible path that stretches across the battlefield like a net, and distributes magical power. Allies regain their vitality in no time and gain full strength.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dLpcVPq6xld7ZCpO",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!dLpcVPq6xld7ZCpO"
+}

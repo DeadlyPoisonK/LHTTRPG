@@ -1,0 +1,43 @@
+{
+  "name": "Rite of Shozakura",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Attack Power)] physical damage to the target.&nbsp;</p>\n<p>(Target: not Boss, Raid): Target's Initiative is lowered by -2. This effect is handled as Bad Status.&nbsp;</p>\n<p>(Target: Boss, Raid): Give the target [Weakness (Melee Attack): [STR mod]]. This [Weakness] is treated as Bad Status.</p>\n<hr>\n<p>At the same time as attacking, countless small crane-shaped shikigami soar from the enemy's feet, blocking their movement. The crane dance, which is considered to be a good omen, is a bad omen of death for the enemy.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 2100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dWivWVSwwnNFkZmB",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!dWivWVSwwnNFkZmB"
+}

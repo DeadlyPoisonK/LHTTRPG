@@ -1,0 +1,46 @@
+{
+  "name": "R8 Dragon's Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>You are treated as having a \"Breath Control\" with SR +2 (it is acceptable to exceed the maximum SR).\nA battle armor infused with magical patterns through embroidery and dyeing, designed to efficiently respond to the earth's magic. When used in conjunction with a special breathing technique, it maximizes the wearer's natural healing ability.</p><hr><p>Fragment of a Fist Master's Soul [Core Material] (140G) + Martial Arts Dress (120G) ×3 + [Magic Catalyst 8] (70G) ×4 + Crafting Cost (320G)</p>",
+    "tags": [
+      "Light Armor",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 16,
+    "mdef": 16,
+    "initiative": 0,
+    "rank": 8,
+    "price": 1100,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 3000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SA54Rie71dYOOwvO",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!SA54Rie71dYOOwvO"
+}

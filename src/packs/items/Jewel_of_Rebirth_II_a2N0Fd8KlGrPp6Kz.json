@@ -1,0 +1,46 @@
+{
+  "name": "Jewel of Rebirth II",
+  "type": "gear",
+  "system": {
+    "description": "<p>Increase your Hate by +2. The target removes the [Incapacitated] condition, and recovers [Target's CR + 10] HP. (Fate 1): This item's Hate cost is reduced to 0. (CR21): This item has no effect.</p>",
+    "tags": [
+      "Gem",
+      "Consumable"
+    ],
+    "rank": 11,
+    "price": 240,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "a2N0Fd8KlGrPp6Kz",
+  "folder": "NuJVdhNIcPgDEV3i",
+  "_key": "!items!a2N0Fd8KlGrPp6Kz"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Aura Saber",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (STR Mod)] penetrating damage to the target. The effects of &laquo;Weapon Mastery&raquo; may apply to this damage roll.</p>\n<p>(Hate Top): This skill gains a +1 bonus to its [Hit Check].</p>\n<hr>\n<p>A special skill that attacks with weapons and fists that are wrapped in a shining aura. A blow filled with fighting spirit and magic can easily pierce through tough armor and scales.</p>",
+    "tags": [
+      "Special Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs. Evasion)",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Zd3xCSt65kIRdWSi",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!Zd3xCSt65kIRdWSi"
+}

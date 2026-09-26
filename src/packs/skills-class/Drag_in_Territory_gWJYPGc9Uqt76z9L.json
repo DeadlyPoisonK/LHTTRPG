@@ -1,0 +1,43 @@
+{
+  "name": "Drag-in Territory",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] up to your [Speed] Sq. When you end your movement, if there are enemies in any adjacent square, you may choose one to make a [Safe Move (forced)] to the square you are in.</p>\n<hr>\n<p>A special skill that moves in a posture as if to ram the enemy and set up a feint. Enemies deluded by your movements will take a step forward to catch you.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "Automatic",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gWJYPGc9Uqt76z9L",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!gWJYPGc9Uqt76z9L"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Round Windmill",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target, and the target takes [Dazed].</p>\n<p>(Hate Top): The target takes [Staggered] instead of [Dazed].</p>\n<hr>\n<p>A special skill that twists the whole body in the air and unleashes a blow like a windmill. Its unique stance of turning its back to the enemy, even for a moment, is tossing the opponent.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ApcS6AnESe0AoyZL",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!ApcS6AnESe0AoyZL"
+}

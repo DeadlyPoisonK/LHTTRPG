@@ -1,0 +1,48 @@
+{
+  "name": "Shide no Ōtsuchi",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Victor\" will have the target: Wide Area 5 (Select).\nA great silver mace engraved with words of mourning for fallen enemies. Its brilliance never fades even after slaying countless foes in battle, instilling fear in enemies and inspiring allies.</p><hr><p>Engraved Silver Plate [Core Material] (340G) + Heavy Mace (380G) + [Magic Catalyst 13] (170G) ×4 + Crafting Cost (670G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -2,
+    "rank": 13,
+    "price": 2070,
+    "equipped": false,
+    "attack": 46,
+    "magic": 0,
+    "accuracy": -2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 19600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "nFOt90TTMS6jmgmy",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!nFOt90TTMS6jmgmy"
+}

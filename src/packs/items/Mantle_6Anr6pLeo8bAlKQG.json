@@ -1,0 +1,45 @@
+{
+  "name": "Mantle",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Casually or extravagantly. It will make you and your clothes stand out.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Cloak]"
+    ],
+    "pdef": 1,
+    "mdef": 1,
+    "rank": 1,
+    "price": 60,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6Anr6pLeo8bAlKQG",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!6Anr6pLeo8bAlKQG"
+}

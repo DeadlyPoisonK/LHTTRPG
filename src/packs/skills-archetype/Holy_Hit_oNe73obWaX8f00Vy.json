@@ -1,0 +1,41 @@
+{
+  "name": "Holy Hit",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +1D bonus to [Hit Checks].</p>\n<hr>\n<p>A special skill that uses divine revelation to find a trajectory for punching through the enemy and increases the accuracy of the attack.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oNe73obWaX8f00Vy",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!oNe73obWaX8f00Vy"
+}

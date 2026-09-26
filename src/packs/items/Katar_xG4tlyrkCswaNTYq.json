@@ -1,0 +1,46 @@
+{
+  "name": "Katar",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A special dagger used in the south. You can pierce with the same action as punching with your fist.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Martial Arts]"
+    ],
+    "initiative": 2,
+    "rank": 16,
+    "price": 1000,
+    "equipped": false,
+    "attack": 26,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 23600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xG4tlyrkCswaNTYq",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!xG4tlyrkCswaNTYq"
+}

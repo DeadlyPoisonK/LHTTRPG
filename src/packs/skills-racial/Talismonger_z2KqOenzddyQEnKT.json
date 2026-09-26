@@ -1,0 +1,41 @@
+{
+  "name": "Talismonger",
+  "type": "skill",
+  "system": {
+    "description": "<p>Among the items you can equip, items with [Staff] [Magic Stone] [Head] [Bag] tags can be equipped until the IR is [CR+2] or less.</p>\n<hr>\n<p>You are adept at handling various magical equipment. To the Rites, who are themselves enchanted with perpetual magic, they are part of the flesh.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "z2KqOenzddyQEnKT",
+  "folder": "JaIwHkni8H4K25DD",
+  "_key": "!items!z2KqOenzddyQEnKT"
+}

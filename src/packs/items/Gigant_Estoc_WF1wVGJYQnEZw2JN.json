@@ -1,0 +1,46 @@
+{
+  "name": "Gigant Estoc",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A two-handed sword with a long blade that specializes in penetrating power.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 30,
+    "price": 3500,
+    "equipped": false,
+    "attack": 60,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 11300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WF1wVGJYQnEZw2JN",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!WF1wVGJYQnEZw2JN"
+}

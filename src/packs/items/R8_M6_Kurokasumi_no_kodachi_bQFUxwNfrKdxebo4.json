@@ -1,0 +1,49 @@
+{
+  "name": "R8 M6 Kurokasumi no kodachi",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Exclusive to Assassins. When you equip this weapon as the only weapon in your [Hand Slot], your [Melee Attack] damage roll is increased by +2D. Additionally, the effect of \"Sweeper\" is changed from [【POW】×3] to [【POW】×5]. Melee 1D-2 Light When you equip this weapon as the only weapon in your [Hand Slot], your [Melee Attack] damage roll is increased by +2D. The effect is changed from [【POW】×3] to [【POW】×5].\nA thick armor forged from rare true iron, continuously refined for its durability. Though lightweight, its true power is unleashed when wielded with both hands, and its blade is said to pierce even the scales of an ancient dragon.</p><hr><p>True Iron Blade [Core Material] (120G) + Chokutō (270G) + Scroll of Sweeping (Basic) (30G) ×2 + [Magic Catalyst 8] (70G) ×4 + Crafting Cost (380G)</p>",
+    "tags": [
+      "One-Handed",
+      "Katana",
+      "Light",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -1,
+    "rank": 8,
+    "price": 1110,
+    "equipped": false,
+    "attack": 11,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 14100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "bQFUxwNfrKdxebo4",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!bQFUxwNfrKdxebo4"
+}

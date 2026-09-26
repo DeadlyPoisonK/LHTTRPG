@@ -1,0 +1,41 @@
+{
+  "name": "Reactive Erase",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill at the same time as &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo;. Remove one Combat Status from the Enemy that triggered &laquo;Reactive Heal&raquo; or &laquo;Reactive Area Heal&raquo;.</p>\n<hr>\n<p>A special skill that aggressively applies reaction-activated recovery magic and \"recovers\" the situation that is advantageous to the attacking side by \"recovering\" it to its original state.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "Auto",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SAPjImvRQxFrPtWN",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!SAPjImvRQxFrPtWN"
+}

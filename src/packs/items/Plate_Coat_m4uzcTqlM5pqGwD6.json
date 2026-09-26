@@ -1,0 +1,44 @@
+{
+  "name": "Plate Coat",
+  "type": "armor",
+  "system": {
+    "description": "<p>Armor with sheet metal fastened to the back of strong leather or fabric to achieve both ease of movement and defensive power.</p>",
+    "tags": [
+      "[Heavy Armor]"
+    ],
+    "pdef": 30,
+    "mdef": 17,
+    "initiative": -2,
+    "rank": 12,
+    "price": 850,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 5100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "m4uzcTqlM5pqGwD6",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!m4uzcTqlM5pqGwD6"
+}

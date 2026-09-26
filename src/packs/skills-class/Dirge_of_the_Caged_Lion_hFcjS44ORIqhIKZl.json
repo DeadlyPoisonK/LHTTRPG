@@ -1,0 +1,45 @@
+{
+  "name": "Dirge of the Caged Lion",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal 5 direct damage to the target. This skill's [Hate] cost is equal to [Number of Targets + 1].&nbsp;</p>\n<p>(Target: Mob &amp; Post-Action): The target becomes [Incapacitated] or [Dead] (your choice).</p>\n<p>(Target: Mob &amp; Pre-Action): The target becomes [Post-Action].</p>\n<hr>\n<p>A special skill that consumes the target's soul by playing a melody with feelings of blockage and restraint. Those who do not have a firm will will find it difficult to move under the resounding elegy.</p>",
+    "tags": [
+      "Special Attack",
+      "Spirit",
+      "Instrument"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "Close",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hFcjS44ORIqhIKZl",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!hFcjS44ORIqhIKZl"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R7 Crown of the dead",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You always gain [Cancel (Poison):20][Weakness (Radiance):10]. You gain +3D to [Undying][Poison] tagged damage rolls you make.\nA crown said to be used when burying noble individuals. It grants protection from powers related to darkness, poison, and death. As a consequence, it grants low resistance against holy power.</p><hr><p>[Core Material](120G)+ (160G)+[ 7](60G)×4+Crafting Cost(230G)</p>",
+    "tags": [
+      "Accessory",
+      "Head",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 4,
+    "mdef": 0,
+    "rank": 7,
+    "price": 750,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "iJr8V8cRh5pY6abM",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!iJr8V8cRh5pY6abM"
+}

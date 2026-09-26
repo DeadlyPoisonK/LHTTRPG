@@ -1,0 +1,46 @@
+{
+  "name": "Dragon Glove",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A pair of sharp and sturdy gauntlets made from dragon material.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Martial Arts]"
+    ],
+    "initiative": 2,
+    "rank": 30,
+    "price": 3300,
+    "equipped": false,
+    "attack": 47,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 14900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "d2PxhmABKmy6v0He",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!d2PxhmABKmy6v0He"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R5 Heartbeat Ring",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Any Scriptures you have acquired are treated as having a SR of +1 (even if it exceeds the maximum SR). <br>If you have not acquired it, it is treated as having SR 1. <br>You cannot equip more than one of these items at the same time. <br>[Trigger: Action] Use this at the same time as your Resurrection. Remove one BS from the target of Resurrection.</p>\n<hr>\n<p>A ring said to have been worn by a group of famous healers in the ancient dynasty. The prayers put into it strengthen the healing power used by the wearer.</p>\n<hr>\n<p>Catalyst Flask [Core Material] (60G) + Transparent Ring (110G) + [Magic Catalyst 5] (40G) x 4 + Crafting Cost (210G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 5,
+    "price": 540,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 14,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Vb2uvSDDYk6JXkXp",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Vb2uvSDDYk6JXkXp"
+}

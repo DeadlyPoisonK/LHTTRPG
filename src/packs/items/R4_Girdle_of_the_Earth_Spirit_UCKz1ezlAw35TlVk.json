@@ -1,0 +1,47 @@
+{
+  "name": "R4 Girdle of the Earth Spirit",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Refer] Use when you receive the effect of a Prop with the [Terrain] tag. That effect is nullified. Once per scene.\nFootgear crafted by the techniques of the Earth Fairy Nomad. With the blessing of the earth, it allows one to easily traverse unstable ground.</p><hr><p>Giant's Beard [Core Material] (50G) + Leather Boots (60G) + Endurance Boots (40G) + [Magic Catalyst 4] (30G) ×4 + Crafting Cost (120G)</p>",
+    "tags": [
+      "Accessory",
+      "Legs",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 2,
+    "mdef": 0,
+    "rank": 4,
+    "price": 390,
+    "equipped": false,
+    "initiative": 5,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "UCKz1ezlAw35TlVk",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!UCKz1ezlAw35TlVk"
+}

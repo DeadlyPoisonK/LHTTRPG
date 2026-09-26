@@ -1,0 +1,44 @@
+{
+  "name": "Amulet of Shion (Aster Amulet)",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A talisman that wards off evil with the power of the flower of Zion, which has long been known for its medicinal properties.</p>",
+    "tags": [
+      "[Accessory]"
+    ],
+    "pdef": 0,
+    "mdef": 12,
+    "rank": 23,
+    "price": 1300,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OMHtZqTbRj8geiqw",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!OMHtZqTbRj8geiqw"
+}

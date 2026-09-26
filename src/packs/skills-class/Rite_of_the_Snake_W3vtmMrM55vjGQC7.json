@@ -1,0 +1,43 @@
+{
+  "name": "Rite of the Snake",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target.</p>\n<p>(<span class=\"Y2IQFc\" lang=\"en\">Definitive </span>Effect): You gain [Barrier: (Recovery) + 10].</p>\n<hr>\n<p>A special skill that envelops a milky-white barrier reminiscent of snake scales at the same time as attacking. The white snake scales, a symbol of good luck, protect you in the same way as damage blocking magic.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "W3vtmMrM55vjGQC7",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!W3vtmMrM55vjGQC7"
+}

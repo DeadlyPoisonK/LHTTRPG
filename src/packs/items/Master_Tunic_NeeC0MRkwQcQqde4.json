@@ -1,0 +1,44 @@
+{
+  "name": "Master Tunic",
+  "type": "armor",
+  "system": {
+    "description": "<p>A short garment made of demon beast leather with metal strips sewn into the lining to reinforce the vital points.</p>",
+    "tags": [
+      "[Light Armor]"
+    ],
+    "pdef": 17,
+    "mdef": 24,
+    "initiative": 0,
+    "rank": 12,
+    "price": 760,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 2600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NeeC0MRkwQcQqde4",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!NeeC0MRkwQcQqde4"
+}

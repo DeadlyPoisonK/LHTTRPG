@@ -1,0 +1,45 @@
+{
+  "name": "Force Bracelet",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+10 to your [Magic Power]. A bracelet inlaid with a gemstone that amplifies magical power.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Gloves]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 23,
+    "price": 1400,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Mf3DyId1I2Jfnemi",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Mf3DyId1I2Jfnemi"
+}

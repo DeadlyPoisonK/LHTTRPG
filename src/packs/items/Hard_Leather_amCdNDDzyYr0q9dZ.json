@@ -1,0 +1,44 @@
+{
+  "name": "Hard Leather",
+  "type": "armor",
+  "system": {
+    "description": "<p>Light and hard armor made from tanned leather boiled and hardened with wax.</p>",
+    "tags": [
+      "[Medium Armor]"
+    ],
+    "pdef": 13,
+    "mdef": 10,
+    "initiative": 0,
+    "rank": 6,
+    "price": 270,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 3700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "amCdNDDzyYr0q9dZ",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!amCdNDDzyYr0q9dZ"
+}

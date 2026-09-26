@@ -1,0 +1,47 @@
+{
+  "name": "Fried Chicken",
+  "type": "gear",
+  "system": {
+    "description": "<p>Reduces target's [Fatigue] strength by -50.</p>",
+    "tags": [
+      "[Food]",
+      "[Consumable]",
+      "[Preparation]"
+    ],
+    "rank": 13,
+    "price": 200,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FvN1x2iGwSs6B6PQ",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!FvN1x2iGwSs6B6PQ"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Windmill Helix",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target.</p>\n<p>(Hate Top): You can use this skill with [Target: Line 1 (P)].</p>\n<hr>\n<p>A special skill that swirls the spear like a windmill and unleashes a powerful thrust to attack surrounding enemies at once. A tornado-shaped shock wave engulfs many enemies.</p>",
+    "tags": [
+      "Melee Attack",
+      "Spear"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "iFrPbNu56eLvwQdd",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!iFrPbNu56eLvwQdd"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Ritual of Tensokuhou",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target may immediately perform one [Timing: Move] action that has the [Movement] tag. At that time, reduce the amount that action would raise the target's Hate by -2 (minimum 0).</p>\n<hr>\n<p>A magic that allows allies to move at blinding speed by unleashing the divine protection of a spirit known for its fast pace.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "v7J6yXnqFJp6SXRv",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!v7J6yXnqFJp6SXRv"
+}

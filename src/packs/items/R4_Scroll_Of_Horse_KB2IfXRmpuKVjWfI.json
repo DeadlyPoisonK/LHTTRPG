@@ -1,0 +1,49 @@
+{
+  "name": "R4 Scroll Of Horse",
+  "type": "gear",
+  "system": {
+    "description": "<p>[Trigger: Setup]: [Target: 6 / Range: Close] The target gains the [Mounted: War Horse] condition.</p>\n<hr>\n<table style=\"border-collapse: collapse; width: 185pt;\" border=\"0\" width=\"245\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 1792; width: 37pt;\" span=\"5\" width=\"49\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt; width: 185pt;\" colspan=\"5\" width=\"245\" height=\"17\">Pale Petals [Core Material] (50G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">2x Explorer's Scroll I (40G0</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">3x [Magic Catalyst 4] (30G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">-</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl70\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Construction (70G)</td>\n</tr>\n</tbody>\n</table>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Preparation",
+      "Rare",
+      "M4"
+    ],
+    "rank": 4,
+    "price": 290,
+    "equipped": false,
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "6",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KB2IfXRmpuKVjWfI",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!KB2IfXRmpuKVjWfI"
+}

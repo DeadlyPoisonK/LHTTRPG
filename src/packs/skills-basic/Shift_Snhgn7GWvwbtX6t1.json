@@ -1,0 +1,43 @@
+{
+  "name": "Shift",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Safe Move] of 1 Sq. Immediately after, you lose a Minor Action. If you have no Minor Action to lose, you cannot use this skill.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 600000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "Snhgn7GWvwbtX6t1",
+  "folder": null,
+  "_key": "!items!Snhgn7GWvwbtX6t1"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "R9 Brave Garb",
+  "type": "armor",
+  "system": {
+    "description": "<p>The effects of \"Early Bird's Cry\" and \"Mercy Rain\" you use also restore 10 points of the target's HP.\nA leather armor made from the pelt of the White Lion, the ruler of the forest. It embodies the bravery of leading hunts and the kindness of caring for companions, allowing it to enhance the effects of the Druid's magic that restores status abnormalities. Sister items made from differently colored pelts such as Black Lion and Gold Lion exist, each with different effects. 0</p><hr><p>Brave Fur [Core Material] (180G) + Hunter's Cloth (180G) ×3 + [Magic Catalyst 9] (90G) ×3 + Crafting Cost (400G)</p>",
+    "tags": [
+      "Medium Armor",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 20,
+    "mdef": 15,
+    "initiative": 0,
+    "rank": 9,
+    "price": 1390,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 3600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aDmGLfJ7MK0gCTTb",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!aDmGLfJ7MK0gCTTb"
+}

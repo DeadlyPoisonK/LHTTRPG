@@ -1,0 +1,41 @@
+{
+  "name": "Lamination Syntax",
+  "type": "skill",
+  "system": {
+    "description": "<p>During your first Main Process this round, your [Magic Attacks] with [Target: Single] change to [Target: Three].</p>\n<hr>\n<p>A special skill that deploys magical power in space to build a pillar-shaped layered magic circle centered on yourself, and deploys multiple attack magic for the next use. The completed magic attacks multiple enemies at the same time.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 3",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "66dmLpG5seWPV6Nz",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!66dmLpG5seWPV6Nz"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Torch",
+  "type": "gear",
+  "_id": "KdCUprBH5K4MUHwd",
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "system": {
+    "description": "<p>All [Dim Light] [Night] and [Darkness] effects within range&nbsp; negated.</p>\n<hr>\n<p>The duration of this object ends when the scene does.</p>",
+    "tags": [
+      "Light"
+    ],
+    "rank": 1,
+    "price": 50,
+    "equipped": false,
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 3 (A)",
+    "check": "None"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!KdCUprBH5K4MUHwd"
+}

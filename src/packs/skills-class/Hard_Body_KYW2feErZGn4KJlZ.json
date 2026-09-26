@@ -1,0 +1,41 @@
+{
+  "name": "Hard Body",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill at the same time you use &laquo;Protect&raquo; &laquo;Covering&raquo; &laquo;Long Range Cover&raquo; or &laquo;Trap Cover&raquo;. Reduce the amount of substituted HP Damage by -[SRx5].</p>\n<p>(Hate Top): Calculate the effect of this skill as if it had +2 SR (you may exceed the Max SR).</p>\n<hr>\n<p>A special skill that increases one's defense power by focusing on the whole body and making the body as hard as iron.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KYW2feErZGn4KJlZ",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!KYW2feErZGn4KJlZ"
+}

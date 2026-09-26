@@ -1,0 +1,44 @@
+{
+  "name": "Shrike's Thorn",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 1d6 + @battle-status.power.attack.total]]{[(SR)D + (Attack Power)]}&nbsp; physical damage to the target.</p>\n<p>(Target: Post-Action): The target takes [Decay: 10].</p>\n<p>(Target: Pre-Action): The target's [Initiative] becomes 0. This effect lasts until the end of the round.</p>\n<hr>\n<p>A special skill that impedes action by striking the enemy's head, throat, etc. with a two-handed weapon. The effect is great if you aim at an enemy that is exposed.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Two-Handed"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6KbpvbJpeCv0JOAK",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!6KbpvbJpeCv0JOAK"
+}

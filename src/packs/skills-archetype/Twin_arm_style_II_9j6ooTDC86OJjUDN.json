@@ -1,0 +1,43 @@
+{
+  "name": "Twin arm style II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. This skill only produces an effect when you have two [One-Handed] melee weapons equipped. You gain the [Dual Wield] condition, and your [Attack Power] becomes [Both Weapons' (Attack Power) combined].</p>\n<p>(SR2): Increase your [Attack Power] by +6.<br>(SR3): The bonus to [Attack Power] changes to +[DEX mod].</p>\n<hr>\n<p>A fighting style that emphasizes the number of moves and attack power, wielding two weapons with both arms at the same time. Both weapons are wielded without interruption, unleashing attacks with unrivaled momentum.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "9j6ooTDC86OJjUDN",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!9j6ooTDC86OJjUDN"
+}

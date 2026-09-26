@@ -1,0 +1,41 @@
+{
+  "name": "Radiant Blow",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a + [SR] bonus to [Hit Checks] and + [(SR) D] bonus to the damage rolls. In addition to that damage add a [Holy] tag.</p>\n<hr>\n<p>A special skill that envelops weapons and magic with holy brilliance and unleashes a powerful blow.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rDI2LrKaascfQJyS",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!rDI2LrKaascfQJyS"
+}

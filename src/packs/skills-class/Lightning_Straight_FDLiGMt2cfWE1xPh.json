@@ -1,0 +1,44 @@
+{
+  "name": "Lightning Straight",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR &times; 2)D + (Attack Power)] physical damage.</p>\n<p>(Success &amp; Target: Barrier): Instead of damaging the target with this attack, you can cancel the target's [Barrier].<br>(Sucess &amp; Target Regen): The target's [Regen] does not work for this round.</p>\n<hr>\n<p>A special skill that involves wrapping your fist in purple electricity and thrusting it straight into it. Not only does it deal damage, but it can also break the reinforcements given to the enemy.</p>",
+    "tags": [
+      "Melee Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FDLiGMt2cfWE1xPh",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!FDLiGMt2cfWE1xPh"
+}

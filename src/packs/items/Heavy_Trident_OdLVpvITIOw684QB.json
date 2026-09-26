@@ -1,0 +1,46 @@
+{
+  "name": "Heavy Trident",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A spear with a three-pronged tip. The metal parts have increased, and the weight, power, and coolness have increased.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Spear]"
+    ],
+    "initiative": 1,
+    "rank": 27,
+    "price": 1900,
+    "equipped": false,
+    "attack": 28,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 9000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OdLVpvITIOw684QB",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!OdLVpvITIOw684QB"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Wheeler Dealer",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Merchant/Trader, Vendor, or Accountant.</p>\n<p>You can use this anytime you want except when fighting. Your [Negotiation check] gains +2. Also, you are immune to the [Dazed] and [Overconfident] status. This effect lasts at the end of the scene or until the battle starts.</p>\n<hr>\n<p>A special skill that brings deals to an advantage with Umisenyamasen's calm negotiating skills. If you can keep your mind calm even in the heat of debate, all provocations and temptations are futile.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zrnebr4ntKEHvwji",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!zrnebr4ntKEHvwji"
+}

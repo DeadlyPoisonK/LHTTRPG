@@ -1,0 +1,43 @@
+{
+  "name": "Heavy Anchor Stance",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target becomes unable to make [Normal Moves] or [Safe Moves] (except forced movement). This skill's effect ends if either you or the target leave the square.</p>\n<hr>\n<p>A special skill that takes a stance that concentrates on restraining the enemy in front of you and stopping it.</p>",
+    "tags": [
+      "Stance"
+    ],
+    "timing": "Minor",
+    "checkType": "Automatic",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "C62a2ZPjm1i8XLU3",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!C62a2ZPjm1i8XLU3"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Reactive Area Heal II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. Target all characters who have just received HP Damage from an attack. The target recovers +[Magic Power] HP. This skill may only be used once in response to a single attack.</p>\n<p>(Fate 1): Increase the amount of HP recovered by +[POW mod].</p>\n<hr>\n<p>A magic that spreads a healing force field over a wide area in response to enemy attacks. The healing power that can now be deployed over a wider area will enable the rebuilding of fighting strength against various troublesome attacks.</p>",
+    "tags": [],
+    "timing": "After Damage",
+    "checkType": "None",
+    "range": "6Sq",
+    "target": "[SR+1]",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "CRxubC0bsN7CTFSO",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!CRxubC0bsN7CTFSO"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Sanctuary II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. The target gains a +[POW mod] bonus to [Physical Defense] and [Magical Defense]. This effect lasts until the beginning of your next Main Process, or until the target leaves the square you are in.</p>\n<p>(SR2): Increase bonus to +[[POW mod] + 4].<br>(SR3): Increase bonus to +[[POW mod] + 8].</p>\n<hr>\n<p>Magic that creates a sanctuary that wards off disasters and protects nearby allies. No matter what kind of hostility swirls on the battlefield, the sanctuary becomes a haven.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "6We6X6DnoYV7xU4y",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!6We6X6DnoYV7xU4y"
+}

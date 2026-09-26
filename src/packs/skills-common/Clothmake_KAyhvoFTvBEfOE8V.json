@@ -1,0 +1,41 @@
+{
+  "name": "Clothmake",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Tailor, Leatherworker, or Nomad. You receive one basic item that has the [Light Armor] [Cloak] or [Bag] tag with an IR no greater than your [CR-2 (minimum 1)].</p>\n<p>(SR2): You can receive an item with an IR up to your CR.</p>\n<p>(Connection: Merchant, Farmer, Housekeeper): Reduce the Fate cost of this skill to 1.</p>\n<hr>\n<p>The special skill of processing cloth and leather to make clothes and bags.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Fate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KAyhvoFTvBEfOE8V",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!KAyhvoFTvBEfOE8V"
+}

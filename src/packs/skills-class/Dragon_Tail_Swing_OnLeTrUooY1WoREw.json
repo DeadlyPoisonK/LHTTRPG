@@ -1,0 +1,43 @@
+{
+  "name": "Dragon Tail Swing",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [1D + (Attack Power)] physical damage to the target.</p>\n<p>(Hate 1): The target also takes [Staggered]. This additional effect may only be used [SR] times per scenario.</p>\n<hr>\n<p>A special skill that uses one's limbs as a dragon's tail and performs a spinning attack that wipes out surrounding enemies all at once. By releasing it with all your energy, the enemy will stop moving as if they were pressurized by the dragon's power.。</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Close",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OnLeTrUooY1WoREw",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!OnLeTrUooY1WoREw"
+}

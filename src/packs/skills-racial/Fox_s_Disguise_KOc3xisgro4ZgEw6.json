@@ -1,0 +1,41 @@
+{
+  "name": "Fox's Disguise",
+  "type": "skill",
+  "system": {
+    "description": "<p>Out of items that you can normally equip, you become able to use items with the [Light Armor] [Cloak] or [Boot] tags that have an Item Rank equal to your [CR+2] or lower.</p>\n<hr>\n<p>You can apply the power of change and wear various guises that you would not normally be able to equip yourself with. It is said that you are a fox that borrows the authority of a tiger, but even if it is borrowed, it is still a force that protects you and your friends.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KOc3xisgro4ZgEw6",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!KOc3xisgro4ZgEw6"
+}

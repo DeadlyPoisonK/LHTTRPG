@@ -1,0 +1,43 @@
+{
+  "name": "Scrying",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may perform &laquo;Enemy Identification&raquo; against one enemy whose name you know.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that reveals the identity of the enemy that awaits in your path through magical illusions.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DLm85L1NgWK8VP7n",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!DLm85L1NgWK8VP7n"
+}

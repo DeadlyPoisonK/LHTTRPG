@@ -1,0 +1,43 @@
+{
+  "name": "Elemental Blast",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Magic Power)] magical damage to the target, and the target takes [Rigor]. You may only use this skill when you have the [Fairy] tag.</p>\n<hr>\n<p>An offensive spell that commands a spirit that is summoning a follower to fire magic bullets. The attribute power contained in the magic bullet disrupts the enemy's posture and hinders movement.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Bw1XAiXsIb0fqn7V",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!Bw1XAiXsIb0fqn7V"
+}

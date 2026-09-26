@@ -1,0 +1,47 @@
+{
+  "name": "Mail breaker",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A dagger with a conical or triangular-pyramid blade, it is powerful enough to pierce through armor.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Blade]",
+      "[Light]"
+    ],
+    "initiative": 0,
+    "rank": 30,
+    "price": 2100,
+    "equipped": false,
+    "attack": 28,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 23200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "vO011GmWMHF24njW",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!vO011GmWMHF24njW"
+}

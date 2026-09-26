@@ -1,0 +1,47 @@
+{
+  "name": "R4 Trick Gloves",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Exclusively for weapon attack jobs. Add +2 to your [Attack Power].</p>\n<p>[Trigger: Minor] You immediately perform Prop Analysis or Prop Deactivation.</p>\n<p>[Act: Instant] You immediately perform Prop Analysis or Prop Deactivation. This effect can only be used once in a scene if you have acquired Speedy Work.</p>\n<hr>\n<p>The back of the hand is made of delicate parts and designed to assist hand movements such as gripping and grasping. It shows its true value in situations such as disarming and checking traps.</p>\n<hr>\n<table style=\"border-collapse: collapse; width: 185pt;\" border=\"0\" width=\"245\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 1792; width: 37pt;\" span=\"5\" width=\"49\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt; width: 185pt;\" colspan=\"5\" width=\"245\" height=\"17\">Precise Cog [Core Material] (60G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Bracer (60G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Thief's Glove (40G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">[Magic Catalyst 4] (30G) x3</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl70\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Construction (90G)</td>\n</tr>\n</tbody>\n</table>",
+    "tags": [
+      "Accesory",
+      "Gloves",
+      "Rare",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 4,
+    "price": 340,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DbXYFOxr7l5l4PrC",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!DbXYFOxr7l5l4PrC"
+}

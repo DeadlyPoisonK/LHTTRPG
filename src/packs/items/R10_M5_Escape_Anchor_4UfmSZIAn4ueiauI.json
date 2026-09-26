@@ -1,0 +1,49 @@
+{
+  "name": "R10 M5 Escape Anchor",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Immediately After Check] Used when you fail a [Defense Check]. The check is considered successful, but you must make a 2Sq [Instant Movement (Compulsory)] (the destination is decided by the GM). Once per scenario.\nA mechanical bow with a special mechanism. It allows for quick emergency evacuation by setting up an anchor, but it is very difficult to handle.</p><hr><p>Strange Copper Plate [Core Material] (180G) + Great Bow (480G) + Fox Card (Basic) (90G) ×2 + [Magic Catalyst 10] (110G) ×3 + Crafting Cost (410G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Cold",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 10,
+    "price": 1580,
+    "equipped": false,
+    "attack": 32,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4UfmSZIAn4ueiauI",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!4UfmSZIAn4ueiauI"
+}

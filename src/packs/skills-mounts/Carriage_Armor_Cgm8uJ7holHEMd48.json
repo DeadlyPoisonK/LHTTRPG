@@ -1,0 +1,44 @@
+{
+  "name": "Carriage Armor",
+  "type": "skill",
+  "_id": "Cgm8uJ7holHEMd48",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "system": {
+    "description": "<p>You gain [Barrier: (CR &times; 3) +10] and [goods] tag. If this [barrier] is lost, it also loses the [goods] tag.</p>",
+    "tags": [
+      "EX Power",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!Cgm8uJ7holHEMd48"
+}

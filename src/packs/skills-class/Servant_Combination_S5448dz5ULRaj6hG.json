@@ -1,0 +1,41 @@
+{
+  "name": "Servant Combination",
+  "type": "skill",
+  "system": {
+    "description": "<p>When using this skill, you may spend up to three [Fate Points] (0 is okay). The target takes [Weakness] with a rating equal to [(Spent [Fate Points] + SR) x 2].</p>\n<p>(CR11): The multiplier bonus becomes x4.<br>(CR21): The multiplier bonus becomes x6.</p>\n<hr>\n<p>A special skill that attacks in conjunction with summoned creatures. A perfect combination inflicts even more damage on the enemy.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "S5448dz5ULRaj6hG",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!S5448dz5ULRaj6hG"
+}

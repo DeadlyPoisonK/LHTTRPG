@@ -1,0 +1,43 @@
+{
+  "name": "Adhesion Bee",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] up to your [Speed] Sq. After you end your movement, if there is an enemy in squares adjacent to the one you are in, you may make a [Safe Move] to that square.</p>\n<hr>\n<p>Its special skill is to relentlessly close the gap to its target enemy by moving like a clinging bee.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lsIl0K7m38jLFsay",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!lsIl0K7m38jLFsay"
+}

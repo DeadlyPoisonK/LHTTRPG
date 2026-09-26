@@ -1,0 +1,48 @@
+{
+  "name": "Saint Rilith's Ax",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Symbol of the Sun\" \"Sanctuary\" becomes \"Target: Wide Area 2 (Select)\", and the effect of \"Sanctuary\" will now last until the target is more than 3 Sq away from you instead of just until they leave your Sq.\nThe Axe of Saint Lirys, a character from the story of the People of the Land. She was once a poor woodcutter's daughter, but after her father was killed by a tyrant, she took up an axe, inspired the people, and led a rebellion to avenge her father. The story ends there, and her fate is unknown, but the axe that guided and protected the people is now in your hands.</p><hr><p>Great Jade Fang [Core Material] (620G) + Heavy Flail (1400G) + [Magic Catalyst 19] (340G) ×3 + Crafting Cost (1080G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -2,
+    "rank": 19,
+    "price": 4120,
+    "equipped": false,
+    "attack": 60,
+    "magic": 0,
+    "accuracy": -2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 4700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "BuAgrlrEHCJGKUmD",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!BuAgrlrEHCJGKUmD"
+}

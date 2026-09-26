@@ -1,0 +1,48 @@
+{
+  "name": "R11 M6 Meikyū-ju no kagi",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action] Used simultaneously with your \"Basic Magic Attack\". If \"Basic Magic Attack\" succeeds, the target becomes [State That Does Not Exist In The Scene]. This effect is removed at the end of the round, and afterward, the target receives [Dazed]. Once per scenario. This effect is called \"Labyrinth Seal\".\n</p><hr><p>Old Branch of the Spirited Away [Core Material] (240G) + Cedar Staff (400G) + Madder Charm (140G) ×3 + [Magic Catalyst 11] (120G) ×3 + Crafting Cost (580G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Staff",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -2,
+    "rank": 11,
+    "price": 2000,
+    "equipped": false,
+    "attack": 22,
+    "magic": 23,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "h1qrFBoTOS233Rqz",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!h1qrFBoTOS233Rqz"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R7 M5 Phantom Twin Blade",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When you are in the [Dual Wielding] state and [Hate Under], add +2D to the damage roll of [Melee Attack] with this weapon.\nA sword that seems to have been forged from shadow itself, its surface as smooth and unblemished as pitch-black night. When wielded as a pair of blades, it can cast illusions that confuse the senses. Should an enemy even slightly divert their attention from its edge, they will be struck down by a fatal blow.</p><hr><p>[Core Material](100G)+ (160G)×2+[ 7](60G)×2+Crafting Cost(250G)</p>",
+    "tags": [
+      "One-Handed",
+      "Blade",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 7,
+    "price": 790,
+    "equipped": false,
+    "attack": 10,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 3900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "9OBDx2iyjKz0AT3t",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!9OBDx2iyjKz0AT3t"
+}

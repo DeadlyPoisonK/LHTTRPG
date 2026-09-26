@@ -1,0 +1,48 @@
+{
+  "name": "R17 M4 Dread dark",
+  "type": "weapon",
+  "system": {
+    "description": "<p>The intensity of the [Pursuit] you deal is increased by +4.\nA throwing weapon that appears as a bundle of vividly colored cords wrapped around the limbs. When thrown, it hardens into a shape appropriate to the situation, unexpectedly piercing the enemy. Though each individual throw deals little damage, the cumulative effect can deliver damage that cannot be ignored.</p><hr><p>Obsidian Arrowhead [Core Material] (500G) + Dirk (640G) + Acidic Poison (Advanced) (360G) + [Magic Catalyst 17] (280G) ×2 + Crafting Cost (880G)</p>",
+    "tags": [
+      "One-Handed",
+      "Throwing",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 3,
+    "rank": 17,
+    "price": 2940,
+    "equipped": false,
+    "attack": 25,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 25400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zoOqClrVg6qzrVey",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!zoOqClrVg6qzrVey"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "R8 M6 Hungry Fang",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action] Use this with your \"Scarlet Thrust\" at the same time. Change the effect of \"Scarlet, Thrust\" from \"recover your [HP]\" to \"inflict [Pursuit: Scarlet Thrust's SR ×4] on the target.\"\nA one-handed spear with the tooth of an ancient dragon at its tip. Its tip inflicts wounds on prey, then sucks blood or magic power from the wound, causing it to swell and further pierce the enemy deeply.</p><hr><p>Mysterious Fossil [Core Material] (120G) + Ox Tongue (230G) + Vial of Power Strike (Basic) (40G) ×4 + [Magic Catalyst 8] (70G) ×3 + Crafting Cost (350G)</p>",
+    "tags": [
+      "One-Handed",
+      "Spear",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 1,
+    "rank": 8,
+    "price": 1070,
+    "equipped": false,
+    "attack": 13,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dFNGFU6QrrwQwoMW",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!dFNGFU6QrrwQwoMW"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Enduring Magic Salve III",
+  "type": "gear",
+  "system": {
+    "description": "<p>The target gains a +12 bonus to [Magic Defense]. Treat this effect as a Combat Status.</p>",
+    "tags": [
+      "Potion",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 26,
+    "price": 1000,
+    "equipped": false,
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LOozCQPy76PZ0xKK",
+  "folder": "JfJ4EfRXtde1y5GE",
+  "_key": "!items!LOozCQPy76PZ0xKK"
+}

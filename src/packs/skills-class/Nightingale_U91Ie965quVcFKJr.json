@@ -1,0 +1,41 @@
+{
+  "name": "Nightingale",
+  "type": "skill",
+  "system": {
+    "description": "<p>When a subject rolls \"Attrition Table: Will, Goods\", he may roll twice and choose whichever he prefers. [Acquired Effect] Your [Maximum HP] +8.</p>\n<hr>\n<p>You never forget your attention to detail even on the battlefield. That appearance will soften the feelings of your comrades.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "U91Ie965quVcFKJr",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!U91Ie965quVcFKJr"
+}

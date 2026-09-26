@@ -1,0 +1,43 @@
+{
+  "name": "Sword Saucer Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>You are able to equip [Blade]. This skill is only effective when you are equipped with [Blade] in a [Hand Slot]. You can also equip a [Magic Stone] in a [Hand Slot].&nbsp;</p>\n<p>(SR2): Your [Evasion] and [Resistance] is increased by +1.&nbsp;</p>\n<p>(SR3): Your [Physical Defense] is increased by + (INT Mod).</p>\n<hr>\n<p>A battle style that combines magic stones with a sword instead of a staff to activate magic. If you master it, you can acquire the power of defense that can stand on the front line even though it is a magic attack class.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "SSBKyLkDMbR2IDxE",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!SSBKyLkDMbR2IDxE"
+}

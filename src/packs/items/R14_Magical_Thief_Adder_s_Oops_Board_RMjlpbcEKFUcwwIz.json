@@ -1,0 +1,46 @@
+{
+  "name": "R14 Magical Thief Adder's Oops Board",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+1D to your \"Prop Analyze\" and \"Prop Disable\" against Props with the [Magic] tag. When you use \"Elemental Shell\", you may change its targets to \"[your Hate] ÷2 targets (minimum 1)\". In addition to its usual chosen effect, your \"Elemental Shell\" also grants [Cancel] against [Fairy].\nWitch's Board The legendary thief Adera's favorite Witch's Board, which has broken through many Alvean ruins. It is composed of a silver plate with secret runes engraved on it, about 20 centimeters in diameter, and a small heart-shaped ivory piece. It grants the user wisdom to overcome magical difficulties.</p><hr><p>Silver Disc [Core Material] (380G) + Buttercup Charm (410G) + Orange Ring (640G) + [Magic Catalyst 14] (190G) ×2 + Crafting Cost (820G)</p>",
+    "tags": [
+      "Accessory",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 14,
+    "price": 2630,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RMjlpbcEKFUcwwIz",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!RMjlpbcEKFUcwwIz"
+}

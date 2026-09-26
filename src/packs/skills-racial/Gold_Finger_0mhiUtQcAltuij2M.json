@@ -1,0 +1,41 @@
+{
+  "name": "Gold Finger",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after you make a Treasure Roll. Add +10 to the result of the roll.</p>\n<hr>\n<p>A dwarf's dexterity and discerning ability to find treasures of higher value.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0mhiUtQcAltuij2M",
+  "folder": "rkor9kDHK7O93nlx",
+  "_key": "!items!0mhiUtQcAltuij2M"
+}

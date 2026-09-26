@@ -1,0 +1,47 @@
+{
+  "name": "Curse Poison IV",
+  "type": "gear",
+  "system": {
+    "description": "<p>Inflicts [71+2D] magic damage to the target. This damage inherits the [Evil Poison] tag preferentially.</p>",
+    "tags": [
+      "Toxin",
+      "Consumable",
+      "Poison"
+    ],
+    "rank": 24,
+    "price": 690,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Opposed (8+2D vs Resistance)",
+    "range": "Close",
+    "target": "Single",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YJOQGGM5BgQ4jT4y",
+  "folder": "P3CHM7TLfmSJrJpY",
+  "_key": "!items!YJOQGGM5BgQ4jT4y"
+}

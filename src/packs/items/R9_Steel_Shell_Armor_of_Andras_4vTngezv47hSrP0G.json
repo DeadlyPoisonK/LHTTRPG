@@ -1,0 +1,46 @@
+{
+  "name": "R9 Steel Shell Armor of Andras",
+  "type": "armor",
+  "system": {
+    "description": "<p>At the start of the scene you gain [Cancel (attacks from other than Close): 10]. [Trigger: Action] Use together with one of your actions with the [Stance] tag. Your next damage roll gets +5 (this effect is treated as a Combat Status and is removed once it takes effect).\nArmor crafted from a shard chipped off the steel dragon's shell. The armor's plates change shape in accordance with the wearer's intent, assisting in both attack and defense.</p><hr><p>Steel Dragon Shell [Core Material] (180G) + Lamellar Armor (530G) + Iron Shield (150G) + [Magic Catalyst 9] (90G) ×3 + Crafting Cost (480G)</p>",
+    "tags": [
+      "Heavy Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 29,
+    "mdef": 12,
+    "initiative": -2,
+    "rank": 9,
+    "price": 1610,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4vTngezv47hSrP0G",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!4vTngezv47hSrP0G"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Phantom Step",
+  "type": "skill",
+  "system": {
+    "description": "<p>After the current Main Process ends, you may make a [Normal Move] up to your [Speed] Sq.&nbsp;</p>\n<p>(Minor): The [Normal Move] becomes a [Safe Move] instead.</p>\n<hr>\n<p>A special skill that uses sharp steps and jumps to weave through the enemy's perception, evading obstacles and moving. To the enemy, it looks like a ghost, with elusive movements.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2SPp72LEGAq6jKk0",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!2SPp72LEGAq6jKk0"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Pulse Bullet",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [SR+2] direct damage to the target. This damage triggers [Pursuit] once, as if the target had failed their [Dodge Check]. This skill may be used multiple times in the same Main Process.</p>\n<hr>\n<p>A magic that shoots out small bullets of light that track the target and shoot the enemy. It can be activated immediately without chanting, and it always hits the opponent.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5i24f8JYOeJUP5n9",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!5i24f8JYOeJUP5n9"
+}

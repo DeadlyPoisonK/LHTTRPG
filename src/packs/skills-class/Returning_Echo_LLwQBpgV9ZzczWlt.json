@@ -1,0 +1,41 @@
+{
+  "name": "Returning Echo",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after you are attacked. Deal [SRx4] direct damage to the character who made the attack.</p>\n<p>(Fate 1): Increase the damage by +6.</p>\n<hr>\n<p>A skill that counterattacks an enemy's attack.</p>",
+    "tags": [],
+    "timing": "After Damage",
+    "checkType": "Auto",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LLwQBpgV9ZzczWlt",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!LLwQBpgV9ZzczWlt"
+}

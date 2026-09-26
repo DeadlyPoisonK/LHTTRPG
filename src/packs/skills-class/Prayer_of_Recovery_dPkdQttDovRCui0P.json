@@ -1,0 +1,41 @@
+{
+  "name": "Prayer of Recovery",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target recovers [(SR)D + (Recovery)] HP.&nbsp;</p>\n<p>(Minor): This skill may be used with [Target: Two].</p>\n<hr>\n<p>Magic that heals wounds by stopping and praying to the spirits for healing of allies. You can also heal multiple allies by praying strongly.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dPkdQttDovRCui0P",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!dPkdQttDovRCui0P"
+}

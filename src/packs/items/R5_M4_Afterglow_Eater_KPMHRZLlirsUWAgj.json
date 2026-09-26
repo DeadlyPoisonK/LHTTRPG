@@ -1,0 +1,50 @@
+{
+  "name": "R5 M4 Afterglow Eater",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your [Magic Power] increases by +3. [Trigger: Move] Recover [current battle scene's number of [Undead] tagged entities × 5] HP. Once per scene.\nItem Name: Soul-Draining Dagger A short sword in which a white blade and handle are fused together, chiseled from bone. When focused upon, it gradually absorbs the souls of nearby undead and converts them into positive souls, healing the wielder's wounds. It has an entirely lackluster, strange texture, but briefly shines beautifully for an instant after absorbing a soul. Though its usability is limited, many carry it as a backup means of self-recovery due to its ability to heal.</p><hr><p>[Core Material](60G)+ (90G)+[ 5](40G)×4+Crafting Cost(120G)</p>",
+    "tags": [
+      "One-Handed",
+      "Light",
+      "Blade",
+      "Radiance",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 0,
+    "rank": 5,
+    "price": 430,
+    "equipped": false,
+    "attack": 7,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 7000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KPMHRZLlirsUWAgj",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!KPMHRZLlirsUWAgj"
+}

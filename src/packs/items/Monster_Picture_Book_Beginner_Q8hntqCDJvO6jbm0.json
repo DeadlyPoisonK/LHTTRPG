@@ -1,0 +1,89 @@
+{
+  "name": "Monster Picture Book (Beginner)",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+2 to the achievement value of the judgment you make targeting [Difficulty of Identification]. A collection of common monsters.</p>",
+    "tags": [
+      "[Accessory]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 1,
+    "price": 40,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.accessories.Item.Q8hntqCDJvO6jbm0",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "name": "Knowledge +2",
+      "_id": "ug1A5n5XDhcbO1cO",
+      "changes": [
+        {
+          "key": "system.checks.knowledge.mod",
+          "mode": 2,
+          "value": "+2",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "img": "icons/sundries/books/book-symbol-axe-brown.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!Q8hntqCDJvO6jbm0.ug1A5n5XDhcbO1cO"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Q8hntqCDJvO6jbm0",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Q8hntqCDJvO6jbm0"
+}

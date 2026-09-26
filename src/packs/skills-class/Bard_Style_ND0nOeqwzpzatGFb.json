@@ -1,0 +1,43 @@
+{
+  "name": "Bard Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are equipped with an [Instrument]. You may reduce the [Hate] cost of skills that have the [Instrument] tag by -[SR] (minimum 0).</p>\n<hr>\n<p>A fighting style in which you wield a musical instrument and strengthen your attacks with songs and melodies. The sounds you make can sometimes overwhelm the battlefield faster than swords and magic.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ND0nOeqwzpzatGFb",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!ND0nOeqwzpzatGFb"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "R5 Red Thread Weissen Helmet",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You gain \"Daunting Pose\" with \"Target: Wide Area 2 (Select)\". If you do not have \"Daunting Pose\", it is treated as having obtained it at SR1, but you cannot gain the expanded target range in this case.\nA dazzling helmet with vibrant red color and elaborate craftsmanship. Its presence is so striking that it captures the attention of everyone around it, even in the middle of a battlefield.</p><hr><p>々 [Core Material](80G)+ (80G)+ (110G)+[ 5](40G)×3+Crafting Cost(140G)</p>",
+    "tags": [
+      "Accessory",
+      "Head",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 5,
+    "mdef": 0,
+    "rank": 5,
+    "price": 530,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "L0UJsxuadkP53t8d",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!L0UJsxuadkP53t8d"
+}

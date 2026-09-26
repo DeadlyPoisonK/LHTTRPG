@@ -1,0 +1,41 @@
+{
+  "name": "Preparation For",
+  "type": "skill",
+  "system": {
+    "description": "<p>In this main process, give 2 stacks of [Pursuit] when using &laquo;Assist Attack&raquo; instead of 1.</p>\n<hr>\n<p>A special skill that accurately breaks the enemy's balance by effectively cooperating with allies and keeping the enemy in check. Attacking the enemy directly and using recovery magic are not your only battles.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wKE3Gp1j9H2QzJXS",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!wKE3Gp1j9H2QzJXS"
+}

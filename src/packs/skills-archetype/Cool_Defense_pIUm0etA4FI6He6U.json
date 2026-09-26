@@ -1,0 +1,41 @@
+{
+  "name": "Cool Defense",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you are hit with an attack. You ignore any Hate Damage, or damage from [Pursuit] or [Weakness] that attack would have dealt.</p>\n<hr>\n<p>A special skill that calmly discerns and defends against the opponent's attacks without being overwhelmed by the hostility directed at them. By controlling your fear and anger, you become a cold and indestructible wall.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pIUm0etA4FI6He6U",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!pIUm0etA4FI6He6U"
+}

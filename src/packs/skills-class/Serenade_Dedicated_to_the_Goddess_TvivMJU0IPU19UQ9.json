@@ -1,0 +1,43 @@
+{
+  "name": "Serenade Dedicated to the Goddess",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target recovers [[POW base] + (Recovery)] HP.</p>\n<p>This skill's [Hate] cost is equal to [Number of Targets].</p>\n<hr>\n<p>A special skill that heals the target's wounds by playing a melody with compassion and devotion. The melodies that make you think of a quiet night soak comfortably into your body.</p>",
+    "tags": [
+      "Instrument"
+    ],
+    "timing": "Major",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 1(P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TvivMJU0IPU19UQ9",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!TvivMJU0IPU19UQ9"
+}

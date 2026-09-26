@@ -1,0 +1,43 @@
+{
+  "name": "Izuna's Slice",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [2D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Mob): The target becomes [Incapacitated] or [Dead] (your choice).</p>\n<hr>\n<p>A special skill that shoots a shock wave from a swung weapon and attacks a distant enemy. It boasts enough power to blow away weaker enemies.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "h1ri4Rftbat5WOJy",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!h1ri4Rftbat5WOJy"
+}

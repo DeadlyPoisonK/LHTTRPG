@@ -1,0 +1,44 @@
+{
+  "_id": "7wwZN6xvsFXYiVxx",
+  "name": "Utility Summon: Golem",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Only for <Summoner>. You gain the [Riding: Golem] state. During the [Riding: Golem] state, EX Power «Titan Trample» and «Gigant Punch» becomes available. In addition gain [Barrier: (SR of «Servant Summon: Golem» × [INT base]) + (SRx20)]. This state is lost when this [Barrier] is lost.</p>",
+    "tags": [
+      "Combat",
+      "Preparation"
+    ],
+    "timing": "Instant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!7wwZN6xvsFXYiVxx"
+}

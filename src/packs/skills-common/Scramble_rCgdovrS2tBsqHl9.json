@@ -1,0 +1,41 @@
+{
+  "name": "Scramble",
+  "type": "skill",
+  "system": {
+    "description": "<p>You immediately remove your [Standby] status.&nbsp;</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that waits for the moment to move and acts immediately.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rCgdovrS2tBsqHl9",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!rCgdovrS2tBsqHl9"
+}

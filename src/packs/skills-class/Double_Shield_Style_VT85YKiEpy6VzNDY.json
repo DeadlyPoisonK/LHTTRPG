@@ -1,0 +1,43 @@
+{
+  "name": "Double Shield Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have two [Shields] equipped to your [Hand Slots]. You are immune to [Dazed].<br>(SR2): You are immune to [Staggered].<br>(SR3): One [Shield] you are equipped with gains the [Hafted] tag, and is treated as a melee weapon with [Range: Close]. The shield's (Attack Power) is equal to its (Physical Defense). You can change which [Shield] this effect applies to with &laquo;Change Equipment&raquo;.</p>\n<hr>\n<p>A fighting style in which shields are held in the left and right hands to strengthen the defense. Its unfazed appearance in any situation is like a castle wall.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "VT85YKiEpy6VzNDY",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!VT85YKiEpy6VzNDY"
+}

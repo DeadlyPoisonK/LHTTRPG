@@ -1,0 +1,41 @@
+{
+  "name": "Discard",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can target only ally. The target may reduce their [Hate] by -1. This skill may be used multiple times in the same Main Process.</p>\n<p>(Hate 1): Skill Range is changed to 4 Sq. If you are equipped with a [shield] you may further subtract -1 from the target's [hate].</p>\n<hr>\n<p>You are good at tactics and push-pull decisions in battle. You can divert the attention of your enemies to you, or you can draw the attention of those who are after your allies to you.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "",
+    "range": "2Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ye7TqAmQIy1ILLLA",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!ye7TqAmQIy1ILLLA"
+}

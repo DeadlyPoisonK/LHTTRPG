@@ -1,0 +1,46 @@
+{
+  "name": "Shuriken",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A shuriken with a straight shape. Excellent stealth and power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Throwing]"
+    ],
+    "initiative": 2,
+    "rank": 19,
+    "price": 860,
+    "equipped": false,
+    "attack": 20,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 5500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Fod971WHxDBvx4Am",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Fod971WHxDBvx4Am"
+}

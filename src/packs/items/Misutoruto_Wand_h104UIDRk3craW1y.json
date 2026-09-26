@@ -1,0 +1,46 @@
+{
+  "name": "Misutoruto Wand",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A mistletoe wand made with emphasis on transmitting magical power.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Staff]"
+    ],
+    "initiative": 2,
+    "rank": 24,
+    "price": 2200,
+    "equipped": false,
+    "attack": 18,
+    "magic": 39,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "h104UIDRk3craW1y",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!h104UIDRk3craW1y"
+}

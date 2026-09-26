@@ -1,0 +1,46 @@
+{
+  "name": "Scroll of Sweeping I",
+  "type": "gear",
+  "system": {
+    "description": "<p>This scroll only produces an effect against [Mob] enemies. The target is [Incapacitated] or [Dead] (your choice). As a cost, you take [Fatigue: Base STR] for using this scroll.</p>",
+    "tags": [
+      "Scroll",
+      "Consumable"
+    ],
+    "rank": 1,
+    "price": 30,
+    "equipped": false,
+    "timing": "Major",
+    "checkType": "Opposed (5+2D vs Resistance)",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": "Opposed (5+2D/Resistance)"
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "65954AlhgS4uteCm",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!65954AlhgS4uteCm"
+}

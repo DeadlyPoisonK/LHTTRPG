@@ -1,0 +1,41 @@
+{
+  "name": "Noble Aura",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Noble, or Sage.</p>\n<p>Use this skill when you do a [Negotiate]. Gain +1D to that check.</p>\n<p>(Fate 1): The check becomes critical.</p>\n<hr>\n<p>A special skill that impresses the opponent's heart with the noble atmosphere, charm, and demeanor that is naturally provided.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "k0wkRPEH9WGAkyAU",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!k0wkRPEH9WGAkyAU"
+}

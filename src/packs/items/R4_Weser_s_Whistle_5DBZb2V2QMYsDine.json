@@ -1,0 +1,46 @@
+{
+  "name": "R4 Weser's Whistle",
+  "type": "accessory",
+  "system": {
+    "description": "<p>The SR of the skill you have acquired with the tag [Servant Summoning] is treated as +1 (it may exceed the maximum SR). This item cannot be equipped on two or more at the same time. [CR14] The effect of increasing SR by 1 is invalidated.</p>\n<hr>\n<p>A transverse flute said to have been favored by Weser, a summoner from the age of the gods. Its tone has the effect of inspiring its followers and amplifying their power.</p>\n<hr>\n<p>Bright Crimson Petal [Core Material] (60G) + Pine Wand (140G) + [Magic Catalyst 4] (30G) x 3 + Crafting Cost (100G)</p>",
+    "tags": [
+      "Accesory",
+      "Rare",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 4,
+    "price": 390,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5DBZb2V2QMYsDine",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!5DBZb2V2QMYsDine"
+}

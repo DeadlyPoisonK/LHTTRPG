@@ -1,0 +1,47 @@
+{
+  "name": "Magic Lantern",
+  "type": "gear",
+  "system": {
+    "description": "<p>[Trigger: Setup &amp; Magic Catalyst 1] Removes the props [Darkness] [Darkness of Night] and [Darkness] that are in \"Target: Wide range 20 (indiscriminate)\" from your point of view. This effect lasts until the end of the scene. A lighting fixture that burns magic catalysts.</p>",
+    "tags": [
+      "Magic Tool",
+      "Rare",
+      "Preparation"
+    ],
+    "rank": 8,
+    "price": 160,
+    "equipped": false,
+    "timing": "-",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "V7MP58VriyLoS42T",
+  "folder": "mVsVRwLfvm323sIQ",
+  "_key": "!items!V7MP58VriyLoS42T"
+}

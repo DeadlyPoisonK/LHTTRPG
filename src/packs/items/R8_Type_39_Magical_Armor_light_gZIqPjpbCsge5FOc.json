@@ -1,0 +1,46 @@
+{
+  "name": "R8 Type 39 Magical Armor  (light)",
+  "type": "armor",
+  "system": {
+    "description": "<p>You are treated as having \"Instant Focus\" at SR 1. If you already have it, your \"Instant Focus\" changes to \"Uses: 2 per scene\". [Trigger: Refer] Use when you are subject to forced movement. Reduce that movement by 1 Sq.\nA piece of armor incorporating an unknown mechanism believed to be part of a magic war machine. Its properties change according to the wearer, and it also has various functions to assist in actions.</p><hr><p>Counter-Through Magic Armor [Core Material] (120G) + Traveler's Tunic (270G) + Plate Mail (30,000G) + [Magic Catalyst 8] (70G) ×3 + Crafting Cost (340G)</p>",
+    "tags": [
+      "Light Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 10,
+    "mdef": 25,
+    "initiative": 0,
+    "rank": 8,
+    "price": 1240,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 4200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gZIqPjpbCsge5FOc",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!gZIqPjpbCsge5FOc"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Deepwood Scout",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to the checks of actions with the [Scout] tag.</p>\n<p>(Bonus): You gain +1 [Starting Fate Point].</p>\n<hr>\n<p>You possess the unique scouting skills of an elf, a deep forest guardian. Your movements, which utilize the surrounding environment, allow you to remain undetected by your enemies and discern their intentions.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RXyZz8qj1aubACaI",
+  "folder": "NCawyQCrDY4FWy47",
+  "_key": "!items!RXyZz8qj1aubACaI"
+}

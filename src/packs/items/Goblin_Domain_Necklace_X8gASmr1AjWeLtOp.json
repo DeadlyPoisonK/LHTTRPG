@@ -1,0 +1,40 @@
+{
+  "name": "Goblin Domain Necklace",
+  "type": "gear",
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "system": {
+    "description": "<p>Allows you to tame a goblin</p>",
+    "tags": [
+      "Tame",
+      "Rare"
+    ],
+    "rank": 3,
+    "price": null,
+    "equipped": false,
+    "timing": "",
+    "checkType": "",
+    "range": "",
+    "target": "",
+    "check": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "X8gASmr1AjWeLtOp",
+  "folder": "mVsVRwLfvm323sIQ",
+  "_key": "!items!X8gASmr1AjWeLtOp"
+}

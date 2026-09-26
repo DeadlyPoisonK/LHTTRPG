@@ -1,0 +1,41 @@
+{
+  "name": "Archspell",
+  "type": "skill",
+  "system": {
+    "description": "<p>During your first Main Process this round, reduce the [Hate] cost of all actions you perform to 0.</p>\n<hr>\n<p>By creating a box-shaped barrier that blocks magic power and placing yourself inside it, you can make the surge of magic power that comes with chanting spells less distracting. This allows you to wield great magic without attracting the attention of your enemies.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LZos0e1m9wXT0VsA",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!LZos0e1m9wXT0VsA"
+}

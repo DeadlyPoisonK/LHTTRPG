@@ -1,0 +1,41 @@
+{
+  "name": "Tuning",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +[SRx5] bonus to [Special Attack] damage rolls with the [Instrument] tag.</p>\n<hr>\n<p>A special skill that enhances the effect of the music played by identifying the beat of the target's mind and tuning the melody.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "bN3dsAGH8yEOX64L",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!bN3dsAGH8yEOX64L"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Shōsō no shajiku",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Setup] Your [Initiative] increases by [Hate]. This effect lasts until the end of the round. Once per scene.\nA short metal staff that converts hostile intent directed at oneself into a force that enhances physical abilities. The stronger the frustration, the greater the force that pushes from behind.</p><hr><p>Ancient Iron Rod [Core Material] (40G) + Oak Wand (90G) ×2 + [Magic Catalyst 2] (20G) ×2 + Crafting Cost (80G)</p>",
+    "tags": [
+      "One-Handed",
+      "Staff",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 2,
+    "rank": 2,
+    "price": 340,
+    "equipped": false,
+    "attack": 2,
+    "magic": 6,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 6900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KCoWTimVfRQrs1YH",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!KCoWTimVfRQrs1YH"
+}

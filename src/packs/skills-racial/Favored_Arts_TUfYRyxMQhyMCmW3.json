@@ -1,0 +1,43 @@
+{
+  "name": "Favored Arts",
+  "type": "skill",
+  "system": {
+    "description": "<p>When you acquire this skill, choose one [Combat] skill that you already have acquired. Increase that skill's SR by +1. The chosen skill may exceed your [CR+1], but it cannot exceed its Max SR.</p>\n<hr>\n<p>You have skills and magic that you have practiced many times. Because you were born as a human with few outstanding features, it is your unique trick that has been refined.</p>",
+    "tags": [
+      "Training"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TUfYRyxMQhyMCmW3",
+  "folder": "t90nIcsq9hGP0Bqt",
+  "_key": "!items!TUfYRyxMQhyMCmW3"
+}

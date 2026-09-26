@@ -1,0 +1,46 @@
+{
+  "name": "Torturing Attack",
+  "type": "skill",
+  "system": {
+    "description": "<p>Inflicts [[Attack] +2D] physical damage. If this attack activates the target's [weakness], select [SR] of [Dazed], [Shrinking] and [Rigor].</p>\n<hr>\n<p>A torture blow that thoroughly blames the enemy's weaknesses. A merciless follow-up raid binds the enemy to geese and deprives them of freedom of mind and body.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Throwing",
+      "Light",
+      "Whip"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate [SR+1]",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Y5KGyTu3c8Onznv6",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!Y5KGyTu3c8Onznv6"
+}

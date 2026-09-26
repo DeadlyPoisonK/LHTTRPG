@@ -1,0 +1,41 @@
+{
+  "name": "Moonglow",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill with any kind of action. During that action, you gain a +[[STR Mod] + 5] bonus to [Recovery].</p>\n<hr>\n<p>A special skill that activates the wolf factor that sleeps in the body and calls in the power of regeneration.</p>",
+    "tags": [],
+    "timing": "Action",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "CZIGaS8WJk73weF4",
+  "folder": "Cm0dIMlUPNihp8rO",
+  "_key": "!items!CZIGaS8WJk73weF4"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Grim Reaper Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produced an effect when you have a [Two-Handed] weapon equipped. Treat the rating of [Pursuit] that your attacks trigger as being +[SRx5] higher. You gain a +[(SR+1)D] bonus to [Hit Checks] made while [Hidden].</p>\n<hr>\n<p>A fighting style that uses a two-handed weapon and fires a well-aimed blow from the darkness.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.assassin.M19PN1rz4kP9h2FG",
+      "duration": {
+        "rounds": 0,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": 1,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "wWOr6pgfaIrPXRMB",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.dice",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Grim Reaper Style",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!M19PN1rz4kP9h2FG.wWOr6pgfaIrPXRMB"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "M19PN1rz4kP9h2FG",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!M19PN1rz4kP9h2FG"
+}

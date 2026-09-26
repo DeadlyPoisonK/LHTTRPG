@@ -1,0 +1,41 @@
+{
+  "name": "Counter Break",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this when your HP is damaged. Reduce the HP damage that you would receive by your [attack power].&nbsp;</p>\n<p>(Fate 1): Deal your [Attack Power] as direct damage to the target that damaged you.</p>\n<hr>\n<p>A special skill that offsets the power of an approaching attack by throwing an attack from here as well. As a veteran warrior, it's easy for you to counterattack.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "Auto",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 1",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Lg6NK0meDiOqLtNy",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!Lg6NK0meDiOqLtNy"
+}

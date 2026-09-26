@@ -1,0 +1,47 @@
+{
+  "name": "R12 Mysterious Gold Ring",
+  "type": "accessory",
+  "system": {
+    "description": "<p>Your \"Robust Battery\" SR is increased by +1 (may exceed the maximum SR).\nArtifact-class Ring Artifact Ring A ring of the Artifact-class said to crystallize the concept of mystery through ritual. It appears as a large rhombus-shaped ring. It amplifies its mystery in response to magic power, greatly enhancing the damage of the caster's magic. However, while active, hate continuously increases. 0 0 0 0 0 0 0 0 0 0 10 0 0 Mystery Amplification Enhances the damage of the caster's magic by a significant amount. However, while active, hate continuously increases. 2.0 5 1 round</p><hr><p>[Core Material](300G)+ (360G)+[ 12](150G)×3+Crafting Cost(570G)</p>",
+    "tags": [
+      "Accessory",
+      "Magic Stone",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 12,
+    "price": 1680,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 28,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dUJhNgOrYeV8ASBM",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!dUJhNgOrYeV8ASBM"
+}

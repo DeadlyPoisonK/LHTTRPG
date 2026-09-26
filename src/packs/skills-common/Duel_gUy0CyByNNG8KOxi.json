@@ -1,0 +1,41 @@
+{
+  "name": "Duel",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Champion, Gladiator, or Duelist.</p>\n<p>Give the target a [Duel] tag. If a person with a [Duel] tag is included in the target of your attack, +5 to the damage roll. This effect lasts at the end of the scene or until you are in a [Hidden] state.&nbsp;</p>\n<p>(CR 11): &nbsp;Increase the damage by +5.<br>(CR 21): &nbsp;Increase the damage by an additional +5.</p>\n<hr>\n<p>A skill that challenges a determined opponent to a duel. A spectacular battle where you collide head-on with power is your monopoly.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "Auto",
+    "range": "6Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "1/Scenario",
+    "limit": "Hate 1",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gUy0CyByNNG8KOxi",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!gUy0CyByNNG8KOxi"
+}

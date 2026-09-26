@@ -1,0 +1,47 @@
+{
+  "name": "R3 Hermit's Robe",
+  "type": "armor",
+  "system": {
+    "description": "<p>Only characters with the Mage Archetype Class can use this item.</p>\n<p>At the start of a scene, you gain [Cancel (Flame, Cold, Shock): 10]. Treat your acquired Twilight Mantle skill as if it had +1 SR (the Max SR may be exceeded). If you do not have the skill acquired, you acquire it with SR1.</p>\n<hr>\n<ul>\n<li>Dark Spider Silk [Core Material] (50G)</li>\n<li>Mantle (60G) &times; 3</li>\n<li>[Magic Catalyst 3] (25G) &times; 2</li>\n<li>Crafting Cost (120G)</li>\n</ul>",
+    "tags": [
+      "M5",
+      "Light Armor",
+      "Rare",
+      "Not for Sale"
+    ],
+    "pdef": 5,
+    "mdef": 6,
+    "initiative": 0,
+    "rank": 3,
+    "price": 400,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 5600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ryNfgOIIj8g3aBno",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!ryNfgOIIj8g3aBno"
+}

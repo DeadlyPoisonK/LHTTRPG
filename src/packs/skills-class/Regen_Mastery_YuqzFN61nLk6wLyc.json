@@ -1,0 +1,41 @@
+{
+  "name": "Regen Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a bonus to the [Regen] rating of &laquo;Heart Beat Healing&raquo; and &laquo;Gaia Beat Healing&raquo; equal to your [Recovery].</p>\n<hr>\n<p>You are proficient with the Forest Enchanter's unique healing spell, pulsating healing. Deeper sympathy with nature heals deep wounds while watching.</p>\n<p>&nbsp;</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "YuqzFN61nLk6wLyc",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!YuqzFN61nLk6wLyc"
+}

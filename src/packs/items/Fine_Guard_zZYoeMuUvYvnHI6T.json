@@ -1,0 +1,45 @@
+{
+  "name": "Fine Guard",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+10 to your [Attack]. High quality arm guards made of fine metal.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Gloves]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 23,
+    "price": 1400,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zZYoeMuUvYvnHI6T",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!zZYoeMuUvYvnHI6T"
+}

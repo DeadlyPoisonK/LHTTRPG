@@ -1,0 +1,44 @@
+{
+  "name": "Flare Arrow",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 3d6 +@battle-status.power.magic.total]]{[(SR+2)D + (Magic Power)]} magical damage to the target.</p>\n<p>(Target: Any Bad Status): Increase the damage by +[Number of Bad Statuses x 4].</p>\n<hr>\n<p>Attack magic that shoots out flaming arrows and shoots through enemies. Increases the number of arrows fired in response to a status ailment received by the opponent, burning through the enemy.</p>",
+    "tags": [
+      "Magic Attack",
+      "Flame"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "i7p4D76crcu1csM7",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!i7p4D76crcu1csM7"
+}

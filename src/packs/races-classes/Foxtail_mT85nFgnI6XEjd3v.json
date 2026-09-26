@@ -1,0 +1,39 @@
+{
+  "_id": "mT85nFgnI6XEjd3v",
+  "name": "Foxtail",
+  "type": "race",
+  "sort": 0,
+  "img": "icons/environment/people/group.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "foxtail",
+    "attributes": {
+      "str": 0,
+      "dex": 0,
+      "pow": 1,
+      "int": 1
+    },
+    "hp": 8,
+    "fate": 1,
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "eaCC6bYflF5Xl5sD",
+  "_key": "!items!mT85nFgnI6XEjd3v"
+}

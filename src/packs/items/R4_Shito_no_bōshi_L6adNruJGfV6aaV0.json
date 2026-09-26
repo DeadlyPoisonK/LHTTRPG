@@ -1,0 +1,47 @@
+{
+  "name": "R4 Shito no bōshi",
+  "type": "accessory",
+  "system": {
+    "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">You will not be [Confused].</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Trigger: Action] Use at the same time as your \"Heal\".</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Add +[your recovery power] to the next damage roll made by the target of \"Heal\" (this effect is treated as CS and is canceled once the effect is activated).</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Can be used once per scene.</span></span></p>\n<hr>\n<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">A ceremonial hat said to have been used by God's apostles.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Its magical power, which is a symbol of deep faith, imparts the effect of elevating the spirit of the opponent to the healing power exercised by the wearer.</span></span></p>\n<hr>\n<p>Radiant Crystal [Core Material] (50G) + Willow Band (60G) + Black Ring (90G) + [Magic Catalyst 4] (30G) x 4 + Crafting Cost (120G)</p>",
+    "tags": [
+      "Accesory",
+      "Helm",
+      "Rare",
+      "M6"
+    ],
+    "pdef": 2,
+    "mdef": 0,
+    "rank": 4,
+    "price": 440,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "L6adNruJGfV6aaV0",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!L6adNruJGfV6aaV0"
+}

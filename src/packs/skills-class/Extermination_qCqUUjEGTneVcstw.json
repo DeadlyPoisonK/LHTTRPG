@@ -1,0 +1,44 @@
+{
+  "name": "Extermination",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 7d6 + @battle-status.power.attack.total]]{[(SR+6)D + (Attack Power)]}&nbsp; physical damage to the target.</p>\n<p>(Extra): After the end of the current Main Process, if the target's HP is equal to or less than your [Attack Power] or the target has [Mob], the target dies.</p>\n<hr>\n<p>A special skill that swings the weapon held with both hands with the whole body and unleashes a powerful blow. The destructive power worthy of the name of execution is enough to instantly kill a lower-ranked enemy.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Two-Handed"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 4",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qCqUUjEGTneVcstw",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!qCqUUjEGTneVcstw"
+}

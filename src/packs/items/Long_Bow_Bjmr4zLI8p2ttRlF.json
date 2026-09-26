@@ -1,0 +1,46 @@
+{
+  "name": "Long Bow",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A wooden long bow with a total length of over 150 cm.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Bow]"
+    ],
+    "initiative": 0,
+    "rank": 13,
+    "price": 740,
+    "equipped": false,
+    "attack": 26,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 4600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Bjmr4zLI8p2ttRlF",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Bjmr4zLI8p2ttRlF"
+}

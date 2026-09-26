@@ -1,0 +1,43 @@
+{
+  "name": "Rook Slider",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Teleport] up to 5 Sq. However, this movement must be made in a straight line or it fails.</p>\n<hr>\n<p>Magic that instantly moves a short distance in a straight line. It takes on a shadow-like appearance and moves in a gliding manner, ignoring obstacles that exist between them.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uPfqK275pzDKNSOq",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!uPfqK275pzDKNSOq"
+}

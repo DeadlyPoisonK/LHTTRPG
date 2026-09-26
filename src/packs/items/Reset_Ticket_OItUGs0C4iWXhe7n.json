@@ -1,0 +1,35 @@
+{
+  "name": "Reset Ticket",
+  "type": "ticket",
+  "_id": "OItUGs0C4iWXhe7n",
+  "img": "icons/sundries/flags/banner-blue.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "rank": 1,
+    "price": 0,
+    "equipped": false,
+    "skillText": "",
+    "subtype": "Reset",
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!OItUGs0C4iWXhe7n"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Unicorn Jump",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Flying], and may make a [Safe Move] up to your [[Speed] + 2] Sq. After the end of this movement, you lose [Flying] gained from this skill.&nbsp;</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special ability to move while jumping lightly like a bouncing unicorn. It looks like it's flying in the sky.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dGU7S4VK1B3madkL",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!dGU7S4VK1B3madkL"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Blessing of Subjugation II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR16 or higher. You gain a +[[STR base]+ 5] bonus to damage rolls.</p>\n<hr>\n<p>A special skill that lowers the spirit of the warriors who became the blades and fangs of people and opened the dead ground. By resonating with that feeling and synchronizing with the caster's own will, the power of the spirit reenacts the legend of the past.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "(SR)/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 1400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TEvXFRtK8BQTLf47",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!TEvXFRtK8BQTLf47"
+}

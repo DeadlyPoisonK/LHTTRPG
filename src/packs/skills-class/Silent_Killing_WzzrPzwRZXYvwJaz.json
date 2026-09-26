@@ -1,0 +1,41 @@
+{
+  "name": "Silent Killing",
+  "type": "skill",
+  "system": {
+    "description": "<p>The attack you do during this main process can not be affected by [Timing: Before Damage] or [Timing: After Damage].</p>\n<hr>\n<p>An assassination technique that launches silent attacks that are completely unnoticed by the enemy. You will become death itself that cannot be resisted by your enemies.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WzzrPzwRZXYvwJaz",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!WzzrPzwRZXYvwJaz"
+}

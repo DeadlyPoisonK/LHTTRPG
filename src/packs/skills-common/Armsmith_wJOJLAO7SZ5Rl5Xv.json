@@ -1,0 +1,41 @@
+{
+  "name": "Armsmith",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Blacksmith, Weaponsmith, or Armorer.<br>You receive one item with an Item Rank that does not exceed your CR that has the [One-Handed] tag.<br>(SR2): The received item may have the [Two-Handed] tag.<br>(SR3): The received item may have the [Heavy Armor] [Medium Armor] or [Light Armor] tag.<br>(Connection: Merchant, Miner, Trader): Reduce the [Fate Point] cost of this skill to 1.</p>\n<hr>\n<p>A feat that shows that you have the technology to create various weapons and armor.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Fate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wJOJLAO7SZ5Rl5Xv",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!wJOJLAO7SZ5Rl5Xv"
+}

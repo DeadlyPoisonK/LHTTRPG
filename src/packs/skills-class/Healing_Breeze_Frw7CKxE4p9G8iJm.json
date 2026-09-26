@@ -1,0 +1,41 @@
+{
+  "name": "Healing Breeze",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target recovers HP. The recovery amount is equal to the rating of the [Regen] currently affecting them.</p>\n<hr>\n<p>Magic that converts the power of pulsating recovery that works on the target into a healing breeze, instantly recovering.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "None\t\t",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Frw7CKxE4p9G8iJm",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!Frw7CKxE4p9G8iJm"
+}

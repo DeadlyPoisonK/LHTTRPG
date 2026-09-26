@@ -1,0 +1,41 @@
+{
+  "name": "Protect",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use when an ally other than you would take damage. You take the damage instead of the target, and the target is unaffected by the attack. You must be in the [Pre-Action] state to use this ability, and become [Post-Action] after using it. This skill may only be used once in response to any given attack. Enemies cannot use this skill.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "tS3O6p4M5xmHkwAh",
+  "folder": null,
+  "_key": "!items!tS3O6p4M5xmHkwAh"
+}

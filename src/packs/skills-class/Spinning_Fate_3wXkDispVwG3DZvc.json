@@ -1,0 +1,41 @@
+{
+  "name": "Spinning Fate",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after the target rolls on [Exhaustion Table: Stamina or Item]. Reduce the result of that roll by -3.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>Magic that rewinds the wheel of fortune just a little bit and keeps bad luck and misfortune away.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3wXkDispVwG3DZvc",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!3wXkDispVwG3DZvc"
+}

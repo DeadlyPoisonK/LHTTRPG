@@ -1,0 +1,92 @@
+{
+  "name": "Summon Shikigami",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +2 bonus to [Athletics Checks] and [Perception Checks].</p>\n<p>(SR2): The bonus becomes +1D.</p>\n<hr>\n<p>Magic that summons shikigami to assist your actions. The shikigami and you share your senses, and are highly effective for reconnaissance. There are quite a few &lt;Jingikan&gt; who admire shikigami purely as mascots.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.kannagi.oyyQscesgBsg1ynX",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "8PF4wVdxYBHwM7Zv",
+      "changes": [
+        {
+          "key": "system.checks.athletics.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "key": "system.checks.perception.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Summon Shikigami",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!oyyQscesgBsg1ynX.8PF4wVdxYBHwM7Zv"
+    }
+  ],
+  "sort": 3000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oyyQscesgBsg1ynX",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!oyyQscesgBsg1ynX"
+}

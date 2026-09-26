@@ -1,0 +1,46 @@
+{
+  "name": "R1 New wife's apron dress",
+  "type": "accessory",
+  "system": {
+    "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Trigger: Setup] Your sub-occupation will be changed to &lt;Cook&gt;.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">This effect lasts until the end of the scene.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">1/Scene.</span></span></p>\n<hr>\n<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Adorable ruffled apron.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">It is filled with the new wife's feelings for her beloved.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Can temporarily grant cooking skills to the wearer.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">After the Great Disaster, its value skyrocketed.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">Furthermore, even if a man equips it, the frills will remain fluffy.</span></span></p>\n<hr>\n<p>[Core Material](30G)+ (60G)+[ 1](15G)&times;3+Crafting Cost(45G)</p>",
+    "tags": [
+      "Accesory",
+      "Rare",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 1,
+    "rank": 1,
+    "price": 180,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "T5VBqbvzlUpCvWpr",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!T5VBqbvzlUpCvWpr"
+}

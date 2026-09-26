@@ -1,0 +1,43 @@
+{
+  "name": "Front Line",
+  "type": "skill",
+  "system": {
+    "description": "<p>The targets may immediately make a [Safe Move] of 1 Sq.</p>\n<hr>\n<p>Special ability to issue orders to allies and prepare the front line. For a Guardian Warrior, movement is not the end of the matter. It's a technique for building a front line with your allies and intercepting the enemy's invasion.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Wide 20(P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FpMieNgZ4WlWtI6C",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!FpMieNgZ4WlWtI6C"
+}

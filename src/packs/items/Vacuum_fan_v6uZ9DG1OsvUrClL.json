@@ -1,0 +1,48 @@
+{
+  "name": "Vacuum fan",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Move] Move to a [Flying] enemy within 6Sq of you and teleport it to the same Sq as you via [Instant Transfer (Force)]. Additionally, the effects of [Cancel] and [Barrier] that the enemy has during this main process will not activate. Once per scene.\nStorm Hollow Hammer A one-handed battle hammer with a mysterious hollow at its center. By pressing the switch on the handle, it generates a cyclone within the hollow, drawing in enemies from the air. This is the only hammer that maintains its suction power even after long use. It is highly praised by many users for its ability to draw in even small enemies without fail.</p><hr><p>[Core Material](80G)+ (90G)+[ 6](50G)×4+Crafting Cost(140G)</p>",
+    "tags": [
+      "One-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -1,
+    "rank": 6,
+    "price": 510,
+    "equipped": false,
+    "attack": 13,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 22900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "v6uZ9DG1OsvUrClL",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!v6uZ9DG1OsvUrClL"
+}

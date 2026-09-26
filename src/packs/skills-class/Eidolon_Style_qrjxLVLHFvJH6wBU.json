@@ -1,0 +1,94 @@
+{
+  "name": "Eidolon Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>Effective only when all your [Hand Slots] are empty. Your bare hand [Attack Power] and &nbsp;[Magical Power] is equal to [CR + ((INT Mod)&times; 2)]. You get one [Illusion Weapon] tag at the start of the scene. This tag is lost at the end of the scene.&nbsp;</p>\n<hr>\n<p>A fighting style in which he creates numerous weapons using genjutsu and manipulates them freely.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.enchanter.qrjxLVLHFvJH6wBU",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "3EVJBIqxsR5RGbb7",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "11",
+          "priority": null
+        },
+        {
+          "key": "system.battle-status.power.magic.mod",
+          "mode": 2,
+          "value": "11",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Eidolon",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!qrjxLVLHFvJH6wBU.3EVJBIqxsR5RGbb7"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "qrjxLVLHFvJH6wBU",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!qrjxLVLHFvJH6wBU"
+}

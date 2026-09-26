@@ -1,0 +1,41 @@
+{
+  "name": "Ruingling's Words",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Negotiator, Courtesan, or Demon Lord.</p>\n<p>When you do an Opposed [Negotiation check], you use this skill on the person opposing. Choose one status [Dazed] or [Overconfident] and give it to the target.&nbsp;</p>\n<p>(Connection: Target): The limit of this skill is never used on this target and can even be used after it has been.</p>\n<hr>\n<p>A special skill that guides the opponent's mind with skillful speech and draws out the answer you want.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "Auto",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8TBzCEusgVNMOSSh",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!8TBzCEusgVNMOSSh"
+}

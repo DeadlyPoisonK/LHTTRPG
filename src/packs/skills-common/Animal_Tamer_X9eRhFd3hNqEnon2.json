@@ -1,0 +1,41 @@
+{
+  "name": "Animal Tamer",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your subclass is Tamer, Knight, Coachman, or Nomad.</p>\n<p>You receive one basic item that has the [Summon] tag with an IR no greater than your [CR-2 (minimum 1)].<br>(SR 2): &nbsp;You can receive an item with an IR up to your CR.<br>(Connection: Warrior, Noble, Farmer): The fate cost is gone.</p>\n<hr>\n<p>A feat that allows you to form a deep bond with your mount through training, and obtain a whistle to summon your mount as proof.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Fate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "X9eRhFd3hNqEnon2",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!X9eRhFd3hNqEnon2"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Tattoo Pattern: Strength",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +3 bonus to [Attack Power]. Treat this effect as a Combat Status.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill that releases the magical power of the pattern that symbolizes bravery and increases the destructive power of magic and martial arts. As a member of the legal tribe, your body is engraved with powerful patterns.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Move",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xKR0Py4jUdK5Xjjd",
+  "folder": "JaIwHkni8H4K25DD",
+  "_key": "!items!xKR0Py4jUdK5Xjjd"
+}

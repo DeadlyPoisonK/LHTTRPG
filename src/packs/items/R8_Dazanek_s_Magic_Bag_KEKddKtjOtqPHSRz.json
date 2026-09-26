@@ -1,0 +1,48 @@
+{
+  "name": "R8 Dazanek's Magic Bag",
+  "type": "bag",
+  "system": {
+    "description": "<p>You have 10 [inventory slots]. [Trigger: Text] You use this when you use a [consumable] item, or when you lose it as a result of the \"Consumption Table\". One of the items remains without being lost. Once per scenario.\nSpace Bag Common Consumable A special bag created by the renowned magic artisan Dazneck for travelers on a harsh path. The interior space is expanded, allowing for an enormous capacity that cannot be imagined from its appearance. The weight of its contents is completely imperceptible.</p><hr><p>Purple Flame Crystal [Core Material] (120G) + Wyvern Wing Membrane [Valuable] (110G) ×3 + [Magic Catalyst 8] (70G) ×2 + Crafting Cost (280G)</p>",
+    "tags": [
+      "Bag",
+      "Not For Sale",
+      "M5"
+    ],
+    "rank": 8,
+    "price": 870,
+    "equipped": false,
+    "bagSpace": 0,
+    "limit": "",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KEKddKtjOtqPHSRz",
+  "folder": "Ab8HgFBdxalq5AI6",
+  "_key": "!items!KEKddKtjOtqPHSRz"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Venom Strike II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR11 or higher. Deal [2D + (Attack Power)] physical damage to the target, and the target takes [Decay: [INT mod]].</p>\n<hr>\n<p>A skill that attacks with poisoned weapons and ammunition. The poison you manipulate becomes even more deadly, weakening your target while you look at it.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Blight"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NoiURDtNTkgfHOee",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!NoiURDtNTkgfHOee"
+}

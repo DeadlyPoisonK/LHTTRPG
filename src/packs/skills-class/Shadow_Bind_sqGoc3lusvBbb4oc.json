@@ -1,0 +1,41 @@
+{
+  "name": "Shadow Bind",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [Dazed]. When you use this skill while [Hidden], you do not lose [Hidden].</p>\n<p>(Hate 1): This skill can be used with [Timing: Initiative].</p>\n<hr>\n<p>A special skill that sews up the opponent's shadow and seals their movement. It doesn't do any direct damage, but being unable to move even for a moment in front of the &lt;Assassin&gt; is fatal.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "Automatic\t\t",
+    "range": "4 Sq.",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "sqGoc3lusvBbb4oc",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!sqGoc3lusvBbb4oc"
+}

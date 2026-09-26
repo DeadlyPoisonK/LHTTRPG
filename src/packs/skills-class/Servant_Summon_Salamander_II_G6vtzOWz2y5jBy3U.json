@@ -1,0 +1,47 @@
+{
+  "_id": "G6vtzOWz2y5jBy3U",
+  "name": "Servant Summon: Salamander II",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Acquired with CR16 or higher. You gain the [Fairy] and [Flame] tags. You gain a +[SRx7] bonus to the damage roll of attacks that have the [Flame] tag.</p><p>(Effect): A secondary target within a range of [Target: Single / Range: 4 Sq.] from you takes [INT mod] direct damage.</p>",
+    "tags": [
+      "Combat",
+      "Servant Summon",
+      "Preparation",
+      "Fairy",
+      "Flame"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!G6vtzOWz2y5jBy3U"
+}

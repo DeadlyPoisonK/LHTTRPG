@@ -1,0 +1,41 @@
+{
+  "name": "Riker Shadow",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you are not in the current scene. You will appear [Hidden] anywhere in the scene. If it does not fit the situation of the scene, GM may limit the place where you appear or disable this effect. If it becomes invalid, you gain 2 Fate points.</p>\n<hr>\n<p>Special ability to sneak into various places without being noticed by anyone. You can appear anywhere at will like a shadow.</p>",
+    "tags": [],
+    "timing": "Cleanup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "D24aEfG4cWdf1wwp",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!D24aEfG4cWdf1wwp"
+}

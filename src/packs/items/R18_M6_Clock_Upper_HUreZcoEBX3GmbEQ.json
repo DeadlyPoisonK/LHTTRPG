@@ -1,0 +1,48 @@
+{
+  "name": "R18 M6 Clock Upper",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action & Fate 1] Used at the same time as \"Beat Up\". Adds +[\"Wyvern Kick\" SR × 6] to the direct damage dealt by the effect of \"Beat Up\".\nA metallic additional armor that envelops both hands and feet, glowing with a silver sheen. It is believed to be a special golem equipment from the Alvean era, though details are unknown. It has a function that allows for sudden bursts of initiative by utilizing excess MP released into the atmosphere.</p><hr><p>Spirit Mirror of the Autumn Rain [Core Material] (560G) + Katar (1000G) + Leggings (730G) + [Magic Catalyst 18] (310G) ×4 + Crafting Cost (1390G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Martial Arts",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 2,
+    "rank": 18,
+    "price": 4920,
+    "equipped": false,
+    "attack": 32,
+    "magic": 0,
+    "accuracy": 2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 6200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "HUreZcoEBX3GmbEQ",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!HUreZcoEBX3GmbEQ"
+}

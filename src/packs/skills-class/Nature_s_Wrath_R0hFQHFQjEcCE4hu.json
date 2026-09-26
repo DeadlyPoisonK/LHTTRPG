@@ -1,0 +1,43 @@
+{
+  "name": "Nature's Wrath",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 2d6 +@battle-status.power.magic.total ]]{[2D + (Magic Power)]} magical damage to the target.</p>\n<p>(Self: Summon Servant): Increase the damage by +[Active Summon Servant's SR x 6].</p>\n<hr>\n<p>Attack magic that manipulates the surrounding nature and hits the enemy with trees and rocks. Its power doubles when it uses the ancestral spirits that embody nature.</p>",
+    "tags": [
+      "Magic Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "R0hFQHFQjEcCE4hu",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!R0hFQHFQjEcCE4hu"
+}

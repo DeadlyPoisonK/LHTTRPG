@@ -1,0 +1,43 @@
+{
+  "_id": "07N1chL3x0knBANF",
+  "name": "Wild Stamp",
+  "type": "skill",
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "sort": 0,
+  "system": {
+    "description": "<p>Available when you are in [Riding: Giant Wolf] state. If you deal at least 1 HP damage to the target during this round, the target takes [Rigor].</p>",
+    "tags": [
+      "EX Power"
+    ],
+    "timing": "Cleanup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": ""
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null,
+  "_key": "!items!07N1chL3x0knBANF"
+}

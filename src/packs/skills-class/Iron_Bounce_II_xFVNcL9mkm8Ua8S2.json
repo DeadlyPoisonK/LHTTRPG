@@ -1,0 +1,41 @@
+{
+  "name": "Iron Bounce II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. Use this skill when you would receive HP Damage. Reduce the expected HP Damage by -[SRx5].</p>\n<p>(CR21): Change [SRx5] to [SRx7]</p>\n<hr>\n<p>A special skill that reduces damage by blocking enemy attacks with a strong part of the equipment. The proof of a superior &lt;Guardian Warrior&gt; is the ability to dare to step into the line of death to minimize injuries.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xFVNcL9mkm8Ua8S2",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!xFVNcL9mkm8Ua8S2"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Great Wall Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have two [Shields] equipped in your [Hand Slots]. Bonus from Block Missile skill becomes +1D instead of +2.</p>\n<p>(SR 2): Increase one [Shield]'s Physical defense by 3.</p>\n<hr>\n<p>A fighting style that stands in front of the enemy with shields in both hands. The figure that repels arrows and catches swords is an immovable iron wall.</p>",
+    "tags": [
+      "Shield",
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "FBo5GY8irc5U7vin",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!FBo5GY8irc5U7vin"
+}

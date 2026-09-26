@@ -1,0 +1,48 @@
+{
+  "name": "R12 M4 Offyuka Whip",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action] Used at the same time as \"Basic Weapon Attack\". Consumes one [Potion] you have available as a cost. The target you damaged with \"Basic Weapon Attack\" also receives the effect of the consumed [Potion]. Once per scene.[Trigger: Rest Time & Fate 1] You gain one general item with the [IR] or lower [Potion] tag that you can use.\nA venomous-looking leather whip shaped like a viper. The snake-head piece at its tip injects poison into the enemy with each strike. The poison runs out after one use, but after a while the whip is somehow refilled with a poison of the effect its wielder desires.</p><hr><p>[Core Material](300G)+ (220G)+[ 12](150G)×4+Crafting Cost(430G)</p>",
+    "tags": [
+      "One-Handed",
+      "Whip",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 2,
+    "rank": 12,
+    "price": 1550,
+    "equipped": false,
+    "attack": 15,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 2400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5GdIL2cjGETXHiS4",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!5GdIL2cjGETXHiS4"
+}

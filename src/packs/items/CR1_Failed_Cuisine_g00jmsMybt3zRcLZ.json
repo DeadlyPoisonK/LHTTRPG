@@ -1,0 +1,47 @@
+{
+  "name": "(CR1) Failed Cuisine",
+  "type": "gear",
+  "system": {
+    "description": "<p>-2 to the strength of the target's [Fatigue] state. You can store up to two of this item in one [Inventory Slot]. Record the number of items. This dish is either bland or extremely tasteless.</p>",
+    "tags": [
+      "Food",
+      "Consumable",
+      "Preparation"
+    ],
+    "rank": 1,
+    "price": 10,
+    "equipped": false,
+    "timing": "Rest Time",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "g00jmsMybt3zRcLZ",
+  "folder": "FOlxNSCxJt4ZWsCd",
+  "_key": "!items!g00jmsMybt3zRcLZ"
+}

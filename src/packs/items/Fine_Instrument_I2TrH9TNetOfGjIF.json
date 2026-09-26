@@ -1,0 +1,46 @@
+{
+  "name": "Fine Instrument",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A popular musical instrument made by a craftsman.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Instrument]"
+    ],
+    "initiative": 0,
+    "rank": 6,
+    "price": 110,
+    "equipped": false,
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "-",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "I2TrH9TNetOfGjIF",
+  "folder": "9YxL5WbMCfR5GnFP",
+  "_key": "!items!I2TrH9TNetOfGjIF"
+}

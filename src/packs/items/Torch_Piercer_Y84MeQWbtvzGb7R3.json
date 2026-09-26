@@ -1,0 +1,48 @@
+{
+  "name": "Torch Piercer",
+  "type": "weapon",
+  "system": {
+    "description": "<p>When a [Melee Attack] with this weapon hits a target with [Weakness (Flame, Undead, Nature)], you may use \"Heal\" at the end of that Main Process.\nA silver mace with a flange shaped like burning purifying flame. It appears unremarkable at first glance, but if it defeats a monster with a weakness, it greatly reduces the recast time of healing spells. Because of this rare effect, even high-level healers often use it as a sub weapon.</p><hr><p>Fire Fairy's Core Material[Core Material](680G)+Spiky Club(730G)+Holy Water(Advanced)(250G)×3+[Magic Catalyst 20](370G)×3+Crafting Cost(1230G)</p>",
+    "tags": [
+      "One-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": -1,
+    "rank": 20,
+    "price": 4500,
+    "equipped": false,
+    "attack": 37,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 12400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Y84MeQWbtvzGb7R3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!Y84MeQWbtvzGb7R3"
+}

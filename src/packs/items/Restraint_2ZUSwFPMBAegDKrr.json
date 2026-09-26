@@ -1,0 +1,48 @@
+{
+  "name": "Restraint",
+  "type": "weapon",
+  "system": {
+    "description": "<p>The damage of your \"Disturbing Attack\" is increased by +10.\nThe Radiant Lance, a magic spear granted to an honorable warrior who stood at the forefront of battle in ancient wars, shielding his comrades from attack. Its tip becomes so sharp that it endangers the wielder himself.</p><hr><p>Alv's Polishing Agent[Core Material](340G)+Faralika(510G)+[Magic Catalyst 14](190G)×5+Crafting Cost(680G)</p>",
+    "tags": [
+      "One-Handed",
+      "Spear",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 14,
+    "price": 2480,
+    "equipped": false,
+    "attack": 22,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2ZUSwFPMBAegDKrr",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!2ZUSwFPMBAegDKrr"
+}

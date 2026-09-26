@@ -1,0 +1,43 @@
+{
+  "name": "Contaminate Weapon",
+  "type": "skill",
+  "system": {
+    "description": "<p>When using this skill, you may consume one [Toxin] item with an Item Rank of at most [CR - 5 (minimum 1)] that inflicts a Bad Status. When you deal damage with &laquo;Basic Weapon Attack&raquo;, you can inflict the same Bad Status the consumed [Toxin] item would have inflicted to the target of that attack. Treat this effect as a Combat Status.<br>(Fate 1 &amp; Self: Poison-User, Curseblade, Avenger): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<hr>\n<p>A special skill in which a weapon is charged with a curse and its effect is exerted directly from the wound of the attacked opponent.</p>",
+    "tags": [
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7P9cT9UEWptSQofW",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!7P9cT9UEWptSQofW"
+}

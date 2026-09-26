@@ -1,0 +1,44 @@
+{
+  "name": "Assault Stance",
+  "type": "skill",
+  "system": {
+    "description": "<p>While in this stance, you gain a +[SRx4] bonus to damage rolls. You take a -2 penalty to [Dodge Checks].</p>\n<hr>\n<p>A special skill that takes an offensive stance that emphasizes the power of a single blow rather than dodging.</p>",
+    "tags": [
+      "Stance",
+      "Preparation"
+    ],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wg4B96ho65CUr1wH",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!wg4B96ho65CUr1wH"
+}

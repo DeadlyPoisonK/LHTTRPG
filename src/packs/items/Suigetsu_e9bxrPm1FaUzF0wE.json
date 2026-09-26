@@ -1,0 +1,48 @@
+{
+  "name": "Suigetsu",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Setup] Select one Sq within 2Sq from you. Place the prop 【Mind Floor】 on the target Sq with PR9. The prop's tag is [Magic]. This effect lasts until the end of the round.\nA throwing weapon made from metal that has been continuously exposed to the glow of the moon reflected in a spirit spring. Not only is it a powerful weapon, but it can also unleash the magic power of the moon's reflection on water, creating an illusionary barrier that confuses enemies.</p><hr><p>Moonlight Golden Scale [Core Material] (140G) + Eight-Pointed Shuriken (230G) ×2 + Firefly Gem (40G) ×4 + [Magic Catalyst 9] (90G) ×2 + Crafting Cost (370G)</p>",
+    "tags": [
+      "One-Handed",
+      "Throwing",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": 2,
+    "rank": 9,
+    "price": 1310,
+    "equipped": false,
+    "attack": 14,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "2Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "e9bxrPm1FaUzF0wE",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!e9bxrPm1FaUzF0wE"
+}

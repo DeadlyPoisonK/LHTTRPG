@@ -1,0 +1,50 @@
+{
+  "name": "R11 M4 Assault Spear of Hero Ziol",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Round Windmill\" is treated as having +1 SR (it may exceed its max SR). (Self: Riding) +2D to damage rolls.\nThe great silver spear said to have been used by the hero Geor. Magical silver circuits allow light and magical energy to flicker and be released from the spear.</p><hr><p>Rusted Holy Symbol [Core Material] (240G) + Partisan (350G) + War Horse Horn (360G) + [Magic Catalyst 11] (120G) + Crafting Cost (370G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Spear",
+      "Radiance",
+      "Mental",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 2,
+    "rank": 11,
+    "price": 1440,
+    "equipped": false,
+    "attack": 22,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0viSmaEcnShuY0Gw",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!0viSmaEcnShuY0Gw"
+}

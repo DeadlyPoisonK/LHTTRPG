@@ -1,0 +1,43 @@
+{
+  "name": "Stealth Blade",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [3D + (Attack Power)] physical damage to the target.</p>\n<p>(Hate Under): Increase the damage by +[SRx4].</p>\n<hr>\n<p><span class=\"Y2IQFc\" lang=\"en\">A special skill that hides the weapon in the shadow of the body and unleashes an attack from the enemy's unconsciousness. If the enemy doesn't pay attention to you, it's a powerful surprise.</span></p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RFqlalBmXdzFVDhQ",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!RFqlalBmXdzFVDhQ"
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Telescope",
+  "type": "accessory",
+  "_id": "FKnlJaN2CZEfG65d",
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "system": {
+    "description": "<p>For viewing objects from a distance. Misusing it is prohibited!</p>\n<p>Vision Range +1</p>",
+    "tags": [
+      "Accessory"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 1,
+    "price": 10,
+    "equipped": false,
+    "initiative": 1,
+    "magic": 0
+  },
+  "effects": [
+    {
+      "origin": "Compendium.world.accessories.Item.FKnlJaN2CZEfG65d",
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": true,
+      "name": "Vision+1",
+      "img": "icons/tools/navigation/spyglass-telescope-brass.webp",
+      "_id": "SYvr6Ly1kmLFEcad",
+      "type": "base",
+      "system": {},
+      "changes": [],
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!items.effects!FKnlJaN2CZEfG65d.SYvr6Ly1kmLFEcad"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!FKnlJaN2CZEfG65d"
+}

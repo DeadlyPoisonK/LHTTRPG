@@ -1,0 +1,35 @@
+{
+  "name": "Treasure Ticket",
+  "type": "ticket",
+  "_id": "QjdN6j6jN2mVKH9C",
+  "img": "icons/sundries/flags/banner-pink.webp",
+  "system": {
+    "description": "",
+    "tags": [],
+    "rank": 1,
+    "price": 0,
+    "equipped": false,
+    "skillText": "",
+    "subtype": "Treasure",
+    "quantity": 1
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!QjdN6j6jN2mVKH9C"
+}

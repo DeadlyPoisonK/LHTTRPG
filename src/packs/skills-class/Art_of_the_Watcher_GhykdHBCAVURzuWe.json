@@ -1,0 +1,41 @@
+{
+  "name": "Art of the Watcher",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you make a check for [Gather Information]. You gain +2D to that check.</p>\n<hr>\n<p>A special skill that uses communication with spirits to obtain information, such as talking to the spirits of the dead and tracing the memories left behind in places and objects.</p>",
+    "tags": [],
+    "timing": "Before Check",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 3500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "GhykdHBCAVURzuWe",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!GhykdHBCAVURzuWe"
+}

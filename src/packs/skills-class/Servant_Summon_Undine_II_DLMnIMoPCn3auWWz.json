@@ -1,0 +1,46 @@
+{
+  "name": "Servant Summon: Undine II",
+  "type": "skill",
+  "system": {
+    "description": "\n        <p>Can be acquired at CR16 or higher. You gain the [Fairy] and [Cold] tags. +[SR×7] to the damage rolls of your attacks with the [Cold] tag. (Guaranteed Effect) Deal [INT] direct damage to a secondary target within \"Target: Single / Range: 4 Sq.\" of you.</p>\n        <hr>\n        <p>A skill that allows the user to summon Undine, a water fairy with a beautiful maiden's appearance, and bind a high-level contract to command it. The enhanced water flow and cold air drain all heat from enemies.</p>\n        ",
+    "tags": [
+      "Servant Summon",
+      "Fairy",
+      "Cold",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DLMnIMoPCn3auWWz",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!DLMnIMoPCn3auWWz"
+}

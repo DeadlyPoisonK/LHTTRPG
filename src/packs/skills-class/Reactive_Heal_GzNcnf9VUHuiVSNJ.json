@@ -1,0 +1,43 @@
+{
+  "name": "Reactive Heal",
+  "type": "skill",
+  "system": {
+    "description": "<p>Target a character who has just received HP Damage from an attack. The target recovers [[/r 2d6 ]]{2D HP}. This skill may only be used once in response to a single attack.</p>\n<p>(Hate Top): You may reduce the [Hate] cost of this skill to 0.</p>\n<hr>\n<p>Magic that responds to an enemy's attack and heals allies' recent injuries. It is a &lt;Treatment Priest&gt;-specific recovery magic called Reaction Activated Recovery.</p>",
+    "tags": [
+      "Auto"
+    ],
+    "timing": "After Damage",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "(SR+1)/Round",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "GzNcnf9VUHuiVSNJ",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!GzNcnf9VUHuiVSNJ"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Twin Arm Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you have two [One-Handed] melee weapons equipped. You gain the [Dual Wield] condition, and your [Attack Power] becomes [Both Weapons' (Attack Power) combined].</p>\n<p>(SR2): Increase your [Attack Power] by +3.<br>(SR3): The bonus to [Attack Power] changes to +6.</p>\n<hr>\n<p><span class=\"Y2IQFc\" lang=\"en\">A fighting style that emphasizes the number of moves and attack power, wielding two weapons with both arms at the same time.</span></p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [
+    {
+      "origin": "Compendium.world.weapon-master-archetype-class.pR8SOT8bjjsmsRlr",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": 1,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "NM8GxIFwjDxjikl7",
+      "changes": [
+        {
+          "key": "system.attack.mod",
+          "mode": 2,
+          "value": "",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "New Effect",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!pR8SOT8bjjsmsRlr.NM8GxIFwjDxjikl7"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "pR8SOT8bjjsmsRlr",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!pR8SOT8bjjsmsRlr"
+}

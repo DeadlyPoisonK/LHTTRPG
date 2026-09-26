@@ -1,0 +1,44 @@
+{
+  "name": "Nightmare Sphere",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target, and the target takes [Rigor].</p>\n<hr>\n<p>An offensive magic that creates a force field filled with vibrations that erode the mind, causing nightmares to enemies inside. Enemies stop in fear at the horrifying sight.</p>",
+    "tags": [
+      "Magic Attack",
+      "Spirit"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)\t",
+    "range": "4Sq",
+    "target": "Area (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Jc3oXpmbJs68dQgB",
+  "folder": "WQsJhtjK5PkdRKrv",
+  "_key": "!items!Jc3oXpmbJs68dQgB"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Mulligan",
+  "type": "skill",
+  "system": {
+    "description": "<p>When the target rolls on [Exhaustion Table: Item or Money], they may roll twice and take either result.&nbsp;</p>\n<p>(Bonus): You gain +8 [Max HP].</p>\n<hr>\n<p>A special skill that instantly recovers from failures with sharp insight and quick handling. You don't let go of things and property once you've grabbed them.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rtFub6GOJcvw7ZNN",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!rtFub6GOJcvw7ZNN"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Hunting Bow",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A small bow for hunting. A size that does not get in the way.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Bow]"
+    ],
+    "initiative": 0,
+    "rank": 1,
+    "price": 100,
+    "equipped": false,
+    "attack": 6,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 21300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "si90i62QECrqw4O9",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!si90i62QECrqw4O9"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Split-Second Awareness II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Replace &laquo;Split-Second Awareness&raquo; with this skill at CR11 or higher. When damage would be applied to you, instead treat all damage as having no effect, as if your [Dodge Check] had been successful.</p>\n<p>(Hate Top): You recover +[[STR base] x3] HP.</p>\n<hr>\n<p>A special skill that determines the starting point and trajectory of the enemy's movement and completely nullifies it. At that moment, your quitting will reach the realm that even exceeds the limits of your own martial arts and physical strength.</p>",
+    "tags": [
+      "Auto"
+    ],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "z18gj8Qh7eGxB1S3",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!z18gj8Qh7eGxB1S3"
+}

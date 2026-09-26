@@ -1,0 +1,43 @@
+{
+  "name": "Drag Move",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill may only be used when you and no more than one enemy are in the same square. You may make a [Normal Move] up to your [Speed] Sq (the target may not [Hinder] this movement). At the same time as your movement, the target makes a [Safe Move (forced)] to the same square.</p>\n<hr>\n<p>A special skill that breaks the target's center of gravity and pushes or pulls it, allowing it to move freely along with the resisting enemy.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "Automatic\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "TgWGcBlyhEXFixyG",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!TgWGcBlyhEXFixyG"
+}

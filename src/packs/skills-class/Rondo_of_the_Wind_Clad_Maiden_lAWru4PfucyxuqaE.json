@@ -1,0 +1,43 @@
+{
+  "name": "Rondo of the Wind-Clad Maiden",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target gains [Cancel (Non-Close Attacks): 10]. This [Cancel] is removed after applying once. This skill's [Hate] cost is equal to [Number of Targets].</p>\n<p>(CR8): Increase the [Cancel] rating to 20.<br>(CR15): Increase the [Cancel] rating to 30.<br>(CR22): Increase the [Cancel] rating to 40.<br>(CR29): Increase the [Cancel] rating to 50.</p>\n<hr>\n<p>A special skill that creates a force field that protects the target by playing a melody with liberation and blessings. The repeated melody creates a wind current that deflects attacks.</p>",
+    "tags": [
+      "Instrument"
+    ],
+    "timing": "Major",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "lAWru4PfucyxuqaE",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!lAWru4PfucyxuqaE"
+}

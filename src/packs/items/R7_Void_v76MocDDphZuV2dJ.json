@@ -1,0 +1,47 @@
+{
+  "name": "R7 Void",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Action] Used simultaneously with your [Sword][Spear][Axe][Melee] tag weapon's [Weapon Attack]. Changes the attack to \"Range: 2Sq\". Once per scene.\nA forearm guard imbued with magic that twists space. A single strike wielded with this hand can attack enemies across distance.</p><hr><p>Curse Pattern Core Material[Core Material](100G)+Arm Guard(120G)+Mana Blazer(120G)+[Magic Catalyst 7](60G)×2+Crafting Cost(200G)</p>",
+    "tags": [
+      "Accessory",
+      "Arms",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 7,
+    "price": 660,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "v76MocDDphZuV2dJ",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!v76MocDDphZuV2dJ"
+}

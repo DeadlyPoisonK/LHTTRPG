@@ -1,0 +1,48 @@
+{
+  "name": "Ritual of Peace",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Your \"Mage Howling\" has its hate increase value set to 0.\nA staff said to sharpen the owner's spirit and grant an exceptional level of concentration. It facilitates control over the massive release of magic power.</p><hr><p>Thorns of Self-Discipline [Core Material] (50G) + Elm Staff (110G) + [Magic Catalyst 3] (25G) ×3 + Crafting Cost (85G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Staff",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": -2,
+    "rank": 3,
+    "price": 320,
+    "equipped": false,
+    "attack": 10,
+    "magic": 14,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 7600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MC8aZVsuB9BN5tXR",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!MC8aZVsuB9BN5tXR"
+}

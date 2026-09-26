@@ -1,0 +1,41 @@
+{
+  "name": "Astral Bind",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [Rigor]. During this Main Process, if the target does not receive at least 1 point of HP Damage, then the target removes this [Rigor] status at the end of the Main Process.</p>\n<hr>\n<p>Magic that restricts the enemy's movement by constricting it with a semi-substantial chain refined with magical power.</p>",
+    "tags": [],
+    "timing": "Move",
+    "checkType": "Automatic",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "PZGLhaeELVGcfQQe",
+  "folder": "gJ9a95aS9Ly17M3b",
+  "_key": "!items!PZGLhaeELVGcfQQe"
+}

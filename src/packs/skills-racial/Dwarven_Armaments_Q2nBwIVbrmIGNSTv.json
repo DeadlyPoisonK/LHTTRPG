@@ -1,0 +1,41 @@
+{
+  "name": "Dwarven Armaments",
+  "type": "skill",
+  "system": {
+    "description": "<p>Out of items that you can normally equip, you become able to use items with the [Heavy Armor] [Medium Armor] and [Shield] tags that have an Item Rank equal to your [CR+2] or lower.</p>\n<hr>\n<p>A special skill that makes use of the dexterous hands of a dwarf to customize armor to suit oneself. They will make your tougher body even more impenetrable.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Q2nBwIVbrmIGNSTv",
+  "folder": "rkor9kDHK7O93nlx",
+  "_key": "!items!Q2nBwIVbrmIGNSTv"
+}

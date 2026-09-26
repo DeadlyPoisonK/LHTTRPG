@@ -1,0 +1,41 @@
+{
+  "name": "Counter Seal",
+  "type": "skill",
+  "system": {
+    "description": "<p>Cancel one status with [Seal] tag from target.</p>\n<hr>\n<p>A magic that offsets the magical bondage by throwing one's own magical power at it. Destruction using magical power is the true value of &lt;Sorcerer&gt;. The target is not limited to anything that can be seen with the naked eye.</p>",
+    "tags": [],
+    "timing": "Cleanup",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xpb7pxCzGAe4ZD69",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!xpb7pxCzGAe4ZD69"
+}

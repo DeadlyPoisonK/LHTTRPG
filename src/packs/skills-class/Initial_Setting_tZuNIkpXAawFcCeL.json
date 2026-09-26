@@ -1,0 +1,44 @@
+{
+  "name": "Initial Setting",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain +1D to [Accuracy], but must declare [Standby] each time your main process comes up while in this stance.</p>\n<hr>\n<p>A stance to expose yourself to the enemy with your weapon stored. Since it is necessary to strike out each time for an attack, it takes the second step, but a flash that does not realize the distance does not allow the enemy to evade.</p>",
+    "tags": [
+      "Stance",
+      "Preparation"
+    ],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "tZuNIkpXAawFcCeL",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!tZuNIkpXAawFcCeL"
+}

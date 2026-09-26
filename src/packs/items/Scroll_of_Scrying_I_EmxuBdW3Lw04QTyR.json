@@ -1,0 +1,47 @@
+{
+  "name": "Scroll of Scrying I",
+  "type": "gear",
+  "system": {
+    "description": "<p>You can target any enemy appearing in the next scene that you know the name of with [Enemy Identification]. You take [Fatigue: Base STR]. (CR11): This item has no effect.</p>",
+    "tags": [
+      "Scroll",
+      "Consumable",
+      "Scout"
+    ],
+    "rank": 1,
+    "price": 30,
+    "equipped": false,
+    "timing": "Briefing",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 2500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "EmxuBdW3Lw04QTyR",
+  "folder": "u8VtoYqZBCpLOuKB",
+  "_key": "!items!EmxuBdW3Lw04QTyR"
+}

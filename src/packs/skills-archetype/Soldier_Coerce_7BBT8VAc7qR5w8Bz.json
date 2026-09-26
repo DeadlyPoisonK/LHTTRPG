@@ -1,0 +1,41 @@
+{
+  "name": "Soldier Coerce",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you would make a [Negotiation Check] against a hostile character. Make a [Hit Check] instead of a [Negotiation Check].</p>\n<hr>\n<p>Special ability to wield a weapon and perform coercive negotiations. In the world, there are negotiations where weapons are more talkative than words.</p>",
+    "tags": [],
+    "timing": "Before Damage",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7BBT8VAc7qR5w8Bz",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!7BBT8VAc7qR5w8Bz"
+}

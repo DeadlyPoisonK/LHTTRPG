@@ -1,0 +1,41 @@
+{
+  "name": "Five-Tailed Sublimation",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill while you are [Incapacitated] during a combat scene. The target gains +1 [Fate Point].&nbsp;</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>\n<p>(Bonus): You gain +1 [Starting Fate Point].</p>\n<hr>\n<p>A special skill that transforms the remaining power into the wavelength of an ally and transfers it to them in a time of distress when their consciousness is about to run out. Only by abandoning oneself can one find a way to float. Houkage's determination overturns the war situation.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gU6WtCROCxHfxTwV",
+  "folder": "U61majj5JnS4lK3c",
+  "_key": "!items!gU6WtCROCxHfxTwV"
+}

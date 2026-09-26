@@ -1,0 +1,41 @@
+{
+  "name": "Poison Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You gain a +1D bonus to the [Attack Check] of [Toxins] you use. In addition, you can use [Toxins] with an Item Rank equal to your [CR+2] and lower.</p>\n<hr>\n<p>You are good at dealing with potions in general. You are both the developer and the user of a great poison.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "g8IZFi0dPnWnUM9l",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!g8IZFi0dPnWnUM9l"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Spray Potion",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may immediately use one [Medicine] item with [Target: Single / Range: 4 Sq.]</p>\n<p>(Hate 1 &amp; Fate 1): Change the target to [Target: Area (P)].</p>\n<hr>\n<p>A special skill that allows you to spray liquid medicine in the form of a mist that can also affect distant friends.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0cByTYQaxNCLyDvd",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!0cByTYQaxNCLyDvd"
+}

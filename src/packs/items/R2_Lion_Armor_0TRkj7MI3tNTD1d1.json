@@ -1,0 +1,46 @@
+{
+  "name": "R2 Lion Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Setup] Set 1 Enemy who has the [Nature] tag within 4 Sq from you and has no [Boss] [Raid] tag to [Post-Action]. 1/Scenario</p>\n<p>A quilted armor with a powerful stuffed lion's head sewn onto the chest. It has a built-in mechanism that raises both arms straight up to threaten the lion's face and let out a roar just like the real thing. Its roar appeals to the instincts of those who attack it by despising it as a stuffed animal, and has the effect of frightening them, though only for a moment.</p>\n<hr>\n<p>Glossy Fur [Core Material] (30G) + Hide Armor (130G) + [Magic Catalyst 2] (20G) x 3 + Crafting Cost (70G)</p>",
+    "tags": [
+      "M4",
+      "Medium Armor",
+      "Rare"
+    ],
+    "pdef": 7,
+    "mdef": 5,
+    "initiative": 0,
+    "rank": 2,
+    "price": 290,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "0TRkj7MI3tNTD1d1",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!0TRkj7MI3tNTD1d1"
+}

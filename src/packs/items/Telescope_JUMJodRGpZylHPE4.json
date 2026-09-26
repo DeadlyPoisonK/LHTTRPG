@@ -1,0 +1,36 @@
+{
+  "name": "Telescope",
+  "type": "accessory",
+  "_id": "JUMJodRGpZylHPE4",
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "system": {
+    "description": "",
+    "tags": [],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 1,
+    "price": 0,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": "YNqHEmeDGZRdhnar",
+  "_key": "!items!JUMJodRGpZylHPE4"
+}

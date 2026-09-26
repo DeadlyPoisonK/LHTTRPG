@@ -1,0 +1,41 @@
+{
+  "name": "Performance",
+  "type": "skill",
+  "system": {
+    "description": "<p>You make one Treasure Roll on the [Treasure Table: Money].</p>\n<p>(Bonus): You gain a +1 bonus to [Athletics].</p>\n<hr>\n<p>A special ability to earn money by performing and singing on the streets and bars. How much you earn depends on your virtuosity and luck.</p>",
+    "tags": [],
+    "timing": "Preplay",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wMWesJicp23s88Hw",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!wMWesJicp23s88Hw"
+}

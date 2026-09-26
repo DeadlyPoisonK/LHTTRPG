@@ -1,0 +1,41 @@
+{
+  "name": "Castle of Stone",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Post-Action], and all HP Damage you would receive becomes 0. In addition, if an enemy attacks an ally other than you, you immediately gain +1 [Fate Point]. This effect lasts until the end of the round.</p>\n<hr>\n<p>A special skill that creates an invincible defense that blocks any attack for a short period of time. Shining like marble, you become an impregnable fortress.</p>",
+    "tags": [],
+    "timing": "Setup",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "dDXBt9Qwo3iAwUxh",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!dDXBt9Qwo3iAwUxh"
+}

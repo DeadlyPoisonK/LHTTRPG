@@ -1,0 +1,41 @@
+{
+  "name": "Shake Off",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may only target allies with this skill. Your [Hate] becomes [Target's (Hate) - 2].</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">A special skill that hides one's appearance by putting up a smokescreen or removing shielding. Enemies will lose sight of you, making it harder for them to target you.</span></p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "20Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RMI134Hdvrfhd7do",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!RMI134Hdvrfhd7do"
+}

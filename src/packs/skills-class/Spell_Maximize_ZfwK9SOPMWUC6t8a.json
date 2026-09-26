@@ -1,0 +1,43 @@
+{
+  "name": "Spell Maximize",
+  "type": "skill",
+  "system": {
+    "description": "<p>When using this skill, you may spend up to three [Fate Points] (0 is okay). You gain a +[(Spent [Fate Points] + SR) x 5] bonus to [Magic Attack] damage rolls.</p>\n<p>(CR11): The multiplier bonus becomes x10.&nbsp;<br>(CR21): The multiplier bonus becomes x15.</p>\n<hr>\n<p>A special skill that maximizes the power of magic by creating jewels that amplify magical power. The brilliance, which can be said to be the embodiment of the soul, rewrites cause and effect and generates enormous power.</p>",
+    "tags": [
+      "Auto"
+    ],
+    "timing": "Damage Roll",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 1",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ZfwK9SOPMWUC6t8a",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!ZfwK9SOPMWUC6t8a"
+}

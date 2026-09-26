@@ -1,0 +1,43 @@
+{
+  "name": "Vicarious Shield",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can use this immediately after you become [Incapacitated].<br>Immediately lose [Incapacitated] status and recover [HP] equal to [One (Shield) you are equipped with's (Physical Defense) x10].<br>After that, add a [Damaged] tag to the [Shield] used for this effect.</p>\n<hr>\n<p>A special skill that instantly protects a vital point with a shield and avoids a fatal injury. Pick up a life with a single shield. Not cheap, but a well worth the exchange.</p>",
+    "tags": [
+      "Shield"
+    ],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ujPdptrr5gNws6tU",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!ujPdptrr5gNws6tU"
+}

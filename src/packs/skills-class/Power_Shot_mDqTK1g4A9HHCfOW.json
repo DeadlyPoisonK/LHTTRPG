@@ -1,0 +1,43 @@
+{
+  "name": "Power Shot",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+3)D + (Attack Power)] physical damage to the target. &nbsp;</p>\n<p>(Failure): The target recieves [Dazed].</p>\n<hr>\n<p>A special skill that pulls the string with herculean strength and shoots a powerful single arrow. Even if it doesn't hit, the wind pressure and impact alone will terrify the enemy.</p>",
+    "tags": [
+      "Ranged Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "mDqTK1g4A9HHCfOW",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!mDqTK1g4A9HHCfOW"
+}

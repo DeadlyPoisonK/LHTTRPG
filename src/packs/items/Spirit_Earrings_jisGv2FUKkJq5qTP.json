@@ -1,0 +1,44 @@
+{
+  "name": "Spirit Earrings",
+  "type": "accessory",
+  "system": {
+    "description": "<p>You gain [Mitigation (Spirit): 30] at the start of the scene.</p>",
+    "tags": [
+      "[Accessory]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 12,
+    "price": 330,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jisGv2FUKkJq5qTP",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!jisGv2FUKkJq5qTP"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "R18 Lighthouse Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Instant] Can only be used during battle. This item gains the [Broken] tag, and you gain 4 points of [Fate]. Additionally, your [Damage Roll] is increased by +2D until the end of the scene. From after use until the end of the scene, this item cannot be equipped.\nPhoenic's Grace Armor Legendary A beautiful plate armor worn by the heroine, Lady Knight Phoenic, during the Alve Resistance War. During the fierce battle, her armor shattered, but she fought with a ferocity akin to a rakshasa, exposing her bare skin. This legend speaks of her indomitable spirit. 120 80 10 9 15 Increases resistance to physical damage by 15%. Grants +5 bonus to attack power when taking damage. 1500</p><hr><p>Sage's Stone[Core Material](620G)+Combat Armor(1200G)+[Magic Catalyst 18](310G)×4+Crafting Cost(1120G)</p>",
+    "tags": [
+      "Heavy Armor",
+      "Not For Sale",
+      "M4"
+    ],
+    "pdef": 48,
+    "mdef": 28,
+    "initiative": -2,
+    "rank": 18,
+    "price": 4180,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 2100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "I7aQpNybAJ7j8PyO",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!I7aQpNybAJ7j8PyO"
+}

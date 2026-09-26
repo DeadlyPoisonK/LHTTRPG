@@ -1,0 +1,41 @@
+{
+  "name": "Indomitable",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after you become [Incapacitated]. Immediately remove the [Incapacitated] condition, and recover [(Recovery) + (Base STR x2)] HP.</p>\n<hr>\n<p>A special skill that restores strength to a body that has received a fatal injury and stands up due to an indomitable will. A true warrior cannot be defeated just by beating his body. Until your soul is broken, you will carry on with your duties as a guardian.</p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "MPttmrTCeOiQVrmP",
+  "folder": "KaMsV2FyZMFzKBo1",
+  "_key": "!items!MPttmrTCeOiQVrmP"
+}

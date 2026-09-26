@@ -1,0 +1,46 @@
+{
+  "name": "R10 Hikari no kōshi",
+  "type": "accessory",
+  "system": {
+    "description": "<p>[Trigger: Initiative] You gain [Barrier:60]. Once per scenario.〔CR21〕This item's effect cannot be used.\nSymbol of Radiant Protection A talisman imbued with a powerful protective magic. When a specific incantation is recited, it covers the wearer in a glowing lattice-shaped barrier, shielding them from various dangers.</p><hr><p>Laminated Crystal [Core Material] (180G) + Madder Charm (140G) + Kite Shield (220G) + [Magic Catalyst 10] (110G) ×4 + Crafting Cost (420G)</p>",
+    "tags": [
+      "Accessory",
+      "Not For Sale",
+      "M5"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 10,
+    "price": 1400,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ofi5YL29W54frjp7",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!ofi5YL29W54frjp7"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Wyvern Kick",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+3)D + (Attack Power)] physical damage to the target.</p>\n<p>(Fate 1 &amp; Effect): This skill changes to [Range: 2 Sq.] After the current Main Process ends, you [Teleport] to the same square as the target.</p>\n<hr>\n<p>A special skill that allows him to soar like a flying dragon and unleash a powerful jumping kick. By applying more force, you can jump into and hit enemies farther away.</p>",
+    "tags": [
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wy9NfZPDICeWlQrP",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!wy9NfZPDICeWlQrP"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Reverberant",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action] You use this skill at the same time as you use [Song of Aid]. It is treated as if the SR of the simultaneously used [Song of Aid] skill is +1 (it may exceed the maximum SR). Once per scenario.〔CR11〕The effect at the time of activation is not applied.\nThe spear has a hollow shaft, and can produce various sounds depending on how it is swung. If swung in time with a song, the sound echoes and enhances its effect.</p><hr><p>Broken Magic Flute [Core Material] (30G) + Light Javelin (70G) + [Magic Catalyst 2] (20G) ×4 + Crafting Cost (90G)</p>",
+    "tags": [
+      "One-Handed",
+      "Spear",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 1,
+    "rank": 2,
+    "price": 270,
+    "equipped": false,
+    "attack": 7,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 9900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "R7hPK0NRN6Mut1Dv",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!R7hPK0NRN6Mut1Dv"
+}

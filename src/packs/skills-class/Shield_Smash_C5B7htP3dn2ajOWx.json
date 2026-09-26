@@ -1,0 +1,43 @@
+{
+  "name": "Shield Smash",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [Staggered]. During this Main Process, if the target does not receive at least 1 point of HP Damage, then the target removes this [Staggered] status at the end of the Main Process.</p>\n<hr>\n<p>A special skill that slams the enemy with a shield and interferes with the opponent's attacks and spell casting. The enemy's vision and posture are disturbed, making it difficult to hit.</p>",
+    "tags": [
+      "Shield"
+    ],
+    "timing": "Minor",
+    "checkType": "Automatic",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "C5B7htP3dn2ajOWx",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!C5B7htP3dn2ajOWx"
+}

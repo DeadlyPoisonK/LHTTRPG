@@ -1,0 +1,41 @@
+{
+  "name": "Undercover Work",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill just after doing a search table roll. You may see search table roll result from the range of [roll result + 1 to -1], then choose which result you like.</p>\n<hr>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">A special skill that allows you to carry out small investigations and crafts in secret, even from your friends, and advance your adventures to your advantage. A capable hawk hides its claws. You grin secretly next to your friends, who laugh at you saying that today was an easy adventure.</span></p>",
+    "tags": [],
+    "timing": "Refer",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "2/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ikn10Qij7qXx9bIc",
+  "folder": "GSg08QwNIq7Qxspu",
+  "_key": "!items!ikn10Qij7qXx9bIc"
+}

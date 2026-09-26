@@ -1,0 +1,41 @@
+{
+  "name": "Readiness",
+  "type": "skill",
+  "system": {
+    "description": "<p>You immediately become [Pre-Action].</p>\n<hr>\n<p>A special skill that restores the collapsed posture immediately after an action and takes the next action with tremendous momentum. A samurai who has sharpened his mind to the limit, never misses a good opportunity in battle.</p>",
+    "tags": [],
+    "timing": "Initiative",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Fate 1",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "soto1ia0iaBoxrH3",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!soto1ia0iaBoxrH3"
+}

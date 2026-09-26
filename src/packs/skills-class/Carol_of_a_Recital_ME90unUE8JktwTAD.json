@@ -1,0 +1,41 @@
+{
+  "name": "Carol of a Recital",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when an ally declares the use of a [Magic Attack] with [Target: Single] who are within 4 Squares from you. Change the [Magic Attack] to [Target: Two]. However, the second target is selected from within 4 Sq from you, ignoring the original range [Magic Attack]. This skill's [Hate] cost is equal to Hate cost of the [Magic Attack].</p>\n<hr>\n<p>A special skill that imitates an ally's spellcasting by repeating it and activates magic twice.</p>",
+    "tags": [],
+    "timing": "Damage Roll",
+    "checkType": "",
+    "range": "Refer",
+    "target": "Refer",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Refer",
+    "limit": "1/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ME90unUE8JktwTAD",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!ME90unUE8JktwTAD"
+}

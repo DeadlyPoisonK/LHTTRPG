@@ -1,0 +1,45 @@
+{
+  "name": "Mana Bracer",
+  "type": "accessory",
+  "system": {
+    "description": "<p>+2 to your [Magic]. Gloves carved with magical patterns.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Gloves]"
+    ],
+    "pdef": 0,
+    "mdef": 0,
+    "rank": 6,
+    "price": 150,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "c5fIbdKA2xF7QMTZ",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!c5fIbdKA2xF7QMTZ"
+}

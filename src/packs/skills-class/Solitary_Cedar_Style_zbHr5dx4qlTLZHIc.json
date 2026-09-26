@@ -1,0 +1,43 @@
+{
+  "name": "Solitary Cedar Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>This skill only produces an effect when you are not receiving the effect of a [Summon Servant] skill. You gain a +[SRx5] bonus to damage rolls.</p>\n<p>(SR3): During the Cleanup Process of each round, you may reduce your [Hate] by -1.</p>\n<hr>\n<p>A battle style that unleashes a powerful blow by facing the heavens and earth with one body and turning oneself into the ancestral spirit itself, which is an aspect of nature.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "zbHr5dx4qlTLZHIc",
+  "folder": "NTgP2vMo7htgTA35",
+  "_key": "!items!zbHr5dx4qlTLZHIc"
+}

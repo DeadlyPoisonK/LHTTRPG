@@ -1,0 +1,41 @@
+{
+  "name": "Card Mastery",
+  "type": "skill",
+  "system": {
+    "description": "<p>You can use [Charm] items with an Item Rank equal to or less than your [CR+SR]. You gain +(SRx3) [Inventory Slots]. You can only store [Charms] in these additional [Inventory Slots], and the stored items cannot be subjected to undesired effects, such as actions other than yours, or the [Exhaustion Table: Items].</p>\n<hr>\n<p>You are good at handling talismans. You can wield more and higher amulets at will.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "jxfwyzh0O14ABEVj",
+  "folder": "rMx8EcWuijr9s44J",
+  "_key": "!items!jxfwyzh0O14ABEVj"
+}

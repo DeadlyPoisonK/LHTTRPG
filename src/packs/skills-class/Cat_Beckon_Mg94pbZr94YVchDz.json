@@ -1,0 +1,43 @@
+{
+  "name": "Cat Beckon",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may [immediately move (forced)] a target other than yourself to [SR] Sq. This movement must be directed so that the target approaches you. The hate increase value of this skill is equal to [the number of Sq that moved the target].</p>\n<hr>\n<p>A special skill that invites the opponent into its arms with arm movements that mimic a spirit cat that controls confusion and ridicule.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Setup",
+    "checkType": "Auto",
+    "range": "6Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Refer",
+    "limit": "1/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Mg94pbZr94YVchDz",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!Mg94pbZr94YVchDz"
+}

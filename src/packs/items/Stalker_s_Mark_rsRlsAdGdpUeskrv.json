@@ -1,0 +1,48 @@
+{
+  "name": "Stalker's Mark",
+  "type": "weapon",
+  "system": {
+    "description": "<p>You gain +2D to the [Accuracy Check] of your first [Ranged Attack] in the battle scene immediately following your successful [Scout] action in the briefing scene.\nA longbow that has the function of marking invisible signs only recognized by the user. If enemies are marked in advance upon entering the field of view, the bow can automatically fire arrows that track those enemies during combat. A favored weapon of the stealthy Assassin class. Invisible Mark Marks invisible signs only recognized by the user. If enemies are marked in advance upon entering the field of view, the bow can automatically fire arrows that track those enemies during combat.</p><hr><p>Adamant Bone [Core Material] (340G) + Long Bow (740G) + Far-Hearing Earring (40G) + [Magic Catalyst 13] (170G) ×3 + Crafting Cost (810G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Bow",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 0,
+    "rank": 13,
+    "price": 2440,
+    "equipped": false,
+    "attack": 32,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 21100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "rsRlsAdGdpUeskrv",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!rsRlsAdGdpUeskrv"
+}

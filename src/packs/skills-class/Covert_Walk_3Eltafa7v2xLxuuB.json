@@ -1,0 +1,43 @@
+{
+  "name": "Covert Walk",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Stealth] and may [Normal Move] up to 3 squares while maintaining it. Can only be used when you have the [Immortal] [Artificial] tag. [Minor] Moved distance is +2Sq.</p>\n<hr>\n<p>With the help of undead and artificial creatures that are summoning servants, it is a skill that allows you to move without being distracted by the enemy. There are various methods of support depending on the follower, such as actually disappearing or moving behind the shadow of the follower.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Move",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "SR/Scenario",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "3Eltafa7v2xLxuuB",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!3Eltafa7v2xLxuuB"
+}

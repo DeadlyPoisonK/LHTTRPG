@@ -1,0 +1,46 @@
+{
+  "name": "Giant Sword",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A giant two-handed sword made from the sword wielded by a giant and modified for human use.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Blade]"
+    ],
+    "initiative": 0,
+    "rank": 23,
+    "price": 2100,
+    "equipped": false,
+    "attack": 47,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 22800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "v13ZFGmj4yLrvX9L",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!v13ZFGmj4yLrvX9L"
+}

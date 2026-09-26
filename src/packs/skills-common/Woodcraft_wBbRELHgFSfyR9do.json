@@ -1,0 +1,41 @@
+{
+  "name": "Woodcraft",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Woodworker or Instrument Craftsman. You receive one basic item that has the [Bow] [Staff] or [Instrument] tag with an IR no greater than your [CR-2 (minimum 1)].</p>\n<p>(SR2): You can receive an item with an IR up to your CR.</p>\n<p>(Connection: Craftsman, Carpenter, Collector): Reduce the Fate cost of this skill to 1.</p>\n<hr>\n<p>A special skill for processing plant-based materials such as wood.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Fate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "wBbRELHgFSfyR9do",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!wBbRELHgFSfyR9do"
+}

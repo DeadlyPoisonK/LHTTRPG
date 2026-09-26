@@ -1,0 +1,46 @@
+{
+  "name": "R15 Grail Knight Armor",
+  "type": "armor",
+  "system": {
+    "description": "<p>You gain [Cancel (Natural):20]. [Trigger: Initiative] This can only be used when your [Hate] is 10 or higher. You may instantly recover [HP] by 100 points. 1Once per scenario.\nThe legendary knight's armor, who was entrusted with the mission to find the lost Holy Grail and completed a difficult exploration into the Magic Realm's secret depths. It grants the user the courage to persevere through any hardship and fulfill their mission.</p><hr><p>Permanent Rotating Disc[Core Material](380G)+Combat Armor(1200G)+Black Kabuto(440G)+[Magic Catalyst 15](220G)×4+Crafting Cost(940G)</p>",
+    "tags": [
+      "Heavy Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 40,
+    "mdef": 25,
+    "initiative": -2,
+    "rank": 15,
+    "price": 3840,
+    "equipped": false,
+    "checkType": "-",
+    "range": "Close",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "4T0VPWO6xAkAY83U",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!4T0VPWO6xAkAY83U"
+}

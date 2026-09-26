@@ -1,0 +1,41 @@
+{
+  "name": "Armor Forge",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may use this skill if your sub class is Blacksmith, Armorer, or Machinist. You receive one basic item that has the [Heavy Armor] [Shield] or [Helm] tag with an IR no greater than your [CR-2 (minimum 1)].</p>\n<p>(SR2): You can receive an item with an IR up to your CR.<br>(Connection: Soldier, General, Mercenary): Reduce the Fate cost of this skill to 1.</p>\n<hr>\n<p>Special ability to process metal and create armor.</p>",
+    "tags": [],
+    "timing": "Pre-play",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Fate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "tOMrVUfRfbbbi2y1",
+  "folder": "LOzmIdDzB3a3qG6r",
+  "_key": "!items!tOMrVUfRfbbbi2y1"
+}

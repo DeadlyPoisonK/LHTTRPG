@@ -1,0 +1,41 @@
+{
+  "name": "Fleeting Ghost",
+  "type": "skill",
+  "system": {
+    "description": "<p>You become [Hidden] at the end of this main process.</p>\n<hr>\n<p>A special skill that uses the action of an attack as a decoy, leaving an afterimage and quickly sneaking into the enemy's blind spot. Like a ghost, you disappear from sight, and the enemy can only see you off in a daze.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OmXhtEt1aAUx3pfi",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!OmXhtEt1aAUx3pfi"
+}

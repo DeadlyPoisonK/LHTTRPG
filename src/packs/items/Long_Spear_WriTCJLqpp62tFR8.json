@@ -1,0 +1,46 @@
+{
+  "name": "Long Spear",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A spear with a long handle. You can attack by taking advantage of the long range.</p>",
+    "tags": [
+      "[Two-Handed]",
+      "[Spear]"
+    ],
+    "initiative": 2,
+    "rank": 1,
+    "price": 80,
+    "equipped": false,
+    "attack": 6,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 11800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "WriTCJLqpp62tFR8",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!WriTCJLqpp62tFR8"
+}

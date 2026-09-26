@@ -1,0 +1,43 @@
+{
+  "name": "Pain Needle",
+  "type": "skill",
+  "system": {
+    "description": "<p>The target takes [Decay] with a rating equal to [[INT Mod] x 2]. When you use this skill while [Hidden], you do not lose [Hidden].</p>\n<hr>\n<p>A special skill that catches the enemy by surprise and fires a poisoned weapon.</p>",
+    "tags": [
+      "Light"
+    ],
+    "timing": "Instant",
+    "checkType": "Automatic\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "-",
+    "limit": "(SR)/Scene",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "7UoGB4ml78i9YALe",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!7UoGB4ml78i9YALe"
+}

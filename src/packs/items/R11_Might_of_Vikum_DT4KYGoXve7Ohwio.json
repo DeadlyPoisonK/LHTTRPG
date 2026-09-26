@@ -1,0 +1,46 @@
+{
+  "name": "R11 Might of Vikum",
+  "type": "armor",
+  "system": {
+    "description": "<p>While you are touching a Prop with the [Natural] tag, your [Recovery] is increased by +6. Your \"Solitary Cedar Style\" is treated as having +1 SR (it may exceed its max SR). (Self: Nature) You gain [Cancel]. The rating of this [Cancel] is [(SR of your active [Servant Summon] skill) ×3].\nA piece of armor made by weaving parasitic vine and hardening the bark of a large tree. By deeply connecting with nature, it grants the user the power of its vitality and wildness.</p><hr><p>Blessed Parasitic Tree[Core Material](240G)+Chain Tunic(490G)×2+[Magic Catalyst 11](120G)×2+Crafting Cost(650G)</p>",
+    "tags": [
+      "Medium Armor",
+      "Not For Sale",
+      "M6"
+    ],
+    "pdef": 23,
+    "mdef": 20,
+    "initiative": 0,
+    "rank": 11,
+    "price": 2110,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 1700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "DT4KYGoXve7Ohwio",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!DT4KYGoXve7Ohwio"
+}

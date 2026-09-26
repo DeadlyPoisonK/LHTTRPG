@@ -1,0 +1,44 @@
+{
+  "name": "Lightning Nebula",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [[/r 5d6 +@battle-status.power.magic.total ]]{[(SR+4)D + (Magic Power)]}&nbsp; magical damage to the target.</p>\n<hr>\n<p>A wide-area attack magic that annihilates the enemy by covering the battlefield with swirling lightning reminiscent of a nebula. One of the magic that represents a simple yet powerful &lt;Sorcerer&gt; that overruns a wide area with high firepower.</p>",
+    "tags": [
+      "Magic Attack",
+      "Shock"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs. Resistance)",
+    "range": "4Sq",
+    "target": "Wide 1 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 5",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LpHrqEjHMddfxK3a",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!LpHrqEjHMddfxK3a"
+}

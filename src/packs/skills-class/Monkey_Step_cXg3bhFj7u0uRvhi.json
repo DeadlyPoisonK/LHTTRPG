@@ -1,0 +1,43 @@
+{
+  "name": "Monkey Step",
+  "type": "skill",
+  "system": {
+    "description": "<p>You may make a [Normal Move] of 1 Sq.</p>\n<p>(Hate 1): Increase the distance moved by +1 Sq.</p>\n<hr>\n<p>A special skill that moves quickly while provoking the enemy with agile, monkey-like movements.</p>",
+    "tags": [
+      "Movement"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "cXg3bhFj7u0uRvhi",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!cXg3bhFj7u0uRvhi"
+}

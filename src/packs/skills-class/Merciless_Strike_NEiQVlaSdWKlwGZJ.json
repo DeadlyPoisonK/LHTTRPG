@@ -1,0 +1,43 @@
+{
+  "name": "Merciless Strike",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+2)D + (Attack Power)] physical damage to the target.</p>\n<p>(Target: Decay): The target immediately takes direct damage equal to the rating of their [Decay].</p>\n<hr>\n<p>A special skill that unleashes an attack that strikes a weakened enemy. Its merciless blow mercilessly shatters the weakened parts of the opponent.</p>",
+    "tags": [
+      "Weapon Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "NEiQVlaSdWKlwGZJ",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!NEiQVlaSdWKlwGZJ"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Armor Crush II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. Deal [3D + (Attack Power)] physical damage to the target. The target takes [Weakness (Physical Damage): 10]. Treat this effect as a Bad Status.</p>\n<p>(CR21): Rating of the Weakness increases to 15 instead of 10.<br>(Fate 1): Double the strength of Weakness.</p>\n<hr>\n<p>A special skill that destroys the enemy's armor and skin with a powerful blow, dealing damage and lowering defense power. Any defense is torn like paper in front of the blow.</p>",
+    "tags": [
+      "Melee Attack",
+      "Hafted"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Gc7C0S58CBisPDj8",
+  "folder": "gZpXdqX8CDkZ95HR",
+  "_key": "!items!Gc7C0S58CBisPDj8"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Heal II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Replace &laquo;Heal&raquo; with this skill at CR11 or higher. The target recovers [3D + (Magic Power) + (Recovery)] HP.</p>\n<p>(Fate 1): Increase the amount of HP recovered by +[POW base].</p>\n<hr>\n<p>Magic that rains down light particles and heals the wounds of allies. Although it is the most basic healing magic, your healing power is greatly increased by proficiency.</p>",
+    "tags": [],
+    "timing": "Major",
+    "checkType": "None",
+    "range": "4Sq",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "xvUUA6VFPqQxdLPW",
+  "folder": "MOnUuqm5LwZpBmM6",
+  "_key": "!items!xvUUA6VFPqQxdLPW"
+}

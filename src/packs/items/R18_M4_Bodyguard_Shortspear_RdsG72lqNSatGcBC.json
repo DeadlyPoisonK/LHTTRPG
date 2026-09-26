@@ -1,0 +1,48 @@
+{
+  "name": "R18 M4 Bodyguard Shortspear",
+  "type": "weapon",
+  "system": {
+    "description": "<p>You recover [20 + Recovery] points of HP of one ally within 2Sq. Once per scenario.\nLegion of Young Branches Replica Lance A replica of the lance used by the Legion of Young Branches, an ancient group that defended humanity during the battle against the Alvs. This is a simple one-handed spear, with the carving of young branches at the tip and vivid dark green stripes running along the shaft. It is said to possess strong healing power, though its power was often used to support comrades fighting alongside the wielder. Weapon Spear Common 10 5 0 8 7 6 5% Increases ally's healing by 10% The Legion of Young Branches was an ancient order that protected humanity during the war against the Alvs. Their lances were said to be imbued with the power of nature, capable of healing and supporting their comrades in battle. This replica carries a piece of that legacy.</p><hr><p>Sturdy Branch of the Green-Sealing Tree [Core Material] (560G) + Long Javelin (740G) + Thistle Charm (760G) + [Magic Catalyst 18] (310G) ×2 + Crafting Cost (720G)</p>",
+    "tags": [
+      "One-Handed",
+      "Spear",
+      "Not For Sale",
+      "M4"
+    ],
+    "initiative": 1,
+    "rank": 18,
+    "price": 3400,
+    "equipped": false,
+    "attack": 24,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 10000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "RdsG72lqNSatGcBC",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!RdsG72lqNSatGcBC"
+}

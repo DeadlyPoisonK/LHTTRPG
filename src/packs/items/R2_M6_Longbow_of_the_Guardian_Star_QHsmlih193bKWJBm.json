@@ -1,0 +1,48 @@
+{
+  "name": "R2 M6 Longbow of the Guardian Star",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Action]: Use this effect at the same time as a [Ranged Attack]. Secondary targets within [Target: Wide 1 (P) / Range: Close] from you gain [Barrier: (Base POW + 5)]. Limit 1/Scenario.</p>\n<p>A small bow carved into a sacred tree with a pattern resembling a protective star inn, and forged as a ritual tool. If you pluck the strings with a prayer, the radiance of Yumihariboshi will give protection to those around you.</p>\n<hr>\n<p>Cuddling Husband and Wife Tree [Core Material] (40G) + Short Bow (110G) + Aoi Amulet (60G) + [Magic Catalyst 2] (20G) x 2 + Crafting Cost (100G)</p>",
+    "tags": [
+      "M6",
+      "Two-Handed",
+      "Bow",
+      "Not for Sale"
+    ],
+    "initiative": 0,
+    "rank": 2,
+    "price": 350,
+    "equipped": false,
+    "attack": 10,
+    "magic": 0,
+    "accuracy": 0,
+    "main": false,
+    "range": "3Sq",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 9300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "QHsmlih193bKWJBm",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!QHsmlih193bKWJBm"
+}

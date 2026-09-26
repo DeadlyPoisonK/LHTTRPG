@@ -1,0 +1,46 @@
+{
+  "name": "R4 Armor of Bloody Oath",
+  "type": "armor",
+  "system": {
+    "description": "<p>[Trigger: Immediately after damage is applied] Use when you receive 20 or more HP damage. You immediately use Heal. [CR12] The effect of this item cannot be activated.</p>\n<hr>\n<p>Armor that is said to contain the will of a protector who dedicated himself to protect humanity from demi-humans. It stimulates healing magic in response to the user's wounds.</p>\n<hr>\n<table style=\"border-collapse: collapse; width: 185pt;\" border=\"0\" width=\"245\" cellspacing=\"0\" cellpadding=\"0\"><colgroup><col style=\"mso-width-source: userset; mso-width-alt: 1792; width: 37pt;\" span=\"5\" width=\"49\"> </colgroup>\n<tbody>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt; width: 185pt;\" colspan=\"5\" width=\"245\" height=\"17\">Shadow Talisman [Core Material] (50G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Split Mail (200G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Healing Potion I (40G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl67\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">3x [Magic Catalyst 4] (30G)</td>\n</tr>\n<tr style=\"mso-height-source: userset; height: 12.75pt;\">\n<td class=\"xl70\" style=\"border-right: .5pt solid black; height: 12.75pt;\" colspan=\"5\" height=\"17\">Construction (120G)</td>\n</tr>\n</tbody>\n</table>",
+    "tags": [
+      "Heavy Armor",
+      "Rare",
+      "M5"
+    ],
+    "pdef": 14,
+    "mdef": 6,
+    "initiative": -2,
+    "rank": 4,
+    "price": 500,
+    "equipped": false,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "magic": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/armor.svg",
+  "effects": [],
+  "sort": 500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "2HA2fqJEnHjZlVL8",
+  "folder": "GSOXnkHg6C8os28Y",
+  "_key": "!items!2HA2fqJEnHjZlVL8"
+}

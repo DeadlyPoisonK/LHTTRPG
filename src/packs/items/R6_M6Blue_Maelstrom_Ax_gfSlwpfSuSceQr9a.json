@@ -1,0 +1,48 @@
+{
+  "name": "R6 M6Blue Maelstrom Ax",
+  "type": "weapon",
+  "system": {
+    "description": "<p>Guardian-only. [Trigger: Setup & Hate 2] Used on \"Target: Wide Area 2 (Select)/Range: Close\". Makes the target enter the [Swimming] status. This effect lasts until the end of the round or until you move away from this Sq. Once per scene.\nGreat Whirlpool of Echo Gate Discovered at the center of the Great Whirlpool of Echo Gate. It is said to have been infused with powerful rotational magic from the great vortex. Once swung, it creates a whirlwind that disturbs the air, limiting the enemy's movement.</p><hr><p>Melody of the Waves [Core Material] (100G) + Wolf-Fang Club (170G) + Fish Scale Gem (Basic) (45G) ×2 + [Magic Catalyst 6] (50G) ×4 + Crafting Cost (260G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Hafted",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -2,
+    "rank": 6,
+    "price": 820,
+    "equipped": false,
+    "attack": 24,
+    "magic": 0,
+    "accuracy": -2,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 16500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "gfSlwpfSuSceQr9a",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!gfSlwpfSuSceQr9a"
+}

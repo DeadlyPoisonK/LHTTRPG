@@ -1,0 +1,45 @@
+{
+  "name": "Cloak",
+  "type": "accessory",
+  "system": {
+    "description": "<p>A long cloak that covers the body like a bell. It also retains heat well.</p>",
+    "tags": [
+      "[Accessory]",
+      "[Cloak]"
+    ],
+    "pdef": 5,
+    "mdef": 5,
+    "rank": 19,
+    "price": 940,
+    "equipped": false,
+    "initiative": 0,
+    "magic": 0,
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "timing": "-",
+    "attack": 0,
+    "accuracy": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "Nwqg4yg3AArQlKTw",
+  "folder": "9gKJRgj6ePfWHL9K",
+  "_key": "!items!Nwqg4yg3AArQlKTw"
+}

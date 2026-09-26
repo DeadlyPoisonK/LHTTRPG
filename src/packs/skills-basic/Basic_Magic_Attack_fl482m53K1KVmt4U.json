@@ -1,0 +1,45 @@
+{
+  "name": "Basic Magic Attack",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [Magic Power + 1D] magical damage.</p>\n<p>Deal [[/r 1d6 +@battle-status.power.magic.total ]]{Magic Power + 1D} magical damage.</p>\n<hr>\n<p>Magic Attack Animation</p>",
+    "tags": [
+      "Magic Attack",
+      "Staff",
+      "Magic Stone"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4 Sq.",
+    "target": "Single",
+    "subtype": "Basic",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "",
+    "limit": "",
+    "macroeffect": "ANQS94Uf2wa5dCgP"
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "fl482m53K1KVmt4U",
+  "folder": null,
+  "_key": "!items!fl482m53K1KVmt4U"
+}

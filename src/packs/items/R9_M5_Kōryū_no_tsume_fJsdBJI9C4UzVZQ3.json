@@ -1,0 +1,48 @@
+{
+  "name": "R9 M5 Kōryū no tsume",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Initiative & Self: Not Acted] You immediately deal 【STR Base Value】 points of direct damage to \"Target: Single / Range: 2Sq\". If the target is not rendered [Incapacitated] or [Dead] by this damage, you become [Used Up] and receive [Pursuit: 20]. 1 Scenario allows [SR] times of \"Kung Fu Action\" you have acquired.\nLightweight Gauntlet A gauntlet modeled after a dragon's claw, granting its wearer the agility of the dragon. The equipped character can dart around the battlefield with the recoil of their attacks, performing swift and seemingly impossible movements.</p><hr><p>[Core Material](140G)+ (310G)×2+[ 9](90G)×2+Crafting Cost(330G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Martial Arts",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 9,
+    "price": 1270,
+    "equipped": false,
+    "attack": 20,
+    "magic": 0,
+    "accuracy": 1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 15800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "fJsdBJI9C4UzVZQ3",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!fJsdBJI9C4UzVZQ3"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Pincer Break",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+3)D + (Attack Power)] physical damage to the target.</p>\n<p>(Hate Top): You gain a +5 bonus to your next damage roll against secondary targets within a range of [Target: Wide 2 (P) / Range: Close] centered on yourself. Treat this effect as a Combat Status that is removed after being applied once.</p>\n<hr>\n<p>A special skill that uses a heavy weapon such as a mallet or ax to perform a powerful rush. A blow like a battering ram that breaks through the castle gate gives momentum to allies.</p>",
+    "tags": [
+      "Hafted",
+      "Melee Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "9Uy370gOpgcxZbKg",
+  "folder": "wryJvGexBJrs9yYm",
+  "_key": "!items!9Uy370gOpgcxZbKg"
+}

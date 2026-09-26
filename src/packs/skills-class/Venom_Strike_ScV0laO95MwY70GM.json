@@ -1,0 +1,44 @@
+{
+  "name": "Venom Strike",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage to the target, and the target takes [Decay: 6].</p>\n<hr>\n<p>A skill that attacks with deadly poisoned weapons and ammunition. Poisoned enemies gradually lose their strength.</p>",
+    "tags": [
+      "Weapon Attack",
+      "Blight"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)\t\t",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 2",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "ScV0laO95MwY70GM",
+  "folder": "U29PibBhw7X11Kzo",
+  "_key": "!items!ScV0laO95MwY70GM"
+}

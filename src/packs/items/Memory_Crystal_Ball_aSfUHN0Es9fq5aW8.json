@@ -1,0 +1,46 @@
+{
+  "name": "Memory Crystal Ball",
+  "type": "gear",
+  "system": {
+    "description": "<p>[Trigger: Major &amp; Magic Catalyst 1] Select 1Sq from within your 4Sq and record the scenery as a still image. [Trigger: Major &amp; Magic Catalyst 1] Project the recorded image onto the nearby wall or ground. A photographic device that records the surrounding scene.</p>",
+    "tags": [
+      "Magic Tool",
+      "Not For Sale"
+    ],
+    "rank": 1,
+    "price": 40,
+    "equipped": false,
+    "timing": "-",
+    "checkType": "-",
+    "range": "-",
+    "target": "-",
+    "attack": 0,
+    "magic": 0,
+    "pdef": 0,
+    "mdef": 2,
+    "accuracy": 0,
+    "initiative": 0,
+    "check": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "aSfUHN0Es9fq5aW8",
+  "folder": "mVsVRwLfvm323sIQ",
+  "_key": "!items!aSfUHN0Es9fq5aW8"
+}

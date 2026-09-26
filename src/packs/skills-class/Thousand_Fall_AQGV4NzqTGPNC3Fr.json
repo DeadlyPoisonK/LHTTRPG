@@ -1,0 +1,43 @@
+{
+  "name": "Thousand Fall",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR)D + (Attack Power)] physical damage. The [Hate] of this skill is equal to [Number of Targets + 1].</p>\n<p>(Success): Reduce the [Hate] of number of allies equal to the targets and within 2 Sq by -1.</p>\n<hr>\n<p>A special skill that allows you to overwhelm a large number of enemies by firing a large number of thrown weapons at once. The barrage that falls like a waterfall draws the enemy's attention to you.</p>",
+    "tags": [
+      "Ranged Attack"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "3",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Refer",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "AQGV4NzqTGPNC3Fr",
+  "folder": "c8Kkjo2nnkw1nwKy",
+  "_key": "!items!AQGV4NzqTGPNC3Fr"
+}

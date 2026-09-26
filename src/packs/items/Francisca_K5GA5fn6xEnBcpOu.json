@@ -1,0 +1,46 @@
+{
+  "name": "Francisca",
+  "type": "weapon",
+  "system": {
+    "description": "<p>A hatchet with a large, curved blade.</p>",
+    "tags": [
+      "[One-Handed]",
+      "[Hafted]"
+    ],
+    "initiative": -1,
+    "rank": 30,
+    "price": 1700,
+    "equipped": false,
+    "attack": 49,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 6800000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "K5GA5fn6xEnBcpOu",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!K5GA5fn6xEnBcpOu"
+}

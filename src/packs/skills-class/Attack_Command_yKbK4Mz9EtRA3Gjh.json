@@ -1,0 +1,41 @@
+{
+  "name": "Attack Command",
+  "type": "skill",
+  "system": {
+    "description": "<p>During this Main Process, you gain a +2D bonus to physical damage.</p>\n<hr>\n<p>A special skill that increases the power of physical attacks performed by summoned servants by giving precise instructions or orders with high spirits.</p>",
+    "tags": [],
+    "timing": "Minor",
+    "checkType": "None\t\t",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "yKbK4Mz9EtRA3Gjh",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!yKbK4Mz9EtRA3Gjh"
+}

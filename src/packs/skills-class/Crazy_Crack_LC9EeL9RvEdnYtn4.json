@@ -1,0 +1,44 @@
+{
+  "name": "Crazy Crack",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target, and the target takes [Weakness (Physical): [INT mod]]. This weakness is handled as Life Status with the [Sealed] tag, and it continues until the target consumes 2 [Fate Points] or until the start of your next main process.</p>\n<hr>\n<p>A special skill that inflicts pain that cracks the target's fighting spirit and deprives them of their concentration.</p>",
+    "tags": [
+      "Melee Attack",
+      "Two-handed"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Evasion)",
+    "range": "Weapon",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 5
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "LC9EeL9RvEdnYtn4",
+  "folder": "gUSHwxWUWR1jx3O6",
+  "_key": "!items!LC9EeL9RvEdnYtn4"
+}

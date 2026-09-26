@@ -1,0 +1,44 @@
+{
+  "name": "Judgment Ray",
+  "type": "skill",
+  "system": {
+    "description": "<p>Deal [(SR+2)D + (Magic Power)] magical damage to the target.</p>\n<p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.<br>(Fate 1): You may use this skill with [Target: Three].</p>\n<hr>\n<p>An attack magic that converges the holy light emitted from the whole body and shoots it out in a beam to mow down the enemy. The brilliance of judgment will reduce many malice to ashes at your will.</p>",
+    "tags": [
+      "Magic Attack",
+      "Holy"
+    ],
+    "timing": "Major",
+    "checkType": "Opposed (Accuracy vs Resistance)",
+    "range": "4Sq",
+    "target": "Two",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 3
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "sHW2rgQRNAhERfAa",
+  "folder": "mDGgYZmpAjt4LdR9",
+  "_key": "!items!sHW2rgQRNAhERfAa"
+}

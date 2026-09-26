@@ -1,0 +1,43 @@
+{
+  "name": "Naruto Fence",
+  "type": "skill",
+  "system": {
+    "description": "<p>[Safe Move (forced)] the target up to [SR] Squares. The target must move to a Square you are not in. If you do a [Ranged Attack] with [Target: Single] in this main process, gain +1D to [Accuracy] for the attack.</p>\n<hr>\n<p>A special skill that repels enemies with the sound of an amulet. The sound resounds unpleasantly in response to hostility, causing the subject to distance themselves from the caster.</p>",
+    "tags": [
+      "Hafted"
+    ],
+    "timing": "Minor",
+    "checkType": "Auto\t\t",
+    "range": "Close",
+    "target": "Single",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Hate 1",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 2900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "oSOm0At4ucBPWI41",
+  "folder": "akWewe08HwoKQ708",
+  "_key": "!items!oSOm0At4ucBPWI41"
+}

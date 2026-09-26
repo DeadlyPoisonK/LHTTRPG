@@ -1,0 +1,44 @@
+{
+  "name": "Prelude Onslaught II",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR21 or higher. The target gains a +[POW mod] bonus to damage rolls.&nbsp;</p>\n<p>(Effect): While this [Harmony] is in effect, increase your [Hate] by +3 during the Cleanup Process of every round.</p>\n<p>(SR2): Gain +2 [Hate] instead of +3 during the Cleanup Process.</p>\n<hr>\n<p>A support song that plays an overture that foreshadows the advance of the bamboo shoots, and raises the morale of the comrades fiercely. Each person who listens to this song becomes a mighty warrior.</p>",
+    "tags": [
+      "Harmony",
+      "Preparation"
+    ],
+    "timing": "Setup",
+    "checkType": "",
+    "range": "Close",
+    "target": "Wide 20 (P)",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "Hate 3",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "5AhpB0zGzwxdV48u",
+  "folder": "nx50Nf8KOTIbUiIw",
+  "_key": "!items!5AhpB0zGzwxdV48u"
+}

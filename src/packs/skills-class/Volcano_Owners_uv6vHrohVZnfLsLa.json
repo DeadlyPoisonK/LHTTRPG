@@ -1,0 +1,44 @@
+{
+  "name": "Volcano Owners",
+  "type": "skill",
+  "system": {
+    "description": "<p>Acquired with CR 11 or higher. &laquo;Flare Arrow&raquo; and &laquo;Orb of Lava&raquo; ignore &nbsp;[Cancel: Flame] status on targets.</p>\n<p>(SR2): &laquo;Burned Stake&raquo; [Hate] cost is reduced by -1 (minimum 0).</p>\n<hr>\n<p>You are a sorcerer who specializes in the magic of manipulating flames. You can freely use flames of destruction that are difficult to control.</p>",
+    "tags": [
+      "Training",
+      "CR11"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "uv6vHrohVZnfLsLa",
+  "folder": "HAmKRHjTmD0IQMv3",
+  "_key": "!items!uv6vHrohVZnfLsLa"
+}

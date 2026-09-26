@@ -1,0 +1,49 @@
+{
+  "name": "R8 M5 Labrin's Thorny Chainlash",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Immediately After Damage] Used when you take damage from a target within \"Range: 2Sq\". Gives the target [Decay:5]. This [Decay] does not overwrite existing [Decay] on the target, but instead adds to its intensity.\nA whip made by intertwining multiple silver chains and infused with a bramble curse. It wraps around anyone who seeks to harm its user, as if possessing will of its own, and retaliates by thrusting cursed thorns.</p><hr><p>Cacti Thorns [Core Material] (140G) + Chain Whip (100G) × 3 + [Magic Catalyst 8] (70G) × 2 + Crafting Cost (300G)</p>",
+    "tags": [
+      "One-Handed",
+      "Whip",
+      "Poison",
+      "Not For Sale",
+      "M5"
+    ],
+    "initiative": 2,
+    "rank": 8,
+    "price": 880,
+    "equipped": false,
+    "attack": 13,
+    "magic": 0,
+    "accuracy": -1,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 3600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "8ecIWd3D3HhuQE8X",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!8ecIWd3D3HhuQE8X"
+}

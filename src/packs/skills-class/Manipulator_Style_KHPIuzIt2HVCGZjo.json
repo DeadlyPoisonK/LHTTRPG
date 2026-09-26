@@ -1,0 +1,43 @@
+{
+  "name": "Manipulator Style",
+  "type": "skill",
+  "system": {
+    "description": "<p>You must have &laquo;Call Servant&raquo; in order to acquire this skill. This skill only produces an effect when you have at least one empty [Hand Slot]. Reduce the [Hate] cost of &laquo;Call Servant&raquo; to 0.</p>\n<hr>\n<p>A fighting style in which one hand is freed and commands are given to followers one after another with hand signals and short commands. Depending on various situations, you can quickly use different followers.</p>",
+    "tags": [
+      "Style"
+    ],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "Combat",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "KHPIuzIt2HVCGZjo",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!KHPIuzIt2HVCGZjo"
+}

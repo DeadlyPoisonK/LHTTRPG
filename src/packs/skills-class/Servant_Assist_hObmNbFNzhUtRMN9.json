@@ -1,0 +1,41 @@
+{
+  "name": "Servant Assist",
+  "type": "skill",
+  "system": {
+    "description": "<p>The effect of this skill is determined by the tag received from a Summon.<br>(Self: Fairy): +2 [Perception check].&nbsp;<br>(Self: Mythic): +2 [Athletics Check].&nbsp;<br>(Self: Undead): +2 [Endurance Check].&nbsp;<br>(Self: Construct): +2 [Disable Check].&nbsp;</p>\n<p>(SR 2): The bonus becomes +1D.</p>\n<hr>\n<p>A special skill that allows the summoned attendant to help with various tasks. The field of specialty differs depending on the type of follower.</p>",
+    "tags": [],
+    "timing": "Constant",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 2
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "hObmNbFNzhUtRMN9",
+  "folder": "0ulu1r4s1ZJ03Yxc",
+  "_key": "!items!hObmNbFNzhUtRMN9"
+}

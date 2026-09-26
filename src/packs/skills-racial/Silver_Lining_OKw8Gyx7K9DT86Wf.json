@@ -1,0 +1,41 @@
+{
+  "name": "Silver Lining",
+  "type": "skill",
+  "system": {
+    "description": "<p>Use this skill when you roll a Fumble on a check. Reroll that check. In addition, add +2 to the result of the rerolled check.</p>\n<hr>\n<p>A special skill that recovers from fatal failures due to the badness of giving up and tenacity. Adversity is your opportunity.</p>",
+    "tags": [],
+    "timing": "After Check",
+    "checkType": "None",
+    "range": "Close",
+    "target": "Self",
+    "subtype": "General",
+    "skillRank": {
+      "value": 1,
+      "max": 1
+    },
+    "cost": "-",
+    "limit": "-",
+    "macroeffect": ""
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "OKw8Gyx7K9DT86Wf",
+  "folder": "rkor9kDHK7O93nlx",
+  "_key": "!items!OKw8Gyx7K9DT86Wf"
+}

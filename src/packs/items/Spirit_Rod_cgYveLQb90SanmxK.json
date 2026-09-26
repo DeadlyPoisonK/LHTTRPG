@@ -1,0 +1,48 @@
+{
+  "name": "Spirit Rod",
+  "type": "weapon",
+  "system": {
+    "description": "<p>[Trigger: Instant] Only activates if you have the [Nature] or [Beast] tag. Deals 10 points of direct damage to a single target within 4Sq. 2 times per scenario.\nA staff that lets its wielder \"load\" plant-type spells, adjusting when a single pre-cast spell takes effect or time-shifting its reuse restriction. It could be called the Druid's basic equipment. Higher-level versions support more spells and more loads.</p><hr><p>Seed of Eternal Sleep [Core Material] (100G) + Bamboo Staff (180G) ×2 + [Magic Catalyst 7] (60G) ×4 + Crafting Cost (300G)</p>",
+    "tags": [
+      "Two-Handed",
+      "Staff",
+      "Not For Sale",
+      "M6"
+    ],
+    "initiative": -2,
+    "rank": 7,
+    "price": 1000,
+    "equipped": false,
+    "attack": 15,
+    "magic": 18,
+    "accuracy": 0,
+    "main": false,
+    "range": "Close",
+    "checkType": "-",
+    "target": "-",
+    "timing": "-",
+    "pdef": 0,
+    "mdef": 0
+  },
+  "img": "systems/lhtrpg/assets/ui/items_icons/weapon.svg",
+  "effects": [],
+  "sort": 14600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_id": "cgYveLQb90SanmxK",
+  "folder": "C19YDMIkeXI6v7zD",
+  "_key": "!items!cgYveLQb90SanmxK"
+}
