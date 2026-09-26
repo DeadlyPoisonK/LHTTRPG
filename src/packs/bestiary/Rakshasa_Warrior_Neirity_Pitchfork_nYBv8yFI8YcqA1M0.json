@@ -198,15 +198,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "lb80TtXvZLL9A2hZ",
@@ -239,17 +239,17 @@
           "Physical Attack",
           "Fire"
         ],
-        "timing": "major",
+        "timing": "Major",
         "checkType": "14 vs Evasion",
-        "range": "close",
-        "target": "single",
+        "range": "Close",
+        "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "dH9aRy10RxwAeMeR",
@@ -281,15 +281,15 @@
         "tags": [],
         "timing": "upon attack",
         "checkType": "automatic",
-        "range": "close",
-        "target": "single",
+        "range": "Close",
+        "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "vIWONaMESU7u7j6Y",

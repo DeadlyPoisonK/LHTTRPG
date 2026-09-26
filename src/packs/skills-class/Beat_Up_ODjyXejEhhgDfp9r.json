@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Use when you incapacitate or kill an enemy. Can only target enemies. Deals 5 points of direct damage to the target. You are [instantly teleported] to the same Sq as the target.</p>\n<hr>\n<p>A special skill that when defeating an enemy, without interrupting the flow, it immediately approaches the next target and delivers a blow.</p>",
     "tags": [],
-    "timing": "Main",
+    "timing": "Main Process",
     "checkType": "Auto",
     "range": "2Sq",
     "target": "Single",

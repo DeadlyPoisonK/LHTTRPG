@@ -7,7 +7,7 @@
     "timing": "Before Check",
     "checkType": "None",
     "range": "Close",
-    "target": "Self\t",
+    "target": "Self",
     "subtype": "General",
     "skillRank": {
       "value": 1,

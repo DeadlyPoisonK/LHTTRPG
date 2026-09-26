@@ -200,15 +200,15 @@
         ],
         "timing": "Major",
         "checkType": "5+3D/resistance",
-        "range": "4 sq.",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,
@@ -259,7 +259,7 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scene",
         "check": {
           "dice": 0,
@@ -302,15 +302,15 @@
         "tags": [],
         "timing": "Refer",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,

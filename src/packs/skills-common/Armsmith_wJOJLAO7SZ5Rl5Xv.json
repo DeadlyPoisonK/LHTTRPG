@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Blacksmith, Weaponsmith, or Armorer.<br>You receive one item with an Item Rank that does not exceed your CR that has the [One-Handed] tag.<br>(SR2): The received item may have the [Two-Handed] tag.<br>(SR3): The received item may have the [Heavy Armor] [Medium Armor] or [Light Armor] tag.<br>(Connection: Merchant, Miner, Trader): Reduce the [Fate Point] cost of this skill to 1.</p>\n<hr>\n<p>A feat that shows that you have the technology to create various weapons and armor.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

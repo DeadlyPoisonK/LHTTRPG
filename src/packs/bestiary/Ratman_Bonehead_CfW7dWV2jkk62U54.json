@@ -197,15 +197,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "kMiFFz45oObaXl1G",
@@ -246,8 +246,8 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "UG21NWOvT8kowUcv",
@@ -280,13 +280,13 @@
         "timing": "Setup",
         "checkType": "",
         "range": "Close",
-        "target": "Wide 20 (P) ",
+        "target": "Wide 20 (P)",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scene",
         "macroeffect": ""
       },

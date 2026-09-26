@@ -11,7 +11,7 @@
     ],
     "timing": "Move",
     "checkType": "Automatic",
-    "range": "4 Sq.",
+    "range": "4Sq",
     "target": "Single",
     "subtype": "Combat",
     "skillRank": {

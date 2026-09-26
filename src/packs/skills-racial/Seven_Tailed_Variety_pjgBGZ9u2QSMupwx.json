@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Roll 1D, and then acquire the designated effect for the result: [1: (Attack Power) +2] [2: (Magic Power) +2] [3: (Physical Defense) +4] [4: (Magical Defense) +4] [5: [Initiative] +4] [6: [Starting Fate Point] +2]. This effect lasts until the end of the scenario.</p>\n<p>(CR16): Increase the bonus of each listed effect by double.</p>\n<hr>\n<p>A special technique that releases the power of change in the tail and randomly obtains various blessings.</p>",
     "tags": [],
-    "timing": "Preplay",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

@@ -196,15 +196,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "vYSj7QbKvV3REWim",
@@ -238,15 +238,15 @@
         ],
         "timing": "Major",
         "checkType": "Opposed(2D+4vsEvasion)",
-        "range": "2 Sq.",
+        "range": "2Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "BoHh3ucjIBrRtlpd",
@@ -278,15 +278,15 @@
         "tags": [],
         "timing": "Setup",
         "checkType": "",
-        "range": "4 Sq.",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "Y7MF3R4BFPyFul25",

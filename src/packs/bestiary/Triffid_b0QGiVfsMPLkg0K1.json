@@ -197,15 +197,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "C4MX0OLFl0hbAqYR",
@@ -239,15 +239,15 @@
         ],
         "timing": "Major",
         "checkType": "Opposed (12 Fixed vs. Evasion)",
-        "range": "2sq.",
+        "range": "2Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "1HZMHOslwOpF3asQ",
@@ -281,15 +281,15 @@
         ],
         "timing": "Move",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "4yYAzEKvv1PNsWTR",

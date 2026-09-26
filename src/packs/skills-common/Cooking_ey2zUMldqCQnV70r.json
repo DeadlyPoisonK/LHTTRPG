@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Chef, Maid, or Elder Maid.</p>\n<p>You receive two items that do not exceed an Item Rank you can use that have the [Food] tag.</p>\n<p>(Connection: Merchant, Farmer, Housekeeper): You receive three items instead of two.</p>\n<hr>\n<p>You can create delicious dishes with your own hands.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

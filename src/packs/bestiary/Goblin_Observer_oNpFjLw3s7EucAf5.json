@@ -194,17 +194,17 @@
       "system": {
         "description": "<p>Target gets [Weakness (Shooting Attack): 10]<br>Treat this as a Bad Status. This cannot be used first round of the scene.&nbsp;</p>",
         "tags": [],
-        "timing": " Set-up",
+        "timing": "Setup",
         "checkType": "Automatic",
-        "range": "3 sq",
+        "range": "3Sq",
         "target": "2 Targets",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "1/scene",
+        "cost": "-",
+        "limit": "1/Scene",
         "macroeffect": ""
       },
       "_id": "6JOzMXDYg0ogubnv",
@@ -245,8 +245,8 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "IFfhyHFcNDyswjJ9",
@@ -278,15 +278,15 @@
         "tags": [],
         "timing": "After Damage",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "AARFsTIiXu91Hyf8",

@@ -193,15 +193,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "M6L5C8K17GxL46fy",
@@ -233,15 +233,15 @@
         "tags": [],
         "timing": "Setup",
         "checkType": "Automatic",
-        "range": "Wide (2) ",
-        "target": "",
+        "range": "Wide (2)",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "1/scene",
+        "cost": "-",
+        "limit": "1/Scene",
         "macroeffect": ""
       },
       "_id": "0cRlMKtjPgAOr3wc",
@@ -273,15 +273,15 @@
         "tags": [],
         "timing": "Major",
         "checkType": "6+2D v Evasion",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "Flb03qhbbVGy4wUx",
@@ -313,15 +313,15 @@
         "tags": [],
         "timing": "Cleanup",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "zXvNJo6M53Fqb539",

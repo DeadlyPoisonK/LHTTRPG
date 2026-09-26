@@ -197,15 +197,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "r58fC2NM1RYfabgD",
@@ -239,15 +239,15 @@
         ],
         "timing": "Major",
         "checkType": "Opposed (3D+3 vs Resistance)",
-        "range": "4 Sq",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "E84iNhQGdPlhhOF4",
@@ -279,14 +279,14 @@
         "tags": [],
         "timing": "Cleanup",
         "checkType": "Automatic",
-        "range": "4 Sq. ",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scene",
         "macroeffect": ""
       },

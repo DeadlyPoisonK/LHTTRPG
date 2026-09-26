@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Gemsmith, Jeweler, or Devotee.</p>\n<p>You receive two items that do not exceed an Item Rank you can use that have the [Gem] tag.</p>\n<p>(Connection: Artist, Arcanist, Miner): You receive three items instead of two.</p>\n<hr>\n<p>A special skill that infuses magical power into gems and precious metals to create magical orbs.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "",
     "range": "Close",
     "target": "Self",

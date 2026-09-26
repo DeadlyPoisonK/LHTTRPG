@@ -11,14 +11,14 @@
     ],
     "timing": "Refer",
     "checkType": "None",
-    "range": "20 Sq.",
+    "range": "20Sq",
     "target": "Single",
     "subtype": "General",
     "skillRank": {
       "value": 1,
       "max": 1
     },
-    "cost": "",
+    "cost": "-",
     "limit": "1/Scene",
     "macroeffect": ""
   },

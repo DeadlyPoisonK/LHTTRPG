@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Scribe, Arcanist, or Spellthief.</p>\n<p>You receive two items that do not exceed an Item Rank you can use that have the [Scroll] tag.</p>\n<p>(Connection: Intellectual, Scholar, Apprentice): You receive three items instead of two.</p>\n<hr>\n<p>The feat of creating magical scrolls by writing spells on blank scrolls or paper.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

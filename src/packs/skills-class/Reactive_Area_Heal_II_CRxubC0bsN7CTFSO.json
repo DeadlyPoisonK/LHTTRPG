@@ -7,7 +7,7 @@
     "timing": "After Damage",
     "checkType": "None",
     "range": "6Sq",
-    "target": "[SR+1]",
+    "target": "[SR+1] Targets",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

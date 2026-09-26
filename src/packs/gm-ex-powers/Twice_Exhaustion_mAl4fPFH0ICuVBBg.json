@@ -19,7 +19,7 @@
       "max": 1
     },
     "cost": "Fate 6",
-    "limit": "",
+    "limit": "-",
     "macroeffect": ""
   },
   "effects": [],

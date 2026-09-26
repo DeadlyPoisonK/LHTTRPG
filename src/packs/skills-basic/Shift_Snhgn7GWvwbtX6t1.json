@@ -15,8 +15,8 @@
       "value": 1,
       "max": 5
     },
-    "cost": "",
-    "limit": "",
+    "cost": "-",
+    "limit": "-",
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",

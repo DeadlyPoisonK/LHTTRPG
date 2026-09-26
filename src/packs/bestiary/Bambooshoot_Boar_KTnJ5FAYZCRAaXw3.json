@@ -204,8 +204,8 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "6HwdoFOWJgo9jTnA",
@@ -237,15 +237,15 @@
         "tags": [],
         "timing": "After Damage",
         "checkType": "Automatic",
-        "range": "2 Sq.",
+        "range": "2Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "Aa2Z4w1xkvQtcgjT",
@@ -279,14 +279,14 @@
         ],
         "timing": "Move",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scene",
         "macroeffect": ""
       },

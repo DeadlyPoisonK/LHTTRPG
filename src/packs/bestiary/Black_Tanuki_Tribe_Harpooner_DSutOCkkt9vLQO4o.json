@@ -198,15 +198,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,
@@ -248,15 +248,15 @@
         "tags": [],
         "timing": "Move",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,
@@ -298,7 +298,7 @@
         "tags": [
           "Mele Attack"
         ],
-        "timing": "",
+        "timing": "-",
         "checkType": "Confrontation (4 +3D/Evasion)",
         "range": "Close",
         "target": "Single",
@@ -307,8 +307,8 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,

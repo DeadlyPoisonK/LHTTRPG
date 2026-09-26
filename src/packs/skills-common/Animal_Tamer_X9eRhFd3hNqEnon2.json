@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your subclass is Tamer, Knight, Coachman, or Nomad.</p>\n<p>You receive one basic item that has the [Summon] tag with an IR no greater than your [CR-2 (minimum 1)].<br>(SR 2): &nbsp;You can receive an item with an IR up to your CR.<br>(Connection: Warrior, Noble, Farmer): The fate cost is gone.</p>\n<hr>\n<p>A feat that allows you to form a deep bond with your mount through training, and obtain a whistle to summon your mount as proof.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "",
     "range": "Close",
     "target": "Self",

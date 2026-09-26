@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Chindon'ya, Idol, Acrobat, or Demon Lord. You may make one roll on the [Treasure Table: Valuables]. For each Connection you have, you gain a +1 bonus to this roll (up to a maximum of +10).</p>\n<hr>\n<p>A feat that represents the owner of exceptional skill and charisma. You will receive gifts from fans.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

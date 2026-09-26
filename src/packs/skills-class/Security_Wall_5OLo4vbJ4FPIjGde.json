@@ -9,7 +9,7 @@
     "timing": "Setup",
     "checkType": "None",
     "range": "Close",
-    "target": "Wide 4(P)",
+    "target": "Wide 4 (P)",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

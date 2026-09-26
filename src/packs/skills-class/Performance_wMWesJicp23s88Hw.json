@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You make one Treasure Roll on the [Treasure Table: Money].</p>\n<p>(Bonus): You gain a +1 bonus to [Athletics].</p>\n<hr>\n<p>A special ability to earn money by performing and singing on the streets and bars. How much you earn depends on your virtuosity and luck.</p>",
     "tags": [],
-    "timing": "Preplay",
+    "timing": "Pre-Play",
     "checkType": "None",
     "range": "Close",
     "target": "Self",

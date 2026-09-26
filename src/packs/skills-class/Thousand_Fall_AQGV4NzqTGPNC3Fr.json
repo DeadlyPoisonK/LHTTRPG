@@ -9,7 +9,7 @@
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Evasion)",
     "range": "Weapon",
-    "target": "3",
+    "target": "3 Targets",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

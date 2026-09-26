@@ -20,7 +20,7 @@
       "max": 1
     },
     "cost": "Refer",
-    "limit": "",
+    "limit": "-",
     "macroeffect": ""
   },
   "effects": [],

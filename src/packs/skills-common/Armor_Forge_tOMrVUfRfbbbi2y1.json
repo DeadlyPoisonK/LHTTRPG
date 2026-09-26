@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You may use this skill if your sub class is Blacksmith, Armorer, or Machinist. You receive one basic item that has the [Heavy Armor] [Shield] or [Helm] tag with an IR no greater than your [CR-2 (minimum 1)].</p>\n<p>(SR2): You can receive an item with an IR up to your CR.<br>(Connection: Soldier, General, Mercenary): Reduce the Fate cost of this skill to 1.</p>\n<hr>\n<p>Special ability to process metal and create armor.</p>",
     "tags": [],
-    "timing": "Pre-play",
+    "timing": "Pre-Play",
     "checkType": "",
     "range": "Close",
     "target": "Self",

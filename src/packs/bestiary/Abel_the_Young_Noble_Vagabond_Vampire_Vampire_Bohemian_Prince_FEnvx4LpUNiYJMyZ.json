@@ -107,15 +107,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,
@@ -158,14 +158,14 @@
         "tags": [],
         "timing": "Move",
         "checkType": "",
-        "range": "4sq",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scene",
         "check": {
           "dice": 0,
@@ -207,7 +207,7 @@
       "system": {
         "description": "<p>This enemy heals for 6 HP.</p>\n<p>Fate point 1: The target also takes [rigor], which is not able to be canceled until the target leaves the enemy's square.</p>",
         "tags": [],
-        "timing": "",
+        "timing": "-",
         "checkType": "",
         "range": "Close",
         "target": "Single",
@@ -216,8 +216,8 @@
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 3,
           "mod": 4,
@@ -260,14 +260,14 @@
         "tags": [],
         "timing": "Fail a defence roll",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/Scenario",
         "check": {
           "dice": 0,
@@ -311,15 +311,15 @@
         "tags": [],
         "timing": "Post-action",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,
@@ -363,14 +363,14 @@
         "timing": "Cleanup",
         "checkType": "",
         "range": "Close",
-        "target": "Area(P)",
+        "target": "Area (P)",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "check": {
           "dice": 0,
           "mod": 0,

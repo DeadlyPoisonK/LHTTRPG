@@ -8,8 +8,8 @@
     ],
     "timing": "Constant",
     "checkType": "None",
-    "range": "Self",
-    "target": "Close",
+    "range": "Close",
+    "target": "Self",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

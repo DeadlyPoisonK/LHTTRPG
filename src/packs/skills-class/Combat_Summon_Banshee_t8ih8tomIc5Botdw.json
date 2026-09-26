@@ -13,7 +13,7 @@
     ],
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Resistance)",
-    "range": "4 Sq.",
+    "range": "4Sq",
     "target": "Single",
     "subtype": "Combat",
     "skillRank": {
@@ -21,7 +21,7 @@
       "max": 3
     },
     "cost": "Hate 1",
-    "limit": "",
+    "limit": "-",
     "macroeffect": ""
   },
   "effects": [],

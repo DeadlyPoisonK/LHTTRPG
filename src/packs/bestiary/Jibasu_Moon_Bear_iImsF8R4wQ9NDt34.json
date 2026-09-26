@@ -195,15 +195,15 @@
         "tags": [],
         "timing": "Continuous",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "NpTnSztY5bIOr2qm",
@@ -235,17 +235,17 @@
         "tags": [
           " Physical Attack"
         ],
-        "timing": "",
+        "timing": "-",
         "checkType": "6+2D vs Evasion",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "r5knaNMQs17tHWrq",
@@ -275,17 +275,17 @@
       "system": {
         "description": "<p>Triggered when the enemy takes more than 30 HP of damage. The enemy immediately becomes [pre-action] and can immediately move two squares.&nbsp;</p>",
         "tags": [],
-        "timing": "",
+        "timing": "-",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "9D1XNLzPtdqy5gqk",
@@ -317,15 +317,15 @@
         "tags": [],
         "timing": "Cleanup",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "LbcaMXAQGpltYacc",

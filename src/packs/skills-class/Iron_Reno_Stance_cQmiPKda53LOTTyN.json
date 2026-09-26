@@ -10,7 +10,7 @@
     ],
     "timing": "Minor",
     "checkType": "None",
-    "range": "Self",
+    "range": "Close",
     "target": "Self",
     "subtype": "Combat",
     "skillRank": {

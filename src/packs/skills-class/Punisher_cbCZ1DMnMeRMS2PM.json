@@ -9,7 +9,7 @@
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Resistance)",
     "range": "4Sq",
-    "target": "Four",
+    "target": "4 Targets",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

@@ -20,7 +20,7 @@
       "max": 5
     },
     "cost": "Hate 2",
-    "limit": "",
+    "limit": "-",
     "macroeffect": ""
   },
   "effects": [],

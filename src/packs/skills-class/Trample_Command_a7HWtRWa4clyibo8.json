@@ -7,7 +7,7 @@
     "timing": "Move",
     "checkType": "Auto",
     "range": "4Sq",
-    "target": "Auto\t\t",
+    "target": "Refer",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

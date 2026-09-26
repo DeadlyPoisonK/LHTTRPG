@@ -193,15 +193,15 @@
         "tags": [],
         "timing": "Constant",
         "checkType": "",
-        "range": "",
-        "target": "",
+        "range": "-",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "s1wzt2xXXd6C4454",
@@ -233,17 +233,17 @@
         "tags": [
           "Magic Attack"
         ],
-        "timing": "major",
+        "timing": "Major",
         "checkType": "4+3D vs Resistance",
-        "range": "4 sq.",
+        "range": "4Sq",
         "target": "Single",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
-        "limit": "",
+        "cost": "-",
+        "limit": "-",
         "macroeffect": ""
       },
       "_id": "JbF6UOKAc6r2vVqA",
@@ -275,14 +275,14 @@
         "tags": [],
         "timing": "Move",
         "checkType": "",
-        "range": "4 sq.",
-        "target": "",
+        "range": "4Sq",
+        "target": "-",
         "subtype": "Basic",
         "skillRank": {
           "value": 1,
           "max": 1
         },
-        "cost": "",
+        "cost": "-",
         "limit": "1/encounter",
         "macroeffect": ""
       },

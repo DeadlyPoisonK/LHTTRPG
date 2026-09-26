@@ -6,15 +6,15 @@
     "tags": [],
     "timing": "Setup",
     "checkType": "Basic (Knowledge vs Identification Difficulty)",
-    "range": "20 Sq.",
+    "range": "20Sq",
     "target": "Single",
     "subtype": "Basic",
     "skillRank": {
       "value": 1,
       "max": 1
     },
-    "cost": "",
-    "limit": "",
+    "cost": "-",
+    "limit": "-",
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",

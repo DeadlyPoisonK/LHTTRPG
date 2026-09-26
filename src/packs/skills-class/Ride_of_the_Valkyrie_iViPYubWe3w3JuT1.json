@@ -7,7 +7,7 @@
     "timing": "Move",
     "checkType": "None",
     "range": "Close",
-    "target": "Wide 20(P)",
+    "target": "Wide 20 (P)",
     "subtype": "General",
     "skillRank": {
       "value": 1,

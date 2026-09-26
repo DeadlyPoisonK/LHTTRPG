@@ -7,7 +7,7 @@
     "timing": "Constant",
     "checkType": "None",
     "range": "Close",
-    "target": "Close",
+    "target": "Self",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

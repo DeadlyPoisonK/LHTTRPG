@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You can use it whenever you like. Instantly removes one status with the [Seal] tag you are receiving.</p>\n<hr>\n<p>A special skill that bounces off special restraints on the soul. &lt;Adventurers&gt; have wings in their souls. Your soul will transcend the horizon of cause and effect, and will soar freely.</p>",
     "tags": [],
-    "timing": "",
+    "timing": "-",
     "checkType": "None",
     "range": "Close",
     "target": "Self",
@@ -13,8 +13,8 @@
       "value": 1,
       "max": 1
     },
-    "cost": "1/Scene",
-    "limit": "-",
+    "cost": "-",
+    "limit": "1/Scene",
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",

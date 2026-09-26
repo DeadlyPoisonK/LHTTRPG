@@ -7,7 +7,7 @@
     "timing": "Minor",
     "checkType": "Automatic",
     "range": "Weapon",
-    "target": "(SR)#",
+    "target": "(SR) Targets",
     "subtype": "Combat",
     "skillRank": {
       "value": 1,

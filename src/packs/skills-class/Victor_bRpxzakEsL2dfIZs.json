@@ -19,7 +19,7 @@
       "max": 1
     },
     "cost": "Hate 1",
-    "limit": "",
+    "limit": "-",
     "macroeffect": ""
   },
   "effects": [],
