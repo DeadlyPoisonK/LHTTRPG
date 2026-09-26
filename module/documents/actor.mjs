@@ -119,7 +119,9 @@ export class LHTrpgActor extends Actor {
     if (this.type === PILE_TYPE) return;
     const actorData = this;
     const system = actorData.system;
-    if (this.type === 'monster') prepareMonsterChecks(system);
+    // Monsters set their values directly on the sheet: only their Evasion/Resistance need preparing.
+    // (They have no class/race/infos, so the character computations below would throw.)
+    if (this.type === 'monster') return prepareMonsterChecks(system);
     const str = system.attributes.str;
     const dex = system.attributes.dex;
     const pow = system.attributes.pow;
