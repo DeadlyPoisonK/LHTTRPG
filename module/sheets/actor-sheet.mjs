@@ -313,6 +313,17 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
+    // Give an item or gold to another player character
+    html.find('.item-give').click(ev => {
+      ev.stopPropagation();
+      const item = this.actor.items.get(ev.currentTarget.closest(".item").dataset.itemId);
+      if (item) game.lhtrpg.piles.giveItem(item);
+    });
+    html.find('.gold-give').click(ev => {
+      ev.preventDefault();
+      game.lhtrpg.piles.giveGold(this.actor);
+    });
+
     // Delete Inventory Item
     html.find('.item-equip').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
@@ -437,6 +448,29 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     return data;
   }
 
+  /** @override */
+  _canDragDrop(selector) {
+    // Players can drop items on sheets they don't own to give them away.
+    return true;
+  }
+
+  /**
+   * Items coming from another actor (a player, a loot pile, a chest...) are
+   * moved through the piles API instead of being copied. Dragging from a
+   * merchant buys the item.
+   * @override
+   */
+  async _onDropItem(event, data) {
+    const item = await Item.implementation.fromDropData(data);
+    const source = item?.parent;
+    if ((source instanceof Actor) && (source.uuid !== this.actor.uuid)) {
+      if (game.lhtrpg.piles.isMerchant(source) && !game.user.isGM) return game.lhtrpg.piles.buyItem(source, item, this.actor);
+      return game.lhtrpg.piles.transferItem(item, this.actor);
+    }
+    if (!this.isEditable) return false;
+    return super._onDropItem(event, data);
+  }
+
   /**
    * Handle dropping an Item back onto the general inventory grid, unequipping
    * it if it was equipped. Newly dropped items and simple reordering are left
@@ -477,10 +511,18 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     let item = await Item.implementation.fromDropData(data);
     if (!item) return;
 
-    // Copy the item onto this actor first if it isn't already owned by it.
-    if (item.parent?.id !== this.actor.id) {
-      const [created] = await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
-      item = created;
+    // Bring the item onto this actor first if it isn't already owned by it:
+    // items from another actor (player, loot, chest) are moved, not copied.
+    if (item.parent?.uuid !== this.actor.uuid) {
+      if (item.parent instanceof Actor) {
+        const result = await game.lhtrpg.piles.transferItem(item, this.actor, { ask: false });
+        item = this.actor.items.get(result?.createdItemId);
+        if (!item) return;
+      }
+      else {
+        const [created] = await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
+        item = created;
+      }
     }
 
     const slotType = slot.dataset.slotType;

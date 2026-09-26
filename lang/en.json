@@ -2,7 +2,8 @@
   "TYPES": {
     "ACTOR": {
       "TypeCharacter": "Player Character",
-      "TypeMonster": "Monster"
+      "TypeMonster": "Monster",
+      "TypePile": "Pile (loot / chest / merchant)"
     },
     "ITEM": {
       "TypeAccessory": "Accessory",
@@ -256,6 +257,149 @@
     },
     "Stats": {
       "Label": "Stats"
+    },
+    "Piles": {
+      "SheetLabel": "Pile Sheet (loot, chest, merchant)",
+      "ChatAlias": "Inventory",
+      "DefaultLootName": "Loot",
+      "ItemPilesActive": "The Item Piles module is active. Log Horizon TRPG already includes its own loot, chests and merchants: using both at once may overlap.",
+      "Mode": {
+        "Loot": "Loot",
+        "Chest": "Chest",
+        "Merchant": "Merchant"
+      },
+      "Gold": "gold",
+      "Quantity": "Quantity",
+      "Confirm": "Confirm",
+      "Give": "Give",
+      "GiveTo": "Give to…",
+      "GiveItemTitle": "Give {item}",
+      "GiveGoldTitle": "Give gold",
+      "Take": "Take",
+      "TakeAll": "Take all",
+      "TakeGold": "Take gold",
+      "DepositGold": "Leave gold",
+      "SplitGold": "Split gold",
+      "Buy": "Buy",
+      "Sell": "Sell",
+      "SellConfirm": "Sell {quantity} × {item} for {gold} gold?",
+      "Delete": "Delete",
+      "Configure": "Configure",
+      "Open": "Open",
+      "Closed": "Closed",
+      "Locked": "Locked",
+      "OpenChest": "Open chest",
+      "CloseChest": "Close chest",
+      "ClosedHint": "The chest is closed.",
+      "LockedHint": "The chest is locked. Maybe someone has the key…",
+      "ShopOpen": "Open for business",
+      "ShopClosed": "Closed",
+      "ShopClosedHint": "The shop is closed right now.",
+      "Contents": "Contents",
+      "ForSale": "For sale",
+      "Stock": "Stock",
+      "StockHint": "Stock (empty or ∞ = unlimited)",
+      "SoldOut": "Sold out",
+      "Empty": "Nothing here.",
+      "NothingForSale": "Nothing for sale.",
+      "YourItems": "Your items (sale price)",
+      "NothingToSell": "You have nothing to sell.",
+      "NoSalesHint": "This merchant doesn't buy items.",
+      "DropHint": "Drag items here from the sidebar, a compendium or a character sheet.",
+      "NoInteractor": "Select your token (or have a character assigned) to interact.",
+      "Config": {
+        "Mode": "Type",
+        "Distance": "Interaction distance",
+        "DistanceHint": "In grid spaces. 1 = adjacent, -1 = unlimited.",
+        "DeleteWhenEmpty": "Delete token when empty",
+        "ImgClosed": "Closed image",
+        "ImgOpen": "Open image (empty = actor image)",
+        "AcceptsSales": "Buys items from players",
+        "InfiniteGold": "Unlimited gold",
+        "BuyPercent": "Buy price (% of item price)",
+        "SellPercent": "Sell price (% of item price)",
+        "ResellSold": "Resell items bought from players",
+        "ResellSoldHint": "Off: what players sell disappears once paid for. On: it is put up for sale with a limited stock (the units sold)."
+      },
+      "Settings": {
+        "ChatLog": {
+          "Name": "Log item transfers in chat",
+          "Hint": "Post a chat message whenever loot is taken, items are given, bought or sold."
+        }
+      },
+      "Log": {
+        "Take": "<b>{actor}</b> took {item} from <b>{pile}</b>.",
+        "Deposit": "<b>{actor}</b> left {item} in <b>{pile}</b>.",
+        "Give": "<b>{actor}</b> gave {item} to <b>{target}</b>.",
+        "Drop": "<b>{actor}</b> dropped {item} on the ground.",
+        "Buy": "<b>{actor}</b> bought {item} from <b>{pile}</b> for {gold} gold.",
+        "Sell": "<b>{actor}</b> sold {item} to <b>{pile}</b> for {gold} gold.",
+        "Split": "The gold of <b>{pile}</b> was split: {gold} each for {actors}."
+      },
+      "Warn": {
+        "InventoryFullLeft": "{actor}'s inventory is full. Left behind: {items}."
+      },
+      "Error": {
+        "Generic": "That action could not be completed.",
+        "NoGM": "A GM must be connected to do this.",
+        "Timeout": "The GM did not answer in time.",
+        "NoPermission": "You are not allowed to do that.",
+        "NoActor": "Select your token or have a character assigned first.",
+        "TooFar": "You are too far away from {pile}.",
+        "Closed": "{pile} is closed.",
+        "Locked": "{pile} is locked.",
+        "MerchantClosed": "{pile} is closed.",
+        "NotPhysical": "{item} is not an object that can be carried.",
+        "InventoryFull": "{actor}'s inventory is full: there's no room for {item}.",
+        "NotEnoughGold": "{actor} doesn't have enough gold.",
+        "InvalidAmount": "Invalid amount.",
+        "NoGold": "There's no gold to give.",
+        "NoTargets": "There are no other player characters.",
+        "NoParty": "There are no player characters connected to split the gold with.",
+        "OutOfStock": "{item} is sold out.",
+        "NoSales": "{pile} doesn't buy items.",
+        "MerchantNoGold": "{pile} doesn't have enough gold to buy that."
+      },
+      "GoldLabel": "Gold",
+      "Max": "max. {max}",
+      "EditImage": "Change image",
+      "Search": "Search…",
+      "AllTypes": "All",
+      "Sort": {
+        "Label": "Sort by",
+        "Manual": "Stored order",
+        "Name": "Name",
+        "Type": "Type",
+        "PriceAsc": "Price (low → high)",
+        "PriceDesc": "Price (high → low)"
+      },
+      "Description": "Description",
+      "BuyTab": "Buy",
+      "SellTab": "Sell",
+      "Item": "Item",
+      "Price": "Price",
+      "Convert": {
+        "Title": "Convert actor into a pile",
+        "Hint": "Turns an existing actor (for example an Item Piles merchant, chest or loot) into a system pile. It keeps its items, gold, image, tokens and permissions; stats are lost. Characters assigned to players are not listed.",
+        "Actor": "Actor",
+        "Mode": "Convert into",
+        "DropNonPhysical": "Delete skills, connections and unions",
+        "Summary": "{physical} objects and {gold} gold are kept; {other} other items; {tokens} token(s) on scenes.",
+        "Confirm": "Convert",
+        "AreYouSure": "Convert <b>{actor}</b> into a pile ({mode})? Its stats will be lost. This can't be undone automatically.",
+        "Done": "{actor} is now a pile ({mode}): {items} objects kept, {dropped} items removed, {tokens} unlinked token(s) migrated.",
+        "NoActors": "There are no actors to convert.",
+        "PlayerOwned": "owned by a player"
+      },
+      "TypePlural": {
+        "weapon": "Weapons",
+        "armor": "Armor",
+        "shield": "Shields",
+        "accessory": "Accessories",
+        "bag": "Bags",
+        "gear": "Gear",
+        "ticket": "Tickets"
+      }
     }
   }
 }

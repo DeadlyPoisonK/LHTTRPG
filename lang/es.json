@@ -2,7 +2,8 @@
   "TYPES": {
     "ACTOR": {
       "TypeCharacter": "Personaje Jugador",
-      "TypeMonster": "Monstruo"
+      "TypeMonster": "Monstruo",
+      "TypePile": "Pila (botín / cofre / mercader)"
     },
     "ITEM": {
       "TypeAccessory": "Accesorio",
@@ -256,6 +257,149 @@
     },
     "Stats": {
       "Label": "Stats"
+    },
+    "Piles": {
+      "SheetLabel": "Hoja de pila (botín, cofre, mercader)",
+      "ChatAlias": "Inventario",
+      "DefaultLootName": "Botín",
+      "ItemPilesActive": "El módulo Item Piles está activo. Log Horizon TRPG ya incluye su propio botín, cofres y mercaderes: usar ambos a la vez puede solaparse.",
+      "Mode": {
+        "Loot": "Botín",
+        "Chest": "Cofre",
+        "Merchant": "Mercader"
+      },
+      "Gold": "oro",
+      "Quantity": "Cantidad",
+      "Confirm": "Confirmar",
+      "Give": "Dar",
+      "GiveTo": "Dar a…",
+      "GiveItemTitle": "Dar {item}",
+      "GiveGoldTitle": "Dar oro",
+      "Take": "Tomar",
+      "TakeAll": "Tomar todo",
+      "TakeGold": "Tomar oro",
+      "DepositGold": "Dejar oro",
+      "SplitGold": "Repartir oro",
+      "Buy": "Comprar",
+      "Sell": "Vender",
+      "SellConfirm": "¿Vender {quantity} × {item} por {gold} de oro?",
+      "Delete": "Eliminar",
+      "Configure": "Configurar",
+      "Open": "Abierto",
+      "Closed": "Cerrado",
+      "Locked": "Con llave",
+      "OpenChest": "Abrir cofre",
+      "CloseChest": "Cerrar cofre",
+      "ClosedHint": "El cofre está cerrado.",
+      "LockedHint": "El cofre está cerrado con llave. Quizás alguien tenga la llave…",
+      "ShopOpen": "Abierto al público",
+      "ShopClosed": "Cerrado",
+      "ShopClosedHint": "La tienda está cerrada en este momento.",
+      "Contents": "Contenido",
+      "ForSale": "A la venta",
+      "Stock": "Stock",
+      "StockHint": "Stock (vacío o ∞ = ilimitado)",
+      "SoldOut": "Agotado",
+      "Empty": "No hay nada.",
+      "NothingForSale": "No hay nada a la venta.",
+      "YourItems": "Tus objetos (precio de venta)",
+      "NothingToSell": "No tienes nada para vender.",
+      "NoSalesHint": "Este mercader no compra objetos.",
+      "DropHint": "Arrastra items aquí desde la barra lateral, un compendio o una hoja de personaje.",
+      "NoInteractor": "Selecciona tu token (o ten un personaje asignado) para interactuar.",
+      "Config": {
+        "Mode": "Tipo",
+        "Distance": "Distancia de interacción",
+        "DistanceHint": "En casillas. 1 = adyacente, -1 = sin límite.",
+        "DeleteWhenEmpty": "Borrar el token al vaciarse",
+        "ImgClosed": "Imagen cerrado",
+        "ImgOpen": "Imagen abierto (vacío = imagen del actor)",
+        "AcceptsSales": "Compra objetos a los jugadores",
+        "InfiniteGold": "Oro ilimitado",
+        "BuyPercent": "Precio de compra (% del precio)",
+        "SellPercent": "Precio de venta (% del precio)",
+        "ResellSold": "Revender los objetos que le venden",
+        "ResellSoldHint": "Desactivado: lo que venden los jugadores desaparece tras pagarlo. Activado: se pone a la venta con stock limitado (las unidades vendidas)."
+      },
+      "Settings": {
+        "ChatLog": {
+          "Name": "Registrar transferencias en el chat",
+          "Hint": "Publica un mensaje en el chat cada vez que se toma botín o se dan, compran o venden objetos."
+        }
+      },
+      "Log": {
+        "Take": "<b>{actor}</b> tomó {item} de <b>{pile}</b>.",
+        "Deposit": "<b>{actor}</b> dejó {item} en <b>{pile}</b>.",
+        "Give": "<b>{actor}</b> le dio {item} a <b>{target}</b>.",
+        "Drop": "<b>{actor}</b> dejó {item} en el suelo.",
+        "Buy": "<b>{actor}</b> compró {item} a <b>{pile}</b> por {gold} de oro.",
+        "Sell": "<b>{actor}</b> vendió {item} a <b>{pile}</b> por {gold} de oro.",
+        "Split": "Se repartió el oro de <b>{pile}</b>: {gold} para cada uno ({actors})."
+      },
+      "Warn": {
+        "InventoryFullLeft": "El inventario de {actor} está lleno. Quedaron: {items}."
+      },
+      "Error": {
+        "Generic": "No se pudo completar la acción.",
+        "NoGM": "Tiene que haber un GM conectado para hacer esto.",
+        "Timeout": "El GM no respondió a tiempo.",
+        "NoPermission": "No tienes permiso para hacer eso.",
+        "NoActor": "Primero selecciona tu token o ten un personaje asignado.",
+        "TooFar": "Estás demasiado lejos de {pile}.",
+        "Closed": "{pile} está cerrado.",
+        "Locked": "{pile} está cerrado con llave.",
+        "MerchantClosed": "{pile} está cerrado.",
+        "NotPhysical": "{item} no es un objeto que se pueda llevar.",
+        "InventoryFull": "El inventario de {actor} está lleno: no hay espacio para {item}.",
+        "NotEnoughGold": "{actor} no tiene oro suficiente.",
+        "InvalidAmount": "Cantidad no válida.",
+        "NoGold": "No hay oro para dar.",
+        "NoTargets": "No hay otros personajes jugadores.",
+        "NoParty": "No hay personajes jugadores conectados para repartir el oro.",
+        "OutOfStock": "{item} está agotado.",
+        "NoSales": "{pile} no compra objetos.",
+        "MerchantNoGold": "{pile} no tiene oro suficiente para comprar eso."
+      },
+      "GoldLabel": "Oro",
+      "Max": "máx. {max}",
+      "EditImage": "Cambiar imagen",
+      "Search": "Buscar…",
+      "AllTypes": "Todo",
+      "Sort": {
+        "Label": "Ordenar por",
+        "Manual": "Orden guardado",
+        "Name": "Nombre",
+        "Type": "Tipo",
+        "PriceAsc": "Precio (menor → mayor)",
+        "PriceDesc": "Precio (mayor → menor)"
+      },
+      "Description": "Descripción",
+      "BuyTab": "Comprar",
+      "SellTab": "Vender",
+      "Item": "Objeto",
+      "Price": "Precio",
+      "Convert": {
+        "Title": "Convertir actor en pila",
+        "Hint": "Convierte un actor existente (por ejemplo un mercader, cofre o botín de Item Piles) en una pila del sistema. Conserva items, oro, imagen, tokens y permisos; se pierden las estadísticas. No se muestran los personajes asignados a jugadores.",
+        "Actor": "Actor",
+        "Mode": "Convertir en",
+        "DropNonPhysical": "Borrar habilidades, conexiones y uniones",
+        "Summary": "Se conservan {physical} objetos y {gold} de oro; {other} items de otro tipo; {tokens} token(s) en escenas.",
+        "Confirm": "Convertir",
+        "AreYouSure": "¿Convertir <b>{actor}</b> en pila ({mode})? Se perderán sus estadísticas. No se puede deshacer automáticamente.",
+        "Done": "{actor} ahora es una pila ({mode}): {items} objetos conservados, {dropped} items eliminados, {tokens} token(s) no vinculados migrados.",
+        "NoActors": "No hay actores para convertir.",
+        "PlayerOwned": "de un jugador"
+      },
+      "TypePlural": {
+        "weapon": "Armas",
+        "armor": "Armaduras",
+        "shield": "Escudos",
+        "accessory": "Accesorios",
+        "bag": "Bolsas",
+        "gear": "Equipo",
+        "ticket": "Tickets"
+      }
     }
   }
 }

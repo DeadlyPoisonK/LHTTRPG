@@ -1,3 +1,6 @@
+import { DEFAULT_IMAGES, PILE_TYPE, SPACE_TYPES } from "../piles/pile-config.mjs";
+import { syncChestImage } from "../piles/piles.mjs";
+
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -20,6 +23,18 @@ export class LHTrpgActor extends Actor {
   async _preCreate(createData, options, user) {
     await super._preCreate(createData, options, user);
 
+    // Piles (loot, chests, merchants): visible to every player so they can
+    // interact with them, with an image matching their mode.
+    if (this.type === PILE_TYPE) {
+      const updateData = {};
+      const img = DEFAULT_IMAGES[this.system.mode] ?? DEFAULT_IMAGES.loot;
+      if (this.img === 'icons/svg/mystery-man.svg') updateData['img'] = img;
+      if (this.prototypeToken.texture.src === 'icons/svg/mystery-man.svg') updateData['prototypeToken.texture.src'] = img;
+      if (createData.ownership?.default === undefined) updateData['ownership.default'] = CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED;
+      await this.updateSource(updateData);
+      return;
+    }
+
     // add actor default picture depending on type
     if (this.img === 'icons/svg/mystery-man.svg') {
       const updateData = {};
@@ -29,10 +44,29 @@ export class LHTrpgActor extends Actor {
   }
 
   /** @override */
+  _onUpdate(changed, options, userId) {
+    super._onUpdate(changed, options, userId);
+    // Chest opened/closed: swap the image of its tokens.
+    if ((this.type === PILE_TYPE) && (userId === game.user.id) && foundry.utils.hasProperty(changed, "system.chest")) {
+      syncChestImage(this, changed.system.chest);
+    }
+  }
+
+  /** @override */
   prepareBaseData() {
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
 
+  }
+
+  /**
+   * Piles only store items: the effects their items would transfer (and any
+   * effect of their own) never apply to them nor show on their tokens.
+   * @override
+   */
+  *allApplicableEffects() {
+    if (this.type === PILE_TYPE) return;
+    yield* super.allApplicableEffects();
   }
 
   /** @override */
@@ -52,6 +86,8 @@ export class LHTrpgActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
+    // Piles only hold items and gold: none of the character computations apply.
+    if (this.type === PILE_TYPE) return;
     const actorData = this;
     const system = actorData.system;
     const str = system.attributes.str;
@@ -180,13 +216,10 @@ export class LHTrpgActor extends Actor {
       this._computeInventoryMaxSpace(actorData);
 
 
-      // item count inventory
+      // item count inventory: unequipped items of the general grid (tickets
+      // have their own slots and don't use inventory space)
       itemlist.forEach(item => {
-        if (item.system.equipped !== undefined) {
-          if (item.system.equipped == false) {
-            itemNumber += 1;
-          }
-        }
+        if (SPACE_TYPES.includes(item.type) && (item.system.equipped !== true)) itemNumber += 1;
       });
       system.inventory.space = itemNumber;
     }

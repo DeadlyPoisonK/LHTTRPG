@@ -13,6 +13,7 @@ import { _createItemsCompendiums, _createSkillsCompendiums } from "./helpers/api
 import { LHTRPG } from "./helpers/config.mjs";
 import { registerStatuses } from "./helpers/statuses.mjs";
 import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
+import { registerPiles } from "./piles/piles.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -73,6 +74,9 @@ Hooks.once('init', async function () {
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet("lhtrpg", LHTrpgItemSheet, { makeDefault: true });
 
+  // Loot, chests, merchants and item/gold transfers between players
+  registerPiles();
+
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
@@ -123,6 +127,8 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
   if (item.type !== "ticket") return;
   const actor = item.parent;
   if (!(actor instanceof Actor)) return;
+  // Merchants track their own stock per entry.
+  if ((actor.type === "pile") && (actor.system.mode === "merchant")) return;
 
   const subtype = item.system.subtype;
   const existing = actor.items.find(i => i.type === "ticket" && i.system.subtype === subtype);

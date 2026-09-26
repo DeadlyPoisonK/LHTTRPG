@@ -1,0 +1,323 @@
+{{#*inline "pileShopList"}}
+<div class="pile-shop-list">
+	<div class="pile-shop-row pile-shop-head">
+		<span class="col-name">{{localize "LHTRPG.Piles.Item"}}</span>
+		<span class="col-qty">{{#if selling}}{{localize "LHTRPG.Piles.Quantity"}}{{else}}{{localize "LHTRPG.Piles.Stock"}}{{/if}}</span>
+		<span class="col-price">{{localize "LHTRPG.Piles.Price"}}</span>
+		<span class="col-action"></span>
+	</div>
+	{{#each groups}}
+	<div class="pile-group">
+		{{#if label}}
+		<h4 class="pile-group-title">
+			<img src="{{icon}}" alt="" /> <span>{{label}}</span> <span class="pile-group-count">{{count}}</span>
+		</h4>
+		{{/if}}
+		<ol class="pile-items">
+			{{#each entries}}
+			<li class="pile-item pile-shop-row {{#if soldOut}}sold-out{{/if}} {{#if @root.isGM}}draggable{{/if}}" data-item-id="{{id}}" data-name="{{name}}" {{#if @root.isGM}}{{#unless ../../selling}}draggable="true"{{/unless}}{{/if}}>
+				<div class="col-name">
+					<img class="pile-item-img" src="{{img}}" alt="" {{#unless ../../selling}}data-action="viewItem"{{/unless}} />
+					<div class="pile-item-info" {{#unless ../../selling}}data-action="viewItem"{{/unless}}>
+						<span class="pile-item-name" data-tooltip-text="{{name}}">{{name}}</span>
+						<span class="pile-item-type">{{#if details}}{{details}}{{else}}{{typeLabel}}{{/if}}</span>
+					</div>
+				</div>
+				<span class="col-qty">
+					{{#if ../../selling}}{{#if quantity}}{{quantity}}{{else}}1{{/if}}
+					{{else if @root.isGM}}<input class="pile-stock-input" type="text" value="{{stockLabel}}" data-tooltip="LHTRPG.Piles.StockHint" />
+					{{else}}{{#if soldOut}}{{localize "LHTRPG.Piles.SoldOut"}}{{else}}{{stockLabel}}{{/if}}{{/if}}
+				</span>
+				<span class="col-price pile-price {{#unless canAfford}}too-expensive{{/unless}}">{{price}} <img src="systems/lhtrpg/assets/ui/gold.svg" alt="" /></span>
+				<span class="col-action">
+					{{#if ../../selling}}
+					<button type="button" class="pile-button small" data-action="sell">{{localize "LHTRPG.Piles.Sell"}}</button>
+					{{else}}
+						{{#if @root.interactor}}<button type="button" class="pile-button small primary" data-action="buy" {{#if soldOut}}disabled{{/if}}>{{localize "LHTRPG.Piles.Buy"}}</button>{{/if}}
+						{{#if @root.isGM}}<a class="pile-item-delete" data-action="deleteItem" data-tooltip="LHTRPG.Piles.Delete"><i class="fas fa-trash"></i></a>{{/if}}
+					{{/if}}
+				</span>
+			</li>
+			{{/each}}
+		</ol>
+	</div>
+	{{/each}}
+</div>
+{{/inline}}
+
+{{#*inline "pileToolbar"}}
+{{!-- Toolbar: search, sort and type filter (personal preference) --}}
+{{#if hasItems}}
+<div class="pile-toolbar">
+	<div class="pile-search">
+		<i class="fas fa-magnifying-glass"></i>
+		<input type="search" class="pile-search-input" placeholder="{{localize 'LHTRPG.Piles.Search'}}" value="{{search}}" />
+	</div>
+	<label class="pile-sort" data-tooltip="LHTRPG.Piles.Sort.Label">
+		<i class="fas fa-arrow-down-wide-short"></i>
+		<select class="pile-sort-select">
+			{{#each sortOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+		</select>
+	</label>
+</div>
+<div class="pile-type-filters">
+	<a class="pile-type-filter {{#if allActive}}active{{/if}}" data-action="filterType" data-type="all">
+		{{localize "LHTRPG.Piles.AllTypes"}} <span class="pile-type-count">{{totalCount}}</span>
+	</a>
+	{{#each typeFilters}}
+	<a class="pile-type-filter {{#if active}}active{{/if}}" data-action="filterType" data-type="{{type}}" data-tooltip="{{label}}">
+		<img src="{{icon}}" alt="" /> <span class="pile-type-count">{{count}}</span>
+	</a>
+	{{/each}}
+</div>
+{{/if}}
+
+{{/inline}}
+
+<div class="pile-sheet-inner pile-mode-{{mode}}">
+
+	{{!-- Header --}}
+	<header class="pile-header">
+		{{#unless isMerchant}}
+		{{#if isGM}}
+		<img class="pile-portrait editable" src="{{actor.img}}" alt="" data-edit="img" data-action="editImage" data-tooltip="{{localize 'LHTRPG.Piles.EditImage'}}" />
+		{{else}}
+		<img class="pile-portrait" src="{{img}}" alt="" />
+		{{/if}}
+		{{/unless}}
+		<div class="pile-title">
+			{{#if isGM}}
+			<input class="pile-name" type="text" name="name" value="{{actor.name}}" />
+			{{else}}
+			<h2 class="pile-name">{{name}}</h2>
+			{{/if}}
+			<div class="pile-badges">
+				<span class="pile-badge">{{modeLabel}}</span>
+				{{#if isChest}}
+					{{#if locked}}<span class="pile-badge warn"><i class="fas fa-lock"></i> {{localize "LHTRPG.Piles.Locked"}}</span>
+					{{else if closed}}<span class="pile-badge"><i class="fas fa-box"></i> {{localize "LHTRPG.Piles.Closed"}}</span>
+					{{else}}<span class="pile-badge ok"><i class="fas fa-box-open"></i> {{localize "LHTRPG.Piles.Open"}}</span>{{/if}}
+				{{/if}}
+				{{#if isMerchant}}
+					{{#if merchantClosed}}<span class="pile-badge warn">{{localize "LHTRPG.Piles.ShopClosed"}}</span>
+					{{else}}<span class="pile-badge ok">{{localize "LHTRPG.Piles.ShopOpen"}}</span>{{/if}}
+				{{/if}}
+			</div>
+		</div>
+		{{#if isGM}}
+		<a class="pile-config-toggle {{#if showConfig}}active{{/if}}" data-action="toggleConfig" data-tooltip="LHTRPG.Piles.Configure">
+			<i class="fas fa-gear"></i>
+		</a>
+		{{/if}}
+	</header>
+
+	<div class="pile-body">
+
+	{{!-- GM configuration --}}
+	{{#if showConfig}}
+	<section class="pile-config">
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.Mode"}}</label>
+			<select name="system.mode">
+				{{#each modeOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.Distance"}}</label>
+			<input type="number" name="system.distance" value="{{system.distance}}" step="1" min="-1" />
+			<p class="hint">{{localize "LHTRPG.Piles.Config.DistanceHint"}}</p>
+		</div>
+		{{#unless isMerchant}}
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.DeleteWhenEmpty"}}</label>
+			<input type="checkbox" name="system.deleteWhenEmpty" {{checked system.deleteWhenEmpty}} />
+		</div>
+		{{/unless}}
+
+		{{#if isChest}}
+		<h4 class="pile-config-title">{{localize "LHTRPG.Piles.Mode.Chest"}}</h4>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Closed"}}</label>
+			<input type="checkbox" name="system.chest.closed" {{checked system.chest.closed}} />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Locked"}}</label>
+			<input type="checkbox" name="system.chest.locked" {{checked system.chest.locked}} />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.ImgClosed"}}</label>
+			<file-picker name="system.chest.imgClosed" type="image" value="{{system.chest.imgClosed}}"></file-picker>
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.ImgOpen"}}</label>
+			<file-picker name="system.chest.imgOpen" type="image" value="{{system.chest.imgOpen}}"></file-picker>
+		</div>
+		{{/if}}
+
+		{{#if isMerchant}}
+		<h4 class="pile-config-title">{{localize "LHTRPG.Piles.Mode.Merchant"}}</h4>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.ShopOpen"}}</label>
+			<input type="checkbox" name="system.merchant.open" {{checked system.merchant.open}} />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.AcceptsSales"}}</label>
+			<input type="checkbox" name="system.merchant.acceptsSales" {{checked system.merchant.acceptsSales}} />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.ResellSold"}}</label>
+			<input type="checkbox" name="system.merchant.resellSold" {{checked system.merchant.resellSold}} />
+			<p class="hint">{{localize "LHTRPG.Piles.Config.ResellSoldHint"}}</p>
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.InfiniteGold"}}</label>
+			<input type="checkbox" name="system.merchant.infiniteGold" {{checked system.merchant.infiniteGold}} />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.BuyPercent"}}</label>
+			<input type="number" name="system.merchant.buyPercent" value="{{buyPercent}}" step="5" min="0" />
+		</div>
+		<div class="form-group">
+			<label>{{localize "LHTRPG.Piles.Config.SellPercent"}}</label>
+			<input type="number" name="system.merchant.sellPercent" value="{{sellPercent}}" step="5" min="0" />
+		</div>
+		{{/if}}
+	</section>
+	{{/if}}
+
+	{{#if hideContents}}
+		{{!-- Closed chest / closed shop, as the players see it --}}
+		<section class="pile-closed">
+			{{#if isChest}}
+				<i class="fas {{#if locked}}fa-lock{{else}}fa-box{{/if}} pile-closed-icon"></i>
+				<p>{{#if locked}}{{localize "LHTRPG.Piles.LockedHint"}}{{else}}{{localize "LHTRPG.Piles.ClosedHint"}}{{/if}}</p>
+				{{#unless locked}}
+				<button type="button" class="pile-button primary" data-action="openChest"><i class="fas fa-box-open"></i> {{localize "LHTRPG.Piles.OpenChest"}}</button>
+				{{/unless}}
+			{{else}}
+				<i class="fas fa-store-slash pile-closed-icon"></i>
+				<p>{{localize "LHTRPG.Piles.ShopClosedHint"}}</p>
+			{{/if}}
+		</section>
+	{{else}}
+
+		{{!-- Contents (loot & chests) --}}
+		{{#unless isMerchant}}
+		<section class="pile-contents">
+			<h3 class="pile-section-title">{{localize "LHTRPG.Piles.Contents"}}</h3>
+			{{> pileToolbar}}
+
+			{{!-- Slot grid, like the character inventory --}}
+			<ol class="pile-grid">
+				{{#each items}}
+				<li class="pile-slot draggable" data-item-id="{{id}}" data-name="{{name}}" draggable="true"
+					data-tooltip-html="&lt;strong&gt;{{name}}&lt;/strong&gt;&lt;br&gt;{{typeLabel}}">
+					<div class="pile-slot-image" data-action="viewItem">
+						<img src="{{img}}" alt="{{name}}" />
+					</div>
+					{{#if quantity}}<span class="pile-slot-qty">{{quantity}}</span>{{/if}}
+					<div class="pile-slot-controls">
+						{{#if ../interactor}}
+						<a class="pile-slot-control take" data-action="take" data-tooltip="LHTRPG.Piles.Take"><i class="fas fa-hand"></i></a>
+						{{/if}}
+						{{#if ../isGM}}
+						<a class="pile-slot-control delete" data-action="deleteItem" data-tooltip="LHTRPG.Piles.Delete"><i class="fas fa-trash"></i></a>
+						{{/if}}
+					</div>
+				</li>
+				{{/each}}
+			</ol>
+			{{#unless items.length}}<p class="pile-empty">{{localize "LHTRPG.Piles.Empty"}}</p>{{/unless}}
+			{{#if isGM}}{{#unless isMerchant}}<p class="pile-drop-hint">{{localize "LHTRPG.Piles.DropHint"}}</p>{{/unless}}{{/if}}
+		</section>
+		{{/unless}}
+
+		{{!-- Merchant: portrait + description | buy/sell tabs --}}
+		{{#if isMerchant}}
+		<div class="pile-shop">
+			<aside class="pile-shop-side">
+				{{#if isGM}}
+				<img class="pile-shop-portrait editable" src="{{actor.img}}" alt="" data-edit="img" data-action="editImage" data-tooltip="{{localize 'LHTRPG.Piles.EditImage'}}" />
+				{{else}}
+				<img class="pile-shop-portrait" src="{{actor.img}}" alt="" />
+				{{/if}}
+				<h4 class="pile-shop-desc-title">{{localize "LHTRPG.Piles.Description"}}</h4>
+				{{#if isGM}}
+				<prose-mirror class="pile-shop-desc" name="system.description" value="{{description}}" toggled>{{{descriptionHTML}}}</prose-mirror>
+				{{else}}
+				<div class="pile-shop-desc">{{{descriptionHTML}}}</div>
+				{{/if}}
+			</aside>
+
+			<section class="pile-contents pile-shop-main">
+				<nav class="pile-tabs">
+					<a class="pile-tab {{#if isBuyTab}}active{{/if}}" data-action="shopTab" data-tab="buy"><i class="fas fa-cart-shopping"></i> {{localize "LHTRPG.Piles.BuyTab"}}</a>
+					<a class="pile-tab {{#if isSellTab}}active{{/if}}" data-action="shopTab" data-tab="sell"><i class="fas fa-coins"></i> {{localize "LHTRPG.Piles.SellTab"}} <span class="pile-tab-note">{{sellPercent}}%</span></a>
+				</nav>
+
+				{{#if isSellTab}}
+					{{#unless interactor}}<p class="pile-empty">{{localize "LHTRPG.Piles.NoInteractor"}}</p>
+					{{else unless acceptsSales}}<p class="pile-empty">{{localize "LHTRPG.Piles.NoSalesHint"}}</p>
+					{{else}}
+						{{> pileToolbar}}
+						{{> pileShopList groups=groups selling=true}}
+						{{#unless items.length}}<p class="pile-empty">{{localize "LHTRPG.Piles.NothingToSell"}}</p>{{/unless}}
+					{{/unless}}
+				{{else}}
+					{{> pileToolbar}}
+					{{> pileShopList groups=groups selling=false}}
+					{{#unless items.length}}<p class="pile-empty">{{localize "LHTRPG.Piles.NothingForSale"}}</p>{{/unless}}
+					{{#if isGM}}<p class="pile-drop-hint">{{localize "LHTRPG.Piles.DropHint"}}</p>{{/if}}
+				{{/if}}
+			</section>
+		</div>
+		{{/if}}
+
+	{{/if}}
+	</div>
+
+	{{!-- Footer: gold and bulk actions --}}
+	<footer class="pile-footer">
+		{{#unless hideContents}}
+		<div class="pile-gold">
+			<img src="systems/lhtrpg/assets/ui/gold.svg" alt="" />
+			{{#if infiniteGold}}
+				<span class="pile-gold-value">∞</span>
+			{{else if isGM}}
+				<input type="number" name="system.gold" value="{{gold}}" min="0" step="1" />
+			{{else}}
+				<span class="pile-gold-value">{{gold}}</span>
+			{{/if}}
+		</div>
+
+		<div class="pile-actions">
+			{{#if interactor}}
+				{{#unless isMerchant}}
+				<button type="button" class="pile-button" data-action="takeGold" {{#unless gold}}disabled{{/unless}}><i class="fas fa-coins"></i> {{localize "LHTRPG.Piles.TakeGold"}}</button>
+				<button type="button" class="pile-button" data-action="depositGold"><i class="fas fa-hand-holding-dollar"></i> {{localize "LHTRPG.Piles.DepositGold"}}</button>
+				<button type="button" class="pile-button" data-action="splitGold" {{#unless gold}}disabled{{/unless}}><i class="fas fa-scale-balanced"></i> {{localize "LHTRPG.Piles.SplitGold"}}</button>
+				<button type="button" class="pile-button primary" data-action="takeAll" {{#if isEmpty}}disabled{{/if}}><i class="fas fa-hand-sparkles"></i> {{localize "LHTRPG.Piles.TakeAll"}}</button>
+				{{/unless}}
+			{{/if}}
+			{{#if isChest}}
+				{{#if closed}}
+					{{#if isGM}}<button type="button" class="pile-button" data-action="openChest"><i class="fas fa-box-open"></i> {{localize "LHTRPG.Piles.OpenChest"}}</button>{{/if}}
+				{{else}}
+					{{#unless locked}}<button type="button" class="pile-button" data-action="closeChest"><i class="fas fa-box"></i> {{localize "LHTRPG.Piles.CloseChest"}}</button>{{/unless}}
+				{{/if}}
+			{{/if}}
+		</div>
+		{{/unless}}
+	</footer>
+
+	{{#if interactor}}
+	<div class="pile-interactor">
+		<img src="{{interactor.img}}" alt="" />
+		<span class="pile-interactor-name">{{interactor.name}}</span>
+		<span class="pile-interactor-gold"><img src="systems/lhtrpg/assets/ui/gold.svg" alt="" /> {{interactor.gold}}</span>
+		{{#if interactor.space}}<span class="pile-interactor-space"><i class="fas fa-bag-shopping"></i> {{interactor.space}}</span>{{/if}}
+	</div>
+	{{else}}
+	<div class="pile-interactor none">{{localize "LHTRPG.Piles.NoInteractor"}}</div>
+	{{/if}}
+</div>

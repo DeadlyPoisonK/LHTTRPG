@@ -2,7 +2,8 @@
   "Actor": {
     "types": [
       "character",
-      "monster"
+      "monster",
+      "pile"
     ],
     "templates": {
       "base": {
@@ -179,6 +180,27 @@
         "evasion": "",
         "resistance": ""
       }
+    },
+    "pile": {
+      "mode": "loot",
+      "gold": 0,
+      "distance": 1,
+      "deleteWhenEmpty": false,
+      "chest": {
+        "closed": true,
+        "locked": false,
+        "imgClosed": "icons/containers/chest/chest-reinforced-steel-brown.webp",
+        "imgOpen": ""
+      },
+      "merchant": {
+        "open": true,
+        "acceptsSales": true,
+        "resellSold": false,
+        "infiniteGold": true,
+        "buyMultiplier": 1,
+        "sellMultiplier": 0.5
+      },
+      "description": ""
     }
   },
   "Item": {

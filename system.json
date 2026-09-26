@@ -26,7 +26,7 @@
     }
   ],
   "esmodules": ["module/lhtrpg.mjs"],
-  "styles": ["css/lhtrpg.css"],
+  "styles": ["css/lhtrpg.css", "css/piles.css"],
   "scripts": [],
   "packs": [],
   "languages": [
@@ -61,6 +61,7 @@
       "path": "lang/ko.json"
     }
   ],
+  "socket": true,
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
