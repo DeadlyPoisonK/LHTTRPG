@@ -98,7 +98,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -149,7 +149,7 @@
         "checkType": "",
         "range": "-",
         "target": "Self",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -202,7 +202,7 @@
         "checkType": "Opposed (12 Fixed vs Resistance)",
         "range": "4Sq",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

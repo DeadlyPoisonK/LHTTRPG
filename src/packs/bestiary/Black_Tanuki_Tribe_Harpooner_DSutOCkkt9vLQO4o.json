@@ -200,7 +200,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -250,7 +250,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -302,7 +302,7 @@
         "checkType": "Confrontation (4 +3D/Evasion)",
         "range": "Close",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

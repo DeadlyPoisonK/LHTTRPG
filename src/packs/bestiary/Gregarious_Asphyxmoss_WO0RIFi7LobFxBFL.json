@@ -197,7 +197,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -240,7 +240,7 @@
         "checkType": "Opposed (3+3D vs Resistance)",
         "range": "Close",
         "target": "Wide 2 (A)",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

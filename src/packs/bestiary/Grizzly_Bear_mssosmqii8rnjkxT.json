@@ -195,7 +195,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -235,7 +235,7 @@
         "checkType": "Automatic",
         "range": "Wide (2)",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -275,7 +275,7 @@
         "checkType": "6+2D v Evasion",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -315,7 +315,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

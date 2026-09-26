@@ -198,7 +198,7 @@
         "checkType": "Automatic",
         "range": "3Sq",
         "target": "2 Targets",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -240,7 +240,7 @@
         "checkType": "6+2D vs. EVA",
         "range": "Close",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -280,7 +280,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

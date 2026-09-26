@@ -200,7 +200,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -240,7 +240,7 @@
         "checkType": "",
         "range": "4Sq",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -279,7 +279,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Combat",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -320,7 +320,7 @@
         "checkType": "",
         "range": "2Sq",
         "target": "2 Targets",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -362,7 +362,7 @@
         "checkType": "Opposed 3D+2 vs Evasion",
         "range": "2Sq",
         "target": "2 Targets",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1

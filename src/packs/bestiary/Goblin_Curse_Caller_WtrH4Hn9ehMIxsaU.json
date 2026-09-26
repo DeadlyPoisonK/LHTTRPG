@@ -203,7 +203,7 @@
         "checkType": "12 vs Resistance",
         "range": "4Sq",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -243,7 +243,7 @@
         "checkType": "Auto",
         "range": "4Sq",
         "target": "Single",
-        "subtype": "Basic",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
@@ -282,7 +282,7 @@
         "checkType": "",
         "range": "-",
         "target": "-",
-        "subtype": "Combat",
+        "subtype": "Monster",
         "skillRank": {
           "value": 1,
           "max": 1
