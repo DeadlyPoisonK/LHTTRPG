@@ -5,7 +5,7 @@
 <div class="skills-grid">
 	{{#each skills as |item id|}}
 		<div class="item skill-tile" data-item-id="{{item._id}}">
-			<a class="item-control item-throw item-image" title="{{item.name}} — {{item.system.timing}} — {{item.system.checkType}}">
+			<a class="item-control item-throw item-image" title="{{item.name}} — {{item.system.timing}} — {{item.system.checkLabel}}">
 				<img src="{{item.img}}" width="48" height="48" />
 			</a>
 			<div class="items-control">

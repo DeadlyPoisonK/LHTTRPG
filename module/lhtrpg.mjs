@@ -12,6 +12,7 @@ import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { _createItemsCompendiums, _createSkillsCompendiums } from "./helpers/api-import.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
 import { registerStatuses } from "./helpers/statuses.mjs";
+import { registerMonsterChecks } from "./helpers/monster-checks.mjs";
 import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
 
@@ -54,6 +55,8 @@ Hooks.once('init', async function () {
 
   // Log Horizon statuses (Token HUD, token icons, sheet sync, [Hidden])
   registerStatuses();
+  // Monster Evasion/Resistance: legacy text -> { dice, mod }
+  registerMonsterChecks();
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
   // Time passing per round

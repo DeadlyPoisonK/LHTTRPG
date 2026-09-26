@@ -177,8 +177,14 @@
       "idendification": "",
       "hateMultiplier": "",
       "checks": {
-        "evasion": "",
-        "resistance": ""
+        "evasion": {
+          "dice": 2,
+          "mod": 0
+        },
+        "resistance": {
+          "dice": 2,
+          "mod": 0
+        }
       }
     },
     "pile": {
@@ -253,7 +259,17 @@
         "max": 1
       },
       "cost": "",
-      "limit": ""
+      "limit": "",
+      "check": {
+        "dice": 0,
+        "mod": 0,
+        "vs": ""
+      },
+      "damage": {
+        "dice": 0,
+        "mod": 0,
+        "type": ""
+      }
     },
     "weapon": {
       "templates": [

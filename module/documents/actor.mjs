@@ -1,5 +1,11 @@
 import { DEFAULT_IMAGES, PILE_TYPE, SPACE_TYPES } from "../piles/pile-config.mjs";
 import { syncChestImage } from "../piles/piles.mjs";
+import { completeChecksChange, legacyChecksUpdate, prepareMonsterChecks } from "../helpers/monster-checks.mjs";
+
+/** Logo of a class ("guardian" -> ".../Guardian_Logo.png"). */
+function classLogo(className) {
+  return `systems/lhtrpg/assets/ui/classes/${className.capitalize()}_Logo.png`;
+}
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -40,6 +46,29 @@ export class LHTrpgActor extends Actor {
       const updateData = {};
       updateData['img'] = `systems/lhtrpg/assets/ui/actors_icons/${this.type}.svg`;
       await this.updateSource(updateData);
+    }
+
+    // Monsters imported with legacy text Evasion/Resistance ("1+2D")
+    if (this.type === 'monster') {
+      const checksUpdate = legacyChecksUpdate(this._source.system.checks);
+      if (checksUpdate) this.updateSource(checksUpdate);
+    }
+  }
+
+  /** @override */
+  async _preUpdate(changed, options, user) {
+    if ((await super._preUpdate(changed, options, user)) === false) return false;
+    // Editing only the dice (or the modifier) of a legacy text check keeps the other half.
+    if ((this.type === 'monster') && changed.system?.checks) {
+      completeChecksChange(this._source.system.checks, changed.system.checks);
+    }
+    // Changing the class also swaps the class logo (header and stats tab icon), unless a new image
+    // was picked in the same update (the sheet form always sends the current one along).
+    const newClass = changed.system?.class?.name;
+    const newImg = changed.system?.class?.img;
+    if ((this.type === 'character') && newClass && (newClass !== this._source.system.class?.name)
+      && ((newImg === undefined) || (newImg === this._source.system.class?.img))) {
+      changed.system.class.img = classLogo(newClass);
     }
   }
 
@@ -90,6 +119,7 @@ export class LHTrpgActor extends Actor {
     if (this.type === PILE_TYPE) return;
     const actorData = this;
     const system = actorData.system;
+    if (this.type === 'monster') prepareMonsterChecks(system);
     const str = system.attributes.str;
     const dex = system.attributes.dex;
     const pow = system.attributes.pow;

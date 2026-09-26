@@ -37,6 +37,8 @@
     },
     "ButtonLabel": {
       "Cancel": "Cancel",
+      "Delete": "削除",
+      "Edit": "編集",
       "Roll": "ロール",
       "Tag": {
         "Add": "Add"
@@ -163,7 +165,11 @@
     "Skill": {
       "Label": {
         "Check": "判定",
+        "CheckAuto": "自動成功",
         "Cost": "コスト",
+        "Damage": "ダメージ",
+        "DamageMagical": "魔法",
+        "DamagePhysical": "物理",
         "Limit": "制限",
         "MacroEffect": "マクロ",
         "Range": "射程",

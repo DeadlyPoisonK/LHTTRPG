@@ -1,3 +1,5 @@
+import { prepareSkillRolls } from "../helpers/skill-rolls.mjs";
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -38,6 +40,13 @@ export class LHTrpgItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
+  }
+
+  /** @override */
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    // Skill Check / Damage: normalized values plus the labels shown on sheets and chat cards
+    if (this.type === "skill") prepareSkillRolls(this.system, this._source.system);
   }
 
   /**
@@ -157,7 +166,7 @@ export class LHTrpgItem extends Item {
       : "";
 
     let cardData = {
-        ...element.toObject(),
+        ...element.toObject(false),
         owner: element.actor?.id,
         typeLabel: game.i18n.localize(`TYPES.ITEM.Type${element.type.capitalize()}`),
         isWeapon: element.type === "weapon",

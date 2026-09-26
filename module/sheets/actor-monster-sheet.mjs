@@ -1,6 +1,8 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 import { onManageTags } from "../helpers/tags.mjs";
 import { getStatusPanel } from "../helpers/statuses.mjs";
+import { MONSTER_CHECK_MAX_DICE } from "../helpers/monster-checks.mjs";
+import { diceFormula, diceOptions } from "../helpers/dice.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -60,6 +62,9 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         context.effects = prepareActiveEffectCategories(this.actor.effects);
         context.statusPanel = getStatusPanel(this.actor);
 
+        // Evasion / Resistance dice: 0D6 to 5D6
+        context.checkDiceOptions = diceOptions(MONSTER_CHECK_MAX_DICE);
+
         return context;
     }
 
@@ -109,6 +114,9 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         html.find('.item-throw').click(this._onItemThrow.bind(this));
 
         html.find('.monster-send-to-chat').click(this._onSendToChat.bind(this));
+
+        // Evasion / Resistance rolls
+        html.find('.monster-check-roll').click(this._onRollCheck.bind(this));
 
         // Render the item sheet for viewing/editing prior to the editable check.
         html.find('.item-edit').click(ev => {
@@ -233,6 +241,23 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     /**
+     * Roll the monster's Evasion or Resistance straight to chat: no rule modifies them situationally.
+     * @param {Event} event   The originating click event
+     * @private
+     */
+    _onRollCheck(event) {
+        event.preventDefault();
+        const { check, name } = event.currentTarget.dataset;
+        const values = this.actor.system.checks?.[check];
+        if (!values) return;
+        return new Roll(diceFormula(values)).toMessage({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`,
+            rollMode: game.settings.get('core', 'rollMode'),
+        });
+    }
+
+    /**
      * Send the monster's Identify info to chat: the GM clicks this after the
      * party succeeds an Identification check. Per the rules, this reveals
      * name/rank/tags/condition (always visible on sight) plus, once
@@ -260,7 +285,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         else lowerDefense = game.i18n.localize('LHTRPG.Monster.DefenseEqual');
 
         const skills = await Promise.all(actor.items.filter(i => i.type === 'skill').map(async item => ({
-            ...item.toObject(),
+            ...item.toObject(false),
             enrichedDescription: item.system.description
                 ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(item.system.description, { async: true })
                 : ""

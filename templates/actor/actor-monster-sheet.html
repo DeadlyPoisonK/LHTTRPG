@@ -127,19 +127,29 @@
           </div>
         </div>
 
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Check.Evasion'}}</label>
-          <div>
-            <input class="monsterEvasion-input" type="text" name="system.checks.evasion" value="{{system.checks.evasion}}"
-              placeholder="-" data-dtype="text">
+        <div class="stat-div monster-check">
+          <label class="monster-check-roll lh-roll-button" data-check="evasion" data-name="Evasion"
+            title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Evasion'}}</label>
+          <div class="monster-check-fields">
+            <select class="monster-check-dice" name="system.checks.evasion.dice" data-dtype="Number">
+              {{selectOptions checkDiceOptions selected=system.checks.evasion.dice}}
+            </select>
+            <span>+</span>
+            <input class="monster-check-mod" type="number" step="1" name="system.checks.evasion.mod"
+              value="{{system.checks.evasion.mod}}" placeholder="0" data-dtype="Number">
           </div>
         </div>
 
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Check.Resistance'}}</label>
-          <div>
-            <input class="monsterResistance-input" type="text" name="system.checks.resistance"
-              value="{{system.checks.resistance}}" placeholder="-" data-dtype="text">
+        <div class="stat-div monster-check">
+          <label class="monster-check-roll lh-roll-button" data-check="resistance" data-name="Resistance"
+            title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Resistance'}}</label>
+          <div class="monster-check-fields">
+            <select class="monster-check-dice" name="system.checks.resistance.dice" data-dtype="Number">
+              {{selectOptions checkDiceOptions selected=system.checks.resistance.dice}}
+            </select>
+            <span>+</span>
+            <input class="monster-check-mod" type="number" step="1" name="system.checks.resistance.mod"
+              value="{{system.checks.resistance.mod}}" placeholder="0" data-dtype="Number">
           </div>
         </div>
 

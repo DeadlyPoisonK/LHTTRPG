@@ -14,7 +14,8 @@
 	{{/if}}
 
 	<div class="chat-card-stats">
-		{{#if system.checkType}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{system.checkType}}</span></div>{{/if}}
+		{{#if system.checkLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{system.checkLabel}}</span></div>{{/if}}
+		{{#if system.damageLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Damage'}}</span><span class="chat-stat-value">{{system.damageLabel}}</span></div>{{/if}}
 		{{#if system.skillRank.max}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.SR'}}</span><span class="chat-stat-value">{{system.skillRank.value}}/{{system.skillRank.max}}</span></div>{{/if}}
 		{{#if system.timing}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Timing'}}</span><span class="chat-stat-value">{{system.timing}}</span></div>{{/if}}
 		{{#if system.target}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Target'}}</span><span class="chat-stat-value">{{system.target}}</span></div>{{/if}}

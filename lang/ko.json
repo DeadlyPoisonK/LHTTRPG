@@ -37,6 +37,8 @@
     },
     "ButtonLabel": {
       "Cancel": "취소",
+      "Delete": "삭제",
+      "Edit": "편집",
       "Roll": "굴리기",
       "Tag": {
         "Add": "추가"
@@ -163,7 +165,11 @@
     "Skill": {
       "Label": {
         "Check": "판정",
+        "CheckAuto": "자동성공",
         "Cost": "비용",
+        "Damage": "피해",
+        "DamageMagical": "마법",
+        "DamagePhysical": "물리",
         "Limit": "제한",
         "MacroEffect": "매크로",
         "Range": "사정거리",

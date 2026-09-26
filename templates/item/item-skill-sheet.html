@@ -58,10 +58,32 @@
         data-dtype="text">
     </div>
 
-    <div class="stat-div checkType">
-      <label>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
-      <input class="checkType-input" type="text" name="system.checkType" value="{{system.checkType}}"
-        placeholder="{{localize 'LHTRPG.Skill.Placeholder.Check'}}" data-dtype="text">
+    <div class="stat-div skill-roll">
+      <label class="skill-roll-button lh-roll-button" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Skill.Label.Check'}}</label>
+      <div class="skill-roll-fields">
+        <select name="system.check.dice" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
+          {{selectOptions skillDiceOptions selected=system.check.dice}}
+        </select>
+        <span>+</span>
+        <input class="skill-roll-mod" type="number" step="1" name="system.check.mod" value="{{system.check.mod}}"
+          placeholder="0" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
+        <span class="skill-roll-vs">vs</span>
+        <input type="hidden" name="system.check.vs" value="{{system.check.vs}}">
+        <div class="skill-roll-options">
+          <label class="skill-roll-option">
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.check.vs" data-value="evasion" {{checked (eq system.check.vs "evasion")}} {{disabled (eq system.check.vs "auto")}}>
+            {{localize 'LHTRPG.Check.Evasion'}}
+          </label>
+          <label class="skill-roll-option">
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.check.vs" data-value="resistance" {{checked (eq system.check.vs "resistance")}} {{disabled (eq system.check.vs "auto")}}>
+            {{localize 'LHTRPG.Check.Resistance'}}
+          </label>
+          <label class="skill-roll-option">
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.check.vs" data-value="auto" {{checked (eq system.check.vs "auto")}}>
+            {{localize 'LHTRPG.Skill.Label.CheckAuto'}}
+          </label>
+        </div>
+      </div>
     </div>
 
     <div class="stat-div">
@@ -87,6 +109,29 @@
         data-dtype="text">
     </div>
     
+    <div class="stat-div skill-roll">
+      <label class="skill-roll-button lh-roll-button" data-roll="damage" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Skill.Label.Damage'}}</label>
+      <div class="skill-roll-fields">
+        <select name="system.damage.dice" data-dtype="Number">
+          {{selectOptions skillDiceOptions selected=system.damage.dice}}
+        </select>
+        <span>+</span>
+        <input class="skill-roll-mod" type="number" step="1" name="system.damage.mod" value="{{system.damage.mod}}"
+          placeholder="0" data-dtype="Number">
+        <input type="hidden" name="system.damage.type" value="{{system.damage.type}}">
+        <div class="skill-roll-options">
+          <label class="skill-roll-option">
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="physical" {{checked (eq system.damage.type "physical")}}>
+            {{localize 'LHTRPG.Skill.Label.DamagePhysical'}}
+          </label>
+          <label class="skill-roll-option">
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="magical" {{checked (eq system.damage.type "magical")}}>
+            {{localize 'LHTRPG.Skill.Label.DamageMagical'}}
+          </label>
+        </div>
+      </div>
+    </div>
+
     <div class="stat-div checkType">
       <label>{{localize 'LHTRPG.Skill.Label.MacroEffect'}}</label>
       <input class="macroeffect-input" type="text" name="system.macroeffect" value="{{system.macroeffect}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.MacroEffect'}}" data-dtype="text">

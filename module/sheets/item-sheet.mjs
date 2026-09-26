@@ -1,5 +1,7 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {onManageTags} from "../helpers/tags.mjs";
+import {diceOptions} from "../helpers/dice.mjs";
+import {SKILL_MAX_DICE, rollSkill} from "../helpers/skill-rolls.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -53,6 +55,9 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       "description": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.description, {async: true}),
       "skillText": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.skillText ?? "", {async: true})
     };
+
+    // Skill Check / Damage: dice select options
+    if (itemData.type === 'skill') context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
 
     // Resolve the Skill item linked to this equipment, if any.
     context.linkedSkill = context.system.linkedSkillUuid
@@ -130,10 +135,21 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       if (skill) skill.ItemThrow();
     });
 
+    // Skill Check / Damage rolls, straight to chat
+    html.find('.skill-roll-button').click(ev => {
+      ev.preventDefault();
+      rollSkill(this.item, ev.currentTarget.dataset.roll);
+    });
+
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
 
-    // Roll handlers, click handlers, etc. would go here.
+    // Check vs (Evasion/Resistance/Auto) and Damage type (Physical/Magical): exclusive options,
+    // unchecking the current one leaves none. The hidden input carries the value when the form submits.
+    html.find('.skill-roll-toggle').on('change', ev => {
+      const input = ev.currentTarget;
+      html.find(`input[type=hidden][name="${input.dataset.field}"]`).val(input.checked ? input.dataset.value : '');
+    });
 
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));

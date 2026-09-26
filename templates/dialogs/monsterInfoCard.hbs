@@ -37,7 +37,8 @@
 			</div>
 			<div class="chat-card-skill-stats">
 				{{#if skill.system.timing}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Timing'}}</span><span class="chat-stat-value">{{skill.system.timing}}</span></span>{{/if}}
-				{{#if skill.system.checkType}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{skill.system.checkType}}</span></span>{{/if}}
+				{{#if skill.system.checkLabel}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Check'}}</span><span class="chat-stat-value">{{skill.system.checkLabel}}</span></span>{{/if}}
+				{{#if skill.system.damageLabel}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Damage'}}</span><span class="chat-stat-value">{{skill.system.damageLabel}}</span></span>{{/if}}
 				{{#if skill.system.target}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Target'}}</span><span class="chat-stat-value">{{skill.system.target}}</span></span>{{/if}}
 				{{#if skill.system.range}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Range'}}</span><span class="chat-stat-value">{{skill.system.range}}</span></span>{{/if}}
 				{{#if skill.system.cost}}<span class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{skill.system.cost}}</span></span>{{/if}}

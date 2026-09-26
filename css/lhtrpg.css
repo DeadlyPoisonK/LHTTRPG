@@ -580,7 +580,7 @@ div.app.lhtrpg.actor .sheet-header .header-fields {
 div.app.lhtrpg.actor .sheet-header .header-fields .charname {
   font-size: 50px;
   position: relative;
-  top: -10px;
+  top: -5px;
   left: -25px;
   height: 90px;
   width: 370px;
@@ -612,6 +612,11 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race label {
   color: #d6ffda;
 }
 
+/* Header text: same size everywhere (the name excepted) */
+div.app.lhtrpg.actor .sheet-header .header-fields select.race {
+  font-size: 20px;
+}
+
 div.app.lhtrpg.actor .sheet-header .header-fields .race option {
   font-size: 20px;
  /* -ms-flex-preferred-size: 150px;
@@ -620,7 +625,6 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race option {
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: left;
-  color: #003118
 }
 
 div.app.lhtrpg.actor .sheet-header .header-fields .classes {
@@ -641,7 +645,6 @@ div.app.lhtrpg.actor .sheet-header .header-fields .classes .class {
 }
 div.app.lhtrpg.actor .sheet-header .header-fields .classes option {
   font-size: 20px;
-  color: #003118;
   height: 50px;
 }
 
@@ -2146,9 +2149,16 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   background-color: #666666;
 }
 
-.lhtrpg.sheet.item .sheet-header .header-fields option,
-.lhtrpg.sheet.monster .sheet-header .header-fields option {
-  background-color: #666666;
+/* Dropdown lists keep the dark background of the sheets, so the light text stays readable */
+.lhtrpg select option,
+.lhtrpg select optgroup {
+  color: #d6ffda;
+  background-color: #1f1f1f;
+}
+
+.lhtrpg select option:checked {
+  color: #1f1f1f;
+  background-color: #8fcf9b;
 }
 
 .lhtrpg.sheet.monster .sheet-header .monster-send-to-chat {
@@ -2253,6 +2263,103 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg.sheet.monster .sheet-stats .stat-div .monsterFate-input {
   width: 69px;
   text-align: right;
+}
+
+/* Stat labels that roll to chat (monster Evasion/Resistance, skill Damage).
+   The border is an inset shadow so the label keeps the size of the plain ones. */
+.lhtrpg.sheet .sheet-stats .stat-div label.lh-roll-button {
+  cursor: pointer;
+  color: #d6ffda;
+  background-color: #2f5a3a;
+  box-shadow: inset 0 0 0 1px #8fcf9b;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.lhtrpg.sheet .sheet-stats .stat-div label.lh-roll-button:hover {
+  background-color: #3f7a4e;
+  text-shadow: 0 0 6px #d6ffda;
+}
+
+/* Monster Evasion / Resistance: dice select + numeric modifier */
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 150px;
+  padding-left: 2px;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields select {
+  width: 62px;
+  height: 24px;
+  color: #d6ffda;
+  background-color: #1f1f1f;
+  border: 1px solid #666666;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields input.monster-check-mod {
+  width: 70px;
+  text-align: center;
+}
+
+/* Skill Check / Damage: dice select + numeric modifier + exclusive options */
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields :disabled,
+.lhtrpg.sheet.item .sheet-stats .stat-div label.skill-roll-option:has(input:disabled) {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div.skill-roll {
+  width: 100%;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 3px;
+  padding-left: 2px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields select {
+  width: 62px;
+  height: 24px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields input.skill-roll-mod {
+  width: 52px;
+  text-align: center;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-vs {
+  padding: 0 2px;
+  font-style: italic;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-options {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  padding-right: 6px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div label.skill-roll-option {
+  width: auto;
+  height: auto;
+  padding: 0;
+  align-items: center;
+  gap: 2px;
+  color: #d6ffda;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div label.skill-roll-option input {
+  width: auto;
+  margin: 0;
 }
 
 .lhtrpg.sheet.item .sheet-stats .stat-div .skillRank-input,

@@ -38,6 +38,8 @@
     },
     "ButtonLabel": {
       "Cancel": "Cancel",
+      "Delete": "Delete",
+      "Edit": "Edit",
       "Roll": "Roll",
       "Tag": {
         "Add": "Add"
@@ -166,7 +168,11 @@
     "Skill": {
       "Label": {
         "Check": "Check",
+        "CheckAuto": "Auto",
         "Cost": "Cost",
+        "Damage": "Damage",
+        "DamageMagical": "Magical",
+        "DamagePhysical": "Physical",
         "Limit": "Limit",
         "MacroEffect": "Macro",
         "Range": "Range",
