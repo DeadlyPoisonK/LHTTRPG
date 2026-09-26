@@ -16,6 +16,7 @@ import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
 import { registerCharacterOptions } from "./helpers/character-options.mjs";
 import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs";
+import { rollSkill } from "./helpers/skill-rolls.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -120,6 +121,20 @@ Handlebars.registerHelper('toUpperCase', function (str) {
 Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
+});
+
+/* -------------------------------------------- */
+/*  Skill chat cards: Check / Damage buttons     */
+/* -------------------------------------------- */
+
+Hooks.on("renderChatMessageHTML", (message, html) => {
+  html.querySelectorAll(".skill-card-roll").forEach(button => button.addEventListener("click", async event => {
+    event.preventDefault();
+    const uuid = button.closest("[data-item-uuid]")?.dataset.itemUuid;
+    const item = uuid ? await fromUuid(uuid).catch(() => null) : null;
+    if (!item) return ui.notifications.warn(game.i18n.localize("LHTRPG.Skill.Notif.Missing"));
+    rollSkill(item, button.dataset.roll);
+  }));
 });
 
 

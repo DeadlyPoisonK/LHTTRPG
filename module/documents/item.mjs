@@ -1,4 +1,4 @@
-import { prepareSkillRolls } from "../helpers/skill-rolls.mjs";
+import { prepareSkillRolls, skillRollable } from "../helpers/skill-rolls.mjs";
 import { OPTION_ICONS, OPTION_TYPES } from "../helpers/character-options.mjs";
 
 /**
@@ -48,7 +48,7 @@ export class LHTrpgItem extends Item {
   prepareDerivedData() {
     super.prepareDerivedData();
     // Skill Check / Damage: normalized values plus the labels shown on sheets and chat cards
-    if (this.type === "skill") prepareSkillRolls(this.system, this._source.system);
+    if (this.type === "skill") prepareSkillRolls(this);
   }
 
   /**
@@ -83,6 +83,15 @@ export class LHTrpgItem extends Item {
       updateData['img'] = OPTION_ICONS[this.type] ?? `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
 
       await this.updateSource(updateData);
+    }
+  }
+
+  /** @override */
+  async _preUpdate(changed, options, user) {
+    if ((await super._preUpdate(changed, options, user)) === false) return false;
+    // Once the Check is set on the sheet, the legacy free-text Check is no longer used.
+    if ((this.type === "skill") && changed.system?.check && this._source.system.checkType) {
+      changed.system.checkType = "";
     }
   }
 
@@ -179,7 +188,10 @@ export class LHTrpgItem extends Item {
         isGear: element.type === "gear",
         isTicket: element.type === "ticket",
         enrichedDescription,
-        enrichedSkillText
+        enrichedSkillText,
+        // Skill cards: Check / Damage roll buttons (see the renderChatMessageHTML hook)
+        uuid: element.uuid,
+        rollable: element.type === "skill" ? skillRollable(element) : {}
     };
 
     // Renderizar la plantilla del chat

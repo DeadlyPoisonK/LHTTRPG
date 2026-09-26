@@ -193,7 +193,9 @@
         "Range": "Range",
         "SR": "SR",
         "Target": "Target",
-        "Timing": "Timing"
+        "Timing": "Timing",
+        "ExtraDice": "Extra dice",
+        "DamageRecovery": "Recovery"
       },
       "Placeholder": {
         "Check": "-",
@@ -212,6 +214,10 @@
       },
       "Option": {
         "Custom": "Custom…"
+      },
+      "Notif": {
+        "NoCharacter": "Select a character (or its token) to roll this skill.",
+        "Missing": "This skill no longer exists."
       }
     },
     "Ticket": {

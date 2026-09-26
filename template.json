@@ -271,7 +271,8 @@
       "damage": {
         "dice": 0,
         "mod": 0,
-        "type": ""
+        "type": "",
+        "recovery": false
       }
     },
     "weapon": {

@@ -74,7 +74,7 @@ export function parseSkillField(field, value) {
   const raw = String(value ?? "").trim();
   const result = { type: CUSTOM, n: "", qual: "", custom: raw };
   const spec = SKILL_FIELDS[field];
-  if (!raw || raw === NONE) return { ...result, type: NONE, custom: "" };
+  if (/^[\p{Pd}\u2212]*$/u.test(raw)) return { ...result, type: NONE, custom: "" };
 
   // Plain keywords (case/space/hyphen insensitive: "Pre-play", "Preplay", "major"...)
   const plain = spec.types.find(t => !t.n && !t.qual && simplify(t.key) === simplify(raw));

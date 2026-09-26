@@ -187,7 +187,9 @@
         "Range": "Alcance",
         "SR": "SR",
         "Target": "Objetivo",
-        "Timing": "Momento"
+        "Timing": "Momento",
+        "ExtraDice": "Dados extra",
+        "DamageRecovery": "Recuperación"
       },
       "Placeholder": {
         "Check": "-",
@@ -206,6 +208,10 @@
       },
       "Option": {
         "Custom": "Personalizado…"
+      },
+      "Notif": {
+        "NoCharacter": "Selecciona un personaje (o su token) para tirar esta skill.",
+        "Missing": "Esta skill ya no existe."
       }
     },
     "Ticket": {

@@ -1,4 +1,4 @@
-<div class="lhtrpg chat-card skill-chat-card">
+<div class="lhtrpg chat-card skill-chat-card" data-item-uuid="{{uuid}}">
 	<header class="chat-card-header">
 		<img class="chat-card-img" src="{{img}}" alt="{{name}}" />
 		<div class="chat-card-title">
@@ -23,6 +23,13 @@
 		{{#if system.cost}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{system.cost}}</span></div>{{/if}}
 		{{#if system.limit}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Limit'}}</span><span class="chat-stat-value">{{system.limit}}</span></div>{{/if}}
 	</div>
+
+	{{#if (or rollable.check rollable.damage)}}
+	<div class="chat-card-rolls">
+		{{#if rollable.check}}<button type="button" class="skill-card-roll" data-roll="check"><i class="fas fa-dice"></i> {{localize 'LHTRPG.Skill.Label.Check'}}</button>{{/if}}
+		{{#if rollable.damage}}<button type="button" class="skill-card-roll" data-roll="damage"><i class="fas fa-dice"></i> {{localize 'LHTRPG.Skill.Label.Damage'}}</button>{{/if}}
+	</div>
+	{{/if}}
 
 	{{#if enrichedDescription}}
 	<div class="chat-card-description">{{{enrichedDescription}}}</div>

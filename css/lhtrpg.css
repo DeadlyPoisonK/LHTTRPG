@@ -2123,7 +2123,8 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg.sheet.item .sheet-header .header-fields select,
 .lhtrpg.sheet.monster .sheet-header .header-fields select {
-  width: 80px;
+  width: auto;
+  min-width: 80px;
   min-height: 26px;
   margin-top: 10px;
   color: white;
@@ -2307,6 +2308,17 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields select {
   width: 62px;
   height: 24px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields select.skill-roll-stat {
+  width: 96px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields select.skill-roll-vs-select {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  margin-right: 4px;
 }
 
 .lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields input.skill-roll-mod {
@@ -2709,6 +2721,29 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   margin-bottom: 6px;
 }
 
+/* Skill card: Check / Damage roll buttons */
+.lhtrpg.chat-card .chat-card-rolls {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.chat-card .chat-card-rolls .skill-card-roll {
+  flex: 1;
+  margin: 0;
+  line-height: 24px;
+  color: #d6ffda;
+  background-color: #2f5a3a;
+  border: 1px solid #8fcf9b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lhtrpg.chat-card .chat-card-rolls .skill-card-roll:hover {
+  background-color: #3f7a4e;
+  text-shadow: 0 0 6px #d6ffda;
+}
+
 .lhtrpg.chat-card .chat-stat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2736,6 +2771,8 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 }
 
 .lhtrpg.chat-card .chat-stat-value {
+  max-width: 100%;
+  text-align: center;
   font-family: "Edu SA Beginner", cursive;
   font-size: 16px;
   color: #d6ffda;

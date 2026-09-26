@@ -1,7 +1,7 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {onManageTags} from "../helpers/tags.mjs";
 import {diceOptions} from "../helpers/dice.mjs";
-import {SKILL_MAX_DICE, rollSkill} from "../helpers/skill-rolls.mjs";
+import {SKILL_MAX_DICE, CHECK_STATS, isMonsterSkill, rollSkill} from "../helpers/skill-rolls.mjs";
 import {ARCHETYPES, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {prepareSkillFields, composeSkillField, CUSTOM} from "../helpers/skill-fields.mjs";
 
@@ -61,6 +61,12 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     // Skill Check / Damage: dice select options
     if (itemData.type === 'skill') {
       context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
+      // Character skills: check stat of the character, extra dice on top of it / of the Attack-Magic Power
+      context.isMonsterSkill = isMonsterSkill(this.item);
+      context.skillBonusDiceOptions = Object.fromEntries(Object.keys(context.skillDiceOptions).map(n => [n, `+${n}D`]));
+      context.checkStatOptions = Object.fromEntries(CHECK_STATS.map(s => [s, `LHTRPG.Check.${s.capitalize()}`]));
+      context.checkVsOptions = { evasion: "LHTRPG.Check.Evasion", resistance: "LHTRPG.Check.Resistance", auto: "LHTRPG.Skill.Label.CheckAuto" };
+      context.skillDamageDiceOptions = context.isMonsterSkill ? context.skillDiceOptions : context.skillBonusDiceOptions;
       // Timing / Target / Range / Cost / Limit dropdowns
       context.skillFields = prepareSkillFields(itemData.system);
     }
@@ -232,7 +238,7 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       grantsTab.addEventListener("drop", ev => this._onGrantDrop(ev));
     }
 
-    // Check vs (Evasion/Resistance/Auto) and Damage type (Physical/Magical): exclusive options,
+    // Damage type (Physical/Magical): exclusive options,
     // unchecking the current one leaves none. The hidden input carries the value when the form submits.
     html.find('.skill-roll-toggle').on('change', ev => {
       const input = ev.currentTarget;

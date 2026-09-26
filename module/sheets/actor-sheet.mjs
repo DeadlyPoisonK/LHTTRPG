@@ -135,7 +135,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     for (let i of context.items) {
       i.img = i.img || CONST.DEFAULT_TOKEN;
       // Append to Combat Skills.
-      if (i.type === 'skill' && i.system.subtype === 'Combat') {
+      // (Monster skills given to a character are listed with the Combat skills.)
+      if (i.type === 'skill' && ['Combat', 'Monster'].includes(i.system.subtype)) {
         skillsCombat.push(i);
       }
       // Append to Basic Skills.
