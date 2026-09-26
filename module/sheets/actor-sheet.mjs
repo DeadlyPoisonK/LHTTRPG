@@ -1,6 +1,8 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {onManageTags} from "../helpers/tags.mjs";
 import {getStatusPanel} from "../helpers/statuses.mjs";
+import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
+import {OptionBrowser} from "../apps/option-browser.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -62,6 +64,10 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     if (actorData.type == 'character') {
       this._prepareItems(context);
       this._prepareCharacterData(context);
+
+      // Race / Class / Subclass items (header fields); the class item's image is the class logo.
+      context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(this.actor, type)]));
+      context.classImg = context.characterOptions.class?.img ?? context.system.class.img;
     }
 
     // Add roll data for TinyMCE editors.
@@ -256,6 +262,33 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
   /* -------------------------------------------- */
 
+  /**
+   * ⋮ menu of the Race / Class / Subclass fields: change (selection window), edit or delete the item.
+   * @param {HTMLElement} element
+   * @private
+   */
+  _createOptionMenu(element) {
+    const field = target => target.closest('.option-field');
+    const item = target => this.actor.items.get(field(target).dataset.itemId);
+    new foundry.applications.ux.ContextMenu(element, '.option-menu', [
+      {
+        name: 'LHTRPG.CharacterOptions.Change',
+        icon: '<i class="fa-solid fa-magnifying-glass"></i>',
+        callback: target => OptionBrowser.open(this.actor, field(target).dataset.optionType)
+      },
+      {
+        name: 'LHTRPG.ButtonLabel.Edit',
+        icon: '<i class="fa-solid fa-pen-to-square"></i>',
+        callback: target => item(target)?.sheet.render(true)
+      },
+      {
+        name: 'LHTRPG.ButtonLabel.Delete',
+        icon: '<i class="fa-solid fa-trash"></i>',
+        callback: target => item(target)?.deleteDialog()
+      }
+    ], { eventName: 'click', jQuery: false, fixed: true });
+  }
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
@@ -283,6 +316,23 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.addItem a.item-controls').click(ev => {
       $('.addItem .dropdown-content').toggleClass('show');
     });
+
+    // Race / Class / Subclass: the name opens the item sheet, the empty field the selection window.
+    html.find('.option-field .option-name').click(ev => {
+      const item = this.actor.items.get(ev.currentTarget.closest('.option-field').dataset.itemId);
+      item?.sheet.render(true);
+    });
+    html.find('.class-img').click(() => {
+      const item = getOption(this.actor, 'class');
+      if (item) item.sheet.render(true);
+      else if (this.isEditable) OptionBrowser.open(this.actor, 'class');
+    });
+    if (this.isEditable) {
+      html.find('.option-field .option-browse').click(ev => {
+        OptionBrowser.open(this.actor, ev.currentTarget.closest('.option-field').dataset.optionType);
+      });
+      this._createOptionMenu(html[0]);
+    }
 
     html.find('#hate-button').click(ev => {
       let content = ev.target.nextElementSibling;

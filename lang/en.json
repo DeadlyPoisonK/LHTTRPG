@@ -16,6 +16,21 @@
       "TypeTicket": "Ticket",
       "TypeUnion": "Union",
       "TypeWeapon": "Weapon"
+    },
+    "Item": {
+      "accessory": "Accessory",
+      "armor": "Armor",
+      "bag": "Bag",
+      "connection": "Connection",
+      "gear": "Gear",
+      "shield": "Shield",
+      "skill": "Skill",
+      "ticket": "Ticket",
+      "union": "Union",
+      "weapon": "Weapon",
+      "race": "Race",
+      "class": "Class",
+      "subclass": "Subclass"
     }
   },
   "IMPORT": {
@@ -405,6 +420,49 @@
         "bag": "Bags",
         "gear": "Gear",
         "ticket": "Tickets"
+      }
+    },
+    "Archetype": {
+      "Warrior": "Warrior",
+      "WeaponAttacker": "Weapon Attacker",
+      "Healer": "Healer",
+      "Mage": "Mage"
+    },
+    "CharacterOptions": {
+      "Archetype": "Archetype",
+      "Identifier": "ID",
+      "HpPerRank": "HP / Rank",
+      "World": "World",
+      "Choose": "Choose",
+      "View": "View details",
+      "Change": "Change",
+      "Menu": "Options",
+      "Empty": "Nothing available. Create items of this type in the world or in an Item compendium.",
+      "NoMatch": "No results.",
+      "Migrated": "Race / Class / Subclass: {count} characters converted to items.",
+      "Select": {
+        "race": "Race Selection",
+        "class": "Class Selection",
+        "subclass": "Subclass Selection"
+      },
+      "Search": {
+        "race": "Search Races",
+        "class": "Search Classes",
+        "subclass": "Search Subclasses"
+      },
+      "Grants": {
+        "Tab": "Skills",
+        "Title": "Starting skills: {name}",
+        "Add": "Add skills",
+        "Skip": "Not now",
+        "Hint": "The {type} {name} comes with these skills. Pick the ones to add to the character:",
+        "ChooseOne": "Choose one",
+        "Fixed": "Skill",
+        "Owned": "already has it",
+        "RemoveStale": "Remove the skills granted by the previous {type}:",
+        "SheetHint": "Skills a character gets when taking this item. Drag a skill onto a line to make it a choice between several, or onto the area below to add a new one.",
+        "Drop": "Drop a skill here",
+        "OnlySkills": "Only Skill items from a compendium or the world can be starting skills."
       }
     }
   }

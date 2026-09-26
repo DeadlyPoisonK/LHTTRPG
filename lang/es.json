@@ -16,6 +16,21 @@
       "TypeTicket": "Ticket",
       "TypeUnion": "Unión",
       "TypeWeapon": "Arma"
+    },
+    "Item": {
+      "accessory": "Accesorio",
+      "armor": "Armadura",
+      "bag": "Bolsa",
+      "connection": "Conexión",
+      "gear": "Equipo",
+      "shield": "Escudo",
+      "skill": "Habilidad",
+      "ticket": "Ticket",
+      "union": "Unión",
+      "weapon": "Arma",
+      "race": "Raza",
+      "class": "Clase",
+      "subclass": "Subclase"
     }
   },
   "IMPORT": {
@@ -399,6 +414,49 @@
         "bag": "Bolsas",
         "gear": "Equipo",
         "ticket": "Tickets"
+      }
+    },
+    "Archetype": {
+      "Warrior": "Guerrero",
+      "WeaponAttacker": "Atacante con Arma",
+      "Healer": "Sanador",
+      "Mage": "Mago"
+    },
+    "CharacterOptions": {
+      "Archetype": "Arquetipo",
+      "Identifier": "ID",
+      "HpPerRank": "PV / Rango",
+      "World": "Mundo",
+      "Choose": "Elegir",
+      "View": "Ver detalles",
+      "Change": "Cambiar",
+      "Menu": "Opciones",
+      "Empty": "No hay nada disponible. Crea items de este tipo en el mundo o en un compendio de Items.",
+      "NoMatch": "Sin resultados.",
+      "Migrated": "Raza / Clase / Subclase: {count} personajes convertidos a items.",
+      "Select": {
+        "race": "Selección de Raza",
+        "class": "Selección de Clase",
+        "subclass": "Selección de Subclase"
+      },
+      "Search": {
+        "race": "Buscar razas",
+        "class": "Buscar clases",
+        "subclass": "Buscar subclases"
+      },
+      "Grants": {
+        "Tab": "Skills",
+        "Title": "Skills iniciales: {name}",
+        "Add": "Añadir skills",
+        "Skip": "Ahora no",
+        "Hint": "{type} {name} viene con estas skills. Elige cuáles añadir al personaje:",
+        "ChooseOne": "Elige una",
+        "Fixed": "Skill",
+        "Owned": "ya la tiene",
+        "RemoveStale": "Quitar las skills que dio {type} anterior:",
+        "SheetHint": "Skills que recibe un personaje al tomar este item. Arrastra una skill sobre una línea para convertirla en elección entre varias, o al área de abajo para añadir una nueva.",
+        "Drop": "Suelta una skill aquí",
+        "OnlySkills": "Solo items Skill de un compendio o del mundo pueden ser skills iniciales."
       }
     }
   }

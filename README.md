@@ -22,9 +22,20 @@ https://raw.githubusercontent.com/DeadlyPoisonK/LHTTRPG/main/system.json
 
 ## Contenido de los compendios (packs)
 
-Este repositorio **no incluye** compendios de habilidades, items ni monstruos. Ese contenido está
-adaptado del manual oficial de Log Horizon TRPG y no es propiedad de los mantenedores del sistema, por
-lo que no se redistribuye aquí. Cada mesa de juego administra su propio contenido dentro de su mundo.
+El sistema trae sus compendios: razas y clases (con sus skills iniciales), skills (básicas, comunes y
+de subclase, raciales, de arquetipo, de clase y de montura), GM EX Powers, items, bestiario y reglas.
+Los íconos son los genéricos de cada tipo de item/actor; cada mesa puede cambiarlos en su mundo.
+
+Log Horizon TRPG es obra de Mamare Touno / Kadokawa; este sistema no es oficial ni está afiliado a
+ellos. Recomendamos tener los manuales.
+
+### Editar los compendios del sistema (desarrollo)
+
+Las fuentes están en `src/packs/<compendio>/*.json`; las bases LevelDB de `packs/` se generan a partir
+de ellas (no están en git). Requiere Node.js y `npm install`.
+
+- `npm run packs:build` — `src/packs` → `packs` (con el mundo cerrado: Foundry bloquea los compendios abiertos).
+- `npm run packs:unpack` — `packs` → `src/packs`, tras editar los compendios del sistema dentro de Foundry.
 
 ## Licencia
 

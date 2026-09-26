@@ -1,0 +1,23 @@
+{{!-- Starting skills of a Race / Class / Subclass: one line per slot; a slot with several skills is a
+     choice (the player picks one). Drag a skill onto a slot to add an alternative, or onto the bottom
+     area to add a new slot. --}}
+<p class="grants-hint">{{localize "LHTRPG.CharacterOptions.Grants.SheetHint"}}</p>
+<ol class="grant-slots">
+	{{#each grants}}
+	<li class="grant-slot{{#if choice}} choice{{/if}}" data-slot="{{index}}">
+		<span class="grant-slot-label">{{#if choice}}{{localize "LHTRPG.CharacterOptions.Grants.ChooseOne"}}{{else}}{{localize "LHTRPG.CharacterOptions.Grants.Fixed"}}{{/if}}</span>
+		<div class="grant-skills">
+			{{#each skills}}
+			<span class="grant-skill{{#if missing}} missing{{/if}}" data-uuid="{{uuid}}">
+				<img src="{{img}}" alt="">
+				<a class="grant-open">{{name}}</a>
+				{{#if @root.editable}}<a class="grant-remove" data-tooltip="LHTRPG.ButtonLabel.Delete"><i class="fa-solid fa-xmark"></i></a>{{/if}}
+			</span>
+			{{/each}}
+		</div>
+	</li>
+	{{/each}}
+</ol>
+{{#if editable}}
+<div class="grant-dropzone"><i class="fa-solid fa-plus"></i> {{localize "LHTRPG.CharacterOptions.Grants.Drop"}}</div>
+{{/if}}

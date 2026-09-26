@@ -9,12 +9,13 @@ import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
 import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { _createItemsCompendiums, _createSkillsCompendiums } from "./helpers/api-import.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
 import { registerStatuses } from "./helpers/statuses.mjs";
 import { registerMonsterChecks } from "./helpers/monster-checks.mjs";
 import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
+import { registerCharacterOptions } from "./helpers/character-options.mjs";
+import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -31,7 +32,8 @@ Hooks.once('init', async function () {
     LHTrpgItem,
     rollItemMacro,
     LHTrpgCombat,
-    LHTrpgActiveEffect
+    LHTrpgActiveEffect,
+    OptionBrowser
   };
 
   // Add custom constants for configuration.
@@ -80,6 +82,10 @@ Hooks.once('init', async function () {
   // Loot, chests, merchants and item/gold transfers between players
   registerPiles();
 
+  // Race / Class / Subclass items: single copy per character, core compendium, legacy migration
+  registerCharacterOptions();
+  registerOptionBrowser();
+
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
@@ -116,8 +122,6 @@ Hooks.once("ready", async function () {
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
 });
 
-Hooks.on("renderCompendiumDirectory", (app, html) => createSkillImportButton(app, html));
-Hooks.on("renderCompendiumDirectory", (app, html) => createItemsImportButton(app, html));
 
 /* -------------------------------------------- */
 /*  Ticket Stacking                             */
@@ -197,40 +201,4 @@ function rollItemMacro(itemName) {
 
   // Trigger the item roll
   return item.roll();
-}
-
-
-function createSkillImportButton(app, htmlElement) {
-  if (!game.user.isGM) {
-    return;
-  }
-  const html = $(htmlElement);
-  const button = $(`<button class="buttonImportSkills"><i class="fa-solid fa-book-atlas"></i> ${game.i18n.localize('LHTRPG.Label.ImportSkills')}</button>`);
-  button.on('click', () => {
-    _createSkillsCompendiums();
-  });
-  let footer = html.find('.directory-footer');
-  if (footer.length === 0) {
-    footer = $(`<footer class="directory-footer"></footer>`);
-    html.append(footer);
-  }
-  footer.append(button);
-}
-
-
-function createItemsImportButton(app, htmlElement) {
-  if (!game.user.isGM) {
-    return;
-  }
-  const html = $(htmlElement);
-  const button = $(`<button class="buttonImportItems"><i class="fa-solid fa-book-atlas"></i> ${game.i18n.localize('LHTRPG.Label.ImportItems')}</button>`);
-  button.on('click', () => {
-    _createItemsCompendiums();
-  });
-  let footer = html.find('.directory-footer');
-  if (footer.length === 0) {
-    footer = $(`<footer class="directory-footer"></footer>`);
-    html.append(footer);
-  }
-  footer.append(button);
 }

@@ -1,4 +1,4 @@
-# Compendium content is not distributed with this repo (see README).
+# Compiled compendiums: built from src/packs with `npm run packs:build` (added to the release zip).
 /packs/
 
 # Foundry runtime files
@@ -17,3 +17,6 @@ Thumbs.db
 
 # graphify knowledge-graph index (local dev tool cache, regenerate with /graphify)
 graphify-out/
+
+# Node dev tooling (compendium build)
+node_modules/

@@ -1,3 +1,10 @@
+/**
+ * NOT LOADED (kept for reference). Imported skills and items from the official lhrpg.com API (Japanese
+ * data) into world compendiums, through two buttons in the Compendium sidebar. The system now ships its
+ * own English compendiums (src/packs), so the buttons were removed. To bring them back, import
+ * `_createItemsCompendiums` / `_createSkillsCompendiums` in lhtrpg.mjs and add a button on the
+ * `renderCompendiumDirectory` hook (see git history before v1.6 for the original code).
+ */
 export async function _createSkillsCompendiums() {
 	let json = await (await fetch('https://lhrpg.com/lhz/api/skills.json')).json();
 	let job_types = [];

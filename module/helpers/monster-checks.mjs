@@ -23,7 +23,8 @@ export function parseMonsterCheck(value) {
       mod: Math.trunc(Number(value.mod) || 0)
     };
   }
-  const text = String(value ?? "").replace(/\s+/g, "").toUpperCase();
+  // "8 (Fixed)" is a fixed value: drop the words so their letters are not read as dice.
+  const text = String(value ?? "").replace(/fixed/gi, "").replace(/\s+/g, "").toUpperCase();
   if (!text) return { dice: DEFAULT_DICE, mod: 0 };
   const diceMatch = text.match(/(\d*)D6?/);
   const dice = diceMatch ? (Number(diceMatch[1]) || 1) : 0;

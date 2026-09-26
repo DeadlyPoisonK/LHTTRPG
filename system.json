@@ -25,10 +25,148 @@
       "thumbnail": "systems/lhtrpg/assets/Logo_lhtrpg.webp"
     }
   ],
-  "esmodules": ["module/lhtrpg.mjs"],
-  "styles": ["css/lhtrpg.css", "css/piles.css"],
+  "esmodules": [
+    "module/lhtrpg.mjs"
+  ],
+  "styles": [
+    "css/lhtrpg.css",
+    "css/piles.css"
+  ],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "races-classes",
+      "label": "Races & Classes",
+      "path": "packs/races-classes",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-basic",
+      "label": "Basic Skills",
+      "path": "packs/skills-basic",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-common",
+      "label": "Common & Subclass Skills",
+      "path": "packs/skills-common",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-racial",
+      "label": "Racial Skills",
+      "path": "packs/skills-racial",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-archetype",
+      "label": "Archetype Skills",
+      "path": "packs/skills-archetype",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-class",
+      "label": "Class Skills",
+      "path": "packs/skills-class",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "skills-mounts",
+      "label": "Mount Skills",
+      "path": "packs/skills-mounts",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "gm-ex-powers",
+      "label": "GM EX Powers",
+      "path": "packs/gm-ex-powers",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "path": "packs/items",
+      "type": "Item",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "rules",
+      "label": "Rules",
+      "path": "packs/rules",
+      "type": "JournalEntry",
+      "system": "lhtrpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -69,5 +207,48 @@
   "url": "https://github.com/DeadlyPoisonK/LHTTRPG",
   "manifest": "https://raw.githubusercontent.com/DeadlyPoisonK/LHTTRPG/main/system.json",
   "download": "https://github.com/DeadlyPoisonK/LHTTRPG/releases/download/v1.5.0/lhtrpg.zip",
-  "license": "LICENSE.txt"
+  "license": "LICENSE.txt",
+  "packFolders": [
+    {
+      "name": "Log Horizon TRPG",
+      "sorting": "m",
+      "color": "#1d4d36",
+      "packs": [
+        "races-classes",
+        "rules"
+      ],
+      "folders": [
+        {
+          "name": "Skills",
+          "sorting": "m",
+          "color": "#1d4d36",
+          "packs": [
+            "skills-basic",
+            "skills-common",
+            "skills-racial",
+            "skills-archetype",
+            "skills-class",
+            "skills-mounts"
+          ]
+        },
+        {
+          "name": "Items",
+          "sorting": "m",
+          "color": "#1d4d36",
+          "packs": [
+            "items"
+          ]
+        },
+        {
+          "name": "Game Master",
+          "sorting": "m",
+          "color": "#1d4d36",
+          "packs": [
+            "bestiary",
+            "gm-ex-powers"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+<div class="option-grants-body">
+  {{#if slots.length}}
+  <p class="grants-hint">{{localize "LHTRPG.CharacterOptions.Grants.Hint" type=typeLabel name=item.name}}</p>
+  <ol class="grants-list">
+    {{#each slots}}
+    <li class="grant-slot{{#if choice}} choice{{/if}}">
+      {{#if choice}}<div class="grant-choice-label">{{localize "LHTRPG.CharacterOptions.Grants.ChooseOne"}}</div>{{/if}}
+      {{#each options}}
+      <label class="grant-option{{#if owned}} owned{{/if}}">
+        {{#if ../choice}}
+        <input type="radio" name="slot{{../index}}" value="{{uuid}}" {{checked checked}}>
+        {{else}}
+        <input type="checkbox" name="slot{{../index}}" value="{{uuid}}" {{checked checked}} {{disabled owned}}>
+        {{/if}}
+        <img src="{{img}}" alt="">
+        <span class="grant-name">{{name}}</span>
+        {{#if owned}}<span class="grant-owned">{{localize "LHTRPG.CharacterOptions.Grants.Owned"}}</span>{{/if}}
+      </label>
+      {{/each}}
+    </li>
+    {{/each}}
+  </ol>
+  {{/if}}
+
+  {{#if stale.length}}
+  <label class="grants-stale">
+    <input type="checkbox" name="removeStale" checked>
+    {{localize "LHTRPG.CharacterOptions.Grants.RemoveStale" type=typeLabel}}
+    <span class="grants-stale-names">{{#each stale}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+  </label>
+  {{/if}}
+</div>

@@ -1,11 +1,7 @@
 import { DEFAULT_IMAGES, PILE_TYPE, SPACE_TYPES } from "../piles/pile-config.mjs";
 import { syncChestImage } from "../piles/piles.mjs";
 import { completeChecksChange, legacyChecksUpdate, prepareMonsterChecks } from "../helpers/monster-checks.mjs";
-
-/** Logo of a class ("guardian" -> ".../Guardian_Logo.png"). */
-function classLogo(className) {
-  return `systems/lhtrpg/assets/ui/classes/${className.capitalize()}_Logo.png`;
-}
+import { classStats, legacyOptionItems, raceStats } from "../helpers/character-options.mjs";
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -48,6 +44,12 @@ export class LHTrpgActor extends Actor {
       await this.updateSource(updateData);
     }
 
+    // Characters imported with the legacy Race/Class/Subclass text fields get the matching items.
+    if (this.type === 'character') {
+      const legacy = await legacyOptionItems(this._source);
+      if (legacy) this.updateSource({ ...legacy.update, items: [...this._source.items, ...legacy.items] });
+    }
+
     // Monsters imported with legacy text Evasion/Resistance ("1+2D")
     if (this.type === 'monster') {
       const checksUpdate = legacyChecksUpdate(this._source.system.checks);
@@ -61,14 +63,6 @@ export class LHTrpgActor extends Actor {
     // Editing only the dice (or the modifier) of a legacy text check keeps the other half.
     if ((this.type === 'monster') && changed.system?.checks) {
       completeChecksChange(this._source.system.checks, changed.system.checks);
-    }
-    // Changing the class also swaps the class logo (header and stats tab icon), unless a new image
-    // was picked in the same update (the sheet form always sends the current one along).
-    const newClass = changed.system?.class?.name;
-    const newImg = changed.system?.class?.img;
-    if ((this.type === 'character') && newClass && (newClass !== this._source.system.class?.name)
-      && ((newImg === undefined) || (newImg === this._source.system.class?.img))) {
-      changed.system.class.img = classLogo(newClass);
     }
   }
 
@@ -131,38 +125,10 @@ export class LHTrpgActor extends Actor {
     const flags = actorData.flags.lhtrpg || {};
     let itemNumber = 0;
 
-    const job = system.class.name.toLowerCase();
-    const race = system.race.toLowerCase();
     const fate = system.fate;
     const hp = system.health;
     const cr = system.infos.crank;
     const fati = system.infos.fatigue;
-    const foto = system.class.img;
-
-    const raceStats = {
-      human: { str:0, dex:0, pow:0, int:0, hp:8, fate:1},
-      elf: { str:0, dex:1, pow:1, int:0, hp:8, fate:1},
-      dwarf: { str:1, dex:0, pow:1, int:0, hp:16, fate:0},
-      halfalv: { str:0, dex:1, pow:0, int:1, hp:8, fate:1},
-      werecat: { str:1, dex:1, pow:0, int:0, hp:8, fate:1},
-      wolffang: { str:2, dex:0, pow:0, int:0, hp:16, fate:0},
-      foxtail: { str:0, dex:0, pow:1, int:1, hp:8, fate:1},
-      raceofritual: { str:0, dex:0, pow:0, int:2, hp:0, fate:2},
-    }
-    const jobStats = {
-      guardian: { str: 4, dex: 2, pow: 1, int: 3, hp: 50 , hpm: 8 },
-      samurai: { str: 4, dex: 2, pow: 2, int: 2, hp: 50, hpm: 8 },
-      monk: { str: 4, dex: 4, pow: 2, int: 0, hp: 55, hpm: 9 },
-      cleric: { str: 3, dex: 0, pow: 4, int: 3, hp: 40, hpm: 6 },
-      druid: { str: 2, dex: 1, pow: 4, int: 3, hp: 35, hpm: 5 },
-      kannagi: { str: 1, dex: 3, pow: 4, int: 2, hp: 40, hpm: 5 },
-      assassin: { str: 1, dex: 4, pow: 3, int: 1, hp: 40, hpm: 5 },
-      swashbuckler: { str: 3, dex: 4, pow: 2, int: 1, hp: 40, hpm: 6 },
-      bard: { str: 2, dex: 4, pow: 2, int: 2, hp: 40, hpm: 5 },
-      sorcerer: { str: 0, dex: 3, pow: 3, int: 4, hp: 35, hpm: 4 },
-      summoner: { str: 1, dex: 3, pow: 3, int: 4, hp: 35, hpm: 5 },
-      enchanter: { str: 2, dex: 2, pow: 2, int: 4, hp: 35, hpm: 4 }
-    }
 
     if (actorData.type === 'character') {
 
@@ -185,42 +151,23 @@ export class LHTrpgActor extends Actor {
         hp.effect = 0;
       }
 
-      if (race in raceStats){
-        const rc = raceStats[race];
-        str.rc = rc.str;
-        dex.rc = rc.dex;
-        pow.rc = rc.pow;
-        int.rc = rc.int;
-        hp.rc = rc.hp;
-        fate.rc = rc.fate;
-      }
-      else if (race === 'race' || race === ''){
-        str.rc = 0;
-        dex.rc = 0;
-        pow.rc = 0;
-        int.rc = 0;
-        hp.rc = 0;
-        fate.rc = 0;
-        }
+      // Race and Class items (see helpers/character-options.mjs)
+      const rc = raceStats(this) ?? {};
+      str.rc = rc.str ?? 0;
+      dex.rc = rc.dex ?? 0;
+      pow.rc = rc.pow ?? 0;
+      int.rc = rc.int ?? 0;
+      hp.rc = rc.hp ?? 0;
+      fate.rc = rc.fate ?? 0;
 
-      if (job in jobStats) {
-      const stats = jobStats[job];
+      const jb = classStats(this);
       const crhp = cr - 1;
-      str.jb = stats.str + crhp;
-      dex.jb = stats.dex + crhp;
-      pow.jb = stats.pow + crhp;
-      int.jb = stats.int + crhp;
-      hp.jb = stats.hp;
-      hp.mod = stats.hpm * crhp
-      } 
-      else if (job === 'class' || job === '') {
-      str.jb = 0;
-      dex.jb = 0;
-      pow.jb = 0;
-      int.jb = 0;
-      hp.jb = 0;
-      hp.mod = 0
-      }
+      str.jb = jb ? jb.str + crhp : 0;
+      dex.jb = jb ? jb.dex + crhp : 0;
+      pow.jb = jb ? jb.pow + crhp : 0;
+      int.jb = jb ? jb.int + crhp : 0;
+      hp.jb = jb?.hp ?? 0;
+      hp.mod = jb ? jb.hpPerRank * crhp : 0;
 
     str.total = str.jb + str.value + str.rc + str.effect;
     dex.total = dex.jb + dex.value + dex.rc + dex.effect;

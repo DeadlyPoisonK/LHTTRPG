@@ -2,6 +2,7 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
 import {onManageTags} from "../helpers/tags.mjs";
 import {diceOptions} from "../helpers/dice.mjs";
 import {SKILL_MAX_DICE, rollSkill} from "../helpers/skill-rolls.mjs";
+import {ARCHETYPES, OPTION_TYPES} from "../helpers/character-options.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -59,6 +60,12 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     // Skill Check / Damage: dice select options
     if (itemData.type === 'skill') context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
 
+    // Class archetype options
+    if (itemData.type === 'class') context.archetypes = ARCHETYPES;
+
+    // Race / Class / Subclass starting skills
+    if (OPTION_TYPES.includes(itemData.type)) context.grants = await this._prepareGrants();
+
     // Resolve the Skill item linked to this equipment, if any.
     context.linkedSkill = context.system.linkedSkillUuid
       ? await fromUuid(context.system.linkedSkillUuid).catch(() => null)
@@ -66,6 +73,55 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
     return context;
+  }
+
+  /**
+   * Starting skills of a Race / Class / Subclass, resolved for display.
+   * @returns {Promise<object[]>}
+   * @private
+   */
+  async _prepareGrants() {
+    const grants = this.item.system.grants ?? [];
+    return Promise.all(grants.map(async (grant, index) => {
+      const skills = await Promise.all((grant.uuids ?? []).map(async uuid => {
+        const skill = await fromUuid(uuid).catch(() => null);
+        return skill ? { uuid, name: skill.name, img: skill.img } : { uuid, name: uuid, img: "icons/svg/hazard.svg", missing: true };
+      }));
+      return { index, choice: skills.length > 1, skills };
+    }));
+  }
+
+  /**
+   * Dropping a Skill on the starting skills tab: onto a slot adds it as an alternative of that slot
+   * (the player will pick one), anywhere else adds a new slot.
+   * @param {DragEvent} event
+   * @private
+   */
+  async _onGrantDrop(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const data = this._getDropData(event);
+    if (!data || data.type !== "Item") return;
+    const skill = await Item.implementation.fromDropData(data);
+    if (!skill) return;
+    if (skill.type !== "skill") {
+      ui.notifications.warn(game.i18n.localize("LHTRPG.CharacterOptions.Grants.OnlySkills"));
+      return;
+    }
+    // Skills inside an actor are not stable references: link the compendium/world entry they came from.
+    const uuid = skill.parent ? (skill._stats?.compendiumSource ?? null) : skill.uuid;
+    if (!uuid) {
+      ui.notifications.warn(game.i18n.localize("LHTRPG.CharacterOptions.Grants.OnlySkills"));
+      return;
+    }
+    const grants = foundry.utils.deepClone(this.item.system.grants ?? []);
+    const slot = event.target.closest(".grant-slot");
+    if (slot) {
+      const target = grants[Number(slot.dataset.slot)];
+      if (!target.uuids.includes(uuid)) target.uuids.push(uuid);
+    }
+    else grants.push({ uuids: [uuid] });
+    await this.item.update({ "system.grants": grants });
   }
 
   /* -------------------------------------------- */
@@ -141,8 +197,35 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       rollSkill(this.item, ev.currentTarget.dataset.roll);
     });
 
+    // Starting skills: open a skill's sheet
+    html.find('.grant-open').click(async ev => {
+      const skill = await fromUuid(ev.currentTarget.closest('.grant-skill').dataset.uuid).catch(() => null);
+      skill?.sheet.render(true);
+    });
+
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
+
+    // Starting skills: remove one (a slot left empty disappears), drop skills to add them
+    html.find('.grant-remove').click(ev => {
+      const uuid = ev.currentTarget.closest('.grant-skill').dataset.uuid;
+      const index = Number(ev.currentTarget.closest('.grant-slot').dataset.slot);
+      const grants = foundry.utils.deepClone(this.item.system.grants ?? []);
+      grants[index].uuids = grants[index].uuids.filter(u => u !== uuid);
+      this.item.update({ "system.grants": grants.filter(g => g.uuids.length) });
+    });
+    const grantsTab = html.find('.tab.grants')[0];
+    if (grantsTab) {
+      grantsTab.addEventListener("dragover", ev => {
+        ev.preventDefault();
+        grantsTab.querySelectorAll(".drag-over").forEach(e => e.classList.remove("drag-over"));
+        (ev.target.closest(".grant-slot") ?? grantsTab.querySelector(".grant-dropzone"))?.classList.add("drag-over");
+      });
+      grantsTab.addEventListener("dragleave", ev => {
+        if (!grantsTab.contains(ev.relatedTarget)) grantsTab.querySelectorAll(".drag-over").forEach(e => e.classList.remove("drag-over"));
+      });
+      grantsTab.addEventListener("drop", ev => this._onGrantDrop(ev));
+    }
 
     // Check vs (Evasion/Resistance/Auto) and Damage type (Physical/Magical): exclusive options,
     // unchecking the current one leaves none. The hidden input carries the value when the form submits.

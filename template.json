@@ -220,7 +220,10 @@
       "gear",
       "ticket",
       "connection",
-      "union"
+      "union",
+      "race",
+      "class",
+      "subclass"
     ],
     "templates": {
       "base": {
@@ -339,6 +342,44 @@
       "templates": [
         "base"
       ]
+    },
+    "race": {
+      "templates": [
+        "base"
+      ],
+      "identifier": "",
+      "attributes": {
+        "str": 0,
+        "dex": 0,
+        "pow": 0,
+        "int": 0
+      },
+      "hp": 0,
+      "fate": 0,
+      "grants": []
+    },
+    "class": {
+      "templates": [
+        "base"
+      ],
+      "identifier": "",
+      "archetype": "",
+      "attributes": {
+        "str": 0,
+        "dex": 0,
+        "pow": 0,
+        "int": 0
+      },
+      "hp": 0,
+      "hpPerRank": 0,
+      "grants": []
+    },
+    "subclass": {
+      "templates": [
+        "base"
+      ],
+      "identifier": "",
+      "grants": []
     }
   }
 }

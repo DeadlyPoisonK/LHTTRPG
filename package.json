@@ -1,0 +1,13 @@
+{
+  "name": "lhtrpg",
+  "private": true,
+  "type": "module",
+  "description": "Log Horizon TRPG system for Foundry VTT (dev tooling only: compendium build).",
+  "scripts": {
+    "packs:build": "node tools/packs.mjs build",
+    "packs:unpack": "node tools/packs.mjs unpack"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.4"
+  }
+}

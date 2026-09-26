@@ -612,25 +612,10 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race label {
   color: #d6ffda;
 }
 
-/* Header text: same size everywhere (the name excepted) */
-div.app.lhtrpg.actor .sheet-header .header-fields select.race {
-  font-size: 20px;
-}
-
-div.app.lhtrpg.actor .sheet-header .header-fields .race option {
-  font-size: 20px;
- /* -ms-flex-preferred-size: 150px;
-  flex-basis: 200px;*/
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: left;
-}
-
 div.app.lhtrpg.actor .sheet-header .header-fields .classes {
   margin-top: 15px;
   height: 85px;
-  width: 230px;
+  width: 205px;
 }
 
 div.app.lhtrpg.actor .sheet-header .header-fields .classes .subclass {
@@ -641,10 +626,6 @@ div.app.lhtrpg.actor .sheet-header .header-fields .classes .subclass {
 div.app.lhtrpg.actor .sheet-header .header-fields .classes .class {
   font-size: 20px;
   color: #d6ffda;
-  height: 50px;
-}
-div.app.lhtrpg.actor .sheet-header .header-fields .classes option {
-  font-size: 20px;
   height: 50px;
 }
 
@@ -3001,4 +2982,290 @@ div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-inner
 div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* -------------------------------------------- */
+/*  Race / Class / Subclass (character header)  */
+/* -------------------------------------------- */
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  height: 32px;
+  font-size: 20px;
+  color: #d6ffda;
+  border-bottom: 1px solid rgba(214, 255, 218, 0.3);
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .classes .option-field.class {
+  height: 50px;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-menu {
+  flex: 0 0 18px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.55;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse i {
+  font-size: 16px;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-menu:hover,
+div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px #2aa05a;
+}
+
+div.app.lhtrpg.actor .class-img {
+  cursor: pointer;
+}
+
+/* -------------------------------------------- */
+/*  Race / Class / Subclass selection window    */
+/* -------------------------------------------- */
+
+.lhtrpg.option-browser .window-content {
+  padding: 6px;
+  background: #1f1f1f;
+  color: #e8e8e8;
+}
+
+.lhtrpg.option-browser .option-browser-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+
+.lhtrpg.option-browser .option-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.lhtrpg.option-browser .option-search input {
+  flex: 1;
+}
+
+.lhtrpg.option-browser .option-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.lhtrpg.option-browser .option-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lhtrpg.option-browser .option-row.selected {
+  background: rgba(42, 160, 90, 0.18);
+  box-shadow: inset 3px 0 0 #2aa05a;
+}
+
+.lhtrpg.option-browser .option-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border: none;
+}
+
+.lhtrpg.option-browser .option-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lhtrpg.option-browser .option-name {
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lhtrpg.option-browser .option-source {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.65;
+}
+
+.lhtrpg.option-browser .option-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.lhtrpg.option-browser .option-buttons button {
+  width: 30px;
+  height: 30px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lhtrpg.option-browser .option-buttons button i {
+  margin: 0;
+}
+
+.lhtrpg.option-browser .option-select {
+  color: #4cd07d;
+}
+
+.lhtrpg.option-browser .option-empty {
+  padding: 12px 6px;
+  font-style: italic;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* -------------------------------------------- */
+/*  Starting skills (Race / Class / Subclass)   */
+/* -------------------------------------------- */
+
+.lhtrpg.sheet.item .tab.grants .grants-hint {
+  margin: 6px 4px;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.lhtrpg.sheet.item .grant-slots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lhtrpg.sheet.item .grant-slot {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lhtrpg.sheet.item .grant-slot-label {
+  flex: 0 0 80px;
+  font-size: 12px;
+  opacity: 0.7;
+  padding-top: 5px;
+}
+
+.lhtrpg.sheet.item .grant-skills {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.lhtrpg.sheet.item .grant-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px 2px 2px;
+  border: 1px solid rgba(76, 208, 125, 0.4);
+  border-radius: 4px;
+}
+
+.lhtrpg.sheet.item .grant-skill.missing {
+  border-color: #c04040;
+}
+
+.lhtrpg.sheet.item .grant-skill img {
+  width: 22px;
+  height: 22px;
+  border: none;
+}
+
+.lhtrpg.sheet.item .grant-slot.drag-over,
+.lhtrpg.sheet.item .grant-dropzone.drag-over {
+  background: rgba(42, 160, 90, 0.2);
+}
+
+.lhtrpg.sheet.item .grant-dropzone {
+  margin: 8px 4px;
+  padding: 10px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.lhtrpg.option-grants .grants-list {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.lhtrpg.option-grants .grant-slot {
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lhtrpg.option-grants .grant-choice-label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.lhtrpg.option-grants .grant-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lhtrpg.option-grants .grant-option img {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+.lhtrpg.option-grants .grant-option.owned {
+  opacity: 0.55;
+}
+
+.lhtrpg.option-grants .grant-owned {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.lhtrpg.option-grants .grants-stale {
+  display: block;
+  margin-top: 6px;
+}
+
+.lhtrpg.option-grants .grants-stale-names {
+  display: block;
+  font-size: 11px;
+  opacity: 0.7;
+  margin-left: 22px;
 }

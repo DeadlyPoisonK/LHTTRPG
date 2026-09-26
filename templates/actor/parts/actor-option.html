@@ -1,0 +1,16 @@
+{{!-- Race / Class / Subclass field of the character header: the item's name (click: its sheet) plus a
+     ⋮ menu (change / edit / delete), or a placeholder that opens the selection window. --}}
+<div class="option-field {{type}}{{#unless option}} empty{{/unless}}" data-option-type="{{type}}"
+	{{#if option}}data-item-id="{{option._id}}"{{/if}}>
+	{{#if option}}
+	<a class="option-name" data-tooltip="{{option.name}}">{{option.name}}</a>
+	{{#if @root.editable}}
+	<a class="option-menu" data-tooltip="LHTRPG.CharacterOptions.Menu"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+	{{/if}}
+	{{else}}
+	<a class="option-browse">
+		<span class="option-placeholder">{{placeholder}}</span>
+		{{#if @root.editable}}<i class="fa-solid fa-magnifying-glass"></i>{{/if}}
+	</a>
+	{{/if}}
+</div>

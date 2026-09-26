@@ -1,4 +1,5 @@
 import { prepareSkillRolls } from "../helpers/skill-rolls.mjs";
+import { OPTION_ICONS, OPTION_TYPES } from "../helpers/character-options.mjs";
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -26,7 +27,8 @@ export class LHTrpgItem extends Item {
  * @type {boolean}
  */
   get areEffectsSuppressed() {
-    const requireEquipped = (this.type !== "skill") && (this.type !== "connection") && (this.type !== "union");
+    // Race / Class / Subclass effects apply as long as the character holds the item.
+    const requireEquipped = !["skill", "connection", "union", ...OPTION_TYPES].includes(this.type);
     if (requireEquipped && (this.system.equipped === false)) return true;
 
     return false;
@@ -78,7 +80,7 @@ export class LHTrpgItem extends Item {
     // add item default picture depending on type
     if (this.img === 'icons/svg/item-bag.svg') {
       const updateData = {};
-      updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
+      updateData['img'] = OPTION_ICONS[this.type] ?? `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
 
       await this.updateSource(updateData);
     }

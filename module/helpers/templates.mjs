@@ -19,6 +19,7 @@
     "systems/lhtrpg/templates/actor/parts/actor-skills-general.html",
     "systems/lhtrpg/templates/actor/parts/actor-status.html",
     "systems/lhtrpg/templates/actor/parts/actor-status-panel.html",
+    "systems/lhtrpg/templates/actor/parts/actor-option.html",
 
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html",
@@ -33,5 +34,6 @@
     "systems/lhtrpg/templates/item/parts/item-effects.html",
     "systems/lhtrpg/templates/item/parts/item-header.html",
     "systems/lhtrpg/templates/item/parts/item-linked-skill.html",
+    "systems/lhtrpg/templates/item/parts/item-grants.html",
   ]);
 };

@@ -1,0 +1,31 @@
+<section class="option-browser-body">
+  <div class="option-search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" name="search" value="{{query}}" placeholder="{{placeholder}}" autocomplete="off">
+  </div>
+
+  <ol class="option-list">
+    {{#each entries}}
+    <li class="option-row{{#if selected}} selected{{/if}}" data-uuid="{{uuid}}" data-search="{{toLowerCase name}} {{toLowerCase identifier}}">
+      <img class="option-icon" src="{{img}}" alt="">
+      <div class="option-text">
+        <span class="option-name">{{name}}</span>
+        <span class="option-source">{{subtitle}}</span>
+      </div>
+      <div class="option-buttons">
+        {{#if @root.editable}}
+        <button type="button" class="option-select" data-action="select" data-tooltip="LHTRPG.CharacterOptions.Choose">
+          <i class="fa-solid fa-check"></i>
+        </button>
+        {{/if}}
+        <button type="button" class="option-view" data-action="view" data-tooltip="LHTRPG.CharacterOptions.View">
+          <i class="fa-solid fa-book-open"></i>
+        </button>
+      </div>
+    </li>
+    {{else}}
+    <li class="option-empty">{{localize "LHTRPG.CharacterOptions.Empty"}}</li>
+    {{/each}}
+    <li class="option-empty option-empty-search" hidden>{{localize "LHTRPG.CharacterOptions.NoMatch"}}</li>
+  </ol>
+</section>
