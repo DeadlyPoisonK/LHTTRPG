@@ -1,0 +1,22 @@
+{{!-- Standardized skill block field (Rules II.c.): type dropdown + amount (n) + qualifier, or free text.
+     The hidden input carries the composed string; see module/helpers/skill-fields.mjs --}}
+<div class="skill-field" data-field="{{f.field}}">
+  <input type="hidden" name="{{f.name}}" value="{{f.value}}">
+  <select class="skill-field-type">
+    <option value="-" {{#if (eq f.type "-")}}selected{{/if}}>-</option>
+    {{#each f.types}}
+      <option value="{{key}}" data-n="{{n}}" data-qual="{{qual}}" {{#if (eq ../f.type key)}}selected{{/if}}>{{label}}</option>
+    {{/each}}
+    <option value="custom" {{#if f.isCustom}}selected{{/if}}>{{localize 'LHTRPG.Skill.Option.Custom'}}</option>
+  </select>
+  <input class="skill-field-n" type="text" value="{{f.n}}" {{#unless f.showN}}hidden{{/unless}}>
+  {{#if f.quals.length}}
+    <select class="skill-field-qual" {{#unless f.showQual}}hidden{{/unless}}>
+      <option value="" {{#unless f.qual}}selected{{/unless}}>-</option>
+      {{#each f.quals}}
+        <option value="{{this}}" {{#if (eq ../f.qual this)}}selected{{/if}}>{{this}}</option>
+      {{/each}}
+    </select>
+  {{/if}}
+  <input class="skill-field-custom" type="text" value="{{f.custom}}" {{#unless f.isCustom}}hidden{{/unless}}>
+</div>

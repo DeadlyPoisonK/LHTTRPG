@@ -203,6 +203,9 @@
         "Combat": "Combate",
         "General": "General",
         "Monster": "Monstruo"
+      },
+      "Option": {
+        "Custom": "Personalizado…"
       }
     },
     "Ticket": {

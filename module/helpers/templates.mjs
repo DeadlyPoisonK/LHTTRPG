@@ -35,5 +35,6 @@
     "systems/lhtrpg/templates/item/parts/item-header.html",
     "systems/lhtrpg/templates/item/parts/item-linked-skill.html",
     "systems/lhtrpg/templates/item/parts/item-grants.html",
+    "systems/lhtrpg/templates/item/parts/skill-field.html",
   ]);
 };

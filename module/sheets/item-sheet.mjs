@@ -3,6 +3,7 @@ import {onManageTags} from "../helpers/tags.mjs";
 import {diceOptions} from "../helpers/dice.mjs";
 import {SKILL_MAX_DICE, rollSkill} from "../helpers/skill-rolls.mjs";
 import {ARCHETYPES, OPTION_TYPES} from "../helpers/character-options.mjs";
+import {prepareSkillFields, composeSkillField, CUSTOM} from "../helpers/skill-fields.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -58,7 +59,11 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     };
 
     // Skill Check / Damage: dice select options
-    if (itemData.type === 'skill') context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
+    if (itemData.type === 'skill') {
+      context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
+      // Timing / Target / Range / Cost / Limit dropdowns
+      context.skillFields = prepareSkillFields(itemData.system);
+    }
 
     // Class archetype options
     if (itemData.type === 'class') context.archetypes = ARCHETYPES;
@@ -232,6 +237,30 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     html.find('.skill-roll-toggle').on('change', ev => {
       const input = ev.currentTarget;
       html.find(`input[type=hidden][name="${input.dataset.field}"]`).val(input.checked ? input.dataset.value : '');
+    });
+
+    // Timing / Target / Range / Cost / Limit: rebuild the stored string from the dropdown parts
+    // before the form submits (these handlers run before the form's delegated change handler).
+    html.find('.skill-field').each((i, el) => {
+      const type = el.querySelector('.skill-field-type');
+      const n = el.querySelector('.skill-field-n');
+      const qual = el.querySelector('.skill-field-qual');
+      const custom = el.querySelector('.skill-field-custom');
+      const hidden = el.querySelector('input[type=hidden]');
+      $(el).find('select, input:not([type=hidden])').on('change', ev => {
+        const option = type.selectedOptions[0];
+        if (ev.currentTarget === type) {
+          // Switching type: start from the type's default amount, or from the current text when going custom.
+          if (option.dataset.n && !n.value.trim()) n.value = option.dataset.n;
+          if (type.value === CUSTOM && !custom.value.trim()) custom.value = hidden.value === '-' ? '' : hidden.value;
+        }
+        n.hidden = !option.dataset.n;
+        if (qual) qual.hidden = option.dataset.qual !== 'true';
+        custom.hidden = type.value !== CUSTOM;
+        hidden.value = composeSkillField(el.dataset.field, {
+          type: type.value, n: n.value, qual: qual?.value, custom: custom.value
+        });
+      });
     });
 
     // Active Effect management

@@ -2343,6 +2343,54 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   margin: 0;
 }
 
+/* Skill Timing/Target/Range/Cost/Limit: type dropdown + amount + qualifier, or free text */
+.lhtrpg.sheet.item .sheet-stats .stat-div:has(> .skill-field) {
+  width: calc(50% - 3px);
+  align-items: stretch;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 3px;
+  padding: 0 2px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field [hidden] {
+  display: none;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field select {
+  width: auto;
+  height: 24px;
+  padding: 0 2px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field select.skill-field-type {
+  flex: 1 0 auto;
+  max-width: 100%;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field:has(> .skill-field-custom:not([hidden])) select.skill-field-type {
+  flex: 0 0 72px;
+  min-width: 0;
+  max-width: 72px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field input.skill-field-custom {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-field input.skill-field-n {
+  flex: 0 0 32px;
+  width: 32px;
+  text-align: center;
+}
+
 .lhtrpg.sheet.item .sheet-stats .stat-div .skillRank-input,
 .lhtrpg.sheet.monster .sheet-stats .stat-div .skillRank-input {
   width: 30px;

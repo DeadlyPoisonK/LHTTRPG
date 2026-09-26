@@ -54,8 +54,7 @@
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Timing'}}</label>
-      <input class="timing-input" type="text" name="system.timing" value="{{system.timing}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Timing'}}"
-        data-dtype="text">
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.timing}}
     </div>
 
     <div class="stat-div skill-roll">
@@ -88,25 +87,22 @@
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Target'}}</label>
-      <input class="target-input" type="text" name="system.target" value="{{system.target}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Target'}}"
-        data-dtype="text">
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.target}}
     </div>
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Range'}}</label>
-      <input class="range-input" type="text" name="system.range" value="{{system.range}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Range'}}"
-        data-dtype="text">
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.range}}
     </div>
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Cost'}}</label>
-      <input class="cost-input" type="text" name="system.cost" value="{{system.cost}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Cost'}}" data-dtype="text">
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.cost}}
     </div>
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Limit'}}</label>
-      <input class="limit-input" type="text" name="system.limit" value="{{system.limit}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Limit'}}"
-        data-dtype="text">
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.limit}}
     </div>
     
     <div class="stat-div skill-roll">
