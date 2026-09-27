@@ -861,6 +861,29 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit {
   margin: 0;
 }
 
+/* Speed / Initiative: the value next to its icon (the input comes first in the markup). */
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed,
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed input,
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative input {
+  flex: 0 0 28px;
+  width: 28px;
+  text-align: left;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed h4,
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative h4 {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
 div.app.lhtrpg.actor .sheet-body .stats .attributes {
   gap: 14px;
   -webkit-column-gap: 6px;
@@ -890,6 +913,12 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .grid {
 
 div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs {
   font-family: "Edu SA Beginner", cursive;
+  /* Keeps the height of the removed third row (bonus points), so the checks below and the
+     Speed / Initiative row next to it stay in place. */
+  min-height: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs .attr-mod-input {
@@ -3353,4 +3382,50 @@ div.app.lhtrpg.actor .class-img {
   font-size: 11px;
   opacity: 0.7;
   margin-left: 22px;
+}
+
+/* Base Stats dialogs: Human +1 choice and bonus points */
+.lhtrpg.stat-allocation .allocation-hint {
+  margin: 0 0 8px;
+}
+
+.lhtrpg.stat-allocation .human-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+}
+
+.lhtrpg.stat-allocation .human-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lhtrpg.stat-allocation .human-stat .stat-bonus {
+  margin-left: auto;
+  opacity: 0.7;
+}
+
+.lhtrpg.stat-allocation .bonus-table {
+  width: 100%;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.lhtrpg.stat-allocation .bonus-table input {
+  width: 52px;
+  text-align: center;
+}
+
+.lhtrpg.stat-allocation .bonus-base {
+  font-weight: bold;
+}
+
+.lhtrpg.stat-allocation .invalid {
+  color: #ff6b6b;
+}
+
+.lhtrpg.stat-allocation .bonus-remaining {
+  margin: 0;
+  text-align: right;
 }

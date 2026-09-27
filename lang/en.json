@@ -438,6 +438,23 @@
       "Healer": "Healer",
       "Mage": "Mage"
     },
+    "StatAllocation": {
+      "Confirm": "Confirm",
+      "Later": "Later",
+      "Human": {
+        "Title": "Human: bonus stats",
+        "Menu": "Choose Human stats",
+        "Hint": "Humans get +1 to any {count} Base Stats. Choose them:"
+      },
+      "Bonus": {
+        "Title": "Bonus points: {name}",
+        "Menu": "Distribute bonus points",
+        "Hint": "A new character has {points} bonus points to distribute freely among the Base Stats. No Base Stat can go above {max} at this time.",
+        "Points": "Bonus",
+        "Base": "Base Stat",
+        "Left": "Points left:"
+      }
+    },
     "CharacterOptions": {
       "Archetype": "Archetype",
       "Identifier": "ID",

@@ -1,0 +1,12 @@
+<div class="stat-allocation-body">
+  <p class="allocation-hint">{{localize "LHTRPG.StatAllocation.Human.Hint" count=picks}}</p>
+  <div class="human-stats">
+    {{#each stats}}
+    <label class="human-stat">
+      <input type="checkbox" name="{{key}}" {{checked checked}}>
+      <span class="stat-label">[{{label}}]</span>
+      <span class="stat-bonus">+1</span>
+    </label>
+    {{/each}}
+  </div>
+</div>

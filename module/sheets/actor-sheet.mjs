@@ -2,6 +2,7 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
 import {onManageTags} from "../helpers/tags.mjs";
 import {getStatusPanel} from "../helpers/statuses.mjs";
 import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
+import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
 import {OptionBrowser} from "../apps/option-browser.mjs";
 
 /**
@@ -282,6 +283,18 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         name: 'LHTRPG.CharacterOptions.Change',
         icon: '<i class="fa-solid fa-magnifying-glass"></i>',
         callback: target => OptionBrowser.open(this.actor, field(target).dataset.optionType)
+      },
+      {
+        name: 'LHTRPG.StatAllocation.Human.Menu',
+        icon: '<i class="fa-solid fa-person"></i>',
+        condition: target => isHumanRace(item(target)),
+        callback: target => chooseHumanStats(item(target))
+      },
+      {
+        name: 'LHTRPG.StatAllocation.Bonus.Menu',
+        icon: '<i class="fa-solid fa-chart-simple"></i>',
+        condition: target => field(target).dataset.optionType === 'class',
+        callback: () => allocateBonusPoints(this.actor)
       },
       {
         name: 'LHTRPG.ButtonLabel.Edit',

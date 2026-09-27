@@ -432,6 +432,23 @@
       "Healer": "Sanador",
       "Mage": "Mago"
     },
+    "StatAllocation": {
+      "Confirm": "Confirmar",
+      "Later": "Más tarde",
+      "Human": {
+        "Title": "Humano: stats de bono",
+        "Menu": "Elegir stats de Humano",
+        "Hint": "El Humano recibe +1 en {count} Base Stats a elección. Elígelos:"
+      },
+      "Bonus": {
+        "Title": "Puntos de bono: {name}",
+        "Menu": "Repartir puntos de bono",
+        "Hint": "Un personaje nuevo tiene {points} puntos de bono para repartir libremente entre sus Base Stats. Ningún Base Stat puede superar {max} en este momento.",
+        "Points": "Bono",
+        "Base": "Base Stat",
+        "Left": "Puntos restantes:"
+      }
+    },
     "CharacterOptions": {
       "Archetype": "Arquetipo",
       "Identifier": "ID",

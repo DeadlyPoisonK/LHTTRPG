@@ -1,0 +1,26 @@
+<div class="stat-allocation-body">
+  <p class="allocation-hint">{{localize "LHTRPG.StatAllocation.Bonus.Hint" points=points max=max}}</p>
+  <table class="bonus-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>{{localize "TYPES.Item.class"}}</th>
+        <th>{{localize "TYPES.Item.race"}}</th>
+        <th>{{localize "LHTRPG.StatAllocation.Bonus.Points"}}</th>
+        <th>{{localize "LHTRPG.StatAllocation.Bonus.Base"}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each stats}}
+      <tr>
+        <th>[{{label}}]</th>
+        <td>{{job}}</td>
+        <td>{{race}}</td>
+        <td><input type="number" name="{{key}}" value="{{bonus}}" min="0" max="{{../points}}" step="1"></td>
+        <td class="bonus-base" data-base="{{key}}"></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p class="bonus-remaining">{{localize "LHTRPG.StatAllocation.Bonus.Left"}} <strong class="bonus-left">{{points}}</strong></p>
+</div>
