@@ -131,12 +131,18 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     const itemsConnection = [];
     const itemsUnion = [];
 
+    // Item skills linked to one of the character's equipment items are used from that item (inventory
+    // badge), not listed with the skills.
+    const linkedSkills = new Set(this.actor.items.map(i => i.system.linkedSkillUuid).filter(Boolean));
+
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || CONST.DEFAULT_TOKEN;
+      if (i.type === 'skill' && (i.system.subtype === 'Item')
+        && linkedSkills.has(this.actor.items.get(i._id)?.uuid)) continue;
       // Append to Combat Skills.
-      // (Monster skills given to a character are listed with the Combat skills.)
-      if (i.type === 'skill' && ['Combat', 'Monster'].includes(i.system.subtype)) {
+      // (Monster skills and unlinked Item skills given to a character are listed with the Combat skills.)
+      if (i.type === 'skill' && ['Combat', 'Monster', 'Item'].includes(i.system.subtype)) {
         skillsCombat.push(i);
       }
       // Append to Basic Skills.

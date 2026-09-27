@@ -190,7 +190,8 @@
         "Basic": "기본동작",
         "Combat": "전투",
         "General": "일반",
-        "Monster": "몬스터"
+        "Monster": "몬스터",
+        "Item": "아이템"
       }
     },
     "Ticket": {

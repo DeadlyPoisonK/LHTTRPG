@@ -210,7 +210,8 @@
         "Basic": "Basic",
         "Combat": "Combat",
         "General": "General",
-        "Monster": "Monster"
+        "Monster": "Monster",
+        "Item": "Item"
       },
       "Option": {
         "Custom": "Custom…"

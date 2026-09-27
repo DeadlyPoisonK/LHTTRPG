@@ -184,7 +184,8 @@
         "Basic": "De base",
         "Combat": "Combat",
         "General": "Général",
-        "Monster": "Monstre"
+        "Monster": "Monstre",
+        "Item": "Objet"
       }
     },
     "Ticket": {

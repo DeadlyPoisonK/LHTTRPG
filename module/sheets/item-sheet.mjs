@@ -278,7 +278,7 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     // Create a new Skill, linked to this equipment item, using this item's icon by default.
     html.find(".linked-skill-create").click(async ev => {
       ev.preventDefault();
-      const data = { name: "New Skill", type: "skill", img: this.item.img };
+      const data = { name: "New Skill", type: "skill", img: this.item.img, system: { subtype: "Item" } };
       const parent = this.item.actor ?? null;
       const created = parent
         ? (await parent.createEmbeddedDocuments("Item", [data]))[0]

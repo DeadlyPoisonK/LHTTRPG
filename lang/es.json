@@ -204,7 +204,8 @@
         "Basic": "Básico",
         "Combat": "Combate",
         "General": "General",
-        "Monster": "Monstruo"
+        "Monster": "Monstruo",
+        "Item": "Objeto"
       },
       "Option": {
         "Custom": "Personalizado…"
