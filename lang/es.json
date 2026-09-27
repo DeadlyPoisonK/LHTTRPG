@@ -432,6 +432,53 @@
       "Healer": "Sanador",
       "Mage": "Mago"
     },
+    "SkillBrowser": {
+      "Title": "Skills: {name}",
+      "Open": "Buscar las skills que el personaje puede adquirir o subir de SR",
+      "Browse": "Buscar",
+      "Search": "Buscar por nombre, clase o tag",
+      "HintPending": "Skills por elegir: adquiere o sube de SR {combat} skill(s) de Combate y {general} General(es). Una skill no puede superar su SR máximo ni el CR del personaje.",
+      "HintFree": "Adquiere skills nuevas (SR 1) o sube el SR de las que ya tiene. Una skill no puede superar su SR máximo ni el CR del personaje.",
+      "HintTraining": "Creación de personaje: quedan {left} de {max} skills [Training].",
+      "TrainingFull": "En la creación de personaje solo puedes adquirir {max} skills [Training]",
+      "MaxSRShort": "SR máx. {max}",
+      "Acquire": "Adquirir (SR 1)",
+      "Raise": "Subir a SR {sr}",
+      "Unpick": "Quitar de la selección",
+      "MaxSR": "Ya está en su SR máximo ({max})",
+      "MaxCR": "El SR no puede superar el CR del personaje ({max})",
+      "Full": "No quedan elecciones de este tipo",
+      "Empty": "No hay skills. Revisa la Clase y Raza del personaje, o el filtro de origen.",
+      "NoPicks": "Aún no hay nada seleccionado.",
+      "Confirm": "Añadir al personaje",
+      "ChatTitle": "{name} aprende",
+      "ChatNew": "{name} (SR 1)",
+      "ChatRaise": "{name} → SR {sr}",
+      "Undo": {
+        "Title": "Skills elegidas: {name}",
+        "HintRank": "{name} ahora es CR {rank}. Estas skills se eligieron en un CR mayor. ¿Deshacer las marcadas?",
+        "HintClass": "{name} ya no tiene la Clase con la que se eligieron estas skills. ¿Deshacer las marcadas?",
+        "Delete": "Quitar la skill",
+        "Lower": "SR {from} → {to}",
+        "Ranks": "Elegida en CR {ranks}",
+        "Apply": "Deshacer marcadas",
+        "Keep": "Conservar todas"
+      },
+      "Source": {
+        "archetype": "Arquetipo",
+        "class": "Clase",
+        "race": "Raza",
+        "common": "Común"
+      },
+      "Filter": {
+        "eligible": "Todas mis listas",
+        "archetype": "Arquetipo",
+        "class": "Clase",
+        "race": "Raza",
+        "common": "Común",
+        "all": "Todas las skills (sin restricción)"
+      }
+    },
     "StatAllocation": {
       "Confirm": "Confirmar",
       "Later": "Más tarde",

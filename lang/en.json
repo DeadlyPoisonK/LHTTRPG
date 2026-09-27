@@ -438,6 +438,53 @@
       "Healer": "Healer",
       "Mage": "Mage"
     },
+    "SkillBrowser": {
+      "Title": "Skills: {name}",
+      "Open": "Browse the skills this character can acquire or rank up",
+      "Browse": "Browse",
+      "Search": "Search by name, class or tag",
+      "HintPending": "Skills to choose: acquire or rank up {combat} Combat skill(s) and {general} General skill(s). A skill can't go beyond its Maximum SR or the character's CR.",
+      "HintFree": "Acquire new skills (SR 1) or raise the SR of the ones the character has. A skill can't go beyond its Maximum SR or the character's CR.",
+      "HintTraining": "Character creation: {left} of {max} [Training] skills left.",
+      "TrainingFull": "At character creation you can only acquire {max} [Training] skills",
+      "MaxSRShort": "Max SR {max}",
+      "Acquire": "Acquire (SR 1)",
+      "Raise": "Raise to SR {sr}",
+      "Unpick": "Remove from the selection",
+      "MaxSR": "Already at its Maximum SR ({max})",
+      "MaxCR": "SR can't go beyond the character's CR ({max})",
+      "Full": "No picks of this type left",
+      "Empty": "No skills. Check the character's Class and Race, or the source filter.",
+      "NoPicks": "Nothing selected yet.",
+      "Confirm": "Add to the character",
+      "ChatTitle": "{name} learns",
+      "ChatNew": "{name} (SR 1)",
+      "ChatRaise": "{name} → SR {sr}",
+      "Undo": {
+        "Title": "Skills chosen: {name}",
+        "HintRank": "{name} is now CR {rank}. These skills were chosen at a higher CR. Undo the checked ones?",
+        "HintClass": "{name} no longer has the Main Class these skills were chosen with. Undo the checked ones?",
+        "Delete": "Remove the skill",
+        "Lower": "SR {from} → {to}",
+        "Ranks": "Chosen at CR {ranks}",
+        "Apply": "Undo checked",
+        "Keep": "Keep all"
+      },
+      "Source": {
+        "archetype": "Archetype",
+        "class": "Main Class",
+        "race": "Race",
+        "common": "Common"
+      },
+      "Filter": {
+        "eligible": "All my lists",
+        "archetype": "Archetype",
+        "class": "Main Class",
+        "race": "Race",
+        "common": "Common",
+        "all": "Every skill (no restriction)"
+      }
+    },
     "StatAllocation": {
       "Confirm": "Confirm",
       "Later": "Later",

@@ -1,0 +1,17 @@
+<div class="skill-undo-body">
+  <p class="undo-hint">{{hint}}</p>
+  <ul class="undo-list">
+    {{#each rows}}
+    <li>
+      <label class="undo-row">
+        <input type="checkbox" name="{{id}}" checked>
+        <img src="{{img}}" alt="">
+        <span class="undo-text">
+          <span class="undo-name">{{name}}</span>
+          <span class="undo-meta">{{action}} · {{localize "LHTRPG.SkillBrowser.Undo.Ranks" ranks=ranks}}</span>
+        </span>
+      </label>
+    </li>
+    {{/each}}
+  </ul>
+</div>

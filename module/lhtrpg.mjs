@@ -16,6 +16,7 @@ import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
 import { registerCharacterOptions } from "./helpers/character-options.mjs";
 import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs";
+import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 
 /* -------------------------------------------- */
@@ -86,6 +87,7 @@ Hooks.once('init', async function () {
   // Race / Class / Subclass items: single copy per character, core compendium, legacy migration
   registerCharacterOptions();
   registerOptionBrowser();
+  registerSkillBrowser();
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();

@@ -3,6 +3,7 @@ import {onManageTags} from "../helpers/tags.mjs";
 import {getStatusPanel} from "../helpers/statuses.mjs";
 import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
+import {PICK_SUBTYPES, SkillBrowser, getPendingSkills} from "../apps/skill-browser.mjs";
 import {OptionBrowser} from "../apps/option-browser.mjs";
 
 /**
@@ -69,6 +70,12 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       // Race / Class / Subclass items (header fields); the class item's image is the class logo.
       context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(this.actor, type)]));
       context.classImg = context.characterOptions.class?.img ?? context.system.class.img;
+
+      // "Browse" tile of each skill grid, with the picks left (creation, CR Up).
+      if (this.isEditable) {
+        const pending = getPendingSkills(this.actor);
+        context.skillBrowse = { Basic: {}, ...Object.fromEntries(PICK_SUBTYPES.map(s => [s, { pending: pending[s] }])) };
+      }
     }
 
     // Add roll data for TinyMCE editors.
@@ -352,6 +359,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         OptionBrowser.open(this.actor, ev.currentTarget.closest('.option-field').dataset.optionType);
       });
       this._createOptionMenu(html[0]);
+      html.find('.skill-browse').click(ev => SkillBrowser.open(this.actor, { tab: ev.currentTarget.dataset.subtype }));
     }
 
     html.find('#hate-button').click(ev => {

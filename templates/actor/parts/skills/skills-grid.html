@@ -15,8 +15,12 @@
 			<span class="slot-label">{{item.name}}</span>
 		</div>
 	{{/each}}
-	<a class="item skill-tile add-tile item-create" data-type="skill" data-subtype="{{subtype}}" title="{{localize 'LHTRPG.Add'}}">
-		<div class="item-image add-icon"><i class="fas fa-plus"></i></div>
-		<span class="slot-label">{{localize "LHTRPG.Add"}}</span>
+	{{#if browse}}
+	<a class="item skill-tile add-tile skill-browse{{#if browse.pending}} pending{{/if}}" data-subtype="{{subtype}}"
+		title="{{localize 'LHTRPG.SkillBrowser.Open'}}">
+		<div class="item-image add-icon"><i class="fas fa-book-open-reader"></i>
+			{{#if browse.pending}}<span class="skill-pending-badge">{{browse.pending}}</span>{{/if}}</div>
+		<span class="slot-label">{{localize "LHTRPG.SkillBrowser.Browse"}}</span>
 	</a>
+	{{/if}}
 </div>

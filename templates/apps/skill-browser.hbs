@@ -1,0 +1,79 @@
+<section class="skill-browser-body">
+  <nav class="skill-tabs">
+    {{#each tabs}}
+    <a class="skill-tab{{#if active}} active{{/if}}" data-action="switchTab" data-subtype="{{subtype}}">
+      {{label}}{{#if count}} <span class="skill-tab-count">{{count}}</span>{{/if}}
+    </a>
+    {{/each}}
+  </nav>
+
+  <p class="skill-hint">{{hint}}</p>
+
+  <div class="skill-toolbar">
+    <div class="skill-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" name="search" value="{{query}}" placeholder="{{localize 'LHTRPG.SkillBrowser.Search'}}" autocomplete="off">
+    </div>
+    <select name="source">
+      {{#each sources}}
+      <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <ol class="skill-list">
+    {{#each entries}}
+    <li class="skill-row{{#if picked}} picked{{/if}}{{#if owned}} owned{{/if}}" data-uuid="{{uuid}}" data-search="{{search}}">
+      <div class="skill-main">
+        <img class="skill-icon" src="{{img}}" alt="">
+        <a class="skill-text" data-action="expand">
+          <span class="skill-name">
+            <i class="fa-solid fa-caret-{{#if expanded}}down{{else}}right{{/if}}"></i> {{name}}
+            {{#if owned}}<span class="skill-owned">SR {{sr}}</span>{{/if}}
+          </span>
+          <span class="skill-meta">{{sourceLabel}} · {{localize "LHTRPG.SkillBrowser.MaxSRShort" max=maxSR}}{{#each tags}} · [{{this}}]{{/each}}</span>
+        </a>
+        <div class="skill-buttons">
+          <button type="button" data-action="view" data-tooltip="LHTRPG.CharacterOptions.View"><i class="fa-solid fa-book-open"></i></button>
+          {{#if @root.editable}}
+          {{#if picked}}
+          <button type="button" class="skill-unpick" data-action="unpick" data-tooltip="LHTRPG.SkillBrowser.Unpick"><i class="fa-solid fa-xmark"></i></button>
+          {{else if owned}}
+          <button type="button" class="skill-pick" data-action="pick" {{disabled disabled}}
+            data-tooltip="{{#if reason}}{{reason}}{{else}}{{localize 'LHTRPG.SkillBrowser.Raise' sr=next}}{{/if}}"><i class="fa-solid fa-arrow-up"></i></button>
+          {{else}}
+          <button type="button" class="skill-pick" data-action="pick" {{disabled disabled}}
+            data-tooltip="{{#if reason}}{{reason}}{{else}}{{localize 'LHTRPG.SkillBrowser.Acquire'}}{{/if}}"><i class="fa-solid fa-plus"></i></button>
+          {{/if}}
+          {{/if}}
+        </div>
+      </div>
+      {{#if expanded}}<div class="skill-description">{{{description}}}</div>{{/if}}
+    </li>
+    {{else}}
+    <li class="skill-empty">{{localize "LHTRPG.SkillBrowser.Empty"}}</li>
+    {{/each}}
+    <li class="skill-empty skill-empty-search" hidden>{{localize "LHTRPG.CharacterOptions.NoMatch"}}</li>
+  </ol>
+
+  <footer class="skill-footer">
+    <ul class="skill-picks">
+      {{#each picks}}
+      <li class="skill-chip" data-uuid="{{uuid}}">
+        <img src="{{img}}" alt=""> {{label}}
+        <a data-action="unpick"><i class="fa-solid fa-xmark"></i></a>
+      </li>
+      {{else}}
+      <li class="skill-picks-empty">{{localize "LHTRPG.SkillBrowser.NoPicks"}}</li>
+      {{/each}}
+    </ul>
+    <div class="skill-footer-buttons">
+      <button type="button" data-action="close"><i class="fa-solid fa-xmark"></i> {{localize "LHTRPG.StatAllocation.Later"}}</button>
+      {{#if editable}}
+      <button type="button" class="skill-confirm" data-action="confirm" {{disabled (eq picks.length 0)}}>
+        <i class="fa-solid fa-check"></i> {{localize "LHTRPG.SkillBrowser.Confirm"}}
+      </button>
+      {{/if}}
+    </div>
+  </footer>
+</section>

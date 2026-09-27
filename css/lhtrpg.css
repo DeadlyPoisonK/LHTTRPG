@@ -3429,3 +3429,308 @@ div.app.lhtrpg.actor .class-img {
   margin: 0;
   text-align: right;
 }
+
+/* -------------------------------------------- */
+/*  Skill selection window                      */
+/* -------------------------------------------- */
+
+.lhtrpg.skill-browser .window-content {
+  padding: 6px;
+  background: #1f1f1f;
+  color: #e8e8e8;
+}
+
+.lhtrpg.skill-browser .skill-browser-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+
+.lhtrpg.skill-browser .skill-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lhtrpg.skill-browser .skill-tab {
+  flex: 1;
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.6;
+  border-bottom: 2px solid transparent;
+}
+
+.lhtrpg.skill-browser .skill-tab.active {
+  opacity: 1;
+  border-bottom-color: #2aa05a;
+}
+
+.lhtrpg.skill-browser .skill-tab-count {
+  margin-left: 4px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: rgba(42, 160, 90, 0.35);
+  font-size: 11px;
+}
+
+.lhtrpg.skill-browser .skill-hint {
+  margin: 0;
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.lhtrpg.skill-browser .skill-toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lhtrpg.skill-browser .skill-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.lhtrpg.skill-browser .skill-search input {
+  flex: 1;
+}
+
+.lhtrpg.skill-browser .skill-toolbar select {
+  flex: 0 0 200px;
+}
+
+.lhtrpg.skill-browser .skill-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.lhtrpg.skill-browser .skill-row {
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lhtrpg.skill-browser .skill-row.picked {
+  background: rgba(42, 160, 90, 0.18);
+  box-shadow: inset 3px 0 0 #2aa05a;
+}
+
+.lhtrpg.skill-browser .skill-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lhtrpg.skill-browser .skill-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border: none;
+}
+
+.lhtrpg.skill-browser .skill-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lhtrpg.skill-browser .skill-name {
+  font-weight: bold;
+}
+
+.lhtrpg.skill-browser .skill-owned {
+  margin-left: 4px;
+  padding: 0 5px;
+  border-radius: 6px;
+  background: rgba(95, 211, 167, 0.25);
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.lhtrpg.skill-browser .skill-meta {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.65;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lhtrpg.skill-browser .skill-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.lhtrpg.skill-browser .skill-buttons button {
+  width: 30px;
+  height: 30px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lhtrpg.skill-browser .skill-buttons button i {
+  margin: 0;
+}
+
+.lhtrpg.skill-browser .skill-pick:not(:disabled) {
+  color: #4cd07d;
+}
+
+.lhtrpg.skill-browser .skill-unpick {
+  color: #ff6b6b;
+}
+
+.lhtrpg.skill-browser .skill-description {
+  margin: 4px 0 2px 44px;
+  font-size: 12px;
+}
+
+.lhtrpg.skill-browser .skill-description p {
+  margin: 0 0 4px;
+}
+
+.lhtrpg.skill-browser .skill-empty {
+  padding: 12px 6px;
+  font-style: italic;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.lhtrpg.skill-browser .skill-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lhtrpg.skill-browser .skill-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lhtrpg.skill-browser .skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  background: rgba(42, 160, 90, 0.25);
+  font-size: 12px;
+}
+
+.lhtrpg.skill-browser .skill-chip img {
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
+.lhtrpg.skill-browser .skill-picks-empty {
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.lhtrpg.skill-browser .skill-footer-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.lhtrpg.skill-browser .skill-footer-buttons button {
+  flex: 1;
+}
+
+.lhtrpg.skill-browser .skill-confirm:not(:disabled) {
+  color: #4cd07d;
+}
+
+/* "Browse" tile of the character's skill grid, with the picks left after a CR Up */
+div.app.lhtrpg.actor .skills-grid .skill-browse .add-icon {
+  position: relative;
+}
+
+div.app.lhtrpg.actor .skills-grid .skill-browse.pending .add-icon {
+  color: #5fd3a7;
+  box-shadow: 0 0 8px #5fd3a7;
+}
+
+div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #2aa05a;
+  color: white;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+
+/* Skills learned chat card */
+.lhtrpg.skill-pick-card h3 {
+  margin: 0 0 4px;
+}
+
+.lhtrpg.skill-pick-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Undo skill picks (CR lowered, Main Class removed) */
+.lhtrpg.skill-undo .undo-hint {
+  margin: 0 0 8px;
+}
+
+.lhtrpg.skill-undo .undo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lhtrpg.skill-undo .undo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lhtrpg.skill-undo .undo-row img {
+  width: 28px;
+  height: 28px;
+  border: none;
+}
+
+.lhtrpg.skill-undo .undo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.lhtrpg.skill-undo .undo-name {
+  font-weight: bold;
+}
+
+.lhtrpg.skill-undo .undo-meta {
+  font-size: 11px;
+  opacity: 0.7;
+}

@@ -6,6 +6,8 @@
 
 import { getOptionIndex } from "../apps/option-browser.mjs";
 import { offerGrants } from "../apps/option-grants.mjs";
+import { chooseHumanStats, isHumanRace, offerBonusPoints } from "../apps/stat-allocation.mjs";
+import { offerClassSkills, rollbackPicks, waitForRollback } from "../apps/skill-browser.mjs";
 
 /** Item types a character holds a single copy of. */
 export const OPTION_TYPES = ["race", "class", "subclass"];
@@ -238,8 +240,34 @@ export function registerCharacterOptions() {
     if (!(actor instanceof Actor) || (actor.type !== "character")) return;
     const previous = actor.items.filter(i => (i.type === item.type) && (i.id !== item.id)).map(i => i.id);
     if (previous.length) actor.deleteEmbeddedDocuments("Item", previous);
-    // Starting skills of the new Race / Class / Subclass (not for migrated characters: they have theirs)
-    if (!options.lhtrpgMigration) offerGrants(actor, item);
+    // The skills chosen with the previous Main Class (dialog first, before the new class' ones).
+    if ((item.type === "class") && previous.length && !options.lhtrpgMigration) {
+      rollbackPicks(actor, { reason: "LHTRPG.SkillBrowser.Undo.HintClass" });
+    }
+    // Not for migrated characters: they already have their stats and skills.
+    if (options.lhtrpgMigration) return;
+    (async () => {
+      // The undo dialog of the previous Main Class' skills comes first.
+      if (item.type === "class") await waitForRollback(actor);
+      // Human: the two stats of its +1
+      if (isHumanRace(item)) await chooseHumanStats(item);
+      // Starting skills of the new Race / Class / Subclass
+      await offerGrants(actor, item);
+      // Bonus points and skills of a new character, chosen with the class
+      if (item.type === "class") {
+        await offerBonusPoints(actor);
+        await offerClassSkills(actor);
+      }
+    })();
+  });
+
+  // Main Class removed (not replaced): offer to undo the skills chosen with it. Without a class the
+  // character has no picks left to choose.
+  Hooks.on("deleteItem", (item, options, userId) => {
+    if ((userId !== game.user.id) || (item.type !== "class")) return;
+    const actor = item.parent;
+    if (!(actor instanceof Actor) || (actor.type !== "character")) return;
+    if (!actor.items.some(i => i.type === "class")) rollbackPicks(actor, { reason: "LHTRPG.SkillBrowser.Undo.HintClass" });
   });
 
   Hooks.once("ready", migrateCharacterOptions);
