@@ -4,12 +4,13 @@
   "_id": "3efMu3dxb5eI2cCJ",
   "img": "icons/sundries/flags/banner-purple.webp",
   "system": {
-    "description": "",
+    "description": "<p>This ticket can be used to acquire a new Connection, Union or&nbsp;Sub Class</p>",
     "tags": [],
     "rank": 1,
     "price": 0,
     "equipped": false,
     "skillText": "",
+    "linkedSkillUuid": "",
     "subtype": "Connection",
     "quantity": 1
   },
@@ -24,8 +25,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790488639800,
+    "lastModifiedBy": "MzrmslFNx2agfxeo",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null

@@ -214,7 +214,6 @@
       "sorting": "m",
       "color": "#1d4d36",
       "packs": [
-        "races-classes",
         "rules"
       ],
       "folders": [
@@ -245,7 +244,8 @@
           "color": "#1d4d36",
           "packs": [
             "bestiary",
-            "gm-ex-powers"
+            "gm-ex-powers",
+            "races-classes"
           ]
         }
       ]

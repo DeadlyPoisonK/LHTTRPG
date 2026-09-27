@@ -4,12 +4,13 @@
   "_id": "QjdN6j6jN2mVKH9C",
   "img": "icons/sundries/flags/banner-pink.webp",
   "system": {
-    "description": "",
+    "description": "<p>This ticket can be used to acquire Treasure.</p>",
     "tags": [],
     "rank": 1,
     "price": 0,
     "equipped": false,
     "skillText": "",
+    "linkedSkillUuid": "",
     "subtype": "Treasure",
     "quantity": 1
   },
@@ -24,8 +25,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790488443121,
+    "lastModifiedBy": "MzrmslFNx2agfxeo",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null

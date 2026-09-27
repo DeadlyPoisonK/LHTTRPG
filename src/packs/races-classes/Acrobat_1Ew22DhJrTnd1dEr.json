@@ -1,0 +1,34 @@
+{
+  "name": "Acrobat",
+  "type": "subclass",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "folder": "FCm8xr0sbISmPa9B",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "acrobat",
+    "grants": [],
+    "skills": [
+      "Compendium.lhtrpg.skills-common.Item.Y20YeS6GTDzLf6e3"
+    ]
+  },
+  "_id": "1Ew22DhJrTnd1dEr",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": 1790489596420,
+    "modifiedTime": 1790489596420,
+    "lastModifiedBy": "MzrmslFNx2agfxeo"
+  },
+  "_key": "!items!1Ew22DhJrTnd1dEr"
+}

@@ -380,7 +380,8 @@
         "base"
       ],
       "identifier": "",
-      "grants": []
+      "grants": [],
+      "skills": []
     }
   }
 }

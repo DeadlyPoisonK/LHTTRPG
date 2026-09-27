@@ -1,0 +1,23 @@
+{
+  "name": "Subclasses",
+  "type": "Item",
+  "sorting": "a",
+  "_id": "FCm8xr0sbISmPa9B",
+  "description": "",
+  "folder": null,
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": 1790489596346,
+    "modifiedTime": 1790489596346,
+    "lastModifiedBy": "MzrmslFNx2agfxeo"
+  },
+  "_key": "!folders!FCm8xr0sbISmPa9B"
+}

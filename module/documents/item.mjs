@@ -62,6 +62,34 @@ export class LHTrpgItem extends Item {
     Reset: { name: "Reset Ticket", img: "icons/sundries/flags/banner-blue.webp" }
   }
 
+  /** System compendium holding the base ticket of each subtype. */
+  static TICKET_PACK = "lhtrpg.items";
+
+  /**
+   * Data for one new ticket of `subtype`, copied from the system compendium so it keeps its
+   * name, picture and rules text. Falls back to a blank ticket if the entry is missing.
+   * @param {string} subtype          Treasure | Fate | Connection | Reset
+   * @param {object} [options]
+   * @param {number} [options.rank]   Rank (CR) of the ticket, used by Treasure Tickets
+   * @returns {Promise<object>}
+   */
+  static async ticketData(subtype, { rank } = {}) {
+    let data = { name: "New Ticket", type: "ticket", system: { subtype } };
+    const pack = game.packs.get(LHTrpgItem.TICKET_PACK);
+    if (pack) {
+      const index = await pack.getIndex({ fields: ["system.subtype"] });
+      const entry = index.find(e => (e.type === "ticket") && (e.system?.subtype === subtype));
+      const source = entry ? await pack.getDocument(entry._id) : null;
+      if (source) {
+        data = game.items.fromCompendium(source);
+        foundry.utils.setProperty(data, "_stats.compendiumSource", source.uuid);
+      }
+    }
+    data.system.quantity = 1;
+    if (rank !== undefined) data.system.rank = rank;
+    return data;
+  }
+
   /**
    * Make adjustments before Item creation, like an item type default picture
    */

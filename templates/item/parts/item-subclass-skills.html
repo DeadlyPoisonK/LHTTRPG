@@ -1,0 +1,17 @@
+{{!-- Skills a Subclass allows (system.skills): they become eligible in the skill selection of a
+     character with this Subclass. They are not given for free. Drag a skill here to add it. --}}
+<p class="grants-hint">{{localize "LHTRPG.CharacterOptions.SubclassSkills.SheetHint"}}</p>
+<div class="grant-skills subclass-skill-list">
+	{{#each subclassSkills}}
+	<span class="grant-skill{{#if missing}} missing{{/if}}" data-uuid="{{uuid}}">
+		<img src="{{img}}" alt="">
+		<a class="grant-open">{{name}}</a>
+		{{#if @root.editable}}<a class="subclass-skill-remove" data-tooltip="LHTRPG.ButtonLabel.Delete"><i class="fa-solid fa-xmark"></i></a>{{/if}}
+	</span>
+	{{else}}
+	<span class="subclass-skill-empty">{{localize "LHTRPG.CharacterOptions.SubclassSkills.Empty"}}</span>
+	{{/each}}
+</div>
+{{#if editable}}
+<div class="grant-dropzone"><i class="fa-solid fa-plus"></i> {{localize "LHTRPG.CharacterOptions.Grants.Drop"}}</div>
+{{/if}}

@@ -1,0 +1,35 @@
+{
+  "name": "Blacksmith",
+  "type": "subclass",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "folder": "FCm8xr0sbISmPa9B",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "blacksmith",
+    "grants": [],
+    "skills": [
+      "Compendium.lhtrpg.skills-common.Item.tOMrVUfRfbbbi2y1",
+      "Compendium.lhtrpg.skills-common.Item.wJOJLAO7SZ5Rl5Xv"
+    ]
+  },
+  "_id": "xgRfRzd8REEWP6gf",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": 1790489596420,
+    "modifiedTime": 1790489596420,
+    "lastModifiedBy": "MzrmslFNx2agfxeo"
+  },
+  "_key": "!items!xgRfRzd8REEWP6gf"
+}

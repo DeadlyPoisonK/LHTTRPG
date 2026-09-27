@@ -14,7 +14,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
-    <a class="item" data-tab="grants">{{localize 'LHTRPG.CharacterOptions.Grants.Tab'}}</a>
+    <a class="item" data-tab="skills">{{localize 'LHTRPG.CharacterOptions.Grants.Tab'}}</a>
     <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
   </nav>
 
@@ -26,9 +26,9 @@
       {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
-    {{!-- Starting skills Tab --}}
-    <div class="tab grants" data-group="primary" data-tab="grants">
-      {{> "systems/lhtrpg/templates/item/parts/item-grants.html"}}
+    {{!-- Skills this Subclass allows the character to learn --}}
+    <div class="tab subclass-skills" data-group="primary" data-tab="skills">
+      {{> "systems/lhtrpg/templates/item/parts/item-subclass-skills.html"}}
     </div>
 
     {{!-- Effects Tab: applied to the character while it holds this item --}}

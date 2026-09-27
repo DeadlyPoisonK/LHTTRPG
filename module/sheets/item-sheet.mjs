@@ -76,6 +76,8 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
 
     // Race / Class / Subclass starting skills
     if (OPTION_TYPES.includes(itemData.type)) context.grants = await this._prepareGrants();
+    // Skills a Subclass allows
+    if (itemData.type === 'subclass') context.subclassSkills = await this._prepareSubclassSkills();
 
     // Resolve the Skill item linked to this equipment, if any.
     context.linkedSkill = context.system.linkedSkillUuid
@@ -100,6 +102,42 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       }));
       return { index, choice: skills.length > 1, skills };
     }));
+  }
+
+  /**
+   * Skills a Subclass allows, resolved for display.
+   * @returns {Promise<object[]>}
+   * @private
+   */
+  async _prepareSubclassSkills() {
+    const skills = await Promise.all((this.item.system.skills ?? []).map(async uuid => {
+      const skill = await fromUuid(uuid).catch(() => null);
+      return skill ? { uuid, name: skill.name, img: skill.img } : { uuid, name: uuid, img: "icons/svg/hazard.svg", missing: true };
+    }));
+    return skills.sort((a, b) => a.name.localeCompare(b.name, game.i18n.lang));
+  }
+
+  /**
+   * Dropping a Skill on the Skills tab of a Subclass: the Subclass allows it. Skills inside an actor
+   * are not stable references: the compendium/world entry they came from is linked.
+   * @param {DragEvent} event
+   * @private
+   */
+  async _onSubclassSkillDrop(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const data = this._getDropData(event);
+    if (!data || data.type !== "Item") return;
+    const skill = await Item.implementation.fromDropData(data);
+    if (!skill) return;
+    const uuid = (skill.type !== "skill") ? null : (skill.parent ? (skill._stats?.compendiumSource ?? null) : skill.uuid);
+    if (!uuid) {
+      ui.notifications.warn(game.i18n.localize("LHTRPG.CharacterOptions.Grants.OnlySkills"));
+      return;
+    }
+    const skills = this.item.system.skills ?? [];
+    if (skills.includes(uuid)) return;
+    await this.item.update({ "system.skills": [...skills, uuid] });
   }
 
   /**
@@ -236,6 +274,24 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
         if (!grantsTab.contains(ev.relatedTarget)) grantsTab.querySelectorAll(".drag-over").forEach(e => e.classList.remove("drag-over"));
       });
       grantsTab.addEventListener("drop", ev => this._onGrantDrop(ev));
+    }
+
+    // Subclass skills: remove one, drop skills to add them
+    html.find('.subclass-skill-remove').click(ev => {
+      const uuid = ev.currentTarget.closest('.grant-skill').dataset.uuid;
+      this.item.update({ "system.skills": (this.item.system.skills ?? []).filter(u => u !== uuid) });
+    });
+    const subclassTab = html.find('.tab.subclass-skills')[0];
+    if (subclassTab) {
+      const dropzone = subclassTab.querySelector(".grant-dropzone");
+      subclassTab.addEventListener("dragover", ev => {
+        ev.preventDefault();
+        dropzone?.classList.add("drag-over");
+      });
+      subclassTab.addEventListener("dragleave", ev => {
+        if (!subclassTab.contains(ev.relatedTarget)) dropzone?.classList.remove("drag-over");
+      });
+      subclassTab.addEventListener("drop", ev => this._onSubclassSkillDrop(ev));
     }
 
     // Damage type (Physical/Magical): exclusive options,

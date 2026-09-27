@@ -9,7 +9,8 @@
  * picks it has no quota. Basic skills are never counted.
  *
  * Which skills a character can learn comes from the compendium folders: Archetype (Warrior, Weapon
- * Master...), Main Class (Guardian...), Race (Human...) and Common.
+ * Master...), Main Class (Guardian...), Race (Human...) and Common, plus the skills its Subclass
+ * allows (`system.skills` of the Subclass item).
  */
 
 import { getOption } from "../helpers/character-options.mjs";
@@ -68,7 +69,7 @@ const COMMON_FOLDER = "common";
 const BASIC_PACKS = ["lhtrpg.skills-basic", "lhtrpg.skills-mounts"];
 
 /** Source filter values, in display order. */
-const SOURCES = ["eligible", "archetype", "class", "race", "common", "all"];
+const SOURCES = ["eligible", "archetype", "class", "race", "subclass", "common", "all"];
 
 /* -------------------------------------------- */
 /*  Index                                       */
@@ -129,7 +130,7 @@ function normalize(name) {
 /**
  * Where a character can learn a skill from: "archetype", "class", "race", "common" or null.
  * @param {object} entry  Index entry
- * @param {{archetype: string[], class: string, race: string}} lists  The character's skill lists
+ * @param {{archetype: string[], class: string, race: string, subclass: Set<string>}} lists  The character's skill lists
  */
 function sourceOf(entry, lists) {
   // Basic skills of the system compendiums belong to every character.
@@ -138,17 +139,19 @@ function sourceOf(entry, lists) {
   if (lists.class && folders.includes(lists.class)) return "class";
   if (lists.archetype.some(f => folders.includes(f))) return "archetype";
   if (lists.race && folders.includes(lists.race)) return "race";
+  if (lists.subclass.has(entry.uuid)) return "subclass";
   if (folders.includes(COMMON_FOLDER)) return "common";
   return null;
 }
 
-/** The skill lists of a character: its archetype folders, class name and race name. */
+/** The skill lists of a character: its archetype folders, class name, race name and Subclass skills. */
 function skillLists(actor) {
   const job = getOption(actor, "class");
   return {
     archetype: ARCHETYPE_FOLDERS[job?.system.archetype] ?? [],
     class: normalize(job?.name),
-    race: normalize(getOption(actor, "race")?.name)
+    race: normalize(getOption(actor, "race")?.name),
+    subclass: new Set(getOption(actor, "subclass")?.system.skills ?? [])
   };
 }
 

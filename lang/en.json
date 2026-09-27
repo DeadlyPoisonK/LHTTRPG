@@ -475,6 +475,7 @@
         "archetype": "Archetype",
         "class": "Main Class",
         "race": "Race",
+        "subclass": "Subclass",
         "common": "Common"
       },
       "Filter": {
@@ -482,6 +483,7 @@
         "archetype": "Archetype",
         "class": "Main Class",
         "race": "Race",
+        "subclass": "Subclass",
         "common": "Common",
         "all": "Every skill (no restriction)"
       }
@@ -534,6 +536,10 @@
         "race": "Search Races",
         "class": "Search Classes",
         "subclass": "Search Subclasses"
+      },
+      "SubclassSkills": {
+        "SheetHint": "Skills this Subclass allows: a character with it can acquire them in the skill selection (they are not given for free). Drag a skill here to add it.",
+        "Empty": "This Subclass allows no skills yet."
       },
       "Grants": {
         "Tab": "Skills",

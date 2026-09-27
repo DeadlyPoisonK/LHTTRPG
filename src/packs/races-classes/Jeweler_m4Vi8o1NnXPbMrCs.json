@@ -1,0 +1,35 @@
+{
+  "name": "Jeweler",
+  "type": "subclass",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "folder": "FCm8xr0sbISmPa9B",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "jeweler",
+    "grants": [],
+    "skills": [
+      "Compendium.lhtrpg.skills-common.Item.kDK3LujRVNzJY2Sh",
+      "Compendium.lhtrpg.skills-common.Item.YFYFvny4oAJOOBAj"
+    ]
+  },
+  "_id": "m4Vi8o1NnXPbMrCs",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": 1790489596420,
+    "modifiedTime": 1790489596420,
+    "lastModifiedBy": "MzrmslFNx2agfxeo"
+  },
+  "_key": "!items!m4Vi8o1NnXPbMrCs"
+}

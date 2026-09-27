@@ -3493,7 +3493,8 @@ div.app.lhtrpg.actor .class-img {
 /*  Starting skills (Race / Class / Subclass)   */
 /* -------------------------------------------- */
 
-.lhtrpg.sheet.item .tab.grants .grants-hint {
+.lhtrpg.sheet.item .tab.grants .grants-hint,
+.lhtrpg.sheet.item .tab.subclass-skills .grants-hint {
   margin: 6px 4px;
   font-style: italic;
   opacity: 0.75;
@@ -3558,6 +3559,16 @@ div.app.lhtrpg.actor .class-img {
   border-radius: 4px;
   text-align: center;
   opacity: 0.7;
+}
+
+/* Skills a Subclass allows */
+.lhtrpg.sheet.item .subclass-skill-list {
+  padding: 4px;
+}
+
+.lhtrpg.sheet.item .subclass-skill-empty {
+  font-style: italic;
+  opacity: 0.6;
 }
 
 .lhtrpg.option-grants .grants-list {

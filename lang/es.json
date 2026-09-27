@@ -469,6 +469,7 @@
         "archetype": "Arquetipo",
         "class": "Clase",
         "race": "Raza",
+        "subclass": "Subclase",
         "common": "Común"
       },
       "Filter": {
@@ -476,6 +477,7 @@
         "archetype": "Arquetipo",
         "class": "Clase",
         "race": "Raza",
+        "subclass": "Subclase",
         "common": "Común",
         "all": "Todas las skills (sin restricción)"
       }
@@ -528,6 +530,10 @@
         "race": "Buscar razas",
         "class": "Buscar clases",
         "subclass": "Buscar subclases"
+      },
+      "SubclassSkills": {
+        "SheetHint": "Skills que habilita esta subclase: un personaje con ella puede adquirirlas en el selector de skills (no se regalan). Arrastra una skill aquí para añadirla.",
+        "Empty": "Esta subclase todavía no habilita skills."
       },
       "Grants": {
         "Tab": "Skills",

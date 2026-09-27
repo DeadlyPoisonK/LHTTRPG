@@ -4,12 +4,13 @@
   "_id": "xl4kMcJQ8NuC86N5",
   "img": "icons/sundries/flags/banner-green.webp",
   "system": {
-    "description": "",
+    "description": "<p>This ticket can be used only during Pre-Play. It gives the user's PC an additional Fate Point for the duration of the Session</p>",
     "tags": [],
     "rank": 1,
     "price": 0,
     "equipped": false,
     "skillText": "",
+    "linkedSkillUuid": "",
     "subtype": "Fate",
     "quantity": 1
   },
@@ -24,8 +25,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790488548372,
+    "lastModifiedBy": "MzrmslFNx2agfxeo",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null

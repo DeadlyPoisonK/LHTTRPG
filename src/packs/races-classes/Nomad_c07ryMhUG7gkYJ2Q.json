@@ -1,0 +1,36 @@
+{
+  "name": "Nomad",
+  "type": "subclass",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "folder": "FCm8xr0sbISmPa9B",
+  "system": {
+    "description": "",
+    "tags": [],
+    "identifier": "nomad",
+    "grants": [],
+    "skills": [
+      "Compendium.lhtrpg.skills-common.Item.X9eRhFd3hNqEnon2",
+      "Compendium.lhtrpg.skills-common.Item.KAyhvoFTvBEfOE8V",
+      "Compendium.lhtrpg.skills-common.Item.b3ST7GuUTV1wTdis"
+    ]
+  },
+  "_id": "c07ryMhUG7gkYJ2Q",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "lhtrpg",
+    "systemVersion": "1.5.0",
+    "createdTime": 1790489596420,
+    "modifiedTime": 1790489596420,
+    "lastModifiedBy": "MzrmslFNx2agfxeo"
+  },
+  "_key": "!items!c07ryMhUG7gkYJ2Q"
+}

@@ -452,14 +452,14 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         item.update({ 'system.quantity': quantity + 1 });
       } else {
         const subtype = ev.currentTarget.dataset.subtype;
-        Item.create({ name: 'New Ticket', type: 'ticket', system: { subtype } }, { parent: this.actor });
+        this._createTicket(subtype);
       }
     });
 
     // Add a Treasure Ticket of the rank typed next to the button (stacks with that rank if owned)
     const addRankedTicket = input => {
       const rank = Math.max(0, Math.floor(Number(input.value) || 0));
-      Item.create({ name: 'New Ticket', type: 'ticket', system: { subtype: 'Treasure', rank, quantity: 1 } }, { parent: this.actor });
+      this._createTicket('Treasure', { rank });
     };
     html.find('.ticket-rank-create').click(ev => {
       ev.preventDefault();
@@ -654,11 +654,21 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
+  /**
+   * Give the actor one ticket of `subtype`, copied from the system compendium (keeps its text).
+   * Stacks with an owned ticket of the same subtype (and rank, for Treasure Tickets).
+   */
+  async _createTicket(subtype, options) {
+    const data = await Item.implementation.ticketData(subtype, options);
+    return Item.create(data, { parent: this.actor });
+  }
+
   async _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
     // Get the type of item to create.
     const type = header.dataset.type;
+    if (type === 'ticket') return this._createTicket(header.dataset.subtype);
     // Grab any data associated with this control.
     const data = foundry.utils.duplicate(header.dataset);
     console.log(header.dataset);
