@@ -485,6 +485,16 @@
         "all": "Every skill (no restriction)"
       }
     },
+    "RankUp": {
+      "Button": "CR Up",
+      "Tooltip": "Character Rank Up (Log Ticket)",
+      "Title": "Character Rank Up: {name}",
+      "Confirm": "Raise Character Rank from {from} to {to}?",
+      "GainHP": "Max HP +{hp} (Main Class HP Modifier)",
+      "GainStats": "+1 to every Base Stat",
+      "GainSkills": "Acquire or rank up {combat} Combat skill(s) and {general} General skill",
+      "Chat": "{name} reaches CR {to}"
+    },
     "StatAllocation": {
       "Confirm": "Confirm",
       "Later": "Later",

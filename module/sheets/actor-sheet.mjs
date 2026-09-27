@@ -3,6 +3,7 @@ import {onManageTags} from "../helpers/tags.mjs";
 import {getStatusPanel} from "../helpers/statuses.mjs";
 import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
+import {rankUp} from "../apps/rank-up.mjs";
 import {PICK_SUBTYPES, SkillBrowser, getPendingSkills} from "../apps/skill-browser.mjs";
 import {OptionBrowser} from "../apps/option-browser.mjs";
 
@@ -359,6 +360,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         OptionBrowser.open(this.actor, ev.currentTarget.closest('.option-field').dataset.optionType);
       });
       this._createOptionMenu(html[0]);
+      html.find('.rank-up').click(() => rankUp(this.actor));
       html.find('.skill-browse').click(ev => SkillBrowser.open(this.actor, { tab: ev.currentTarget.dataset.subtype }));
     }
 

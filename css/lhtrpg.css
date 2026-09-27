@@ -643,9 +643,25 @@ div.app.lhtrpg.actor .sheet-header .header-fields .levels input {
   height: 50px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .levels .level {
+div.app.lhtrpg.actor .sheet-header .header-fields .levels .rank-up {
   position: relative;
-  top: 2px;
+  left: -20px;
+  width: 90px;
+  margin-top: -6px;
+  padding: 2px 4px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 13px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: #d6ffda;
+  background: rgba(214, 255, 218, 0.08);
+  border: 1px solid #5fd3a7;
+  border-radius: 4px;
+}
+
+div.app.lhtrpg.actor .sheet-header .header-fields .levels .rank-up:hover {
+  background: rgba(95, 211, 167, 0.3);
+  box-shadow: 0 0 6px #5fd3a7;
 }
 
 div.app.lhtrpg.actor .sheet-body {
@@ -3428,6 +3444,16 @@ div.app.lhtrpg.actor .class-img {
 .lhtrpg.stat-allocation .bonus-remaining {
   margin: 0;
   text-align: right;
+}
+
+/* Character Rank Up chat card */
+.lhtrpg.rank-up-card h3 {
+  margin: 0 0 4px;
+}
+
+.lhtrpg.rank-up-card ul {
+  margin: 0;
+  padding-left: 18px;
 }
 
 /* -------------------------------------------- */

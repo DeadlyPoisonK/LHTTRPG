@@ -479,6 +479,16 @@
         "all": "Todas las skills (sin restricción)"
       }
     },
+    "RankUp": {
+      "Button": "Subir CR",
+      "Tooltip": "Subir Character Rank (Log Ticket)",
+      "Title": "Subir Character Rank: {name}",
+      "Confirm": "¿Subir el Character Rank de {from} a {to}?",
+      "GainHP": "HP máx. +{hp} (modificador de HP de la clase)",
+      "GainStats": "+1 a todos los Base Stats",
+      "GainSkills": "Adquirir o subir de SR {combat} skill(s) de Combate y {general} General",
+      "Chat": "{name} sube a CR {to}"
+    },
     "StatAllocation": {
       "Confirm": "Confirmar",
       "Later": "Más tarde",

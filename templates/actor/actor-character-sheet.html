@@ -44,7 +44,11 @@
 			</div>
 			<div class="levels">
 				<input class="crank" type="text" name="system.infos.crank" value="{{system.infos.crank}}" placeholder="0" data-dtype="Number" maxlength="3">
-				<input class="level" type="text" name="system.infos.level" value="{{system.infos.level}}" placeholder="0" data-dtype="Number" maxlength="3">
+				{{#if editable}}
+				<button type="button" class="rank-up" data-tooltip="LHTRPG.RankUp.Tooltip">
+					<i class="fa-solid fa-angles-up"></i> {{localize 'LHTRPG.RankUp.Button'}}
+				</button>
+				{{/if}}
 			</div>
 		</div>
 
