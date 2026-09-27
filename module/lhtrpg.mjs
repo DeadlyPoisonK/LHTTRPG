@@ -146,7 +146,8 @@ Hooks.on("renderChatMessageHTML", (message, html) => {
 
 // Tickets stack by subtype: receiving one (loot, trade, drag & drop, etc.)
 // while the actor already carries one of that subtype adds to its quantity
-// instead of creating a duplicate item.
+// instead of creating a duplicate item. Treasure Tickets also stack by rank
+// (a CR 2 ticket and a CR 3 ticket are different tickets).
 Hooks.on("preCreateItem", (item, data, options, userId) => {
   if (item.type !== "ticket") return;
   const actor = item.parent;
@@ -155,7 +156,10 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
   if ((actor.type === "pile") && (actor.system.mode === "merchant")) return;
 
   const subtype = item.system.subtype;
-  const existing = actor.items.find(i => i.type === "ticket" && i.system.subtype === subtype);
+  const ranked = subtype === "Treasure";
+  const rank = Number(item.system.rank) || 0;
+  const existing = actor.items.find(i => i.type === "ticket" && i.system.subtype === subtype
+    && (!ranked || (Number(i.system.rank) || 0) === rank));
   if (!existing) return;
 
   const addedQuantity = Number(item.system.quantity) || 1;

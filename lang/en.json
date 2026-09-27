@@ -227,7 +227,8 @@
         "Fate": "Fate Ticket",
         "Connection": "Connection Ticket",
         "Reset": "Reset Ticket"
-      }
+      },
+      "AddRank": "Add a Treasure Ticket of this CR"
     },
     "Status": {
       "Label": "Status"

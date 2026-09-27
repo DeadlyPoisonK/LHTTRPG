@@ -1,0 +1,27 @@
+<div class="ticket-slot ticket-slot--ranked" data-slot-type="{{subtype}}">
+	<div class="ticket-slot-icon">
+		<img class="slot-placeholder" src="{{icon}}" alt="" height="48" width="48" />
+		{{#if total}}<span class="slot-quantity">{{total}}</span>{{/if}}
+	</div>
+	<span class="slot-label">{{localize typeLabel}}</span>
+	<ol class="ticket-rank-list">
+		{{#each items}}
+		<li class="item ticket-rank-row" data-item-id="{{_id}}">
+			<a class="item-control item-edit ticket-rank-name" title="{{name}}">CR {{system.rank}}</a>
+			<span class="ticket-rank-qty">×{{system.quantity}}</span>
+			<div class="slot-stack-controls">
+				<a class="item-control ticket-decrement" data-item-id="{{_id}}" title="{{localize 'LHTRPG.Label.Remove'}}">−</a>
+				<a class="item-control ticket-increment" data-item-id="{{_id}}" title="{{localize 'LHTRPG.Add'}}">+</a>
+			</div>
+			<a class="item-control item-give" data-tooltip="LHTRPG.Piles.GiveTo"><i class="fas fa-hand-holding"></i></a>
+		</li>
+		{{/each}}
+		<li class="ticket-rank-add">
+			<span>CR</span>
+			<input class="ticket-rank-input" type="number" min="0" value="{{rank}}" />
+			<div class="slot-stack-controls">
+				<a class="item-control ticket-rank-create" title="{{localize 'LHTRPG.Ticket.AddRank'}}">+</a>
+			</div>
+		</li>
+	</ol>
+</div>

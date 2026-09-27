@@ -17,6 +17,8 @@ const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
  * @property {string} img
  * @property {string} [path]     Actor field (relative to `system`) mirroring this status.
  * @property {boolean} [rated]   The field holds a Rating (number) instead of a boolean.
+ * @property {boolean} [list]    The field holds a list of Ratings: the status can be applied
+ *                               several times, from different sources (e.g. Pursuit).
  * @property {string[]} [types]  Actor types that show this status in their sheet (default: all).
  */
 
@@ -33,7 +35,7 @@ export const LH_STATUSES = [
   { id: "rigor", group: "bad", img: `${ICONS_PATH}/rigor.svg`, path: "bad-status.rigor" },
   { id: "confused", group: "bad", img: `${ICONS_PATH}/confused.svg`, path: "bad-status.confused" },
   { id: "decay", group: "bad", img: `${ICONS_PATH}/decay.svg`, path: "bad-status.decay", rated: true },
-  { id: "pursuit", group: "bad", img: `${ICONS_PATH}/pursuit.svg`, path: "bad-status.pursuit", rated: true },
+  { id: "pursuit", group: "bad", img: `${ICONS_PATH}/pursuit.svg`, path: "bad-status.pursuits", list: true },
   { id: "afflicted", group: "bad", img: `${ICONS_PATH}/afflicted.svg`, path: "bad-status.afflicted" },
   { id: "overconfident", group: "bad", img: `${ICONS_PATH}/overconfident.svg`, path: "bad-status.overconfident" },
   // Combat Statuses
@@ -58,7 +60,7 @@ export const HIDDEN_STATUS = "hidden";
 export const LH_STATUS_GROUPS = ["bad", "life", "combat", "other"];
 
 const STATUS_BY_ID = new Map(LH_STATUSES.map(s => [s.id, s]));
-const MIGRATION_VERSION = 3;
+const MIGRATION_VERSION = 4;
 
 /* -------------------------------------------- */
 /*  Registration                                */
@@ -124,11 +126,53 @@ export function getStatusPanel(actor) {
           img: s.img,
           field: s.path ? `system.${s.path}` : null,
           rated: !!s.rated,
-          value: s.rated ? (Number(value) || 0) : value,
+          list: !!s.list,
+          value: s.list ? _listValue(value) : s.rated ? (Number(value) || 0) : value,
           active: actor.statuses.has(s.id)
         };
       })
   }));
+}
+
+/**
+ * Listeners of the status panel's list statuses (Pursuit): add the Rating typed next to the
+ * status as a new entry, edit an entry, or remove it.
+ * @param {jQuery} html
+ * @param {Actor} actor
+ */
+export function activateStatusPanelListeners(html, actor) {
+  const update = (statusId, fn) => {
+    const status = STATUS_BY_ID.get(statusId);
+    if (!status?.list) return;
+    const values = [..._listValue(_fieldValue(actor, status))];
+    fn(values);
+    actor.update({ [`system.${status.path}`]: values });
+  };
+  const add = input => {
+    const rating = Math.floor(Number(input.value) || 0);
+    if (rating > 0) update(input.dataset.statusId, values => values.push(rating));
+  };
+
+  html.find(".lh-status-list-add").click(ev => {
+    ev.preventDefault();
+    add(ev.currentTarget.closest(".lh-status").querySelector(".lh-status-list-input"));
+  });
+  html.find(".lh-status-list-input").on("keydown", ev => {
+    if (ev.key !== "Enter") return;
+    ev.preventDefault();
+    add(ev.currentTarget);
+  });
+  html.find(".lh-status-entry-input").on("change", ev => {
+    ev.stopPropagation();
+    const { statusId, index } = ev.currentTarget.dataset;
+    const rating = Math.floor(Number(ev.currentTarget.value) || 0);
+    update(statusId, values => (rating > 0) ? values.splice(index, 1, rating) : values.splice(index, 1));
+  });
+  html.find(".lh-status-entry-remove").click(ev => {
+    ev.preventDefault();
+    const { statusId, index } = ev.currentTarget.dataset;
+    update(statusId, values => values.splice(index, 1));
+  });
 }
 
 /* -------------------------------------------- */
@@ -136,15 +180,32 @@ export function getStatusPanel(actor) {
 /* -------------------------------------------- */
 
 function _fieldValue(actor, status) {
-  return foundry.utils.getProperty(actor._source.system, status.path);
+  const value = foundry.utils.getProperty(actor._source.system, status.path);
+  return status.list ? _listValue(value) : value;
+}
+
+/** Ratings of a list status, ignoring empty/invalid entries. */
+function _listValue(value) {
+  return (Array.isArray(value) ? value : []).map(v => Number(v) || 0).filter(v => v > 0);
 }
 
 function _isFieldActive(status, value) {
+  if (status.list) return _listValue(value).length > 0;
   return status.rated ? (Number(value) || 0) > 0 : !!value;
+}
+
+/** Field value of a status just added from the HUD, and of one just removed. */
+function _activeFieldValue(status) {
+  return status.list ? [1] : status.rated ? 1 : true;
+}
+
+function _inactiveFieldValue(status) {
+  return status.list ? [] : status.rated ? 0 : false;
 }
 
 function _effectName(status, value) {
   const label = game.i18n.localize(`LHTRPG.StatusEffect.${status.id}`);
+  if (status.list) return `${label}: ${_listValue(value).join(" / ")}`;
   return status.rated ? `${label}: ${Number(value) || 0}` : label;
 }
 
@@ -202,9 +263,9 @@ function _onStatusEffectChange(effect, created, userId) {
     if (value === undefined) continue;
 
     if (created && !_isFieldActive(status, value)) {
-      updates[`system.${status.path}`] = status.rated ? 1 : true;
+      updates[`system.${status.path}`] = _activeFieldValue(status);
     } else if (!created && _isFieldActive(status, value) && !actor.statuses.has(statusId)) {
-      updates[`system.${status.path}`] = status.rated ? 0 : false;
+      updates[`system.${status.path}`] = _inactiveFieldValue(status);
     }
   }
   if (!foundry.utils.isEmpty(updates)) actor.update(updates);
@@ -317,10 +378,20 @@ export async function migrateActorStatuses(actor) {
   if (toDelete.length) await actor.deleteEmbeddedDocuments("ActiveEffect", toDelete);
 
   const fieldUpdates = {};
+  // v4: Pursuit went from a single Rating to a list of Ratings
+  const badStatus = actor._source.system["bad-status"];
+  if (badStatus && ("pursuit" in badStatus)) {
+    const pursuit = Number(badStatus.pursuit) || 0;
+    const pursuits = _listValue(badStatus.pursuits);
+    if ((pursuit > 0) && !pursuits.length) pursuits.push(pursuit);
+    fieldUpdates["system.bad-status.pursuits"] = pursuits;
+    fieldUpdates["system.bad-status.-=pursuit"] = null;
+  }
   for (const { status } of cub) {
     if (status.path) {
       const value = _fieldValue(actor, status);
-      if (value !== undefined && !_isFieldActive(status, value)) fieldUpdates[`system.${status.path}`] = status.rated ? 1 : true;
+      const key = `system.${status.path}`;
+      if (value !== undefined && !_isFieldActive(status, fieldUpdates[key] ?? value)) fieldUpdates[key] = _activeFieldValue(status);
     }
     else await actor.toggleStatusEffect(status.id, { active: true });
   }

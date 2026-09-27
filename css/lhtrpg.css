@@ -435,7 +435,8 @@ div.app.lhtrpg.actor section.window-content {
    underline removed, since that line used to cross their tab-title text and
    made it unreadable. Other tabs keep the original artwork. */
 div.app.lhtrpg.actor:has(.tab[data-tab="skills"].active) section.window-content,
-div.app.lhtrpg.actor:has(.tab[data-tab="items"].active) section.window-content {
+div.app.lhtrpg.actor:has(.tab[data-tab="items"].active) section.window-content,
+div.app.lhtrpg.actor:has(.tab[data-group="primary"][data-tab="stats"].active .tab[data-group="stats"][data-tab="status"].active) section.window-content {
   background-image: url("../assets/ui/bg_charsheet_notitle.webp");
 }
 
@@ -1704,7 +1705,8 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   opacity: 1;
 }
 
-.lhtrpg .equip-slot .slot-label {
+.lhtrpg .equip-slot .slot-label,
+.lhtrpg .ticket-slot--ranked .slot-label {
   font-size: 10px;
   text-transform: uppercase;
   color: #d6ffda;
@@ -1716,11 +1718,12 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 .lhtrpg .ticket-slots-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   justify-items: center;
-  align-items: center;
+  align-items: start;
+  row-gap: 18px;
   width: 460px;
-  height: 260px;
+  min-height: 260px;
   margin: 6px auto 0;
 }
 
@@ -1777,6 +1780,97 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+
+/* Treasure Tickets: one stack per rank, listed under the icon */
+.lhtrpg .ticket-slot--ranked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.lhtrpg .ticket-slot--ranked .ticket-slot-icon {
+  position: relative;
+  padding: 2px 4px 0;
+}
+
+.lhtrpg .ticket-slot--ranked .ticket-slot-icon img {
+  display: block;
+  border: 1px solid rgba(214, 255, 218, 0.4);
+  border-radius: 3px;
+}
+
+.lhtrpg .ticket-slot--ranked .ticket-slot-icon .slot-quantity {
+  right: -6px;
+  top: -4px;
+}
+
+.lhtrpg .ticket-rank-list {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 110px;
+  overflow-y: auto;
+}
+
+.lhtrpg .ticket-rank-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0 2px;
+  font-size: 12px;
+  color: #d6ffda;
+}
+
+.lhtrpg .ticket-rank-list .ticket-rank-row:hover {
+  background: rgba(214, 255, 218, 0.08);
+}
+
+.lhtrpg .ticket-rank-list .ticket-rank-name {
+  min-width: 34px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lhtrpg .ticket-rank-list .ticket-rank-qty {
+  min-width: 22px;
+}
+
+.lhtrpg .ticket-rank-list .item-give {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.lhtrpg .ticket-rank-list .item-give:hover {
+  opacity: 1;
+}
+
+.lhtrpg .ticket-rank-list .ticket-rank-add {
+  margin-top: 2px;
+  padding-top: 3px;
+  border-top: 1px solid rgba(214, 255, 218, 0.2);
+}
+
+.lhtrpg .ticket-rank-list .ticket-rank-add span {
+  min-width: 18px;
+  font-weight: bold;
+}
+
+.lhtrpg .ticket-rank-list input.ticket-rank-input {
+  width: 32px;
+  height: 17px;
+  padding: 0 2px;
+  border: 1px solid rgba(214, 255, 218, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  font-size: 12px;
+  text-align: center;
 }
 
 .lhtrpg .inventory-panel {
@@ -3098,6 +3192,119 @@ div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating {
   text-align: center;
 }
 
+/* List statuses (Pursuit): add button next to the input, entries listed below */
+div.app.lhtrpg .lh-status-panel .lh-status--list {
+  cursor: default;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-list-add,
+div.app.lhtrpg .lh-status-panel .lh-status-entry-remove {
+  flex: 0 0 14px;
+  font-size: 10px;
+  text-align: center;
+  color: #d6ffda;
+  cursor: pointer;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-list-add:hover,
+div.app.lhtrpg .lh-status-panel .lh-status-entry-remove:hover {
+  color: #d4a017;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  list-style: none;
+  margin: 0 0 2px 23px;
+  padding: 0 0 0 4px;
+  border-left: 1px solid rgba(212, 160, 23, 0.6);
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-entry {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 17px;
+  padding: 0 2px;
+  border: 1px solid rgba(214, 255, 218, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Character sheet: the status tab uses the whole frame (its background has no
+   bottom section line), with bigger rows and text */
+.lhtrpg.sheet form.character .lh-status-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr) minmax(0, 1.1fr);
+  height: 300px;
+  padding: 6px 6px;
+  column-gap: 10px;
+  font-size: 14px;
+}
+
+.lhtrpg.sheet form.character .lh-status-group {
+  gap: 3px;
+}
+
+.lhtrpg.sheet form.character .lh-status-group-title {
+  margin: 4px 0 2px;
+  font-size: 12px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel .lh-status {
+  height: 26px;
+  gap: 6px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel .lh-status img {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel input.lh-status-rating,
+div.app.lhtrpg form.character .lh-status-panel .lh-status-entry input.lh-status-rating {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 21px;
+  font-size: 14px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel .lh-status-entry {
+  height: 23px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel .lh-status-entries {
+  margin-left: 29px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel .lh-status-list-add,
+div.app.lhtrpg form.character .lh-status-panel .lh-status-entry-remove {
+  font-size: 12px;
+}
+
+/* Several Pursuits scroll inside the column instead of crossing the frame */
+.lhtrpg.sheet form.character .lh-status-group--bad {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.lhtrpg.sheet form.character .lh-status-group--bad > * {
+  flex-shrink: 0;
+}
+
 /* Monster sheet has more room */
 .lhtrpg.sheet.monster .lh-status-panel {
   padding: 6px 4px;
@@ -3109,7 +3316,9 @@ div.app.lhtrpg.monster .lh-status-panel .lh-status {
 }
 
 div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-inner-spin-button,
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button {
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button,
+div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-inner-spin-button,
+div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

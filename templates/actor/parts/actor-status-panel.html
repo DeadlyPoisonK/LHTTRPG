@@ -5,6 +5,28 @@
 	<div class="lh-status-group lh-status-group--{{id}}">
 		<h4 class="lh-status-group-title">{{label}}</h4>
 		{{#each statuses}}
+		{{#if list}}
+		{{!-- Status that can be applied several times (Pursuit): type a Rating and add it as a new entry --}}
+		<div class="lh-status lh-status--list{{#if active}} active{{/if}}" title="{{label}}">
+			<img src="{{img}}" alt="" />
+			<span class="lh-status-label">{{label}}</span>
+			<input class="lh-status-rating lh-status-list-input" type="number" min="1" placeholder="0"
+				data-status-id="{{id}}" />
+			<a class="lh-status-list-add" data-status-id="{{id}}" title="{{localize 'LHTRPG.Add'}}"><i class="fas fa-plus"></i></a>
+		</div>
+		{{#if value.length}}
+		<ol class="lh-status-entries">
+			{{#each value}}
+			<li class="lh-status-entry" title="{{../label}} {{this}}">
+				<input class="lh-status-rating lh-status-entry-input" type="number" min="0" value="{{this}}"
+					data-status-id="{{../id}}" data-index="{{@index}}" />
+				<a class="lh-status-entry-remove" data-status-id="{{../id}}" data-index="{{@index}}"
+					title="{{localize 'LHTRPG.Label.Remove'}}"><i class="fas fa-minus"></i></a>
+			</li>
+			{{/each}}
+		</ol>
+		{{/if}}
+		{{else}}
 		<label class="lh-status{{#if active}} active{{/if}}" title="{{label}}">
 			{{#if rated}}
 			<img src="{{img}}" alt="" />
@@ -21,6 +43,7 @@
 			<span class="lh-status-label">{{label}}</span>
 			{{/if}}
 		</label>
+		{{/if}}
 		{{/each}}
 	</div>
 	{{/each}}

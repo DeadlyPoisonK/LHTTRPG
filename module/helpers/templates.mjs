@@ -11,6 +11,7 @@
     "systems/lhtrpg/templates/actor/parts/actor-effects.html",
     "systems/lhtrpg/templates/actor/parts/actor-inventory.html",
     "systems/lhtrpg/templates/actor/parts/actor-tickets.html",
+    "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-ranked-slot.html",
     "systems/lhtrpg/templates/actor/parts/actor-biography.html",
     "systems/lhtrpg/templates/actor/parts/actor-bio-connections.html",
     "systems/lhtrpg/templates/actor/parts/actor-bio-unions.html",

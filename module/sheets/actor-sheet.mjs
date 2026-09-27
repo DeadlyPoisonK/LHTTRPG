@@ -1,6 +1,6 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {onManageTags} from "../helpers/tags.mjs";
-import {getStatusPanel} from "../helpers/statuses.mjs";
+import {getStatusPanel, activateStatusPanelListeners} from "../helpers/statuses.mjs";
 import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
 import {rankUp} from "../apps/rank-up.mjs";
@@ -252,8 +252,11 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "gear": itemsGear,
     }
 
+    // Treasure Tickets are kept as one stack per rank
+    itemsTicketTreasure.sort((a, b) => (Number(a.system.rank) || 0) - (Number(b.system.rank) || 0));
     context.tickets = {
       "treasure": itemsTicketTreasure,
+      "treasureTotal": itemsTicketTreasure.reduce((sum, i) => sum + (Number(i.system.quantity) || 0), 0),
       "fate": itemsTicketFate,
       "connection": itemsTicketConnection,
       "reset": itemsTicketReset
@@ -386,6 +389,9 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     if (!this.isEditable) return;
 
     // Toggle statuses that have no data field (the others sync from their inputs)
+    // Pursuit list: add/edit/remove Ratings
+    activateStatusPanelListeners(html, this.actor);
+
     html.find('.status-toggle').on("change", ev => {
       this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
     });
@@ -448,6 +454,21 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         const subtype = ev.currentTarget.dataset.subtype;
         Item.create({ name: 'New Ticket', type: 'ticket', system: { subtype } }, { parent: this.actor });
       }
+    });
+
+    // Add a Treasure Ticket of the rank typed next to the button (stacks with that rank if owned)
+    const addRankedTicket = input => {
+      const rank = Math.max(0, Math.floor(Number(input.value) || 0));
+      Item.create({ name: 'New Ticket', type: 'ticket', system: { subtype: 'Treasure', rank, quantity: 1 } }, { parent: this.actor });
+    };
+    html.find('.ticket-rank-create').click(ev => {
+      ev.preventDefault();
+      addRankedTicket(ev.currentTarget.closest('.ticket-rank-add').querySelector('.ticket-rank-input'));
+    });
+    html.find('.ticket-rank-input').on('keydown', ev => {
+      if (ev.key !== 'Enter') return;
+      ev.preventDefault();
+      addRankedTicket(ev.currentTarget);
     });
 
     // Decrease a ticket's stack quantity, removing the item once it hits 0

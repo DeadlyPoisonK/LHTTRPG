@@ -221,7 +221,8 @@
         "Fate": "Ticket del Destino",
         "Connection": "Ticket de Conexión",
         "Reset": "Ticket de Reinicio"
-      }
+      },
+      "AddRank": "Añadir un Ticket del Tesoro de este CR"
     },
     "Status": {
       "Label": "Estado"

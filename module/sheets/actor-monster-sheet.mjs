@@ -1,6 +1,6 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 import { onManageTags } from "../helpers/tags.mjs";
-import { getStatusPanel } from "../helpers/statuses.mjs";
+import { getStatusPanel, activateStatusPanelListeners } from "../helpers/statuses.mjs";
 import { MONSTER_CHECK_MAX_DICE } from "../helpers/monster-checks.mjs";
 import { diceFormula, diceOptions } from "../helpers/dice.mjs";
 
@@ -146,6 +146,9 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         if (!this.isEditable) return;
 
         // Toggle statuses that have no data field (the others sync from their inputs)
+        // Pursuit list: add/edit/remove Ratings
+        activateStatusPanelListeners(html, this.actor);
+
         html.find('.status-toggle').on("change", ev => {
             this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
         });
