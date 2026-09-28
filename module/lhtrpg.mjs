@@ -175,6 +175,19 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
 });
 
 /* -------------------------------------------- */
+/*  Linked Skills                               */
+/* -------------------------------------------- */
+
+// Equipment sheets show their linked skill's name and icon, read at render time.
+// Re-render any open sheet linked to a skill when that skill's name or icon changes.
+Hooks.on("updateItem", (item, changes) => {
+  if (item.type !== "skill" || !(("name" in changes) || ("img" in changes))) return;
+  for (const app of Object.values(ui.windows)) {
+    if (app.item?.system?.linkedSkillUuid === item.uuid) app.render(false);
+  }
+});
+
+/* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
