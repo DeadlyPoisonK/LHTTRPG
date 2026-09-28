@@ -236,7 +236,7 @@
       "system": {
         "description": "<p>[[/gmr 3d6 + 2]]{[3D+2]}</p>\n<p>[[/gmr 2d6 + 25]]{[2D+25]} Phys Damage<br>(Minor): The target takes [Dazed]. A secondary target with the [Kobold] tag within [Target: Single / Range: 4 Sq.] of this enemy (excluding other Kobold Crane enemies) is made to [Teleport (forced)] to the same square as the initial target.</p>",
         "tags": [
-          "[Special Attack"
+          "Special Attack"
         ],
         "timing": "Major",
         "checkType": "Opposed (3D+2 vs Evasion)",

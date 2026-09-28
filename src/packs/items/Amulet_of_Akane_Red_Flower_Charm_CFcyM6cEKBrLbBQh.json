@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A talisman with a motif of madder flowers and leaves.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 4,

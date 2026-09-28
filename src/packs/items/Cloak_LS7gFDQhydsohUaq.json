@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A travel companion that can withstand wind and rain.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 1,
     "mdef": 1,

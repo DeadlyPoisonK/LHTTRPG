@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>An armor made of many scale-like metal pieces sewn onto a leather jacket.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 23,
     "mdef": 18,

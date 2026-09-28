@@ -7,7 +7,7 @@
     "description": "<p>The Target makes a [Safe Move (forced)] up to 1 Sq.</p>\n<p>(Minor &amp; Mob): The target takes [Staggered].</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "",

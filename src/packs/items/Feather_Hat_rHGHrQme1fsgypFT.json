@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A hat with feathers. Rich in variations.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 1,
     "mdef": 0,

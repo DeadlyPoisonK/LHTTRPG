@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed spear with a cross-shaped tip and increased power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 24,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with an exquisite curvature. The sharpness is reasonable.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 1,

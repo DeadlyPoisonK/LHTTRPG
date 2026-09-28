@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A deep, transparent jewel ring. take on magic.</p>",
     "tags": [
-      "[Accessory]",
+      "Accessory",
       "Magic Ring"
     ],
     "pdef": 0,

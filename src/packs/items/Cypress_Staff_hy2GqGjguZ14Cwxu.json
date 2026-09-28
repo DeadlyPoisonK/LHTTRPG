@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long staff that has undergone repeated alchemical treatments to further enhance its magical power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Staff]"
+      "Two-Handed",
+      "Staff"
     ],
     "initiative": -2,
     "rank": 14,

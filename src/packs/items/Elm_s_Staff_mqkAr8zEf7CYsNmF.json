@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wand with a large crystal at the tip.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Staff]"
+      "Two-Handed",
+      "Staff"
     ],
     "initiative": -2,
     "rank": 2,

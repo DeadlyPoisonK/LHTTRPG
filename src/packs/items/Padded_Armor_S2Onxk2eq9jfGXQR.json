@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Cloth armor with padding in the key points of thick clothing.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 3,
     "mdef": 4,

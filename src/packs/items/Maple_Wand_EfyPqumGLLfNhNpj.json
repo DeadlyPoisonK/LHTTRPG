@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wand made from carefully selected maple branches and inlaid with jewels that enhance magical power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 19,

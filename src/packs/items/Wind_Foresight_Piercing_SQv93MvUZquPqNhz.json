@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+2 to your Perception. The five senses become sharper, and even the smallest changes can be sensed.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

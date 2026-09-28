@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A straight hand spear with little frills. It has a long handle and excellent reach and power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 16,

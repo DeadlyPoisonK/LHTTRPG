@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A cross-shaped throwing dagger with blades on all four sides.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 2,

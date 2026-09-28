@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+1 bonus to Disable. The sense of the fingertips becomes sharp and assists in precision work.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

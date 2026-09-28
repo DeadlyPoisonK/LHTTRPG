@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Heavy, solid metal armor that was used in jousting in ancient times.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 69,
     "mdef": 43,

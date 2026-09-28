@@ -21,7 +21,7 @@
     "tags": [
       "Mob",
       "Undead",
-      "Night-Vision"
+      "Night Vision"
     ],
     "biography": "",
     "race": "",
@@ -297,7 +297,7 @@
       "system": {
         "description": "<p>35+4D magic damage.&nbsp;<br>(Minor) The target takes a -3 penalty to [Initiative]. Treat this effect as a Bad Status.</p>",
         "tags": [
-          "Magic attack",
+          "Magic Attack",
           "Blight"
         ],
         "timing": "Major",

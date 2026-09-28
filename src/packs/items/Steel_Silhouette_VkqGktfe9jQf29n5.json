@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>It's a full-body armor that has been lightened while maintaining its defensive power, but it's still heavy.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 62,
     "mdef": 38,

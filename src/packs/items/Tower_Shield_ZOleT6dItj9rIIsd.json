@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A shield large enough to cover a fully armed knight.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 15,
     "mdef": 14,

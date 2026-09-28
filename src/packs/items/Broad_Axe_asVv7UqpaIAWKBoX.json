@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A hatchet with a broad, chiseled blade. It is also used for processing wood.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Hafted]"
+      "One-Handed",
+      "Hafted"
     ],
     "initiative": -1,
     "rank": 14,

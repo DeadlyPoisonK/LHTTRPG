@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A powerful crossbow with double strings.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[CrossBow]"
+      "Two-Handed",
+      "Crossbow"
     ],
     "initiative": -4,
     "rank": 24,

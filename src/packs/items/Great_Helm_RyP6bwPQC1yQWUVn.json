@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Guardian Warrior&gt; &lt;Samurai&gt; only. A sturdy helmet decorated with crescent moons and ox horns.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 18,
     "mdef": 0,

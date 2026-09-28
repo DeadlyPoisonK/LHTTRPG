@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A robe embroidered with magical power that dramatically increases defense.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 40,
     "mdef": 59,

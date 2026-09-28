@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A gauntlet made of tanned leather with small pieces of metal sewn into it.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 4,

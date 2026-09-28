@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large spear originally used on horseback.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 5,

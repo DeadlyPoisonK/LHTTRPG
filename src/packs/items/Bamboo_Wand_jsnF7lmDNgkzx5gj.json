@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wand that uses precious metals to enhance its magical power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 7,

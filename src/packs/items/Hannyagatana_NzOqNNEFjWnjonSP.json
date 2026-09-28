@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A famous sword of unknown origin with a Hannya mask engraved on the blade.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 19,

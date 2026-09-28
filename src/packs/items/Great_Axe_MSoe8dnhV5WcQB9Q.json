@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed battle ax that has grown in size and increased in power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 14,

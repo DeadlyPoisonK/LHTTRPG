@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Armor that protects from the shin down. I can take a step forward.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 0,
     "mdef": 0,

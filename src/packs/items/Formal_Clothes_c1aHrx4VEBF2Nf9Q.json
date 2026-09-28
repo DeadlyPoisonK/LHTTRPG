@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Useless items in everyday life. Be prepared for important meetings with the Landlings. Please don't wear it on your clothes.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 0,
     "mdef": 0,

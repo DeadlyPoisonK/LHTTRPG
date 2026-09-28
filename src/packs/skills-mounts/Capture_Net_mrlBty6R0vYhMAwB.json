@@ -6,7 +6,7 @@
     "description": "<p>Make the target [Teleport (forced)] up to Sq you are in.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "Auto\t\t",

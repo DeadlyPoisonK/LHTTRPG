@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>You have 12 inventory slots dedicated to Consumables.</p>",
     "tags": [
-      "[Bag]",
-      "[Accessory]"
+      "Bag",
+      "Accessory"
     ],
     "rank": 27,
     "price": 1400,

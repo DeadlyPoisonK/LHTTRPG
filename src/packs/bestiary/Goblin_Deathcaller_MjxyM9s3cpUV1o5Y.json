@@ -195,7 +195,7 @@
       "system": {
         "description": "<p>[[/gmr 3d6 + 5]]{[3D+5]} /resistance</p>\n<hr>\n<p>[[/gmr 2d6 + 60]]{[60+2D]}&nbsp; magic damage. Result 19: target takes [Dazed] and [Afflicted].</p>\n<p>If the attack fails, the target takes [Pursuit] 10.</p>",
         "tags": [
-          "Magic attack",
+          "Magic Attack",
           "Blight"
         ],
         "timing": "Major",
@@ -248,7 +248,7 @@
       "system": {
         "description": "<ul>\n<li>If target's Hate is above 2: target takes [dazed].</li>\n<li>If above Hate 4, target also takes [staggered].</li>\n<li>If above Hate 6, target also takes [afflicted].</li>\n<li>If target has Hate 8&lt; and more than 20 HP, their HP becomes 20.&nbsp;</li>\n<li>This enemy then becomes [Dead].</li>\n</ul>",
         "tags": [
-          "Special attack"
+          "Special Attack"
         ],
         "timing": "Major",
         "checkType": " 5+3D/resistance",

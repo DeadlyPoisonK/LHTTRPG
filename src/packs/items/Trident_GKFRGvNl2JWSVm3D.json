@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A one-handed spear with three split ends.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 10,

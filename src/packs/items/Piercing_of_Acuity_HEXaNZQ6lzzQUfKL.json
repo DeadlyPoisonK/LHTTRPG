@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+1 to your Perception. Earrings that sharpen the five senses, including hearing.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

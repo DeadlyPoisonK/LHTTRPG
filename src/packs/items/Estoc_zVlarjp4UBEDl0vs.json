@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sharp two-handed sword that specializes in stabbing.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 8,

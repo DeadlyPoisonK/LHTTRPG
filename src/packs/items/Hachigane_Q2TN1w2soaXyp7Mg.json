@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Samurai&gt; &lt;Martial Artist&gt; only. A headband with an iron plate.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 3,
     "mdef": 0,

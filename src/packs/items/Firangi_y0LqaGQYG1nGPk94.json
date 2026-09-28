@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>One-handed straight sword for cavalry. Suitable for piercing as well as slashing.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 23,

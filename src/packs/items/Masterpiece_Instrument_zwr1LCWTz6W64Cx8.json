@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>An instrument made by a craftsman with outstanding skill.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Instrument]"
+      "Two-Handed",
+      "Instrument"
     ],
     "initiative": 0,
     "rank": 16,

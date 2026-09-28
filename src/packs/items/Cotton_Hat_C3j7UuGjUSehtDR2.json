@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A hat sewn from thick, durable cotton to absorb impact.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 6,
     "mdef": 0,

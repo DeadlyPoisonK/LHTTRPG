@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A bow carved out of hard wood.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 4,

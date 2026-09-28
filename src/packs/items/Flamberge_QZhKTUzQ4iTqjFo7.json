@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed sword with a flaming blade.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 4,

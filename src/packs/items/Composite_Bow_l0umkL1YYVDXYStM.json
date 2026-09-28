@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A bow made by pasting together several types of materials to achieve strong elasticity.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 6,

@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor to protect the torso with small pieces of metal sewn to the back of the leather.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 27,
     "mdef": 22,

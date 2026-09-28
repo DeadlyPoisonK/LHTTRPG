@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A double-edged sword with an intricately decorated knuckle guard.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 16,

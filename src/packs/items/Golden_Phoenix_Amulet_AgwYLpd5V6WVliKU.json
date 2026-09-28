@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A talisman with a beautiful but poisonous buttercup as a symbol of warding off evil.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 6,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large two-handed ax with a large crescent-shaped blade.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 24,

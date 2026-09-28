@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A kite shield with a cross drawn on its surface.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 9,
     "mdef": 8,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long mistletoe staff made with emphasis on transmitting magical power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Staff]"
+      "Two-Handed",
+      "Staff"
     ],
     "initiative": -2,
     "rank": 24,

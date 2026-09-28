@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A Japanese bow made by bundling multiple pieces of wood together, wrapping them with wisteria vines, and coating them with lacquer.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 27,

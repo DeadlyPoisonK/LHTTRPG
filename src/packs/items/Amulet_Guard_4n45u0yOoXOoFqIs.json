@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+7 to your [Magic]. Gloves sewn with magic amulets.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

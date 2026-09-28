@@ -8,7 +8,7 @@
     "description": "<p>Lose the minor action immediately as a cost. [Underwater] and one Sq with prop with similar effect. You may instantaneously transfer to the selected Sq.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

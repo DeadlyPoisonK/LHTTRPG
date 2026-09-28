@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A spear with a large triangular tip.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 9,

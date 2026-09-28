@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A spear with a leaf-like tip on a very long handle.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 2,

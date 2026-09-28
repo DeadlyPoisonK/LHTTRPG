@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Plate armor that protects the chest.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 9,
     "mdef": 3,

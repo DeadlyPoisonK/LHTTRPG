@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A Qatar whose power has been increased by using rare metals.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 27,

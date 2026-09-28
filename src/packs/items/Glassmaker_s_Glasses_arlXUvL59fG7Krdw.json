@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+2 bonus to Analysis. A working glass that allows you to see even the smallest details.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 0,
     "mdef": 0,

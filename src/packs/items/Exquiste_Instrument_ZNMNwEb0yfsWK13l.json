@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A selection of instruments made by master craftsmen.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Instrument]"
+      "Two-Handed",
+      "Instrument"
     ],
     "initiative": 0,
     "rank": 21,

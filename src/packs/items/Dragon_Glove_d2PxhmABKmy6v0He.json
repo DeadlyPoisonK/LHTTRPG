@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A pair of sharp and sturdy gauntlets made from dragon material.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 30,

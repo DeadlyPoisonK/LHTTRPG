@@ -12,6 +12,7 @@ import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
 import { registerStatuses } from "./helpers/statuses.mjs";
 import { registerMonsterChecks } from "./helpers/monster-checks.mjs";
+import { registerTags } from "./helpers/tags.mjs";
 import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
 import { registerCharacterOptions } from "./helpers/character-options.mjs";
@@ -62,6 +63,8 @@ Hooks.once('init', async function () {
   registerStatuses();
   // Monster Evasion/Resistance: legacy text -> { dice, mod }
   registerMonsterChecks();
+  // Tag catalog, tag editor helper and tag normalization
+  registerTags();
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
   // Time passing per round

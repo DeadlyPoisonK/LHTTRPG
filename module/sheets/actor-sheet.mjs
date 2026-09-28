@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-import {onManageTags} from "../helpers/tags.mjs";
+import {activateTagInput} from "../helpers/tags.mjs";
 import {getStatusPanel, activateStatusPanelListeners} from "../helpers/statuses.mjs";
 import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
@@ -488,7 +488,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
     // Tag management
-    html.find(".tag-control").click(ev => onManageTags(ev, this.actor));
+    activateTagInput(html, this.actor, this);
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));

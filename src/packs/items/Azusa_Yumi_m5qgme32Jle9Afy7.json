@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A ceremonial bow used to ward off evil spirits.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 16,

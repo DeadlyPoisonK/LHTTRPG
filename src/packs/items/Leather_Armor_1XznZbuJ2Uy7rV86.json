@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor made from layered tanned hides.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 5,
     "mdef": 3,

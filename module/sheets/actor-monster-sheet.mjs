@@ -1,5 +1,5 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
-import { onManageTags } from "../helpers/tags.mjs";
+import { activateTagInput } from "../helpers/tags.mjs";
 import { getStatusPanel, activateStatusPanelListeners } from "../helpers/statuses.mjs";
 import { MONSTER_CHECK_MAX_DICE } from "../helpers/monster-checks.mjs";
 import { diceFormula, diceOptions } from "../helpers/dice.mjs";
@@ -168,7 +168,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
         // Tag management
-        html.find(".tag-control").click(ev => onManageTags(ev, this.actor));
+        activateTagInput(html, this.actor, this);
 
         // Rollable abilities.
         html.find('.rollable').click(this._onRoll.bind(this));

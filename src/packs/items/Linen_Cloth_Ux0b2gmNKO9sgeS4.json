@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Cloth armor made by stitching together many layers of sturdy linen cloth.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 26,
     "mdef": 39,

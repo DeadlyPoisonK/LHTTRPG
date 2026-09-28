@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Wand for magicians. Characterized by inlaid precious metal patterns.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Staff]"
+      "Two-Handed",
+      "Staff"
     ],
     "initiative": -2,
     "rank": 5,

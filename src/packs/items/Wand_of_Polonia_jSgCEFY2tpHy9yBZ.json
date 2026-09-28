@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wand that has been polished and engraved with magic silver on its surface.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 30,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+7 to your [Attack]. Armor made from chain mail gloves reinforced with sheet metal.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

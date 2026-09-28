@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a long blade that can only be wielded with both hands.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 2,

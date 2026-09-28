@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sharp spear with an elongated willow leaf-like tip.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 23,

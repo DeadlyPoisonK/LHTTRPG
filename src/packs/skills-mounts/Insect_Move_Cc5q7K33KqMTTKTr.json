@@ -8,7 +8,7 @@
     "description": "<p>You may make a [Normal Move] of 2 Sq. During this move, you can ignore [Height] as you move.</p><p>(Minor): The travel distance is +1 Sq.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

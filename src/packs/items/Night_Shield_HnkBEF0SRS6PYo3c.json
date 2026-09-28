@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A metal shield large enough to cover the upper body. Beautifully crafted.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 11,
     "mdef": 10,

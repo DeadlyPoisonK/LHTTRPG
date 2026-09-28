@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>A dagger with a unique, shallow curve. It was used by the hill tribes and has undergone a unique evolution.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]",
-      "[Light]"
+      "One-Handed",
+      "Blade",
+      "Light"
     ],
     "initiative": 0,
     "rank": 19,

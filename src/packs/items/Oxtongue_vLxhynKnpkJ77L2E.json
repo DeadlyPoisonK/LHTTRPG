@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sturdy one-handed infantry spear.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 8,

@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Leather armor with multiple rivets.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 10,
     "mdef": 7,

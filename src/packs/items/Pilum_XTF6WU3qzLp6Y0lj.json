@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long spear with a characteristic lozenge-shaped tip and a thin neck.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 4,

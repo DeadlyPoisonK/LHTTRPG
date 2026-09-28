@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A simple staff that grants the user a minimal amount of magical power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 1,

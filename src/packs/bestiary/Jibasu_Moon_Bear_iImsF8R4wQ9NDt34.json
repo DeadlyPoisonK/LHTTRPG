@@ -233,7 +233,7 @@
       "system": {
         "description": "<p>26+2D damage and the target takes [dazed]. As a minor action, the target cannot take any pre-damage or post-damage actions.</p>",
         "tags": [
-          " Physical Attack"
+          "Physical Attack"
         ],
         "timing": "-",
         "checkType": "6+2D vs Evasion",

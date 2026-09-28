@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+1 bonus to Negotiate. A necklace that makes it easier to understand the feelings of others.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

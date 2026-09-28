@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A crossbow that can auto-load ammunition. Increased power by firing.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[CrossBow]"
+      "Two-Handed",
+      "Crossbow"
     ],
     "initiative": -4,
     "rank": 9,

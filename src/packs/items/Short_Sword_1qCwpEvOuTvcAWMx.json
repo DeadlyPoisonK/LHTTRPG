@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>A double-edged sword with a blade length of about 50 cm. easy to handle.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]",
-      "[Light]"
+      "One-Handed",
+      "Blade",
+      "Light"
     ],
     "initiative": 0,
     "rank": 2,

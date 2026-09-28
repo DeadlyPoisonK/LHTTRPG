@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+2 to the achievement value of the judgment you make targeting [Difficulty of Identification]. A collection of common monsters.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

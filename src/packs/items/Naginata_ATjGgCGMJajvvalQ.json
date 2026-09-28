@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A gift of a huge sword with a long handle attached. Push through the enemy with the momentum of weight and length.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 14,

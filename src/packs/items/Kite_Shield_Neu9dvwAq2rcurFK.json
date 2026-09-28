@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large shield with a pointed bottom.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 7,
     "mdef": 6,

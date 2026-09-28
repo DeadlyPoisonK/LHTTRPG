@@ -235,7 +235,7 @@
         "description": "<p>[[/gmr 3d6 + 2]]{[3D+2]}</p>\n<p>[[/gmr 2d6 + 15]]{[2D+15]} Magic damage<br>(Minor) +5 damage.<br>Fail [Attack Check] This enemy gains [Rigor]</p>",
         "tags": [
           "Magic Attack",
-          "Electric"
+          "Shock"
         ],
         "timing": "Major",
         "checkType": "Opposed 3D+2 vs Resistance",

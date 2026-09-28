@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A one-handed spear shaped like a candlestick with a conical tip and circular guard.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 19,

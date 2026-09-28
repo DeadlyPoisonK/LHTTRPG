@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A one-of-a-kind sword made by a swordsmith by repeating many studies.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 16,

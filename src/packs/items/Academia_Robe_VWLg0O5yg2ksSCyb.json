@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A simple but strong robe worn by scholars.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 12,
     "mdef": 18,

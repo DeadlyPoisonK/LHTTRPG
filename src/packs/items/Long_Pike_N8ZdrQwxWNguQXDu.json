@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed spear with a long handle over 4 meters long.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 19,

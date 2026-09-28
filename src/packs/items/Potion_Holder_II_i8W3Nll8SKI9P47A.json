@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>You have 7 inventory slots dedicated to [potions] and [potions].</p>",
     "tags": [
-      "[Bag]",
-      "[Accessory]"
+      "Bag",
+      "Accessory"
     ],
     "rank": 10,
     "price": 240,

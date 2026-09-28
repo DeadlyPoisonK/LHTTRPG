@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A special-shaped dagger that is held like a fist.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 2,

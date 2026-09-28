@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A stick-shaped weapon with a handle.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 8,

@@ -276,7 +276,7 @@
         "description": "<p>20+2D damage. If the target is Hate Top, their initiative drops by 3 as a bad status.&nbsp;</p>",
         "tags": [
           "Physical Attack",
-          "Electric"
+          "Shock"
         ],
         "timing": "Major",
         "checkType": "5+2D vs Evasion",

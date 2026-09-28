@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A striking weapon with a metal head at the tip.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Hafted]"
+      "One-Handed",
+      "Hafted"
     ],
     "initiative": -1,
     "rank": 1,

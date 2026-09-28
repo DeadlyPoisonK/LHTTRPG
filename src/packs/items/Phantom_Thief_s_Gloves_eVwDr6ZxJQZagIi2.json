@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+2 bonus to Disable. Gloves that allow you to do more precise work.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

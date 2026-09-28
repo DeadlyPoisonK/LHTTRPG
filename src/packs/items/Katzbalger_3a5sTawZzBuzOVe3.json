@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wide straight sword with an S-shaped or eight-shaped tsuba and a pommel shaped like a fish tail.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 30,

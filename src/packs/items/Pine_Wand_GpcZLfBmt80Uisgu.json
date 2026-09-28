@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Wand for magicians. Fine patterns are engraved on the surface.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 4,

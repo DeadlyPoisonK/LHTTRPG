@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A metal gauntlet that covers the upper arm to the fingers.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 10,

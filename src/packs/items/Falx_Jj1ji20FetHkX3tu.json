@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A curved sword with a curved blade resembling a sickle and a sharp blade inside.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 16,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large two-handed crossbow with increased weight and power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[CrossBow]"
+      "Two-Handed",
+      "Crossbow"
     ],
     "initiative": -4,
     "rank": 14,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed curved sword with a wide, curved blade that resembles the moon.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 24,

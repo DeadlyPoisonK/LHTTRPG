@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>A dagger with a conical or triangular-pyramid blade, it is powerful enough to pierce through armor.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]",
-      "[Light]"
+      "One-Handed",
+      "Blade",
+      "Light"
     ],
     "initiative": 0,
     "rank": 30,

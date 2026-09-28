@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A jousting spear with increased weight and power due to the use of many metal parts.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 30,

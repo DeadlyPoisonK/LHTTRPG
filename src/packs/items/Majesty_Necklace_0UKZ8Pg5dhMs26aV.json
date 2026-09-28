@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+2 bonus to Negotiate. <span class=\"Y2IQFc\" lang=\"en\">A necklace that gives you an irresistible dignity.</span></p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

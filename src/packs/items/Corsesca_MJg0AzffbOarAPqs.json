@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed spear with a double-edged tip and blades protruding left and right at its base.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Spear]"
+      "Two-Handed",
+      "Spear"
     ],
     "initiative": 2,
     "rank": 14,

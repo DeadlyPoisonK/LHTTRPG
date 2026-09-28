@@ -237,7 +237,7 @@
         "description": "<p>Single close target. 55+2D physical [fire] damage.</p>\n<p>&lt;Minor&gt;: This attack has range 2.</p>",
         "tags": [
           "Physical Attack",
-          "Fire"
+          "Flame"
         ],
         "timing": "Major",
         "checkType": "14 vs Evasion",

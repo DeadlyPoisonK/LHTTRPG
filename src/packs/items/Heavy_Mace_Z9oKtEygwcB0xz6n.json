@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A mace with a metal pommel.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 9,

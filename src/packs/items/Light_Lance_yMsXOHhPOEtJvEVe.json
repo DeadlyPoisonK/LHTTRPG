@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Originally intended for horseback use, the spear was adapted for foot use.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 6,

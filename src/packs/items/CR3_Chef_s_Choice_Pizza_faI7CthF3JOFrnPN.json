@@ -4,10 +4,10 @@
   "system": {
     "description": "<p>-10 to the strength of the target's [Fatigue] state.</p>",
     "tags": [
-      "[Food]",
-      "[Consumable]",
-      "[Preparation]",
-      "[Rare]"
+      "Food",
+      "Consumable",
+      "Preparation",
+      "Rare"
     ],
     "rank": 3,
     "price": 60,

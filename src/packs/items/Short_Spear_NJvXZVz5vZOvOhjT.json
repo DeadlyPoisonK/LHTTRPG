@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A hand spear with a shorter handle for easier handling.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 1,

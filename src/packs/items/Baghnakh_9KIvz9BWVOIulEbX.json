@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A claw for combat that is held in the palm of your hand.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 13,

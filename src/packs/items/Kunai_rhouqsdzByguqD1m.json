@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A double-edged dagger that is larger than a shuriken and can be used in a variety of ways besides throwing.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 30,

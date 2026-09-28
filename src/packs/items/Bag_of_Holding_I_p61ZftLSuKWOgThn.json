@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You have 6 inventory slots. Also known as \"Thora's Magic Bag\".</p>",
     "tags": [
-      "[Bag]"
+      "Bag"
     ],
     "rank": 5,
     "price": 90,

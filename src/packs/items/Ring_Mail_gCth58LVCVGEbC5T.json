@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor made of countless small metal rings sewn together.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 7,
     "mdef": 2,

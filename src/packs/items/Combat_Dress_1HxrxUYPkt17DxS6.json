@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Cloth armor designed not to get in the way even in intense battles. Many of them look beautiful.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 36,
     "mdef": 53,

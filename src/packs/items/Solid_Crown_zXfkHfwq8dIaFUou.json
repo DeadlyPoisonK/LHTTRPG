@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Guardian Warrior&gt; &lt;Martial Artist&gt; only. Head armor made of lightweight hard metal.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 14,
     "mdef": 0,

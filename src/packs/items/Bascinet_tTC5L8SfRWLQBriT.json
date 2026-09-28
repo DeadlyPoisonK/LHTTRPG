@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Guardian Warrior&gt; &lt;Martial Artist&gt; only. cover the entire head.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 5,
     "mdef": 0,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A jewel ring that shines softly in yellow. take on magic.</p>",
     "tags": [
-      "[Accessory]",
-      "[Magic Stone]"
+      "Accessory",
+      "Magic Stone"
     ],
     "pdef": 0,
     "mdef": 0,

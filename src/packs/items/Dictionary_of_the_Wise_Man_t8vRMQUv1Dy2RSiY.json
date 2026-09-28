@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+2 to your [Knowledge]. A book that allows you to master the deeper knowledge of Theldesia.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A strange longsword and whip made by forging a thin band of highly flexible metal.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Whip]"
+      "One-Handed",
+      "Whip"
     ],
     "initiative": 2,
     "rank": 30,

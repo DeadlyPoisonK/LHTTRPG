@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>An instrument with a tone that bewilders the mind of all who hear it.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Instrument]"
+      "Two-Handed",
+      "Instrument"
     ],
     "initiative": 0,
     "rank": 26,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a very long handle. It is easy to apply force and can cut deeply.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 9,

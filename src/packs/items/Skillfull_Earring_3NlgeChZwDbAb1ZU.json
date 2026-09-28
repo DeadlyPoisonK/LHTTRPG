@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+1 bonus to Operate.&nbsp;</p>\n<p id=\"tw-target-text\" class=\"tw-data-text tw-text-large tw-ta\" dir=\"ltr\" data-placeholder=\"Traducci&oacute;n\"><span class=\"Y2IQFc\" lang=\"en\">Earrings that allow you to move quickly and accurately.</span></p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

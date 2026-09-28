@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor for infantry that uses plenty of metal parts to increase defense.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 36,
     "mdef": 21,

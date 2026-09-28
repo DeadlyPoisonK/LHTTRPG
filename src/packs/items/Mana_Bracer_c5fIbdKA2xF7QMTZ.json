@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+2 to your [Magic]. Gloves carved with magical patterns.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

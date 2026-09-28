@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A relatively affordable instrument. Perfect for beginners.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Instrument]"
+      "Two-Handed",
+      "Instrument"
     ],
     "initiative": 0,
     "rank": 1,

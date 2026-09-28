@@ -6,10 +6,10 @@
   "system": {
     "description": "<p>When casting spells that deal [Decay] damage, increase the damage by +5.</p>\n<hr>\n<p>A golden chalice adorned with ancient runes and encrusted with dark gemstones. This chalice is said to have been used in rituals by necromancers to commune with the dead and harness their power. It emits an eerie glow and seems to hum with an unsettling energy when held.</p>",
     "tags": [
-      "[Accessory]",
-      "[Magic Stone]",
-      "[Rare]",
-      "[M5]"
+      "Accessory",
+      "Magic Stone",
+      "Rare",
+      "M5"
     ],
     "pdef": 0,
     "mdef": 0,

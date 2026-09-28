@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A talisman adorned with a bright thistle that protects itself with sharp thorns.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 9,

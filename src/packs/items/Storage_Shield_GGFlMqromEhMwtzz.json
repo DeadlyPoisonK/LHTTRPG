@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>You have 5 inventory slots. +6 to your [Physical Defense].</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 6,
     "mdef": 0,

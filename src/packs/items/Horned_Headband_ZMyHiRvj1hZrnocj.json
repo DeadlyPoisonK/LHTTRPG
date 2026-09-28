@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Demon King&gt; only. +1 to your [Bargaining Value]. A headband with horns like a demon king.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 0,
     "mdef": 1,

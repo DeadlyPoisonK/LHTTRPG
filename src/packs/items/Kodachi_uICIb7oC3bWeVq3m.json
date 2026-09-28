@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a rather short blade. It is easy to handle, and can slash sharply into vital areas.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 6,

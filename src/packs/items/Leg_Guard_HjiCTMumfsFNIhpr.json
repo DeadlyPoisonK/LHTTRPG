@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>The so-called shin guard. Focused protection below the knees.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 0,
     "mdef": 0,

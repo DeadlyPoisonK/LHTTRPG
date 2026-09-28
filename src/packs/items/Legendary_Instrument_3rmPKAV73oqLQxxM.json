@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A very rare instrument said to have been made by a legendary craftsman.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Instrument]"
+      "Two-Handed",
+      "Instrument"
     ],
     "initiative": 0,
     "rank": 30,

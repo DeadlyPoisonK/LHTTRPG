@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A beautifully decorated coat that a knight wears over his armor.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 7,
     "mdef": 7,

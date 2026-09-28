@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A shuriken with a straight shape. Excellent stealth and power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 19,

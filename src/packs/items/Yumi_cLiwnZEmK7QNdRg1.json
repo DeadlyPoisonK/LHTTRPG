@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A longbow with exquisite balance.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 8,

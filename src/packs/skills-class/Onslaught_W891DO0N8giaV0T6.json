@@ -5,7 +5,7 @@
     "description": "<p>Deal [(SR+4)D + (Attack Power)] physical damage to the target. You gain a +1D bonus to your next [Hit Check]. Treat this effect as a Combat Status that is removed after being applied once.</p>\n<hr>\n<p>A special skill that wields a large two-handed weapon and performs a tremendous onslaught. Enemies lose their balance due to its momentum and impact, and subsequent attacks will easily hit.</p>",
     "tags": [
       "Weapon Attack",
-      "Two Handed"
+      "Two-Handed"
     ],
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Evasion)",

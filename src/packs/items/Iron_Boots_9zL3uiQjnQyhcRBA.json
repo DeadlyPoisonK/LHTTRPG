@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+2 bonus to Endurance. A shoe that gives you the toughness of steel.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 0,
     "mdef": 0,

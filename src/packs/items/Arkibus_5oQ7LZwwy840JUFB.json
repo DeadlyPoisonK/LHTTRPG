@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor that reinforces the vital points of the upper body in preparation for sniping.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 53,
     "mdef": 44,

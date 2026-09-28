@@ -397,7 +397,7 @@
       "system": {
         "description": "<p>Cannot be used on the main process where this enemy has \"moved\".</p>\n<p>[[/r 2d6 +7]]{[2D+7]}</p>\n<p>[[/gmr 2d6 + 40]]{[2D+40]} physical damage.</p>\n<p>[Causal Power 1] If the target's hate is 4 or less, the target immediately loses the will to fight and enters the [Acted] state.</p>",
         "tags": [
-          "Mele Attack"
+          "Melee Attack"
         ],
         "timing": "Major",
         "checkType": "7+2D/Evasion",
@@ -449,7 +449,7 @@
       "system": {
         "description": "<p>[[/r 2d6 +7]]{[2D+7]}</p>\n<p>[[/gmr 2d6 + 40]]{[2D+40]} physical damage.</p>\n<p>[Minor] This special skill has a \"Range: 2Sq\".</p>\n<p>[Fate 1] Gives an additional [Pursuit: 10] to the target.</p>",
         "tags": [
-          "Mele Attack"
+          "Melee Attack"
         ],
         "timing": "Major",
         "checkType": "7+2D/Evasion",

@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>+1 to your [Knowledge]. A comprehensive dictionary covering a wide range of topics.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

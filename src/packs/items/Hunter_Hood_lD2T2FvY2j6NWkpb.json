@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A hood worn by hunters. very durable</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 3,
     "mdef": 0,

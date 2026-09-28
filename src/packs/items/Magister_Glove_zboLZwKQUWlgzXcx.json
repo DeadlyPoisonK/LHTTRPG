@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+4 to your [Magic]. Magic amplification gloves for magicians.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

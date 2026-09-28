@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You have 8 inventory slots. In addition, it has 5 inventory slots dedicated to [Consumables].</p>",
     "tags": [
-      "[Bag]"
+      "Bag"
     ],
     "rank": 15,
     "price": 480,

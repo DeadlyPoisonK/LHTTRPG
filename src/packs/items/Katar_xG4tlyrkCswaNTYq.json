@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A special dagger used in the south. You can pierce with the same action as punching with your fist.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 16,

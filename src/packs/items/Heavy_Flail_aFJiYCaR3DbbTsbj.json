@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Tangzao weapon that connects metal rods and strikes with centrifugal force and weight.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 19,

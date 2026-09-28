@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+10 to your [Attack]. High quality arm guards made of fine metal.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

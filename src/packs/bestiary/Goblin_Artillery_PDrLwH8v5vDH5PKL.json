@@ -275,7 +275,7 @@
       "system": {
         "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[40+2</span></span><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">D] inflicts physical damage.</span></span></p>\n<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Minor] This skill</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">becomes &ldquo;Target: Area(A)&rdquo;</span></span></p>",
         "tags": [
-          "Shooting Attack"
+          "Ranged Attack"
         ],
         "timing": "Major",
         "checkType": "Opposed (13 Fixed vs Evasion)",

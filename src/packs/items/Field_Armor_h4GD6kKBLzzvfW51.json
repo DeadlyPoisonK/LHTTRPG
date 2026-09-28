@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Horse armor with all parts molded from sheet metal to enhance defense.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 54,
     "mdef": 33,

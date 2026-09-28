@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A well-made sword is called a good product, and the best one is called a good product. A dish admired by samurai.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 27,

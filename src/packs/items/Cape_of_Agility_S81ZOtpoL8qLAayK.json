@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+1 bonus to Athletics. A cape that makes you feel lighter when you wear it.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 0,
     "mdef": 0,

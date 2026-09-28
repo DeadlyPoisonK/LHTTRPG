@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>A single-edged dagger that is said to have been worn by highland warriors from everyday life to combat.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]",
-      "[Light]"
+      "One-Handed",
+      "Blade",
+      "Light"
     ],
     "initiative": 0,
     "rank": 16,

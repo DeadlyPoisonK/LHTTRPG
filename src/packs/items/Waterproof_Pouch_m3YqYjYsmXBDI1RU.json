@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>You have 2 inventory slots. Items in this slot are not subject to unwanted effects, including vanishing.</p>",
     "tags": [
-      "[Bag]",
-      "[Accessory]"
+      "Bag",
+      "Accessory"
     ],
     "rank": 12,
     "price": 320,

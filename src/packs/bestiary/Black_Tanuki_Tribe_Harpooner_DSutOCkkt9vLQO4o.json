@@ -20,7 +20,7 @@
     },
     "tags": [
       "Humanoid",
-      "Night-Vision"
+      "Night Vision"
     ],
     "biography": "",
     "race": "",
@@ -296,7 +296,7 @@
       "system": {
         "description": "<p><span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[40+2D] Physics</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">cause damage.</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">[Minor] Against this attack</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">\"Timing: Immediately before, immediately after applying damage\" actions are</span></span> <span class=\"jCAhz ChMk0b\"><span class=\"ryNqvb\">No.</span></span></p>",
         "tags": [
-          "Mele Attack"
+          "Melee Attack"
         ],
         "timing": "-",
         "checkType": "Confrontation (4 +3D/Evasion)",

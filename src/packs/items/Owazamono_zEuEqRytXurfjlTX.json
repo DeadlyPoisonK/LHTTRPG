@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A famous sword that can be recognized at a glance even from a distance. Not only the beauty, but also the sharpness is top notch.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 30,

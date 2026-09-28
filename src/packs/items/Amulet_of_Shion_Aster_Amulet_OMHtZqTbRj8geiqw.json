@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A talisman that wards off evil with the power of the flower of Zion, which has long been known for its medicinal properties.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 12,

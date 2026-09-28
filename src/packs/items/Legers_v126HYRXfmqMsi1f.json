@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Metal armor that protects from the ankle to the knee, centering on the shin.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 1,
     "mdef": 1,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A genuine work created by blacksmiths selected from all over the empire. The inscription is proof that it is one of the best products in the world.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 30,

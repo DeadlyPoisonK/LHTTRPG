@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Chainmail made to cover most of the body. Combines protection and flexibility.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 41,
     "mdef": 34,

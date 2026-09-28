@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A jewel ring with a vivid blue color that seems to draw you in. Possessing a very strong magical power.</p>",
     "tags": [
-      "[Accessory]",
-      "[Magic Stone]"
+      "Accessory",
+      "Magic Stone"
     ],
     "pdef": 0,
     "mdef": 0,

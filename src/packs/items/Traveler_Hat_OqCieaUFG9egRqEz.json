@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Protect yourself from the natural enemies of travel, the strength of the sun and the cold wind. hat with brim.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 9,
     "mdef": 0,

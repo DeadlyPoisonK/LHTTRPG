@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A rugged piece of metal that protects and strengthens the fist.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 6,

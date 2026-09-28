@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A double-edged two-handed sword with a long handle that can be used with both hands.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 19,

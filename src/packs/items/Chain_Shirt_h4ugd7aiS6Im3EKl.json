@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A metal armor woven with fine chains.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 17,
     "mdef": 13,

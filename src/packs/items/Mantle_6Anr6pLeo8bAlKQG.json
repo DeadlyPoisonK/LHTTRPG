@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Casually or extravagantly. It will make you and your clothes stand out.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 1,
     "mdef": 1,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Guardian Warrior&gt; &lt;Samurai&gt; only. Quite heavy.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 2,
     "mdef": 0,

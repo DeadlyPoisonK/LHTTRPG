@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Leather armor with multiple rivets.</p>\n<hr>\n<p>This armor's [Physical Defense] increases by +4.</p>",
     "tags": [
-      "[Medium Armor]",
+      "Medium Armor",
       "M2"
     ],
     "pdef": 14,

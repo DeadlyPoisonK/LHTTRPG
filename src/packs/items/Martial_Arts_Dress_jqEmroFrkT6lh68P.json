@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Cloth armor that does not get in the way even during intense movements. Many of them have flashy designs.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 4,
     "mdef": 6,

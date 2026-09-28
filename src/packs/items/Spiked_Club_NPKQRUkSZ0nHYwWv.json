@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A dangerous club with many sharp metal spikes embedded in it.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Hafted]"
+      "One-Handed",
+      "Hafted"
     ],
     "initiative": -1,
     "rank": 19,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword forged by a master craftsman who put his heart and soul into offering it to the gods.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 23,

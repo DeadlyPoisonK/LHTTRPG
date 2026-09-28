@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A one-handed spear that has been balanced and made for melee.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 2,

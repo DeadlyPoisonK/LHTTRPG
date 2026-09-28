@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long staff made from carefully selected maple trees and inlaid with jewels that enhance magical power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Staff]"
+      "Two-Handed",
+      "Staff"
     ],
     "initiative": -2,
     "rank": 19,

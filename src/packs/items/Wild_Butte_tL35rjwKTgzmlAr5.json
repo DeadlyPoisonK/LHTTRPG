@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A flexible whip made from demon beast leather.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Whip]"
+      "One-Handed",
+      "Whip"
     ],
     "initiative": 2,
     "rank": 19,

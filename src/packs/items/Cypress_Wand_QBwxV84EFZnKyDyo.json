@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wand that has undergone multiple alchemical treatments to further enhance its magical power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 14,

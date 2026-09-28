@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A wide curved sword used by desert people. It is also called a barbarian sword and has a large and intimidating feeling.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 13,

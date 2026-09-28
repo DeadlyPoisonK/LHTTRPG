@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+10 to your [Magic Power]. A bracelet inlaid with a gemstone that amplifies magical power.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

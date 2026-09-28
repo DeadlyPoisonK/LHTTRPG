@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A double-edged curved sword with a large S-shaped curved blade.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 13,

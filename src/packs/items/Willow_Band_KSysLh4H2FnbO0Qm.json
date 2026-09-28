@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A band made of tanned and woven tough bark.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 2,
     "mdef": 0,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a blade length of about 70 cm. It has both sharpness and ease of handling.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 2,

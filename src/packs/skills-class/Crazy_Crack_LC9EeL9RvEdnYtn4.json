@@ -5,7 +5,7 @@
     "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target, and the target takes [Weakness (Physical): [INT mod]]. This weakness is handled as Life Status with the [Sealed] tag, and it continues until the target consumes 2 [Fate Points] or until the start of your next main process.</p>\n<hr>\n<p>A special skill that inflicts pain that cracks the target's fighting spirit and deprives them of their concentration.</p>",
     "tags": [
       "Melee Attack",
-      "Two-handed"
+      "Two-Handed"
     ],
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Evasion)",

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A small ax that can be wielded with one hand. Useful as a tool.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Hafted]"
+      "One-Handed",
+      "Hafted"
     ],
     "initiative": -1,
     "rank": 2,

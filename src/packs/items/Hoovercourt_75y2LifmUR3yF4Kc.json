@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Chainmail made from fine steel.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 47,
     "mdef": 39,

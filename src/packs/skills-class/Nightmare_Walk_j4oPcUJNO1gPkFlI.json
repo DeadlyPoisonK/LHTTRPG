@@ -8,7 +8,7 @@
     "description": "<p>You may make a [Normal Move] of 3 Sq. During this movement, if you are not targeted by [Hinder], you may make a extra [Normal Move] of 1 Sq.</p><p>(Minor): You can not be targeted by [Hinder] during this movement.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

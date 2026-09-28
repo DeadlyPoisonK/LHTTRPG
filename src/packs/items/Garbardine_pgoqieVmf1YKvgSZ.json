@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A padded, thick cloth garment worn with armor.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 8,
     "mdef": 8,

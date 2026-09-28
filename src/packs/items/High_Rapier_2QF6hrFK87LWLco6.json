@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A high-class sword made from high-quality materials. Although it is lightweight, its power exceeds that of conventional products.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 19,

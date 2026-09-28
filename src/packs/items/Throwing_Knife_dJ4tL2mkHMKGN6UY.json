@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A uniquely shaped dagger with many blades.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 5,

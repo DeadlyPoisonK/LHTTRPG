@@ -8,7 +8,7 @@
     "description": "<p>Available when you are in [Riding: Dire Wolf] state. You may make a [Normal Move] of 3 Sq.</p><p>(Minor): When you move more than 1 Sq. with this action, after the end of the move, use [target: Single / Range: Close] and inflict [Pursuit: (Base DEX)].</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

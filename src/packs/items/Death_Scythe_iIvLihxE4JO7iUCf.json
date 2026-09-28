@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long, sharp two-handed scythe like the scythe held by the Shinigami.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 30,

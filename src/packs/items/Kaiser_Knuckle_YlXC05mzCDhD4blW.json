@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Metal equipment that protects the fist and increases its power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 1,

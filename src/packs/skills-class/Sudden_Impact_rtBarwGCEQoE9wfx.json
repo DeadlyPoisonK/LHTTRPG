@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Deal [(SR+2)D + (Attack Power)] physical damage to the target.</p>\n<p>(Self: Hidden): The target takes [Confusion].</p>\n<hr>\n<p>A skill that appears from a blind spot and delivers a sharp blow. Enemies are thrown into a vortex of chaos by an unexpected impact.</p>",
     "tags": [
-      "Melee Attact"
+      "Melee Attack"
     ],
     "timing": "Major",
     "checkType": "Opposed (Accuracy vs Evasion)\t\t",

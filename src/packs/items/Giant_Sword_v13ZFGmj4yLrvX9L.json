@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A giant two-handed sword made from the sword wielded by a giant and modified for human use.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 23,

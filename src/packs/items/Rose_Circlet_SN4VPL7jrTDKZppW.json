@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A luxurious circlet with a rose design.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 16,
     "mdef": 0,

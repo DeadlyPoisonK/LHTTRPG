@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A heavy two-handed sword with a size and weight that makes it awkward to hold with both hands.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 27,

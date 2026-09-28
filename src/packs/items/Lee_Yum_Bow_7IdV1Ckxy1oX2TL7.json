@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A highly portable short bow made from whale whiskers.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 19,

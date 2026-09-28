@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a sharp tip and blade that does not have a curve.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 8,

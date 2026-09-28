@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>-100 to the target's [Fatigue] status.</p>",
     "tags": [
-      "[Food]",
-      "[Consumable]",
-      "[Preparation]"
+      "Food",
+      "Consumable",
+      "Preparation"
     ],
     "rank": 28,
     "price": 870,

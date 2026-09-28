@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A cloak that combines a long coat with a cloak that covers the shoulders.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 3,
     "mdef": 3,

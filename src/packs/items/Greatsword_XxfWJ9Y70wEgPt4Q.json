@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large sword with a blade over 1m long.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 1,

@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-import {onManageTags} from "../helpers/tags.mjs";
+import {activateTagInput} from "../helpers/tags.mjs";
 import {diceOptions} from "../helpers/dice.mjs";
 import {SKILL_MAX_DICE, CHECK_STATS, isMonsterSkill, rollSkill} from "../helpers/skill-rolls.mjs";
 import {ARCHETYPES, OPTION_TYPES} from "../helpers/character-options.mjs";
@@ -329,7 +329,7 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
 
     // Tag management
-    html.find(".tag-control").click(ev => onManageTags(ev, this.item));
+    activateTagInput(html, this.item, this);
 
     // Create a new Skill, linked to this equipment item, using this item's icon by default.
     html.find(".linked-skill-create").click(async ev => {

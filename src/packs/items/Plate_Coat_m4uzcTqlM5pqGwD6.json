@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor with sheet metal fastened to the back of strong leather or fabric to achieve both ease of movement and defensive power.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 30,
     "mdef": 17,

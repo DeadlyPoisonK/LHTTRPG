@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A heavy hand spear with excellent penetrating power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 13,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A small ax whose weight and balance have been adjusted for throwing.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 14,

@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Metal strips are sewn on the back of the tanned leather shorts to increase defense.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 9,
     "mdef": 13,

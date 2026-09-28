@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large sword made for fighting cavalry warriors.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 2,

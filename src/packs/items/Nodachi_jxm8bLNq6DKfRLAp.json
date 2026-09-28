@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sword with a sharp curve that is long enough to exceed the height of the body.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 5,

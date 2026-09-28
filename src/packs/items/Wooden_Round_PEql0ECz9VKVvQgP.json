@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>wooden shield. Large enough to cover the upper body.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 5,
     "mdef": 4,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>It's fairly heavy, but it holds up well against attacks.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 6,
     "mdef": 5,

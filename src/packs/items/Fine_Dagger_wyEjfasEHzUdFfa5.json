@@ -4,9 +4,9 @@
   "system": {
     "description": "<p>A large dagger for stabbing. It is thick and the blade is hard to spill.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]",
-      "[Light]"
+      "One-Handed",
+      "Blade",
+      "Light"
     ],
     "initiative": 0,
     "rank": 1,

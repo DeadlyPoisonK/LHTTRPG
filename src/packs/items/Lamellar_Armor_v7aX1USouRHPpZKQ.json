@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Full-body armor made of small pieces of metal joined together.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 23,
     "mdef": 12,

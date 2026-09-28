@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A top-class hand spear made by a craftsman and recognized by many.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 30,

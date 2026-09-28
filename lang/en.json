@@ -642,6 +642,19 @@
         "post": "Post-Action: already took its Main Process this round.",
         "standby": "On Standby: acts after everyone else, lowest Initiative first."
       }
+    },
+    "Tag": {
+      "Placeholder": "Add tag…",
+      "Migrated": "Tags normalized on {count} documents."
+    },
+    "TagGroup": {
+      "Equipment": "Equipment",
+      "Item": "Item",
+      "Skill": "Skill",
+      "Attack": "Attack",
+      "Element": "Element",
+      "Creature": "Creature",
+      "Other": "Other"
     }
   }
 }

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Metal shin guards that demonstrate high defensive power even when used alone.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 5,
     "mdef": 5,

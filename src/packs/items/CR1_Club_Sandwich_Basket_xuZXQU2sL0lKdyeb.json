@@ -4,10 +4,10 @@
   "system": {
     "description": "<p>Reduces target's [Fatigue] strength by -6.</p>",
     "tags": [
-      "[Food]",
-      "[Consumable]",
-      "[Preparation]",
-      "[Rare]"
+      "Food",
+      "Consumable",
+      "Preparation",
+      "Rare"
     ],
     "rank": 1,
     "price": 30,

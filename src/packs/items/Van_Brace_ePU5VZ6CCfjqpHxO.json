@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+4 to your [Attack]. A large gauntlet that protects the upper arm.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

@@ -1,0 +1,13 @@
+<div class="lh-tag-input">
+	<ol class="tag-list">
+		{{#each (lhTagChips system.tags @root.document._source.system.tags)}}
+			<li class="tag{{#unless known}} tag-custom{{/unless}}{{#if derived}} tag-derived{{/if}}"{{#if desc}} data-tooltip="{{desc}}"{{/if}}>
+				<span>{{label}}</span>
+				{{#if (and @root.editable (not derived))}}<a class="tag-remove" data-index="{{index}}"><i class="fas fa-times"></i></a>{{/if}}
+			</li>
+		{{/each}}
+		{{#if @root.editable}}
+			<li class="tag-entry"><input type="text" class="tag-entry-input" autocomplete="off" placeholder="{{localize 'LHTRPG.Tag.Placeholder'}}"></li>
+		{{/if}}
+	</ol>
+</div>

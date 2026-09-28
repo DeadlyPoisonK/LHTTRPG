@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Light and hard armor made from tanned leather boiled and hardened with wax.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 13,
     "mdef": 10,

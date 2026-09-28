@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A slightly curved one-handed sword.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 1,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A combat mallet with a compact mallet head that is designed to deliver a strong impact.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Hafted]"
+      "One-Handed",
+      "Hafted"
     ],
     "initiative": -1,
     "rank": 24,

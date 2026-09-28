@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A thick sword said to have been used by ancient Roman foot soldiers. It features solid construction and robustness.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 27,

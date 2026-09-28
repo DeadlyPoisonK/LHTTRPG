@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Short mantle. Easy to move.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 2,
     "mdef": 2,

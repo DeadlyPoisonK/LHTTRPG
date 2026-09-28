@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A small crossbow that sacrifices power.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[CrossBow]"
+      "Two-Handed",
+      "Crossbow"
     ],
     "initiative": -4,
     "rank": 1,

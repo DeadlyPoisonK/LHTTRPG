@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Leather armor made from the fur of large beasts.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 6,
     "mdef": 4,

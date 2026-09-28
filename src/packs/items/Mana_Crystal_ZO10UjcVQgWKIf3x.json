@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+14 to your [Magic Power]. Accessories that use crystals that emit strong magical power.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

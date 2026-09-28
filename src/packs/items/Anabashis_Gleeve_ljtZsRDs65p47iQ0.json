@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Metal armor that covers from below the knee to the top of the foot.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 3,
     "mdef": 3,

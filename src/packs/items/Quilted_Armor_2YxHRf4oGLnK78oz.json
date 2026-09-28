@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Cloth armor made by adding padding to thick cloth armor and strengthening it with magic.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 20,
     "mdef": 30,

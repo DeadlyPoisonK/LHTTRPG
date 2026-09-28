@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A mistletoe wand made with emphasis on transmitting magical power.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 24,

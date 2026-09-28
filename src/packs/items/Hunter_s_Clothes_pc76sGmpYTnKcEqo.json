@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor worn by hunters. Even the fangs of beasts can't be pierced easily.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 7,
     "mdef": 10,

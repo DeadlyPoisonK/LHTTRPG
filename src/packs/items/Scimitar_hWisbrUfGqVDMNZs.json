@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large curved shape suitable for slashing.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 4,

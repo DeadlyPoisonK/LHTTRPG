@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>You gain [Mitigation (Lightning): 80] at the start of the scene.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 0,

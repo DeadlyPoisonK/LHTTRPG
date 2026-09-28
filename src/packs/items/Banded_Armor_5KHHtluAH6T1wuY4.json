@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor reinforced by attaching thick leather bands over chain mail.</p>",
     "tags": [
-      "[Medium Armor]"
+      "Medium Armor"
     ],
     "pdef": 35,
     "mdef": 29,

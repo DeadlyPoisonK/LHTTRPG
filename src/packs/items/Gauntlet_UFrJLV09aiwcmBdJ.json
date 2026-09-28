@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+14 to your Attack Power. Heavy gauntlets covered with sheet metal up to the joints.</p>",
     "tags": [
-      "[Accessory]",
-      "[Gloves]"
+      "Accessory",
+      "Gloves"
     ],
     "pdef": 0,
     "mdef": 0,

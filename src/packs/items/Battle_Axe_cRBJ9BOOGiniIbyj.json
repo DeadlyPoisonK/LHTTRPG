@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large ax that cuts through everything with its heavy ax head.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 1,

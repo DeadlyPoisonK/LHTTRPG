@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A rugged sword that is over 1m long.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Katana]"
+      "Two-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 1,

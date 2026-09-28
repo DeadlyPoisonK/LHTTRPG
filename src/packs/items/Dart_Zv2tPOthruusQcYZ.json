@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A small arrow for throwing. Power is low.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 1,

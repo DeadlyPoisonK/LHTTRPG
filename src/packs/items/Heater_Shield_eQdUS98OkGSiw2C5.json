@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A large rectangular shield suitable for use on horseback.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 13,
     "mdef": 12,

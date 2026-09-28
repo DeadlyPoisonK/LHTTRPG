@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Guardian Warrior&gt; &lt;Samurai&gt; only. A helmet made by hammering out thick shiny black steel.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 8,
     "mdef": 0,

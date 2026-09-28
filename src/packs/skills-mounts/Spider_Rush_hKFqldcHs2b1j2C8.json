@@ -6,7 +6,7 @@
     "description": "<p>Make [Normal Move] 1 Sq. can then [Instant Move] 3 Sq.&nbsp;</p>\n<p>During this [Instant Move] your is considered [Flying], but can only move in a line.&nbsp;</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "Auto",

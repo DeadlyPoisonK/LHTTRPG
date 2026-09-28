@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A strong whip that is nicknamed \"hanging\".</p>",
     "tags": [
-      "[One-Handed]",
-      "[Whip]"
+      "One-Handed",
+      "Whip"
     ],
     "initiative": 2,
     "rank": 2,

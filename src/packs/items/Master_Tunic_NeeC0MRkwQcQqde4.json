@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A short garment made of demon beast leather with metal strips sewn into the lining to reinforce the vital points.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 17,
     "mdef": 24,

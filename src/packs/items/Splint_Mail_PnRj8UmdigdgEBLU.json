@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A full-body armor made of countless long, thin plates sewn together.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 14,
     "mdef": 6,

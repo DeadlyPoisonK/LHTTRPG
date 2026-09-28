@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A strong bow made from animal bones and metal instead of wood.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Bow]"
+      "Two-Handed",
+      "Bow"
     ],
     "initiative": 0,
     "rank": 23,

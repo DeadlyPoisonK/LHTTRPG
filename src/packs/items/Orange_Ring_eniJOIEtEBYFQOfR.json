@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A jewel ring that hides the deep orange color of twilight. Possessing strong magical power.</p>",
     "tags": [
-      "[Accessory]",
-      "[Magic Stone]"
+      "Accessory",
+      "Magic Stone"
     ],
     "pdef": 0,
     "mdef": 0,

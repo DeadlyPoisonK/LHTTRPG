@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A two-handed sickle with a long handle and a long blade.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 2,

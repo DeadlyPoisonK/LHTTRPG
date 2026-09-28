@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Leather boots. Easy to walk even on rough roads.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 0,
     "mdef": 0,

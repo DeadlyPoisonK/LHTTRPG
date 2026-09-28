@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A lightweight Japanese sword made on the continent based on a samurai sword.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 13,

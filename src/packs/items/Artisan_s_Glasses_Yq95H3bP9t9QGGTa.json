@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+1 bonus to Analysis. A monocle that greatly reflects the detailed work at hand.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 0,
     "mdef": 0,

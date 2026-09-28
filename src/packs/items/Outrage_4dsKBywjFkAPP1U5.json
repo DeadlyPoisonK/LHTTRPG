@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>An extremely large sword that splits the target with its mass.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Blade]"
+      "Two-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 10,

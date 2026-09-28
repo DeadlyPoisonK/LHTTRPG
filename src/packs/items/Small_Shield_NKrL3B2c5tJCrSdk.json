@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Small shield. Coverage is a bit unreliable.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 4,
     "mdef": 3,

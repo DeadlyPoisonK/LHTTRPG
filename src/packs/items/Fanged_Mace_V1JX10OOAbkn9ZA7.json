@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A huge club with countless spikes.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Hafted]"
+      "Two-Handed",
+      "Hafted"
     ],
     "initiative": -2,
     "rank": 5,

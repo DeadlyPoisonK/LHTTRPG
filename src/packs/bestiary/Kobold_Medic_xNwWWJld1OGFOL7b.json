@@ -234,7 +234,7 @@
       "system": {
         "description": "<p>[[/gmr 2d6 + 4]]{2D+4]}</p>\n<p>Target takes [Pursuit: 10]<br>(Minor): This skill becomes [Range: 3 Sq.]</p>",
         "tags": [
-          "[Special Attack"
+          "Special Attack"
         ],
         "timing": "Major",
         "checkType": "Opposed(2D+4vsEvasion)",

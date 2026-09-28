@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Plate armor that covers the whole body without any gaps and protects the user from all attacks.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 46,
     "mdef": 28,

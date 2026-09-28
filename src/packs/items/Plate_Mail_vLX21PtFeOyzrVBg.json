@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Armor that covers the whole body with sheet metal hammered along the body.</p>",
     "tags": [
-      "[Heavy Armor]"
+      "Heavy Armor"
     ],
     "pdef": 17,
     "mdef": 9,

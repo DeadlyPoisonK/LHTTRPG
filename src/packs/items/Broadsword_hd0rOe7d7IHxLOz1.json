@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A straight sword with a wide blade.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Blade]"
+      "One-Handed",
+      "Blade"
     ],
     "initiative": 0,
     "rank": 10,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+2 bonus to Athletics. A cape that can be worn as light as a feather.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 0,
     "mdef": 0,

@@ -8,7 +8,7 @@
     "description": "<p>Lose a minor action immediately after. You may make a [Normal move] of 3 Sq. However, you can only move in a straight line. Increase the damage roll of a skill with [target: Single] [Melee Attack] by +[STR mod] that you use in this main process.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

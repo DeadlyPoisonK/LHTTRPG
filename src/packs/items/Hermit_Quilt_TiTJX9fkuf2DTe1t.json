@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>Simple yet strong cloth armor worn by those called hermits and sages.</p>",
     "tags": [
-      "[Light Armor]"
+      "Light Armor"
     ],
     "pdef": 31,
     "mdef": 46,

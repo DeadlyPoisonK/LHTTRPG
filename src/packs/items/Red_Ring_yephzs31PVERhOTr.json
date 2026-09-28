@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A fiery red jewel ring. Possessing strong magical power.</p>",
     "tags": [
-      "[Accessory]",
-      "[Magic Stone]"
+      "Accessory",
+      "Magic Stone"
     ],
     "pdef": 0,
     "mdef": 0,

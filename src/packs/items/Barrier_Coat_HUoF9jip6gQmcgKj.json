@@ -5,7 +5,7 @@
     "description": "<p>&lt;Machinist&gt; only. When you gain [Barrier], add 3 to its strength. A mechanical coat with a built-in device that amplifies magic barriers.</p>",
     "tags": [
       "Accessory",
-      "[Cloak]"
+      "Cloak"
     ],
     "pdef": 1,
     "mdef": 1,

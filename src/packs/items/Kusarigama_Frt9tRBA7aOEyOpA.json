@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A sharp sickle with a chain weight attached to the handle.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Whip]"
+      "One-Handed",
+      "Whip"
     ],
     "initiative": 2,
     "rank": 24,

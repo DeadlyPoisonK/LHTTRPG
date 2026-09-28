@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>+1 to your [Durability]. Boots that increase the wearer's physical strength.</p>",
     "tags": [
-      "[Accessory]",
-      "[Boots]"
+      "Accessory",
+      "Boots"
     ],
     "pdef": 0,
     "mdef": 0,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A single-edged straight sword said to be favored by ninjas.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 4,

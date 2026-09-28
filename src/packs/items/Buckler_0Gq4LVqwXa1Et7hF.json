@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Small circular shield. Easy to handle, but low defense.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Shield]"
+      "One-Handed",
+      "Shield"
     ],
     "pdef": 3,
     "mdef": 2,

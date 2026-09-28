@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Please use it as a souvenir when you travel far away. Luxury items are used for balls. It's suspicious to wear it in the city, so let's stop it.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 0,
     "mdef": 0,

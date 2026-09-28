@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A throwing weapon with a blade that spreads in all directions.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Throwing]"
+      "One-Handed",
+      "Throwing"
     ],
     "initiative": 2,
     "rank": 9,

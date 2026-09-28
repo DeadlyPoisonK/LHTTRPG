@@ -8,7 +8,7 @@
     "description": "<p>You gain the [Flying] tag and you may make a [Normal Move] of 2 Sq. After the move, you lose the [Flying] tag.</p><p>(Minor): After the end of the movement, you may do [Normal Move] up to 2 Sq.</p>",
     "tags": [
       "EX Power",
-      "Move"
+      "Movement"
     ],
     "timing": "Move",
     "checkType": "None",

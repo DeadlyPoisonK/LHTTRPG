@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A spear with a three-pronged tip. The metal parts have increased, and the weight, power, and coolness have increased.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Spear]"
+      "One-Handed",
+      "Spear"
     ],
     "initiative": 1,
     "rank": 27,

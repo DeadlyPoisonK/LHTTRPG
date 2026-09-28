@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Crossbow with sighting device. It's easy to aim and deals damage accurately.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[CrossBow]"
+      "Two-Handed",
+      "Crossbow"
     ],
     "initiative": -4,
     "rank": 2,

@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>Wand for magicians. A crystal is set at the tip.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Staff]"
+      "One-Handed",
+      "Staff"
     ],
     "initiative": 2,
     "rank": 3,

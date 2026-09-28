@@ -4,7 +4,7 @@
   "system": {
     "description": "<p>A small talisman inspired by the strength of violets, which can take root even in gaps between solid rocks and endure the wind and snow.</p>",
     "tags": [
-      "[Accessory]"
+      "Accessory"
     ],
     "pdef": 0,
     "mdef": 16,

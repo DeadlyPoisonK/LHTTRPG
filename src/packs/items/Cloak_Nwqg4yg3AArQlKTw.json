@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A long cloak that covers the body like a bell. It also retains heat well.</p>",
     "tags": [
-      "[Accessory]",
-      "[Cloak]"
+      "Accessory",
+      "Cloak"
     ],
     "pdef": 5,
     "mdef": 5,

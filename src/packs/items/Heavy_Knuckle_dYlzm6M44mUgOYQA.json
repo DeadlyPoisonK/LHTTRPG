@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A striking knuckle guard made of heavy, sturdy metal.</p>",
     "tags": [
-      "[Two-Handed]",
-      "[Martial Arts]"
+      "Two-Handed",
+      "Martial Arts"
     ],
     "initiative": 2,
     "rank": 23,

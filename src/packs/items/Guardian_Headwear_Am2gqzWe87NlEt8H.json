@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>&lt;Samurai&gt; &lt;Martial Artist&gt; only. A headband with a coat of arms written on its surface to pray for various blessings.</p>",
     "tags": [
-      "[Accessory]",
-      "[Helm]"
+      "Accessory",
+      "Helm"
     ],
     "pdef": 11,
     "mdef": 0,

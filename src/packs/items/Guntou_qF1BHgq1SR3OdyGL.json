@@ -4,8 +4,8 @@
   "system": {
     "description": "<p>A curved sword that is easy to use even on horseback.</p>",
     "tags": [
-      "[One-Handed]",
-      "[Katana]"
+      "One-Handed",
+      "Katana"
     ],
     "initiative": -1,
     "rank": 10,
