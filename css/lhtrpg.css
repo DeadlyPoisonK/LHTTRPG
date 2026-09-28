@@ -3980,3 +3980,153 @@ div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
   font-size: 11px;
   opacity: 0.7;
 }
+
+/* -------------------------------------------- */
+/*  Combat chat cards (attack / damage)          */
+/* -------------------------------------------- */
+
+.lhtrpg.lh-combat-card .dice-roll {
+  margin-bottom: 6px;
+}
+
+.lhtrpg.lh-combat-card .lh-outcome {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.lh-combat-card .lh-outcome.critical { color: #ffe27a; text-shadow: 0 0 6px #ffe27a; }
+.lhtrpg.lh-combat-card .lh-outcome.fumble { color: #ff8a80; }
+
+.lhtrpg.lh-combat-card .lh-targets {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lhtrpg.lh-combat-card .lh-target {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 4px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(214, 255, 218, 0.25);
+  border-radius: 4px;
+}
+
+.lhtrpg.lh-combat-card .lh-damage-target {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.lhtrpg.lh-combat-card .lh-target-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lhtrpg.lh-combat-card .lh-target-img {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  object-fit: contain;
+}
+
+.lhtrpg.lh-combat-card .lh-target-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lhtrpg.lh-combat-card .lh-dodge {
+  font-weight: bold;
+  cursor: help;
+}
+
+.lhtrpg.lh-combat-card .lh-result,
+.lhtrpg.lh-combat-card .lh-badge,
+.lhtrpg.lh-combat-card .lh-applied {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.lhtrpg.lh-combat-card .lh-result.hit { background-color: #7a2f2f; color: #ffd6d6; }
+.lhtrpg.lh-combat-card .lh-result.miss { background-color: #2f4f7a; color: #d6e6ff; }
+.lhtrpg.lh-combat-card .lh-result.pending { background-color: rgba(214, 255, 218, 0.15); }
+.lhtrpg.lh-combat-card .lh-badge { background-color: #6b4a1e; color: #ffe8c2; cursor: help; }
+.lhtrpg.lh-combat-card .lh-applied { background-color: rgba(214, 255, 218, 0.2); }
+.lhtrpg.lh-combat-card .lh-distance { flex: 0 0 auto; font-size: 11px; opacity: 0.7; }
+
+.lhtrpg.lh-combat-card button.lh-roll-dodge,
+.lhtrpg.lh-combat-card button.lh-apply,
+.lhtrpg.lh-combat-card button.lh-undo {
+  margin: 0;
+  line-height: 20px;
+  font-size: 11px;
+  color: #d6ffda;
+  background-color: #2f5a3a;
+  border: 1px solid #8fcf9b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lhtrpg.lh-combat-card button.lh-roll-dodge { flex: 0 0 auto; width: auto; padding: 0 6px; }
+
+.lhtrpg.lh-combat-card .lh-apply-buttons {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr;
+  gap: 3px;
+  margin-top: 3px;
+}
+
+.lhtrpg.lh-combat-card button.lh-apply { padding: 0 2px; white-space: nowrap; }
+.lhtrpg.lh-combat-card button.lh-apply[data-mode="heal"] { background-color: #2f5a55; }
+
+.lhtrpg.lh-combat-card button.lh-roll-dodge:hover,
+.lhtrpg.lh-combat-card button.lh-apply:hover,
+.lhtrpg.lh-combat-card button.lh-undo:hover {
+  background-color: #3f7a4e;
+  text-shadow: 0 0 6px #d6ffda;
+}
+
+.lhtrpg.lh-applied-card .lh-applied-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.lhtrpg.lh-applied-card .lh-applied-title .lh-applied { margin-left: auto; }
+
+.lhtrpg.lh-applied-card .lh-applied-lines {
+  margin: 0 0 6px;
+  padding-left: 16px;
+  font-size: 11px;
+}
+
+.lhtrpg.lh-applied-card .lh-applied-buttons { display: flex; gap: 4px; }
+.lhtrpg.lh-applied-card .lh-applied-buttons button { flex: 1; }
+.lhtrpg.lh-combat-card button.lh-reveal {
+  margin: 0;
+  line-height: 20px;
+  font-size: 11px;
+  color: #d6ffda;
+  background-color: #4a3f6b;
+  border: 1px solid #b9a8e8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lhtrpg.lh-applied-card.undone { opacity: 0.55; }
+.lhtrpg.lh-applied-card.undone .lh-applied-title { text-decoration: line-through; }
+.lhtrpg.lh-applied-card .lh-undone { text-align: center; font-style: italic; }

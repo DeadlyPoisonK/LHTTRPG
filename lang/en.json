@@ -555,6 +555,59 @@
         "Drop": "Drop a skill here",
         "OnlySkills": "Only Skill items from a compendium or the world can be starting skills."
       }
+    },
+    "Combat": {
+      "HitCheck": "Hit Check",
+      "AutoHit": "Automatic hit",
+      "Critical": "Critical!",
+      "Fumble": "Fumble!",
+      "Dodge": "Dodge",
+      "Hit": "Hit",
+      "Miss": "Dodged",
+      "Pending": "Pending",
+      "HateUnder": "Hate Under +2",
+      "DamageRoll": "Damage",
+      "DodgeFailed": "Dodge failed",
+      "Selected": "Selected tokens",
+      "Undo": "Undo",
+      "Undone": "Undone",
+      "Type": {
+        "physical": "Physical",
+        "magical": "Magical",
+        "penetrating": "Penetrating",
+        "direct": "Direct",
+        "recovery": "Recovery"
+      },
+      "Mode": {
+        "damage": "Damage",
+        "half": "Half",
+        "double": "Double",
+        "direct": "Direct",
+        "heal": "Heal"
+      },
+      "Hint": {
+        "damage": "Apply the damage: Defense by type, Cancel, then Barrier",
+        "half": "Apply half the damage (rounded down)",
+        "double": "Apply double the damage",
+        "direct": "Apply as Direct Damage: ignores Defense and Cancel, not Barrier",
+        "heal": "Heal this amount of HP",
+        "dodgeFailed": "Failed its Dodge Check: Hate Damage, Pursuit and Weakness also apply",
+        "reveal": "Show this breakdown to the players"
+      },
+      "Applied": {
+        "Damage": "Damage",
+        "Heal": "Healing",
+        "PDef": "P.Def",
+        "MDef": "M.Def",
+        "Hate": "Hate Damage",
+        "HateDown": "Hate −1 (failed Dodge Check)"
+      },
+      "Notif": {
+        "NoTokens": "Select the tokens to apply it to.",
+        "OutOfRange": "Out of range ({range}): {names}. The attack was not made."
+      },
+      "Reveal": "Reveal",
+      "Close": "Close"
     }
   }
 }

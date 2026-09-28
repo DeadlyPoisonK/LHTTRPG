@@ -1,0 +1,37 @@
+<div class="lhtrpg chat-card lh-combat-card lh-attack-card">
+	<header class="chat-card-header">
+		<img class="chat-card-img" src="{{img}}" alt="{{skillName}}" />
+		<div class="chat-card-title">
+			<h3>{{skillName}}</h3>
+			<span class="chat-card-type">{{#if auto}}{{localize 'LHTRPG.Combat.AutoHit'}}{{else}}{{localize 'LHTRPG.Combat.HitCheck'}} vs {{labels.vs}}{{/if}}{{#if range}} · {{range}}{{/if}}</span>
+		</div>
+	</header>
+
+	{{#unless auto}}
+	{{{rollHTML}}}
+	{{#if attack.critical}}<div class="lh-outcome critical">{{localize 'LHTRPG.Combat.Critical'}}</div>{{/if}}
+	{{#if attack.fumble}}<div class="lh-outcome fumble">{{localize 'LHTRPG.Combat.Fumble'}}</div>{{/if}}
+	{{/unless}}
+
+	<ol class="lh-targets">
+		{{#each targets as |target i|}}
+		<li class="lh-target" data-index="{{i}}">
+			<img class="lh-target-img" src="{{target.img}}" alt="{{target.name}}" />
+			<span class="lh-target-name">{{target.name}}</span>
+			{{#if (eq target.distance 0)}}<span class="lh-distance">{{localize 'LHTRPG.Combat.Close'}}</span>
+			{{else if target.distance}}<span class="lh-distance">{{target.distance}} Sq</span>{{/if}}
+			{{#if target.dodge}}
+			<span class="lh-dodge" data-tooltip="{{target.dodge.formula}} [{{target.dodge.results}}]{{#if target.dodge.hateUnder}} · {{localize 'LHTRPG.Combat.HateUnder'}}{{/if}}">
+				{{#if target.dodge.critical}}<i class="fas fa-star"></i>{{/if}}{{#if target.dodge.fumble}}<i class="fas fa-skull"></i>{{/if}}
+				{{target.dodge.total}}
+			</span>
+			{{else}}{{#unless target.auto}}
+			<button type="button" class="lh-roll-dodge owner-only"><i class="fas fa-shield-halved"></i> {{localize 'LHTRPG.Combat.Dodge'}}</button>
+			{{/unless}}{{/if}}
+			{{#if (eq target.hit true)}}<span class="lh-result hit">{{localize 'LHTRPG.Combat.Hit'}}</span>
+			{{else if (eq target.hit false)}}<span class="lh-result miss">{{localize 'LHTRPG.Combat.Miss'}}</span>
+			{{else}}<span class="lh-result pending">{{localize 'LHTRPG.Combat.Pending'}}</span>{{/if}}
+		</li>
+		{{/each}}
+	</ol>
+</div>

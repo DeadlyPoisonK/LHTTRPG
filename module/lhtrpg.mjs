@@ -18,6 +18,7 @@ import { registerCharacterOptions } from "./helpers/character-options.mjs";
 import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs";
 import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
+import { registerCombatCards } from "./helpers/combat-cards.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -88,6 +89,9 @@ Hooks.once('init', async function () {
   registerCharacterOptions();
   registerOptionBrowser();
   registerSkillBrowser();
+
+  // Attack / damage chat cards: opposed Hit vs Dodge Checks and damage application
+  registerCombatCards();
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();

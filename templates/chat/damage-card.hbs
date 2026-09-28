@@ -1,0 +1,44 @@
+<div class="lhtrpg chat-card lh-combat-card lh-damage-card">
+	<header class="chat-card-header">
+		<img class="chat-card-img" src="{{img}}" alt="{{skillName}}" />
+		<div class="chat-card-title">
+			<h3>{{skillName}}</h3>
+			<span class="chat-card-type">{{localize 'LHTRPG.Combat.DamageRoll'}} ({{labels.type}})</span>
+		</div>
+	</header>
+
+	{{{rollHTML}}}
+
+	{{#*inline "applyButtons"}}
+	<div class="lh-apply-buttons owner-only">
+		{{#if recoveryOnly}}
+		<button type="button" class="lh-apply" data-mode="heal"><i class="fas fa-heart"></i> {{localize 'LHTRPG.Combat.Mode.heal'}}</button>
+		{{else}}
+		<button type="button" class="lh-apply" data-mode="damage" data-tooltip="LHTRPG.Combat.Hint.damage"><i class="fas fa-heart-crack"></i> {{localize 'LHTRPG.Combat.Mode.damage'}}</button>
+		<button type="button" class="lh-apply" data-mode="half" data-tooltip="LHTRPG.Combat.Hint.half">½</button>
+		<button type="button" class="lh-apply" data-mode="double" data-tooltip="LHTRPG.Combat.Hint.double">×2</button>
+		<button type="button" class="lh-apply" data-mode="direct" data-tooltip="LHTRPG.Combat.Hint.direct"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Combat.Mode.direct'}}</button>
+		<button type="button" class="lh-apply" data-mode="heal" data-tooltip="LHTRPG.Combat.Hint.heal"><i class="fas fa-heart"></i></button>
+		{{/if}}
+	</div>
+	{{/inline}}
+
+	<ol class="lh-targets">
+		{{#each targets as |target i|}}
+		<li class="lh-target lh-damage-target" data-index="{{i}}">
+			<div class="lh-target-line">
+				<img class="lh-target-img" src="{{target.img}}" alt="{{target.name}}" />
+				<span class="lh-target-name">{{target.name}}</span>
+				{{#if target.dodgeFailed}}<span class="lh-badge" data-tooltip="LHTRPG.Combat.Hint.dodgeFailed">{{localize 'LHTRPG.Combat.DodgeFailed'}}</span>{{/if}}
+				{{#if target.applied}}<span class="lh-applied">{{target.applied}}</span>{{/if}}
+			</div>
+			{{> applyButtons recoveryOnly=../recoveryOnly}}
+		</li>
+		{{else}}
+		<li class="lh-target lh-damage-target lh-selected">
+			<div class="lh-target-line"><span class="lh-target-name">{{localize 'LHTRPG.Combat.Selected'}}</span></div>
+			{{> applyButtons recoveryOnly=recoveryOnly}}
+		</li>
+		{{/each}}
+	</ol>
+</div>

@@ -1,0 +1,14 @@
+<div class="lhtrpg chat-card lh-combat-card lh-applied-card{{#if undone}} undone{{/if}}">
+	<div class="lh-applied-title"><strong>{{name}}</strong> · {{skillName}} <span class="lh-applied">{{result}}</span></div>
+	<ul class="lh-applied-lines">
+		{{#each lines}}<li>{{this}}</li>{{/each}}
+	</ul>
+	{{#if undone}}
+	<div class="lh-undone">{{localize 'LHTRPG.Combat.Undone'}}</div>
+	{{else}}
+	<div class="lh-applied-buttons">
+		<button type="button" class="lh-undo"><i class="fas fa-rotate-left"></i> {{localize 'LHTRPG.Combat.Undo'}}</button>
+		<button type="button" class="lh-reveal" data-tooltip="LHTRPG.Combat.Hint.reveal"><i class="fas fa-eye"></i> {{localize 'LHTRPG.Combat.Reveal'}}</button>
+	</div>
+	{{/if}}
+</div>

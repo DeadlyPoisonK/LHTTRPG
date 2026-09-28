@@ -1,4 +1,5 @@
 import { diceFormula } from "./dice.mjs";
+import { createAttackCard, createDamageCard, findAttackMessage, isAttack } from "./combat-cards.mjs";
 
 /**
  * Skill Check and Damage, set directly on the skill sheet:
@@ -178,7 +179,9 @@ function skillRoller(item) {
 }
 
 /**
- * Roll a skill's Check or Damage straight to chat.
+ * Roll a skill's Check or Damage to chat.
+ * A Check against Evasion / Resistance (or Automatic) with targeted tokens becomes an attack card,
+ * and every Damage roll becomes a damage card (see combat-cards.mjs).
  * @param {Item} item                   The skill
  * @param {"check"|"damage"} which
  */
@@ -200,25 +203,35 @@ export async function rollSkill(item, which) {
   }
 
   const rollMode = game.settings.get("core", "rollMode");
-  // Automatic success: nothing to roll, just announce it.
+  const attack = (which === "check") && isAttack(item);
+  // Automatic success: nothing to roll, just announce it (or hit every target).
   if ((which === "check") && (values.vs === "auto")) {
+    if (attack) return createAttackCard(item, item.actor, null, flavor);
     const data = { speaker: ChatMessage.getSpeaker({ actor: item.actor }), flavor: title, content: game.i18n.localize(VS_LABELS.auto) };
     ChatMessage.applyRollMode(data, rollMode);
     return ChatMessage.create(data);
   }
-  if (!stat && !powers.length) return new Roll(diceFormula(values)).toMessage({ speaker: ChatMessage.getSpeaker({ actor: item.actor }), flavor, rollMode });
 
-  const actor = skillRoller(item);
-  if (!actor) {
-    ui.notifications.warn(game.i18n.localize("LHTRPG.Skill.Notif.NoCharacter"));
-    return null;
+  let actor = item.actor;
+  let formula;
+  if (!stat && !powers.length) formula = diceFormula(values);
+  else {
+    actor = skillRoller(item);
+    if (!actor) {
+      ui.notifications.warn(game.i18n.localize("LHTRPG.Skill.Notif.NoCharacter"));
+      return null;
+    }
+    let { dice, mod } = values;
+    if (which === "check") {
+      const check = actor.system.checks?.[stat] ?? {};
+      dice += toInt(check.dice);
+      mod += toInt(check.total);
+    }
+    else for (const power of powers) mod += toInt(actor.system["battle-status"]?.power?.[power]?.total);
+    formula = diceFormula({ dice, mod });
   }
-  let { dice, mod } = values;
-  if (which === "check") {
-    const check = actor.system.checks?.[stat] ?? {};
-    dice += toInt(check.dice);
-    mod += toInt(check.total);
-  }
-  else for (const power of powers) mod += toInt(actor.system["battle-status"]?.power?.[power]?.total);
-  return new Roll(diceFormula({ dice, mod })).toMessage({ speaker: ChatMessage.getSpeaker({ actor }), flavor, rollMode });
+
+  if (attack) return createAttackCard(item, actor, formula, flavor);
+  if (which === "damage") return createDamageCard(item, actor, formula, flavor, findAttackMessage(item));
+  return new Roll(formula).toMessage({ speaker: ChatMessage.getSpeaker({ actor }), flavor, rollMode });
 }

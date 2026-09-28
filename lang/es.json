@@ -549,6 +549,59 @@
         "Drop": "Suelta una skill aquí",
         "OnlySkills": "Solo items Skill de un compendio o del mundo pueden ser skills iniciales."
       }
+    },
+    "Combat": {
+      "HitCheck": "Tirada de golpe",
+      "AutoHit": "Impacto automático",
+      "Critical": "¡Crítico!",
+      "Fumble": "¡Pifia!",
+      "Dodge": "Esquivar",
+      "Hit": "Impacta",
+      "Miss": "Esquivado",
+      "Pending": "Pendiente",
+      "HateUnder": "Hate Under +2",
+      "DamageRoll": "Daño",
+      "DodgeFailed": "Esquiva fallida",
+      "Selected": "Tokens seleccionados",
+      "Undo": "Deshacer",
+      "Undone": "Deshecho",
+      "Type": {
+        "physical": "Físico",
+        "magical": "Mágico",
+        "penetrating": "Penetrante",
+        "direct": "Directo",
+        "recovery": "Curación"
+      },
+      "Mode": {
+        "damage": "Daño",
+        "half": "Mitad",
+        "double": "Doble",
+        "direct": "Directo",
+        "heal": "Curar"
+      },
+      "Hint": {
+        "damage": "Aplica el daño: Defensa según tipo, Cancel y luego Barrier",
+        "half": "Aplica la mitad del daño (redondeo hacia abajo)",
+        "double": "Aplica el doble del daño",
+        "direct": "Aplica como Daño Directo: ignora Defensa y Cancel, no Barrier",
+        "heal": "Cura esta cantidad de HP",
+        "dodgeFailed": "Falló su esquiva: también se aplican Hate Damage, Pursuit y Weakness",
+        "reveal": "Mostrar este desglose a los jugadores"
+      },
+      "Applied": {
+        "Damage": "Daño",
+        "Heal": "Curación",
+        "PDef": "Def.F",
+        "MDef": "Def.M",
+        "Hate": "Hate Damage",
+        "HateDown": "Hate −1 (esquiva fallida)"
+      },
+      "Notif": {
+        "NoTokens": "Selecciona los tokens a los que aplicarlo.",
+        "OutOfRange": "Fuera de rango ({range}): {names}. No se realizó el ataque."
+      },
+      "Reveal": "Revelar",
+      "Close": "Close"
     }
   }
 }
