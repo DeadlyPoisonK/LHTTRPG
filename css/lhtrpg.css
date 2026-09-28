@@ -3243,6 +3243,25 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating {
   text-align: center;
 }
 
+/* Tag of a Weakness / Cancel entry ("Flame"); empty = any damage */
+div.app.lhtrpg .lh-status-panel input.lh-status-tag {
+  flex: 0 1 52px;
+  width: 52px;
+  min-width: 0;
+  height: 17px;
+  padding: 0 2px;
+  border: 1px solid rgba(214, 255, 218, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  color: inherit;
+  font-size: 11px;
+}
+
+div.app.lhtrpg form.character .lh-status-panel input.lh-status-tag {
+  height: 21px;
+  font-size: 13px;
+}
+
 /* Character sheet: the status tab uses the whole frame (its background has no
    bottom section line), with bigger rows and text */
 .lhtrpg.sheet form.character .lh-status-panel {

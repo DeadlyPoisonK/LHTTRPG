@@ -19,6 +19,8 @@ const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
  * @property {boolean} [rated]   The field holds a Rating (number) instead of a boolean.
  * @property {boolean} [list]    The field holds a list of Ratings: the status can be applied
  *                               several times, from different sources (e.g. Pursuit).
+ * @property {boolean} [tagged]  List entries are `{ value, tag }`: the status only applies to damage
+ *                               with that tag ([Weakness (Flame): 5]); no tag = any damage.
  * @property {string[]} [types]  Actor types that show this status in their sheet (default: all).
  */
 
@@ -26,7 +28,7 @@ const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
 export const LH_STATUSES = [
   // Life Statuses
   { id: "fatigue", group: "life", img: `${ICONS_PATH}/fatigue.svg`, path: "infos.fatigue", rated: true, types: ["character"] },
-  { id: "weakness", group: "life", img: `${ICONS_PATH}/weakness.svg`, path: "bad-status.weakness", rated: true },
+  { id: "weakness", group: "life", img: `${ICONS_PATH}/weakness.svg`, path: "bad-status.weaknesses", list: true, tagged: true },
   { id: "incapacitated", group: "life", img: `${ICONS_PATH}/incapacitated.svg` },
   { id: "dead", group: "life", img: `${ICONS_PATH}/dead.svg` },
   // Bad Statuses
@@ -40,7 +42,7 @@ export const LH_STATUSES = [
   { id: "overconfident", group: "bad", img: `${ICONS_PATH}/overconfident.svg`, path: "bad-status.overconfident" },
   // Combat Statuses
   { id: "regen", group: "combat", img: `${ICONS_PATH}/regen.svg`, path: "bad-status.regen", rated: true },
-  { id: "cancel", group: "combat", img: `${ICONS_PATH}/cancel.svg`, path: "bad-status.cancel", rated: true },
+  { id: "cancel", group: "combat", img: `${ICONS_PATH}/cancel.svg`, path: "bad-status.cancels", list: true, tagged: true },
   { id: "barrier", group: "combat", img: `${ICONS_PATH}/barrier.svg`, path: "bad-status.barrier", rated: true },
   // Other Statuses
   { id: "hidden", group: "other", img: `${ICONS_PATH}/hidden.svg` },
@@ -60,7 +62,7 @@ export const HIDDEN_STATUS = "hidden";
 export const LH_STATUS_GROUPS = ["bad", "life", "combat", "other"];
 
 const STATUS_BY_ID = new Map(LH_STATUSES.map(s => [s.id, s]));
-const MIGRATION_VERSION = 4;
+const MIGRATION_VERSION = 5;
 
 /* -------------------------------------------- */
 /*  Registration                                */
@@ -127,7 +129,8 @@ export function getStatusPanel(actor) {
           field: s.path ? `system.${s.path}` : null,
           rated: !!s.rated,
           list: !!s.list,
-          value: s.list ? _listValue(value) : s.rated ? (Number(value) || 0) : value,
+          tagged: !!s.tagged,
+          value: s.list ? _listValue(value, s.tagged) : s.rated ? (Number(value) || 0) : value,
           active: actor.statuses.has(s.id)
         };
       })
@@ -135,8 +138,8 @@ export function getStatusPanel(actor) {
 }
 
 /**
- * Listeners of the status panel's list statuses (Pursuit): add the Rating typed next to the
- * status as a new entry, edit an entry, or remove it.
+ * Listeners of the status panel's list statuses (Pursuit, Weakness, Cancel): add the Rating (and
+ * Tag) typed next to the status as a new entry, edit an entry, or remove it.
  * @param {jQuery} html
  * @param {Actor} actor
  */
@@ -144,29 +147,41 @@ export function activateStatusPanelListeners(html, actor) {
   const update = (statusId, fn) => {
     const status = STATUS_BY_ID.get(statusId);
     if (!status?.list) return;
-    const values = [..._listValue(_fieldValue(actor, status))];
-    fn(values);
+    const values = [..._listValue(_fieldValue(actor, status), status.tagged)];
+    fn(values, status);
     actor.update({ [`system.${status.path}`]: values });
   };
-  const add = input => {
+  const add = row => {
+    const input = row.querySelector(".lh-status-list-input");
     const rating = Math.floor(Number(input.value) || 0);
-    if (rating > 0) update(input.dataset.statusId, values => values.push(rating));
+    if (rating <= 0) return;
+    const tag = row.querySelector(".lh-status-list-tag")?.value.trim() ?? "";
+    update(input.dataset.statusId, (values, status) => values.push(status.tagged ? { value: rating, tag } : rating));
   };
 
   html.find(".lh-status-list-add").click(ev => {
     ev.preventDefault();
-    add(ev.currentTarget.closest(".lh-status").querySelector(".lh-status-list-input"));
+    add(ev.currentTarget.closest("[data-add-row]"));
   });
-  html.find(".lh-status-list-input").on("keydown", ev => {
+  html.find(".lh-status-list-input, .lh-status-list-tag").on("keydown", ev => {
     if (ev.key !== "Enter") return;
     ev.preventDefault();
-    add(ev.currentTarget);
+    add(ev.currentTarget.closest("[data-add-row]"));
   });
   html.find(".lh-status-entry-input").on("change", ev => {
     ev.stopPropagation();
     const { statusId, index } = ev.currentTarget.dataset;
     const rating = Math.floor(Number(ev.currentTarget.value) || 0);
-    update(statusId, values => (rating > 0) ? values.splice(index, 1, rating) : values.splice(index, 1));
+    update(statusId, (values, status) => {
+      if (rating <= 0) return values.splice(index, 1);
+      values.splice(index, 1, status.tagged ? { ...values[index], value: rating } : rating);
+    });
+  });
+  html.find(".lh-status-entry-tag").on("change", ev => {
+    ev.stopPropagation();
+    const { statusId, index } = ev.currentTarget.dataset;
+    const tag = ev.currentTarget.value.trim();
+    update(statusId, values => { if (values[index]) values[index] = { ...values[index], tag }; });
   });
   html.find(".lh-status-entry-remove").click(ev => {
     ev.preventDefault();
@@ -181,22 +196,35 @@ export function activateStatusPanelListeners(html, actor) {
 
 function _fieldValue(actor, status) {
   const value = foundry.utils.getProperty(actor._source.system, status.path);
-  return status.list ? _listValue(value) : value;
+  return status.list ? _listValue(value, status.tagged) : value;
 }
 
-/** Ratings of a list status, ignoring empty/invalid entries. */
-function _listValue(value) {
-  return (Array.isArray(value) ? value : []).map(v => Number(v) || 0).filter(v => v > 0);
+/**
+ * Entries of a list status, ignoring empty/invalid ones: Ratings, or `{ value, tag }` when tagged.
+ * @param {*} value
+ * @param {boolean} [tagged]
+ * @returns {Array<number|{value: number, tag: string}>}
+ */
+export function listStatusEntries(value, tagged = false) {
+  const list = Array.isArray(value) ? value : [];
+  if (!tagged) return list.map(v => Number(v) || 0).filter(v => v > 0);
+  return list
+    .map(v => (v && (typeof v === "object"))
+      ? { value: Math.floor(Number(v.value) || 0), tag: String(v.tag ?? "").trim() }
+      : { value: Math.floor(Number(v) || 0), tag: "" })
+    .filter(e => e.value > 0);
 }
+const _listValue = listStatusEntries;
 
 function _isFieldActive(status, value) {
-  if (status.list) return _listValue(value).length > 0;
+  if (status.list) return _listValue(value, status.tagged).length > 0;
   return status.rated ? (Number(value) || 0) > 0 : !!value;
 }
 
 /** Field value of a status just added from the HUD, and of one just removed. */
 function _activeFieldValue(status) {
-  return status.list ? [1] : status.rated ? 1 : true;
+  if (status.list) return status.tagged ? [{ value: 1, tag: "" }] : [1];
+  return status.rated ? 1 : true;
 }
 
 function _inactiveFieldValue(status) {
@@ -205,7 +233,10 @@ function _inactiveFieldValue(status) {
 
 function _effectName(status, value) {
   const label = game.i18n.localize(`LHTRPG.StatusEffect.${status.id}`);
-  if (status.list) return `${label}: ${_listValue(value).join(" / ")}`;
+  if (status.list) {
+    const entries = _listValue(value, status.tagged).map(e => status.tagged ? (e.tag ? `(${e.tag}) ${e.value}` : e.value) : e);
+    return `${label}: ${entries.join(" / ")}`;
+  }
   return status.rated ? `${label}: ${Number(value) || 0}` : label;
 }
 
@@ -242,8 +273,24 @@ function _onUpdateActor(actor, changes, options, userId) {
   for (const status of LH_STATUSES) {
     if (!status.path) continue;
     if (!foundry.utils.hasProperty(changes, `system.${status.path}`)) continue;
-    _syncEffectFromField(actor, status);
+    _queueSync(actor, status);
   }
+}
+
+/** Pending field -> effect syncs, by actor and status. */
+const _syncQueue = new Map();
+
+/**
+ * Run the syncs of one actor's status one after another: a token actor's update can fire this
+ * hook twice, and two syncs at once would both create the (fixed id) status effect.
+ */
+function _queueSync(actor, status) {
+  const key = `${actor.uuid}.${status.id}`;
+  const next = (_syncQueue.get(key) ?? Promise.resolve())
+    .then(() => _syncEffectFromField(actor, status))
+    .catch(err => console.error(`Log Horizon TRPG | Could not sync ${status.id} of ${actor.uuid}`, err));
+  _syncQueue.set(key, next);
+  next.then(() => { if (_syncQueue.get(key) === next) _syncQueue.delete(key); });
 }
 
 /**
@@ -386,6 +433,15 @@ export async function migrateActorStatuses(actor) {
     if ((pursuit > 0) && !pursuits.length) pursuits.push(pursuit);
     fieldUpdates["system.bad-status.pursuits"] = pursuits;
     fieldUpdates["system.bad-status.-=pursuit"] = null;
+  }
+  // v5: Weakness and Cancel went from a single Rating to a list of `{ value, tag }`
+  for (const [old, list] of [["weakness", "weaknesses"], ["cancel", "cancels"]]) {
+    if (!badStatus || !(old in badStatus)) continue;
+    const rating = Number(badStatus[old]) || 0;
+    const entries = _listValue(badStatus[list], true);
+    if ((rating > 0) && !entries.length) entries.push({ value: rating, tag: "" });
+    fieldUpdates[`system.bad-status.${list}`] = entries;
+    fieldUpdates[`system.bad-status.-=${old}`] = null;
   }
   for (const { status } of cub) {
     if (status.path) {

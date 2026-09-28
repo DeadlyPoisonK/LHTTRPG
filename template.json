@@ -71,11 +71,11 @@
       "bad-status": {
         "bad-status": {
           "regen": 0,
-          "cancel": 0,
+          "cancels": [],
           "barrier": 0,
           "decay": 0,
           "pursuits": [],
-          "weakness": 0,
+          "weaknesses": [],
           "dazed": false,
           "rigor": false,
           "confused": false,

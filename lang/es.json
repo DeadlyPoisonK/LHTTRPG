@@ -152,7 +152,10 @@
       "rigor": "Rigidez",
       "staggered": "Tambaleante",
       "Weakness": "Debilidad",
-      "weakness": "Debilidad"
+      "weakness": "Debilidad",
+      "StatusTag": "Tag",
+      "StatusTagAny": "todo",
+      "StatusTagHint": "Tag del daño al que se aplica (ej. Flame). Vacío: cualquier daño."
     },
     "Modifier": "Modificador",
     "Monster": {
@@ -601,7 +604,8 @@
         "OutOfRange": "Fuera de rango ({range}): {names}. No se realizó el ataque."
       },
       "Reveal": "Revelar",
-      "Close": "Close"
+      "Close": "Close",
+      "AttackTags": "Tags del ataque"
     }
   }
 }

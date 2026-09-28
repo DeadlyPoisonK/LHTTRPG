@@ -9,6 +9,12 @@
 
 	{{{rollHTML}}}
 
+	{{#if tags.length}}
+	<div class="chat-card-tags" data-tooltip="LHTRPG.Combat.AttackTags">
+		{{#each tags as |tag|}}<span class="tag">{{tag}}</span>{{/each}}
+	</div>
+	{{/if}}
+
 	{{#*inline "applyButtons"}}
 	<div class="lh-apply-buttons owner-only">
 		{{#if recoveryOnly}}

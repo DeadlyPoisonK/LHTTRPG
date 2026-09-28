@@ -154,7 +154,10 @@
       "rigor": "Rigor",
       "staggered": "Staggered",
       "Weakness": "Weakness",
-      "weakness": "Weakness"
+      "weakness": "Weakness",
+      "StatusTag": "Tag",
+      "StatusTagAny": "any",
+      "StatusTagHint": "Damage tag this applies to (e.g. Flame). Empty: any damage."
     },
     "Modifier": "Modifier",
     "Monster": {
@@ -607,7 +610,8 @@
         "OutOfRange": "Out of range ({range}): {names}. The attack was not made."
       },
       "Reveal": "Reveal",
-      "Close": "Close"
+      "Close": "Close",
+      "AttackTags": "Attack tags"
     }
   }
 }

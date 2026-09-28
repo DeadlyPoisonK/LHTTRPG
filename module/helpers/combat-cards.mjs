@@ -15,6 +15,7 @@
  */
 import { diceFormula } from "./dice.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
+import { listStatusEntries } from "./statuses.mjs";
 
 const TEMPLATES = {
   attack: "systems/lhtrpg/templates/chat/attack-card.hbs",
@@ -175,6 +176,60 @@ function sqDistance(a, b) {
   const p = canvas.grid.getOffset(a.center);
   const q = canvas.grid.getOffset(b.center);
   return Math.abs(p.i - q.i) + Math.abs(p.j - q.j);
+}
+
+/* -------------------------------------------- */
+/*  Damage tags                                 */
+/* -------------------------------------------- */
+
+/** "[Flame]", " flame " -> "flame" */
+const normalizeTag = tag => String(tag ?? "").replace(/[\[\]]/g, "").trim().toLowerCase();
+
+/** Implicit tags of a damage type, so [Weakness (Physical)] / [Cancel (Magic)] also match. */
+const TYPE_TAGS = { physical: ["Physical"], magical: ["Magic", "Magical"], penetrating: ["Penetrating"], direct: ["Direct"] };
+
+/**
+ * Tags of an attack's damage: the skill's tags, plus the main weapon's tags when the skill attacks
+ * with the weapon (Range "Weapon", or a [Weapon / Melee / Ranged Attack] tag).
+ * @param {Item} item
+ * @param {Actor} [attacker]
+ * @returns {string[]}
+ */
+function attackTags(item, attacker) {
+  const tags = [...(item.system.tags ?? [])];
+  const weaponAttack = /weapon|武器|무기/i.test(item.system.range ?? "")
+    || tags.some(t => /^(weapon|melee|ranged) attack$/i.test(normalizeTag(t)));
+  const actor = attacker ?? item.actor;
+  if (weaponAttack && actor) {
+    const weapons = actor.items.filter(i => (i.type === "weapon") && i.system.equipped);
+    const main = weapons.find(w => w.system.main) ?? weapons[0];
+    tags.push(...(main?.system.tags ?? []));
+  }
+  const seen = new Set();
+  return tags.filter(t => {
+    const key = normalizeTag(t);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/**
+ * The highest [Weakness] / [Cancel] entry that applies to damage with these tags: entries without
+ * a tag apply to any damage.
+ * @param {object} bad        The actor's `bad-status`
+ * @param {string} list       "weaknesses" | "cancels"
+ * @param {string} legacy     Pre-v5 single Rating field ("weakness" | "cancel")
+ * @param {string[]} tags     Tags of the damage (with its type tags)
+ * @returns {{value: number, tag: string}|null}
+ */
+function bestTagged(bad, list, legacy, tags) {
+  const entries = listStatusEntries(bad[list], true);
+  if (!entries.length && (Number(bad[legacy]) > 0)) entries.push({ value: Number(bad[legacy]), tag: "" });
+  const keys = new Set(tags.map(normalizeTag));
+  return entries
+    .filter(e => !e.tag || keys.has(normalizeTag(e.tag)))
+    .reduce((best, e) => (!best || (e.value > best.value)) ? e : best, null);
 }
 
 /* -------------------------------------------- */
@@ -365,6 +420,7 @@ export async function createDamageCard(item, attacker, formula, flavor, attackMe
     total: roll.total,
     type: type || fallbackType,
     recovery,
+    tags: attackTags(item, attacker),
     attackerType: attack?.attackerType ?? attacker?.type ?? item.actor?.type ?? null,
     hateMultiplier: attack?.hateMultiplier ?? hateMultiplier(attacker ?? item.actor),
     targets
@@ -436,12 +492,14 @@ async function applyDamage(actor, card, mode, dodgeFailed) {
   if (mode === "half") amount = Math.floor(amount / 2);
   if (mode === "double") amount *= 2;
   const steps = [`${amount}`];
+  const tags = [...(card.tags ?? []), ...(TYPE_TAGS[direct ? "direct" : card.type] ?? [])];
+  const tagLabel = (status, entry) => game.i18n.localize(`LHTRPG.StatusEffect.${status}`) + (entry.tag ? ` (${entry.tag})` : "");
   if (!direct) {
     const defense = defenseOf(actor, card.type);
     if (defense) steps.push(`− ${defense} ${L(card.type === "magical" ? "Applied.MDef" : "Applied.PDef")}`);
-    const cancel = toInt(bad.cancel);
-    if (cancel) steps.push(`− ${cancel} ${game.i18n.localize("LHTRPG.StatusEffect.cancel")}`);
-    amount -= defense + cancel;
+    const cancel = bestTagged(bad, "cancels", "cancel", tags);
+    if (cancel) steps.push(`− ${cancel.value} ${tagLabel("cancel", cancel)}`);
+    amount -= defense + (cancel?.value ?? 0);
   }
   amount = Math.max(amount, 0);
   const absorbed = hit(amount);
@@ -466,7 +524,8 @@ async function applyDamage(actor, card, mode, dodgeFailed) {
       updates["system.bad-status.pursuits"] = pursuits;
       extra(game.i18n.localize("LHTRPG.StatusEffect.pursuit"), top);
     }
-    extra(game.i18n.localize("LHTRPG.StatusEffect.weakness"), toInt(bad.weakness));
+    const weakness = bestTagged(bad, "weaknesses", "weakness", tags);
+    if (weakness) extra(tagLabel("weakness", weakness), weakness.value);
     // A character who fails a Dodge Check against an enemy loses 1 Hate.
     if ((actor.type === "character") && (card.attackerType === "monster") && (before.hate > 0)) {
       updates["system.infos.hate"] = before.hate - 1;

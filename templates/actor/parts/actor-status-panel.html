@@ -6,24 +6,45 @@
 		<h4 class="lh-status-group-title">{{label}}</h4>
 		{{#each statuses}}
 		{{#if list}}
-		{{!-- Status that can be applied several times (Pursuit): type a Rating and add it as a new entry --}}
-		<div class="lh-status lh-status--list{{#if active}} active{{/if}}" title="{{label}}">
+		{{!-- Status that can be applied several times (Pursuit, Weakness, Cancel): type a Rating (and a Tag
+		      for Weakness / Cancel, empty = any damage) and add it as a new entry --}}
+		<div class="lh-status lh-status--list{{#if active}} active{{/if}}" title="{{label}}"{{#unless tagged}} data-add-row{{/unless}}>
 			<img src="{{img}}" alt="" />
 			<span class="lh-status-label">{{label}}</span>
+			{{#unless tagged}}
 			<input class="lh-status-rating lh-status-list-input" type="number" min="1" placeholder="0"
 				data-status-id="{{id}}" />
 			<a class="lh-status-list-add" data-status-id="{{id}}" title="{{localize 'LHTRPG.Add'}}"><i class="fas fa-plus"></i></a>
+			{{/unless}}
 		</div>
-		{{#if value.length}}
+		{{#if (or value.length tagged)}}
 		<ol class="lh-status-entries">
 			{{#each value}}
+			{{#if ../tagged}}
+			<li class="lh-status-entry" title="{{../label}}{{#if tag}} ({{tag}}){{/if}}: {{value}}">
+				<input class="lh-status-tag lh-status-entry-tag" type="text" value="{{tag}}"
+					placeholder="{{localize 'LHTRPG.Label.StatusTagAny'}}" data-status-id="{{../id}}" data-index="{{@index}}" />
+				<input class="lh-status-rating lh-status-entry-input" type="number" min="0" value="{{value}}"
+					data-status-id="{{../id}}" data-index="{{@index}}" />
+			{{else}}
 			<li class="lh-status-entry" title="{{../label}} {{this}}">
 				<input class="lh-status-rating lh-status-entry-input" type="number" min="0" value="{{this}}"
 					data-status-id="{{../id}}" data-index="{{@index}}" />
+			{{/if}}
 				<a class="lh-status-entry-remove" data-status-id="{{../id}}" data-index="{{@index}}"
 					title="{{localize 'LHTRPG.Label.Remove'}}"><i class="fas fa-minus"></i></a>
 			</li>
 			{{/each}}
+			{{#if tagged}}
+			{{!-- Weakness / Cancel: the new entry's Tag and Rating go on their own line (narrow columns) --}}
+			<li class="lh-status-entry lh-status-entry--new" data-add-row>
+				<input class="lh-status-tag lh-status-list-tag" type="text" placeholder="{{localize 'LHTRPG.Label.StatusTag'}}"
+					title="{{localize 'LHTRPG.Label.StatusTagHint'}}" />
+				<input class="lh-status-rating lh-status-list-input" type="number" min="1" placeholder="0"
+					data-status-id="{{id}}" />
+				<a class="lh-status-list-add" data-status-id="{{id}}" title="{{localize 'LHTRPG.Add'}}"><i class="fas fa-plus"></i></a>
+			</li>
+			{{/if}}
 		</ol>
 		{{/if}}
 		{{else}}
