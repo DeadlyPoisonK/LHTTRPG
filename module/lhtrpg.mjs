@@ -1,7 +1,7 @@
 // Import document classes.
 import { LHTrpgActor } from "./documents/actor.mjs";
 import { LHTrpgItem } from "./documents/item.mjs";
-import { LHTrpgCombat } from "./documents/lhtrpgCombat.mjs";
+import { LHTrpgCombat, registerCombatPhases } from "./documents/lhtrpgCombat.mjs";
 import { LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs"
 // Import sheet classes.
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
@@ -92,6 +92,9 @@ Hooks.once('init', async function () {
 
   // Attack / damage chat cards: opposed Hit vs Dodge Checks and damage application
   registerCombatCards();
+
+  // Round Progression: Briefing / Setup / Main / Cleanup phases in the tracker
+  registerCombatPhases();
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();

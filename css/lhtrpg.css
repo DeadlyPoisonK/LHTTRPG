@@ -4149,3 +4149,69 @@ div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
 .lhtrpg.lh-applied-card.undone { opacity: 0.55; }
 .lhtrpg.lh-applied-card.undone .lh-applied-title { text-decoration: line-through; }
 .lhtrpg.lh-applied-card .lh-undone { text-align: center; font-style: italic; }
+
+/* -------------------------------------------- */
+/*  Combat tracker: Round Progression phases     */
+/* -------------------------------------------- */
+
+.combat-tracker-header .lh-phase-bar {
+  display: flex;
+  gap: 4px;
+  padding: 4px 0 2px;
+}
+
+.combat-tracker-header .lh-phase-bar .lh-phase {
+  flex: 1;
+  min-height: 24px;
+  padding: 0 4px;
+  font-size: var(--font-size-12);
+  opacity: 0.55;
+}
+
+.combat-tracker-header .lh-phase-bar .lh-phase:disabled {
+  cursor: default;
+}
+
+.combat-tracker-header .lh-phase-bar .lh-phase.active {
+  opacity: 1;
+  font-weight: bold;
+  border-color: #4cd07d;
+  box-shadow: 0 0 6px #4cd07d;
+}
+
+/* Also styles cards posted before the chat-card markup (h3 + p only) */
+.lhtrpg.lh-phase-card {
+  font-family: "Noto Serif JP", serif;
+  font-size: 12px;
+  color: #d6ffda;
+  background-color: rgba(26, 41, 34, 0.9);
+  border: 1px solid rgba(214, 255, 218, 0.5);
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 0 4px rgba(214, 255, 218, 0.25);
+}
+
+.lhtrpg.lh-phase-card h3 {
+  margin: 0;
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 18px;
+  color: #d6ffda;
+  text-align: center;
+  border: none;
+}
+
+.lhtrpg.lh-phase-card > h3 {
+  border-bottom: 1px solid rgba(214, 255, 218, 0.35);
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+.lhtrpg.lh-phase-card .chat-card-header {
+  justify-content: center;
+  text-align: center;
+}
+
+.lhtrpg.lh-phase-card p {
+  margin: 0;
+  line-height: 1.4;
+}

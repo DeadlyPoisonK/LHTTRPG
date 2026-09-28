@@ -607,10 +607,27 @@
       },
       "Notif": {
         "NoTokens": "Select the tokens to apply it to.",
-        "OutOfRange": "Out of range ({range}): {names}. The attack was not made."
+        "OutOfRange": "Out of range ({range}): {names}. The attack was not made.",
+        "NotYourTurn": "Only the GM or the owner of the current combatant can advance the combat."
       },
       "Reveal": "Reveal",
       "Close": "Close",
+      "Phase": {
+        "briefing": "Briefing",
+        "setup": "Setup",
+        "main": "Main",
+        "cleanup": "Cleanup"
+      },
+      "PhaseHint": {
+        "briefing": "Before combat: ask about enemies, Scouting and [Preparation] skills. Hate is not gained.",
+        "setup": "Setup Process: everyone returns to Pre-Action. Use [Timing: Setup] actions.",
+        "main": "Initiative / Main Process: highest Initiative acts first (PCs win ties). [Timing: Initiative] actions between turns.",
+        "cleanup": "Cleanup Process: Regen/Decay, [Timing: Cleanup] actions, sustained effects, then effects lasting until the end of the round expire."
+      },
+      "Setting": {
+        "AnnouncePhases": "Announce combat phases in chat",
+        "AnnouncePhasesHint": "Post a chat message when each round's Setup and Cleanup Process begins."
+      },
       "AttackTags": "Attack tags"
     }
   }

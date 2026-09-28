@@ -601,10 +601,27 @@
       },
       "Notif": {
         "NoTokens": "Selecciona los tokens a los que aplicarlo.",
-        "OutOfRange": "Fuera de rango ({range}): {names}. No se realizó el ataque."
+        "OutOfRange": "Fuera de rango ({range}): {names}. No se realizó el ataque.",
+        "NotYourTurn": "Solo el GM o el dueño del combatiente actual puede avanzar el combate."
       },
       "Reveal": "Revelar",
       "Close": "Close",
+      "Phase": {
+        "briefing": "Briefing",
+        "setup": "Setup",
+        "main": "Main",
+        "cleanup": "Cleanup"
+      },
+      "PhaseHint": {
+        "briefing": "Antes del combate: preguntar por los enemigos, Scouting y skills [Preparation]. No se gana Hate.",
+        "setup": "Setup Process: todos vuelven a Pre-Action. Se usan acciones [Timing: Setup].",
+        "main": "Initiative / Main Process: actúa primero la mayor Iniciativa (los PJ ganan empates). Acciones [Timing: Initiative] entre turnos.",
+        "cleanup": "Cleanup Process: Regen/Decay, acciones [Timing: Cleanup], efectos sostenidos y luego terminan los efectos que duran hasta fin de ronda."
+      },
+      "Setting": {
+        "AnnouncePhases": "Anunciar las fases del combate en el chat",
+        "AnnouncePhasesHint": "Publica un mensaje cuando empieza el Setup y el Cleanup de cada ronda."
+      },
       "AttackTags": "Tags del ataque"
     }
   }
