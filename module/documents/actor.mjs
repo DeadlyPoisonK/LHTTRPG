@@ -1,7 +1,8 @@
-import { DEFAULT_IMAGES, PILE_TYPE, SPACE_TYPES } from "../piles/pile-config.mjs";
+import { DEFAULT_IMAGES, EQUIP_TYPES, PILE_TYPE, SPACE_TYPES } from "../piles/pile-config.mjs";
 import { syncChestImage } from "../piles/piles.mjs";
 import { completeChecksChange, legacyChecksUpdate, prepareMonsterChecks } from "../helpers/monster-checks.mjs";
 import { classStats, legacyOptionItems, raceStats } from "../helpers/character-options.mjs";
+import { getHands } from "../helpers/hands.mjs";
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -198,7 +199,7 @@ export class LHTrpgActor extends Actor {
       // item count inventory: unequipped items of the general grid (tickets
       // have their own slots and don't use inventory space)
       itemlist.forEach(item => {
-        if (SPACE_TYPES.includes(item.type) && (item.system.equipped !== true)) itemNumber += 1;
+        if (SPACE_TYPES.includes(item.type) && ((item.system.equipped !== true) || !EQUIP_TYPES.includes(item.type))) itemNumber += 1;
       });
       system.inventory.space = itemNumber;
     }
@@ -389,20 +390,10 @@ export class LHTrpgActor extends Actor {
      * ATTACK, MAGIC, RESTORATION POWER
     */
 
-    let mainWeapon;
+    // The main-hand weapon (see hands.mjs)
+    const mainWeapon = getHands(this).main;
 
-    if (weapons.length > 0) {
-      mainWeapon = weapons[0];
-    }
-
-    // Get the first main weapon if the array has more than one weapon
-    if (weapons.length > 1) {
-      for (let [i] of Object.entries(weapons)) {
-        if (weapons[i].system.main) mainWeapon = weapons[i];
-      };
-    }
-
-    if (mainWeapon !== undefined) {
+    if (mainWeapon) {
       bStatus.power.attack.base = mainWeapon.system.attack ?? 0;
       bStatus.power.magic.base = mainWeapon.system.magic ?? 0;
     } else {

@@ -4345,3 +4345,62 @@ div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
 .combat-tracker .combatant .lh-standby-button {
   color: #ffe27a;
 }
+
+/* Hand slots: swap button and off hand taken by a Two-Handed weapon */
+.lhtrpg .equip-slot {
+  position: relative;
+}
+
+.lhtrpg .equip-slot .hand-swap {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #222222;
+  background-color: #d6ffda;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+.lhtrpg .equip-slot .hand-swap:hover {
+  background-color: #488e56;
+  color: #ffffff;
+}
+
+.lhtrpg .equip-slot .empty-slot.locked-slot {
+  opacity: 1;
+  border-style: solid;
+  border-color: rgba(214, 255, 218, 0.25);
+  background-color: rgba(0, 0, 0, 0.35);
+  cursor: not-allowed;
+}
+
+.lhtrpg .equip-slot .empty-slot.locked-slot .locked-weapon {
+  border: none;
+  filter: grayscale(100%);
+  opacity: 0.35;
+}
+
+.lhtrpg .equip-slot .empty-slot.locked-slot .fa-lock {
+  position: absolute;
+  font-size: 16px;
+  color: #d6ffda;
+  text-shadow: 0 0 3px #000000;
+}
+
+.lhtrpg .equip-slot.locked .slot-label {
+  opacity: 0.4;
+}
+
+.lh-attack-card .chat-card-title .chat-card-weapon {
+  display: block;
+  font-size: 12px;
+  text-transform: none;
+  opacity: 0.9;
+}

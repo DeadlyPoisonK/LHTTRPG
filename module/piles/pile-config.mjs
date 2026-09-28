@@ -18,6 +18,10 @@ export const PHYSICAL_TYPES = ["weapon", "armor", "shield", "accessory", "bag", 
 // live in their own slots and never use inventory space.
 export const SPACE_TYPES = ["weapon", "armor", "shield", "accessory", "bag", "gear"];
 
+// Item types that go in an equipment slot of the character sheet. Anything else (gear, potions…)
+// is only carried: it can't be equipped.
+export const EQUIP_TYPES = ["weapon", "armor", "shield", "accessory", "bag"];
+
 export const DEFAULT_IMAGES = {
   loot: "icons/containers/bags/pack-leather-brown.webp",
   chest: "icons/containers/chest/chest-reinforced-steel-brown.webp",

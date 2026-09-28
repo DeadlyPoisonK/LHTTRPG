@@ -16,6 +16,7 @@
 import { diceFormula } from "./dice.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
 import { listStatusEntries } from "./statuses.mjs";
+import { mainWeapon } from "./hands.mjs";
 
 const TEMPLATES = {
   attack: "systems/lhtrpg/templates/chat/attack-card.hbs",
@@ -154,8 +155,7 @@ function parseRange(text, actor) {
   const sq = t.match(/(\d+)\s*sq/i) ?? t.match(/^(\d+)$/);
   if (sq) return Number(sq[1]);
   if (/weapon|武器|무기/i.test(t) && actor) {
-    const weapons = actor.items.filter(i => (i.type === "weapon") && i.system.equipped);
-    const main = weapons.find(w => w.system.main) ?? weapons[0];
+    const main = mainWeapon(actor);
     return main ? parseRange(main.system.range || "Close") : null;
   }
   return null;
@@ -188,6 +188,18 @@ const normalizeTag = tag => String(tag ?? "").replace(/[\[\]]/g, "").trim().toLo
 /** Implicit tags of a damage type, so [Weakness (Physical)] / [Cancel (Magic)] also match. */
 const TYPE_TAGS = { physical: ["Physical"], magical: ["Magic", "Magical"], penetrating: ["Penetrating"], direct: ["Direct"] };
 
+/** Whether a skill attacks with the weapon (Range "Weapon", or a [Weapon / Melee / Ranged Attack] tag). */
+function isWeaponAttack(item) {
+  return /weapon|武器|무기/i.test(item.system.range ?? "")
+    || (item.system.tags ?? []).some(t => /^(weapon|melee|ranged) attack$/i.test(normalizeTag(t)));
+}
+
+/** The main-hand weapon a skill attacks with, or null (not a weapon attack / no weapon). */
+function attackWeapon(item, attacker) {
+  const actor = attacker ?? item.actor;
+  return (actor && isWeaponAttack(item)) ? mainWeapon(actor) : null;
+}
+
 /**
  * Tags of an attack's damage: the skill's tags, plus the main weapon's tags when the skill attacks
  * with the weapon (Range "Weapon", or a [Weapon / Melee / Ranged Attack] tag).
@@ -197,14 +209,8 @@ const TYPE_TAGS = { physical: ["Physical"], magical: ["Magic", "Magical"], penet
  */
 function attackTags(item, attacker) {
   const tags = [...(item.system.tags ?? [])];
-  const weaponAttack = /weapon|武器|무기/i.test(item.system.range ?? "")
-    || tags.some(t => /^(weapon|melee|ranged) attack$/i.test(normalizeTag(t)));
-  const actor = attacker ?? item.actor;
-  if (weaponAttack && actor) {
-    const weapons = actor.items.filter(i => (i.type === "weapon") && i.system.equipped);
-    const main = weapons.find(w => w.system.main) ?? weapons[0];
-    tags.push(...(main?.system.tags ?? []));
-  }
+  const weapon = attackWeapon(item, attacker);
+  if (weapon) tags.push(...(weapon.system.tags ?? []));
   const seen = new Set();
   return tags.filter(t => {
     const key = normalizeTag(t);
@@ -344,6 +350,7 @@ export async function createAttackCard(item, attacker, formula, flavor) {
     img: item.img,
     flavor,
     range: rangeLabel,
+    weapon: attackWeapon(item, attacker)?.name ?? null,
     vs: auto ? "" : vs,
     auto,
     attack,

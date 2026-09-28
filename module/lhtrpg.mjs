@@ -20,6 +20,7 @@ import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs"
 import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
+import { migrateHands, registerHandsSettings } from "./helpers/hands.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -65,6 +66,8 @@ Hooks.once('init', async function () {
   registerMonsterChecks();
   // Tag catalog, tag editor helper and tag normalization
   registerTags();
+  // Main / off hand: one-time fix of Two-Handed weapon + shield
+  registerHandsSettings();
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
   // Time passing per round
@@ -133,6 +136,7 @@ Handlebars.registerHelper('toUpperCase', function (str) {
 Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
+  migrateHands();
 });
 
 /* -------------------------------------------- */

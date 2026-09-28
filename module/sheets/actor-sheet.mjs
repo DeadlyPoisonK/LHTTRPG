@@ -6,6 +6,8 @@ import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-a
 import {rankUp} from "../apps/rank-up.mjs";
 import {PICK_SUBTYPES, SkillBrowser, getPendingSkills} from "../apps/skill-browser.mjs";
 import {OptionBrowser} from "../apps/option-browser.mjs";
+import {equipInHand, getHands, swapHands, unequipHand} from "../helpers/hands.mjs";
+import {EQUIP_TYPES} from "../piles/pile-config.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -13,10 +15,9 @@ import {OptionBrowser} from "../apps/option-browser.mjs";
  */
 // Number of equipment slots available per item type, mirroring the slots
 // rendered in actor-inventory.html. Types not listed here have no slot cap.
+// Weapons and shields go in the hand slots instead (see hands.mjs).
 const EQUIP_SLOT_CAPACITY = {
-  weapon: 1,
   armor: 1,
-  shield: 1,
   bag: 1,
   accessory: 3
 };
@@ -124,7 +125,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     const itemsEquippedShield = [];
     const itemsEquippedAccessory = [];
     const itemsEquippedBag = [];
-    const itemsEquippedGear = [];
     const itemsWeapon = [];
     const itemsArmor = [];
     const itemsShield = [];
@@ -145,7 +145,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     const linkedSkills = new Set(this.actor.items.map(i => i.system.linkedSkillUuid).filter(Boolean));
 
     // Iterate through items, allocating to containers
-    for (let i of context.items) {
+    const itemList = context.items;
+    for (let i of itemList) {
       i.img = i.img || CONST.DEFAULT_TOKEN;
       if (i.type === 'skill' && (i.system.subtype === 'Item')
         && linkedSkills.has(this.actor.items.get(i._id)?.uuid)) continue;
@@ -178,9 +179,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       else if (i.system.equipped === true && i.type === 'bag') {
         itemsEquippedBag.push(i);
       }
-      else if (i.system.equipped === true && i.type === 'gear') {
-        itemsEquippedGear.push(i);
-      }
       // Append to Weapons.
       else if (i.system.equipped === false && i.type === 'weapon') {
         itemsWeapon.push(i);
@@ -202,7 +200,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         itemsBag.push(i);
       }
       // Append to Gear.
-      else if (i.system.equipped === false && i.type === 'gear') {
+      // Gear can't be equipped: always carried in the general inventory.
+      else if (i.type === 'gear') {
         itemsGear.push(i);
       }
       // Append to Tickets.
@@ -241,8 +240,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         "armors": itemsEquippedArmor,
         "shields": itemsEquippedShield,
         "accessories": itemsEquippedAccessory,
-        "bags": itemsEquippedBag,
-        "gear": itemsEquippedGear
+        "bags": itemsEquippedBag
       },
       "weapons": itemsWeapon,
       "armors": itemsArmor,
@@ -251,6 +249,16 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "bags": itemsBag,
       "gear": itemsGear,
     }
+
+    // Main / off hand slots (what each hand holds is deduced from the equipped items).
+    const hands = getHands(this.actor);
+    const byId = id => itemList.find(i => i._id === id) ?? null;
+    context.hands = {
+      main: hands.main ? byId(hands.main.id) : null,
+      off: hands.locked ? null : (hands.off ? byId(hands.off.id) : null),
+      locked: hands.locked ? byId(hands.main.id) : null,
+      canSwap: this.isEditable && (hands.off?.type === "weapon") && !hands.locked
+    };
 
     // Treasure Tickets are kept as one stack per rank
     itemsTicketTreasure.sort((a, b) => (Number(a.system.rank) || 0) - (Number(b.system.rank) || 0));
@@ -266,6 +274,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // the bag-derived maxSpace. Remaining slots render as empty placeholders
     // so the right-hand panel always shows the actual carrying capacity.
     const carriedItems = [].concat(itemsWeapon, itemsArmor, itemsShield, itemsAccessory, itemsBag, itemsGear);
+    for (const i of carriedItems) i.equippable = EQUIP_TYPES.includes(i.type);
     const maxSpace = context.system.inventory?.maxSpace ?? carriedItems.length;
     const inventorySlots = carriedItems.slice(0, maxSpace);
     for (let i = inventorySlots.length; i < maxSpace; i++) {
@@ -414,6 +423,13 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.item-equip').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
+      // Only equipment goes in a slot (gear, potions… are carried, not equipped).
+      if (!item || !EQUIP_TYPES.includes(item.type)) return;
+      // Weapons and shields: fill the main hand, then the off hand (see hands.mjs).
+      if (["weapon", "shield"].includes(item.type)) {
+        const done = item.system.equipped ? unequipHand(this.actor, item) : equipInHand(this.actor, item);
+        return done.then(() => this.render(false));
+      }
       const equipped = !item.system.equipped;
       const updates = [{ _id: item.id, "system.equipped": equipped }];
 
@@ -517,6 +533,13 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       });
     });
 
+    // Swap the two equipped weapons between the hands.
+    html.find('.hand-swap').click(ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      swapHands(this.actor);
+    });
+
     // Unequip an item by dragging it back onto the general inventory grid.
     const inventoryList = html.find('.inventory-list')[0];
     if (inventoryList) {
@@ -590,7 +613,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     if (item.parent?.id === this.actor.id && item.system.equipped === true) {
       event.stopPropagation();
-      await item.update({ "system.equipped": false });
+      if (["weapon", "shield"].includes(item.type)) await unequipHand(this.actor, item);
+      else await item.update({ "system.equipped": false });
     }
   }
 
@@ -628,6 +652,16 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     const slotType = slot.dataset.slotType;
     const slotIndex = Number(slot.dataset.slotIndex ?? 0);
+
+    // Hand slots: main hand takes any weapon, off hand a shield or a One-Handed weapon.
+    const hand = slot.dataset.hand;
+    if (hand) {
+      if (!["weapon", "shield"].includes(item.type)) {
+        ui.notifications.warn(game.i18n.format("LHTRPG.Hands.Notif.NotHandItem", { item: item.name }));
+        return;
+      }
+      return equipInHand(this.actor, item, hand);
+    }
 
     if (item.type !== slotType) {
       ui.notifications.warn(game.i18n.format("INVENTORY.Notif.WrongItemType", {

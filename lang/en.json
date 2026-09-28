@@ -47,6 +47,21 @@
     }
   },
   "LHTRPG": {
+    "Hands": {
+      "Main": "Main Hand",
+      "Off": "Off Hand",
+      "Swap": "Swap hands (attack with the other weapon)",
+      "Locked": "Taken by {weapon} [Two-Handed]",
+      "Notif": {
+        "ShieldOffHand": "{item}: shields go in the Off Hand.",
+        "TwoHandedOffHand": "{item} is [Two-Handed]: it goes in the Main Hand.",
+        "OffHandLocked": "{item} can't be equipped: {weapon} [Two-Handed] takes both hands.",
+        "NotHandItem": "{item} can't be held in a hand slot.",
+        "Unequipped": "Back to the inventory to equip {item}: {items}.",
+        "Migrated": "Two-Handed weapons take both hands: unequipped the off-hand item of {list}.",
+        "MigratedCarried": "Only equipment can be equipped: back to the inventory for {list}."
+      }
+    },
     "Add": "Add",
     "Biography": {
       "Label": "Bio."

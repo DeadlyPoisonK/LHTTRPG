@@ -7,9 +7,9 @@
 	<div class="equipment-slots">
 		<h4 class="equipment-title">{{localize "LHTRPG.Label.Equipment"}}</h4>
 		<div class="equip-slots-grid">
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="weapon" typeLabel="TYPES.ITEM.TypeWeapon" index=0 item=items.equipped.weapons.[0] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="hand" hand="main" icon="weapon" typeLabel="LHTRPG.Hands.Main" index=0 item=hands.main swap=hands.canSwap }}
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="armor" typeLabel="TYPES.ITEM.TypeArmor" index=0 item=items.equipped.armors.[0] }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="shield" typeLabel="TYPES.ITEM.TypeShield" index=0 item=items.equipped.shields.[0] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="hand" hand="off" icon="shield" typeLabel="LHTRPG.Hands.Off" index=0 item=hands.off locked=hands.locked }}
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=0 item=items.equipped.accessories.[0] }}
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=1 item=items.equipped.accessories.[1] }}
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=2 item=items.equipped.accessories.[2] }}

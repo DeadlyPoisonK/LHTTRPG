@@ -4,6 +4,7 @@
 		<div class="chat-card-title">
 			<h3>{{skillName}}</h3>
 			<span class="chat-card-type">{{#if auto}}{{localize 'LHTRPG.Combat.AutoHit'}}{{else}}{{localize 'LHTRPG.Combat.HitCheck'}} vs {{labels.vs}}{{/if}}{{#if range}} · {{range}}{{/if}}</span>
+			{{#if weapon}}<span class="chat-card-weapon"><i class="fas fa-khanda"></i> {{weapon}}</span>{{/if}}
 		</div>
 	</header>
 
