@@ -622,7 +622,20 @@
         "AnnouncePhases": "Anunciar las fases del combate en el chat",
         "AnnouncePhasesHint": "Publica un mensaje cuando empieza el Setup y el Cleanup de cada ronda."
       },
-      "AttackTags": "Tags del ataque"
+      "AttackTags": "Tags del ataque",
+      "Standby": "Standby",
+      "StandbyHint": "Standby: salta su Main Process por ahora y actúa después de todos los que no están en Standby (menor Iniciativa primero). Una vez por ronda, antes de hacer ninguna acción.",
+      "StandbyDeclared": "Se pone en <strong>Standby</strong>.",
+      "ActionState": {
+        "pre": "Pre",
+        "post": "Post",
+        "standby": "Standby"
+      },
+      "ActionStateHint": {
+        "pre": "Pre-Action: aún no hace su Main Process esta ronda.",
+        "post": "Post-Action: ya hizo su Main Process esta ronda.",
+        "standby": "En Standby: actúa después de los demás, menor Iniciativa primero."
+      }
     }
   }
 }

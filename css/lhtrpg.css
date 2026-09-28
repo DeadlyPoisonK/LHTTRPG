@@ -4215,3 +4215,33 @@ div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
   margin: 0;
   line-height: 1.4;
 }
+
+/* Combat tracker: Pre/Post-Action and Standby */
+.combat-tracker .combatant .lh-action-state {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: var(--font-size-10);
+  line-height: 14px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+}
+
+.combat-tracker .combatant .token-name .lh-action-state {
+  align-self: flex-start;
+}
+
+.combat-tracker .combatant .lh-action-state.pre { color: #4cd07d; }
+.combat-tracker .combatant .lh-action-state.post { color: #999999; }
+.combat-tracker .combatant .lh-action-state.standby { color: #ffe27a; }
+
+.combat-tracker .combatant.lh-post-action:not(.active) {
+  opacity: 0.55;
+}
+
+.combat-tracker .combatant .lh-standby-button {
+  color: #ffe27a;
+}

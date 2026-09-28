@@ -628,7 +628,20 @@
         "AnnouncePhases": "Announce combat phases in chat",
         "AnnouncePhasesHint": "Post a chat message when each round's Setup and Cleanup Process begins."
       },
-      "AttackTags": "Attack tags"
+      "AttackTags": "Attack tags",
+      "Standby": "Standby",
+      "StandbyHint": "Standby: skip your Main Process for now and act after everyone not on Standby (lowest Initiative first). Once per round, before taking any action.",
+      "StandbyDeclared": "Goes on <strong>Standby</strong>.",
+      "ActionState": {
+        "pre": "Pre",
+        "post": "Post",
+        "standby": "Standby"
+      },
+      "ActionStateHint": {
+        "pre": "Pre-Action: has not taken its Main Process this round.",
+        "post": "Post-Action: already took its Main Process this round.",
+        "standby": "On Standby: acts after everyone else, lowest Initiative first."
+      }
     }
   }
 }
