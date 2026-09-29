@@ -1,21 +1,25 @@
 {
   "TYPES": {
-    "ACTOR": {
-      "TypeCharacter": "Player Character",
-      "TypeMonster": "Monster"
+    "Item": {
+      "accessory": "補助",
+      "armor": "防具",
+      "bag": "収納",
+      "connection": "コネクション",
+      "gear": "その他",
+      "shield": "盾",
+      "skill": "特技",
+      "ticket": "チケット",
+      "union": "ユニオン",
+      "weapon": "武器",
+      "race": "種族",
+      "class": "メイン職業",
+      "subclass": "サブ職業",
+      "usable": "使用アイテム"
     },
-    "ITEM": {
-      "TypeAccessory": "補助",
-      "TypeArmor": "防具",
-      "TypeBag": "収納",
-      "TypeConnection": "コネクション",
-      "TypeGear": "その他",
-      "TypeShield": "盾",
-      "TypeSkill": "特技",
-      "TypeTicket": "チケット",
-      "TypeUnion": "ユニオン",
-      "TypeUsable": "使用アイテム",
-      "TypeWeapon": "武器"
+    "Actor": {
+      "character": "Player Character",
+      "monster": "Monster",
+      "pile": "集積 (宝箱 / 売り子)"
     }
   },
   "IMPORT": {
@@ -32,6 +36,21 @@
     }
   },
   "LHTRPG": {
+    "Hands": {
+      "Main": "メインハンド",
+      "Off": "オフハンド",
+      "Swap": "ハンドを交換 (もう片方の武器で攻撃)",
+      "Locked": "{weapon} [Two-Handed] で占有されています",
+      "Notif": {
+        "ShieldOffHand": "{item}: 盾はオフハンドに配置されます。",
+        "TwoHandedOffHand": "{item} は [Two-Handed]: メインハンドに配置されます。",
+        "OffHandLocked": "{item} は装備できません: {weapon} [Two-Handed] が両手を占有しています。",
+        "NotHandItem": "{item} はハンドスロットに持ち込めません。",
+        "Unequipped": "インベントリに戻って {item}: {items} を装備してください。",
+        "Migrated": "両手持ち武器は両手を占有します: {list} のオフハンドアイテムを装備解除します。",
+        "MigratedCarried": "装備可能なのは装備品のみです: {list} はインベントリに戻ってください。"
+      }
+    },
     "Add": "Add",
     "Biography": {
       "Label": "説明"
@@ -40,10 +59,7 @@
       "Cancel": "Cancel",
       "Delete": "削除",
       "Edit": "編集",
-      "Roll": "ロール",
-      "Tag": {
-        "Add": "Add"
-      }
+      "Roll": "ロール"
     },
     "Check": {
       "Accuracy": "命中",
@@ -95,17 +111,28 @@
         "Target": "対象",
         "ThrowToChat": "チャットに送信",
         "Timing": "タイミング"
+      },
+      "Use": {
+        "Button": "使用",
+        "Label": "使用済み",
+        "Consumed": "消費",
+        "EffectsApplied": "効果を適用: {names}",
+        "ApplyEffects": "効果を適用",
+        "NoActor": "このアイテムはキャラクターによって持ち込まれる必要があります。",
+        "NoTargets": "効果を受けるトークンをターゲットに指定してください。",
+        "Blocked": "{name} は現在使用できません: タイミング {timing} ({reason}).",
+        "GMOverride": "タイミング {timing} ({reason}):  anyway (GM) で使用します。",
+        "Reason": {
+          "NotTurn": "メインプロセスではありません",
+          "Phase": "現在のフェーズ: {phase}",
+          "OutOfCombat": "戦闘外のみ",
+          "Briefing": "戦闘開始前のみ"
+        },
+        "Migrated": "{count} 個のギアを使用アイテム（ポーション、スクロールなど）に変換しました。"
       }
     },
     "Label": {
-      "Afflicted": "重篤",
-      "Barrier": "障壁",
-      "Cancel": "軽減",
-      "Confused": "惑乱",
-      "Dazed": "放心",
-      "Decay": "衰弱",
       "Defense": "防御力",
-      "EmptySlot": "空き",
       "Equip": "装備",
       "Equipment": "装備",
       "Fate": "因果力",
@@ -113,31 +140,15 @@
       "Guild": "所属ギルド",
       "HP": "HP",
       "Hate": "ヘイト",
-      "ImportItems": "lhrpg.com からアイテムをインポートする",
-      "ImportSkills": "lhrpg.com から特技をインポート",
-      "Inventory": "所持品",
-      "Overconfident": "慢心",
       "Power": "攻撃力",
-      "Pursuit": "追撃",
       "Race": "種族",
-      "Regen": "再生",
       "Remove": "削除",
-      "Rigor": "硬直",
-      "Staggered": "萎縮",
       "Tags": "タグ",
       "Tickets": "チケット",
       "Type": "種別",
-      "afflicted": "重篤",
-      "barrier": "障壁",
-      "cancel": "軽減",
-      "confused": "惑乱",
-      "dazed": "放心",
-      "decay": "衰弱",
-      "overconfident": "慢心",
-      "pursuit": "追撃",
-      "regen": "再生",
-      "rigor": "硬直",
-      "staggered": "萎縮"
+      "StatusTag": "タグ",
+      "StatusTagAny": "任意",
+      "StatusTagHint": "適用するダメージタグ（例: 火炎）。空欄: 任意のダメージ。"
     },
     "Modifier": "修正値",
     "Monster": {
@@ -176,16 +187,9 @@
         "Range": "射程",
         "SR": "SR",
         "Target": "対象",
-        "Timing": "タイミング"
-      },
-      "Placeholder": {
-        "Check": "-",
-        "Cost": "-",
-        "Limit": "-",
-        "MacroEffect": "-",
-        "Range": "-",
-        "Target": "-",
-        "Timing": "-"
+        "Timing": "タイミング",
+        "ExtraDice": "追加ダイス",
+        "DamageRecovery": "回復"
       },
       "Type": {
         "Basic": "基本動作",
@@ -193,6 +197,16 @@
         "General": "一般",
         "Monster": "モンスター",
         "Item": "アイテム"
+      },
+      "Option": {
+        "Custom": "カスタム…"
+      },
+      "Notif": {
+        "NoCharacter": "この特技をロールするには、キャラクター（またはトークン）を選択してください。",
+        "Missing": "この特技はもはや存在しません。"
+      },
+      "Placeholder": {
+        "MacroEffect": "-"
       }
     },
     "Ticket": {
@@ -201,13 +215,11 @@
         "Fate": "因果チケット",
         "Connection": "コネクションチケット",
         "Reset": "リセットチケット"
-      }
+      },
+      "AddRank": "このCRの財宝チケットを追加"
     },
     "Status": {
       "Label": "Status"
-    },
-    "Others": {
-      "Label": "その他"
     },
     "Str": "STR",
     "Tooltip": {
@@ -224,13 +236,411 @@
       "Name": "ユニオン名"
     },
     "WindowTitle": {
-      "AbilityCheck": "能力値判定",
-      "Tag": {
-        "AddNewTag": "Add a new tag"
-      }
+      "AbilityCheck": "能力値判定"
+    },
+    "StatusEffect": {
+      "fatigue": "疲労",
+      "weakness": "虚弱",
+      "incapacitated": "不能",
+      "dead": "死",
+      "staggered": "萎縮",
+      "dazed": "放心",
+      "rigor": "硬直",
+      "confused": "惑乱",
+      "decay": "衰弱",
+      "pursuit": "追撃",
+      "afflicted": "重篤",
+      "overconfident": "慢心",
+      "regen": "再生",
+      "cancel": "軽減",
+      "barrier": "障壁",
+      "hidden": "隠し",
+      "swimming": "水中",
+      "flying": "飛行",
+      "identified": "識別",
+      "standby": "待機",
+      "hateTop": "ヘイトトップ",
+      "hateUnder": "ヘイトアンダー",
+      "absent": "場外"
+    },
+    "StatusGroup": {
+      "bad": "悪状態",
+      "life": "ライフ状態",
+      "combat": "戦闘状態",
+      "other": "その他状態"
     },
     "Stats": {
       "Label": "Stats"
+    },
+    "Piles": {
+      "SheetLabel": "積み込みシート（ loot, chest, merchant）",
+      "ChatAlias": "インベントリ",
+      "DefaultLootName": "loot",
+      "ItemPilesActive": "Item Piles モジュールがアクティブです。Log Horizon TRPG には既に loot, chest, merchant が含まれています: 両方同時に使用すると重複する可能性があります。",
+      "Mode": {
+        "Loot": "loot",
+        "Chest": "chest",
+        "Merchant": "merchant"
+      },
+      "Gold": "ゴールド",
+      "Quantity": "数量",
+      "Confirm": "確認",
+      "Give": "与える",
+      "GiveTo": "与える先…",
+      "GiveItemTitle": "アイテム {item} を与える",
+      "GiveGoldTitle": "ゴールドを与える",
+      "Take": "取得",
+      "TakeAll": "すべて取得",
+      "TakeGold": "ゴールドを取得",
+      "DepositGold": "ゴールドを残す",
+      "SplitGold": "ゴールドを分ける",
+      "Buy": "購入",
+      "Sell": "売却",
+      "SellConfirm": "{quantity} × {item} を {gold} ゴールドで売却しますか？",
+      "Delete": "削除",
+      "Configure": "設定",
+      "Open": "開く",
+      "Closed": "閉店中",
+      "Locked": "錠前が掛かっています",
+      "OpenChest": "箱を開く",
+      "CloseChest": "箱を閉じる",
+      "ClosedHint": "箱は閉じています。",
+      "LockedHint": "箱は錠前が掛かっています。誰かが鍵を持っているかもしれません…",
+      "ShopOpen": "営業中",
+      "ShopClosed": "閉店中",
+      "ShopClosedHint": "現在、店は閉店しています。",
+      "Contents": "中身",
+      "Stock": "在庫",
+      "StockHint": "在庫（空または ∞ = 無限）",
+      "SoldOut": "売り切れ",
+      "Empty": "ここに何もない。",
+      "NothingForSale": "販売品がありません。",
+      "NothingToSell": "売却するものがありません。",
+      "NoSalesHint": "この商人はアイテムを買い取らないようです。",
+      "DropHint": "サイドバー、コンパンドリウム、またはキャラクターシートからアイテムをここにドラッグしてください。",
+      "NoInteractor": "トークンを選択（またはキャラクターを割り当て）して対話してください。",
+      "Config": {
+        "Mode": "種別",
+        "Distance": "対話距離",
+        "DistanceHint": "グリッド空間で。1 = 隣接, -1 = 無限",
+        "DeleteWhenEmpty": "空になったらトークンを削除",
+        "ImgClosed": "閉じた画像",
+        "ImgOpen": "開いた画像（空 = キャラクター画像）",
+        "AcceptsSales": "プレイヤーからアイテムを購入",
+        "InfiniteGold": "無限の金",
+        "BuyPercent": "購入価格（アイテム価格の%）",
+        "SellPercent": "販売価格（アイテム価格の%）",
+        "ResellSold": "プレイヤーから購入したアイテムを再販",
+        "ResellSoldHint": "オフ: プレイヤーが売ったアイテムは支払い後に消える。オン: 限定在庫（販売数）で販売される"
+      },
+      "Settings": {
+        "ChatLog": {
+          "Name": "アイテムの移動をチャットに記録",
+          "Hint": "宝物を取得、アイテムを渡す、購入、販売するたびにチャットメッセージを投稿"
+        }
+      },
+      "Log": {
+        "Take": "<b>{actor}</b> は <b>{pile}</b> から {item} を奪った。",
+        "Deposit": "<b>{actor}</b> は <b>{pile}</b> に {item} を置いた。",
+        "Give": "<b>{actor}</b> は <b>{target}</b> に {item} を渡した。",
+        "Drop": "<b>{actor}</b> は {item} を地面に落とした。",
+        "Buy": "<b>{actor}</b> は <b>{pile}</b> から {gold} ゴールドで {item} を購入した。",
+        "Sell": "<b>{actor}</b> は <b>{pile}</b> に {gold} ゴールドで {item} を売却した。",
+        "Split": "<b>{pile}</b> のゴールドは分割され、{actors} に {gold} ゴールドずつ配分された。"
+      },
+      "Warn": {
+        "InventoryFullLeft": "{actor} のインベントリが満杯です。残り: {items}。"
+      },
+      "Error": {
+        "Generic": "その行動は完了できませんでした。",
+        "NoGM": "GMが接続していなければこの操作はできません。",
+        "Timeout": "GMがタイムアウトしました。",
+        "NoPermission": "その行動は許可されていません。",
+        "NoActor": "まずトークンを選択するか、キャラクターを割り当ててください。",
+        "TooFar": "{pile} から {name} が遠すぎる。",
+        "Closed": "{pile} は閉店しています。",
+        "Locked": "{pile} は錠がかかっています。",
+        "MerchantClosed": "{pile} は閉店しています。",
+        "NotPhysical": "{item} は持ち運ぶことができるオブジェクトではありません。",
+        "InventoryFull": "{actor} の inventory は満タンで、{item} を入れるスペースがありません。",
+        "NotEnoughGold": "{actor} に十分な金がない。",
+        "InvalidAmount": "無効な金額です。",
+        "NoGold": "渡す金がない。",
+        "NoTargets": "他のプレイヤーキャラクターがいません。",
+        "NoParty": "金を分けるためのプレイヤーキャラクターがいません。",
+        "OutOfStock": "{item} は売り切れています。",
+        "NoSales": "{pile} はアイテムを買い取らない。",
+        "MerchantNoGold": "{pile} にそのアイテムを買うための金がない。"
+      },
+      "GoldLabel": "金",
+      "Max": "max. {max}",
+      "EditImage": "画像を変更",
+      "Search": "検索…",
+      "AllTypes": "すべて",
+      "Sort": {
+        "Label": "並び替え",
+        "Manual": "保存順",
+        "Name": "名前",
+        "Type": "種別",
+        "PriceAsc": "価格（安い順）",
+        "PriceDesc": "価格（高い順）"
+      },
+      "Description": "説明",
+      "BuyTab": "購入",
+      "SellTab": "販売",
+      "Item": "アイテム",
+      "Price": "価格",
+      "Convert": {
+        "Title": "アクターをpileに変換",
+        "Hint": "既存のアクター（例：Item Piles の商人、宝箱、戦利品）をシステムのパイルに変換します。アイテム、ゴールド、画像、トークン、権限は保持され、能力値は失われます。プレイヤーに割り当てられたキャラクターは表示されません。",
+        "Actor": "アクター",
+        "Mode": "変換先",
+        "DropNonPhysical": "特技、コネクション、ユニオンを削除",
+        "Summary": "{physical}のオブジェクトと{gold}の金は保持され、{other}の他のアイテム、{tokens}のトークン（シーン上）が移動されます。",
+        "Confirm": "変換",
+        "AreYouSure": "アクター <b>{actor}</b> を {mode} の pile に変換しますか？ステータスは失われます。この操作は自動で元に戻せません。",
+        "Done": "{actor} は {mode} の pile になりました：{items} のオブジェクトを保持、{dropped} のアイテムを削除、{tokens} のトークンを移動しました。",
+        "NoActors": "変換可能なアクターは存在しません。",
+        "PlayerOwned": "プレイヤー所有"
+      },
+      "TypePlural": {
+        "weapon": "武器",
+        "armor": "防具",
+        "shield": "盾",
+        "accessory": "補助",
+        "bag": "収納",
+        "gear": "その他",
+        "ticket": "チケット",
+        "usable": "使用アイテム"
+      }
+    },
+    "Archetype": {
+      "Warrior": "戦士",
+      "WeaponAttacker": "武器使い",
+      "Healer": "回復者",
+      "Mage": "魔術師"
+    },
+    "SkillBrowser": {
+      "Title": "特技: {name}",
+      "Open": "このキャラクターが習得またはランクアップ可能な特技を閲覧",
+      "Browse": "閲覧",
+      "Search": "名前、クラス、またはタグで検索",
+      "HintPending": "選べる特技: {combat} 戦闘特技と {general} 一般特技を習得またはランクアップ。特技は最大SRまたはキャラクターのCRを超えることはできません。",
+      "HintFree": "新しい特技（SR 1）を習得するか、既存の特技のSRを上げることができます。特技は最大SRまたはキャラクターのCRを超えることはできません。",
+      "HintTraining": "キャラクター作成：[Training] 特技の残り {left} / {max}",
+      "TrainingFull": "キャラクター作成時に習得できる [Training] 特技は {max} 個までです",
+      "MaxSRShort": "最大SR {max}",
+      "Acquire": "習得 (SR 1)",
+      "Raise": "SR {sr} に上げる",
+      "Unpick": "選択から削除",
+      "MaxSR": "すでに最大SR ({max}) です",
+      "MaxCR": "SRはキャラクターのCR ({max}) を超えることはできません",
+      "Full": "このタイプの選択がありません",
+      "Empty": "特技がありません。キャラクターのクラスや種族、またはソースフィルターを確認してください。",
+      "NoPicks": "まだ選択されていません。",
+      "Confirm": "キャラクターに追加",
+      "ChatTitle": "{name} が学んだ特技",
+      "ChatNew": "{name} (SR 1)",
+      "ChatRaise": "{name} → SR {sr}",
+      "Undo": {
+        "Title": "選んだ特技: {name}",
+        "HintRank": "{name}は現在CR {rank}です。これらのスキルはより高いCRで選ばれました。チェックされたスキルを元に戻しますか？",
+        "HintClass": "{name}はもはやこれらのスキルを選んだメインクラスではありません。チェックされたスキルを元に戻しますか？",
+        "Delete": "スキルを削除",
+        "Lower": "SR {from} → {to}",
+        "Ranks": "CR {ranks}で選ばれました",
+        "Apply": "チェックされたものを元に戻す",
+        "Keep": "すべてを保持"
+      },
+      "Source": {
+        "archetype": "アーキタイプ",
+        "class": "メインクラス",
+        "race": "種族",
+        "subclass": "サブクラス",
+        "common": "共通"
+      },
+      "Filter": {
+        "eligible": "すべてのリスト",
+        "archetype": "アーキタイプ",
+        "class": "メインクラス",
+        "race": "種族",
+        "subclass": "サブクラス",
+        "common": "共通",
+        "all": "すべてのスキル（制限なし）"
+      }
+    },
+    "RankUp": {
+      "Button": "CRアップ",
+      "Tooltip": "キャラクターランクアップ（ログチケット）",
+      "Title": "キャラクターランクアップ: {name}",
+      "Confirm": "キャラクターランクを{from}から{to}に上げますか？",
+      "GainHP": "最大HP +{hp}（メインクラスHP修正値）",
+      "GainStats": "すべてのベースステータスに+1",
+      "GainSkills": "取得またはランクアップ {combat} 戦闘特技(s) と {general} 一般特技",
+      "Chat": "{name} は CR {to} に到達しました"
+    },
+    "StatAllocation": {
+      "Confirm": "確定",
+      "Later": "後で",
+      "Human": {
+        "Title": "ヒューマン: ボーナス能力値",
+        "Menu": "ヒューマン能力値を選択",
+        "Hint": "ヒューマンは {count} 個のベース能力値に +1 を与えます。選択してください:"
+      },
+      "Bonus": {
+        "Title": "ボーナスポイント: {name}",
+        "Menu": "ボーナスポイントを配分",
+        "Hint": "新キャラクターは {points} ポイントのボーナスポイントを持ち、ベース能力値に自由に配分できます。この時点ではどのベース能力値も {max} を超えてはなりません。",
+        "Points": "ボーナス",
+        "Base": "ベース能力値",
+        "Left": "残りポイント:"
+      }
+    },
+    "CharacterOptions": {
+      "Archetype": "アーキタイプ",
+      "Identifier": "ID",
+      "HpPerRank": "HP / ランク",
+      "World": "ワールド",
+      "Choose": "選ぶ",
+      "View": "詳細を表示",
+      "Change": "変更",
+      "Menu": "オプション",
+      "Empty": "何もありません。このタイプのアイテムをワールドまたはアイテムコンパニウムで作成してください。",
+      "NoMatch": "結果がありません。",
+      "Migrated": "種族 / 職業 / サブ職業: {count} キャラクターがアイテムに変換されました。",
+      "Select": {
+        "race": "種族選択",
+        "class": "クラス選択",
+        "subclass": "サブクラス選択"
+      },
+      "Search": {
+        "race": "種族を検索",
+        "class": "クラスを検索",
+        "subclass": "サブクラスを検索"
+      },
+      "SubclassSkills": {
+        "SheetHint": "このサブクラスが許可する特技: この特技を持つキャラクターは、特技選択時に取得できます（無料で与えられません）。特技をここにドラッグして追加します。",
+        "Empty": "このサブクラスはまだ特技を許可していません。"
+      },
+      "Grants": {
+        "Tab": "特技",
+        "Title": "初期特技: {name}",
+        "Add": "特技を追加",
+        "Skip": "スキップ",
+        "Hint": "{type} {name} はこれらの特技を備えています。追加する特技を選んでください:",
+        "ChooseOne": "一つ選ぶ",
+        "Fixed": "特技",
+        "Owned": "すでに持っています",
+        "RemoveStale": "以前の {type} によって与えられた特技を削除:",
+        "SheetHint": "このアイテムを取得した際にキャラクターが得る特技。特技をラインにドラッグして複数選択肢にするか、下のエリアにドラッグして新しい特技を追加します。",
+        "Drop": "特技をここにドロップ",
+        "OnlySkills": "コンパンドリウムや世界からしか特技アイテムを取得できません。"
+      }
+    },
+    "Combat": {
+      "HitCheck": "命中判定",
+      "AutoHit": "自動命中",
+      "Critical": "クリティカル!",
+      "Fumble": "ファンブル!",
+      "Dodge": "回避",
+      "Hit": "命中",
+      "Miss": "回避",
+      "Pending": "保留",
+      "HateUnder": "ヘイト下 +2",
+      "DamageRoll": "ダメージ",
+      "DodgeFailed": "回避失敗",
+      "Selected": "選択されたトークン",
+      "Undo": "元に戻す",
+      "Undone": "元に戻しました",
+      "Type": {
+        "physical": "物理",
+        "magical": "魔法",
+        "penetrating": "貫通",
+        "direct": "直接",
+        "recovery": "回復"
+      },
+      "Mode": {
+        "damage": "ダメージ",
+        "half": "半分",
+        "double": "倍",
+        "direct": "直接",
+        "heal": "回復"
+      },
+      "Hint": {
+        "damage": "ダメージを適用: タイプごとの防御、軽減、障壁",
+        "half": "ダメージの半分を適用（切り捨て）",
+        "double": "ダメージの2倍を適用",
+        "direct": "直接ダメージを適用: 防御と軽減を無視し、障壁も無視",
+        "heal": "この量のHPを回復",
+        "dodgeFailed": "回避判定に失敗: ヘイトダメージ、追撃、弱体も適用",
+        "reveal": "この分解をプレイヤーに表示"
+      },
+      "Applied": {
+        "Damage": "ダメージ",
+        "Heal": "回復",
+        "PDef": "P.Def",
+        "MDef": "M.Def",
+        "Hate": "ヘイトダメージ",
+        "HateDown": "ヘイト −1 (回避判定失敗)"
+      },
+      "Notif": {
+        "NoTokens": "適用対象のトークンを選択してください。",
+        "OutOfRange": "射程外 ({range}): {names}。攻撃は行われませんでした。",
+        "NotYourTurn": "戦闘を進めるのはGMまたは現在の戦闘参加者の所有者だけです。"
+      },
+      "Reveal": "明らかにする",
+      "Close": "閉じる",
+      "Phase": {
+        "briefing": "準備",
+        "setup": "セットアップ",
+        "main": "メイン",
+        "cleanup": "クリーンアップ"
+      },
+      "PhaseHint": {
+        "briefing": "戦闘前：エネミーの情報確認、Scouting、[Preparation] 特技。ヘイトは増えません。",
+        "setup": "セットアッププロセス：全員が未行動に戻ります。[Timing: Setup] の行動を使用。",
+        "main": "イニシアチブ／メインプロセス：行動力の高い順に行動（同値はPC優先）。手番の間に [Timing: Initiative] の行動。",
+        "cleanup": "クリーンアッププロセス：Regen/Decay、[Timing: Cleanup] の行動、持続効果、その後ラウンド終了までの効果が終了します。"
+      },
+      "Setting": {
+        "AnnouncePhases": "チャットで戦闘フェーズをアナウンス",
+        "AnnouncePhasesHint": "各ラウンドのセットアップとクリーンアッププロセスが始まるたびにチャットにメッセージを投稿します。"
+      },
+      "AttackTags": "攻撃タグ",
+      "Standby": "待機",
+      "StandbyHint": "待機: 一時的にメインプロセスをスキップし、待機していない全員（行動力最低順）が行動した後に行います。一ラウンドに一度、アクションを取る前に。",
+      "StandbyDeclared": "待機状態になります。<strong>待機</strong>中です。",
+      "ActionState": {
+        "pre": "事前",
+        "post": "事後",
+        "standby": "待機"
+      },
+      "ActionStateHint": {
+        "pre": "事前行動: 今ラウンドのメインプロセスをまだ実行していない。",
+        "post": "事後行動: 今ラウンドのメインプロセスをすでに実行している。",
+        "standby": "待機中: 他の全員の行動の後に行動する、行動力が最も低い順。"
+      }
+    },
+    "Tag": {
+      "Placeholder": "タグを追加…",
+      "Migrated": "タグが {count} ドキュメントで正規化されました。"
+    },
+    "TagGroup": {
+      "Equipment": "装備",
+      "Item": "アイテム",
+      "Skill": "特技",
+      "Attack": "攻撃",
+      "Element": "属性",
+      "Creature": "モンスター",
+      "Other": "その他"
+    },
+    "PlayerSheet": "キャラクターシート",
+    "MonsterSheet": "モンスターシート",
+    "Macro": {
+      "Notif": {
+        "OwnedOnly": "アクターが所有するアイテムのみでマクロボタンを作成できます。",
+        "NoItem": "あなたの制御しているアクターが {item} という名前のアイテムを持っていません。"
+      }
     }
   }
 }

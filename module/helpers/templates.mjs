@@ -23,7 +23,6 @@
     "systems/lhtrpg/templates/actor/parts/actor-status-panel.html",
     "systems/lhtrpg/templates/actor/parts/actor-option.html",
 
-    "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html",
     "systems/lhtrpg/templates/actor/parts/inventory/inventory-ticket-slot.html",

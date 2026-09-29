@@ -181,7 +181,7 @@ export async function convertDialog() {
   const esc = foundry.utils.escapeHTML;
   const selected = canvas.ready ? canvas.tokens.controlled.map(t => t.actor).find(a => a && actors.includes(a.isToken ? game.actors.get(a.id) : a)) : null;
   const initial = selected ? (game.actors.get(selected.id) ?? actors[0]) : actors[0];
-  const typeLabel = a => game.i18n.localize(`TYPES.ACTOR.Type${a.type.capitalize()}`);
+  const typeLabel = a => game.i18n.localize(`TYPES.Actor.${a.type}`);
   const actorOptions = actors.map(a => {
     const ip = itemPilesData(a).type;
     let tag = ip ? ` — Item Piles: ${ip}` : "";

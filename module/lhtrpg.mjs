@@ -20,7 +20,7 @@ import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs"
 import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
-import { registerItemUse } from "./helpers/item-use.mjs";
+import { registerItemUse, useItem } from "./helpers/item-use.mjs";
 import { migrateHands, registerHandsSettings } from "./helpers/hands.mjs";
 
 /* -------------------------------------------- */
@@ -114,21 +114,6 @@ Hooks.once('init', async function () {
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
 
-// If you need to add Handlebars helpers, here are a few useful examples:
-Handlebars.registerHelper('concat', function () {
-  var outStr = '';
-  for (var arg in arguments) {
-    if (typeof arguments[arg] != 'object') {
-      outStr += arguments[arg];
-    }
-  }
-  return outStr;
-});
-
-Handlebars.registerHelper('toLowerCase', function (str) {
-  return str.toLowerCase();
-});
-
 Handlebars.registerHelper('toUpperCase', function (str) {
   return str.toUpperCase();
 });
@@ -211,18 +196,15 @@ Hooks.on("updateItem", (item, changes) => {
  */
 async function createItemMacro(data, slot) {
   if (data.type !== "Item") return;
-  
-  let item;
-  if (data.uuid) {
-    item = await fromUuid(data.uuid);
-  } else if (data.data) {
-    item = data.data;
+
+  const item = data.uuid ? await fromUuid(data.uuid) : null;
+  if (!item?.parent) {
+    ui.notifications.warn(game.i18n.localize("LHTRPG.Macro.Notif.OwnedOnly"));
+    return false;
   }
-  
-  if (!item) return ui.notifications.warn("You can only create macro buttons for owned Items");
 
   // Create the macro command
-  const command = `game.lhtrpg.rollItemMacro("${item.name}");`;
+  const command = `game.lhtrpg.rollItemMacro(${JSON.stringify(item.name)});`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -238,8 +220,8 @@ async function createItemMacro(data, slot) {
 }
 
 /**
- * Create a Macro from an Item drop.
- * Get an existing item macro if one exists, otherwise create a new one.
+ * Hotbar macro: use the named item of the speaker's actor. Usable items are used (Use card,
+ * effects, [Consumable]); anything else is sent to chat (skills with their Check / Damage buttons).
  * @param {string} itemName
  * @return {Promise}
  */
@@ -249,8 +231,7 @@ function rollItemMacro(itemName) {
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   const item = actor ? actor.items.find(i => i.name === itemName) : null;
-  if (!item) return ui.notifications.warn(`Your controlled Actor does not have an item named ${itemName}`);
+  if (!item) return ui.notifications.warn(game.i18n.format("LHTRPG.Macro.Notif.NoItem", { item: itemName }));
 
-  // Trigger the item roll
-  return item.roll();
+  return (item.type === "usable") ? useItem(item) : item.ItemThrow();
 }

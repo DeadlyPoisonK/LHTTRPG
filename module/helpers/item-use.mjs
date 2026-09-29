@@ -148,7 +148,7 @@ export async function useItem(item) {
   const cardData = {
     ...itemData,
     system: item.system,
-    typeLabel: game.i18n.localize("TYPES.ITEM.TypeUsable"),
+    typeLabel: game.i18n.localize("TYPES.Item.usable"),
     consumed,
     note,
     rollable: skillRollable(item),

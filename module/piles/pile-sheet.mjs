@@ -88,7 +88,7 @@ export class LHTrpgPileSheet extends HandlebarsApplicationMixin(foundry.applicat
         name: item.name,
         img: item.img,
         type: item.type,
-        typeLabel: game.i18n.localize(`TYPES.ITEM.Type${item.type.capitalize()}`),
+        typeLabel: game.i18n.localize(`TYPES.Item.${item.type}`),
         // In shops the type is already the group heading: show rank and tags instead.
         details: [item.system.rank ? `R${item.system.rank}` : null, ...(item.system.tags ?? [])].filter(Boolean).join(" · "),
         quantity: item.type === "ticket" ? itemQuantity(item) : null,
@@ -226,7 +226,7 @@ export class LHTrpgPileSheet extends HandlebarsApplicationMixin(foundry.applicat
    * @param {Function} priceFn                 Price used by the price sorts
    */
   #buildList(source, view, toEntry, priceFn) {
-    const typeLabel = type => game.i18n.localize(`TYPES.ITEM.Type${type.capitalize()}`);
+    const typeLabel = type => game.i18n.localize(`TYPES.Item.${type}`);
     const typeFilters = PHYSICAL_TYPES
       .map(type => ({ type, count: source.filter(i => i.type === type).length }))
       .filter(f => f.count);

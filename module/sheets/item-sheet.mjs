@@ -24,12 +24,8 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
 
   /** @override */
   get template() {
+    // One sheet per item type: item-weapon-sheet.html, item-skill-sheet.html…
     const path = "systems/lhtrpg/templates/item";
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.html`;
-
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
     return `${path}/item-${this.item.type}-sheet.html`;
   }
 
@@ -222,8 +218,8 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     if (dropped.type !== "skill") {
       ui.notifications.warn(game.i18n.format("INVENTORY.Notif.WrongItemType", {
         item: dropped.name,
-        type: game.i18n.localize(`TYPES.ITEM.Type${dropped.type.capitalize()}`),
-        slot: game.i18n.localize("TYPES.ITEM.TypeSkill")
+        type: game.i18n.localize(`TYPES.Item.${dropped.type}`),
+        slot: game.i18n.localize("TYPES.Item.skill")
       }));
       return;
     }

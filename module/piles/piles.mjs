@@ -14,7 +14,7 @@ export function registerPiles() {
   game.lhtrpg.piles = PilesAPI;
 
   CONFIG.Actor.typeLabels ??= {};
-  CONFIG.Actor.typeLabels[PILE_TYPE] = "TYPES.ACTOR.TypePile";
+  CONFIG.Actor.typeLabels[PILE_TYPE] = "TYPES.Actor.pile";
 
   foundry.documents.collections.Actors.registerSheet("lhtrpg", LHTrpgPileSheet, {
     types: [PILE_TYPE],

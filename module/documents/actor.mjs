@@ -11,15 +11,6 @@ import { getHands } from "../helpers/hands.mjs";
 export class LHTrpgActor extends Actor {
 
 
-  /** @override */
-  prepareData() {
-    // Prepare data for the actor. Calling the super version of this executes
-    // the following, in order: data reset (to clear active effects),
-    // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
-    // prepareDerivedData().
-    super.prepareData();
-  }
-
   /**
    * Make adjustments before Character creation, like an actor type default picture
    */
@@ -76,13 +67,6 @@ export class LHTrpgActor extends Actor {
     }
   }
 
-  /** @override */
-  prepareBaseData() {
-    // Data modifications in this step occur before processing embedded
-    // documents or derived data.
-
-  }
-
   /**
    * Piles only store items: the effects their items would transfer (and any
    * effect of their own) never apply to them nor show on their tokens.
@@ -113,63 +97,37 @@ export class LHTrpgActor extends Actor {
   prepareDerivedData() {
     // Piles only hold items and gold: none of the character computations apply.
     if (this.type === PILE_TYPE) return;
-    const actorData = this;
-    const system = actorData.system;
+    const system = this.system;
     // Monsters set their values directly on the sheet: only their Evasion/Resistance need preparing.
     // (They have no class/race/infos, so the character computations below would throw.)
     if (this.type === 'monster') return prepareMonsterChecks(system);
-    const str = system.attributes.str;
-    const dex = system.attributes.dex;
-    const pow = system.attributes.pow;
-    const int = system.attributes.int;
-    const checks = system.checks;
-    const itemlist = actorData.items;
-    const flags = actorData.flags.lhtrpg || {};
-    let itemNumber = 0;
+    if (this.type !== 'character') return;
 
+    const { str, dex, pow, int } = system.attributes;
     const fate = system.fate;
     const hp = system.health;
     const cr = system.infos.crank;
     const fati = system.infos.fatigue;
 
-    if (actorData.type === 'character') {
+    for (const value of [fate, str, dex, pow, int, hp]) value.effect ??= 0;
 
-      if (fate.effect === undefined || fate.effect === null ){
-        fate.effect = 0;
-      }
-      if (str.effect === undefined || str.effect === null ){
-        str.effect = 0;
-      }
-      if (dex.effect === undefined || dex.effect === null ){
-        dex.effect = 0;
-      }
-      if (pow.effect === undefined || pow.effect === null ){
-        pow.effect = 0;
-      }
-      if (int.effect === undefined || int.effect === null ){
-        int.effect = 0;
-      }
-      if (hp.effect === undefined || hp.effect === null ){
-        hp.effect = 0;
-      }
+    // Race and Class items (see helpers/character-options.mjs)
+    const rc = raceStats(this) ?? {};
+    str.rc = rc.str ?? 0;
+    dex.rc = rc.dex ?? 0;
+    pow.rc = rc.pow ?? 0;
+    int.rc = rc.int ?? 0;
+    hp.rc = rc.hp ?? 0;
+    fate.rc = rc.fate ?? 0;
 
-      // Race and Class items (see helpers/character-options.mjs)
-      const rc = raceStats(this) ?? {};
-      str.rc = rc.str ?? 0;
-      dex.rc = rc.dex ?? 0;
-      pow.rc = rc.pow ?? 0;
-      int.rc = rc.int ?? 0;
-      hp.rc = rc.hp ?? 0;
-      fate.rc = rc.fate ?? 0;
-
-      const jb = classStats(this);
-      const crhp = cr - 1;
-      str.jb = jb ? jb.str + crhp : 0;
-      dex.jb = jb ? jb.dex + crhp : 0;
-      pow.jb = jb ? jb.pow + crhp : 0;
-      int.jb = jb ? jb.int + crhp : 0;
-      hp.jb = jb?.hp ?? 0;
-      hp.mod = jb ? jb.hpPerRank * crhp : 0;
+    const jb = classStats(this);
+    const crhp = cr - 1;
+    str.jb = jb ? jb.str + crhp : 0;
+    dex.jb = jb ? jb.dex + crhp : 0;
+    pow.jb = jb ? jb.pow + crhp : 0;
+    int.jb = jb ? jb.int + crhp : 0;
+    hp.jb = jb?.hp ?? 0;
+    hp.mod = jb ? jb.hpPerRank * crhp : 0;
 
     str.total = str.jb + str.value + str.rc + str.effect;
     dex.total = dex.jb + dex.value + dex.rc + dex.effect;
@@ -177,47 +135,34 @@ export class LHTrpgActor extends Actor {
     pow.total = pow.jb + pow.value + pow.rc + pow.effect;
     fate.max = fate.rc + fate.effect;
     hp.max = hp.jb + hp.mod + hp.rc - fati + hp.effect;
-      
-      // Attributes modifiers
-      if (system.attributes) {
-        for (let [k] of Object.entries(system.attributes)) {
-          if (system.attributes[k].mod !== undefined) {
-            system.attributes[k].mod = Math.floor(system.attributes[k].total / 3);
-          }
-        }
-      }
 
-      // Abilities Scores
-      this._computeChecks(actorData);
-
-      // Battle statuses
-      this._computeBattleStatuses(actorData);
-
-      // Inventory space
-      this._computeInventoryMaxSpace(actorData);
-
-
-      // item count inventory: unequipped items of the general grid (tickets
-      // have their own slots and don't use inventory space)
-      itemlist.forEach(item => {
-        if (SPACE_TYPES.includes(item.type) && ((item.system.equipped !== true) || !EQUIP_TYPES.includes(item.type))) itemNumber += 1;
-      });
-      system.inventory.space = itemNumber;
+    // Attributes modifiers
+    for (const attribute of Object.values(system.attributes)) {
+      if (attribute.mod !== undefined) attribute.mod = Math.floor(attribute.total / 3);
     }
 
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
-    // things organized.
-    this._prepareCharacterData(actorData);
+    // Abilities Scores
+    this._computeChecks();
+
+    // Battle statuses
+    this._computeBattleStatuses();
+
+    // Inventory space
+    this._computeInventoryMaxSpace();
+
+    // item count inventory: unequipped items of the general grid (tickets
+    // have their own slots and don't use inventory space)
+    system.inventory.space = this.items.filter(item => SPACE_TYPES.includes(item.type)
+      && ((item.system.equipped !== true) || !EQUIP_TYPES.includes(item.type))).length;
   }
 
   /**
-   * Prepare Character type specific data
+   * Equipped items of a type.
+   * @param {string} type
+   * @returns {Item[]}
    */
-  _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character' || actorData.type !== 'monster') return;
-
-    // Make modifications to data here. For example:
-    const data = actorData;
+  _equipped(type) {
+    return this.itemTypes[type].filter(item => item.system.equipped);
   }
 
   /**
@@ -238,154 +183,79 @@ export class LHTrpgActor extends Actor {
   _getCharacterRollData(system) {
     if (this.type !== 'character') return;
 
-    if (system.attributes) {
-      for (let [k, v] of Object.entries(system.attributes)) {
-        system[k] = foundry.utils.deepClone(v);
-      }
+    for (const [k, v] of Object.entries(system.attributes ?? {})) {
+      system[k] = foundry.utils.deepClone(v);
     }
-
-    if(system['battle-status'].power) {
-      for (let [k, v] of Object.entries(system['battle-status'].power)) {
-        system[k] = foundry.utils.deepClone(v);
-      }
+    for (const [k, v] of Object.entries(system['battle-status']?.power ?? {})) {
+      system[k] = foundry.utils.deepClone(v);
     }
 
     system.itemData = {};
     system.skillData = {};
-
-    if(this.items) {
-      this.items.forEach(function(key, _id){
-        if(key.type === "skill") {
-          system.skillData[key._id] = foundry.utils.deepClone(key.system);
-        } else {
-          system.itemData[key._id] = foundry.utils.deepClone(key.system);
-        }
-      });
+    for (const item of this.items) {
+      const target = (item.type === "skill") ? system.skillData : system.itemData;
+      target[item.id] = foundry.utils.deepClone(item.system);
     }
+  }
 
+  /** Attribute each Ability Check is based on (Accuracy uses the highest one). */
+  static CHECK_ATTRIBUTES = {
+    athletics: "str", endurance: "str",
+    disable: "dex", operation: "dex", evasion: "dex",
+    perception: "pow", negotiation: "pow", resistance: "pow",
+    knowledge: "int", analysis: "int"
+  };
+
+  /**
+   * Sum a numeric field over a list of items.
+   * @param {Item[]} items
+   * @param {string} field
+   * @returns {number}
+   */
+  static _sum(items, field) {
+    return items.reduce((total, item) => total + (item.system[field] ?? 0), 0);
   }
 
   /**
    * Autocalc the Abilities/Checks Scores
-   * @param actorData 
    */
-  _computeChecks(actorData) {
-    const system = actorData.system;
+  _computeChecks() {
+    const system = this.system;
     const checks = system.checks;
-    const str = system.attributes.str;
-    const dex = system.attributes.dex;
-    const pow = system.attributes.pow;
-    const int = system.attributes.int;
+    const { str, dex, pow, int } = system.attributes;
 
-    // STR Abilities
-    checks.athletics.base = str.mod ?? 0;
-    checks.athletics.total = checks.athletics.base + checks.athletics.mod;
-
-    checks.endurance.base = str.mod ?? 0;
-    checks.endurance.total = checks.endurance.base + checks.endurance.mod;
-
-    // DEX Abilities
-    checks.disable.base = dex.mod ?? 0;
-    checks.disable.total = checks.disable.base + checks.disable.mod;
-
-    checks.operation.base = dex.mod ?? 0;
-    checks.operation.total = checks.operation.base + checks.operation.mod;
-
-    checks.evasion.base = dex.mod ?? 0;
-    checks.evasion.total = checks.evasion.base + checks.evasion.mod;
-
-    // POW Abilities
-    checks.perception.base = pow.mod ?? 0;
-    checks.perception.total = checks.perception.base + checks.perception.mod;
-
-    checks.negotiation.base = pow.mod ?? 0;
-    checks.negotiation.total = checks.negotiation.base + checks.negotiation.mod;
-
-    checks.resistance.base = pow.mod ?? 0;
-    checks.resistance.total = checks.resistance.base + checks.resistance.mod;
-
-    // INT Abilities
-    checks.knowledge.base = int.mod ?? 0;
-    checks.knowledge.total = checks.knowledge.base + checks.knowledge.mod;
-
-    checks.analysis.base = int.mod ?? 0;
-    checks.analysis.total = checks.analysis.base + checks.analysis.mod;
-
-    // Accuracy
-
-    // Get accuracy bonus from weapons
-    let accuBonus = 0;
-    // Get equipped weapons
-    const { weapons } = actorData.itemTypes.weapon.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.weapons.push(equip);
-      return obj;
-    }, { weapons: [] });
-
-    // Only add the accuracy bonus of the weapons if there's 2 or less of them, as that's the equippable limit
-    if (weapons.length > 0) {
-      if (weapons.length <= 2) {
-        for (let [i] of Object.entries(weapons)) {
-          accuBonus += weapons[i].system.accuracy ?? 0;
-        };
-      }
+    for (const [check, attribute] of Object.entries(LHTrpgActor.CHECK_ATTRIBUTES)) {
+      checks[check].base = system.attributes[attribute].mod ?? 0;
+      checks[check].total = checks[check].base + checks[check].mod;
     }
 
+    // Accuracy: highest attribute modifier, plus the weapons' accuracy bonus
+    // (only if there's 2 or less of them, as that's the equippable limit)
+    const weapons = this._equipped("weapon");
+    const accuBonus = (weapons.length <= 2) ? LHTrpgActor._sum(weapons, "accuracy") : 0;
     checks.accuracy.base = Math.max(str.mod, int.mod, pow.mod, dex.mod);
     checks.accuracy.total = checks.accuracy.base + accuBonus + checks.accuracy.mod;
 
-
     // If any of the dice values goes under 1, get it back to 1.
-    for (let [check] of Object.entries(checks)) {
-      checks[check].dice = Math.max(checks[check].dice, 1);
+    for (const check of Object.values(checks)) {
+      check.dice = Math.max(check.dice, 1);
     }
-
-
   }
 
-
-  _computeBattleStatuses(actorData) {
-    const system = actorData.system;
+  _computeBattleStatuses() {
+    const system = this.system;
     const bStatus = system["battle-status"];
-    const str = system.attributes.str;
-    const dex = system.attributes.dex;
-    const pow = system.attributes.pow;
-    const int = system.attributes.int;
+    const { str, int } = system.attributes;
+    const sum = LHTrpgActor._sum;
 
-    // Get equipped weapons
-    const { weapons } = actorData.itemTypes.weapon.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.weapons.push(equip);
-      return obj;
-    }, { weapons: [] });
-
-    // Get equipped armor
-    const { armors } = actorData.itemTypes.armor.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.armors.push(equip);
-      return obj;
-    }, { armors: [] });
-
-    // Get equipped shield
-    const { shields } = actorData.itemTypes.shield.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.shields.push(equip);
-      return obj;
-    }, { shields: [] });
-
-    // Get equipped shield
-    const { accessories } = actorData.itemTypes.accessory.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.accessories.push(equip);
-      return obj;
-    }, { accessories: [] });
-
-
+    const weapons = this._equipped("weapon");
+    // Only one armor can be equipped at a time: only the first one counts
+    const armors = this._equipped("armor").slice(0, 1);
+    const shields = this._equipped("shield");
+    const accessories = this._equipped("accessory");
+    // Weapons (max. 2) and accessories (max. 3) over the equippable limit give no bonus
+    const weaponBonus = (weapons.length <= 2) ? weapons : [];
+    const accessoryBonus = (accessories.length <= 3) ? accessories : [];
 
     /**
      * ATTACK, MAGIC, RESTORATION POWER
@@ -393,67 +263,25 @@ export class LHTrpgActor extends Actor {
 
     // The main-hand weapon (see hands.mjs)
     const mainWeapon = getHands(this).main;
+    bStatus.power.attack.base = mainWeapon?.system.attack ?? 0;
+    bStatus.power.magic.base = mainWeapon?.system.magic ?? 0;
 
-    if (mainWeapon) {
-      bStatus.power.attack.base = mainWeapon.system.attack ?? 0;
-      bStatus.power.magic.base = mainWeapon.system.magic ?? 0;
-    } else {
-      bStatus.power.attack.base = 0;
-      bStatus.power.magic.base = 0;
-    }
-
-    // Get the magic stat from accessories (Magic stones)
-    let accBonus = 0;
-
-    if (accessories.length > 0) {
-      for (let [i] of Object.entries(accessories)) {
-        accBonus += accessories[i].system.magic ?? 0;
-      };
-    }
-
-    // Assign values to total
+    // Assign values to total (accessories such as Magic stones add to the magic power)
     bStatus.power.attack.total = bStatus.power.attack.base + (bStatus.power.attack.mod ?? 0);
-    bStatus.power.magic.total = bStatus.power.magic.base + (bStatus.power.magic.mod ?? 0) + accBonus;
+    bStatus.power.magic.total = bStatus.power.magic.base + (bStatus.power.magic.mod ?? 0) + sum(accessories, "magic");
     bStatus.power.restoration.total = bStatus.power.restoration.mod ?? 0;
-
 
     /**
      * DEFENSES
     */
 
-    let pDefBonus = 0;
-    let mDefBonus = 0;
+    const defenseItems = [...armors, ...shields, ...accessoryBonus];
+    bStatus.defense.phys.base = str.mod * 2;
+    bStatus.defense.magic.base = int.mod * 2;
+    bStatus.defense.phys.total = bStatus.defense.phys.base + bStatus.defense.phys.mod + sum(defenseItems, "pdef");
+    bStatus.defense.magic.total = bStatus.defense.magic.base + bStatus.defense.magic.mod + sum(defenseItems, "mdef");
 
-    bStatus.defense.phys.base = (str.mod * 2) ?? 0;
-    bStatus.defense.magic.base = (int.mod * 2) ?? 0;
-
-    // Since only one armor can be equipped at a time, only return the first in the array
-    if (armors.length > 0) {
-      pDefBonus += armors[0].system.pdef ?? 0;
-      mDefBonus += armors[0].system.mdef ?? 0;
-    }
-
-    if (shields.length > 0) {
-      for (let [i] of Object.entries(shields)) {
-        pDefBonus += shields[i].system.pdef ?? 0;
-        mDefBonus += shields[i].system.mdef ?? 0;
-      };
-    }
-    // Only add the defenses of the accessories if there's 3 or less of them, as that's the equippable limit
-    if (accessories.length > 0) {
-      if (accessories.length <= 3) {
-        for (let [i] of Object.entries(accessories)) {
-          pDefBonus += accessories[i].system.pdef ?? 0;
-          mDefBonus += accessories[i].system.mdef ?? 0;
-        };
-      }
-    }
-
-    // Assign values to total
-    bStatus.defense.phys.total = (bStatus.defense.phys.base + bStatus.defense.phys.mod + pDefBonus) ?? 0;
-    bStatus.defense.magic.total = (bStatus.defense.magic.base + bStatus.defense.magic.mod + mDefBonus) ?? 0;
-
-    /** 
+    /**
      * SPEED/MOVEMENT
     */
 
@@ -464,63 +292,16 @@ export class LHTrpgActor extends Actor {
      * INITIATIVE
      */
 
-    let initBonus = 0;
-
-    bStatus.initiative.base = (str.mod + int.mod) ?? 0;
-
-    // Only add the initiative bonus of the weapons if there's 2 or less of them, as that's the equippable limit
-    if (weapons.length > 0) {
-      if (weapons.length <= 2) {
-        for (let [i] of Object.entries(weapons)) {
-          initBonus += weapons[i].system.initiative ?? 0;
-        };
-      }
-    }
-
-    // Since only one armor can be equipped at a time, only return the first in the array
-    if (armors.length > 0) {
-      initBonus += armors[0].system.initiative ?? 0;
-    }
-
-    // Only add the initiative bonus of the accessories if there's 3 or less of them, as that's the equippable limit
-    if (accessories.length > 0) {
-      if (accessories.length <= 3) {
-        for (let [i] of Object.entries(accessories)) {
-          initBonus += accessories[i].system.initiative ?? 0;
-        };
-      }
-    }
-
-    let initTotal = (bStatus.initiative.base + initBonus + bStatus.initiative.mod) ?? 0;
-
+    const initBonus = sum([...weaponBonus, ...armors, ...accessoryBonus], "initiative");
+    bStatus.initiative.base = str.mod + int.mod;
     // If the initiative goes under zero, it's equal to zero
-    bStatus.initiative.total = Math.max(initTotal, 0);
-
-
+    bStatus.initiative.total = Math.max(bStatus.initiative.base + initBonus + bStatus.initiative.mod, 0);
   }
 
-  _computeInventoryMaxSpace(actorData) {
-    const system = actorData.system;
-    const inventory = system.inventory;
-
-
+  _computeInventoryMaxSpace() {
+    const inventory = this.system.inventory;
     inventory.base = 2;
-    let bonusBagSpace = 0;
-    // Get equipped bags
-    const { bags } = actorData.itemTypes.bag.reduce((obj, equip) => {
-
-      if (!equip.system.equipped) return obj;
-      else obj.bags.push(equip);
-      return obj;
-    }, { bags: [] });
-
-    if (bags.length > 0) {
-      for (let [i] of Object.entries(bags)) {
-        bonusBagSpace += bags[i].system.bagSpace ?? 0;
-      };
-    }
-
-    inventory.maxSpace = inventory.base + (inventory.mod ?? 0) + (bonusBagSpace ?? 0);
+    inventory.maxSpace = inventory.base + (inventory.mod ?? 0) + LHTrpgActor._sum(this._equipped("bag"), "bagSpace");
   }
 
 }

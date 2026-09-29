@@ -9,6 +9,7 @@ import {PICK_SUBTYPES, SkillBrowser, getPendingSkills} from "../apps/skill-brows
 import {OptionBrowser} from "../apps/option-browser.mjs";
 import {equipInHand, getHands, swapHands, unequipHand} from "../helpers/hands.mjs";
 import {EQUIP_TYPES} from "../piles/pile-config.mjs";
+import {diceFormula} from "../helpers/dice.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -68,7 +69,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // Prepare character data and items.
     if (actorData.type == 'character') {
       this._prepareItems(context);
-      this._prepareCharacterData(context);
 
       // Race / Class / Subclass items (header fields); the class item's image is the class logo.
       context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(this.actor, type)]));
@@ -94,18 +94,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     context.statusPanel = getStatusPanel(this.actor);
 
     return context;
-  }
-
-  /**
-   * Organize and classify Items for Character sheets.
-   *
-   * @param {Object} actorData The actor to prepare.
-   *
-   * @return {undefined}
-   */
-  _prepareCharacterData(context) {
-
-
   }
 
   /**
@@ -523,8 +511,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // Tag management
     activateTagInput(html, this.actor, this);
 
-    // Rollable abilities.
-    html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
     if (this.actor.isOwner) {
@@ -683,8 +669,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     if (item.type !== slotType) {
       ui.notifications.warn(game.i18n.format("INVENTORY.Notif.WrongItemType", {
         item: item.name,
-        type: game.i18n.localize(`TYPES.ITEM.Type${item.type.capitalize()}`),
-        slot: game.i18n.localize(`TYPES.ITEM.Type${slotType.capitalize()}`)
+        type: game.i18n.localize(`TYPES.Item.${item.type}`),
+        slot: game.i18n.localize(`TYPES.Item.${slotType}`)
       }));
       return;
     }
@@ -722,9 +708,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     if (type === 'ticket') return this._createTicket(header.dataset.subtype);
     // Grab any data associated with this control.
     const data = foundry.utils.duplicate(header.dataset);
-    console.log(header.dataset);
     // Initialize a default name.
-    const name = `New ${type.capitalize()}`;
+    const name = Item.implementation.defaultName({ type, parent: this.actor });
     // Prepare the item object.
     const itemData = {
       name: name,
@@ -732,7 +717,6 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       system: data
     };
 
-    console.log(itemData);
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.system["type"];
 
@@ -741,120 +725,48 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
   }
 
   /**
-   * Handle clickable rolls.
+   * Ability Check from the Stats tab: ask for a situational modifier, then roll.
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-
-    // Handle item rolls.
-    if (dataset.rollType) {
-      if (dataset.rollType == 'item') {
-        const itemId = element.closest('.item').dataset.itemId;
-        const item = this.actor.items.get(itemId);
-        if (item) return item.roll();
-      }
-    }
-
-    // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ? `[roll] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
-  }
-
   async _onRollSkill(event) {
-
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-    const dice = dataset.dice;
-    const bonus = dataset.bonus;
-    const skillName = dataset.name;
-    console.log(dataset);
-    const rendered_dialog = await foundry.applications.handlebars.renderTemplate("systems/lhtrpg/templates/dialogs/rollDialog.html");
-    const checkName = `LHTRPG.Check.${skillName}`;
-    let mod;
-
-    let d = new Dialog({
-      title: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(checkName)}`,
-      content: rendered_dialog,
-      buttons: {
-        roll: {
-          icon: '<i class="fas fa-dice"></i>',
-          label: game.i18n.localize("LHTRPG.ButtonLabel.Roll"),
-          callback: html => {
-            mod = $(html).find('.abilityCheckMod').val();
-            this.rollSkill(skillName, dice, bonus, mod);
-          }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("LHTRPG.ButtonLabel.Cancel"),
-        }
+    event.preventDefault();
+    const { dice, bonus, name } = event.currentTarget.dataset;
+    const title = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`;
+    const mod = await foundry.applications.api.DialogV2.prompt({
+      window: { title },
+      content: await foundry.applications.handlebars.renderTemplate("systems/lhtrpg/templates/dialogs/rollDialog.html"),
+      ok: {
+        icon: "fas fa-dice",
+        label: game.i18n.localize("LHTRPG.ButtonLabel.Roll"),
+        callback: (event, button) => Number(button.form.elements.mod.value) || 0
       },
-      default: "cancel"
+      rejectClose: false
     });
-    d.render(true);
-
+    if (mod === null) return;
+    return this.rollSkill(name, dice, bonus, mod);
   }
 
-  rollSkill(skillName, dice, bonus, mod) {
-
-    const checkName = `LHTRPG.Check.${skillName}`;
-    const flavorText = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(checkName)}`;
-    let roll;
-    let formula;
-
-    if(mod === undefined || mod == 0) {
-      formula = `${dice}d6+${bonus}`;
-    }
-    else if (mod > 0) {
-      formula = `${dice}d6+${bonus}+${mod}`;
-    }
-    else {
-      formula = `${dice}d6+${bonus}-${Math.abs(mod)}`;
-    }
-
-    console.log(formula);
-
-
-    roll = new Roll(formula);
-
-    roll.toMessage({
+  /**
+   * Roll an Ability Check to chat.
+   * @param {string} skillName    Check key (LHTRPG.Check.<skillName>)
+   * @param {number} dice         Number of D6
+   * @param {number} bonus        Check total
+   * @param {number} [mod]        Situational modifier
+   * @returns {Promise<ChatMessage>}
+   */
+  rollSkill(skillName, dice, bonus, mod = 0) {
+    const formula = diceFormula({ dice, mod: (Number(bonus) || 0) + (Number(mod) || 0) });
+    return new Roll(formula).toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flavor: flavorText,
+      flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${skillName}`)}`,
       rollMode: game.settings.get('core', 'rollMode'),
     });
-
-    return roll;
-
   }
 
   _onItemThrow(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    console.log(itemId);
-    const item = this.actor.items.get(itemId);
-    console.log(item);
-
-    item.ItemThrow();
-}
-
-
-
-  // async _onOpeningInfoWindow (state, actor) {
-  //   console.log(state);
-  //   console.log(actor);
-  //   await actor.setFlag("lhtrpg", "hfWindowOpened", state);
-  // }
-
+    this.actor.items.get(itemId)?.ItemThrow();
+  }
 }

@@ -8,12 +8,12 @@
 		<h4 class="equipment-title">{{localize "LHTRPG.Label.Equipment"}}</h4>
 		<div class="equip-slots-grid">
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="hand" hand="main" icon="weapon" typeLabel="LHTRPG.Hands.Main" index=0 item=hands.main swap=hands.canSwap }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="armor" typeLabel="TYPES.ITEM.TypeArmor" index=0 item=items.equipped.armors.[0] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="armor" typeLabel="TYPES.Item.armor" index=0 item=items.equipped.armors.[0] }}
 			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="hand" hand="off" icon="shield" typeLabel="LHTRPG.Hands.Off" index=0 item=hands.off locked=hands.locked }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=0 item=items.equipped.accessories.[0] }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=1 item=items.equipped.accessories.[1] }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.ITEM.TypeAccessory" index=2 item=items.equipped.accessories.[2] }}
-			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="bag" typeLabel="TYPES.ITEM.TypeBag" index=0 item=items.equipped.bags.[0] extraClass="center-slot" }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.Item.accessory" index=0 item=items.equipped.accessories.[0] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.Item.accessory" index=1 item=items.equipped.accessories.[1] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="accessory" typeLabel="TYPES.Item.accessory" index=2 item=items.equipped.accessories.[2] }}
+			{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-equip-slot.html" type="bag" typeLabel="TYPES.Item.bag" index=0 item=items.equipped.bags.[0] extraClass="center-slot" }}
 		</div>
 	</div>
 
@@ -39,13 +39,13 @@
 			<div class="addItem">
 				<a class="item-controls"><i class="fas fa-plus" title="{{localize 'LHTRPG.Add'}}"></i></a>
 				<div class="dropdown-content">
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeWeapon'}}" data-type="weapon"><img src="systems/lhtrpg/assets/ui/items_icons/weapon.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeWeapon'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeArmor'}}" data-type="armor"><img src="systems/lhtrpg/assets/ui/items_icons/armor.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeArmor'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeShield'}}" data-type="shield"><img src="systems/lhtrpg/assets/ui/items_icons/shield.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeShield'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeAccessory'}}" data-type="accessory"><img src="systems/lhtrpg/assets/ui/items_icons/accessory.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeAccessory'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeBag'}}" data-type="bag"><img src="systems/lhtrpg/assets/ui/items_icons/bag.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeBag'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeUsable'}}" data-type="usable"><img src="systems/lhtrpg/assets/ui/items_icons/usable.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeUsable'}}</span></a>
-					<a class="item-control item-create" title="{{localize 'TYPES.ITEM.TypeGear'}}" data-type="gear"><img src="systems/lhtrpg/assets/ui/items_icons/gear.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.ITEM.TypeGear'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.weapon'}}" data-type="weapon"><img src="systems/lhtrpg/assets/ui/items_icons/weapon.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.weapon'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.armor'}}" data-type="armor"><img src="systems/lhtrpg/assets/ui/items_icons/armor.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.armor'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.shield'}}" data-type="shield"><img src="systems/lhtrpg/assets/ui/items_icons/shield.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.shield'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.accessory'}}" data-type="accessory"><img src="systems/lhtrpg/assets/ui/items_icons/accessory.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.accessory'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.bag'}}" data-type="bag"><img src="systems/lhtrpg/assets/ui/items_icons/bag.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.bag'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.usable'}}" data-type="usable"><img src="systems/lhtrpg/assets/ui/items_icons/usable.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.usable'}}</span></a>
+					<a class="item-control item-create" title="{{localize 'TYPES.Item.gear'}}" data-type="gear"><img src="systems/lhtrpg/assets/ui/items_icons/gear.svg" alt="" height="24" width="24"><span>{{localize 'TYPES.Item.gear'}}</span></a>
 				</div>
 			</div>
 			<div class="inventory-gold">

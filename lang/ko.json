@@ -1,21 +1,25 @@
 {
   "TYPES": {
-    "ACTOR": {
-      "TypeCharacter": "플레이어 캐릭터",
-      "TypeMonster": "몬스터"
+    "Item": {
+      "accessory": "악세서리",
+      "armor": "방어구",
+      "bag": "가방",
+      "connection": "커넥션",
+      "gear": "기타",
+      "shield": "방패",
+      "skill": "특기",
+      "ticket": "티켓",
+      "union": "유니온",
+      "weapon": "무기",
+      "race": "종족",
+      "class": "메인직업",
+      "subclass": "서브직업",
+      "usable": "사용 아이템"
     },
-    "ITEM": {
-      "TypeAccessory": "악세서리",
-      "TypeArmor": "방어구",
-      "TypeBag": "가방",
-      "TypeConnection": "커넥션",
-      "TypeGear": "기타",
-      "TypeShield": "방패",
-      "TypeSkill": "특기",
-      "TypeTicket": "티켓",
-      "TypeUnion": "유니온",
-      "TypeUsable": "사용 아이템",
-      "TypeWeapon": "무기"
+    "Actor": {
+      "character": "플레이어 캐릭터",
+      "monster": "몬스터",
+      "pile": "파일 (전리품 / 상자 / 상인)"
     }
   },
   "IMPORT": {
@@ -32,6 +36,21 @@
     }
   },
   "LHTRPG": {
+    "Hands": {
+      "Main": "주 손",
+      "Off": "보조 손",
+      "Swap": "손 위치 변경 (다른 무기로 공격)",
+      "Locked": "{weapon} [Two-Handed]로 차지됨",
+      "Notif": {
+        "ShieldOffHand": "{item}: 방패는 보조 손에 장착됨.",
+        "TwoHandedOffHand": "{item}은 [Two-Handed]: 주 손에 장착됨.",
+        "OffHandLocked": "{item}은 장착 불가: {weapon} [Two-Handed]가 양 손을 차지함.",
+        "NotHandItem": "{item}은 손 슬롯에 장착 불가능함.",
+        "Unequipped": "인벤토리로 돌아가 {item}: {items}을 장착하십시오.",
+        "Migrated": "양손 무기는 양 손을 차지함: {list}의 보조 손 아이템을 장착 취소함.",
+        "MigratedCarried": "장착 가능한 것은 장비만 가능함: {list}을 인벤토리로 돌아가십시오."
+      }
+    },
     "Add": "추가",
     "Biography": {
       "Label": "설명"
@@ -40,10 +59,7 @@
       "Cancel": "취소",
       "Delete": "삭제",
       "Edit": "편집",
-      "Roll": "굴리기",
-      "Tag": {
-        "Add": "추가"
-      }
+      "Roll": "굴리기"
     },
     "Check": {
       "Accuracy": "명중치",
@@ -95,17 +111,28 @@
         "Target": "대상",
         "ThrowToChat": "채팅으로 보내기",
         "Timing": "타이밍"
+      },
+      "Use": {
+        "Button": "사용",
+        "Label": "사용됨",
+        "Consumed": "소모됨",
+        "EffectsApplied": "효과 적용 대상: {names}",
+        "ApplyEffects": "효과 적용",
+        "NoActor": "이 아이템은 캐릭터가 소지해야 사용 가능합니다.",
+        "NoTargets": "효과를 받는 토큰을 대상으로 지정하십시오.",
+        "Blocked": "{name}은 현재 사용 불가: 타이밍 {timing} ({reason}).",
+        "GMOverride": "타이밍 {timing} ({reason}): 사용 강제 (GM).",
+        "Reason": {
+          "NotTurn": "메인 프로세스가 아닙니다.",
+          "Phase": "현재 단계: {phase}",
+          "OutOfCombat": "전투 외에만",
+          "Briefing": "전투 시작 전에만"
+        },
+        "Migrated": "기어 아이템 {count}개를 사용 아이템(포션, 스크롤 등)으로 전환했습니다."
       }
     },
     "Label": {
-      "Afflicted": "위독",
-      "Barrier": "방벽",
-      "Cancel": "취소",
-      "Confused": "혼란",
-      "Dazed": "방심",
-      "Decay": "쇠약",
       "Defense": "방어력",
-      "EmptySlot": "비어 있음",
       "Equip": "장착",
       "Equipment": "장비",
       "Fate": "인과력",
@@ -113,31 +140,15 @@
       "Guild": "소속길드",
       "HP": "HP",
       "Hate": "헤이트",
-      "ImportItems": "lhrpg.com에서 아이템 데이터 가져오기",
-      "ImportSkills": "lhrpg.com에서 스킬 데이터 가져오기",
-      "Inventory": "소지품",
-      "Overconfident": "자만",
       "Power": "공격력",
-      "Pursuit": "추격",
       "Race": "종족",
-      "Regen": "재생",
       "Remove": "제거",
-      "Rigor": "경직",
-      "Staggered": "위축",
       "Tags": "태그",
       "Tickets": "티켓",
       "Type": "종류",
-      "afflicted": "위독",
-      "barrier": "방벽",
-      "cancel": "취소",
-      "confused": "혼란",
-      "dazed": "방심",
-      "decay": "쇠약",
-      "overconfident": "자만",
-      "pursuit": "추격",
-      "regen": "재생",
-      "rigor": "경직",
-      "staggered": "위축"
+      "StatusTag": "태그",
+      "StatusTagAny": "모든 태그",
+      "StatusTagHint": "적용할 피해 태그 (예: 불). 비워두면: 모든 피해."
     },
     "Modifier": "수정치",
     "Monster": {
@@ -176,16 +187,9 @@
         "Range": "사정거리",
         "SR": "SR",
         "Target": "대상",
-        "Timing": "타이밍"
-      },
-      "Placeholder": {
-        "Check": "-",
-        "Cost": "-",
-        "Limit": "-",
-        "MacroEffect": "-",
-        "Range": "-",
-        "Target": "-",
-        "Timing": "-"
+        "Timing": "타이밍",
+        "ExtraDice": "추가 주사위",
+        "DamageRecovery": "회복"
       },
       "Type": {
         "Basic": "기본동작",
@@ -193,6 +197,16 @@
         "General": "일반",
         "Monster": "몬스터",
         "Item": "아이템"
+      },
+      "Option": {
+        "Custom": "커스텀…"
+      },
+      "Notif": {
+        "NoCharacter": "이 스킬을 굴리려면 캐릭터(또는 토큰)를 선택하세요.",
+        "Missing": "이 스킬은 더 이상 존재하지 않습니다."
+      },
+      "Placeholder": {
+        "MacroEffect": "-"
       }
     },
     "Ticket": {
@@ -201,13 +215,11 @@
         "Fate": "인과 티켓",
         "Connection": "커넥션 티켓",
         "Reset": "리셋 티켓"
-      }
+      },
+      "AddRank": "이 CR의 보물 티켓을 추가합니다"
     },
     "Status": {
       "Label": "상태"
-    },
-    "Others": {
-      "Label": "기타"
     },
     "Str": "STR",
     "Tooltip": {
@@ -224,13 +236,411 @@
       "Name": "유니온명"
     },
     "WindowTitle": {
-      "AbilityCheck": "능력치 판정",
-      "Tag": {
-        "AddNewTag": "새 태그를 추가"
-      }
+      "AbilityCheck": "능력치 판정"
+    },
+    "StatusEffect": {
+      "fatigue": "피로",
+      "weakness": "약점",
+      "incapacitated": "정신 불명",
+      "dead": "사망",
+      "staggered": "위축",
+      "dazed": "방심",
+      "rigor": "경직",
+      "confused": "혼란",
+      "decay": "쇠약",
+      "pursuit": "추격",
+      "afflicted": "위독",
+      "overconfident": "자만",
+      "regen": "재생",
+      "cancel": "취소",
+      "barrier": "방벽",
+      "hidden": "은폐",
+      "swimming": "수영 중",
+      "flying": "비행 중",
+      "identified": "확인됨",
+      "standby": "대기 중",
+      "hateTop": "헤이트 상위",
+      "hateUnder": "헤이트 하위",
+      "absent": "장면에서 사라짐"
+    },
+    "StatusGroup": {
+      "bad": "악상태",
+      "life": "생명 상태",
+      "combat": "전투 상태",
+      "other": "기타 상태"
     },
     "Stats": {
       "Label": "Stats"
+    },
+    "Piles": {
+      "SheetLabel": "아이템 히트 (상자, 상점)",
+      "ChatAlias": "인벤토리",
+      "DefaultLootName": "상자",
+      "ItemPilesActive": "Item Piles 모듈이 활성화되어 있습니다. Log Horizon TRPG에는 이미 전리품, 상자, 상인 기능이 있으므로 함께 사용하면 겹칠 수 있습니다.",
+      "Mode": {
+        "Loot": "상자",
+        "Chest": "상자",
+        "Merchant": "상점"
+      },
+      "Gold": "골드",
+      "Quantity": "수량",
+      "Confirm": "확인",
+      "Give": "주기",
+      "GiveTo": "주기…",
+      "GiveItemTitle": "아이템 {item} 주기",
+      "GiveGoldTitle": "골드 주기",
+      "Take": "받기",
+      "TakeAll": "모두 받기",
+      "TakeGold": "골드 받기",
+      "DepositGold": "골드 남기기",
+      "SplitGold": "골드 나누기",
+      "Buy": "구매",
+      "Sell": "판매",
+      "SellConfirm": " {quantity} × {item}을 {gold} 골드로 판매하시겠습니까?",
+      "Delete": "삭제",
+      "Configure": "설정",
+      "Open": "열기",
+      "Closed": "닫힘",
+      "Locked": "잠김",
+      "OpenChest": "상자 열기",
+      "CloseChest": "상자 닫기",
+      "ClosedHint": "상자가 닫혀 있습니다.",
+      "LockedHint": "상자가 잠겨 있습니다. 누군가 키를 가지고 있을 수 있습니다…",
+      "ShopOpen": "영업 시작",
+      "ShopClosed": "닫힘",
+      "ShopClosedHint": "현재 상점이 닫혀 있습니다.",
+      "Contents": "내용물",
+      "Stock": "재고",
+      "StockHint": "재고 (공백 또는 ∞ = 무한)",
+      "SoldOut": "품절",
+      "Empty": "여기에는 아무것도 없습니다.",
+      "NothingForSale": "판매할 것이 없습니다.",
+      "NothingToSell": "판매할 것이 없습니다.",
+      "NoSalesHint": "이 상인은 아이템을 구매하지 않습니다.",
+      "DropHint": "사이드바, 콤펙시움 또는 캐릭터 시트에서 아이템을 여기로 드래그하세요.",
+      "NoInteractor": "토큰을 선택하거나 캐릭터를 할당해 상호작용을 시작하세요.",
+      "Config": {
+        "Mode": "타입",
+        "Distance": "상호작용 거리",
+        "DistanceHint": "격자 공간 기준. 1 = 인접, -1 = 무한대.",
+        "DeleteWhenEmpty": "공백 시 토큰 삭제",
+        "ImgClosed": "닫은 이미지",
+        "ImgOpen": "열린 이미지 (공백 = 캐릭터 이미지)",
+        "AcceptsSales": "플레이어로부터 아이템 구매",
+        "InfiniteGold": "무한 금화",
+        "BuyPercent": "구매 가격 (% 아이템 가격)",
+        "SellPercent": "판매 가격 (% 아이템 가격)",
+        "ResellSold": "플레이어로부터 구매한 아이템 재판매",
+        "ResellSoldHint": "비활성: 플레이어가 판매한 아이템은 지불 후 사라짐. 활성: 제한된 수량으로 재판매 목록에 올림 (판매된 단위 수)."
+      },
+      "Settings": {
+        "ChatLog": {
+          "Name": "아이템 이동 기록 채팅에 표시",
+          "Hint": "아이템을 획득, 전달, 구매, 판매할 때 채팅 메시지 전송."
+        }
+      },
+      "Log": {
+        "Take": "<b>{actor}</b>가 <b>{pile}</b>에서 {item}을 가져갔습니다.",
+        "Deposit": "<b>{actor}</b>가 <b>{pile}</b>에 {item}을 남겼습니다.",
+        "Give": "<b>{actor}</b>가 <b>{target}</b>에게 {item}을 주었습니다.",
+        "Drop": "<b>{actor}</b>가 {item}을 바닥에 버렸습니다.",
+        "Buy": "<b>{actor}</b>가 <b>{pile}</b>에서 {gold} 금화에 {item}을 구매했습니다.",
+        "Sell": "<b>{actor}</b>가 <b>{pile}</b>에 {gold} 금화에 {item}을 판매했습니다.",
+        "Split": "<b>{pile}</b>의 금화가 분할되었습니다: {actors}에게 각 {gold} 금화."
+      },
+      "Warn": {
+        "InventoryFullLeft": "{actor}의 인벤토리가 가득 찼습니다. 버려진 아이템: {items}."
+      },
+      "Error": {
+        "Generic": "그 행동을 완료할 수 없습니다.",
+        "NoGM": "이 작업을 수행하려면 GM이 연결되어야 합니다.",
+        "Timeout": "GM이 응답하지 않았습니다.",
+        "NoPermission": "그 일을 할 권한이 없습니다.",
+        "NoActor": "먼저 토큰을 선택하거나 캐릭터를 할당해야 합니다.",
+        "TooFar": " {pile} 에서 너무 멀리 있습니다.",
+        "Closed": "{pile}은 닫혀 있습니다.",
+        "Locked": "{pile}은 잠겨 있습니다.",
+        "MerchantClosed": "{pile}은 닫혀 있습니다.",
+        "NotPhysical": "{item}은 지참할 수 있는 물건이 아닙니다.",
+        "InventoryFull": "{actor}의 인벤토리가 가득 차 있습니다: {item}을 넣을 공간이 없습니다.",
+        "NotEnoughGold": "{actor}의 금이 부족합니다.",
+        "InvalidAmount": "잘못된 수량입니다.",
+        "NoGold": "주기 위한 금이 없습니다.",
+        "NoTargets": "다른 플레이어 캐릭터가 없습니다.",
+        "NoParty": "공유할 수 있는 플레이어 캐릭터가 없습니다.",
+        "OutOfStock": "{item}은 매진되었습니다.",
+        "NoSales": "{pile}은 아이템을 구매하지 않습니다.",
+        "MerchantNoGold": "{pile}은 해당 아이템을 구매하기 위한 금이 부족합니다."
+      },
+      "GoldLabel": "금",
+      "Max": "최대 {max}",
+      "EditImage": "이미지 변경",
+      "Search": "검색…",
+      "AllTypes": "모두",
+      "Sort": {
+        "Label": "정렬 기준",
+        "Manual": "저장 순서",
+        "Name": "이름",
+        "Type": "종류",
+        "PriceAsc": "가격 (낮은 → 높은)",
+        "PriceDesc": "가격 (높은 → 낮은)"
+      },
+      "Description": "설명",
+      "BuyTab": "구매",
+      "SellTab": "판매",
+      "Item": "아이템",
+      "Price": "가격",
+      "Convert": {
+        "Title": "캐릭터를 힙으로 변환",
+        "Hint": "기존 액터(예: Item Piles의 상인, 상자, 전리품)를 시스템 파일로 변환합니다. 아이템, 골드, 이미지, 토큰, 권한은 유지되고 능력치는 사라집니다. 플레이어에게 할당된 캐릭터는 표시되지 않습니다.",
+        "Actor": "캐릭터",
+        "Mode": "변환 유형",
+        "DropNonPhysical": "스킬, 커넥션 및 유니온 삭제",
+        "Summary": "{physical} 물건 및 {gold} 골드는 유지되며, {other} 기타 아이템, {tokens} 토큰은 장면에서 제거됩니다.",
+        "Confirm": "변환",
+        "AreYouSure": "<b>{actor}</b>를 <b>{mode}</b> 힙으로 변환하시겠습니까? 스탯은 잃어버리게 됩니다. 이 작업은 자동으로 되돌릴 수 없습니다.",
+        "Done": "{actor}는 이제 <b>{mode}</b> 힙입니다: {items} 물건 유지, {dropped} 아이템 제거, {tokens} 토큰 이동 완료.",
+        "NoActors": "변환할 캐릭터가 없습니다.",
+        "PlayerOwned": "플레이어 소유"
+      },
+      "TypePlural": {
+        "weapon": "무기",
+        "armor": "방어구",
+        "shield": "방패",
+        "accessory": "악세서리",
+        "bag": "가방",
+        "gear": "기타",
+        "ticket": "티켓",
+        "usable": "사용 아이템"
+      }
+    },
+    "Archetype": {
+      "Warrior": "전사",
+      "WeaponAttacker": "무기 사용자",
+      "Healer": "치유자",
+      "Mage": "마법사"
+    },
+    "SkillBrowser": {
+      "Title": "특기: {name}",
+      "Open": "이 캐릭터가 습득하거나 랭크업할 수 있는 특기를 탐색합니다",
+      "Browse": "탐색",
+      "Search": "이름, 직업 또는 태그로 검색",
+      "HintPending": "선택 가능한 특기: {combat} 전투 특기와 {general} 일반 특기를 습득하거나 랭크업하세요. 특기는 최대 SR 또는 캐릭터의 CR을 넘을 수 없습니다.",
+      "HintFree": "새로운 특기( SR 1 )를 습득하거나, 캐릭터가 이미 가지고 있는 특기의 SR을 높입니다. 특기는 최대 SR 또는 캐릭터의 CR을 넘을 수 없습니다.",
+      "HintTraining": "캐릭터 생성: [Training] 특기 {left} / {max} 남음",
+      "TrainingFull": "캐릭터 생성 시에는 [Training] 특기를 {max}개까지만 습득할 수 있습니다",
+      "MaxSRShort": "최대 SR {max}",
+      "Acquire": "습득 (SR 1)",
+      "Raise": "SR {sr}로 높이기",
+      "Unpick": "선택에서 제거",
+      "MaxSR": "이미 최대 SR ({max})에 도달했습니다",
+      "MaxCR": "SR은 캐릭터의 CR ({max})을 넘을 수 없습니다",
+      "Full": "이 유형의 선택이 더 이상 없습니다",
+      "Empty": "특기가 없습니다. 캐릭터의 직업 및 종족, 또는 출처 필터를 확인하세요.",
+      "NoPicks": "아직 선택하지 않았습니다.",
+      "Confirm": "캐릭터에 추가",
+      "ChatTitle": "{name} 학습",
+      "ChatNew": "{name} (SR 1)",
+      "ChatRaise": "{name} → SR {sr}",
+      "Undo": {
+        "Title": "선택한 특기: {name}",
+        "HintRank": "{name}은 이제 CR {rank}입니다. 이 스킬들은 더 높은 CR로 선택되었습니다. 확인된 항목을 되돌리겠습니까?",
+        "HintClass": "{name}은 더 이상 이 스킬들을 선택할 때 사용했던 메인 클래스를 가지고 있지 않습니다. 확인된 항목을 되돌리겠습니까?",
+        "Delete": "스킬 제거",
+        "Lower": "SR {from} → {to}",
+        "Ranks": "CR {ranks}에서 선택됨",
+        "Apply": "확인된 항목 되돌리기",
+        "Keep": "모두 유지"
+      },
+      "Source": {
+        "archetype": "아크타입",
+        "class": "메인 클래스",
+        "race": "종족",
+        "subclass": "서브클래스",
+        "common": "공통"
+      },
+      "Filter": {
+        "eligible": "모든 목록",
+        "archetype": "아크타입",
+        "class": "메인 클래스",
+        "race": "종족",
+        "subclass": "서브클래스",
+        "common": "공통",
+        "all": "모든 스킬 (제한 없음)"
+      }
+    },
+    "RankUp": {
+      "Button": "CR 상승",
+      "Tooltip": "캐릭터 랭크 상승 (로그 티켓)",
+      "Title": "캐릭터 랭크 상승: {name}",
+      "Confirm": "캐릭터 랭크를 {from}에서 {to}로 상승시킬까요?",
+      "GainHP": "최대 HP +{hp} (메인 클래스 HP 수정치)",
+      "GainStats": "모든 기본 스탯 +1",
+      "GainSkills": "전투 {combat} 전투 기술 및 {general} 일반 기술을 습득하거나 랭크업",
+      "Chat": "{name}이 CR {to}에 도달했습니다"
+    },
+    "StatAllocation": {
+      "Confirm": "확인",
+      "Later": "나중에",
+      "Human": {
+        "Title": "인간: 보너스 스탯",
+        "Menu": "인간 스탯 선택",
+        "Hint": "인간은 {count} 기본 스탯 중 어떤 것에 +1을 받습니다. 선택하세요:"
+      },
+      "Bonus": {
+        "Title": "보너스 포인트: {name}",
+        "Menu": "보너스 포인트 분배",
+        "Hint": "새로 생성된 캐릭터는 {points} 보너스 포인트를 기본 스탯에 자유롭게 분배할 수 있습니다. 현재 기본 스탯은 {max}을 넘을 수 없습니다.",
+        "Points": "보너스",
+        "Base": "기본 스탯",
+        "Left": "남은 포인트:"
+      }
+    },
+    "CharacterOptions": {
+      "Archetype": "아크타입",
+      "Identifier": "ID",
+      "HpPerRank": "HP / 랭크",
+      "World": "월드",
+      "Choose": "선택",
+      "View": "상세 보기",
+      "Change": "변경",
+      "Menu": "옵션",
+      "Empty": "아무것도 없습니다. 세계나 아이템 콤펙시움에서 이 유형의 아이템을 생성하세요.",
+      "NoMatch": "검색 결과가 없습니다.",
+      "Migrated": "종족 / 직업 / 서브직업: {count} 캐릭터가 아이템으로 전환되었습니다.",
+      "Select": {
+        "race": "종족 선택",
+        "class": "직업 선택",
+        "subclass": "서브직업 선택"
+      },
+      "Search": {
+        "race": "종족 검색",
+        "class": "직업 검색",
+        "subclass": "서브직업 검색"
+      },
+      "SubclassSkills": {
+        "SheetHint": "이 서브직업이 허용하는 스킬: 이 스킬은 특기 선택 시 획득할 수 있으며(무료로 제공되지 않음), 여기에 스킬을 드래그하여 추가할 수 있습니다.",
+        "Empty": "이 서브직업은 현재 스킬을 허용하지 않습니다."
+      },
+      "Grants": {
+        "Tab": "스킬",
+        "Title": "시작 스킬: {name}",
+        "Add": "스킬 추가",
+        "Skip": "지금은 안 함",
+        "Hint": "{type} {name}은 이 스킬들을 기본으로 제공합니다. 추가할 스킬을 선택하세요:",
+        "ChooseOne": "하나 선택",
+        "Fixed": "스킬",
+        "Owned": "이미 보유 중",
+        "RemoveStale": "이전 {type}으로 부여된 스킬을 제거:",
+        "SheetHint": "이 아이템을 선택할 때 캐릭터가 얻는 스킬. 스킬을 줄에 드래그하여 여러 선택지 중 하나로 지정하거나, 아래 영역에 드래그하여 새로운 스킬을 추가할 수 있습니다.",
+        "Drop": "여기에 스킬 드래그",
+        "OnlySkills": "시작 스킬은 콤펙시움 또는 세계에서만 제공되는 스킬 아이템일 수 있습니다."
+      }
+    },
+    "Combat": {
+      "HitCheck": "명중 판정",
+      "AutoHit": "자동 명중",
+      "Critical": "크리티컬!",
+      "Fumble": "실수!",
+      "Dodge": "회피",
+      "Hit": "명중",
+      "Miss": "회피",
+      "Pending": "대기",
+      "HateUnder": "헤이트 하락 +2",
+      "DamageRoll": "피해",
+      "DodgeFailed": "회피 실패",
+      "Selected": "선택된 토큰",
+      "Undo": "실행 취소",
+      "Undone": "실행 취소됨",
+      "Type": {
+        "physical": "물리",
+        "magical": "마법",
+        "penetrating": "통과",
+        "direct": "직접",
+        "recovery": "회복"
+      },
+      "Mode": {
+        "damage": "피해",
+        "half": "절반",
+        "double": "이중",
+        "direct": "직접",
+        "heal": "회복"
+      },
+      "Hint": {
+        "damage": "피해 적용: 타입별 방어, 취소, 장벽",
+        "half": "피해의 절반 적용 (반올림)",
+        "double": "피해의 이중 적용",
+        "direct": "직접 피해 적용: 방어와 취소 무시, 장벽 무시",
+        "heal": "이 만큼의 HP 회복",
+        "dodgeFailed": "회피 판정 실패: 헤이트 피해, 추적, 약점도 적용",
+        "reveal": "이 분석을 플레이어에게 표시"
+      },
+      "Applied": {
+        "Damage": "피해",
+        "Heal": "치유",
+        "PDef": "물리 방어력",
+        "MDef": "마법 방어력",
+        "Hate": "헤이트 피해",
+        "HateDown": "헤이트 −1 (실패한 회피 판정)"
+      },
+      "Notif": {
+        "NoTokens": "적용할 토큰을 선택하세요.",
+        "OutOfRange": "사정거리 ({range}): {names}. 공격이 이루어지지 않았습니다.",
+        "NotYourTurn": "전투 진행은 GM 또는 현재 전투자 소유자만 가능합니다."
+      },
+      "Reveal": "보이기",
+      "Close": "닫기",
+      "Phase": {
+        "briefing": "브리핑",
+        "setup": "설정",
+        "main": "주요",
+        "cleanup": "정리"
+      },
+      "PhaseHint": {
+        "briefing": "전투 전: 적 정보 확인, Scouting, [Preparation] 특기. 헤이트는 오르지 않습니다.",
+        "setup": "셋업 프로세스: 모두 미행동 상태로 돌아갑니다. [Timing: Setup] 행동을 사용합니다.",
+        "main": "이니셔티브 / 메인 프로세스: 행동력이 높은 순서로 행동 (동점은 PC 우선). 차례 사이에 [Timing: Initiative] 행동.",
+        "cleanup": "클린업 프로세스: Regen/Decay, [Timing: Cleanup] 행동, 지속 효과, 그다음 라운드 종료까지 지속되는 효과가 끝납니다."
+      },
+      "Setting": {
+        "AnnouncePhases": "라운드별 전투 단계를 채팅에 알림",
+        "AnnouncePhasesHint": "각 라운드의 설정 및 정리 과정 시작 시 채팅에 메시지를 게시합니다."
+      },
+      "AttackTags": "공격 태그",
+      "Standby": "대기",
+      "StandbyHint": "대기: 현재 주요 과정을 건너뛰고, 대기 중이지 않은 모든 인물(행동력이 낮은 순으로) 이후에 행동합니다. 한 라운드당 1회, 어떤 액션을 수행하기 전에.",
+      "StandbyDeclared": "대기 상태로 <strong>변경</strong>되었습니다.",
+      "ActionState": {
+        "pre": "전행",
+        "post": "후행",
+        "standby": "대기"
+      },
+      "ActionStateHint": {
+        "pre": "전행: 이 라운드에 주 처리를 수행하지 않았습니다.",
+        "post": "후행: 이 라운드에 이미 주 처리를 수행했습니다.",
+        "standby": "대기 중: 다른 모든 캐릭터 이후에 행동하며, 행동력이 가장 낮은 순으로 시작합니다."
+      }
+    },
+    "Tag": {
+      "Placeholder": "태그 추가…",
+      "Migrated": "태그가 {count} 문서에서 표준화되었습니다."
+    },
+    "TagGroup": {
+      "Equipment": "장비",
+      "Item": "아이템",
+      "Skill": "특기",
+      "Attack": "공격",
+      "Element": "요소",
+      "Creature": "생물",
+      "Other": "기타"
+    },
+    "PlayerSheet": "캐릭터 시트",
+    "MonsterSheet": "몬스터 시트",
+    "Macro": {
+      "Notif": {
+        "OwnedOnly": "액터가 소유한 아이템만 매크로 버튼으로 만들 수 있습니다.",
+        "NoItem": "제어 중인 액터가 이름이 {item}인 아이템을 가지고 있지 않습니다."
+      }
     }
   }
 }

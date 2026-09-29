@@ -1,23 +1,5 @@
 {
   "TYPES": {
-    "ACTOR": {
-      "TypeCharacter": "Personaje Jugador",
-      "TypeMonster": "Monstruo",
-      "TypePile": "Pila (botín / cofre / mercader)"
-    },
-    "ITEM": {
-      "TypeAccessory": "Accesorio",
-      "TypeArmor": "Armadura",
-      "TypeBag": "Bolsa",
-      "TypeConnection": "Conexión",
-      "TypeGear": "Otros",
-      "TypeShield": "Escudo",
-      "TypeSkill": "Habilidad",
-      "TypeTicket": "Ticket",
-      "TypeUnion": "Unión",
-      "TypeUsable": "Usable",
-      "TypeWeapon": "Arma"
-    },
     "Item": {
       "accessory": "Accesorio",
       "armor": "Armadura",
@@ -33,6 +15,11 @@
       "class": "Clase",
       "subclass": "Subclase",
       "usable": "Usable"
+    },
+    "Actor": {
+      "character": "Personaje Jugador",
+      "monster": "Monstruo",
+      "pile": "Pila (botín / cofre / mercader)"
     }
   },
   "IMPORT": {
@@ -49,16 +36,30 @@
     }
   },
   "LHTRPG": {
+    "Hands": {
+      "Main": "Mano principal",
+      "Off": "Mano secundaria",
+      "Swap": "Cambiar manos (atacar con la otra arma)",
+      "Locked": "Ocupada por {weapon} [Two-Handed]",
+      "Notif": {
+        "ShieldOffHand": "{item}: los escudos van en la mano secundaria.",
+        "TwoHandedOffHand": "{item} es [Two-Handed]: va en la mano principal.",
+        "OffHandLocked": "No se puede equipar {item}: {weapon} [Two-Handed] ocupa ambas manos.",
+        "NotHandItem": "{item} no se puede llevar en una mano.",
+        "Unequipped": "Vuelve al inventario para equipar {item}: {items}.",
+        "Migrated": "Las armas a dos manos ocupan ambas manos: se desequipó la mano secundaria de {list}.",
+        "MigratedCarried": "Solo se equipa el equipo: se devolvió al inventario lo de {list}."
+      }
+    },
     "Add": "Añadir",
     "Biography": {
       "Label": "Biog."
     },
     "ButtonLabel": {
       "Cancel": "Cancelar",
-      "Roll": "Tirar",
-      "Tag": {
-        "Add": "Añadir"
-      }
+      "Delete": "Eliminar",
+      "Edit": "Editar",
+      "Roll": "Tirar"
     },
     "Check": {
       "Accuracy": "Precisión",
@@ -131,14 +132,7 @@
       }
     },
     "Label": {
-      "Afflicted": "Afligido",
-      "Barrier": "Barrera",
-      "Cancel": "Cancelar",
-      "Confused": "Confundido",
-      "Dazed": "Aturdido",
-      "Decay": "Decadencia",
       "Defense": "Defensa",
-      "EmptySlot": "Vacío",
       "Equip": "Equipar",
       "Equipment": "Equipo",
       "Fate": "Destino",
@@ -146,33 +140,12 @@
       "Guild": "Gremio",
       "HP": "HP",
       "Hate": "ODIO",
-      "ImportItems": "Importar Objetos desde lhrpg.com",
-      "ImportSkills": "Importar Habilidades desde lhrpg.com",
-      "Inventory": "Inventario",
-      "Overconfident": "Confiado",
       "Power": "Ataque",
-      "Pursuit": "Persecución",
       "Race": "Raza",
-      "Regen": "Regen.",
       "Remove": "Eliminar",
-      "Rigor": "Rigidez",
-      "Staggered": "Tambaleante",
       "Tags": "Etiquetas",
       "Tickets": "Tickets",
       "Type": "Tipo",
-      "afflicted": "Afligido",
-      "barrier": "Barrera",
-      "cancel": "Cancelar",
-      "confused": "Confundido",
-      "dazed": "Aturdido",
-      "decay": "Decadencia",
-      "overconfident": "Confiado",
-      "pursuit": "Persecución",
-      "regen": "Regen.",
-      "rigor": "Rigidez",
-      "staggered": "Tambaleante",
-      "Weakness": "Debilidad",
-      "weakness": "Debilidad",
       "StatusTag": "Tag",
       "StatusTagAny": "todo",
       "StatusTagHint": "Tag del daño al que se aplica (ej. Flame). Vacío: cualquier daño."
@@ -204,7 +177,11 @@
     "Skill": {
       "Label": {
         "Check": "Chequeo",
+        "CheckAuto": "Auto",
         "Cost": "Coste",
+        "Damage": "Daño",
+        "DamageMagical": "Mágico",
+        "DamagePhysical": "Físico",
         "Limit": "Límite",
         "MacroEffect": "Macro",
         "Range": "Alcance",
@@ -213,15 +190,6 @@
         "Timing": "Momento",
         "ExtraDice": "Dados extra",
         "DamageRecovery": "Recuperación"
-      },
-      "Placeholder": {
-        "Check": "-",
-        "Cost": "-",
-        "Limit": "-",
-        "MacroEffect": "-",
-        "Range": "-",
-        "Target": "-",
-        "Timing": "-"
       },
       "Type": {
         "Basic": "Básico",
@@ -236,6 +204,9 @@
       "Notif": {
         "NoCharacter": "Selecciona un personaje (o su token) para tirar esta skill.",
         "Missing": "Esta skill ya no existe."
+      },
+      "Placeholder": {
+        "MacroEffect": "-"
       }
     },
     "Ticket": {
@@ -249,9 +220,6 @@
     },
     "Status": {
       "Label": "Estado"
-    },
-    "Others": {
-      "Label": "Otros"
     },
     "Str": "STR",
     "Tooltip": {
@@ -268,10 +236,7 @@
       "Name": "Unión"
     },
     "WindowTitle": {
-      "AbilityCheck": "Chequeo de Característica",
-      "Tag": {
-        "AddNewTag": "Añadir una nueva etiqueta"
-      }
+      "AbilityCheck": "Chequeo de Característica"
     },
     "StatusEffect": {
       "fatigue": "Fatiga",
@@ -345,13 +310,11 @@
       "ShopClosed": "Cerrado",
       "ShopClosedHint": "La tienda está cerrada en este momento.",
       "Contents": "Contenido",
-      "ForSale": "A la venta",
       "Stock": "Stock",
       "StockHint": "Stock (vacío o ∞ = ilimitado)",
       "SoldOut": "Agotado",
       "Empty": "No hay nada.",
       "NothingForSale": "No hay nada a la venta.",
-      "YourItems": "Tus objetos (precio de venta)",
       "NothingToSell": "No tienes nada para vender.",
       "NoSalesHint": "Este mercader no compra objetos.",
       "DropHint": "Arrastra items aquí desde la barra lateral, un compendio o una hoja de personaje.",
@@ -656,6 +619,27 @@
         "pre": "Pre-Action: aún no hace su Main Process esta ronda.",
         "post": "Post-Action: ya hizo su Main Process esta ronda.",
         "standby": "En Standby: actúa después de los demás, menor Iniciativa primero."
+      }
+    },
+    "Tag": {
+      "Placeholder": "Añadir tag…",
+      "Migrated": "Tags normalizados en {count} documentos."
+    },
+    "TagGroup": {
+      "Equipment": "Equipo",
+      "Item": "Objeto",
+      "Skill": "Skill",
+      "Attack": "Ataque",
+      "Element": "Elemento",
+      "Creature": "Criatura",
+      "Other": "Otros"
+    },
+    "PlayerSheet": "Hoja de personaje",
+    "MonsterSheet": "Hoja de monstruo",
+    "Macro": {
+      "Notif": {
+        "OwnedOnly": "Solo puedes crear macros de items que pertenezcan a un actor.",
+        "NoItem": "Tu actor controlado no tiene ningún item llamado {item}."
       }
     }
   }

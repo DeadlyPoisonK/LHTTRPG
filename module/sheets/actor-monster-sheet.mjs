@@ -49,7 +49,6 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         // Prepare character data and items.
         if (actorData.type == 'monster') {
             this._prepareItems(context);
-            this._prepareCharacterData(context);
         }
         // Add roll data for TinyMCE editors.
         context.rollData = context.actor.getRollData();
@@ -66,18 +65,6 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         context.checkDiceOptions = diceOptions(MONSTER_CHECK_MAX_DICE);
 
         return context;
-    }
-
-    /**
-     * Organize and classify Items for Character sheets.
-     *
-     * @param {Object} actorData The actor to prepare.
-     *
-     * @return {undefined}
-     */
-    _prepareCharacterData(context) {
-
-
     }
 
     /**
@@ -170,9 +157,6 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         // Tag management
         activateTagInput(html, this.actor, this);
 
-        // Rollable abilities.
-        html.find('.rollable').click(this._onRoll.bind(this));
-
         // Drag events for macros.
         if (this.actor.isOwner) {
             let handler = ev => this._onDragStart(ev);
@@ -197,7 +181,7 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
         // Grab any data associated with this control.
         const data = foundry.utils.duplicate(header.dataset);
         // Initialize a default name.
-        const name = `New ${type.capitalize()}`;
+        const name = Item.implementation.defaultName({ type, parent: this.actor });
         // Prepare the item object.
         const itemData = {
             name: name,
@@ -209,38 +193,6 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
 
         // Finally, create the item!
         return await Item.create(itemData, { parent: this.actor });
-    }
-
-    /**
-     * Handle clickable rolls.
-     * @param {Event} event   The originating click event
-     * @private
-     */
-    _onRoll(event) {
-        event.preventDefault();
-        const element = event.currentTarget;
-        const dataset = element.dataset;
-
-        // Handle item rolls.
-        if (dataset.rollType) {
-            if (dataset.rollType == 'item') {
-                const itemId = element.closest('.item').dataset.itemId;
-                const item = this.actor.items.get(itemId);
-                if (item) return item.roll();
-            }
-        }
-
-        // Handle rolls that supply the formula directly.
-        if (dataset.roll) {
-            let label = dataset.label ? `[roll] ${dataset.label}` : '';
-            let roll = new Roll(dataset.roll, this.actor.getRollData());
-            roll.toMessage({
-                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                flavor: label,
-                rollMode: game.settings.get('core', 'rollMode'),
-            });
-            return roll;
-        }
     }
 
     /**
@@ -319,18 +271,6 @@ export class LHTrpgActorMonsterSheet extends foundry.appv1.sheets.ActorSheet {
     _onItemThrow(event) {
         event.preventDefault();
         const itemId = event.currentTarget.closest(".item").dataset.itemId;
-        console.log(itemId);
-        const item = this.actor.items.get(itemId);
-        console.log(item);
-    
-        item.ItemThrow();
-    
-      }
-
-    // async _onOpeningInfoWindow (state, actor) {
-    //   console.log(state);
-    //   console.log(actor);
-    //   await actor.setFlag("lhtrpg", "hfWindowOpened", state);
-    // }
-
+        this.actor.items.get(itemId)?.ItemThrow();
+    }
 }

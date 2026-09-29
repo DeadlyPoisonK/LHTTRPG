@@ -1,23 +1,5 @@
 {
   "TYPES": {
-    "ACTOR": {
-      "TypeCharacter": "Player Character",
-      "TypeMonster": "Monster",
-      "TypePile": "Pile (loot / chest / merchant)"
-    },
-    "ITEM": {
-      "TypeAccessory": "Accessory",
-      "TypeArmor": "Armor",
-      "TypeBag": "Bag",
-      "TypeConnection": "Connection",
-      "TypeGear": "Other",
-      "TypeShield": "Shield",
-      "TypeSkill": "Skill",
-      "TypeTicket": "Ticket",
-      "TypeUnion": "Union",
-      "TypeUsable": "Usable",
-      "TypeWeapon": "Weapon"
-    },
     "Item": {
       "accessory": "Accessory",
       "armor": "Armor",
@@ -33,6 +15,11 @@
       "class": "Class",
       "subclass": "Subclass",
       "usable": "Usable"
+    },
+    "Actor": {
+      "character": "Player Character",
+      "monster": "Monster",
+      "pile": "Pile (loot / chest / merchant)"
     }
   },
   "IMPORT": {
@@ -72,10 +59,7 @@
       "Cancel": "Cancel",
       "Delete": "Delete",
       "Edit": "Edit",
-      "Roll": "Roll",
-      "Tag": {
-        "Add": "Add"
-      }
+      "Roll": "Roll"
     },
     "Check": {
       "Accuracy": "Accuracy",
@@ -148,14 +132,7 @@
       }
     },
     "Label": {
-      "Afflicted": "Afflicted",
-      "Barrier": "Barrier",
-      "Cancel": "Cancel",
-      "Confused": "Confused",
-      "Dazed": "Dazed",
-      "Decay": "Decay",
       "Defense": "Defense",
-      "EmptySlot": "Empty",
       "Equip": "Equip",
       "Equipment": "Equipment",
       "Fate": "Fate",
@@ -163,33 +140,12 @@
       "Guild": "Guild",
       "HP": "HP",
       "Hate": "HATE",
-      "ImportItems": "Import Items from lhrpg.com",
-      "ImportSkills": "Import Skills from lhrpg.com",
-      "Inventory": "Inventory",
-      "Overconfident": "Overconfident",
       "Power": "Offense",
-      "Pursuit": "Pursuit",
       "Race": "Race",
-      "Regen": "Regen",
       "Remove": "Remove",
-      "Rigor": "Rigor",
-      "Staggered": "Staggered",
       "Tags": "Tags",
       "Tickets": "Tickets",
       "Type": "Type",
-      "afflicted": "Afflicted",
-      "barrier": "Barrier",
-      "cancel": "Cancel",
-      "confused": "Confused",
-      "dazed": "Dazed",
-      "decay": "Decay",
-      "overconfident": "Overconfident",
-      "pursuit": "Pursuit",
-      "regen": "Regen",
-      "rigor": "Rigor",
-      "staggered": "Staggered",
-      "Weakness": "Weakness",
-      "weakness": "Weakness",
       "StatusTag": "Tag",
       "StatusTagAny": "any",
       "StatusTagHint": "Damage tag this applies to (e.g. Flame). Empty: any damage."
@@ -235,15 +191,6 @@
         "ExtraDice": "Extra dice",
         "DamageRecovery": "Recovery"
       },
-      "Placeholder": {
-        "Check": "-",
-        "Cost": "-",
-        "Limit": "-",
-        "MacroEffect": "-",
-        "Range": "-",
-        "Target": "-",
-        "Timing": "-"
-      },
       "Type": {
         "Basic": "Basic",
         "Combat": "Combat",
@@ -257,6 +204,9 @@
       "Notif": {
         "NoCharacter": "Select a character (or its token) to roll this skill.",
         "Missing": "This skill no longer exists."
+      },
+      "Placeholder": {
+        "MacroEffect": "-"
       }
     },
     "Ticket": {
@@ -270,9 +220,6 @@
     },
     "Status": {
       "Label": "Status"
-    },
-    "Others": {
-      "Label": "Others"
     },
     "Str": "STR",
     "Tooltip": {
@@ -289,10 +236,7 @@
       "Name": "Union"
     },
     "WindowTitle": {
-      "AbilityCheck": "Ability Score Check",
-      "Tag": {
-        "AddNewTag": "Add a new tag"
-      }
+      "AbilityCheck": "Ability Score Check"
     },
     "StatusEffect": {
       "fatigue": "Fatigue",
@@ -366,13 +310,11 @@
       "ShopClosed": "Closed",
       "ShopClosedHint": "The shop is closed right now.",
       "Contents": "Contents",
-      "ForSale": "For sale",
       "Stock": "Stock",
       "StockHint": "Stock (empty or ∞ = unlimited)",
       "SoldOut": "Sold out",
       "Empty": "Nothing here.",
       "NothingForSale": "Nothing for sale.",
-      "YourItems": "Your items (sale price)",
       "NothingToSell": "You have nothing to sell.",
       "NoSalesHint": "This merchant doesn't buy items.",
       "DropHint": "Drag items here from the sidebar, a compendium or a character sheet.",
@@ -691,6 +633,14 @@
       "Element": "Element",
       "Creature": "Creature",
       "Other": "Other"
+    },
+    "PlayerSheet": "Player Character Sheet",
+    "MonsterSheet": "Monster Sheet",
+    "Macro": {
+      "Notif": {
+        "OwnedOnly": "You can only create macro buttons for items owned by an actor.",
+        "NoItem": "Your controlled actor does not have an item named {item}."
+      }
     }
   }
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "packs:build": "node tools/packs.mjs build",
     "packs:unpack": "node tools/packs.mjs unpack",
-    "packs:tags": "node tools/normalize-tags.mjs"
+    "packs:tags": "node tools/normalize-tags.mjs",
+    "check:i18n": "node tools/check-i18n.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.4"

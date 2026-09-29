@@ -18,7 +18,6 @@ export class LHTrpgItem extends Item {
     "gear": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "usable": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "ticket": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
-    "valuable": "systems/lhtrpg/templates/item/item-valuable-sheet.html",
     "connection": "systems/lhtrpg/templates/item/item-connection-sheet.html",
     "union": "systems/lhtrpg/templates/item/item-union-sheet.html",
     }
@@ -39,15 +38,6 @@ export class LHTrpgItem extends Item {
     return false;
   }
 
-
-  /**
-   * Augment the basic Item data model with additional dynamic data.
-   */
-  prepareData() {
-    // As with the actor class, items are documents that can have their data
-    // preparation methods overridden (such as prepareBaseData()).
-    super.prepareData();
-  }
 
   /** @override */
   prepareDerivedData() {
@@ -142,77 +132,33 @@ export class LHTrpgItem extends Item {
   }
 
   /**
-   * Handle clickable rolls.
-   * @param {Event} event   The originating click event
-   * @private
+   * Send the item's card to chat (skills get Check / Damage buttons). A skill with a macro
+   * (`system.macroeffect`, a macro id) also runs it.
+   * @returns {Promise<ChatMessage>}
    */
-  async roll() {
-    const item = this.system;
-
-    // Initialize chat data.
-    const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${this.type}] ${this.name}`;
-
-    // If there's no roll data, send a chat message.
-    if (!item.formula) {
-      await ChatMessage.create({
-        speaker: speaker,
-        rollMode: rollMode,
-        flavor: label,
-        content: item.description ?? ''
-      });
-    }
-    // Otherwise, create a roll and send a chat message from it.
-    else {
-      // Retrieve roll data.
-      const rollData = this.getRollData();
-
-      // Invoke the roll and submit it to chat.
-      const roll = new Roll(rollData.item.formula, rollData);
-      // If you need to store the value first, uncomment the next line.
-      // let result = await roll.roll({async: true});
-      await roll.toMessage({
-        speaker: speaker,
-        rollMode: rollMode,
-        flavor: label,
-      });
-      return roll;
-    }
-  }
-
-  async ItemThrow(event) {
+  async ItemThrow() {
     const element = this;
     const system = element.system;
-    const macroId = system.macroeffect; // Asumiendo que esto es directamente el ID de la macro
 
-    if (macroId) {
-        // Encuentra la macro por su ID
-        const macro = game.macros.get(macroId);
-        if (macro) {
-            // Ejecuta la macro
-            macro.execute();
-        } else {
-        }
-    } else {
-    }
+    const macro = system.macroeffect ? game.macros.get(system.macroeffect) : null;
+    if (macro) macro.execute({ actor: element.actor, item: element });
 
-    let chatData = {
-        user: game.user.id,
-        speaker: ChatMessage.getSpeaker(),
+    const chatData = {
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker({ actor: element.actor })
     };
 
     const enrichedDescription = system.description
-      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, { async: true })
+      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description)
       : "";
     const enrichedSkillText = system.skillText
-      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.skillText, { async: true })
+      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.skillText)
       : "";
 
     let cardData = {
         ...element.toObject(false),
         owner: element.actor?.id,
-        typeLabel: game.i18n.localize(`TYPES.ITEM.Type${element.type.capitalize()}`),
+        typeLabel: game.i18n.localize(`TYPES.Item.${element.type}`),
         isWeapon: element.type === "weapon",
         isArmor: element.type === "armor",
         isShield: element.type === "shield",
@@ -227,9 +173,7 @@ export class LHTrpgItem extends Item {
         rollable: element.type === "skill" ? skillRollable(element) : {}
     };
 
-    // Renderizar la plantilla del chat
     chatData.content = await foundry.applications.handlebars.renderTemplate(this.chatTemplate[element.type], cardData);
-    chatData.roll = true;
     return ChatMessage.create(chatData);
-}
+  }
 }

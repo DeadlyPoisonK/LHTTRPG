@@ -1,21 +1,25 @@
 {
   "TYPES": {
-    "ACTOR": {
-      "TypeCharacter": "Personaggio giocante",
-      "TypeMonster": "Mostro"
+    "Item": {
+      "accessory": "Accessorio",
+      "armor": "Armatura",
+      "bag": "Borsa",
+      "connection": "Connessione",
+      "gear": "Altro",
+      "shield": "Scudo",
+      "skill": "Abilità",
+      "ticket": "Biglietto",
+      "union": "Unione",
+      "weapon": "Arma",
+      "race": "Razza",
+      "class": "Classe",
+      "subclass": "Sottoclasse",
+      "usable": "Utilizzabile"
     },
-    "ITEM": {
-      "TypeAccessory": "Accessorio",
-      "TypeArmor": "Armatura",
-      "TypeBag": "Borsa",
-      "TypeConnection": "Connessione",
-      "TypeGear": "Altro",
-      "TypeShield": "Scudo",
-      "TypeSkill": "Abilità",
-      "TypeTicket": "Biglietto",
-      "TypeUnion": "Unione",
-      "TypeUsable": "Utilizzabile",
-      "TypeWeapon": "Arma"
+    "Actor": {
+      "character": "Personaggio giocante",
+      "monster": "Mostro",
+      "pile": "Pile (ricchezze / cassa / mercante)"
     }
   },
   "IMPORT": {
@@ -32,16 +36,30 @@
     }
   },
   "LHTRPG": {
+    "Hands": {
+      "Main": "Mano principale",
+      "Off": "Mano secondaria",
+      "Swap": "Scambia mani (attacca con l'arma opposta)",
+      "Locked": "Occupata da {weapon} [Two-Handed]",
+      "Notif": {
+        "ShieldOffHand": "{item}: gli scudi vanno in mano secondaria.",
+        "TwoHandedOffHand": "{item} è [Two-Handed]: va in mano principale.",
+        "OffHandLocked": "{item} non può essere equipaggiato: {weapon} [Two-Handed] occupa entrambe le mani.",
+        "NotHandItem": "{item} non può essere tenuto in una slot delle mani.",
+        "Unequipped": "Torna all'inventario per equipaggiare {item}: {items}.",
+        "Migrated": "Le armi a due mani occupano entrambe le mani: disequipaggia l'oggetto in mano secondaria di {list}.",
+        "MigratedCarried": "Solo l'equipaggiamento può essere equipaggiato: torna all'inventario per {list}."
+      }
+    },
     "Add": "Aggiungi",
     "Biography": {
       "Label": "Bio."
     },
     "ButtonLabel": {
       "Cancel": "Annulla",
-      "Roll": "Tira",
-      "Tag": {
-        "Add": "Aggiungi"
-      }
+      "Delete": "Cancella",
+      "Edit": "Modifica",
+      "Roll": "Tira"
     },
     "Check": {
       "Accuracy": "Precisione",
@@ -93,17 +111,28 @@
         "Target": "Bersaglio",
         "ThrowToChat": "Invia in chat",
         "Timing": "Tempistica"
+      },
+      "Use": {
+        "Button": "Usa",
+        "Label": "Usato",
+        "Consumed": "Consumato",
+        "EffectsApplied": "Effetti applicati a: {names}",
+        "ApplyEffects": "Applica effetti",
+        "NoActor": "Questo oggetto deve essere portato da un personaggio per essere usato.",
+        "NoTargets": "Seleziona i token che ricevono gli effetti.",
+        "Blocked": "{name} non può essere usato ora: Timing {timing} ({reason}).",
+        "GMOverride": "Timing {timing} ({reason}): usato comunque (GM).",
+        "Reason": {
+          "NotTurn": "non è il tuo Main Process",
+          "Phase": "fase corrente: {phase}",
+          "OutOfCombat": "solo fuori dal combattimento",
+          "Briefing": "solo prima che inizi il combattimento"
+        },
+        "Migrated": "{count} oggetti Gear sono diventati oggetti Utilizzabili (potion, scroll…)."
       }
     },
     "Label": {
-      "Afflicted": "Afflitto",
-      "Barrier": "Barriera",
-      "Cancel": "Annulla",
-      "Confused": "Confuso",
-      "Dazed": "Stordito",
-      "Decay": "Decadimento",
       "Defense": "Difesa",
-      "EmptySlot": "Vuoto",
       "Equip": "Equipaggia",
       "Equipment": "Equipaggiamento",
       "Fate": "Fato",
@@ -111,31 +140,15 @@
       "Guild": "Gilda",
       "HP": "HP",
       "Hate": "ODIO",
-      "ImportItems": "Importa oggetti da lhrpg.com",
-      "ImportSkills": "Importa abilità da lhrpg.com",
-      "Inventory": "Inventario",
-      "Overconfident": "Presuntuoso",
       "Power": "Attacco",
-      "Pursuit": "Inseguimento",
       "Race": "Razza",
-      "Regen": "Rigen.",
       "Remove": "Rimuovi",
-      "Rigor": "Rigidità",
-      "Staggered": "Vacillante",
       "Tags": "Etichette",
       "Tickets": "Biglietti",
       "Type": "Tipo",
-      "afflicted": "Afflitto",
-      "barrier": "Barriera",
-      "cancel": "Annulla",
-      "confused": "Confuso",
-      "dazed": "Stordito",
-      "decay": "Decadimento",
-      "overconfident": "Presuntuoso",
-      "pursuit": "Inseguimento",
-      "regen": "Rigen.",
-      "rigor": "Rigidità",
-      "staggered": "Vacillante"
+      "StatusTag": "Tag",
+      "StatusTagAny": "qualsiasi",
+      "StatusTagHint": "Tag danni a cui si applica (es. Fuoco). Vuoto: qualsiasi danno."
     },
     "Modifier": "Modificatore",
     "Monster": {
@@ -164,22 +177,19 @@
     "Skill": {
       "Label": {
         "Check": "Prova",
+        "CheckAuto": "Auto",
         "Cost": "Costo",
+        "Damage": "Danno",
+        "DamageMagical": "Magico",
+        "DamagePhysical": "Fisico",
         "Limit": "Limite",
         "MacroEffect": "Macro",
         "Range": "Gittata",
         "SR": "SR",
         "Target": "Bersaglio",
-        "Timing": "Tempistica"
-      },
-      "Placeholder": {
-        "Check": "-",
-        "Cost": "-",
-        "Limit": "-",
-        "MacroEffect": "-",
-        "Range": "-",
-        "Target": "-",
-        "Timing": "-"
+        "Timing": "Tempistica",
+        "ExtraDice": "Dadi extra",
+        "DamageRecovery": "Recupero"
       },
       "Type": {
         "Basic": "Base",
@@ -187,6 +197,16 @@
         "General": "Generale",
         "Monster": "Mostro",
         "Item": "Oggetto"
+      },
+      "Option": {
+        "Custom": "Personalizzato…"
+      },
+      "Notif": {
+        "NoCharacter": "Seleziona un personaggio (o la sua token) per lanciare questa abilità.",
+        "Missing": "Questa abilità non esiste più."
+      },
+      "Placeholder": {
+        "MacroEffect": "-"
       }
     },
     "Ticket": {
@@ -195,13 +215,11 @@
         "Fate": "Biglietto del fato",
         "Connection": "Biglietto di connessione",
         "Reset": "Biglietto di reset"
-      }
+      },
+      "AddRank": "Aggiungi un Biglietto del Tesoro di questo CR"
     },
     "Status": {
       "Label": "Stato"
-    },
-    "Others": {
-      "Label": "Altro"
     },
     "Str": "STR",
     "Tooltip": {
@@ -218,13 +236,411 @@
       "Name": "Unione"
     },
     "WindowTitle": {
-      "AbilityCheck": "Prova di caratteristica",
-      "Tag": {
-        "AddNewTag": "Aggiungi una nuova etichetta"
-      }
+      "AbilityCheck": "Prova di caratteristica"
+    },
+    "StatusEffect": {
+      "fatigue": "Fatica",
+      "weakness": "Debolezza",
+      "incapacitated": "Incapacitato",
+      "dead": "Morto",
+      "staggered": "Vacillante",
+      "dazed": "Stordito",
+      "rigor": "Rigidità",
+      "confused": "Confuso",
+      "decay": "Decadimento",
+      "pursuit": "Inseguimento",
+      "afflicted": "Afflitto",
+      "overconfident": "Presuntuoso",
+      "regen": "Rigen.",
+      "cancel": "Annulla",
+      "barrier": "Barriera",
+      "hidden": "Nascosto",
+      "swimming": "Nuotando",
+      "flying": "Volando",
+      "identified": "Identificato",
+      "standby": "In attesa",
+      "hateTop": "Odio massimo",
+      "hateUnder": "Odio minimo",
+      "absent": "Assente dalla scena"
+    },
+    "StatusGroup": {
+      "bad": "Stato negativo",
+      "life": "Stato vitale",
+      "combat": "Stato combattimento",
+      "other": "Altro stato"
     },
     "Stats": {
       "Label": "Stats"
+    },
+    "Piles": {
+      "SheetLabel": "Foglio della pila (tesori, cassa, mercante)",
+      "ChatAlias": "Inventario",
+      "DefaultLootName": "Tesoro",
+      "ItemPilesActive": "Il modulo Item Piles è attivo. Log Horizon TRPG include già i propri bottini, forzieri e mercanti: usarli entrambi può creare sovrapposizioni.",
+      "Mode": {
+        "Loot": "Tesoro",
+        "Chest": "Cassa",
+        "Merchant": "Mercante"
+      },
+      "Gold": "oro",
+      "Quantity": "Quantità",
+      "Confirm": "Conferma",
+      "Give": "Dai",
+      "GiveTo": "Dai a…",
+      "GiveItemTitle": "Dai {item}",
+      "GiveGoldTitle": "Dai oro",
+      "Take": "Prendi",
+      "TakeAll": "Prendi tutto",
+      "TakeGold": "Prendi oro",
+      "DepositGold": "Lascia oro",
+      "SplitGold": "Dividi oro",
+      "Buy": "Compra",
+      "Sell": "Vendi",
+      "SellConfirm": "Vendi {quantity} × {item} per {gold} oro?",
+      "Delete": "Elimina",
+      "Configure": "Configura",
+      "Open": "Apri",
+      "Closed": "Chiuso",
+      "Locked": "Bloccato",
+      "OpenChest": "Apri cassa",
+      "CloseChest": "Chiudi cassa",
+      "ClosedHint": "La cassa è chiusa.",
+      "LockedHint": "La cassa è bloccata. Forse qualcuno ha la chiave…",
+      "ShopOpen": "Aperto al pubblico",
+      "ShopClosed": "Chiuso",
+      "ShopClosedHint": "Il negozio è chiuso in questo momento.",
+      "Contents": "Contenuti",
+      "Stock": "Stocca",
+      "StockHint": "Stocca (vuoto o ∞ = illimitato)",
+      "SoldOut": "Esaurito",
+      "Empty": "Niente qui.",
+      "NothingForSale": "Niente da vendere.",
+      "NothingToSell": "Non hai nulla da vendere.",
+      "NoSalesHint": "Questo mercante non acquista oggetti.",
+      "DropHint": "Trascina oggetti qui dalla barra laterale, da un compendio o da una scheda del personaggio.",
+      "NoInteractor": "Seleziona il tuo token (o assegna un personaggio) per interagire.",
+      "Config": {
+        "Mode": "Tipo",
+        "Distance": "Distanza di interazione",
+        "DistanceHint": "In spazi della griglia. 1 = adiacente, -1 = illimitata.",
+        "DeleteWhenEmpty": "Elimina il token quando è vuoto",
+        "ImgClosed": "Immagine chiusa",
+        "ImgOpen": "Immagine aperta (vuoto = immagine del personaggio)",
+        "AcceptsSales": "Acquista oggetti dai giocatori",
+        "InfiniteGold": "Oro illimitato",
+        "BuyPercent": "Prezzo d'acquisto (% del prezzo dell'oggetto)",
+        "SellPercent": "Prezzo di vendita (% del prezzo dell'oggetto)",
+        "ResellSold": "Rivendi oggetti acquistati dai giocatori",
+        "ResellSoldHint": "Spento: ciò che i giocatori vendono scompare una volta pagato. Acceso: viene messo in vendita con un limite di stock (le unità vendute)."
+      },
+      "Settings": {
+        "ChatLog": {
+          "Name": "Registra i trasferimenti degli oggetti nella chat",
+          "Hint": "Posta un messaggio in chat ogni volta che un bottino viene rimosso, un oggetto viene dato, acquistato o venduto."
+        }
+      },
+      "Log": {
+        "Take": "<b>{actor}</b> ha preso {item} da <b>{pile}</b>.",
+        "Deposit": "<b>{actor}</b> ha lasciato {item} in <b>{pile}</b>.",
+        "Give": "<b>{actor}</b> ha dato {item} a <b>{target}</b>.",
+        "Drop": "<b>{actor}</b> ha lasciato cadere {item} a terra.",
+        "Buy": "<b>{actor}</b> ha comprato {item} da <b>{pile}</b> per {gold} oro.",
+        "Sell": "<b>{actor}</b> ha venduto {item} a <b>{pile}</b> per {gold} oro.",
+        "Split": "L'oro di <b>{pile}</b> è stato diviso: {gold} ciascuno per {actors}."
+      },
+      "Warn": {
+        "InventoryFullLeft": "L'inventario di {actor} è pieno. Abbandonati: {items}."
+      },
+      "Error": {
+        "Generic": "Quell'azione non può essere completata.",
+        "NoGM": "Deve essere connesso un GM per fare questo.",
+        "Timeout": "Il GM non ha risposto in tempo.",
+        "NoPermission": "Non sei autorizzato a fare questo.",
+        "NoActor": "Seleziona prima il tuo token o assegna un personaggio.",
+        "TooFar": "Sei troppo lontano da {pile}.",
+        "Closed": "{pile} è chiuso.",
+        "Locked": "{pile} è bloccato.",
+        "MerchantClosed": "{pile} è chiuso.",
+        "NotPhysical": "{item} non è un oggetto che può essere portato.",
+        "InventoryFull": "L'inventario di {actor} è pieno: non c'è spazio per {item}.",
+        "NotEnoughGold": "{actor} non ha abbastanza oro.",
+        "InvalidAmount": "Quantità non valida.",
+        "NoGold": "Non c'è oro da dare.",
+        "NoTargets": "Non ci sono altri personaggi giocanti.",
+        "NoParty": "Non ci sono personaggi giocanti connessi per dividere l'oro.",
+        "OutOfStock": "{item} è esaurito.",
+        "NoSales": "{pile} non acquista oggetti.",
+        "MerchantNoGold": "{pile} non ha abbastanza oro per comprare quello."
+      },
+      "GoldLabel": "Oro",
+      "Max": "max. {max}",
+      "EditImage": "Modifica immagine",
+      "Search": "Cerca…",
+      "AllTypes": "Tutti",
+      "Sort": {
+        "Label": "Ordina per",
+        "Manual": "Ordine memorizzato",
+        "Name": "Nome",
+        "Type": "Tipo",
+        "PriceAsc": "Prezzo (basso → alto)",
+        "PriceDesc": "Prezzo (alto → basso)"
+      },
+      "Description": "Descrizione",
+      "BuyTab": "Acquista",
+      "SellTab": "Vendi",
+      "Item": "Oggetto",
+      "Price": "Prezzo",
+      "Convert": {
+        "Title": "Converti l'attore in un mucchio",
+        "Hint": "Converte un attore esistente (ad esempio un mercante, forziere o bottino di Item Piles) in una pila del sistema. Mantiene oggetti, oro, immagine, token e permessi; le statistiche vanno perse. I personaggi assegnati ai giocatori non sono elencati.",
+        "Actor": "Attore",
+        "Mode": "Converti in",
+        "DropNonPhysical": "Elimina abilità, connessioni e unioni",
+        "Summary": "{physical} oggetti e {gold} oro vengono mantenuti; {other} altri oggetti; {tokens} token(s) sulle scene.",
+        "Confirm": "Converti",
+        "AreYouSure": "Converti <b>{actor}</b> in un mucchio ({mode})? Le sue statistiche saranno perse. Questo non può essere annullato automaticamente.",
+        "Done": "{actor} è ora un mucchio ({mode}): {items} oggetti mantenuti, {dropped} oggetti rimossi, {tokens} token(s) disconnessi migrati.",
+        "NoActors": "Non ci sono attori da convertire.",
+        "PlayerOwned": "posseduto da un giocatore"
+      },
+      "TypePlural": {
+        "weapon": "Armi",
+        "armor": "Armature",
+        "shield": "Scudi",
+        "accessory": "Accessori",
+        "bag": "Borse",
+        "gear": "Altri",
+        "ticket": "Biglietti",
+        "usable": "Utilizzabili"
+      }
+    },
+    "Archetype": {
+      "Warrior": "Guerrriero",
+      "WeaponAttacker": "Attaccante con Arma",
+      "Healer": "Guaritore",
+      "Mage": "Maghi"
+    },
+    "SkillBrowser": {
+      "Title": "Abilità: {name}",
+      "Open": "Esplora le abilità che questo personaggio può acquisire o migliorare",
+      "Browse": "Esplora",
+      "Search": "Cerca per nome, classe o etichetta",
+      "HintPending": "Abilità da scegliere: acquisisci o migliora {combat} abilità di combattimento e {general} abilità generali. Un'abilità non può superare la sua Massima SR o il CR del personaggio.",
+      "HintFree": "Acquisisci nuove abilità (SR 1) o migliora quelle che il personaggio ha. Un'abilità non può superare la sua Massima SR o il CR del personaggio.",
+      "HintTraining": "Creazione del personaggio: restano {left} abilità [Training] su {max}.",
+      "TrainingFull": "Alla creazione del personaggio puoi acquisire solo {max} abilità [Training]",
+      "MaxSRShort": "Massima SR {max}",
+      "Acquire": "Acquisisci (SR 1)",
+      "Raise": "Migliora a SR {sr}",
+      "Unpick": "Rimuovi dalla selezione",
+      "MaxSR": "Già al suo Massima SR ({max})",
+      "MaxCR": "La SR non può superare il CR del personaggio ({max})",
+      "Full": "Nessuna scelta di questo tipo rimasta",
+      "Empty": "Nessuna abilità. Controlla la classe e la razza del personaggio, o il filtro della fonte.",
+      "NoPicks": "Niente selezionato ancora.",
+      "Confirm": "Aggiungi al personaggio",
+      "ChatTitle": "{name} impara",
+      "ChatNew": "{name} (SR 1)",
+      "ChatRaise": "{name} → SR {sr}",
+      "Undo": {
+        "Title": "Abilità scelte: {name}",
+        "HintRank": "{name} è ora CR {rank}. Queste abilità erano state scelte a un CR più alto. Annulla quelle selezionate?",
+        "HintClass": "{name} non ha più la Classe Principale con cui erano state scelte queste abilità. Annulla quelle selezionate?",
+        "Delete": "Rimuovi l'abilità",
+        "Lower": "SR {from} → {to}",
+        "Ranks": "Scelte a CR {ranks}",
+        "Apply": "Annulla selezionate",
+        "Keep": "Mantieni tutte"
+      },
+      "Source": {
+        "archetype": "Archetype",
+        "class": "Classe Principale",
+        "race": "Razza",
+        "subclass": "Sottoclasse",
+        "common": "Comune"
+      },
+      "Filter": {
+        "eligible": "Tutte le mie liste",
+        "archetype": "Archetype",
+        "class": "Classe Principale",
+        "race": "Razza",
+        "subclass": "Sottoclasse",
+        "common": "Comune",
+        "all": "Tutte le abilità (nessuna restrizione)"
+      }
+    },
+    "RankUp": {
+      "Button": "CR Up",
+      "Tooltip": "Rango del Personaggio (Biglietto Log)",
+      "Title": "Rango del Personaggio: {name}",
+      "Confirm": "Aumenta il Rango del Personaggio da {from} a {to}?",
+      "GainHP": "HP Max +{hp} (Modificatore HP della Classe Principale)",
+      "GainStats": "+1 a ogni Stat Base",
+      "GainSkills": "Acquista o aumenta il rango di {combat} skill di Combattimento e {general} skill Generale",
+      "Chat": "{name} raggiunge CR {to}"
+    },
+    "StatAllocation": {
+      "Confirm": "Conferma",
+      "Later": "Più tardi",
+      "Human": {
+        "Title": "Umano: statistiche bonus",
+        "Menu": "Scegli statistiche Umano",
+        "Hint": "Gli Umani ottengono +1 a qualsiasi {count} Stat Base. Scegline:"
+      },
+      "Bonus": {
+        "Title": "Punti bonus: {name}",
+        "Menu": "Distribuisci punti bonus",
+        "Hint": "Un nuovo personaggio ha {points} punti bonus da distribuire liberamente tra le Statistiche Base. Nessuna Stat Base può superare {max} in questo momento.",
+        "Points": "Bonus",
+        "Base": "Stat Base",
+        "Left": "Punti rimasti:"
+      }
+    },
+    "CharacterOptions": {
+      "Archetype": "Archetipo",
+      "Identifier": "ID",
+      "HpPerRank": "HP / Rango",
+      "World": "Mondo",
+      "Choose": "Scegli",
+      "View": "Visualizza dettagli",
+      "Change": "Cambia",
+      "Menu": "Opzioni",
+      "Empty": "Niente disponibile. Crea oggetti di questo tipo nel mondo o in un compendio degli oggetti.",
+      "NoMatch": "Nessun risultato.",
+      "Migrated": "Razza / Classe / Sottoclasse: {count} personaggi convertiti in oggetti.",
+      "Select": {
+        "race": "Selezione Razza",
+        "class": "Selezione Classe",
+        "subclass": "Selezione Sottoclasse"
+      },
+      "Search": {
+        "race": "Cerca Razze",
+        "class": "Cerca Classi",
+        "subclass": "Cerca Sottoclassi"
+      },
+      "SubclassSkills": {
+        "SheetHint": "Abilità che questa Sottoclasse permette: un personaggio con essa può acquisirle nella selezione delle abilità (non vengono fornite gratuitamente). Trascina un'abilità qui per aggiungerla.",
+        "Empty": "Questa Sottoclasse non permette ancora abilità."
+      },
+      "Grants": {
+        "Tab": "Abilità",
+        "Title": "Abilità iniziali: {name}",
+        "Add": "Aggiungi abilità",
+        "Skip": "Non adesso",
+        "Hint": "Il {type} {name} include queste abilità. Scegli quelle da aggiungere al personaggio:",
+        "ChooseOne": "Scegli una",
+        "Fixed": "Abilità",
+        "Owned": "già la possiede",
+        "RemoveStale": "Rimuovi le abilità concesse dalla precedente {type}:",
+        "SheetHint": "Abilità che un personaggio ottiene prendendo questo oggetto. Trascina un'abilità su una riga per renderla un'opzione tra diverse, o sull'area sotto per aggiungerne una nuova.",
+        "Drop": "Trascina un'abilità qui",
+        "OnlySkills": "Solo gli oggetti Abilità da un compendio o dal mondo possono essere abilità iniziali."
+      }
+    },
+    "Combat": {
+      "HitCheck": "Controllo colpo",
+      "AutoHit": "Colpo automatico",
+      "Critical": "Critico!",
+      "Fumble": "Fumble!",
+      "Dodge": "Evita",
+      "Hit": "Colpito",
+      "Miss": "Evitato",
+      "Pending": "In attesa",
+      "HateUnder": "Odio sotto +2",
+      "DamageRoll": "Danno",
+      "DodgeFailed": "Evitato fallito",
+      "Selected": "Token selezionati",
+      "Undo": "Annulla",
+      "Undone": "Annullato",
+      "Type": {
+        "physical": "Fisico",
+        "magical": "Magico",
+        "penetrating": "Penetrante",
+        "direct": "Diretto",
+        "recovery": "Recupero"
+      },
+      "Mode": {
+        "damage": "Danno",
+        "half": "Metà",
+        "double": "Doppio",
+        "direct": "Diretto",
+        "heal": "Guarigione"
+      },
+      "Hint": {
+        "damage": "Applica il danno: Difesa per tipo, Annulla, poi Barriera",
+        "half": "Applica metà del danno (arrotondato verso il basso)",
+        "double": "Applica il doppio del danno",
+        "direct": "Applica come Danno Diretto: ignora Difesa e Annulla, non Barriera",
+        "heal": "Guarisci questa quantità di HP",
+        "dodgeFailed": "Fallito il Check di Evasione: Danno Odio, Percorsi e Debolezza si applicano anche",
+        "reveal": "Mostra questa suddivisione ai giocatori"
+      },
+      "Applied": {
+        "Damage": "Danno",
+        "Heal": "Guarigione",
+        "PDef": "Dif. Fis.",
+        "MDef": "Dif. Mag.",
+        "Hate": "Danno Odio",
+        "HateDown": "Odio −1 (Check di Evasione fallito)"
+      },
+      "Notif": {
+        "NoTokens": "Seleziona i token a cui applicarlo.",
+        "OutOfRange": "Fuori dal raggio ({range}): {names}. L'attacco non è stato effettuato.",
+        "NotYourTurn": "Solo il GM o il proprietario del combattente corrente può avanzare il combattimento."
+      },
+      "Reveal": "Mostra",
+      "Close": "Chiudi",
+      "Phase": {
+        "briefing": "Briefing",
+        "setup": "Setup",
+        "main": "Main",
+        "cleanup": "Cleanup"
+      },
+      "PhaseHint": {
+        "briefing": "Prima del combattimento: informazioni sui nemici, Scouting e abilità [Preparation]. Non si guadagna Odio.",
+        "setup": "Processo Setup: tutti tornano a Pre-azione. Usa [Timing: Setup] azioni.",
+        "main": "Iniziativa / Main Process: agisce prima chi ha l'Iniziativa più alta (i PG vincono i pareggi). Azioni [Timing: Initiative] tra i turni.",
+        "cleanup": "Processo Cleanup: Regen/Decay, [Timing: Cleanup] azioni, effetti sostenuti, quindi gli effetti che durano fino alla fine del round si esauriscono."
+      },
+      "Setting": {
+        "AnnouncePhases": "Annuncia le fasi di combattimento nella chat",
+        "AnnouncePhasesHint": "Pubblica un messaggio nella chat quando inizia ogni round il processo di Setup e Cleanup."
+      },
+      "AttackTags": "Tag di attacco",
+      "Standby": "In attesa",
+      "StandbyHint": "In attesa: salta il tuo Main Process per ora e agisci dopo tutti non in attesa (prima chi ha l'Iniziativa più bassa). Una volta per round, prima di prendere qualsiasi azione.",
+      "StandbyDeclared": "Va in <strong>In attesa</strong>.",
+      "ActionState": {
+        "pre": "Pre",
+        "post": "Post",
+        "standby": "In attesa"
+      },
+      "ActionStateHint": {
+        "pre": "Pre-Azione: non ha ancora effettuato il suo Main Process questo round.",
+        "post": "Post-Azione: ha già effettuato il suo Main Process questo round.",
+        "standby": "In attesa: agisce dopo tutti gli altri, prima chi ha l'Iniziativa più bassa."
+      }
+    },
+    "Tag": {
+      "Placeholder": "Aggiungi tag…",
+      "Migrated": "Tag normalizzati in {count} documenti."
+    },
+    "TagGroup": {
+      "Equipment": "Equipaggiamento",
+      "Item": "Oggetto",
+      "Skill": "Abilità",
+      "Attack": "Attacco",
+      "Element": "Elemento",
+      "Creature": "Creatura",
+      "Other": "Altro"
+    },
+    "PlayerSheet": "Scheda del personaggio",
+    "MonsterSheet": "Scheda del mostro",
+    "Macro": {
+      "Notif": {
+        "OwnedOnly": "Puoi creare solo pulsanti macro per oggetti posseduti da un attore.",
+        "NoItem": "L'attore che controlli non ha un oggetto chiamato {item}."
+      }
     }
   }
 }
