@@ -98,7 +98,17 @@
       },
       "Migrated": "Migrati {count} effetti attivi."
     },
-    "EffectConfig": "Configurazione dell'effetto attivo",
+    "EffectConfig": {
+      "Title": "Configurazione dell'effetto attivo",
+      "StatusTab": "Stato LH",
+      "Status": "Stato",
+      "StatusNone": "— Nessuno —",
+      "Rating": "Rating",
+      "Tag": "Tag",
+      "HintRated": "Se il bersaglio ha già questo stato, rimane il Rating più alto.",
+      "HintList": "Aggiunto come voce aggiuntiva.",
+      "Preview": "Anteprima"
+    },
     "EffectTarget": {
       "MaxHP": "HP max.",
       "MaxFate": "Fato max.",

@@ -381,9 +381,34 @@ export function lhEffectSummary(changesOrEffect, options) {
       ? changesOrEffect
       : [];
 
-  if (!changes.length) return "";
+  const statusData = changesOrEffect?.flags?.lhtrpg?.statusData
+    ?? (typeof changesOrEffect?.getFlag === "function" ? changesOrEffect.getFlag("lhtrpg", "statusData") : null)
+    ?? changesOrEffect?._source?.flags?.lhtrpg?.statusData;
+
+  let statusPart = null;
+  if (statusData?.statusId) {
+    const statusId = String(statusData.statusId).trim();
+    const localize = str => (globalThis.game?.i18n?.localize ? globalThis.game.i18n.localize(str) : null);
+    const i18nKey = `LHTRPG.StatusEffect.${statusId}`;
+    let label = localize(i18nKey);
+    if (!label || (label === i18nKey)) {
+      label = statusId;
+    }
+
+    const tag = (statusData.tag !== undefined && statusData.tag !== null) ? String(statusData.tag).trim() : "";
+    const hasValue = (statusData.value !== undefined && statusData.value !== null && statusData.value !== "");
+
+    if (tag) {
+      statusPart = `[${label} (${tag}): ${statusData.value ?? 1}]`;
+    } else if (hasValue) {
+      statusPart = `[${label}: ${statusData.value}]`;
+    } else {
+      statusPart = `[${label}]`;
+    }
+  }
 
   const parts = [];
+  if (statusPart) parts.push(statusPart);
   for (const change of changes) {
     const s = formatChangeSummary(change);
     if (s) parts.push(s);

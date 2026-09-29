@@ -98,7 +98,17 @@
       },
       "Migrated": "Migration de {count} effet(s) actif(s)."
     },
-    "EffectConfig": "Configuration de l'effet actif",
+    "EffectConfig": {
+      "Title": "Configuration de l'effet actif",
+      "StatusTab": "État LH",
+      "Status": "État",
+      "StatusNone": "— Aucun —",
+      "Rating": "Valeur",
+      "Tag": "Tag",
+      "HintRated": "Si la cible a déjà cet état, la valeur la plus élevée est conservée.",
+      "HintList": "Ajouté comme une entrée supplémentaire.",
+      "Preview": "Aperçu"
+    },
     "EffectTarget": {
       "MaxHP": "HP max.",
       "MaxFate": "Destin max.",

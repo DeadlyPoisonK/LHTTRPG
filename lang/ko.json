@@ -98,7 +98,17 @@
       },
       "Migrated": "{count}개의 액티브 이펙트를 마이그레이션했습니다."
     },
-    "EffectConfig": "액티브 이펙트 설정",
+    "EffectConfig": {
+      "Title": "액티브 이펙트 설정",
+      "StatusTab": "LH 상태",
+      "Status": "상태",
+      "StatusNone": "— 없음 —",
+      "Rating": "수치",
+      "Tag": "태그",
+      "HintRated": "대상이 이미 이 상태를 가지고 있다면 더 높은 수치가 유지됩니다.",
+      "HintList": "추가 항목으로 더해집니다.",
+      "Preview": "미리보기"
+    },
     "EffectTarget": {
       "MaxHP": "최대 HP",
       "MaxFate": "최대 인과력",

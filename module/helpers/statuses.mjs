@@ -8,6 +8,8 @@
  * updates the field. Statuses without a field are stored only as the effect.
  */
 
+import { canonicalTag } from "./tag-catalog.mjs";
+
 const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
 
 /**
@@ -248,8 +250,26 @@ function _effectName(status, value) {
   return status.rated ? `${label}: ${Number(value) || 0}` : label;
 }
 
+/** The LH status data of an effect (flags.lhtrpg.statusData), if any. */
+function _statusData(effect) {
+  const data = effect.getFlag?.("lhtrpg", "statusData");
+  return data?.statusId ? data : null;
+}
+
+/**
+ * Effects of the actor that mirror a status: the plain status effects (HUD, one status, no status
+ * data: renamed with the field) and the effects that carry that status with its own Rating/Tag.
+ */
 function _findStatusEffects(actor, statusId) {
-  return actor.effects.filter(e => (e.statuses.size === 1) && e.statuses.has(statusId));
+  const hud = [];
+  const data = [];
+  for (const effect of actor.effects) {
+    const statusData = _statusData(effect);
+    if (statusData) {
+      if (statusData.statusId === statusId) data.push(effect);
+    } else if ((effect.statuses.size === 1) && effect.statuses.has(statusId)) hud.push(effect);
+  }
+  return { hud, data };
 }
 
 /**
@@ -259,18 +279,27 @@ async function _syncEffectFromField(actor, status) {
   const value = _fieldValue(actor, status);
   if (value === undefined) return;
   const active = _isFieldActive(status, value);
-  const existing = _findStatusEffects(actor, status.id);
+  const { hud, data } = _findStatusEffects(actor, status.id);
 
+  // Clearing the field (sheet) removes the status, whatever gave it.
   if (!active) {
-    if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
+    const ids = [...hud, ...data].map(e => e.id);
+    if (ids.length) await actor.deleteEmbeddedDocuments("ActiveEffect", ids);
+    return;
+  }
+
+  // Effects with their own Rating/Tag already show the status: no plain one next to them.
+  if (data.length) {
+    if (hud.length) await actor.deleteEmbeddedDocuments("ActiveEffect", hud.map(e => e.id));
     return;
   }
 
   const name = _effectName(status, value);
-  if (existing.length) {
-    if (existing[0].name !== name) await existing[0].update({ name });
+  if (hud.length) {
+    if (hud[0].name !== name) await hud[0].update({ name });
     return;
   }
+
   const effect = await ActiveEffect.implementation.fromStatusEffect(status.id);
   effect.updateSource({ name });
   await ActiveEffect.implementation.create(effect, { parent: actor, keepId: true });
@@ -301,6 +330,92 @@ function _queueSync(actor, status) {
   next.then(() => { if (_syncQueue.get(key) === next) _syncQueue.delete(key); });
 }
 
+/** Pending field updates from status effect changes, by actor and status. */
+const _fieldUpdateQueue = new Map();
+
+/**
+ * Queue status field changes by actor+status to prevent race conditions when multiple
+ * effects are created/deleted in the same tick.
+ */
+function _queueFieldUpdate(actor, status, fn) {
+  const key = `${actor.uuid}.${status.id}`;
+  const next = (_fieldUpdateQueue.get(key) ?? Promise.resolve())
+    .then(() => fn())
+    .catch(err => console.error(`Log Horizon TRPG | Could not update status field ${status.id} on ${actor.uuid}`, err));
+  _fieldUpdateQueue.set(key, next);
+  next.then(() => { if (_fieldUpdateQueue.get(key) === next) _fieldUpdateQueue.delete(key); });
+  return next;
+}
+
+async function _applyStatusDataOnCreate(actor, status, statusData) {
+  const value = _fieldValue(actor, status);
+  if (value === undefined) return;
+
+  if (status.rated) {
+    const effVal = Math.floor(Number(statusData.value) || 0) || 1;
+    const currentVal = Number(value) || 0;
+    const maxVal = Math.max(currentVal, effVal);
+    if (maxVal !== currentVal) {
+      await actor.update({ [`system.${status.path}`]: maxVal });
+    }
+  } else if (status.list) {
+    const effVal = Math.floor(Number(statusData.value) || 0) || 1;
+    const currentList = [..._listValue(value, status.tagged)];
+    let entry;
+    if (status.tagged) {
+      const tag = canonicalTag(statusData.tag ?? "");
+      entry = { value: effVal, tag };
+    } else {
+      entry = effVal;
+    }
+    currentList.push(entry);
+    await actor.update({ [`system.${status.path}`]: currentList });
+  } else {
+    if (!value) {
+      await actor.update({ [`system.${status.path}`]: true });
+    }
+  }
+}
+
+async function _applyStatusDataOnDelete(actor, status, statusData, deletedEffect) {
+  const value = _fieldValue(actor, status);
+  if (value === undefined) return;
+
+  if (status.list) {
+    const effVal = Math.floor(Number(statusData.value) || 0) || 1;
+    const currentList = [..._listValue(value, status.tagged)];
+    let index = -1;
+    if (status.tagged) {
+      const effTag = canonicalTag(statusData.tag ?? "");
+      index = currentList.findIndex(e => (Number(e?.value) === effVal) && (canonicalTag(e?.tag ?? "") === effTag));
+    } else {
+      index = currentList.findIndex(e => Number(e) === effVal);
+    }
+    if (index >= 0) {
+      currentList.splice(index, 1);
+      await actor.update({ [`system.${status.path}`]: currentList });
+    }
+  } else if (status.rated) {
+    const currentVal = Number(value) || 0;
+    const effVal = Math.floor(Number(statusData.value) || 0) || 1;
+    if (currentVal > effVal) return;
+
+    // Decision D1: back to the highest Rating of the other effects of this status, or 0.
+    const maxRemaining = _findStatusEffects(actor, status.id).data
+      .filter(e => e.id !== deletedEffect.id)
+      .reduce((max, e) => Math.max(max, Math.floor(Number(_statusData(e).value) || 0)), 0);
+
+    if (maxRemaining !== currentVal) {
+      await actor.update({ [`system.${status.path}`]: maxRemaining });
+    }
+  } else {
+    const hasOther = actor.effects.some(e => (e.id !== deletedEffect.id) && e.statuses.has(status.id));
+    if (!hasOther && value) {
+      await actor.update({ [`system.${status.path}`]: false });
+    }
+  }
+}
+
 /**
  * A status effect was added/removed (Token HUD, sheet, macro...): update the mirrored field.
  */
@@ -310,20 +425,41 @@ function _onStatusEffectChange(effect, created, userId) {
   const actor = effect.parent;
   if (!(actor instanceof Actor)) return;
 
-  const updates = {};
-  for (const statusId of effect.statuses) {
-    const status = STATUS_BY_ID.get(statusId);
-    if (!status?.path) continue;
-    const value = _fieldValue(actor, status);
-    if (value === undefined) continue;
+  const statusData = _statusData(effect);
+  const handledStatuses = new Set();
 
-    if (created && !_isFieldActive(status, value)) {
-      updates[`system.${status.path}`] = _activeFieldValue(status);
-    } else if (!created && _isFieldActive(status, value) && !actor.statuses.has(statusId)) {
-      updates[`system.${status.path}`] = _inactiveFieldValue(status);
+  if (statusData) {
+    const status = STATUS_BY_ID.get(statusData.statusId);
+    if (status?.path) {
+      handledStatuses.add(status.id);
+      _queueFieldUpdate(actor, status, async () => {
+        if (created) {
+          await _applyStatusDataOnCreate(actor, status, statusData);
+        } else {
+          await _applyStatusDataOnDelete(actor, status, statusData, effect);
+        }
+      });
     }
   }
-  if (!foundry.utils.isEmpty(updates)) actor.update(updates);
+
+  // Handle any other statuses on the effect (without statusData, e.g. from HUD or core multiselect)
+  for (const statusId of effect.statuses) {
+    if (handledStatuses.has(statusId)) continue;
+    const status = STATUS_BY_ID.get(statusId);
+    if (!status?.path) continue;
+    _queueFieldUpdate(actor, status, async () => {
+      const value = _fieldValue(actor, status);
+      if (value === undefined) return;
+      if (created && !_isFieldActive(status, value)) {
+        await actor.update({ [`system.${status.path}`]: _activeFieldValue(status) });
+      } else if (!created && _isFieldActive(status, value)) {
+        const hasOther = actor.effects.some(e => (e.id !== effect.id) && e.statuses.has(statusId));
+        if (!hasOther) {
+          await actor.update({ [`system.${status.path}`]: _inactiveFieldValue(status) });
+        }
+      }
+    });
+  }
 }
 
 /**
@@ -470,7 +606,7 @@ export async function migrateActorStatuses(actor) {
   // Status effects created before an icon change keep their old icon.
   const iconUpdates = [];
   for (const effect of actor.effects) {
-    if (effect.statuses.size !== 1) continue;
+    if ((effect.statuses.size !== 1) || _statusData(effect)) continue;
     const img = STATUS_BY_ID.get([...effect.statuses][0])?.img;
     if (img && (effect.img !== img)) iconUpdates.push({ _id: effect.id, img });
   }

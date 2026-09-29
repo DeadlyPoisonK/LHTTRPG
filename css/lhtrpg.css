@@ -4508,3 +4508,25 @@
   font-size: 11px;
 }
 
+.lhtrpg-effect-config .tab.lh-status {
+  padding: 0.5rem;
+}
+
+.lhtrpg-effect-config .tab.lh-status .lh-status-hint {
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: var(--color-text-subtle, #555);
+}
+
+.lhtrpg-effect-config .tab.lh-status .lh-status-preview-group {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--color-border-light-2, #ccc);
+  padding-top: 0.5rem;
+}
+
+.lhtrpg-effect-config .tab.lh-status .lh-status-preview {
+  font-weight: bold;
+  color: var(--color-text-primary, #111);
+  font-size: 13px;
+}
+

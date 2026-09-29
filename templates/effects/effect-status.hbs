@@ -1,0 +1,39 @@
+<section class="tab lh-status{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+    <div class="form-group">
+        <label>{{localize "LHTRPG.EffectConfig.Status"}}</label>
+        <div class="form-fields">
+            <select name="flags.lhtrpg.statusData.statusId">
+                <option value="">{{localize "LHTRPG.EffectConfig.StatusNone"}}</option>
+                {{#each statusGroups as |group|}}
+                <optgroup label="{{localize group.label}}">
+                    {{#each group.statuses as |st|}}
+                    <option value="{{st.id}}" {{#if st.selected}}selected{{/if}}>{{localize st.label}}</option>
+                    {{/each}}
+                </optgroup>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group lh-status-rating-group" {{#unless isRated}}hidden{{/unless}}>
+        <label>{{localize "LHTRPG.EffectConfig.Rating"}}</label>
+        <div class="form-fields">
+            <input type="number" name="flags.lhtrpg.statusData.value" value="{{statusData.value}}" min="1" step="1" placeholder="1">
+        </div>
+    </div>
+
+    <div class="form-group lh-status-tag-group" {{#unless isTagged}}hidden{{/unless}}>
+        <label>{{localize "LHTRPG.EffectConfig.Tag"}}</label>
+        <div class="form-fields">
+            <input type="text" name="flags.lhtrpg.statusData.tag" value="{{statusData.tag}}" placeholder="{{localize 'LHTRPG.Label.StatusTagAny'}}">
+        </div>
+    </div>
+
+    <p class="hint lh-status-hint" {{#unless hint}}hidden{{/unless}}>{{hint}}</p>
+    <div class="form-group lh-status-preview-group">
+        <label>{{localize "LHTRPG.EffectConfig.Preview"}}</label>
+        <div class="form-fields">
+            <span class="lh-status-preview">{{preview}}</span>
+        </div>
+    </div>
+</section>

@@ -98,7 +98,17 @@
       },
       "Migrated": "{count}個のアクティブエフェクトを移行しました。"
     },
-    "EffectConfig": "アクティブエフェクト設定",
+    "EffectConfig": {
+      "Title": "アクティブエフェクト設定",
+      "StatusTab": "LHステータス",
+      "Status": "ステータス",
+      "StatusNone": "— なし —",
+      "Rating": "値",
+      "Tag": "タグ",
+      "HintRated": "対象がすでにこのステータスを持っている場合、より高い値が残ります。",
+      "HintList": "追加のエントリとして追加されます。",
+      "Preview": "プレビュー"
+    },
     "EffectTarget": {
       "MaxHP": "最大HP",
       "MaxFate": "最大因果力",

@@ -6,6 +6,8 @@ import {
   getEffectKeyInfo
 } from "../helpers/effect-targets.mjs";
 import { SuggestInput } from "../helpers/suggest-input.mjs";
+import { LH_STATUSES, LH_STATUS_GROUPS } from "../helpers/statuses.mjs";
+import { canonicalTag, findTag, tagKey, TAG_CATALOG, tagDescription } from "../helpers/tag-catalog.mjs";
 
 const GROUP_ORDER = {
   attributes: 0,
@@ -38,6 +40,29 @@ function renderTargetInfoHtml(info) {
 }
 
 /**
+ * Format the readable preview of a status (e.g. "[Pursuit: 10]", "[Weakness (Flame): 5]").
+ * @param {string} statusId
+ * @param {number|string} [value]
+ * @param {string} [tag]
+ * @returns {string}
+ */
+export function formatStatusPreview(statusId, value, tag) {
+  if (!statusId) return "—";
+  const statusInfo = LH_STATUSES.find(s => s.id === statusId);
+  const label = globalThis.game?.i18n?.localize ? game.i18n.localize(`LHTRPG.StatusEffect.${statusId}`) : statusId;
+  const rating = Math.max(1, Math.floor(Number(value) || 0) || 1);
+  const cleanTag = (tag ?? "").trim();
+
+  if (statusInfo?.tagged) {
+    return cleanTag ? `[${label} (${cleanTag}): ${rating}]` : `[${label}: ${rating}]`;
+  }
+  if (statusInfo?.rated || statusInfo?.list) {
+    return `[${label}: ${rating}]`;
+  }
+  return `[${label}]`;
+}
+
+/**
  * Custom ActiveEffect configuration sheet for Log Horizon TRPG (AppV2).
  * Provides an attribute key suggestion dropdown with catalog destinations,
  * translated labels, type exclusivity chips, and derived-field warnings.
@@ -51,12 +76,33 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
   };
 
   /** @override */
+  static TABS = {
+    sheet: {
+      tabs: [
+        { id: "details", icon: "fa-solid fa-book" },
+        { id: "duration", icon: "fa-solid fa-clock" },
+        { id: "changes", icon: "fa-solid fa-gears" },
+        { id: "lhStatus", icon: "fa-solid fa-heart-crack", label: "LHTRPG.EffectConfig.StatusTab" }
+      ],
+      initial: "details",
+      labelPrefix: "EFFECT.TABS"
+    }
+  };
+
+  /** @override */
   static PARTS = {
-    ...foundry.applications.sheets.ActiveEffectConfig.PARTS,
+    header: foundry.applications.sheets.ActiveEffectConfig.PARTS.header,
+    tabs: foundry.applications.sheets.ActiveEffectConfig.PARTS.tabs,
+    details: foundry.applications.sheets.ActiveEffectConfig.PARTS.details,
+    duration: foundry.applications.sheets.ActiveEffectConfig.PARTS.duration,
     changes: {
       template: "systems/lhtrpg/templates/effects/effect-changes.hbs",
       scrollable: ["ol[data-changes]"]
-    }
+    },
+    lhStatus: {
+      template: "systems/lhtrpg/templates/effects/effect-status.hbs"
+    },
+    footer: foundry.applications.sheets.ActiveEffectConfig.PARTS.footer
   };
 
   /**
@@ -85,6 +131,36 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       const targetActorTypes = this.targetActorTypes;
       context.targetActorTypes = targetActorTypes;
       context.changeInfos = (context.source?.changes ?? []).map(c => getEffectKeyInfo(c?.key, targetActorTypes));
+    } else if (partId === "lhStatus") {
+      const statusData = context.source?.flags?.lhtrpg?.statusData ?? {};
+      const statusId = statusData.statusId ?? "";
+      const statusInfo = LH_STATUSES.find(s => s.id === statusId);
+
+      context.statusData = statusData;
+      context.isRated = !!(statusInfo?.rated || statusInfo?.list);
+      context.isTagged = !!statusInfo?.tagged;
+      context.statusGroups = LH_STATUS_GROUPS.map(group => ({
+        id: group,
+        label: `LHTRPG.StatusGroup.${group}`,
+        statuses: LH_STATUSES.filter(s => s.group === group).map(s => ({
+          id: s.id,
+          label: `LHTRPG.StatusEffect.${s.id}`,
+          selected: s.id === statusId,
+          rated: !!s.rated,
+          list: !!s.list,
+          tagged: !!s.tagged
+        }))
+      }));
+
+      if (statusInfo?.rated) {
+        context.hint = game.i18n.localize("LHTRPG.EffectConfig.HintRated");
+      } else if (statusInfo?.list) {
+        context.hint = game.i18n.localize("LHTRPG.EffectConfig.HintList");
+      } else {
+        context.hint = "";
+      }
+
+      context.preview = formatStatusPreview(statusId, statusData.value, statusData.tag);
     }
     return context;
   }
@@ -204,6 +280,161 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
         if (infoEl) infoEl.innerHTML = renderTargetInfoHtml(info);
       });
     }
+
+    // LH Status tab listeners
+    const statusTab = this.element.querySelector(".tab.lh-status");
+    if (statusTab) {
+      const selectStatus = statusTab.querySelector('select[name="flags.lhtrpg.statusData.statusId"]');
+      const groupRating = statusTab.querySelector(".lh-status-rating-group");
+      const inputRating = statusTab.querySelector('input[name="flags.lhtrpg.statusData.value"]');
+      const groupTag = statusTab.querySelector(".lh-status-tag-group");
+      const inputTag = statusTab.querySelector('input[name="flags.lhtrpg.statusData.tag"]');
+      const hintEl = statusTab.querySelector(".lh-status-hint");
+      const previewEl = statusTab.querySelector(".lh-status-preview");
+
+      const updatePreview = () => {
+        const statusId = selectStatus?.value ?? "";
+        if (previewEl) {
+          previewEl.textContent = formatStatusPreview(statusId, inputRating?.value, inputTag?.value);
+        }
+      };
+
+      const updateStatusUi = () => {
+        const statusId = selectStatus?.value ?? "";
+        const statusInfo = LH_STATUSES.find(s => s.id === statusId);
+        const isRated = !!(statusInfo?.rated || statusInfo?.list);
+        const isTagged = !!statusInfo?.tagged;
+
+        if (groupRating) {
+          groupRating.hidden = !isRated;
+          if (isRated && !inputRating.value) inputRating.value = "1";
+        }
+        if (groupTag) {
+          groupTag.hidden = !isTagged;
+        }
+        if (hintEl) {
+          if (statusInfo?.rated) {
+            hintEl.textContent = game.i18n.localize("LHTRPG.EffectConfig.HintRated");
+            hintEl.hidden = false;
+          } else if (statusInfo?.list) {
+            hintEl.textContent = game.i18n.localize("LHTRPG.EffectConfig.HintList");
+            hintEl.hidden = false;
+          } else {
+            hintEl.textContent = "";
+            hintEl.hidden = true;
+          }
+        }
+        updatePreview();
+      };
+
+      if (selectStatus) {
+        selectStatus.addEventListener("change", () => {
+          updateStatusUi();
+        });
+      }
+      if (inputRating) {
+        inputRating.addEventListener("input", () => {
+          updatePreview();
+        });
+      }
+      if (inputTag) {
+        inputTag.addEventListener("input", () => {
+          updatePreview();
+        });
+
+        const catalog = globalThis.CONFIG?.LHTRPG?.tags ?? TAG_CATALOG;
+        const applicableTags = catalog.filter(t => t.group === "LHTRPG.TagGroup.Element" || t.group === "LHTRPG.TagGroup.Attack");
+
+        const tagSuggest = new SuggestInput(inputTag, {
+          getOptions: query => {
+            const q = tagKey(query);
+            const scored = [];
+            for (const entry of applicableTags) {
+              const names = [entry.label, ...(entry.aliases ?? [])].map(tagKey);
+              let score = 3;
+              if (q) {
+                if (names.some(n => n.startsWith(q))) score = 0;
+                else if (names.some(n => n.split(" ").some(w => w.startsWith(q)))) score = 1;
+                else if (names.some(n => n.includes(q))) score = 2;
+                else continue;
+              } else {
+                score = 0;
+              }
+              scored.push({
+                value: entry.label,
+                label: entry.label,
+                group: game.i18n.localize(entry.group),
+                desc: tagDescription(entry.label),
+                score
+              });
+            }
+            scored.sort((a, b) => (a.score - b.score) || a.label.localeCompare(b.label));
+            const best = scored[0]?.score ?? 3;
+            const filtered = scored.filter(s => (best > 1) || (s.score < 2));
+            if (query && !findTag(query)) {
+              filtered.push({
+                value: canonicalTag(query),
+                label: canonicalTag(query),
+                custom: true
+              });
+            }
+            return filtered;
+          },
+          onPick: option => {
+            inputTag.value = option.value;
+            updatePreview();
+            inputTag.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+        });
+        this._suggestInputs.push(tagSuggest);
+      }
+
+      updateStatusUi();
+    }
+  }
+
+  /**
+   * @override
+   * Synchronous, like core's: the addChange/deleteChange actions read its result right away.
+   */
+  _processFormData(event, form, formData) {
+    const submitData = super._processFormData(event, form, formData);
+
+    const prevStatusId = this.document.getFlag("lhtrpg", "statusData")?.statusId ?? null;
+    const rawStatusData = foundry.utils.getProperty(submitData, "flags.lhtrpg.statusData") ?? {};
+    const newStatusId = String(rawStatusData.statusId ?? "").trim();
+    const lhFlags = foundry.utils.getProperty(submitData, "flags.lhtrpg");
+    if (lhFlags) delete lhFlags.statusData;
+
+    if (!newStatusId) {
+      if (prevStatusId) foundry.utils.setProperty(submitData, "flags.lhtrpg.-=statusData", null);
+      const statuses = new Set(submitData.statuses ?? this.document.statuses);
+      if (prevStatusId) statuses.delete(prevStatusId);
+      submitData.statuses = Array.from(statuses);
+    } else {
+      const statusInfo = LH_STATUSES.find(s => s.id === newStatusId);
+      const cleanData = { statusId: newStatusId };
+
+      // Flags are merged on update: keys that no longer apply must be deleted explicitly.
+      if (statusInfo?.rated || statusInfo?.list) {
+        cleanData.value = Math.max(1, Math.floor(Number(rawStatusData.value) || 0) || 1);
+      } else cleanData["-=value"] = null;
+      if (statusInfo?.tagged) {
+        const rawTag = String(rawStatusData.tag ?? "").trim();
+        cleanData.tag = rawTag ? canonicalTag(rawTag) : "";
+      } else cleanData["-=tag"] = null;
+
+      foundry.utils.setProperty(submitData, "flags.lhtrpg.statusData", cleanData);
+
+      const statuses = new Set(submitData.statuses ?? this.document.statuses);
+      if (prevStatusId && (prevStatusId !== newStatusId)) {
+        statuses.delete(prevStatusId);
+      }
+      statuses.add(newStatusId);
+      submitData.statuses = Array.from(statuses);
+    }
+
+    return submitData;
   }
 
   /** @override */

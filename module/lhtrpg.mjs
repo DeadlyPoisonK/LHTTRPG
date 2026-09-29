@@ -92,7 +92,7 @@ Hooks.once('init', async function () {
 
   foundry.applications.apps.DocumentSheetConfig.registerSheet(ActiveEffect, "lhtrpg", LHTrpgActiveEffectConfig, {
     makeDefault: true,
-    label: "LHTRPG.EffectConfig"
+    label: "LHTRPG.EffectConfig.Title"
   });
 
   // Loot, chests, merchants and item/gold transfers between players

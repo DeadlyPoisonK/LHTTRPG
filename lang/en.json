@@ -98,7 +98,17 @@
       },
       "Migrated": "Migrated {count} active effect(s)."
     },
-    "EffectConfig": "Active Effect Configuration",
+    "EffectConfig": {
+      "Title": "Active Effect Configuration",
+      "StatusTab": "LH Status",
+      "Status": "Status",
+      "StatusNone": "— None —",
+      "Rating": "Rating",
+      "Tag": "Tag",
+      "HintRated": "If the target already has this status, the highest Rating remains.",
+      "HintList": "Added as an additional entry.",
+      "Preview": "Preview"
+    },
     "EffectTarget": {
       "MaxHP": "Max. HP",
       "MaxFate": "Max. Fate",
