@@ -2082,44 +2082,52 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   /* Handle */
 }
 
-.lhtrpg.sheet.item .window-content {
+.lhtrpg.sheet.item .window-content,
+.lhtrpg.sheet.monster .window-content {
   background-color: #1a2922;
   color: #d6ffda;
   padding: 0;
   overflow-y: auto;
 }
 
-.lhtrpg.sheet.item .sheet-body > .tab {
+.lhtrpg.sheet.item .sheet-body > .tab,
+.lhtrpg.sheet.monster .sheet-body > .tab {
   display: none;
 }
 
-.lhtrpg.sheet.item .sheet-body > .tab.active {
+.lhtrpg.sheet.item .sheet-body > .tab.active,
+.lhtrpg.sheet.monster .sheet-body > .tab.active {
   display: block;
 }
 
-/* AppV2 root of the item templates (the old <form>): its sections keep their natural height and the
+/* AppV2 root of the item/monster templates (the old <form>): its sections keep their natural height and the
    window content scrolls, instead of flexbox squashing the header when the sheet doesn't fit. */
-.lhtrpg.sheet.item .lhtrpg-item-sheet {
+.lhtrpg.sheet.item .lhtrpg-item-sheet,
+.lhtrpg.sheet.monster .lhtrpg-monster-sheet {
   min-height: 100%;
 }
 
-.lhtrpg.sheet.item .lhtrpg-item-sheet > * {
+.lhtrpg.sheet.item .lhtrpg-item-sheet > *,
+.lhtrpg.sheet.monster .lhtrpg-monster-sheet > * {
   flex: 0 0 auto;
 }
 
-.lhtrpg.sheet.item .sheet-body .tab prose-mirror {
+.lhtrpg.sheet.item .sheet-body .tab prose-mirror,
+.lhtrpg.sheet.monster .sheet-body .tab prose-mirror {
   min-height: 140px;
   padding: 6px 16px;
 }
 
 /* AppV2 styles headings with its display font: keep the name as it was in the AppV1 sheet. */
-.lhtrpg.sheet.item .sheet-header h1.charname input {
+.lhtrpg.sheet.item .sheet-header h1.charname input,
+.lhtrpg.sheet.monster .sheet-header h1.charname input {
   font-family: Signika, "Palatino Linotype", sans-serif;
   font-size: 26px;
   font-weight: 400;
 }
 
-.lhtrpg.sheet.item .sheet-header .profile-img {
+.lhtrpg.sheet.item .sheet-header .profile-img,
+.lhtrpg.sheet.monster .sheet-header .profile-img {
   cursor: pointer;
 }
 
@@ -2971,7 +2979,8 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   white-space: nowrap;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status {
+div.app.lhtrpg .lh-status-panel .lh-status,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -2983,18 +2992,21 @@ div.app.lhtrpg .lh-status-panel .lh-status {
   transition: opacity 0.1s, background-color 0.1s;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status:hover {
+div.app.lhtrpg .lh-status-panel .lh-status:hover,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status:hover {
   opacity: 0.85;
   background: rgba(74, 208, 179, 0.12);
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status.active {
+div.app.lhtrpg .lh-status-panel .lh-status.active,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status.active {
   opacity: 1;
   background: rgba(212, 160, 23, 0.25);
   box-shadow: inset 2px 0 0 #d4a017;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status img {
+div.app.lhtrpg .lh-status-panel .lh-status img,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status img {
   flex: 0 0 18px;
   width: 18px;
   height: 18px;
@@ -3003,7 +3015,8 @@ div.app.lhtrpg .lh-status-panel .lh-status img {
   object-fit: cover;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-label {
+div.app.lhtrpg .lh-status-panel .lh-status-label,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-label {
   flex: 1;
   min-width: 0;
   overflow: hidden;
@@ -3012,11 +3025,13 @@ div.app.lhtrpg .lh-status-panel .lh-status-label {
 }
 
 /* The whole row is the toggle: hide the checkbox itself */
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-check {
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-check,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status input.lh-status-check {
   display: none;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating {
+div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status input.lh-status-rating {
   flex: 0 0 30px;
   width: 30px;
   height: 17px;
@@ -3030,12 +3045,15 @@ div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating {
 }
 
 /* List statuses (Pursuit): add button next to the input, entries listed below */
-div.app.lhtrpg .lh-status-panel .lh-status--list {
+div.app.lhtrpg .lh-status-panel .lh-status--list,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status--list {
   cursor: default;
 }
 
 div.app.lhtrpg .lh-status-panel .lh-status-list-add,
-div.app.lhtrpg .lh-status-panel .lh-status-entry-remove {
+div.app.lhtrpg .lh-status-panel .lh-status-entry-remove,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-list-add,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-entry-remove {
   flex: 0 0 14px;
   font-size: 10px;
   text-align: center;
@@ -3044,11 +3062,14 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry-remove {
 }
 
 div.app.lhtrpg .lh-status-panel .lh-status-list-add:hover,
-div.app.lhtrpg .lh-status-panel .lh-status-entry-remove:hover {
+div.app.lhtrpg .lh-status-panel .lh-status-entry-remove:hover,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-list-add:hover,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-entry-remove:hover {
   color: #d4a017;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entries {
+div.app.lhtrpg .lh-status-panel .lh-status-entries,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-entries {
   display: flex;
   flex-wrap: wrap;
   gap: 2px 6px;
@@ -3058,7 +3079,8 @@ div.app.lhtrpg .lh-status-panel .lh-status-entries {
   border-left: 1px solid rgba(212, 160, 23, 0.6);
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entry {
+div.app.lhtrpg .lh-status-panel .lh-status-entry,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-entry {
   display: flex;
   align-items: center;
   gap: 1px;
@@ -3067,7 +3089,8 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry {
   padding: 0;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating {
+div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating,
+.lhtrpg.sheet.monster .lh-status-panel .lh-status-entry input.lh-status-rating {
   flex: 0 0 30px;
   width: 30px;
   height: 17px;
@@ -3081,7 +3104,8 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating {
 }
 
 /* Tag of a Weakness / Cancel entry ("Flame"); empty = any damage */
-div.app.lhtrpg .lh-status-panel input.lh-status-tag {
+div.app.lhtrpg .lh-status-panel input.lh-status-tag,
+.lhtrpg.sheet.monster .lh-status-panel input.lh-status-tag {
   flex: 0 1 52px;
   width: 52px;
   min-width: 0;

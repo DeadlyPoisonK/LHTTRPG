@@ -133,10 +133,13 @@ export function getStatusPanel(actor) {
 /**
  * Listeners of the status panel's list statuses (Pursuit, Weakness, Cancel): add the Rating (and
  * Tag) typed next to the status as a new entry, edit an entry, or remove it.
- * @param {jQuery} html
+ * @param {jQuery|HTMLElement} html
  * @param {Actor} actor
  */
 export function activateStatusPanelListeners(html, actor) {
+  const root = html instanceof HTMLElement ? html : (html?.[0] ?? html);
+  if (!root?.querySelectorAll) return;
+
   const update = (statusId, fn) => {
     const status = STATUS_BY_ID.get(statusId);
     if (!status?.list) return;
@@ -145,42 +148,54 @@ export function activateStatusPanelListeners(html, actor) {
     actor.update({ [`system.${status.path}`]: values });
   };
   const add = row => {
+    if (!row) return;
     const input = row.querySelector(".lh-status-list-input");
+    if (!input) return;
     const rating = Math.floor(Number(input.value) || 0);
     if (rating <= 0) return;
     const tag = row.querySelector(".lh-status-list-tag")?.value.trim() ?? "";
     update(input.dataset.statusId, (values, status) => values.push(status.tagged ? { value: rating, tag } : rating));
   };
 
-  html.find(".lh-status-list-add").click(ev => {
-    ev.preventDefault();
-    add(ev.currentTarget.closest("[data-add-row]"));
-  });
-  html.find(".lh-status-list-input, .lh-status-list-tag").on("keydown", ev => {
-    if (ev.key !== "Enter") return;
-    ev.preventDefault();
-    add(ev.currentTarget.closest("[data-add-row]"));
-  });
-  html.find(".lh-status-entry-input").on("change", ev => {
-    ev.stopPropagation();
-    const { statusId, index } = ev.currentTarget.dataset;
-    const rating = Math.floor(Number(ev.currentTarget.value) || 0);
-    update(statusId, (values, status) => {
-      if (rating <= 0) return values.splice(index, 1);
-      values.splice(index, 1, status.tagged ? { ...values[index], value: rating } : rating);
+  for (const el of root.querySelectorAll(".lh-status-list-add")) {
+    el.addEventListener("click", ev => {
+      ev.preventDefault();
+      add(ev.currentTarget.closest("[data-add-row]"));
     });
-  });
-  html.find(".lh-status-entry-tag").on("change", ev => {
-    ev.stopPropagation();
-    const { statusId, index } = ev.currentTarget.dataset;
-    const tag = ev.currentTarget.value.trim();
-    update(statusId, values => { if (values[index]) values[index] = { ...values[index], tag }; });
-  });
-  html.find(".lh-status-entry-remove").click(ev => {
-    ev.preventDefault();
-    const { statusId, index } = ev.currentTarget.dataset;
-    update(statusId, values => values.splice(index, 1));
-  });
+  }
+  for (const el of root.querySelectorAll(".lh-status-list-input, .lh-status-list-tag")) {
+    el.addEventListener("keydown", ev => {
+      if (ev.key !== "Enter") return;
+      ev.preventDefault();
+      add(ev.currentTarget.closest("[data-add-row]"));
+    });
+  }
+  for (const el of root.querySelectorAll(".lh-status-entry-input")) {
+    el.addEventListener("change", ev => {
+      ev.stopPropagation();
+      const { statusId, index } = ev.currentTarget.dataset;
+      const rating = Math.floor(Number(ev.currentTarget.value) || 0);
+      update(statusId, (values, status) => {
+        if (rating <= 0) return values.splice(index, 1);
+        values.splice(index, 1, status.tagged ? { ...values[index], value: rating } : rating);
+      });
+    });
+  }
+  for (const el of root.querySelectorAll(".lh-status-entry-tag")) {
+    el.addEventListener("change", ev => {
+      ev.stopPropagation();
+      const { statusId, index } = ev.currentTarget.dataset;
+      const tag = ev.currentTarget.value.trim();
+      update(statusId, values => { if (values[index]) values[index] = { ...values[index], tag }; });
+    });
+  }
+  for (const el of root.querySelectorAll(".lh-status-entry-remove")) {
+    el.addEventListener("click", ev => {
+      ev.preventDefault();
+      const { statusId, index } = ev.currentTarget.dataset;
+      update(statusId, values => values.splice(index, 1));
+    });
+  }
 }
 
 /* -------------------------------------------- */

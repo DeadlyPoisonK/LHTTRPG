@@ -1,9 +1,9 @@
-<form class="{{cssClass}}" autocomplete="off">
+<div class="lhtrpg-monster-sheet flexcol">
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    <img class="profile-img" src="{{actor.img}}" data-action="editImage" data-edit="img" title="{{actor.name}}" />
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" /></h1>
-      <a class="monster-send-to-chat" title="{{localize 'LHTRPG.Monster.SendToChat'}}">
+      <a class="monster-send-to-chat" data-action="monster-send-to-chat" title="{{localize 'LHTRPG.Monster.SendToChat'}}">
         <i class="fas fa-comment"></i> {{localize 'LHTRPG.Monster.SendToChat'}}
       </a>
       <div class="grid grid-3col">
@@ -20,11 +20,11 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize 'LHTRPG.Stats.Label'}}</a>
-    <a class="item" data-tab="status">{{localize 'LHTRPG.Status.Label'}}</a>
-    <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
-    <a class="item" data-tab="skills">{{localize 'LHTRPG.Monster.Skills'}}</a>
-    <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="stats">{{localize 'LHTRPG.Stats.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="status">{{localize 'LHTRPG.Status.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="skills">{{localize 'LHTRPG.Monster.Skills'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -113,7 +113,7 @@
         </div>
 
         <div class="stat-div monster-check">
-          <label class="monster-check-roll lh-roll-button" data-check="evasion" data-name="Evasion"
+          <label class="monster-check-roll lh-roll-button" data-action="monster-check-roll" data-check="evasion" data-name="Evasion"
             title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Evasion'}}</label>
           <div class="monster-check-fields">
             <select class="monster-check-dice" name="system.checks.evasion.dice" data-dtype="Number">
@@ -126,7 +126,7 @@
         </div>
 
         <div class="stat-div monster-check">
-          <label class="monster-check-roll lh-roll-button" data-check="resistance" data-name="Resistance"
+          <label class="monster-check-roll lh-roll-button" data-action="monster-check-roll" data-check="resistance" data-name="Resistance"
             title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Resistance'}}</label>
           <div class="monster-check-fields">
             <select class="monster-check-dice" name="system.checks.resistance.dice" data-dtype="Number">
@@ -179,8 +179,9 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the rollData prop. --}}
-      {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      <prose-mirror name="system.description" value="{{system.description}}" toggled {{#unless editable}}disabled{{/unless}}>
+        {{{enrichments.description}}}
+      </prose-mirror>
     </div>
 
     <div class="tab" data-group="primary" data-tab="skills">
@@ -193,4 +194,4 @@
       {{> "systems/lhtrpg/templates/actor/parts/monster-effects.html"}}
     </div>
   </section>
-</form>
+</div>
