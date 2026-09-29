@@ -175,7 +175,11 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
 // Re-render any open sheet linked to a skill when that skill's name or icon changes.
 Hooks.on("updateItem", (item, changes) => {
   if (item.type !== "skill" || !(("name" in changes) || ("img" in changes))) return;
-  for (const app of Object.values(ui.windows)) {
+  const apps = new Set([
+    ...Object.values(ui.windows ?? {}),
+    ...(foundry.applications?.instances?.values() ?? [])
+  ]);
+  for (const app of apps) {
     if (app.item?.system?.linkedSkillUuid === item.uuid) app.render(false);
   }
 });

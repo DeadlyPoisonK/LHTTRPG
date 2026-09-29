@@ -1,4 +1,4 @@
-<form class="{{cssClass}}" autocomplete="off">
+<div class="lhtrpg-item-sheet flexcol">
   {{> "systems/lhtrpg/templates/item/parts/item-header.html"}}
 
   <section class="sheet-stats">
@@ -40,7 +40,7 @@
 
     {{#if canUse}}
     <div class="stat-div item-use-row">
-      <button type="button" class="item-use"><i class="fas fa-flask"></i> {{localize 'LHTRPG.Item.Use.Button'}}</button>
+      <button type="button" class="item-use" data-action="useItem"><i class="fas fa-flask"></i> {{localize 'LHTRPG.Item.Use.Button'}}</button>
     </div>
     {{/if}}
 
@@ -48,8 +48,8 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
-    <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -57,7 +57,9 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      <prose-mirror name="system.description" value="{{system.description}}" toggled {{#unless editable}}disabled{{/unless}}>
+        {{{enrichments.description}}}
+      </prose-mirror>
     </div>
 
     {{!-- Effects Tab: copied to the target when the item is used --}}
@@ -65,4 +67,4 @@
       {{> "systems/lhtrpg/templates/item/parts/item-effects.html"}}
     </div>
   </section>
-</form>
+</div>

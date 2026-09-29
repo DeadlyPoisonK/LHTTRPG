@@ -29,8 +29,8 @@ export function tagChips(tags, source) {
  * @param {Application} [sheet]         The sheet, to keep the focus on the field across re-renders
  */
 export function activateTagInput(html, owner, sheet) {
-  const root = html instanceof HTMLElement ? html : html[0];
-  for (const box of root?.querySelectorAll(".lh-tag-input") ?? []) {
+  const root = html instanceof HTMLElement ? html : (html?.[0] ?? html);
+  for (const box of root?.querySelectorAll?.(".lh-tag-input") ?? []) {
     new TagInput(box, owner, sheet);
   }
 }
@@ -48,6 +48,7 @@ class TagInput {
     for (const a of box.querySelectorAll(".tag-remove")) {
       a.addEventListener("click", ev => {
         ev.preventDefault();
+        ev.stopPropagation();
         this.remove(Number(a.dataset.index));
       });
     }

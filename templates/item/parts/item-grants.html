@@ -10,8 +10,8 @@
 			{{#each skills}}
 			<span class="grant-skill{{#if missing}} missing{{/if}}" data-uuid="{{uuid}}">
 				<img src="{{img}}" alt="">
-				<a class="grant-open">{{name}}</a>
-				{{#if @root.editable}}<a class="grant-remove" data-tooltip="LHTRPG.ButtonLabel.Delete"><i class="fa-solid fa-xmark"></i></a>{{/if}}
+				<a class="grant-open" data-action="openGrant">{{name}}</a>
+				{{#if @root.editable}}<a class="grant-remove" data-action="removeGrant" data-tooltip="LHTRPG.ButtonLabel.Delete"><i class="fa-solid fa-xmark"></i></a>{{/if}}
 			</span>
 			{{/each}}
 		</div>

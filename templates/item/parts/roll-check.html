@@ -1,6 +1,6 @@
 {{!-- Check of a skill or usable item: character check + extra dice, or fixed dice (monsters, items). --}}
     <div class="stat-div skill-roll">
-      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
+      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-action="rollSkill" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
       <div class="skill-roll-fields">
         {{#if isMonsterSkill}}
           <select name="system.check.dice" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>

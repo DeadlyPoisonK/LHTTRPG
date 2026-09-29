@@ -1,6 +1,6 @@
 {{!-- Damage / Recovery of a skill or usable item. --}}
     <div class="stat-div skill-roll">
-      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-roll="damage" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Damage'}}</label>
+      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-action="rollSkill" data-roll="damage" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Damage'}}</label>
       <div class="skill-roll-fields">
         <select name="system.damage.dice" data-dtype="Number">
           {{selectOptions skillDamageDiceOptions selected=system.damage.dice}}

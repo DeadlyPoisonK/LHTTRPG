@@ -1,28 +1,31 @@
 /**
- * Manage Active Effect instances through the Actor Sheet via effect control buttons.
- * @param {MouseEvent} event      The left-click event on the effect control
- * @param {Actor|Item} owner      The owning document which manages this effect
+ * Manage Active Effect instances through the Actor or Item Sheet via effect control buttons.
+ * Compatible with both AppV1 (event, owner) and AppV2 (event, owner, target).
+ * @param {MouseEvent} event      The click event on the effect control
+ * @param {Actor|Item} owner      The owning document (Actor or Item)
+ * @param {HTMLElement} [target]  The target element (in V2 action handlers)
  */
- export function onManageActiveEffect(event, owner) {
-  event.preventDefault();
-  const a = event.currentTarget;
-  const li = a.closest("li");
-  const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
-  switch ( a.dataset.action ) {
+export function onManageActiveEffect(event, owner, target) {
+  event?.preventDefault?.();
+  const a = target ?? (event?.currentTarget instanceof HTMLElement ? event.currentTarget : null) ?? event?.target?.closest?.(".effect-control, [data-action]");
+  const li = a?.closest("li");
+  const effect = li?.dataset?.effectId ? owner?.effects?.get(li.dataset.effectId) : null;
+  const action = a?.dataset?.action;
+  switch ( action ) {
     case "create":
-      return owner.createEmbeddedDocuments("ActiveEffect", [{
+      return owner?.createEmbeddedDocuments("ActiveEffect", [{
         name: game.i18n.localize("LHTRPG.Effect.New"),
         img: "icons/svg/aura.svg",
         origin: owner.uuid,
-        "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
-        disabled: li.dataset.effectType === "inactive"
+        "duration.rounds": li?.dataset?.effectType === "temporary" ? 1 : undefined,
+        disabled: li?.dataset?.effectType === "inactive"
       }]);
     case "edit":
-      return effect.sheet.render(true);
+      return effect?.sheet?.render(true);
     case "delete":
-      return effect.delete();
+      return effect?.delete();
     case "toggle":
-      return effect.update({disabled: !effect.disabled});
+      return effect?.update({disabled: !effect.disabled});
   }
 }
 

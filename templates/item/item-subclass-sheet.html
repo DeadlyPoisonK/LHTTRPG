@@ -1,4 +1,4 @@
-<form class="{{cssClass}}" autocomplete="off">
+<div class="lhtrpg-item-sheet flexcol">
   {{> "systems/lhtrpg/templates/item/parts/item-header.html"}}
 
   <section class="sheet-stats option-stats">
@@ -13,9 +13,9 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
-    <a class="item" data-tab="skills">{{localize 'LHTRPG.CharacterOptions.Grants.Tab'}}</a>
-    <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="skills">{{localize 'LHTRPG.CharacterOptions.Grants.Tab'}}</a>
+    <a class="item" data-action="tab" data-group="primary" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -23,7 +23,9 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      <prose-mirror name="system.description" value="{{system.description}}" toggled {{#unless editable}}disabled{{/unless}}>
+        {{{enrichments.description}}}
+      </prose-mirror>
     </div>
 
     {{!-- Skills this Subclass allows the character to learn --}}
@@ -36,4 +38,4 @@
       {{> "systems/lhtrpg/templates/item/parts/item-effects.html"}}
     </div>
   </section>
-</form>
+</div>

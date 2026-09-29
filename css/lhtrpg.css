@@ -2082,6 +2082,47 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   /* Handle */
 }
 
+.lhtrpg.sheet.item .window-content {
+  background-color: #1a2922;
+  color: #d6ffda;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.lhtrpg.sheet.item .sheet-body > .tab {
+  display: none;
+}
+
+.lhtrpg.sheet.item .sheet-body > .tab.active {
+  display: block;
+}
+
+/* AppV2 root of the item templates (the old <form>): its sections keep their natural height and the
+   window content scrolls, instead of flexbox squashing the header when the sheet doesn't fit. */
+.lhtrpg.sheet.item .lhtrpg-item-sheet {
+  min-height: 100%;
+}
+
+.lhtrpg.sheet.item .lhtrpg-item-sheet > * {
+  flex: 0 0 auto;
+}
+
+.lhtrpg.sheet.item .sheet-body .tab prose-mirror {
+  min-height: 140px;
+  padding: 6px 16px;
+}
+
+/* AppV2 styles headings with its display font: keep the name as it was in the AppV1 sheet. */
+.lhtrpg.sheet.item .sheet-header h1.charname input {
+  font-family: Signika, "Palatino Linotype", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.lhtrpg.sheet.item .sheet-header .profile-img {
+  cursor: pointer;
+}
+
 .lhtrpg.sheet.item ::-webkit-scrollbar-track,
 .lhtrpg.sheet.monster ::-webkit-scrollbar-track {
   background: transparent;
@@ -2119,6 +2160,7 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   text-align: center;
   padding: 5px 0 5px 0;
   color: #d6ffda;
+  cursor: pointer;
 }
 
 .lhtrpg.sheet.item nav a.item.active,
