@@ -33,73 +33,112 @@
     <div class="tab" data-group="primary" data-tab="stats">
       <section class="sheet-stats">
 
-
         <div class="stat-div rank">
           <label>{{localize 'LHTRPG.Monster.Rank'}}</label>
           <div>
-            <input class="monsterRank-input" type="text" name="system.rank" value="{{system.rank}}" placeholder="0"
-              data-dtype="Number" maxlength="2">
+            <input class="monsterRank-input{{#if modified.rank}} has-effect{{/if}}" type="text" name="system.rank"
+              value="{{source.rank}}" placeholder="0" data-dtype="Number" maxlength="2"
+              {{#if modified.rank}}data-tooltip="{{modified.rank.tooltip}}"{{/if}}>
+            {{#if modified.rank}}
+              <span class="stat-effective" data-tooltip="{{modified.rank.tooltip}}">{{modified.rank.display}}</span>
+            {{/if}}
           </div>
         </div>
 
-<div class="stat-div">
+        <div class="stat-div">
           <label class="small-label">{{localize 'LHTRPG.Str'}}</label>
           <div>
-            <input class="monsterSTR-input small-input" type="text" name="system.attributes.str.mod"
-              value="{{system.attributes.str.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterSTR-input small-input{{#if modified.str}} has-effect{{/if}}" type="text"
+              name="system.attributes.str.mod" value="{{source.attributes.str.mod}}" placeholder="0"
+              data-dtype="Number" maxlength="3"
+              {{#if modified.str}}data-tooltip="{{modified.str.tooltip}}"{{/if}}>
+            {{#if modified.str}}
+              <span class="stat-effective" data-tooltip="{{modified.str.tooltip}}">{{modified.str.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label class="small-label">{{localize 'LHTRPG.Dex'}}</label>
           <div>
-            <input class="monsterDEX-input small-input" type="text" name="system.attributes.dex.mod"
-              value="{{system.attributes.dex.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterDEX-input small-input{{#if modified.dex}} has-effect{{/if}}" type="text"
+              name="system.attributes.dex.mod" value="{{source.attributes.dex.mod}}" placeholder="0"
+              data-dtype="Number" maxlength="3"
+              {{#if modified.dex}}data-tooltip="{{modified.dex.tooltip}}"{{/if}}>
+            {{#if modified.dex}}
+              <span class="stat-effective" data-tooltip="{{modified.dex.tooltip}}">{{modified.dex.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label class="small-label">{{localize 'LHTRPG.Pow'}}</label>
           <div>
-            <input class="monsterPOW-input small-input" type="text" name="system.attributes.pow.mod"
-              value="{{system.attributes.pow.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterPOW-input small-input{{#if modified.pow}} has-effect{{/if}}" type="text"
+              name="system.attributes.pow.mod" value="{{source.attributes.pow.mod}}" placeholder="0"
+              data-dtype="Number" maxlength="3"
+              {{#if modified.pow}}data-tooltip="{{modified.pow.tooltip}}"{{/if}}>
+            {{#if modified.pow}}
+              <span class="stat-effective" data-tooltip="{{modified.pow.tooltip}}">{{modified.pow.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label class="small-label">{{localize 'LHTRPG.Int'}}</label>
           <div>
-            <input class="monsterINT-input small-input" type="text" name="system.attributes.int.mod"
-              value="{{system.attributes.int.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterINT-input small-input{{#if modified.int}} has-effect{{/if}}" type="text"
+              name="system.attributes.int.mod" value="{{source.attributes.int.mod}}" placeholder="0"
+              data-dtype="Number" maxlength="3"
+              {{#if modified.int}}data-tooltip="{{modified.int.tooltip}}"{{/if}}>
+            {{#if modified.int}}
+              <span class="stat-effective" data-tooltip="{{modified.int.tooltip}}">{{modified.int.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Label.HP'}}</label>
           <div>
-            <input class="monsterHP-input" type="text" name="system.health.value" value="{{system.health.value}}"
-              placeholder="0" data-dtype="Number" maxlength="4">
+            <input class="monsterHP-input{{#if modified.hpValue}} has-effect{{/if}}" type="text"
+              name="system.health.value" value="{{source.health.value}}" placeholder="0" data-dtype="Number"
+              maxlength="4" {{#if modified.hpValue}}data-tooltip="{{modified.hpValue.tooltip}}"{{/if}}>
+            {{#if modified.hpValue}}
+              <span class="stat-effective" data-tooltip="{{modified.hpValue.tooltip}}">{{modified.hpValue.display}}</span>
+            {{/if}}
             <span>/</span>
-            <input class="monsterHP-input max" type="text" name="system.health.max" value="{{system.health.max}}"
-              placeholder="0" data-dtype="Number" maxlength="4">
+            <input class="monsterHP-input max{{#if modified.hpMax}} has-effect{{/if}}" type="text"
+              name="system.health.max" value="{{source.health.max}}" placeholder="0" data-dtype="Number"
+              maxlength="4" {{#if modified.hpMax}}data-tooltip="{{modified.hpMax.tooltip}}"{{/if}}>
+            {{#if modified.hpMax}}
+              <span class="stat-effective" data-tooltip="{{modified.hpMax.tooltip}}">{{modified.hpMax.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Label.Fate'}}</label>
           <div>
-            <input class="monsterFate-input" type="text" name="system.fate.value" value="{{system.fate.value}}"
-              placeholder="0" data-dtype="Number" maxlength="4">
+            <input class="monsterFate-input{{#if modified.fateValue}} has-effect{{/if}}" type="text"
+              name="system.fate.value" value="{{source.fate.value}}" placeholder="0" data-dtype="Number"
+              maxlength="4" {{#if modified.fateValue}}data-tooltip="{{modified.fateValue.tooltip}}"{{/if}}>
+            {{#if modified.fateValue}}
+              <span class="stat-effective" data-tooltip="{{modified.fateValue.tooltip}}">{{modified.fateValue.display}}</span>
+            {{/if}}
             <span>/</span>
-            <input class="monsterFate-input max" type="text" name="system.fate.max" value="{{system.fate.max}}"
-              placeholder="0" data-dtype="Number" maxlength="4">
+            <input class="monsterFate-input max{{#if modified.fateMax}} has-effect{{/if}}" type="text"
+              name="system.fate.max" value="{{source.fate.max}}" placeholder="0" data-dtype="Number"
+              maxlength="4" {{#if modified.fateMax}}data-tooltip="{{modified.fateMax.tooltip}}"{{/if}}>
+            {{#if modified.fateMax}}
+              <span class="stat-effective" data-tooltip="{{modified.fateMax.tooltip}}">{{modified.fateMax.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Identification'}}</label>
           <div>
-            <input class="monsterIdDif-input" type="text" name="system.idendification" value="{{system.idendification}}"
+            <input class="monsterIdDif-input" type="text" name="system.idendification" value="{{source.idendification}}"
               placeholder="-" data-dtype="text">
           </div>
         </div>
@@ -107,7 +146,7 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.HateMultiplier'}}</label>
           <div>
-            <input class="monsterHateMulti-input" type="text" name="system.hateMultiplier" value="{{system.hateMultiplier}}"
+            <input class="monsterHateMulti-input" type="text" name="system.hateMultiplier" value="{{source.hateMultiplier}}"
               placeholder="-" data-dtype="text">
           </div>
         </div>
@@ -116,12 +155,17 @@
           <label class="monster-check-roll lh-roll-button" data-action="monster-check-roll" data-check="evasion" data-name="Evasion"
             title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Evasion'}}</label>
           <div class="monster-check-fields">
-            <select class="monster-check-dice" name="system.checks.evasion.dice" data-dtype="Number">
-              {{selectOptions checkDiceOptions selected=system.checks.evasion.dice}}
+            <select class="monster-check-dice{{#if modified.evasion.dice}} has-effect{{/if}}" name="system.checks.evasion.dice" data-dtype="Number"
+              {{#if modified.evasion.dice}}data-tooltip="{{modified.evasion.tooltip}}"{{/if}}>
+              {{selectOptions checkDiceOptions selected=source.checks.evasion.dice}}
             </select>
             <span>+</span>
-            <input class="monster-check-mod" type="number" step="1" name="system.checks.evasion.mod"
-              value="{{system.checks.evasion.mod}}" placeholder="0" data-dtype="Number">
+            <input class="monster-check-mod{{#if modified.evasion.mod}} has-effect{{/if}}" type="number" step="1" name="system.checks.evasion.mod"
+              value="{{source.checks.evasion.mod}}" placeholder="0" data-dtype="Number"
+              {{#if modified.evasion.mod}}data-tooltip="{{modified.evasion.tooltip}}"{{/if}}>
+            {{#if modified.evasion}}
+              <span class="stat-effective" data-tooltip="{{modified.evasion.tooltip}}">{{modified.evasion.display}}</span>
+            {{/if}}
           </div>
         </div>
 
@@ -129,44 +173,65 @@
           <label class="monster-check-roll lh-roll-button" data-action="monster-check-roll" data-check="resistance" data-name="Resistance"
             title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Check.Resistance'}}</label>
           <div class="monster-check-fields">
-            <select class="monster-check-dice" name="system.checks.resistance.dice" data-dtype="Number">
-              {{selectOptions checkDiceOptions selected=system.checks.resistance.dice}}
+            <select class="monster-check-dice{{#if modified.resistance.dice}} has-effect{{/if}}" name="system.checks.resistance.dice" data-dtype="Number"
+              {{#if modified.resistance.dice}}data-tooltip="{{modified.resistance.tooltip}}"{{/if}}>
+              {{selectOptions checkDiceOptions selected=source.checks.resistance.dice}}
             </select>
             <span>+</span>
-            <input class="monster-check-mod" type="number" step="1" name="system.checks.resistance.mod"
-              value="{{system.checks.resistance.mod}}" placeholder="0" data-dtype="Number">
+            <input class="monster-check-mod{{#if modified.resistance.mod}} has-effect{{/if}}" type="number" step="1" name="system.checks.resistance.mod"
+              value="{{source.checks.resistance.mod}}" placeholder="0" data-dtype="Number"
+              {{#if modified.resistance.mod}}data-tooltip="{{modified.resistance.tooltip}}"{{/if}}>
+            {{#if modified.resistance}}
+              <span class="stat-effective" data-tooltip="{{modified.resistance.tooltip}}">{{modified.resistance.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.PDef'}}</label>
           <div>
-            <input class="monsterPDef-input" type="text" name="system.battle-status.defense.phys"
-              value="{{system.battle-status.defense.phys}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterPDef-input{{#if modified.pdef}} has-effect{{/if}}" type="text" name="system.battle-status.defense.phys"
+              value="{{source.battle-status.defense.phys}}" placeholder="-" data-dtype="Number" maxlength="3"
+              {{#if modified.pdef}}data-tooltip="{{modified.pdef.tooltip}}"{{/if}}>
+            {{#if modified.pdef}}
+              <span class="stat-effective" data-tooltip="{{modified.pdef.tooltip}}">{{modified.pdef.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.MDef'}}</label>
           <div>
-            <input class="monsterMDef-input" type="text" name="system.battle-status.defense.magic"
-              value="{{system.battle-status.defense.magic}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterMDef-input{{#if modified.mdef}} has-effect{{/if}}" type="text" name="system.battle-status.defense.magic"
+              value="{{source.battle-status.defense.magic}}" placeholder="-" data-dtype="Number" maxlength="3"
+              {{#if modified.mdef}}data-tooltip="{{modified.mdef.tooltip}}"{{/if}}>
+            {{#if modified.mdef}}
+              <span class="stat-effective" data-tooltip="{{modified.mdef.tooltip}}">{{modified.mdef.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Speed'}}</label>
           <div>
-            <input class="monsterSpeed-input" type="text" name="system.battle-status.speed"
-              value="{{system.battle-status.speed}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterSpeed-input{{#if modified.speed}} has-effect{{/if}}" type="text" name="system.battle-status.speed"
+              value="{{source.battle-status.speed}}" placeholder="-" data-dtype="Number" maxlength="3"
+              {{#if modified.speed}}data-tooltip="{{modified.speed.tooltip}}"{{/if}}>
+            {{#if modified.speed}}
+              <span class="stat-effective" data-tooltip="{{modified.speed.tooltip}}">{{modified.speed.display}}</span>
+            {{/if}}
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Initiative'}}</label>
           <div>
-            <input class="monsterInit-input" type="text" name="system.battle-status.initiative"
-              value="{{system.battle-status.initiative}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterInit-input{{#if modified.initiative}} has-effect{{/if}}" type="text" name="system.battle-status.initiative"
+              value="{{source.battle-status.initiative}}" placeholder="-" data-dtype="Number" maxlength="3"
+              {{#if modified.initiative}}data-tooltip="{{modified.initiative.tooltip}}"{{/if}}>
+            {{#if modified.initiative}}
+              <span class="stat-effective" data-tooltip="{{modified.initiative.tooltip}}">{{modified.initiative.display}}</span>
+            {{/if}}
           </div>
         </div>
 
@@ -179,7 +244,7 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      <prose-mirror name="system.description" value="{{system.description}}" toggled {{#unless editable}}disabled{{/unless}}>
+      <prose-mirror name="system.description" value="{{source.description}}" toggled {{#unless editable}}disabled{{/unless}}>
         {{{enrichments.description}}}
       </prose-mirror>
     </div>

@@ -89,6 +89,7 @@
       "Source": "ソース",
       "Duration": "持続時間",
       "New": "新しい効果",
+      "ModifiedTooltip": "基本値 {base}、効果適用時 {effective}",
       "Category": {
         "temporary": "一時的効果",
         "passive": "パッシブ効果",

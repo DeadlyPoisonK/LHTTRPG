@@ -1,7 +1,7 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 import { activateTagInput } from "../helpers/tags.mjs";
 import { getStatusPanel, activateStatusPanelListeners } from "../helpers/statuses.mjs";
-import { MONSTER_CHECK_MAX_DICE } from "../helpers/monster-checks.mjs";
+import { MONSTER_CHECK_MAX_DICE, parseMonsterCheck } from "../helpers/monster-checks.mjs";
 import { diceFormula, diceOptions } from "../helpers/dice.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -89,6 +89,106 @@ export class LHTrpgActorMonsterSheet extends HandlebarsApplicationMixin(foundry.
 
     // Evasion / Resistance dice options: 0D6 to 5D6
     context.checkDiceOptions = diceOptions(MONSTER_CHECK_MAX_DICE);
+
+    /* ------------------------------------------------------------------------- */
+    /*  V2 Sheet Pattern: Base vs. Effective Data                                */
+    /* ------------------------------------------------------------------------- */
+    // In AppV2 with submitOnChange: true, the entire form is serialized and submitted
+    // on every field change. Editable inputs must display the un-modified base value
+    // (from _source.system) rather than the prepared value (actor.system), otherwise
+    // active effect bonuses get permanently baked into the underlying document source
+    // data.
+    //
+    // Pattern to replicate in Step 3 (Character Sheet AppV2 migration):
+    // 1. Inputs bind to `source = this.actor._source.system` (with fallback defaults
+    //    and any legacy string normalization such as parseMonsterCheck).
+    // 2. Active bonuses (effective !== base) are tracked in `context.modified` and
+    //    displayed discretely (e.g. `has-effect` class, `→ <effective>` indicator,
+    //    and `data-tooltip="Base X, con efectos Y"`).
+    //    Pay special attention to `checks.*.dice` and `attributes.*.value` on characters!
+    // 3. Rolls and derived displays continue using effective values (`actor.system`).
+    /* ------------------------------------------------------------------------- */
+
+    const baseSource = actor._source.system ?? {};
+    const source = foundry.utils.deepClone(baseSource);
+
+    // Evasion / Resistance checks may exist in _source as legacy free text ("1+2D").
+    // Normalize them via parseMonsterCheck so inputs receive numeric { dice, mod }.
+    source.checks = {
+      evasion: parseMonsterCheck(baseSource.checks?.evasion),
+      resistance: parseMonsterCheck(baseSource.checks?.resistance)
+    };
+
+    source.rank ??= 1;
+    source.attributes ??= {};
+    for (const attr of ["str", "dex", "pow", "int"]) {
+      source.attributes[attr] = {
+        ...source.attributes[attr],
+        mod: source.attributes[attr]?.mod ?? 0
+      };
+    }
+    source.health ??= {};
+    source.health.value ??= 0;
+    source.health.max ??= 0;
+    source.fate ??= {};
+    source.fate.value ??= 0;
+    source.fate.max ??= 0;
+    source.idendification ??= "";
+    source.hateMultiplier ??= "";
+    source.description ??= "";
+    source["battle-status"] ??= {};
+    source["battle-status"].defense ??= {};
+    source["battle-status"].defense.phys ??= 0;
+    source["battle-status"].defense.magic ??= 0;
+    source["battle-status"].speed ??= 0;
+    source["battle-status"].initiative ??= 0;
+
+    context.source = source;
+
+    // Detect fields modified by Active Effects (effective !== base)
+    const checkModified = (base, effective) => {
+      const b = Number(base) || 0;
+      const e = Number(effective) || 0;
+      if (b === e) return null;
+      return {
+        base: b,
+        effective: e,
+        display: `→ ${e}`,
+        tooltip: game.i18n.format("LHTRPG.Effect.ModifiedTooltip", { base: b, effective: e })
+      };
+    };
+
+    // Evasion / Resistance: one indicator with the whole effective check ("→ 3D+4"), since the row
+    // has no room for one per field; `dice` / `mod` flag which of the two fields has a bonus.
+    const formula = ({ dice, mod }, six = "") => `${dice}D${six}${mod ? `${mod > 0 ? "+" : ""}${mod}` : ""}`;
+    const checkFormulaModified = (base, effective) => {
+      const e = { dice: Number(effective?.dice) || 0, mod: Number(effective?.mod) || 0 };
+      if ((base.dice === e.dice) && (base.mod === e.mod)) return null;
+      return {
+        dice: base.dice !== e.dice,
+        mod: base.mod !== e.mod,
+        display: `→ ${formula(e)}`,
+        tooltip: game.i18n.format("LHTRPG.Effect.ModifiedTooltip", { base: formula(base, "6"), effective: formula(e, "6") })
+      };
+    };
+
+    context.modified = {
+      rank: checkModified(source.rank, actor.system.rank),
+      str: checkModified(source.attributes.str.mod, actor.system.attributes?.str?.mod),
+      dex: checkModified(source.attributes.dex.mod, actor.system.attributes?.dex?.mod),
+      pow: checkModified(source.attributes.pow.mod, actor.system.attributes?.pow?.mod),
+      int: checkModified(source.attributes.int.mod, actor.system.attributes?.int?.mod),
+      hpValue: checkModified(source.health.value, actor.system.health?.value),
+      hpMax: checkModified(source.health.max, actor.system.health?.max),
+      fateValue: checkModified(source.fate.value, actor.system.fate?.value),
+      fateMax: checkModified(source.fate.max, actor.system.fate?.max),
+      evasion: checkFormulaModified(source.checks.evasion, actor.system.checks?.evasion),
+      resistance: checkFormulaModified(source.checks.resistance, actor.system.checks?.resistance),
+      pdef: checkModified(source["battle-status"].defense.phys, actor.system["battle-status"]?.defense?.phys),
+      mdef: checkModified(source["battle-status"].defense.magic, actor.system["battle-status"]?.defense?.magic),
+      speed: checkModified(source["battle-status"].speed, actor.system["battle-status"]?.speed),
+      initiative: checkModified(source["battle-status"].initiative, actor.system["battle-status"]?.initiative)
+    };
 
     return context;
   }

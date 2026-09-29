@@ -89,6 +89,7 @@
       "Source": "원인",
       "Duration": "지속 시간",
       "New": "새로운 효과",
+      "ModifiedTooltip": "기본 {base}, 효과 적용 시 {effective}",
       "Category": {
         "temporary": "일시적 효과",
         "passive": "패시브 효과",

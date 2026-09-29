@@ -85,6 +85,12 @@ export class LHTrpgActor extends Actor {
     return super.applyActiveEffects();
   }
 
+  /** @override */
+  prepareBaseData() {
+    // Legacy text checks ("1+2D") must be { dice, mod } before effects add to them.
+    if (this.type === 'monster') prepareMonsterChecks(this.system);
+  }
+
   /**
    * @override
    * Augment the basic actor data with additional dynamic data. Typically,

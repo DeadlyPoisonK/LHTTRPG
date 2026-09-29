@@ -2362,6 +2362,52 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   text-align: center;
 }
 
+/* Active effect indicator on monster stats */
+.lhtrpg.sheet.monster .sheet-stats .stat-div div {
+  display: flex;
+  align-items: center;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div input.has-effect,
+.lhtrpg.sheet.monster .sheet-stats .stat-div select.has-effect {
+  color: #9cf3da;
+  font-weight: bold;
+  border-color: #4a7a5d;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .stat-effective {
+  font-size: 11px;
+  font-weight: bold;
+  color: #8fcf9b;
+  margin-left: 2px;
+  white-space: nowrap;
+  cursor: help;
+}
+
+/* Compensate widths when modified to prevent multi-column wrapping */
+.lhtrpg.sheet.monster .sheet-stats .stat-div input.has-effect:not(.small-input):not(.monsterHP-input):not(.monsterFate-input):not(.monster-check-mod) {
+  width: 110px;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div input.monsterHP-input.has-effect,
+.lhtrpg.sheet.monster .sheet-stats .stat-div input.monsterFate-input.has-effect {
+  width: 46px;
+}
+
+/* Evasion/Resistance: the dice select keeps its width, the modifier gives way to the indicators */
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields select {
+  flex: 0 0 auto;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields input.monster-check-mod {
+  flex: 0 1 70px;
+  min-width: 28px;
+}
+
+.lhtrpg.sheet.monster .sheet-stats .stat-div .monster-check-fields .stat-effective {
+  margin-left: 0;
+}
+
 /* Skill Check / Damage: dice select + numeric modifier + exclusive options */
 .lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields :disabled,
 .lhtrpg.sheet.item .sheet-stats .stat-div label.skill-roll-option:has(input:disabled) {

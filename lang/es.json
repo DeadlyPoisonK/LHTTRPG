@@ -89,6 +89,7 @@
       "Source": "Origen",
       "Duration": "Duración",
       "New": "Nuevo efecto",
+      "ModifiedTooltip": "Base {base}, con efectos {effective}",
       "Category": {
         "temporary": "Efectos temporales",
         "passive": "Efectos pasivos",
