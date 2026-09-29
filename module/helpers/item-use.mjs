@@ -193,6 +193,9 @@ export async function applyItemEffects(item, actors) {
     data.disabled = false;
     data.img ||= item.img;
     foundry.utils.setProperty(data, "flags.lhtrpg.itemUse", true);
+    const origExpires = effect.getFlag?.("lhtrpg", "expires") ?? effect._source?.flags?.lhtrpg?.expires;
+    const expires = (origExpires && origExpires !== "") ? origExpires : "endOfScene";
+    foundry.utils.setProperty(data, "flags.lhtrpg.expires", expires);
     return data;
   });
   if (!effects.length) return [];
@@ -226,7 +229,9 @@ async function _onDeleteCombat(combat) {
   if (!game.users.activeGM?.isSelf) return;
   const actors = new Set(combat.combatants.map(c => c.actor).filter(Boolean));
   for (const actor of actors) {
-    const ids = actor.effects.filter(e => e.getFlag("lhtrpg", "itemUse")).map(e => e.id);
+    const ids = actor.effects
+      .filter(e => e.getFlag("lhtrpg", "itemUse") && !e.getFlag("lhtrpg", "expires"))
+      .map(e => e.id);
     if (ids.length) await actor.deleteEmbeddedDocuments("ActiveEffect", ids);
   }
 }

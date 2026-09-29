@@ -109,6 +109,27 @@
       "HintList": "추가 항목으로 더해집니다.",
       "Preview": "미리보기"
     },
+    "EffectDuration": {
+      "Label": "지속시간 (LH)",
+      "Manual": "— 수동 —",
+      "EndOfProcess": "프로세스 종료",
+      "EndOfRound": "라운드 종료",
+      "EndOfScene": "장면 종료",
+      "Hint": "프로세스 종료까지: 현재 프로세스(행동 중인 캐릭터의 메인 프로세스, 또는 셋업/클린업 프로세스)가 끝나면 사라집니다. 라운드 종료까지: 다음 라운드가 시작되면 사라집니다. 장면 종료까지: 전투가 끝나면 사라집니다. 전투 밖에서는 자동으로 사라지지 않습니다.",
+      "Short": {
+        "EndOfProcess": "프로세스 종료",
+        "EndOfRound": "라운드 종료",
+        "EndOfScene": "장면 종료"
+      }
+    },
+    "EffectExpiry": {
+      "Title": "만료된 효과",
+      "Reason": {
+        "EndOfProcess": "프로세스 종료",
+        "EndOfRound": "라운드 종료",
+        "EndOfScene": "장면 종료"
+      }
+    },
     "EffectTarget": {
       "MaxHP": "최대 HP",
       "MaxFate": "최대 인과력",

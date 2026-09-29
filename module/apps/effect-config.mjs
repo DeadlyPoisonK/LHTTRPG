@@ -94,7 +94,9 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
     header: foundry.applications.sheets.ActiveEffectConfig.PARTS.header,
     tabs: foundry.applications.sheets.ActiveEffectConfig.PARTS.tabs,
     details: foundry.applications.sheets.ActiveEffectConfig.PARTS.details,
-    duration: foundry.applications.sheets.ActiveEffectConfig.PARTS.duration,
+    duration: {
+      template: "systems/lhtrpg/templates/effects/effect-duration.hbs"
+    },
     changes: {
       template: "systems/lhtrpg/templates/effects/effect-changes.hbs",
       scrollable: ["ol[data-changes]"]
@@ -161,6 +163,23 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       }
 
       context.preview = formatStatusPreview(statusId, statusData.value, statusData.tag);
+    } else if (partId === "duration") {
+      let expires = context.source?.flags?.lhtrpg?.expires;
+      if (expires === undefined) {
+        expires = this.document.getFlag("lhtrpg", "expires");
+      }
+      if (expires === undefined) {
+        const statusId = context.source?.flags?.lhtrpg?.statusData?.statusId ?? this.document.getFlag("lhtrpg", "statusData")?.statusId;
+        const statusInfo = LH_STATUSES.find(s => s.id === statusId);
+        if (statusInfo?.group === "combat") expires = "endOfScene";
+        else expires = "";
+      }
+      context.expiryOptions = [
+        { value: "", label: "LHTRPG.EffectDuration.Manual" },
+        { value: "endOfProcess", label: "LHTRPG.EffectDuration.EndOfProcess" },
+        { value: "endOfRound", label: "LHTRPG.EffectDuration.EndOfRound" },
+        { value: "endOfScene", label: "LHTRPG.EffectDuration.EndOfScene" }
+      ].map(opt => ({ ...opt, selected: opt.value === expires }));
     }
     return context;
   }
@@ -330,6 +349,12 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       if (selectStatus) {
         selectStatus.addEventListener("change", () => {
           updateStatusUi();
+          // Combat Statuses last until the end of the scene, unless a duration was already chosen.
+          const expiresSelect = this.element.querySelector('select[name="flags.lhtrpg.expires"]');
+          if (expiresSelect && (this.document.getFlag("lhtrpg", "expires") === undefined)) {
+            const group = LH_STATUSES.find(s => s.id === selectStatus.value)?.group;
+            expiresSelect.value = (group === "combat") ? "endOfScene" : "";
+          }
         });
       }
       if (inputRating) {
@@ -432,6 +457,16 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       }
       statuses.add(newStatusId);
       submitData.statuses = Array.from(statuses);
+    }
+
+    const rawExpires = foundry.utils.getProperty(submitData, "flags.lhtrpg.expires");
+    if (rawExpires !== undefined) {
+      foundry.utils.setProperty(submitData, "flags.lhtrpg.expires", String(rawExpires ?? ""));
+    } else if (this.document.getFlag("lhtrpg", "expires") === undefined && newStatusId) {
+      const statusInfo = LH_STATUSES.find(s => s.id === newStatusId);
+      if (statusInfo?.group === "combat") {
+        foundry.utils.setProperty(submitData, "flags.lhtrpg.expires", "endOfScene");
+      }
     }
 
     return submitData;

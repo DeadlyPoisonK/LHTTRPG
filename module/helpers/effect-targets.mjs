@@ -414,9 +414,32 @@ export function lhEffectSummary(changesOrEffect, options) {
     if (s) parts.push(s);
   }
 
-  if (!parts.length) return "";
+  const expires = changesOrEffect?.flags?.lhtrpg?.expires
+    ?? (typeof changesOrEffect?.getFlag === "function" ? changesOrEffect.getFlag("lhtrpg", "expires") : null)
+    ?? changesOrEffect?._source?.flags?.lhtrpg?.expires;
+
+  const EXPIRY_LABELS = {
+    endOfProcess: "LHTRPG.EffectDuration.EndOfProcess",
+    endOfRound: "LHTRPG.EffectDuration.EndOfRound",
+    endOfScene: "LHTRPG.EffectDuration.EndOfScene"
+  };
+
+  if (!parts.length) {
+    if (options?.hash?.plain && expires && EXPIRY_LABELS[expires]) {
+      const durLabel = globalThis.game?.i18n?.localize ? game.i18n.localize(EXPIRY_LABELS[expires]) : expires;
+      return durLabel ? `(${durLabel})` : "";
+    }
+    return "";
+  }
   const joined = parts.join(", ");
-  if (options?.hash?.plain) return joined.replace(/<[^>]*>/g, "");
+  if (options?.hash?.plain) {
+    let plain = joined.replace(/<[^>]*>/g, "");
+    if (expires && EXPIRY_LABELS[expires]) {
+      const durLabel = globalThis.game?.i18n?.localize ? game.i18n.localize(EXPIRY_LABELS[expires]) : expires;
+      if (durLabel) plain = `${plain} (${durLabel})`;
+    }
+    return plain;
+  }
   return globalThis.Handlebars?.SafeString ? new Handlebars.SafeString(joined) : joined;
 }
 

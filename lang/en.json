@@ -109,6 +109,27 @@
       "HintList": "Added as an additional entry.",
       "Preview": "Preview"
     },
+    "EffectDuration": {
+      "Label": "Duration (LH)",
+      "Manual": "— Manual —",
+      "EndOfProcess": "End of process",
+      "EndOfRound": "End of round",
+      "EndOfScene": "End of scene",
+      "Hint": "End of process: expires when the current process ends (the active character's Main Process, or the Setup/Cleanup Process). End of round: expires when the next round starts. End of scene: expires when combat ends. Outside of combat, durations do not expire on their own.",
+      "Short": {
+        "EndOfProcess": "End of proc.",
+        "EndOfRound": "End of round",
+        "EndOfScene": "End of scene"
+      }
+    },
+    "EffectExpiry": {
+      "Title": "Expired Effects",
+      "Reason": {
+        "EndOfProcess": "end of process",
+        "EndOfRound": "end of round",
+        "EndOfScene": "end of scene"
+      }
+    },
     "EffectTarget": {
       "MaxHP": "Max. HP",
       "MaxFate": "Max. Fate",

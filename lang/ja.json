@@ -109,6 +109,27 @@
       "HintList": "追加のエントリとして追加されます。",
       "Preview": "プレビュー"
     },
+    "EffectDuration": {
+      "Label": "持続時間 (LH)",
+      "Manual": "— 手動 —",
+      "EndOfProcess": "プロセス終了時",
+      "EndOfRound": "ラウンド終了時",
+      "EndOfScene": "シーン終了時",
+      "Hint": "プロセス終了まで：現在のプロセス（行動中のキャラクターのメインプロセス、またはセットアップ／クリンナップ）の終了時に消える。ラウンド終了まで：次のラウンド開始時に消える。シーン終了まで：戦闘終了時に消える。戦闘外では自動で消えない。",
+      "Short": {
+        "EndOfProcess": "プロセス終了",
+        "EndOfRound": "ラウンド終了",
+        "EndOfScene": "シーン終了"
+      }
+    },
+    "EffectExpiry": {
+      "Title": "終了した効果",
+      "Reason": {
+        "EndOfProcess": "プロセス終了",
+        "EndOfRound": "ラウンド終了時",
+        "EndOfScene": "シーン終了時"
+      }
+    },
     "EffectTarget": {
       "MaxHP": "最大HP",
       "MaxFate": "最大因果力",

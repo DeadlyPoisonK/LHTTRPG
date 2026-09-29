@@ -109,6 +109,27 @@
       "HintList": "Aggiunto come voce aggiuntiva.",
       "Preview": "Anteprima"
     },
+    "EffectDuration": {
+      "Label": "Durata (LH)",
+      "Manual": "— Manuale —",
+      "EndOfProcess": "Fine del processo",
+      "EndOfRound": "Fine del round",
+      "EndOfScene": "Fine della scena",
+      "Hint": "Fine del processo: scade al termine del processo in corso (il Main Process del personaggio attivo, o il Setup/Cleanup Process). Fine del round: scade all'inizio del round successivo. Fine della scena: scade al termine del combattimento. Fuori dal combattimento le durate non scadono da sole.",
+      "Short": {
+        "EndOfProcess": "Fine proc.",
+        "EndOfRound": "Fine round",
+        "EndOfScene": "Fine scena"
+      }
+    },
+    "EffectExpiry": {
+      "Title": "Effetti scaduti",
+      "Reason": {
+        "EndOfProcess": "fine del processo",
+        "EndOfRound": "fine del round",
+        "EndOfScene": "fine della scena"
+      }
+    },
     "EffectTarget": {
       "MaxHP": "HP max.",
       "MaxFate": "Fato max.",

@@ -109,6 +109,27 @@
       "HintList": "Se añade como una entrada más.",
       "Preview": "Vista previa"
     },
+    "EffectDuration": {
+      "Label": "Duración (LH)",
+      "Manual": "— Manual —",
+      "EndOfProcess": "Fin del proceso",
+      "EndOfRound": "Fin de ronda",
+      "EndOfScene": "Fin de escena",
+      "Hint": "Fin del proceso: caduca al terminar el proceso en curso (el Main Process del personaje activo, o el Setup/Cleanup Process). Fin de ronda: caduca al empezar la ronda siguiente. Fin de escena: caduca al terminar el combate. Fuera de combate no caducan solas.",
+      "Short": {
+        "EndOfProcess": "Fin proceso",
+        "EndOfRound": "Fin de ronda",
+        "EndOfScene": "Fin de escena"
+      }
+    },
+    "EffectExpiry": {
+      "Title": "Efectos caducados",
+      "Reason": {
+        "EndOfProcess": "fin del proceso",
+        "EndOfRound": "fin de ronda",
+        "EndOfScene": "fin de escena"
+      }
+    },
     "EffectTarget": {
       "MaxHP": "HP máx.",
       "MaxFate": "Destino máx.",
