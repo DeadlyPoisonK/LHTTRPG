@@ -1,5 +1,5 @@
 <h4 class="tab-title">
-	EFFECTS
+	{{toUpperCase (localize 'LHTRPG.Effect.Label')}}
 </h4>
 
 <ol class="items-list effects-list">
@@ -7,8 +7,8 @@
   {{#unless section.hidden}}
     <li class="items-header flexrow" data-effect-type="{{section.type}}">
       <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
-      <div class="effect-source">Source</div>
-      <div class="effect-source">Duration</div>
+      <div class="effect-source">{{localize "LHTRPG.Effect.Source"}}</div>
+      <div class="effect-source">{{localize "LHTRPG.Effect.Duration"}}</div>
       <div class="item-controls effect-controls flexrow">
         <a class="effect-control" data-action="create" title="{{localize 'LHTRPG.EffectCreate'}}">
           <i class="fas fa-plus"></i> {{localize "LHTRPG.Add"}}
@@ -20,7 +20,7 @@
     {{#each section.effects as |effect|}}
       <li class="item effect flexrow" data-effect-id="{{effect.id}}">
         <div class="item-name effect-name flexrow">
-          <img class="item-image" src="{{effect.icon}}"/>
+          <img class="item-image" src="{{effect.img}}"/>
           <h4>{{effect.name}}</h4>
         </div>
         <div class="effect-source">{{effect.sourceName}}</div>

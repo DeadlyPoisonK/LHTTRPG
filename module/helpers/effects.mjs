@@ -11,7 +11,7 @@
   switch ( a.dataset.action ) {
     case "create":
       return owner.createEmbeddedDocuments("ActiveEffect", [{
-        name: "New Effect",
+        name: game.i18n.localize("LHTRPG.Effect.New"),
         img: "icons/svg/aura.svg",
         origin: owner.uuid,
         "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
@@ -37,22 +37,22 @@ export function prepareActiveEffectCategories(effects) {
     const categories = {
       temporary: {
         type: "temporary",
-        label: "Temporary Effects",
+        label: "LHTRPG.Effect.Category.temporary",
         effects: []
       },
       passive: {
         type: "passive",
-        label: "Passive Effects",
+        label: "LHTRPG.Effect.Category.passive",
         effects: []
       },
       inactive: {
         type: "inactive",
-        label: "Inactive Effects",
+        label: "LHTRPG.Effect.Category.inactive",
         effects: []
       },
       suppressed: {
         type: "suppressed",
-        label: "Suppressed Effects",
+        label: "LHTRPG.Effect.Category.suppressed",
         effects: []
       }
     };

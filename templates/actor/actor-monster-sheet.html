@@ -2,7 +2,7 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" /></h1>
       <a class="monster-send-to-chat" title="{{localize 'LHTRPG.Monster.SendToChat'}}">
         <i class="fas fa-comment"></i> {{localize 'LHTRPG.Monster.SendToChat'}}
       </a>
@@ -20,11 +20,11 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">Stats</a>
-    <a class="item" data-tab="status">Status</a>
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="skills">Skills</a>
-    <a class="item" data-tab="effects">Effects</a>
+    <a class="item" data-tab="stats">{{localize 'LHTRPG.Stats.Label'}}</a>
+    <a class="item" data-tab="status">{{localize 'LHTRPG.Status.Label'}}</a>
+    <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
+    <a class="item" data-tab="skills">{{localize 'LHTRPG.Monster.Skills'}}</a>
+    <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}
