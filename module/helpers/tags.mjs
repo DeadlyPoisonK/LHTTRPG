@@ -1,4 +1,5 @@
 import { TAG_CATALOG, canonicalTag, canonicalTags, findTag, splitTags, tagDescription, tagKey } from "./tag-catalog.mjs";
+import { SuggestInput } from "./suggest-input.mjs";
 
 /**
  * Tag view data for the `tag-input.html` partial: canonical label, tooltip and the index in the
@@ -41,9 +42,6 @@ class TagInput {
     this.owner = owner;
     this.sheet = sheet;
     this.input = box.querySelector(".tag-entry-input");
-    this.menu = null;
-    this.options = [];
-    this.active = 0;
 
     for (const a of box.querySelectorAll(".tag-remove")) {
       a.addEventListener("click", ev => {
@@ -56,12 +54,47 @@ class TagInput {
 
     // Not a form field: keep it out of the sheet's submit-on-change.
     this.input.addEventListener("change", ev => ev.stopPropagation());
-    this.input.addEventListener("input", () => this.open());
-    this.input.addEventListener("focus", () => this.open());
-    this.input.addEventListener("blur", () => setTimeout(() => this.close(), 150));
-    this.input.addEventListener("keydown", ev => this.onKey(ev));
     box.addEventListener("click", ev => {
       if (ev.target === box || ev.target.classList.contains("tag-list")) this.input.focus();
+    });
+
+    this.suggest = new SuggestInput(this.input, {
+      getOptions: query => {
+        const entries = this.suggestions(query);
+        const options = entries.map(e => ({
+          value: e.label,
+          label: e.label,
+          group: game.i18n.localize(e.group),
+          desc: tagDescription(e.label)
+        }));
+        // Free text: any tag can be added, even if it isn't in the catalog.
+        const exact = query && findTag(query);
+        if (query && !exact && !this.tags.some(t => tagKey(canonicalTag(t)) === tagKey(query))) {
+          options.push({ value: canonicalTag(query), label: canonicalTag(query), custom: true });
+        }
+        return options;
+      },
+      onPick: option => {
+        this.add(option.value ?? option.label);
+      },
+      onKeyDown: ev => {
+        switch (ev.key) {
+          case "Enter":
+          case "Tab":
+            if (this.input.value.trim()) {
+              ev.preventDefault();
+              this.add(this.input.value);
+            }
+            break;
+          case ",":
+            ev.preventDefault();
+            if (this.input.value.trim()) this.add(this.input.value);
+            break;
+          case "Backspace":
+            if (!this.input.value && this.tags.length) this.remove(this.tags.length - 1);
+            break;
+        }
+      }
     });
 
     if (sheet?._lhTagRefocus) {
@@ -99,113 +132,10 @@ class TagInput {
     return scored.filter(s => (best > 1) || (s.score < 2)).map(s => s.entry);
   }
 
-  open() {
-    const query = this.input.value.trim();
-    const entries = this.suggestions(query);
-    this.options = entries.map(e => ({ label: e.label, group: game.i18n.localize(e.group), desc: tagDescription(e.label) }));
-    // Free text: any tag can be added, even if it isn't in the catalog.
-    const exact = query && findTag(query);
-    if (query && !exact && !this.tags.some(t => tagKey(canonicalTag(t)) === tagKey(query))) {
-      this.options.push({ label: canonicalTag(query), custom: true });
-    }
-    this.active = 0;
-    this.renderMenu();
-  }
-
-  renderMenu() {
-    if (!this.options.length) return this.close();
-    if (!this.menu) {
-      this.menu = document.createElement("ol");
-      this.menu.className = "lhtrpg lh-tag-menu";
-      // mousedown instead of click: runs before the field's blur closes the menu.
-      this.menu.addEventListener("mousedown", ev => {
-        const li = ev.target.closest("li[data-index]");
-        if (!li) return;
-        ev.preventDefault();
-        this.pick(Number(li.dataset.index));
-      });
-      document.body.append(this.menu);
-    }
-    const esc = foundry.utils.escapeHTML ?? (s => s);
-    this.menu.innerHTML = this.options.map((o, i) => `
-      <li data-index="${i}" class="${i === this.active ? "active" : ""}${o.custom ? " custom" : ""}">
-        <div class="lh-tag-menu-row">
-          <span class="lh-tag-menu-label">${o.custom ? `<i class="fas fa-plus"></i> ` : ""}${esc(o.label)}</span>
-          ${o.group ? `<span class="lh-tag-menu-group">${esc(o.group)}</span>` : ""}
-        </div>
-        ${o.desc ? `<div class="lh-tag-menu-desc">${esc(o.desc)}</div>` : ""}
-      </li>`).join("");
-    this.position();
-  }
-
-  position() {
-    const r = this.input.getBoundingClientRect();
-    const width = Math.max(r.width, 260);
-    const left = Math.min(r.left, window.innerWidth - width - 4);
-    const below = window.innerHeight - r.bottom;
-    Object.assign(this.menu.style, { left: `${left}px`, width: `${width}px` });
-    if ((below < 200) && (r.top > below)) {
-      Object.assign(this.menu.style, { top: "", bottom: `${window.innerHeight - r.top + 2}px`, maxHeight: `${Math.min(300, r.top - 8)}px` });
-    } else {
-      Object.assign(this.menu.style, { bottom: "", top: `${r.bottom + 2}px`, maxHeight: `${Math.min(300, below - 8)}px` });
-    }
-  }
-
-  highlight(i) {
-    if (!this.menu) return;
-    this.active = (i + this.options.length) % this.options.length;
-    this.menu.querySelectorAll("li").forEach((li, n) => li.classList.toggle("active", n === this.active));
-    this.menu.children[this.active]?.scrollIntoView({ block: "nearest" });
-  }
-
-  close() {
-    this.menu?.remove();
-    this.menu = null;
-  }
-
-  onKey(ev) {
-    switch (ev.key) {
-      case "ArrowDown":
-        ev.preventDefault();
-        if (!this.menu) this.open(); else this.highlight(this.active + 1);
-        break;
-      case "ArrowUp":
-        ev.preventDefault();
-        this.highlight(this.active - 1);
-        break;
-      case "Enter":
-      case "Tab":
-        if (!this.input.value.trim() && (ev.key === "Tab")) return;
-        ev.preventDefault();
-        if (this.menu && this.options.length) this.pick(this.active);
-        else if (this.input.value.trim()) this.add(this.input.value);
-        break;
-      case ",":
-        ev.preventDefault();
-        if (this.input.value.trim()) this.add(this.input.value);
-        break;
-      case "Escape":
-        if (this.menu) {
-          ev.preventDefault();
-          ev.stopPropagation();
-          this.close();
-        }
-        break;
-      case "Backspace":
-        if (!this.input.value && this.tags.length) this.remove(this.tags.length - 1);
-        break;
-    }
-  }
-
-  pick(i) {
-    const option = this.options[i];
-    if (option) this.add(option.label);
-  }
-
   async add(tag) {
     const label = canonicalTag(tag);
     this.input.value = "";
-    this.close();
+    this.suggest?.close();
     if (!label) return;
     const tags = canonicalTags([...this.tags, label]);
     if (tags.length === canonicalTags(this.tags).length) return;

@@ -98,6 +98,29 @@
       },
       "Migrated": "Migration de {count} effet(s) actif(s)."
     },
+    "EffectConfig": "Configuration de l'effet actif",
+    "EffectTarget": {
+      "MaxHP": "HP max.",
+      "MaxFate": "Destin max.",
+      "Dice": "{check} (dés)",
+      "Custom": "Utiliser la clé telle quelle",
+      "Group": {
+        "attributes": "Attributs",
+        "resources": "Ressources",
+        "checks": "Tests",
+        "checkDice": "Dés de test",
+        "battle": "Statut de combat",
+        "other": "Autre"
+      },
+      "Chip": {
+        "Character": "PJ",
+        "Monster": "Monstre"
+      },
+      "Warning": {
+        "Derived": "Champ dérivé : sera écrasé lors du recalcul",
+        "Unknown": "Clé hors catalogue"
+      }
+    },
     "EffectCreate": "Créer un effet",
     "EffectDelete": "Supprimer l'effet",
     "EffectEdit": "Modifier l'effet",

@@ -4428,3 +4428,83 @@
 .lhtrpg.sheet.item .sheet-stats .stat-div.item-use-row .item-use:hover {
   background-color: #3f7a4e;
 }
+
+/* -------------------------------------------- */
+/*  ActiveEffect Config (effect-config.mjs)     */
+/* -------------------------------------------- */
+
+.lhtrpg-effect-config .tab.changes li {
+  align-items: flex-start;
+}
+
+.lhtrpg-effect-config .tab.changes .key {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 14px;
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-label {
+  opacity: 0.85;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-chip,
+.lhtrpg.lh-tag-menu .lh-target-chip {
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: bold;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-chip.character,
+.lhtrpg.lh-tag-menu .lh-target-chip.character {
+  background: rgba(42, 160, 90, 0.18);
+  color: #1f6b3d;
+  border: 1px solid rgba(42, 160, 90, 0.4);
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-chip.monster,
+.lhtrpg.lh-tag-menu .lh-target-chip.monster {
+  background: rgba(180, 50, 50, 0.18);
+  color: #8f2626;
+  border: 1px solid rgba(180, 50, 50, 0.4);
+}
+
+.lhtrpg.lh-tag-menu li.active .lh-target-chip {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #b05a00;
+  font-weight: bold;
+  cursor: help;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-warning.derived {
+  color: #b52020;
+}
+
+.lhtrpg-effect-config .lh-effect-target-info .lh-target-warning i {
+  font-size: 11px;
+}
+

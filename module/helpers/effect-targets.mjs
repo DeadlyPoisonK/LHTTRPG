@@ -31,12 +31,12 @@ export const EFFECT_TARGETS = [
 
   // --- Resources ---
   // Character accumulator fields
-  { key: "system.health.effect", label: "LHTRPG.Label.HP", group: "resources", actorTypes: ["character"], kind: "number" },
-  { key: "system.fate.effect", label: "LHTRPG.Label.Fate", group: "resources", actorTypes: ["character"], kind: "number" },
+  { key: "system.health.effect", label: "LHTRPG.EffectTarget.MaxHP", group: "resources", actorTypes: ["character"], kind: "number" },
+  { key: "system.fate.effect", label: "LHTRPG.EffectTarget.MaxFate", group: "resources", actorTypes: ["character"], kind: "number" },
   { key: "system.inventory.mod", label: "LHTRPG.Item.Label.BagSpace", group: "resources", actorTypes: ["character"], kind: "number" },
   // Monster direct resource fields
-  { key: "system.health.max", label: "LHTRPG.Label.HP", group: "resources", actorTypes: ["monster"], kind: "number" },
-  { key: "system.fate.max", label: "LHTRPG.Label.Fate", group: "resources", actorTypes: ["monster"], kind: "number" },
+  { key: "system.health.max", label: "LHTRPG.EffectTarget.MaxHP", group: "resources", actorTypes: ["monster"], kind: "number" },
+  { key: "system.fate.max", label: "LHTRPG.EffectTarget.MaxFate", group: "resources", actorTypes: ["monster"], kind: "number" },
 
   // --- Checks (modifier) ---
   { key: "system.checks.athletics.mod", label: "LHTRPG.Check.Athletics", group: "checks", actorTypes: ["character"], kind: "number" },
@@ -117,6 +117,126 @@ export const CHARACTER_ONLY_EFFECT_KEY_MIGRATIONS = {
 export function findEffectTarget(key) {
   const catalog = globalThis.CONFIG?.LHTRPG?.effectTargets ?? EFFECT_TARGETS;
   return catalog.find(t => t.key === key) ?? null;
+}
+
+/**
+ * Test whether an effect change key targets a derived/recomputed field on an actor.
+ * In characters, prepareDerivedData recomputes health.max, fate.max, attributes.<attr>.mod/total,
+ * checks.<c>.total/base, battle-status.**.total/base, inventory.maxSpace/space; effects on these are lost.
+ * In monsters, health.max, fate.max, and attributes.<attr>.mod are direct source fields, not derived.
+ *
+ * @param {string} key
+ * @param {string|string[]} [actorType="character"]
+ * @returns {boolean}
+ */
+export function isDerivedEffectKey(key, actorType = "character") {
+  if (!key || typeof key !== "string") return false;
+  const cleanKey = key.trim().replace(/\.\[["']([^"'\]]+)["']\]/g, ".$1");
+  const types = Array.isArray(actorType) ? actorType : [actorType];
+
+  const appliesToCharacter = types.includes("character") || types.length === 0;
+  if (!appliesToCharacter) return false;
+
+  const isMonsterToo = types.includes("monster");
+  if (!isMonsterToo) {
+    if (cleanKey === "system.health.max" || cleanKey === "system.fate.max") return true;
+    if (/^system\.attributes\.[^.]+\.mod$/.test(cleanKey)) return true;
+  }
+  if (/^system\.attributes\.[^.]+\.total$/.test(cleanKey)) return true;
+  if (/^system\.checks\.[^.]+\.(total|base)$/.test(cleanKey)) return true;
+  if (/^system\.battle-status\..+\.(total|base)$/.test(cleanKey)) return true;
+  if (cleanKey === "system.inventory.maxSpace" || cleanKey === "system.inventory.space") return true;
+
+  return false;
+}
+
+/**
+ * Determine the applicable actor types (destination) for an ActiveEffect.
+ * - On an Actor -> [actor.type]
+ * - On an Item with transfer: true -> owner's type if item is on an actor;
+ *   if loose: in compendium bestiary -> ["monster"], else -> ["character"]
+ * - On an Item with transfer: false -> ["character", "monster"]
+ * @param {ActiveEffect} effect
+ * @returns {string[]}
+ */
+export function getEffectTargetActorTypes(effect) {
+  const BOTH = ["character", "monster"];
+  const actorTypes = type => (BOTH.includes(type) ? [type] : null);
+  const parent = effect?.parent;
+  if (!parent) return BOTH;
+
+  if (parent.documentName === "Actor") return actorTypes(parent.type) ?? BOTH;
+  if (parent.documentName !== "Item") return BOTH;
+
+  // Usable items never affect their holder: their effects are copied onto the target when used (item-use.mjs).
+  const isTransfer = effect.transfer ?? effect._source?.transfer ?? true;
+  if (!isTransfer || (parent.type === "usable")) return BOTH;
+
+  // Transferred to the owner. Items in a loot pile or a chest end up with a character.
+  const owner = parent.parent;
+  if (owner?.documentName === "Actor") return actorTypes(owner.type) ?? ["character"];
+  const pack = parent.pack ?? "";
+  return pack.endsWith(".bestiary") ? ["monster"] : ["character"];
+}
+
+/**
+ * Retrieve UI metadata for a given effect change key, including translated label,
+ * exclusive type chip, or warning state (derived field or out-of-catalog).
+ * @param {string} key
+ * @param {string|string[]} [targetActorTypes=["character", "monster"]]
+ * @returns {object|null}
+ */
+export function getEffectKeyInfo(key, targetActorTypes = ["character", "monster"]) {
+  if (!key || typeof key !== "string" || !key.trim()) return null;
+  const cleanKey = key.trim().replace(/\.\[["']([^"'\]]+)["']\]/g, ".$1");
+  const types = Array.isArray(targetActorTypes) ? targetActorTypes : [targetActorTypes];
+
+  const localize = str => (globalThis.game?.i18n ? globalThis.game.i18n.localize(str) : str);
+  const format = (str, data) => (globalThis.game?.i18n?.format ? globalThis.game.i18n.format(str, data) : str);
+
+  // Check if derived field
+  if (isDerivedEffectKey(cleanKey, types)) {
+    return {
+      status: "derived",
+      warning: true,
+      message: localize("LHTRPG.EffectTarget.Warning.Derived")
+    };
+  }
+
+  const target = findEffectTarget(cleanKey);
+  const applies = target && target.actorTypes.some(t => types.includes(t));
+  if (!target || !applies) {
+    return {
+      status: "unknown",
+      warning: true,
+      message: localize("LHTRPG.EffectTarget.Warning.Unknown")
+    };
+  }
+
+  let label;
+  if (target.group === "checkDice") {
+    const checkName = localize(target.label);
+    label = format("LHTRPG.EffectTarget.Dice", { check: checkName });
+  } else {
+    label = localize(target.label);
+  }
+
+  let chip = null;
+  if (types.length > 1 && target.actorTypes.length === 1) {
+    const type = target.actorTypes[0];
+    chip = {
+      type,
+      label: localize(type === "monster" ? "LHTRPG.EffectTarget.Chip.Monster" : "LHTRPG.EffectTarget.Chip.Character")
+    };
+  }
+
+  return {
+    status: "valid",
+    warning: false,
+    label,
+    group: target.group,
+    chip
+  };
 }
 
 /**

@@ -98,6 +98,29 @@
       },
       "Migrated": "Migrati {count} effetti attivi."
     },
+    "EffectConfig": "Configurazione dell'effetto attivo",
+    "EffectTarget": {
+      "MaxHP": "HP max.",
+      "MaxFate": "Fato max.",
+      "Dice": "{check} (dadi)",
+      "Custom": "Usa chiave così com'è",
+      "Group": {
+        "attributes": "Attributi",
+        "resources": "Risorse",
+        "checks": "Prove",
+        "checkDice": "Dadi di prova",
+        "battle": "Stato di combattimento",
+        "other": "Altro"
+      },
+      "Chip": {
+        "Character": "PG",
+        "Monster": "Mostro"
+      },
+      "Warning": {
+        "Derived": "Campo derivato: verrà sovrascritto al ricalcolo",
+        "Unknown": "Chiave non nel catalogo"
+      }
+    },
     "EffectCreate": "Crea effetto",
     "EffectDelete": "Elimina effetto",
     "EffectEdit": "Modifica effetto",

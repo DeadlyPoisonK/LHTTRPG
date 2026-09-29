@@ -46,5 +46,8 @@
     "systems/lhtrpg/templates/chat/damage-card.hbs",
     "systems/lhtrpg/templates/chat/damage-applied.hbs",
     "systems/lhtrpg/templates/chat/use-card.hbs",
+
+    // ActiveEffect sheets
+    "systems/lhtrpg/templates/effects/effect-changes.hbs",
   ]);
 };

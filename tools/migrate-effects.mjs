@@ -7,6 +7,7 @@ import path from "node:path";
 import {
   migrateEffectChanges,
   findEffectTarget,
+  isDerivedEffectKey,
   EFFECT_KEY_MIGRATIONS,
   CHARACTER_ONLY_EFFECT_KEY_MIGRATIONS
 } from "../module/helpers/effect-targets.mjs";
@@ -60,16 +61,20 @@ function processEffects(effects, actorType, packName, docName, fileName) {
       effect.changes = newChanges;
     }
 
-    // Audit remaining keys against the catalog
+    // Audit remaining keys against the catalog and for derived fields
     for (const change of effect.changes ?? []) {
       const key = change?.key ? String(change.key).trim() : "";
-      if (key && !findEffectTarget(key)) {
+      if (!key) continue;
+      const target = findEffectTarget(key);
+      const isDerived = isDerivedEffectKey(key, actorType);
+      if (!target || isDerived) {
         auditIssues.push({
           pack: packName,
           file: fileName,
           doc: docName,
           effect: effect.name ?? "unnamed",
-          key
+          key,
+          reason: isDerived ? "derived" : "unknown"
         });
       }
     }
@@ -140,9 +145,10 @@ console.log(`Monster pack (bestiary) effects found: ${monsterPackEffectsCount}.`
 
 console.log("\n=== Active Effects Target Audit ===");
 if (auditIssues.length) {
-  console.log(`Found ${auditIssues.length} change(s) targeting keys outside the catalog:`);
+  console.log(`Found ${auditIssues.length} change(s) with issues (outside catalog or derived):`);
   for (const issue of auditIssues) {
-    console.log(`  - [${issue.pack}] ${issue.doc} ("${issue.effect}"): ${issue.key}`);
+    const reasonTag = issue.reason === "derived" ? " [derived field]" : "";
+    console.log(`  - [${issue.pack}] ${issue.doc} ("${issue.effect}"): ${issue.key}${reasonTag}`);
   }
 } else {
   console.log("All effect change keys are valid catalog targets.");

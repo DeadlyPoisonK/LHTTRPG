@@ -98,6 +98,29 @@
       },
       "Migrated": "{count}個のアクティブエフェクトを移行しました。"
     },
+    "EffectConfig": "アクティブエフェクト設定",
+    "EffectTarget": {
+      "MaxHP": "最大HP",
+      "MaxFate": "最大因果力",
+      "Dice": "{check}（ダイス）",
+      "Custom": "入力したキーをそのまま使用",
+      "Group": {
+        "attributes": "能力値",
+        "resources": "リソース",
+        "checks": "判定",
+        "checkDice": "判定ダイス",
+        "battle": "戦闘値",
+        "other": "その他"
+      },
+      "Chip": {
+        "Character": "PC",
+        "Monster": "モンスター"
+      },
+      "Warning": {
+        "Derived": "派生項目：再計算時にリセットされます",
+        "Unknown": "カタログ外のキー"
+      }
+    },
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",

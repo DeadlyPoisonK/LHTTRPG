@@ -98,6 +98,29 @@
       },
       "Migrated": "Migrated {count} active effect(s)."
     },
+    "EffectConfig": "Active Effect Configuration",
+    "EffectTarget": {
+      "MaxHP": "Max. HP",
+      "MaxFate": "Max. Fate",
+      "Dice": "{check} (dice)",
+      "Custom": "Use key as entered",
+      "Group": {
+        "attributes": "Attributes",
+        "resources": "Resources",
+        "checks": "Checks",
+        "checkDice": "Check Dice",
+        "battle": "Battle Status",
+        "other": "Other"
+      },
+      "Chip": {
+        "Character": "PC",
+        "Monster": "Monster"
+      },
+      "Warning": {
+        "Derived": "Derived field: will be overwritten on recalculation",
+        "Unknown": "Key not in catalog"
+      }
+    },
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",

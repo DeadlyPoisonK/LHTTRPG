@@ -98,6 +98,29 @@
       },
       "Migrated": "{count}개의 액티브 이펙트를 마이그레이션했습니다."
     },
+    "EffectConfig": "액티브 이펙트 설정",
+    "EffectTarget": {
+      "MaxHP": "최대 HP",
+      "MaxFate": "최대 인과력",
+      "Dice": "{check} (주사위)",
+      "Custom": "입력된 키 그대로 사용",
+      "Group": {
+        "attributes": "능력치",
+        "resources": "자원",
+        "checks": "판정",
+        "checkDice": "판정 주사위",
+        "battle": "전투 수치",
+        "other": "기타"
+      },
+      "Chip": {
+        "Character": "PC",
+        "Monster": "몬스터"
+      },
+      "Warning": {
+        "Derived": "파생 필드: 재계산 시 덮어쓰여집니다",
+        "Unknown": "카탈로그에 없는 키"
+      }
+    },
     "EffectCreate": "효과 생성",
     "EffectDelete": "효과 삭제",
     "EffectEdit": "효과 편집",

@@ -7,6 +7,7 @@ import { LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs"
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
 import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
 import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
+import { LHTrpgActiveEffectConfig } from "./apps/effect-config.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
@@ -88,6 +89,11 @@ Hooks.once('init', async function () {
   });
   foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet("lhtrpg", LHTrpgItemSheet, { makeDefault: true });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(ActiveEffect, "lhtrpg", LHTrpgActiveEffectConfig, {
+    makeDefault: true,
+    label: "LHTRPG.EffectConfig"
+  });
 
   // Loot, chests, merchants and item/gold transfers between players
   registerPiles();

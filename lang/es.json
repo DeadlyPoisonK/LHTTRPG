@@ -98,6 +98,29 @@
       },
       "Migrated": "Migrados {count} efectos activos."
     },
+    "EffectConfig": "Configuración de Efecto Activo",
+    "EffectTarget": {
+      "MaxHP": "HP máx.",
+      "MaxFate": "Destino máx.",
+      "Dice": "{check} (dados)",
+      "Custom": "Usar clave tal cual",
+      "Group": {
+        "attributes": "Atributos",
+        "resources": "Recursos",
+        "checks": "Tiradas",
+        "checkDice": "Dados de tirada",
+        "battle": "Combate",
+        "other": "Otros"
+      },
+      "Chip": {
+        "Character": "PJ",
+        "Monster": "Monstruo"
+      },
+      "Warning": {
+        "Derived": "Campo derivado: se perderá al recalcular",
+        "Unknown": "Clave fuera del catálogo"
+      }
+    },
     "EffectCreate": "Crear Efecto",
     "EffectDelete": "Eliminar Efecto",
     "EffectEdit": "Editar Efecto",
