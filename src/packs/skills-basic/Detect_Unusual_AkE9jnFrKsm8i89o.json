@@ -5,7 +5,7 @@
     "description": "<p>This skill targets everything in range that has a [Detection Difficulty]. The target removes any [Concealed] or [Hidden] effects. You do not have to remove these effects from your allies.</p>",
     "tags": [],
     "timing": "Setup",
-    "checkType": "Basic (Perception vs Detection Difficulty)",
+    "checkType": "",
     "range": "Close",
     "target": "Wide 20 (A)",
     "subtype": "Basic",
@@ -15,6 +15,18 @@
     },
     "cost": "-",
     "limit": "-",
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": "",
+      "stat": "perception"
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
@@ -25,8 +37,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790656469452,
+    "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null

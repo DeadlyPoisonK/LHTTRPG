@@ -2,12 +2,12 @@
   "name": "Enemy Scouting",
   "type": "skill",
   "system": {
-    "description": "<p>Use this skill when you attempt to acquire information about enemies in the next scene.</p>\n<p>[[/r (@checks.athletics.dice)d6 +@checks.athletics.total ]]{Athletics}</p>\n<p>(Result: 10) You learn the number of enemies appearing.<br>(Result: 20) You learn the name of the lowest ranked enemy (if there are several tied for the same rank, GM's choice), along with whether they have the [Boss] or [Mob] tags.<br>(Fumble): The enemy notices your scouting.</p>",
+    "description": "<p>Use this skill when you attempt to acquire information about enemies in the next scene.</p>\n<p>(Result: 10) You learn the number of enemies appearing.<br>(Result: 20) You learn the name of the lowest ranked enemy (if there are several tied for the same rank, GM's choice), along with whether they have the [Boss] or [Mob] tags.<br>(Fumble): The enemy notices your scouting.</p>",
     "tags": [
       "Scout"
     ],
     "timing": "Briefing",
-    "checkType": "Basic (Athletics)",
+    "checkType": "",
     "range": "Refer",
     "target": "Refer",
     "subtype": "Basic",
@@ -17,6 +17,18 @@
     },
     "cost": "-",
     "limit": "-",
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": "",
+      "stat": "athletics"
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
@@ -27,8 +39,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790656711412,
+    "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null
