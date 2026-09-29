@@ -121,7 +121,12 @@ Handlebars.registerHelper('toUpperCase', function (str) {
 
 Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
+  // Core only skips its own "Display <item>" macro if the hook returns false synchronously.
+  Hooks.on("hotbarDrop", (bar, data, slot) => {
+    if (data.type !== "Item") return;
+    createItemMacro(data, slot);
+    return false;
+  });
   runMigrations();
 });
 
@@ -193,12 +198,10 @@ Hooks.on("updateItem", (item, changes) => {
  * @returns {Promise}
  */
 async function createItemMacro(data, slot) {
-  if (data.type !== "Item") return;
-
   const item = data.uuid ? await fromUuid(data.uuid) : null;
   if (!item?.parent) {
     ui.notifications.warn(game.i18n.localize("LHTRPG.Macro.Notif.OwnedOnly"));
-    return false;
+    return;
   }
 
   // Create the macro command
@@ -214,7 +217,6 @@ async function createItemMacro(data, slot) {
     });
   }
   game.user.assignHotbarMacro(macro, slot);
-  return false;
 }
 
 /**
