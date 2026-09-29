@@ -566,7 +566,8 @@
   display: inline-block;
   height: auto;
   position: relative;
-  left: -20px;
+  /* Centered under "Cr. <rank>" ("Cr." is part of the background art, left of the input). */
+  left: -44px;
   width: 90px;
   /* Above the separator line (it used to overlap it). */
   top: -12px;
