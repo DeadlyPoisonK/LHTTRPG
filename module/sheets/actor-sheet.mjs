@@ -1,20 +1,19 @@
 import { useItem } from "../helpers/item-use.mjs";
-import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-import {activateTagInput} from "../helpers/tags.mjs";
-import {getStatusPanel, activateStatusPanelListeners} from "../helpers/statuses.mjs";
-import {getOption, OPTION_TYPES} from "../helpers/character-options.mjs";
-import {allocateBonusPoints, chooseHumanStats, isHumanRace} from "../apps/stat-allocation.mjs";
-import {rankUp} from "../apps/rank-up.mjs";
-import {PICK_SUBTYPES, SkillBrowser, getPendingSkills} from "../apps/skill-browser.mjs";
-import {OptionBrowser} from "../apps/option-browser.mjs";
-import {equipInHand, getHands, swapHands, unequipHand} from "../helpers/hands.mjs";
-import {EQUIP_TYPES} from "../piles/pile-config.mjs";
-import {diceFormula} from "../helpers/dice.mjs";
+import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
+import { activateTagInput } from "../helpers/tags.mjs";
+import { getStatusPanel, activateStatusPanelListeners } from "../helpers/statuses.mjs";
+import { getOption, OPTION_TYPES } from "../helpers/character-options.mjs";
+import { allocateBonusPoints, chooseHumanStats, isHumanRace } from "../apps/stat-allocation.mjs";
+import { rankUp } from "../apps/rank-up.mjs";
+import { PICK_SUBTYPES, SkillBrowser, getPendingSkills } from "../apps/skill-browser.mjs";
+import { OptionBrowser } from "../apps/option-browser.mjs";
+import { equipInHand, getHands, swapHands, unequipHand } from "../helpers/hands.mjs";
+import { EQUIP_TYPES } from "../piles/pile-config.mjs";
+import { diceFormula } from "../helpers/dice.mjs";
+import { effectModified } from "../helpers/sheet-values.mjs";
 
-/**
- * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
- */
+const { HandlebarsApplicationMixin } = foundry.applications.api;
+
 // Number of equipment slots available per item type, mirroring the slots
 // rendered in actor-inventory.html. Types not listed here have no slot cap.
 // Weapons and shields go in the hand slots instead (see hands.mjs).
@@ -24,74 +23,146 @@ const EQUIP_SLOT_CAPACITY = {
   accessory: 3
 };
 
-export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
+/**
+ * Sheet for character actors in AppV2.
+ * @extends {foundry.applications.sheets.ActorSheetV2}
+ */
+export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
 
-  /** @override */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["lhtrpg", "sheet", "actor"],
-      template: "systems/lhtrpg/templates/actor/actor-sheet.html",
-      width: 700,
-      height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
-      { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "stats" },
-      { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
-      { navSelector: ".items-tabs", contentSelector: ".items-body", initial: "equipment" },
-      { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }],
-      dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
-      {dragSelector: ".inventory-list .item", dropSelector: null},
-      {dragSelector: ".equip-slots-grid .item", dropSelector: null}]
-    });
-  }
+  static DEFAULT_OPTIONS = {
+    classes: ["lhtrpg", "sheet", "actor"],
+    position: { width: 700, height: 700 },
+    window: { resizable: false },
+    form: { submitOnChange: true },
+    actions: {
+      editImage: LHTrpgActorSheet.#onEditImage,
+      "item-throw": LHTrpgActorSheet.#onItemThrow,
+      "item-use": LHTrpgActorSheet.#onItemUse,
+      "linked-skill-throw": LHTrpgActorSheet.#onLinkedSkillThrow,
+      "item-edit": LHTrpgActorSheet.#onItemEdit,
+      "item-delete": LHTrpgActorSheet.#onItemDelete,
+      "item-equip": LHTrpgActorSheet.#onItemEquip,
+      "item-create": LHTrpgActorSheet.#onItemCreate,
+      "item-give": LHTrpgActorSheet.#onItemGive,
+      "gold-give": LHTrpgActorSheet.#onGoldGive,
+      "option-name": LHTrpgActorSheet.#onOptionName,
+      "class-img": LHTrpgActorSheet.#onClassImg,
+      "option-browse": LHTrpgActorSheet.#onOptionBrowse,
+      "rank-up": LHTrpgActorSheet.#onRankUp,
+      "skill-browse": LHTrpgActorSheet.#onSkillBrowse,
+      "roll-check": LHTrpgActorSheet.#onRollCheck,
+      "ticket-increment": LHTrpgActorSheet.#onTicketIncrement,
+      "ticket-decrement": LHTrpgActorSheet.#onTicketDecrement,
+      "ticket-rank-create": LHTrpgActorSheet.#onTicketRankCreate,
+      "hand-swap": LHTrpgActorSheet.#onHandSwap,
+      "toggle-hate": LHTrpgActorSheet.#onToggleHate,
+      "add-item-menu": LHTrpgActorSheet.#onAddItemMenu,
+      create: LHTrpgActorSheet.#onManageActiveEffect,
+      edit: LHTrpgActorSheet.#onManageActiveEffect,
+      delete: LHTrpgActorSheet.#onManageActiveEffect,
+      toggle: LHTrpgActorSheet.#onManageActiveEffect
+    }
+  };
 
-  /** @override */
-  get template() {
-    return `systems/lhtrpg/templates/actor/actor-${this.actor.type}-sheet.html`;
+  static PARTS = {
+    sheet: {
+      template: "systems/lhtrpg/templates/actor/actor-character-sheet.html"
+    }
+  };
+
+  /** Tab group states (survive re-renders). */
+  tabGroups = {
+    primary: "stats",
+    stats: "stats",
+    skills: "basic",
+    items: "equipment",
+    bio: "bio"
+  };
+
+  /** Is the Hate/Fatigue flyout panel open? */
+  #hateOpen = false;
+
+  /** The custom header only has room for the name (V2 would prefix "Player Character:"). */
+  get title() {
+    return this.actor.name;
   }
 
   /* -------------------------------------------- */
+  /*  Rendering                                   */
+  /* -------------------------------------------- */
 
   /** @override */
-  async getData() {
-    // Retrieve the data structure from the base sheet. You can inspect or log
-    // the context variable to see the structure, but some key properties for
-    // sheets are the actor object, the data object, whether or not it's
-    // editable, the items array, and the effects array.
-    const context = super.getData();
+  async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    const actor = this.actor;
 
-    // Use a safe clone of the actor data for further operations.
-    const actorData = this.actor.toObject(false);
+    context.actor = actor;
+    context.document = actor;
+    context.system = actor.system;
+    context.flags = actor.flags;
+    context.editable = this.isEditable;
+    context.owner = actor.isOwner;
 
-    // Add the actor's data to context.data for easier access, as well as flags.
-    context.system = actorData.system;
-    context.flags = actorData.flags;
+    // Items array: flat objects with id and _id, sorted by sort order
+    context.items = actor.items.contents
+      .sort((a, b) => a.sort - b.sort)
+      .map(i => ({ ...i.toObject(false), id: i.id, _id: i.id }));
 
     // Prepare character data and items.
-    if (actorData.type == 'character') {
-      this._prepareItems(context);
+    this._prepareItems(context);
 
-      // Race / Class / Subclass items (header fields); the class item's image is the class logo.
-      context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(this.actor, type)]));
-      context.classImg = context.characterOptions.class?.img ?? context.system.class.img;
+    // Race / Class / Subclass items (header fields); the class item's image is the class logo.
+    context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(actor, type)]));
+    context.classImg = context.characterOptions.class?.img ?? actor.system.class?.img ?? "systems/lhtrpg/assets/ui/classes/none.webp";
 
-      // "Browse" tile of each skill grid, with the picks left (creation, CR Up).
-      if (this.isEditable) {
-        const pending = getPendingSkills(this.actor);
-        context.skillBrowse = { Basic: {}, ...Object.fromEntries(PICK_SUBTYPES.map(s => [s, { pending: pending[s] }])) };
-      }
+    // "Browse" tile of each skill grid, with the picks left (creation, CR Up).
+    if (this.isEditable) {
+      const pending = getPendingSkills(actor);
+      context.skillBrowse = { Basic: {}, ...Object.fromEntries(PICK_SUBTYPES.map(s => [s, { pending: pending[s] }])) };
     }
 
-    // Add roll data for TinyMCE editors.
-    context.rollData = context.actor.getRollData();
+    // Roll data for TinyMCE/ProseMirror editors.
+    context.rollData = actor.getRollData();
 
-    // Enrich textarea content
-    context.enrichments = {
-      "biography": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.biography, {async: true})
+    // Source data for editable inputs (prevents active effect baking on submitOnChange)
+    const baseSource = actor._source.system ?? {};
+    const source = foundry.utils.deepClone(baseSource);
+    source.health ??= {};
+    source.health.value ??= 0;
+    source.fate ??= {};
+    source.fate.value ??= 0;
+    source.infos ??= {};
+    source.infos.hate ??= 0;
+    source.infos.fatigue ??= 0;
+    source.infos.crank ??= 0;
+    source.inventory ??= {};
+    source.inventory.gold ??= 0;
+    source.social ??= {};
+    source.social.guild ??= "";
+    source.biography ??= "";
+    context.source = source;
+
+    // Detect fields modified by Active Effects (effective !== base)
+    context.modified = {
+      hpValue: effectModified(source.health.value, actor.system.health?.value),
+      fateValue: effectModified(source.fate.value, actor.system.fate?.value),
+      hate: effectModified(source.infos.hate, actor.system.infos?.hate),
+      fatigue: effectModified(source.infos.fatigue, actor.system.infos?.fatigue),
+      crank: effectModified(source.infos.crank, actor.system.infos?.crank)
     };
 
-    // Prepare active effects
-    context.effects = prepareActiveEffectCategories(this.actor.effects);
-    context.statusPanel = getStatusPanel(this.actor);
+    // Enrich textarea / biography content
+    context.enrichments = {
+      biography: await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.biography ?? "", {
+        async: true,
+        rollData: context.rollData,
+        relativeTo: actor
+      })
+    };
+
+    // Prepare active effects and status panel
+    context.effects = prepareActiveEffectCategories(actor.effects);
+    context.statusPanel = getStatusPanel(actor);
 
     return context;
   }
@@ -99,9 +170,8 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
   /**
    * Organize and classify Items for Character sheets.
    *
-   * @param {Object} actorData The actor to prepare.
-   *
-   * @return {undefined}
+   * @param {Object} context The sheet context.
+   * @private
    */
   _prepareItems(context) {
     // Initialize containers.
@@ -242,7 +312,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "bags": itemsBag,
       "usables": itemsUsable,
       "gear": itemsGear,
-    }
+    };
 
     // Main / off hand slots (what each hand holds is deduced from the equipped items).
     const hands = getHands(this.actor);
@@ -262,7 +332,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "fate": itemsTicketFate,
       "connection": itemsTicketConnection,
       "reset": itemsTicketReset
-    }
+    };
 
     // Unequipped items fill the general inventory grid, one slot each, up to
     // the bag-derived maxSpace. Remaining slots render as empty placeholders
@@ -282,248 +352,124 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     context.social = {
       "connections": itemsConnection,
       "unions": itemsUnion
-    }
+    };
   }
 
   /* -------------------------------------------- */
+  /*  Form Data Processing                        */
+  /* -------------------------------------------- */
+
+  /** @override */
+  _processFormData(event, form, formData) {
+    const data = super._processFormData(event, form, formData);
+    // Ensure all numeric inputs preserve number type
+    for (const el of form.querySelectorAll("[data-dtype='Number'], input[type='number']")) {
+      const name = el.name;
+      if (!name) continue;
+      const val = foundry.utils.getProperty(data, name);
+      if (val !== undefined && val !== null && val !== "") {
+        const num = Number(val);
+        foundry.utils.setProperty(data, name, Number.isNaN(num) ? 0 : num);
+      } else if (val === "") {
+        foundry.utils.setProperty(data, name, 0);
+      }
+    }
+    return data;
+  }
+
+  /* -------------------------------------------- */
+  /*  Tabs Management                             */
+  /* -------------------------------------------- */
 
   /**
-   * ⋮ menu of the Race / Class / Subclass fields: change (selection window), edit or delete the item.
-   * @param {HTMLElement} element
+   * Synchronize active tab classes for each of the 5 tab groups.
    * @private
    */
-  _createOptionMenu(element) {
-    const field = target => target.closest('.option-field');
-    const item = target => this.actor.items.get(field(target).dataset.itemId);
-    new foundry.applications.ux.ContextMenu(element, '.option-menu', [
-      {
-        name: 'LHTRPG.CharacterOptions.Change',
-        icon: '<i class="fa-solid fa-magnifying-glass"></i>',
-        callback: target => OptionBrowser.open(this.actor, field(target).dataset.optionType)
-      },
-      {
-        name: 'LHTRPG.StatAllocation.Human.Menu',
-        icon: '<i class="fa-solid fa-person"></i>',
-        condition: target => isHumanRace(item(target)),
-        callback: target => chooseHumanStats(item(target))
-      },
-      {
-        name: 'LHTRPG.StatAllocation.Bonus.Menu',
-        icon: '<i class="fa-solid fa-chart-simple"></i>',
-        condition: target => field(target).dataset.optionType === 'class',
-        callback: () => allocateBonusPoints(this.actor)
-      },
-      {
-        name: 'LHTRPG.ButtonLabel.Edit',
-        icon: '<i class="fa-solid fa-pen-to-square"></i>',
-        callback: target => item(target)?.sheet.render(true)
-      },
-      {
-        name: 'LHTRPG.ButtonLabel.Delete',
-        icon: '<i class="fa-solid fa-trash"></i>',
-        callback: target => item(target)?.deleteDialog()
+  _syncTabs() {
+    for (const [group, activeTab] of Object.entries(this.tabGroups)) {
+      for (const nav of this.element.querySelectorAll(`nav[data-group="${group}"]`)) {
+        for (const a of nav.querySelectorAll("[data-tab]")) {
+          a.classList.toggle("active", a.dataset.tab === activeTab);
+        }
       }
-    ], { eventName: 'click', jQuery: false, fixed: true });
+      for (const tab of this.element.querySelectorAll(`.tab[data-group="${group}"]`)) {
+        tab.classList.toggle("active", tab.dataset.tab === activeTab);
+      }
+    }
   }
 
   /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
+  changeTab(tab, group, options = {}) {
+    super.changeTab(tab, group, options);
+    this.tabGroups[group] = tab;
+    this._syncTabs();
+  }
 
-    html.find('.item-throw').click(this._onItemThrow.bind(this));
+  /* -------------------------------------------- */
+  /*  Flyout Panel (Hate / Fatigue)               */
+  /* -------------------------------------------- */
 
-    // Use a potion, scroll… (usable items)
-    html.find('.item-use').click(ev => {
-      ev.preventDefault();
-      ev.stopPropagation();
-      const item = this.actor.items.get($(ev.currentTarget).parents(".item").data("itemId"));
-      if (item) useItem(item);
-    });
+  /**
+   * Apply the Hate/Fatigue flyout transform state.
+   * @private
+   */
+  _applyHateState() {
+    const btn = this.element.querySelector("#hate-button");
+    const content = this.element.querySelector("#hate");
+    if (!btn || !content) return;
+    btn.classList.toggle("active", this.#hateOpen);
+    content.style.transform = this.#hateOpen
+      ? "perspective(400px) rotateY(-30deg)"
+      : "perspective(400px) rotateY(-90deg)";
+  }
 
-    // Send an equipment's linked skill to chat without opening the item.
-    html.find('.linked-skill-throw-badge').click(async ev => {
-      ev.preventDefault();
-      ev.stopPropagation();
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      const skill = item?.system.linkedSkillUuid ? await fromUuid(item.system.linkedSkillUuid) : null;
-      if (skill) skill.ItemThrow();
-    });
+  /* -------------------------------------------- */
+  /*  Life Cycle Listeners                        */
+  /* -------------------------------------------- */
 
-    // Render the item sheet for viewing/editing prior to the editable check.
-    html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      item.sheet.render(true);
-    });
+  /** @override */
+  async _onFirstRender(context, options) {
+    await super._onFirstRender(context, options);
+    this._createOptionMenu(this.element);
+  }
 
-    // Render the item sheet for viewing/editing prior to the editable check.
-    html.find('.addItem a.item-controls').click(ev => {
-      $('.addItem .dropdown-content').toggleClass('show');
-    });
+  /** @override */
+  async _onRender(context, options) {
+    await super._onRender(context, options);
 
-    // Race / Class / Subclass: the name opens the item sheet, the empty field the selection window.
-    html.find('.option-field .option-name').click(ev => {
-      const item = this.actor.items.get(ev.currentTarget.closest('.option-field').dataset.itemId);
-      item?.sheet.render(true);
-    });
-    html.find('.class-img').click(() => {
-      const item = getOption(this.actor, 'class');
-      if (item) item.sheet.render(true);
-      else if (this.isEditable) OptionBrowser.open(this.actor, 'class');
-    });
-    if (this.isEditable) {
-      html.find('.option-field .option-browse').click(ev => {
-        OptionBrowser.open(this.actor, ev.currentTarget.closest('.option-field').dataset.optionType);
+    // Synchronize active tabs for all 5 groups
+    this._syncTabs();
+
+    // Re-apply hate/fatigue flyout state
+    this._applyHateState();
+
+    // Enter key on ticket rank input
+    for (const input of this.element.querySelectorAll(".ticket-rank-input")) {
+      input.addEventListener("keydown", async ev => {
+        if (ev.key !== "Enter") return;
+        ev.preventDefault();
+        const rank = Math.max(0, Math.floor(Number(ev.currentTarget.value) || 0));
+        await this._createTicket("Treasure", { rank });
       });
-      this._createOptionMenu(html[0]);
-      html.find('.rank-up').click(() => rankUp(this.actor));
-      html.find('.skill-browse').click(ev => SkillBrowser.open(this.actor, { tab: ev.currentTarget.dataset.subtype }));
     }
-
-    html.find('#hate-button').click(ev => {
-      let content = ev.target.nextElementSibling;
-      ev.target.classList.toggle("active");
-
-      if (content.style.transform === "perspective(400px) rotateY(-30deg)"){
-        content.style.transform = "perspective(400px) rotateY(-90deg)";
-        // this._onOpeningInfoWindow(false, this.actor);
-      } else {
-        content.style.transform = "perspective(400px) rotateY(-30deg)";    
-        // this._onOpeningInfoWindow(true, this.actor);
-      }
-
-    });
-
-    // Roll skill
-    html.find('.rollableSkill').click(this._onRollSkill.bind(this));
-
-    // -------------------------------------------------------------
-    // Everything below here is only needed if the sheet is editable
-    if (!this.isEditable) return;
 
     // Toggle statuses that have no data field (the others sync from their inputs)
     // Pursuit list: add/edit/remove Ratings
-    activateStatusPanelListeners(html, this.actor);
+    if (this.isEditable) {
+      activateStatusPanelListeners(this.element, this.actor);
 
-    html.find('.status-toggle').on("change", ev => {
-      this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
-    });
-
-    // Add Inventory Item
-    html.find('.item-create').click(this._onItemCreate.bind(this));
-
-    // Give an item or gold to another player character
-    html.find('.item-give').click(ev => {
-      ev.stopPropagation();
-      const item = this.actor.items.get(ev.currentTarget.closest(".item").dataset.itemId);
-      if (item) game.lhtrpg.piles.giveItem(item);
-    });
-    html.find('.gold-give').click(ev => {
-      ev.preventDefault();
-      game.lhtrpg.piles.giveGold(this.actor);
-    });
-
-    // Delete Inventory Item
-    html.find('.item-equip').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      // Only equipment goes in a slot (gear, potions… are carried, not equipped).
-      if (!item || !EQUIP_TYPES.includes(item.type)) return;
-      // Weapons and shields: fill the main hand, then the off hand (see hands.mjs).
-      if (["weapon", "shield"].includes(item.type)) {
-        const done = item.system.equipped ? unequipHand(this.actor, item) : equipInHand(this.actor, item);
-        return done.then(() => this.render(false));
+      for (const toggle of this.element.querySelectorAll(".status-toggle")) {
+        toggle.addEventListener("change", ev => {
+          this.actor.toggleStatusEffect(ev.currentTarget.dataset.statusId, { active: ev.currentTarget.checked });
+        });
       }
-      const equipped = !item.system.equipped;
-      const updates = [{ _id: item.id, "system.equipped": equipped }];
-
-      // When equipping, unequip whatever exceeds this type's slot capacity
-      // so items can't stack past the equipment slots shown on the sheet.
-      const capacity = EQUIP_SLOT_CAPACITY[item.type];
-      if (equipped && capacity) {
-        const othersEquipped = this.actor.items.filter(
-          i => i.type === item.type && i.system.equipped === true && i.id !== item.id
-        );
-        const overflow = othersEquipped.length - (capacity - 1);
-        for (let i = 0; i < overflow; i++) {
-          updates.push({ _id: othersEquipped[i].id, "system.equipped": false });
-        }
-      }
-
-      this.actor.updateEmbeddedDocuments("Item", updates);
-      li.slideUp(200, () => this.render(false));
-    });
-
-    // Delete Inventory Item
-    html.find('.item-delete').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      item.delete();
-      li.slideUp(200, () => this.render(false));
-    });
-
-    // Increase a ticket's stack quantity, creating the ticket if the slot is empty
-    html.find('.ticket-increment').click(ev => {
-      ev.preventDefault();
-      const itemId = ev.currentTarget.dataset.itemId;
-      const item = itemId ? this.actor.items.get(itemId) : null;
-      if (item) {
-        const quantity = Number(item.system.quantity) || 0;
-        item.update({ 'system.quantity': quantity + 1 });
-      } else {
-        const subtype = ev.currentTarget.dataset.subtype;
-        this._createTicket(subtype);
-      }
-    });
-
-    // Add a Treasure Ticket of the rank typed next to the button (stacks with that rank if owned)
-    const addRankedTicket = input => {
-      const rank = Math.max(0, Math.floor(Number(input.value) || 0));
-      this._createTicket('Treasure', { rank });
-    };
-    html.find('.ticket-rank-create').click(ev => {
-      ev.preventDefault();
-      addRankedTicket(ev.currentTarget.closest('.ticket-rank-add').querySelector('.ticket-rank-input'));
-    });
-    html.find('.ticket-rank-input').on('keydown', ev => {
-      if (ev.key !== 'Enter') return;
-      ev.preventDefault();
-      addRankedTicket(ev.currentTarget);
-    });
-
-    // Decrease a ticket's stack quantity, removing the item once it hits 0
-    html.find('.ticket-decrement').click(ev => {
-      ev.preventDefault();
-      const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
-      if (!item) return;
-      const quantity = Number(item.system.quantity) || 0;
-      if (quantity <= 1) {
-        item.delete();
-      } else {
-        item.update({ 'system.quantity': quantity - 1 });
-      }
-    });
-
-    // Active Effect management
-    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
-
-    // Tag management
-    activateTagInput(html, this.actor, this);
-
-
-    // Drag events for macros.
-    if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
-      });
     }
 
+    // Tag management
+    activateTagInput(this.element, this.actor, this);
+
     // Equip an item by dragging it onto one of the equipment slots.
-    html.find('.equip-slot').each((i, slot) => {
+    for (const slot of this.element.querySelectorAll(".equip-slot")) {
       slot.addEventListener("dragover", ev => {
         ev.preventDefault();
         ev.stopPropagation();
@@ -534,26 +480,76 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
         slot.classList.remove("drag-over");
         this._onEquipSlotDrop(ev, slot);
       });
-    });
-
-    // Swap the two equipped weapons between the hands.
-    html.find('.hand-swap').click(ev => {
-      ev.preventDefault();
-      ev.stopPropagation();
-      swapHands(this.actor);
-    });
+    }
 
     // Unequip an item by dragging it back onto the general inventory grid.
-    const inventoryList = html.find('.inventory-list')[0];
+    const inventoryList = this.element.querySelector(".inventory-list");
     if (inventoryList) {
       inventoryList.addEventListener("dragover", ev => ev.preventDefault());
       inventoryList.addEventListener("drop", ev => this._onInventoryDrop(ev));
     }
   }
 
+  /* -------------------------------------------- */
+  /*  Context Menus                               */
+  /* -------------------------------------------- */
+
   /**
-   * Extract the drag payload from a drop event, regardless of which API is
-   * available on this Foundry version.
+   * ⋮ menu of the Race / Class / Subclass fields: change (selection window), edit or delete the item.
+   * @param {HTMLElement} element
+   * @private
+   */
+  _createOptionMenu(element) {
+    const field = target => target.closest(".option-field");
+    const item = target => this.actor.items.get(field(target)?.dataset.itemId);
+    new foundry.applications.ux.ContextMenu(element, ".option-menu", [
+      {
+        name: "LHTRPG.CharacterOptions.Change",
+        icon: '<i class="fa-solid fa-magnifying-glass"></i>',
+        callback: target => OptionBrowser.open(this.actor, field(target).dataset.optionType)
+      },
+      {
+        name: "LHTRPG.StatAllocation.Human.Menu",
+        icon: '<i class="fa-solid fa-person"></i>',
+        condition: target => isHumanRace(item(target)),
+        callback: target => chooseHumanStats(item(target))
+      },
+      {
+        name: "LHTRPG.StatAllocation.Bonus.Menu",
+        icon: '<i class="fa-solid fa-chart-simple"></i>',
+        condition: target => field(target).dataset.optionType === "class",
+        callback: () => allocateBonusPoints(this.actor)
+      },
+      {
+        name: "LHTRPG.ButtonLabel.Edit",
+        icon: '<i class="fa-solid fa-pen-to-square"></i>',
+        callback: target => item(target)?.sheet.render(true)
+      },
+      {
+        name: "LHTRPG.ButtonLabel.Delete",
+        icon: '<i class="fa-solid fa-trash"></i>',
+        callback: target => item(target)?.deleteDialog()
+      }
+    ], { eventName: "click", jQuery: false, fixed: true });
+  }
+
+  /* -------------------------------------------- */
+  /*  Drag & Drop                                 */
+  /* -------------------------------------------- */
+
+  /** @override */
+  _canDragStart(selector) {
+    return this.actor.isOwner;
+  }
+
+  /** @override */
+  _canDragDrop(selector) {
+    // Players can drop items on sheets they don't own to give them away.
+    return true;
+  }
+
+  /**
+   * Extract the drag payload from a drop event.
    * @param {DragEvent} event
    * @returns {object|null}
    * @private
@@ -575,27 +571,21 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     return data;
   }
 
-  /** @override */
-  _canDragDrop(selector) {
-    // Players can drop items on sheets they don't own to give them away.
-    return true;
-  }
-
   /**
    * Items coming from another actor (a player, a loot pile, a chest...) are
    * moved through the piles API instead of being copied. Dragging from a
    * merchant buys the item.
    * @override
    */
-  async _onDropItem(event, data) {
-    const item = await Item.implementation.fromDropData(data);
-    const source = item?.parent;
+  async _onDropItem(event, item) {
+    if (!item) return null;
+    const source = item.parent;
     if ((source instanceof Actor) && (source.uuid !== this.actor.uuid)) {
       if (game.lhtrpg.piles.isMerchant(source) && !game.user.isGM) return game.lhtrpg.piles.buyItem(source, item, this.actor);
       return game.lhtrpg.piles.transferItem(item, this.actor);
     }
     if (!this.isEditable) return false;
-    return super._onDropItem(event, data);
+    return super._onDropItem(event, item);
   }
 
   /**
@@ -686,65 +676,21 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     if (updates.length) await this.actor.updateEmbeddedDocuments("Item", updates);
   }
 
-  /**
-   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
-   * @param {Event} event   The originating click event
-   * @private
-   */
+  /* -------------------------------------------- */
+  /*  Tickets & Rolls Helpers                     */
+  /* -------------------------------------------- */
+
   /**
    * Give the actor one ticket of `subtype`, copied from the system compendium (keeps its text).
    * Stacks with an owned ticket of the same subtype (and rank, for Treasure Tickets).
+   * @param {string} subtype
+   * @param {object} [options]
+   * @returns {Promise<Item>}
+   * @private
    */
   async _createTicket(subtype, options) {
     const data = await Item.implementation.ticketData(subtype, options);
     return Item.create(data, { parent: this.actor });
-  }
-
-  async _onItemCreate(event) {
-    event.preventDefault();
-    const header = event.currentTarget;
-    // Get the type of item to create.
-    const type = header.dataset.type;
-    if (type === 'ticket') return this._createTicket(header.dataset.subtype);
-    // Grab any data associated with this control.
-    const data = foundry.utils.duplicate(header.dataset);
-    // Initialize a default name.
-    const name = Item.implementation.defaultName({ type, parent: this.actor });
-    // Prepare the item object.
-    const itemData = {
-      name: name,
-      type: type,
-      system: data
-    };
-
-    // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.system["type"];
-
-    // Finally, create the item!
-    return await Item.create(itemData, {parent: this.actor});
-  }
-
-  /**
-   * Ability Check from the Stats tab: ask for a situational modifier, then roll.
-   * @param {Event} event   The originating click event
-   * @private
-   */
-  async _onRollSkill(event) {
-    event.preventDefault();
-    const { dice, bonus, name } = event.currentTarget.dataset;
-    const title = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`;
-    const mod = await foundry.applications.api.DialogV2.prompt({
-      window: { title },
-      content: await foundry.applications.handlebars.renderTemplate("systems/lhtrpg/templates/dialogs/rollDialog.html"),
-      ok: {
-        icon: "fas fa-dice",
-        label: game.i18n.localize("LHTRPG.ButtonLabel.Roll"),
-        callback: (event, button) => Number(button.form.elements.mod.value) || 0
-      },
-      rejectClose: false
-    });
-    if (mod === null) return;
-    return this.rollSkill(name, dice, bonus, mod);
   }
 
   /**
@@ -760,13 +706,202 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     return new Roll(formula).toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${skillName}`)}`,
-      rollMode: game.settings.get('core', 'rollMode'),
+      rollMode: game.settings.get("core", "rollMode")
     });
   }
 
-  _onItemThrow(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+  /* -------------------------------------------- */
+  /*  Actions                                     */
+  /* -------------------------------------------- */
+
+  static async #onEditImage(event, target) {
+    if (!this.isEditable) return;
+    const attr = target.dataset.edit ?? "img";
+    const current = foundry.utils.getProperty(this.actor, attr);
+    const fp = new FilePicker({
+      type: "image",
+      current,
+      callback: path => this.actor.update({ [attr]: path }),
+      top: this.position.top + 40,
+      left: this.position.left + 10
+    });
+    return fp.browse();
+  }
+
+  static #onItemThrow(event, target) {
+    const itemId = target.closest(".item")?.dataset.itemId;
     this.actor.items.get(itemId)?.ItemThrow();
+  }
+
+  static #onItemUse(event, target) {
+    const itemId = target.closest(".item")?.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item) useItem(item);
+  }
+
+  static async #onLinkedSkillThrow(event, target) {
+    const itemId = target.closest(".item")?.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    const skill = item?.system.linkedSkillUuid ? await fromUuid(item.system.linkedSkillUuid) : null;
+    if (skill) skill.ItemThrow();
+  }
+
+  static #onItemEdit(event, target) {
+    const itemId = target.closest(".item")?.dataset.itemId;
+    this.actor.items.get(itemId)?.sheet.render(true);
+  }
+
+  static async #onItemDelete(event, target) {
+    if (!this.isEditable) return;
+    const itemId = target.closest(".item")?.dataset.itemId;
+    await this.actor.items.get(itemId)?.delete();
+  }
+
+  static async #onItemEquip(event, target) {
+    if (!this.isEditable) return;
+    const itemId = target.closest(".item")?.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (!item || !EQUIP_TYPES.includes(item.type)) return;
+
+    if (["weapon", "shield"].includes(item.type)) {
+      if (item.system.equipped) await unequipHand(this.actor, item);
+      else await equipInHand(this.actor, item);
+      return;
+    }
+
+    const equipped = !item.system.equipped;
+    const updates = [{ _id: item.id, "system.equipped": equipped }];
+
+    const capacity = EQUIP_SLOT_CAPACITY[item.type];
+    if (equipped && capacity) {
+      const othersEquipped = this.actor.items.filter(
+        i => i.type === item.type && i.system.equipped === true && i.id !== item.id
+      );
+      const overflow = othersEquipped.length - (capacity - 1);
+      for (let i = 0; i < overflow; i++) {
+        updates.push({ _id: othersEquipped[i].id, "system.equipped": false });
+      }
+    }
+
+    await this.actor.updateEmbeddedDocuments("Item", updates);
+  }
+
+  static async #onItemCreate(event, target) {
+    if (!this.isEditable) return;
+    const type = target.dataset.type;
+    if (type === "ticket") return this._createTicket(target.dataset.subtype);
+    const data = foundry.utils.duplicate(target.dataset);
+    const name = Item.implementation.defaultName({ type, parent: this.actor });
+    const itemData = {
+      name,
+      type,
+      system: data
+    };
+    delete itemData.system.type;
+    delete itemData.system.action;
+    return Item.create(itemData, { parent: this.actor });
+  }
+
+  static #onItemGive(event, target) {
+    const itemId = target.closest(".item")?.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item) game.lhtrpg.piles.giveItem(item);
+  }
+
+  static #onGoldGive() {
+    game.lhtrpg.piles.giveGold(this.actor);
+  }
+
+  static #onOptionName(event, target) {
+    const field = target.closest(".option-field");
+    const item = this.actor.items.get(field?.dataset.itemId);
+    item?.sheet.render(true);
+  }
+
+  static #onClassImg() {
+    const item = getOption(this.actor, "class");
+    if (item) item.sheet.render(true);
+    else if (this.isEditable) OptionBrowser.open(this.actor, "class");
+  }
+
+  static #onOptionBrowse(event, target) {
+    if (!this.isEditable) return;
+    const field = target.closest(".option-field");
+    if (field) OptionBrowser.open(this.actor, field.dataset.optionType);
+  }
+
+  static #onRankUp() {
+    if (this.isEditable) rankUp(this.actor);
+  }
+
+  static #onSkillBrowse(event, target) {
+    if (this.isEditable) SkillBrowser.open(this.actor, { tab: target.dataset.subtype });
+  }
+
+  static async #onRollCheck(event, target) {
+    const { dice, bonus, name } = target.dataset;
+    const title = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`;
+    const mod = await foundry.applications.api.DialogV2.prompt({
+      window: { title },
+      content: await foundry.applications.handlebars.renderTemplate("systems/lhtrpg/templates/dialogs/rollDialog.html"),
+      ok: {
+        icon: "fas fa-dice",
+        label: game.i18n.localize("LHTRPG.ButtonLabel.Roll"),
+        callback: (event, button) => Number(button.form.elements.mod.value) || 0
+      },
+      rejectClose: false
+    });
+    if (mod === null) return;
+    return this.rollSkill(name, dice, bonus, mod);
+  }
+
+  static async #onTicketIncrement(event, target) {
+    if (!this.isEditable) return;
+    const itemId = target.dataset.itemId;
+    const item = itemId ? this.actor.items.get(itemId) : null;
+    if (item) {
+      const quantity = Number(item.system.quantity) || 0;
+      await item.update({ "system.quantity": quantity + 1 });
+    } else {
+      const subtype = target.dataset.subtype;
+      await this._createTicket(subtype);
+    }
+  }
+
+  static async #onTicketDecrement(event, target) {
+    if (!this.isEditable) return;
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (!item) return;
+    const quantity = Number(item.system.quantity) || 0;
+    if (quantity <= 1) await item.delete();
+    else await item.update({ "system.quantity": quantity - 1 });
+  }
+
+  static async #onTicketRankCreate(event, target) {
+    if (!this.isEditable) return;
+    const input = target.closest(".ticket-rank-add")?.querySelector(".ticket-rank-input");
+    if (input) {
+      const rank = Math.max(0, Math.floor(Number(input.value) || 0));
+      await this._createTicket("Treasure", { rank });
+    }
+  }
+
+  static async #onHandSwap() {
+    if (this.isEditable) await swapHands(this.actor);
+  }
+
+  static #onToggleHate() {
+    this.#hateOpen = !this.#hateOpen;
+    this._applyHateState();
+  }
+
+  static #onAddItemMenu(event, target) {
+    const dropdown = target.closest(".addItem")?.querySelector(".dropdown-content");
+    dropdown?.classList.toggle("show");
+  }
+
+  static async #onManageActiveEffect(event, target) {
+    return onManageActiveEffect(event, this.actor, target);
   }
 }

@@ -104,21 +104,87 @@
 }
 
 /* Styles limited to lhtrpg sheets */
-div.app.lhtrpg.actor {
+.lhtrpg.sheet.actor {
   background: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
+  /* V2 windows blur what lies behind them: this sheet is a transparent frame over the canvas. */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
 }
 
-div.app.lhtrpg.actor div.window-resizable-handle {
+.lhtrpg.sheet.actor .window-resize-handle,
+.lhtrpg.sheet.actor div.window-resizable-handle {
+  display: none;
   visibility: hidden;
 }
 
-div.app.lhtrpg.actor input[type="checkbox"] {
+/* AppV2 root container: keep natural section heights */
+.lhtrpg.sheet.actor .lhtrpg-character-sheet {
+  min-height: 100%;
+}
+
+.lhtrpg.sheet.actor .lhtrpg-character-sheet > * {
+  flex: 0 0 auto;
+}
+
+/* Undo the AppV2 element styles that V1 windows did not get: headings in the display font (bold,
+   24px), 32px-high inputs and spaced tab navs. Core styles are in @layer, so zero-specificity
+   :where() rules beat them while any of the sheet's own rules still win. */
+.lhtrpg.sheet.actor {
+  --input-height: var(--form-field-height, 26px);
+}
+
+.lhtrpg.sheet.actor .window-content {
+  line-height: normal;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+:where(.lhtrpg.sheet.actor) :where(h1, h2, h3, h4) {
+  font-family: "Signika", sans-serif;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: normal;
+  color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+:where(.lhtrpg.sheet.actor) :where(input[type="text"], input[type="number"]) {
+  width: calc(100% - 2px);
+  padding: 1px 3px;
+  line-height: normal;
+  text-align: center;
+}
+
+:where(.lhtrpg.sheet.actor) :where(input.guild-input, input.lh-status-tag, input.tag-entry-input) {
+  text-align: start;
+}
+
+/* Tags (Stats tab): label and chips aligned to the left. */
+.lhtrpg.sheet.actor .bad-status .resource {
+  text-align: start;
+}
+
+:where(.lhtrpg.sheet.actor) :where(nav.tabs) {
+  gap: 0;
+  line-height: normal;
+}
+
+.lhtrpg.sheet.actor input[type="checkbox"] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
   /* Not removed via appearance */
   margin: 0;
   font: inherit;
@@ -129,7 +195,7 @@ div.app.lhtrpg.actor input[type="checkbox"] {
   place-content: center;
 }
 
-div.app.lhtrpg.actor input[type="checkbox"]::before {
+.lhtrpg.sheet.actor input[type="checkbox"]::before {
   color: #d6ffda;
   content: "";
   width: 0.65em;
@@ -151,23 +217,26 @@ div.app.lhtrpg.actor input[type="checkbox"]::before {
   clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 }
 
-div.app.lhtrpg.actor input[type="checkbox"]:checked::before {
+.lhtrpg.sheet.actor input[type="checkbox"]:checked::before {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-div.app.lhtrpg.actor input[type="checkbox"]:checked {
+.lhtrpg.sheet.actor input[type="checkbox"]:checked {
   -webkit-filter: none;
   background-color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .window-header {
+.lhtrpg.sheet.actor .window-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  border: none;
   border-bottom: none;
+  background: transparent;
+  box-shadow: none;
   top: 25px;
   left: 240px;
   height: 50px;
@@ -177,12 +246,15 @@ div.app.lhtrpg.actor .window-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 350px;
   flex: 0 0 350px;
-  padding-left: 20px;
+  padding: 0 0 0 20px;
+  margin: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-div.app.lhtrpg.actor .window-header h4.window-title,
-div.app.lhtrpg.actor .window-header a.header-button.configure-token,
-div.app.lhtrpg.actor .window-header a.header-button.configure-sheet {
+.lhtrpg.sheet.actor .window-header .window-title,
+.lhtrpg.sheet.actor .window-header .header-control {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -191,7 +263,7 @@ div.app.lhtrpg.actor .window-header a.header-button.configure-sheet {
   flex: 0 0 fit-content;
 }
 
-div.app.lhtrpg.actor .window-header h4.window-title {
+.lhtrpg.sheet.actor .window-header .window-title {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -199,42 +271,80 @@ div.app.lhtrpg.actor .window-header h4.window-title {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 80px;
   flex: 0 0 80px;
+  font-family: "Signika", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #d6ffda;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-div.app.lhtrpg.actor .window-header a.header-button.close {
+.lhtrpg.sheet.actor .window-header .header-control {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #d6ffda;
+  padding: 2px 4px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.lhtrpg.sheet.actor .window-header .header-control:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #d6ffda;
+  box-shadow: none;
+}
+
+.lhtrpg.sheet.actor .window-header button[data-action="close"] {
   position: absolute;
   top: 5px;
-  left: 355px;
+  left: 363px;
+  background-color: transparent;
   background-image: url("../assets/ui/button_close.webp");
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
+  box-shadow: none;
   height: 60px;
   width: 60px;
   font-size: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
   -webkit-transition: background-size 0.1s ease-in;
   -o-transition: background-size 0.1s ease-in;
   transition: background-size 0.1s ease-in;
 }
 
-div.app.lhtrpg.actor .window-header a.header-button.close:hover {
+.lhtrpg.sheet.actor .window-header button[data-action="close"] i {
+  display: none;
+}
+
+.lhtrpg.sheet.actor .window-header button[data-action="close"]:hover {
   -webkit-filter: brightness(1.25) drop-shadow(0 0 3px white);
   filter: brightness(1.25) drop-shadow(0 0 3px white);
   background-size: 55px;
+  box-shadow: none;
 }
 
-div.app.lhtrpg.actor .window-header a.header-button.close:active {
+.lhtrpg.sheet.actor .window-header button[data-action="close"]:active {
   -webkit-filter: brightness(0.7);
   filter: brightness(0.7);
   background-size: 50px;
 }
 
-div.app.lhtrpg.actor section.window-content {
+.lhtrpg.sheet.actor section.window-content {
   background: transparent;
   overflow: hidden;
-  background: url("../assets/ui/bg_charsheet.webp");
+  background-image: url("../assets/ui/bg_charsheet.webp");
   background-size: 700px 700px;
   background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.4));
   filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.4));
   overflow: visible;
@@ -243,13 +353,13 @@ div.app.lhtrpg.actor section.window-content {
 /* The Skills and Items tabs use a variant background with the section-title
    underline removed, since that line used to cross their tab-title text and
    made it unreadable. Other tabs keep the original artwork. */
-div.app.lhtrpg.actor:has(.tab[data-tab="skills"].active) section.window-content,
-div.app.lhtrpg.actor:has(.tab[data-tab="items"].active) section.window-content,
-div.app.lhtrpg.actor:has(.tab[data-group="primary"][data-tab="stats"].active .tab[data-group="stats"][data-tab="status"].active) section.window-content {
+.lhtrpg.sheet.actor:has(.tab[data-tab="skills"].active) section.window-content,
+.lhtrpg.sheet.actor:has(.tab[data-tab="items"].active) section.window-content,
+.lhtrpg.sheet.actor:has(.tab[data-group="primary"][data-tab="stats"].active .tab[data-group="stats"][data-tab="status"].active) section.window-content {
   background-image: url("../assets/ui/bg_charsheet_notitle.webp");
 }
 
-div.app.lhtrpg.actor .profile-img {
+.lhtrpg.sheet.actor .profile-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 285px;
   flex: 0 0 285px;
@@ -264,7 +374,7 @@ div.app.lhtrpg.actor .profile-img {
   border: 0px transparent;
 }
 
-div.app.lhtrpg.actor .class-img {
+.lhtrpg.sheet.actor .class-img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 130px;
   flex: 0 0 130px;
@@ -277,7 +387,7 @@ div.app.lhtrpg.actor .class-img {
 }
 
 
-div.app.lhtrpg.actor .sheet-header .collapsible {
+.lhtrpg.sheet.actor .sheet-header .collapsible {
   position: absolute;
   top: 184px;
   left: 623px;
@@ -296,7 +406,7 @@ div.app.lhtrpg.actor .sheet-header .collapsible {
   z-index: 1;
 }
 
-div.app.lhtrpg.actor .sheet-header .active {
+.lhtrpg.sheet.actor .sheet-header .active {
   -webkit-transform: rotate(540deg);
   -ms-transform: rotate(540deg);
   transform: rotate(540deg);
@@ -311,13 +421,13 @@ div.app.lhtrpg.actor .sheet-header .active {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-div.app.lhtrpg.actor .sheet-header .collapsible:hover {
+.lhtrpg.sheet.actor .sheet-header .collapsible:hover {
   background-size: 65px;
   -webkit-filter: drop-shadow(0px 0px 3px white);
   filter: drop-shadow(0px 0px 3px white);
 }
 
-div.app.lhtrpg.actor .sheet-header .content {
+.lhtrpg.sheet.actor .sheet-header .content {
   overflow: hidden;
   -webkit-transition: -webkit-transform 0.05s ease-out;
   transition: -webkit-transform 0.05s ease-out;
@@ -326,7 +436,7 @@ div.app.lhtrpg.actor .sheet-header .content {
   transition: transform 0.05s ease-out, -webkit-transform 0.05s ease-out;
 }
 
-div.app.lhtrpg.actor .sheet-header .info-windows {
+.lhtrpg.sheet.actor .sheet-header .info-windows {
   position: absolute;
   top: 135px;
   left: 640px;
@@ -335,8 +445,8 @@ div.app.lhtrpg.actor .sheet-header .info-windows {
   max-width: 211px;
 }
 
-div.app.lhtrpg.actor .sheet-header .info-windows .hate-window,
-div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window {
+.lhtrpg.sheet.actor .sheet-header .info-windows .hate-window,
+.lhtrpg.sheet.actor .sheet-header .info-windows .fatigue-window {
   position: relative;
   margin-top: 5px;
   height: 65px;
@@ -346,10 +456,10 @@ div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window {
   background-repeat: no-repeat;
 }
 
-div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .hate-label,
-div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .fatigue-label,
-div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .hate-label,
-div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-label {
+.lhtrpg.sheet.actor .sheet-header .info-windows .hate-window .hate-label,
+.lhtrpg.sheet.actor .sheet-header .info-windows .hate-window .fatigue-label,
+.lhtrpg.sheet.actor .sheet-header .info-windows .fatigue-window .hate-label,
+.lhtrpg.sheet.actor .sheet-header .info-windows .fatigue-window .fatigue-label {
   text-align: center;
   font-size: 16px;
   color: white;
@@ -359,10 +469,10 @@ div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-label 
   width: 65px;
 }
 
-div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .hate-input,
-div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .fatigue-input,
-div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .hate-input,
-div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-input {
+.lhtrpg.sheet.actor .sheet-header .info-windows .hate-window .hate-input,
+.lhtrpg.sheet.actor .sheet-header .info-windows .hate-window .fatigue-input,
+.lhtrpg.sheet.actor .sheet-header .info-windows .fatigue-window .hate-input,
+.lhtrpg.sheet.actor .sheet-header .info-windows .fatigue-window .fatigue-input {
   font-size: 32px;
   height: 32px;
   width: 140px;
@@ -374,7 +484,7 @@ div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-input 
   left: 38px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields {
+.lhtrpg.sheet.actor .sheet-header .header-fields {
   position: absolute;
   top: 50px;
   left: 295px;
@@ -386,7 +496,7 @@ div.app.lhtrpg.actor .sheet-header .header-fields {
 }
 
 
-div.app.lhtrpg.actor .sheet-header .header-fields .charname {
+.lhtrpg.sheet.actor .sheet-header .header-fields .charname {
   font-size: 50px;
   position: relative;
   top: -5px;
@@ -396,11 +506,11 @@ div.app.lhtrpg.actor .sheet-header .header-fields .charname {
   text-align: center;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .charname input {
+.lhtrpg.sheet.actor .sheet-header .header-fields .charname input {
   vertical-align: -webkit-baseline-middle;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .race {
+.lhtrpg.sheet.actor .sheet-header .header-fields .race {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,7 +523,7 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .race label {
+.lhtrpg.sheet.actor .sheet-header .header-fields .race label {
   -ms-flex-preferred-size: 50px;
   flex-basis: 50px;
   font-size: 20px;
@@ -421,24 +531,24 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race label {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .classes {
+.lhtrpg.sheet.actor .sheet-header .header-fields .classes {
   margin-top: 15px;
   height: 85px;
   width: 205px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .classes .subclass {
+.lhtrpg.sheet.actor .sheet-header .header-fields .classes .subclass {
   font-size: 20px;
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .classes .class {
+.lhtrpg.sheet.actor .sheet-header .header-fields .classes .class {
   font-size: 20px;
   color: #d6ffda;
   height: 50px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .levels {
+.lhtrpg.sheet.actor .sheet-header .header-fields .levels {
   font-size: 40px;
   font-family: "Edu SA Beginner", cursive;
   position: absolute;
@@ -448,11 +558,13 @@ div.app.lhtrpg.actor .sheet-header .header-fields .levels {
   width: 70px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .levels input {
+.lhtrpg.sheet.actor .sheet-header .header-fields .levels input {
   height: 50px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .levels .rank-up {
+.lhtrpg.sheet.actor .sheet-header .header-fields .levels .rank-up {
+  display: inline-block;
+  height: auto;
   position: relative;
   left: -20px;
   width: 90px;
@@ -468,12 +580,12 @@ div.app.lhtrpg.actor .sheet-header .header-fields .levels .rank-up {
   border-radius: 4px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .levels .rank-up:hover {
+.lhtrpg.sheet.actor .sheet-header .header-fields .levels .rank-up:hover {
   background: rgba(95, 211, 167, 0.3);
   box-shadow: 0 0 6px #5fd3a7;
 }
 
-div.app.lhtrpg.actor .sheet-body {
+.lhtrpg.sheet.actor .sheet-body {
   position: absolute;
   top: 320px;
   left: 139px;
@@ -483,17 +595,17 @@ div.app.lhtrpg.actor .sheet-body {
   color: white;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats {
+.lhtrpg.sheet.actor .sheet-body .stats {
   margin-left: 5px;
   margin-right: 5px;
   gap: 4px;
   grid-template-rows: 95px 95px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs,
-div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs,
-div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs {
+.lhtrpg.sheet.actor .sheet-body .stats nav.status-tabs,
+.lhtrpg.sheet.actor .sheet-body .stats nav.skills-tabs,
+.lhtrpg.sheet.actor .sheet-body .stats nav.bio-tabs,
+.lhtrpg.sheet.actor .sheet-body .stats nav.items-tabs {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,10 +623,10 @@ div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs {
   justify-content: flex-start;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a,
-div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs a,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a,
-div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs a {
+.lhtrpg.sheet.actor .sheet-body .stats nav.status-tabs a,
+.lhtrpg.sheet.actor .sheet-body .stats nav.skills-tabs a,
+.lhtrpg.sheet.actor .sheet-body .stats nav.bio-tabs a,
+.lhtrpg.sheet.actor .sheet-body .stats nav.items-tabs a {
   background: url("../assets/ui/confirm-tab.webp");
   background-size: 100%;
   background-position: center;
@@ -536,15 +648,15 @@ div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs a {
   transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a.active,
-div.app.lhtrpg.actor .sheet-body .stats nav.skills-tabs a.active,
-div.app.lhtrpg.actor .sheet-body .stats nav.bio-tabs a.active,
-div.app.lhtrpg.actor .sheet-body .stats nav.items-tabs a.active {
+.lhtrpg.sheet.actor .sheet-body .stats nav.status-tabs a.active,
+.lhtrpg.sheet.actor .sheet-body .stats nav.skills-tabs a.active,
+.lhtrpg.sheet.actor .sheet-body .stats nav.bio-tabs a.active,
+.lhtrpg.sheet.actor .sheet-body .stats nav.items-tabs a.active {
   -webkit-filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
   filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status {
   gap: 14px;
   text-align: center;
   margin-top: 0;
@@ -552,12 +664,12 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status {
   row-gap: 2px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status img {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status img {
   border: none;
   height: 25px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.hp h4:first-child {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.hp h4:first-child {
   background: -webkit-linear-gradient(#63da30, #e2fb2f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -565,7 +677,7 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status div.hp h4:first-child {
   font-weight: bold;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.hp input {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.hp input {
   background: -webkit-linear-gradient(#63da30, #e2fb2f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -574,11 +686,11 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status div.hp input {
   text-align: right;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.hp input[name="system.health.max"] {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.hp input[name="system.health.max"] {
   text-align: left;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.fate h4:first-child {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.fate h4:first-child {
   background: -webkit-linear-gradient(#17d7f0, #c484da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -586,7 +698,7 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status div.fate h4:first-child {
   font-weight: bold;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.fate input {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.fate input {
   background: -webkit-linear-gradient(#17d7f0, #c484da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -595,27 +707,28 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status div.fate input {
   text-align: right;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status div.fate input[name="system.fate.max"] {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status div.fate input[name="system.fate.max"] {
   text-align: left;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate {
   text-align: center;
   grid-column-end: span 3;
   font-size: 25px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp h4,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate h4 {
   color: #d6ffda;
   margin: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .hp-gauge,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .fate-gauge,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .hp-gauge,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .fate-gauge {
+  flex-wrap: nowrap;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
@@ -624,71 +737,78 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge {
   justify-content: center;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge input {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .hp-gauge input,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .fate-gauge input,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .hp-gauge input,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .fate-gauge input {
   font-family: "Edu SA Beginner", cursive;
   font-size: 25px;
   text-shadow: none;
+  /* Each field as wide as its number (three-digit HP did not fit); the gauge centers them. */
+  field-sizing: content;
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 1ch;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge span,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge span,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge span,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge span {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .hp-gauge span,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .hp .fate-gauge span,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .hp-gauge span,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .fate .fate-gauge span {
   -webkit-box-flex: inherit;
   -ms-flex-positive: inherit;
   flex-grow: inherit;
   color: #9cf3da;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power {
   margin-top: 0;
   grid-template-rows: 20px 50px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power h4 {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power h4:lang(ja) {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power h4:lang(ja) {
   font-size: 18px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-attack,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-resto,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-magic {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power .power-attack,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power .power-resto,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .power .power-magic {
   position: relative;
   top: -10px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .defense {
   margin-top: 0;
   grid-template-rows: 20px 50px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .defense h4 {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense h4:lang(ja) {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .defense h4:lang(ja) {
   font-size: 18px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense .defense-phys,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense .defense-magic {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .defense .defense-phys,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .defense .defense-magic {
   position: relative;
   top: -10px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit {
   margin: 0;
 }
 
 /* Speed / Initiative: the value next to its icon (the input comes first in the markup). */
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .speed,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .initiative {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -696,20 +816,20 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative {
   gap: 4px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative input {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .speed input,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .initiative input {
   flex: 0 0 28px;
   width: 28px;
   text-align: left;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .speed h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit .initiative h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .speed h4,
+.lhtrpg.sheet.actor .sheet-body .stats .battle-status .speedInit .initiative h4 {
   flex: 0 0 auto;
   margin: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes {
   gap: 14px;
   -webkit-column-gap: 6px;
   -moz-column-gap: 6px;
@@ -719,24 +839,24 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes {
   margin-top: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes h4 {
   color: #d6ffda;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: -5px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes h4.attr-name {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes h4.attr-name {
   font-size: 20px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .grid {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .grid {
   gap: 0px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .attr-inputs {
   font-family: "Edu SA Beginner", cursive;
   /* Keeps the height of the removed third row (bonus points), so the checks below and the
      Speed / Initiative row next to it stay in place. */
@@ -746,26 +866,26 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs {
   justify-content: center;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs .attr-mod-input {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .attr-inputs .attr-mod-input {
   color: #d6ffda;
   font-size: 25px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .attr-inputs .attr-input {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .attr-inputs .attr-input {
   position: relative;
   top: -5px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check h4 {
   font-family: "Noto Serif JP", serif;
   font-size: 11px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check h4:lang(ja) {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check h4:lang(ja) {
   font-size: 18px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check div {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check div {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -775,7 +895,7 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .check div {
   align-items: baseline;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check input {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check input {
   min-width: 0;
   padding: 0;
   -webkit-box-flex: 0.2;
@@ -783,7 +903,7 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .check input {
   flex-grow: 0.2;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check span {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check span {
   color: #d6ffda;
   -webkit-box-flex: 0.1;
   -ms-flex-positive: 0.1;
@@ -791,23 +911,23 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .check span {
   min-width: 0;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check:hover {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check:hover {
   background-color: #d6ffda;
   border-radius: 4px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check:hover h4, div.app.lhtrpg.actor .sheet-body .stats .attributes .check:hover span, div.app.lhtrpg.actor .sheet-body .stats .attributes .check:hover input {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check:hover h4, .lhtrpg.sheet.actor .sheet-body .stats .attributes .check:hover span, .lhtrpg.sheet.actor .sheet-body .stats .attributes .check:hover input {
   color: #081910;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .attributes .check:active, div.app.lhtrpg.actor .sheet-body .stats .attributes .check:focus {
+.lhtrpg.sheet.actor .sheet-body .stats .attributes .check:active, .lhtrpg.sheet.actor .sheet-body .stats .attributes .check:focus {
   background-color: #d6ffda;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 5px 2px #d6ffda;
   box-shadow: 0px 0px 5px 2px #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
@@ -819,52 +939,52 @@ div.app.lhtrpg.actor .sheet-body .stats .bad-status {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status img {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status img {
   height: 25px;
   border: none;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status input {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status input {
   font-size: 16px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .tag-list {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .tag-list {
   height: 50px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .tag-list .tag {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .tag-list .tag {
   max-height: 25px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .rated-statuses {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .rated-statuses {
   gap: 0;
   margin-top: 0;
   grid-template-rows: 38px 38px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .rated-statuses div:nth-child(2) {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .rated-statuses div:nth-child(2) {
   grid-column-start: 2;
   grid-column-end: 6;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .barrier h4,
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .regen h4,
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .cancel h4,
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .pursuit h4 {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .barrier h4,
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .regen h4,
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .decay h4,
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .cancel h4,
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .pursuit h4 {
   position: relative;
   top: -8px;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .barrier h4:lang(ja),
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .regen h4:lang(ja),
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .decay h4:lang(ja),
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .cancel h4:lang(ja),
-div.app.lhtrpg.actor .sheet-body .stats .bad-status .pursuit h4:lang(ja) {
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .barrier h4:lang(ja),
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .regen h4:lang(ja),
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .decay h4:lang(ja),
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .cancel h4:lang(ja),
+.lhtrpg.sheet.actor .sheet-body .stats .bad-status .pursuit h4:lang(ja) {
   font-size: 18px;
 }
 
-div.app.lhtrpg.actor .sheet-body h4.tab-title {
+.lhtrpg.sheet.actor .sheet-body h4.tab-title {
   position: absolute;
   top: 317px;
   left: 34px;
@@ -875,20 +995,20 @@ div.app.lhtrpg.actor .sheet-body h4.tab-title {
   color: #d6ffda;
 }
 
-div.app.lhtrpg.actor .bio-body {
+.lhtrpg.sheet.actor .bio-body {
   height: 225px;
 }
 
-div.app.lhtrpg.actor .bio-body div[data-edit="system.biography"] {
+.lhtrpg.sheet.actor .bio-body div[data-edit="system.biography"] {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-div.app.lhtrpg.actor .bio-body .item h4 {
+.lhtrpg.sheet.actor .bio-body .item h4 {
   text-align: center;
 }
 
-div.app.lhtrpg.actor .bio-body .guild {
+.lhtrpg.sheet.actor .bio-body .guild {
   position: absolute;
   top: 232px;
   height: 75px;
@@ -896,22 +1016,22 @@ div.app.lhtrpg.actor .bio-body .guild {
   margin: 0 30px 0 30px;
 }
 
-div.app.lhtrpg.actor .bio-body .guild h4 {
+.lhtrpg.sheet.actor .bio-body .guild h4 {
   font-size: 20px;
   color: #d6ffda;
   margin: 0;
 }
 
-div.app.lhtrpg.actor .bio-body .guild .guild-input {
+.lhtrpg.sheet.actor .bio-body .guild .guild-input {
   font-size: 40px;
   height: 60px;
   padding: 0;
   padding-bottom: 20px;
 }
 
-div.app.lhtrpg.actor .sheet-tabs {
+.lhtrpg.sheet.actor .sheet-tabs {
   position: absolute;
-  top: 320px;
+  top: 324px;
   left: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -923,19 +1043,19 @@ div.app.lhtrpg.actor .sheet-tabs {
   border: none;
 }
 
-div.app.lhtrpg.actor .sheet-tabs img {
+.lhtrpg.sheet.actor .sheet-tabs img {
   border: none;
   height: 60px;
 }
 
-div.app.lhtrpg.actor .sheet-tabs a {
+.lhtrpg.sheet.actor .sheet-tabs a {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   margin-bottom: 5px;
   padding: 0;
 }
 
-div.app.lhtrpg.actor .sheet-tabs a.active {
+.lhtrpg.sheet.actor .sheet-tabs a.active {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   -webkit-transition: -webkit-filter 0.3s ease-out;
@@ -945,12 +1065,12 @@ div.app.lhtrpg.actor .sheet-tabs a.active {
   transition: filter 0.3s ease-out, -webkit-filter 0.3s ease-out;
 }
 
-div.app.lhtrpg.actor .items-list {
+.lhtrpg.sheet.actor .items-list {
   max-height: 290px;
   background-color: rgba(26, 41, 34, 0.9);
 }
 
-div.app.lhtrpg.actor.minimized h4.window-title {
+.lhtrpg.sheet.actor.minimized .window-title {
   display: block !important;
   text-align: center;
   font-family: "Noto Serif JP", serif;
@@ -964,7 +1084,11 @@ div.app.lhtrpg.actor.minimized h4.window-title {
   height: auto;
 }
 
-div.app.lhtrpg.actor.minimized .window-header {
+.lhtrpg.sheet.actor.minimized .window-header {
+  position: static;
+  top: auto;
+  left: auto;
+  padding: 0;
   height: 78px;
   width: 222px;
   border: 0;
@@ -979,7 +1103,7 @@ div.app.lhtrpg.actor.minimized .window-header {
   justify-content: center;
 }
 
-div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
+.lhtrpg.sheet.actor.minimized .window-header button[data-action="close"] {
   position: absolute;
   top: -10px;
   left: 165px;
@@ -2738,8 +2862,13 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   font-family: "Signika", sans-serif;
   font-size: 13px;
   font-weight: 400;
+  line-height: normal;
   color: inherit;
   margin: 0;
+  /* overflow-x: hidden alone (see .items-list .item-name h4) makes the y axis scrollable: a thin
+     scrollbar showed next to each name. */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lhtrpg.sheet.monster .sheet-body.monster {
@@ -3035,7 +3164,7 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   white-space: nowrap;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status {
   display: flex;
   align-items: center;
@@ -3048,20 +3177,20 @@ div.app.lhtrpg .lh-status-panel .lh-status,
   transition: opacity 0.1s, background-color 0.1s;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status:hover,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status:hover,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status:hover {
   opacity: 0.85;
   background: rgba(74, 208, 179, 0.12);
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status.active,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status.active,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status.active {
   opacity: 1;
   background: rgba(212, 160, 23, 0.25);
   box-shadow: inset 2px 0 0 #d4a017;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status img,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status img,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status img {
   flex: 0 0 18px;
   width: 18px;
@@ -3071,7 +3200,7 @@ div.app.lhtrpg .lh-status-panel .lh-status img,
   object-fit: cover;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-label,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-label,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-label {
   flex: 1;
   min-width: 0;
@@ -3081,12 +3210,12 @@ div.app.lhtrpg .lh-status-panel .lh-status-label,
 }
 
 /* The whole row is the toggle: hide the checkbox itself */
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-check,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status input.lh-status-check,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status input.lh-status-check {
   display: none;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status input.lh-status-rating,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status input.lh-status-rating {
   flex: 0 0 30px;
   width: 30px;
@@ -3101,13 +3230,13 @@ div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating,
 }
 
 /* List statuses (Pursuit): add button next to the input, entries listed below */
-div.app.lhtrpg .lh-status-panel .lh-status--list,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status--list,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status--list {
   cursor: default;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-list-add,
-div.app.lhtrpg .lh-status-panel .lh-status-entry-remove,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-list-add,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-entry-remove,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-list-add,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-entry-remove {
   flex: 0 0 14px;
@@ -3117,14 +3246,14 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry-remove,
   cursor: pointer;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-list-add:hover,
-div.app.lhtrpg .lh-status-panel .lh-status-entry-remove:hover,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-list-add:hover,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-entry-remove:hover,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-list-add:hover,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-entry-remove:hover {
   color: #d4a017;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entries,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-entries,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-entries {
   display: flex;
   flex-wrap: wrap;
@@ -3135,7 +3264,7 @@ div.app.lhtrpg .lh-status-panel .lh-status-entries,
   border-left: 1px solid rgba(212, 160, 23, 0.6);
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entry,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-entry,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-entry {
   display: flex;
   align-items: center;
@@ -3145,7 +3274,7 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry,
   padding: 0;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating,
+.lhtrpg.sheet.actor .lh-status-panel .lh-status-entry input.lh-status-rating,
 .lhtrpg.sheet.monster .lh-status-panel .lh-status-entry input.lh-status-rating {
   flex: 0 0 30px;
   width: 30px;
@@ -3160,7 +3289,7 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating,
 }
 
 /* Tag of a Weakness / Cancel entry ("Flame"); empty = any damage */
-div.app.lhtrpg .lh-status-panel input.lh-status-tag,
+.lhtrpg.sheet.actor .lh-status-panel input.lh-status-tag,
 .lhtrpg.sheet.monster .lh-status-panel input.lh-status-tag {
   flex: 0 1 52px;
   width: 52px;
@@ -3174,14 +3303,14 @@ div.app.lhtrpg .lh-status-panel input.lh-status-tag,
   font-size: 11px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel input.lh-status-tag {
+.lhtrpg.sheet.actor .character .lh-status-panel input.lh-status-tag {
   height: 21px;
   font-size: 13px;
 }
 
 /* Character sheet: the status tab uses the whole frame (its background has no
    bottom section line), with bigger rows and text */
-.lhtrpg.sheet form.character .lh-status-panel {
+.lhtrpg.sheet.actor .character .lh-status-panel {
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr) minmax(0, 1.1fr);
   height: 300px;
   padding: 6px 6px;
@@ -3189,55 +3318,55 @@ div.app.lhtrpg form.character .lh-status-panel input.lh-status-tag {
   font-size: 14px;
 }
 
-.lhtrpg.sheet form.character .lh-status-group {
+.lhtrpg.sheet.actor .character .lh-status-group {
   gap: 3px;
 }
 
-.lhtrpg.sheet form.character .lh-status-group-title {
+.lhtrpg.sheet.actor .character .lh-status-group-title {
   margin: 4px 0 2px;
   font-size: 12px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel .lh-status {
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status {
   height: 26px;
   gap: 6px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel .lh-status img {
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status img {
   flex: 0 0 22px;
   width: 22px;
   height: 22px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel input.lh-status-rating,
-div.app.lhtrpg form.character .lh-status-panel .lh-status-entry input.lh-status-rating {
+.lhtrpg.sheet.actor .character .lh-status-panel input.lh-status-rating,
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status-entry input.lh-status-rating {
   flex: 0 0 32px;
   width: 32px;
   height: 21px;
   font-size: 14px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel .lh-status-entry {
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status-entry {
   height: 23px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel .lh-status-entries {
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status-entries {
   margin-left: 29px;
 }
 
-div.app.lhtrpg form.character .lh-status-panel .lh-status-list-add,
-div.app.lhtrpg form.character .lh-status-panel .lh-status-entry-remove {
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status-list-add,
+.lhtrpg.sheet.actor .character .lh-status-panel .lh-status-entry-remove {
   font-size: 12px;
 }
 
 /* Several Pursuits scroll inside the column instead of crossing the frame */
-.lhtrpg.sheet form.character .lh-status-group--bad {
+.lhtrpg.sheet.actor .character .lh-status-group--bad {
   max-height: 300px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
 
-.lhtrpg.sheet form.character .lh-status-group--bad > * {
+.lhtrpg.sheet.actor .character .lh-status-group--bad > * {
   flex-shrink: 0;
 }
 
@@ -3247,14 +3376,14 @@ div.app.lhtrpg form.character .lh-status-panel .lh-status-entry-remove {
   font-size: 13px;
 }
 
-div.app.lhtrpg.monster .lh-status-panel .lh-status {
+.lhtrpg.sheet.monster .lh-status-panel .lh-status {
   height: 22px;
 }
 
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-inner-spin-button,
-div.app.lhtrpg .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button,
-div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-inner-spin-button,
-div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-outer-spin-button {
+.lhtrpg.sheet .lh-status-panel .lh-status input.lh-status-rating::-webkit-inner-spin-button,
+.lhtrpg.sheet .lh-status-panel .lh-status input.lh-status-rating::-webkit-outer-spin-button,
+.lhtrpg.sheet .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-inner-spin-button,
+.lhtrpg.sheet .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -3263,7 +3392,7 @@ div.app.lhtrpg .lh-status-panel .lh-status-entry input.lh-status-rating::-webkit
 /*  Race / Class / Subclass (character header)  */
 /* -------------------------------------------- */
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -3275,11 +3404,11 @@ div.app.lhtrpg.actor .sheet-header .header-fields .option-field {
   border-bottom: 1px solid rgba(214, 255, 218, 0.3);
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .classes .option-field.class {
+.lhtrpg.sheet.actor .sheet-header .header-fields .classes .option-field.class {
   height: 50px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-name {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-name {
   flex: 1;
   min-width: 0;
   overflow: hidden;
@@ -3288,14 +3417,14 @@ div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-name {
   text-align: left;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-menu {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-menu {
   flex: 0 0 18px;
   text-align: center;
   font-size: 16px;
   opacity: 0.7;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-browse {
   flex: 1;
   display: flex;
   align-items: center;
@@ -3303,17 +3432,17 @@ div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse {
   opacity: 0.55;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse i {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-browse i {
   font-size: 16px;
 }
 
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-menu:hover,
-div.app.lhtrpg.actor .sheet-header .header-fields .option-field .option-browse:hover {
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-menu:hover,
+.lhtrpg.sheet.actor .sheet-header .header-fields .option-field .option-browse:hover {
   opacity: 1;
   text-shadow: 0 0 6px #2aa05a;
 }
 
-div.app.lhtrpg.actor .class-img {
+.lhtrpg.sheet.actor .class-img {
   cursor: pointer;
 }
 
@@ -3844,16 +3973,16 @@ div.app.lhtrpg.actor .class-img {
 }
 
 /* "Browse" tile of the character's skill grid, with the picks left after a CR Up */
-div.app.lhtrpg.actor .skills-grid .skill-browse .add-icon {
+.lhtrpg.sheet.actor .skills-grid .skill-browse .add-icon {
   position: relative;
 }
 
-div.app.lhtrpg.actor .skills-grid .skill-browse.pending .add-icon {
+.lhtrpg.sheet.actor .skills-grid .skill-browse.pending .add-icon {
   color: #5fd3a7;
   box-shadow: 0 0 8px #5fd3a7;
 }
 
-div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
+.lhtrpg.sheet.actor .skills-grid .skill-pending-badge {
   position: absolute;
   top: -6px;
   right: -6px;

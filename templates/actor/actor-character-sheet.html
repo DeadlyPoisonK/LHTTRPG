@@ -1,26 +1,32 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+<div class="lhtrpg-character-sheet character flexcol">
 
 	{{!-- Sheet Header --}}
 	<header class="sheet-header">
-		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
+		<img class="profile-img" src="{{actor.img}}" data-action="editImage" data-edit="img" title="{{actor.name}}" height="100"
 			width="100" />
 
-		<span class="collapsible" id="hate-button" title="{{localize 'LHTRPG.Label.ToggleHateFatigue'}}">
+		<span class="collapsible" id="hate-button" data-action="toggle-hate" title="{{localize 'LHTRPG.Label.ToggleHateFatigue'}}">
 		</span>
 
 		{{!-- Hate/Fatigue Fields --}}
 		<div class="info-windows content" id="hate">
 			<div class="hate-window">
 				<label class="hate-label" for="">{{localize 'LHTRPG.Label.Hate'}}</label>
-				<input class="hate-input" type="text" name="system.infos.hate"
-					value="{{system.infos.hate}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
+				<input class="hate-input{{#if modified.hate}} has-effect{{/if}}" type="text" name="system.infos.hate"
+					value="{{source.infos.hate}}" placeholder="0" data-dtype="Number"
+					maxlength="3" {{#if modified.hate}}data-tooltip="{{modified.hate.tooltip}}"{{/if}}>
+				{{#if modified.hate}}
+				<span class="stat-effective" data-tooltip="{{modified.hate.tooltip}}">{{modified.hate.display}}</span>
+				{{/if}}
 			</div>
 			<div class="fatigue-window">
 				<label class="fatigue-label" for="">{{localize 'LHTRPG.Label.Fatigue'}}</label>
-				<input class="fatigue-input" type="text" name="system.infos.fatigue"
-					value="{{system.infos.fatigue}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
+				<input class="fatigue-input{{#if modified.fatigue}} has-effect{{/if}}" type="text" name="system.infos.fatigue"
+					value="{{source.infos.fatigue}}" placeholder="0" data-dtype="Number"
+					maxlength="3" {{#if modified.fatigue}}data-tooltip="{{modified.fatigue.tooltip}}"{{/if}}>
+				{{#if modified.fatigue}}
+				<span class="stat-effective" data-tooltip="{{modified.fatigue.tooltip}}">{{modified.fatigue.display}}</span>
+				{{/if}}
 			</div>
 		</div>
 
@@ -34,7 +40,7 @@
 				{{> "systems/lhtrpg/templates/actor/parts/actor-option.html" type="race" option=characterOptions.race
 					placeholder=(localize 'LHTRPG.Placeholder.Race')}}
 			</div>
-			<img class="class-img" src="{{classImg}}" data-option-type="class" title="{{characterOptions.class.name}}"
+			<img class="class-img" src="{{classImg}}" data-action="class-img" data-option-type="class" title="{{characterOptions.class.name}}"
 				height="100" width="100" />
 			<div class="classes">
 				{{> "systems/lhtrpg/templates/actor/parts/actor-option.html" type="class" option=characterOptions.class
@@ -43,9 +49,12 @@
 					placeholder=(localize 'LHTRPG.Placeholder.SubClass')}}
 			</div>
 			<div class="levels">
-				<input class="crank" type="text" name="system.infos.crank" value="{{system.infos.crank}}" placeholder="0" data-dtype="Number" maxlength="3">
+				<input class="crank{{#if modified.crank}} has-effect{{/if}}" type="text" name="system.infos.crank" value="{{source.infos.crank}}" placeholder="0" data-dtype="Number" maxlength="3" {{#if modified.crank}}data-tooltip="{{modified.crank.tooltip}}"{{/if}}>
+				{{#if modified.crank}}
+				<span class="stat-effective" data-tooltip="{{modified.crank.tooltip}}">{{modified.crank.display}}</span>
+				{{/if}}
 				{{#if editable}}
-				<button type="button" class="rank-up" data-tooltip="LHTRPG.RankUp.Tooltip">
+				<button type="button" class="rank-up" data-action="rank-up" data-tooltip="LHTRPG.RankUp.Tooltip">
 					<i class="fa-solid fa-angles-up"></i> {{localize 'LHTRPG.RankUp.Button'}}
 				</button>
 				{{/if}}
@@ -57,11 +66,11 @@
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs tabs" data-group="primary">
 		{{!-- Default tab is specified in actor-sheet.mjs --}}
-		<a class="item" data-tab="stats"><img src="{{classImg}}" alt=""></a>
-		<a class="item" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp"
+		<a class="item" data-action="tab" data-group="primary" data-tab="stats"><img src="{{classImg}}" alt=""></a>
+		<a class="item" data-action="tab" data-group="primary" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp"
 				alt=""></a>
-		<a class="item" data-tab="items"><img src="/systems/lhtrpg/assets/ui/navigation/items.webp" alt=""></a>
-		<a class="item" data-tab="bio"><img src="/systems/lhtrpg/assets/ui/navigation/bio.webp" alt=""></a>
+		<a class="item" data-action="tab" data-group="primary" data-tab="items"><img src="/systems/lhtrpg/assets/ui/navigation/items.webp" alt=""></a>
+		<a class="item" data-action="tab" data-group="primary" data-tab="bio"><img src="/systems/lhtrpg/assets/ui/navigation/bio.webp" alt=""></a>
 	</nav>
 
 	{{!-- Sheet Body --}}
@@ -72,9 +81,9 @@
 
 			<nav class="status-tabs tabs" data-group="stats">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="stats">{{toUpperCase (localize 'LHTRPG.Stats.Label')}}</a>
-				<a class="item" data-tab="effects">{{toUpperCase (localize 'LHTRPG.Effect.Label')}}</a>
-				<a class="item" data-tab="status">{{toUpperCase (localize 'LHTRPG.Status.Label')}}</a>
+				<a class="item" data-action="tab" data-group="stats" data-tab="stats">{{toUpperCase (localize 'LHTRPG.Stats.Label')}}</a>
+				<a class="item" data-action="tab" data-group="stats" data-tab="effects">{{toUpperCase (localize 'LHTRPG.Effect.Label')}}</a>
+				<a class="item" data-action="tab" data-group="stats" data-tab="status">{{toUpperCase (localize 'LHTRPG.Status.Label')}}</a>
 			</nav>
 			<section class="status-body">
 				<div class="tab stats" data-group="stats" data-tab="stats">
@@ -95,9 +104,9 @@
 
 			<nav class="skills-tabs tabs" data-group="skills">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="basic">{{toUpperCase (localize 'LHTRPG.Skill.Type.Basic')}}</a>
-				<a class="item" data-tab="general">{{toUpperCase (localize 'LHTRPG.Skill.Type.General')}}</a>
-				<a class="item" data-tab="combat">{{toUpperCase (localize 'LHTRPG.Skill.Type.Combat')}}</a>
+				<a class="item" data-action="tab" data-group="skills" data-tab="basic">{{toUpperCase (localize 'LHTRPG.Skill.Type.Basic')}}</a>
+				<a class="item" data-action="tab" data-group="skills" data-tab="general">{{toUpperCase (localize 'LHTRPG.Skill.Type.General')}}</a>
+				<a class="item" data-action="tab" data-group="skills" data-tab="combat">{{toUpperCase (localize 'LHTRPG.Skill.Type.Combat')}}</a>
 			</nav>
 			<section class="skills-body">
 				<div class="tab skills" data-group="skills" data-tab="basic">
@@ -118,8 +127,8 @@
 
 			<nav class="items-tabs tabs" data-group="items">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="equipment">{{toUpperCase (localize 'LHTRPG.Label.Equip')}}</a>
-				<a class="item" data-tab="tickets">{{toUpperCase (localize 'LHTRPG.Label.Tickets')}}</a>
+				<a class="item" data-action="tab" data-group="items" data-tab="equipment">{{toUpperCase (localize 'LHTRPG.Label.Equip')}}</a>
+				<a class="item" data-action="tab" data-group="items" data-tab="tickets">{{toUpperCase (localize 'LHTRPG.Label.Tickets')}}</a>
 			</nav>
 			<section class="items-body">
 				<div class="tab items" data-group="items" data-tab="equipment">
@@ -131,13 +140,13 @@
 			</section>
 		</div>
 
-				{{!-- Inventory Tab --}}
+		{{!-- Biography Tab --}}
 		<div class="tab stats grid-span-6" data-group="primary" data-tab="bio">
 			<nav class="bio-tabs tabs" data-group="bio">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="bio">{{toUpperCase (localize 'LHTRPG.Biography.Label')}}</a>
-				<a class="item" data-tab="connections">{{toUpperCase (localize 'LHTRPG.Connection.Label')}}</a>
-				<a class="item" data-tab="unions">{{toUpperCase (localize 'LHTRPG.Union.Label')}}</a>
+				<a class="item" data-action="tab" data-group="bio" data-tab="bio">{{toUpperCase (localize 'LHTRPG.Biography.Label')}}</a>
+				<a class="item" data-action="tab" data-group="bio" data-tab="connections">{{toUpperCase (localize 'LHTRPG.Connection.Label')}}</a>
+				<a class="item" data-action="tab" data-group="bio" data-tab="unions">{{toUpperCase (localize 'LHTRPG.Union.Label')}}</a>
 			</nav>
 			<section class="bio-body">
 				<div class="tab skills" data-group="bio" data-tab="bio">
@@ -152,9 +161,10 @@
 				<div class="guild">
 					<h4>{{localize 'LHTRPG.Label.Guild'}}</h4>
 					<input class="guild-input" type="text" name="system.social.guild"
-					value="{{system.social.guild}}" placeholder="{{localize 'LHTRPG.Label.Guild'}}" data-dtype="text">
+					value="{{source.social.guild}}" placeholder="{{localize 'LHTRPG.Label.Guild'}}" data-dtype="text">
 				</div>
+			</section>
 		</div>
 
 	</section>
-</form>
+</div>
