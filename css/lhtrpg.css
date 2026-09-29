@@ -2732,6 +2732,16 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   color: #d6ffda;
 }
 
+/* Skill / effect names: V2 sheets get Foundry's global h4 (display font, 24px); keep the V1 look. */
+.lhtrpg.sheet.item .items-list h4,
+.lhtrpg.sheet.monster .items-list h4 {
+  font-family: "Signika", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: inherit;
+  margin: 0;
+}
+
 .lhtrpg.sheet.monster .sheet-body.monster {
   height: calc(100% - 170px);
 }
