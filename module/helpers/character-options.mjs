@@ -197,14 +197,8 @@ export async function legacyOptionItems(source, { lookup = true } = {}) {
   };
 }
 
-/** Migration version of the Race/Class/Subclass items. */
-const MIGRATION_VERSION = 1;
-
-/** Convert the legacy Race / Class / Subclass fields of every world character into items (GM, once). */
-export async function migrateCharacterOptions() {
-  if (!game.user.isGM || (game.users.activeGM?.id !== game.user.id)) return;
-  if (game.settings.get("lhtrpg", "characterOptionsMigrationVersion") >= MIGRATION_VERSION) return;
-
+/** Convert the legacy Race / Class / Subclass fields of every world character into items. */
+async function migrateCharacterOptions() {
   let migrated = 0;
   for (const actor of game.actors.filter(a => a.type === "character")) {
     try {
@@ -217,22 +211,20 @@ export async function migrateCharacterOptions() {
       console.error(`Log Horizon TRPG | Race/Class migration failed for ${actor.name}`, err);
     }
   }
-  await game.settings.set("lhtrpg", "characterOptionsMigrationVersion", MIGRATION_VERSION);
   if (migrated) ui.notifications.info(game.i18n.format("LHTRPG.CharacterOptions.Migrated", { count: migrated }));
+  return true;
 }
+
+/** World migration (see helpers/migrations.mjs): legacy Race/Class/Subclass fields -> items. */
+export const CHARACTER_OPTIONS_MIGRATION = {
+  id: "characterOptions", setting: "characterOptionsMigrationVersion", version: 1, run: migrateCharacterOptions
+};
 
 /* -------------------------------------------- */
 /*  Registration                                */
 /* -------------------------------------------- */
 
 export function registerCharacterOptions() {
-  game.settings.register("lhtrpg", "characterOptionsMigrationVersion", {
-    scope: "world",
-    config: false,
-    type: Number,
-    default: 0
-  });
-
   // A character holds a single Race, Class and Subclass: adding one replaces the previous one.
   Hooks.on("createItem", (item, options, userId) => {
     if ((userId !== game.user.id) || !OPTION_TYPES.includes(item.type)) return;
@@ -269,6 +261,4 @@ export function registerCharacterOptions() {
     if (!(actor instanceof Actor) || (actor.type !== "character")) return;
     if (!actor.items.some(i => i.type === "class")) rollbackPicks(actor, { reason: "LHTRPG.SkillBrowser.Undo.HintClass" });
   });
-
-  Hooks.once("ready", migrateCharacterOptions);
 }

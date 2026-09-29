@@ -11,7 +11,6 @@ import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
 import { registerStatuses } from "./helpers/statuses.mjs";
-import { registerMonsterChecks } from "./helpers/monster-checks.mjs";
 import { registerTags } from "./helpers/tags.mjs";
 import { LHTrpgToken } from "./canvas/lhtrpgToken.mjs";
 import { registerPiles } from "./piles/piles.mjs";
@@ -21,7 +20,7 @@ import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
 import { registerItemUse, useItem } from "./helpers/item-use.mjs";
-import { migrateHands, registerHandsSettings } from "./helpers/hands.mjs";
+import { registerMigrations, runMigrations } from "./helpers/migrations.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -63,12 +62,10 @@ Hooks.once('init', async function () {
 
   // Log Horizon statuses (Token HUD, token icons, sheet sync, [Hidden])
   registerStatuses();
-  // Monster Evasion/Resistance: legacy text -> { dice, mod }
-  registerMonsterChecks();
   // Tag catalog, tag editor helper and tag normalization
   registerTags();
-  // Main / off hand: one-time fix of Two-Handed weapon + shield
-  registerHandsSettings();
+  // World data migrations: run in order on the active GM when the world is ready
+  registerMigrations();
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
   // Time passing per round
@@ -125,7 +122,7 @@ Handlebars.registerHelper('toUpperCase', function (str) {
 Hooks.once("ready", async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
-  migrateHands();
+  runMigrations();
 });
 
 /* -------------------------------------------- */

@@ -641,6 +641,11 @@
         "OwnedOnly": "You can only create macro buttons for items owned by an actor.",
         "NoItem": "Your controlled actor does not have an item named {item}."
       }
+    },
+    "Migration": {
+      "Running": "Log Horizon TRPG: updating the world data… Please don't close the world until it finishes.",
+      "Done": "Log Horizon TRPG: world data updated.",
+      "Pending": "Log Horizon TRPG: some world updates could not be completed ({list}). They will be retried the next time the world is loaded; see the console (F12) for details."
     }
   }
 }

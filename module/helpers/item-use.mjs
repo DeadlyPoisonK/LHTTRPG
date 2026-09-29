@@ -36,10 +36,6 @@ export function registerItemUse() {
   registerHandler("applyItemEffects", _onApplyEffectsRequest);
   Hooks.on("renderChatMessageHTML", _onRenderChatMessage);
   Hooks.on("deleteCombat", _onDeleteCombat);
-  game.settings.register("lhtrpg", "usableMigrationVersion", {
-    scope: "world", config: false, type: Number, default: 0
-  });
-  Hooks.once("ready", migrateUsableItems);
 }
 
 /**
@@ -331,14 +327,12 @@ async function _migrateItems(items, failed) {
 }
 
 /**
- * One-time world migration (active GM): Gear that is really usable becomes the "usable" type, in
- * world items, actors, unlinked tokens and the world's unlocked compendiums.
+ * Gear that is really usable becomes the "usable" type, in world items, actors, unlinked tokens and
+ * the world's unlocked compendiums. Not done (retried on the next load) if some item fails.
  */
-export async function migrateUsableItems() {
-  if (!game.user.isActiveGM) return;
-  if (game.settings.get("lhtrpg", "usableMigrationVersion") >= MIGRATION_VERSION) return;
+async function migrateUsableItems() {
   // The world must be relaunched after a system update that adds the type (template.json).
-  if (!game.documentTypes.Item.includes("usable")) return;
+  if (!game.documentTypes.Item.includes("usable")) return false;
   const failed = [];
 
   const actors = [...game.actors];
@@ -355,8 +349,13 @@ export async function migrateUsableItems() {
     }
   }
 
-  // Try again on the next load if some item could not be converted.
-  if (!failed.length) await game.settings.set("lhtrpg", "usableMigrationVersion", MIGRATION_VERSION);
   console.log(`Log Horizon TRPG | Gear -> Usable: ${names.length} items`, names);
   if (names.length) ui.notifications.info(game.i18n.format("LHTRPG.Item.Use.Migrated", { count: names.length }));
+  // Try again on the next load if some item could not be converted.
+  return !failed.length;
 }
+
+/** World migration (see helpers/migrations.mjs). */
+export const USABLE_MIGRATION = {
+  id: "usable", setting: "usableMigrationVersion", version: MIGRATION_VERSION, run: migrateUsableItems
+};

@@ -43,19 +43,6 @@ export function prepareMonsterChecks(system) {
 }
 
 /**
- * Register the one-time migration of legacy text checks. Call during the `init` hook.
- */
-export function registerMonsterChecks() {
-  game.settings.register("lhtrpg", "monsterChecksMigrationVersion", {
-    scope: "world",
-    config: false,
-    type: Number,
-    default: 0
-  });
-  Hooks.once("ready", _migrateMonsterChecks);
-}
-
-/**
  * Updates that turn legacy text checks into `{ dice, mod }`, or null if already migrated.
  * @param {object} sourceChecks   The `system.checks` of a monster's source data
  * @returns {object|null}
@@ -85,10 +72,8 @@ export function completeChecksChange(sourceChecks, changedChecks) {
   }
 }
 
-async function _migrateMonsterChecks() {
-  if (!game.user.isActiveGM) return;
-  if (game.settings.get("lhtrpg", "monsterChecksMigrationVersion") >= MIGRATION_VERSION) return;
-
+/** Legacy text Evasion/Resistance ("1+2D") of world monsters and unlinked tokens -> { dice, mod }. */
+async function migrateMonsterChecks() {
   // World monsters, then the unlinked tokens that override their checks.
   const actors = game.actors.filter(a => a.type === "monster");
   for (const scene of game.scenes) {
@@ -110,6 +95,11 @@ async function _migrateMonsterChecks() {
       console.error(`Log Horizon TRPG | Could not migrate the checks of ${actor.uuid}`, err);
     }
   }
-  await game.settings.set("lhtrpg", "monsterChecksMigrationVersion", MIGRATION_VERSION);
   console.log(`Log Horizon TRPG | Migrated Evasion/Resistance of ${migrated} monsters`);
+  return true;
 }
+
+/** World migration (see helpers/migrations.mjs). */
+export const MONSTER_CHECKS_MIGRATION = {
+  id: "monsterChecks", setting: "monsterChecksMigrationVersion", version: MIGRATION_VERSION, run: migrateMonsterChecks
+};

@@ -73,12 +73,6 @@ const MIGRATION_VERSION = 5;
  * Call during the `init` hook.
  */
 export function registerStatuses() {
-  game.settings.register("lhtrpg", "statusMigrationVersion", {
-    scope: "world",
-    config: false,
-    type: Number,
-    default: 0
-  });
   CONFIG.statusEffects = LH_STATUSES.map(s => ({
     id: s.id,
     // Static id: a status can only exist once per actor, even with concurrent toggles.
@@ -99,7 +93,6 @@ export function registerStatuses() {
   Hooks.on("preCreateCombatant", _onPreCreateCombatant);
   Hooks.on("createActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
   Hooks.on("deleteActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
-  Hooks.once("ready", _migrateStatuses);
 }
 
 /* -------------------------------------------- */
@@ -377,10 +370,7 @@ function _syncCombatantsHidden(effect, userId) {
  * Replace the effects created by the old sheet toggles (flags.core.statusId, no `statuses`)
  * with proper status effects, and create the effects of fields that are already set.
  */
-async function _migrateStatuses() {
-  if (!game.user.isActiveGM) return;
-  if (game.settings.get("lhtrpg", "statusMigrationVersion") >= MIGRATION_VERSION) return;
-
+async function migrateStatuses() {
   // Icon overrides imported from Combat Utility Belt (third-party art) are no longer used.
   await game.settings.storage.get("world").find(s => s.key === "lhtrpg.statusIcons")?.delete();
 
@@ -401,9 +391,14 @@ async function _migrateStatuses() {
     }
   }
 
-  await game.settings.set("lhtrpg", "statusMigrationVersion", MIGRATION_VERSION);
   console.log(`Log Horizon TRPG | Migrated statuses of ${actors.length - failed}/${actors.length} actors`);
+  return true;
 }
+
+/** World migration (see helpers/migrations.mjs). */
+export const STATUSES_MIGRATION = {
+  id: "statuses", setting: "statusMigrationVersion", version: MIGRATION_VERSION, run: migrateStatuses
+};
 
 /**
  * Migrate one actor's statuses: replace legacy and Combat Utility Belt effects with LH status

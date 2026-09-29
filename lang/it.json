@@ -641,6 +641,11 @@
         "OwnedOnly": "Puoi creare solo pulsanti macro per oggetti posseduti da un attore.",
         "NoItem": "L'attore che controlli non ha un oggetto chiamato {item}."
       }
+    },
+    "Migration": {
+      "Running": "Log Horizon TRPG: aggiornamento dei dati del mondo… Non chiudere il mondo finché non termina.",
+      "Done": "Log Horizon TRPG: dati del mondo aggiornati.",
+      "Pending": "Log Horizon TRPG: alcuni aggiornamenti del mondo non sono stati completati ({list}). Verranno ritentati al prossimo caricamento del mondo; vedi la console (F12) per i dettagli."
     }
   }
 }

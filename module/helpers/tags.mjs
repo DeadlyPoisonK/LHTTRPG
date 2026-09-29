@@ -228,18 +228,12 @@ class TagInput {
 const MIGRATION_VERSION = 1;
 
 /**
- * Register the tag catalog, the `lhTagChips` helper, the normalization of new/updated tags and the
- * one-time normalization of the world's existing tags. Call during the `init` hook.
+ * Register the tag catalog, the `lhTagChips` helper and the normalization of new/updated tags.
+ * Call during the `init` hook.
  */
 export function registerTags() {
   CONFIG.LHTRPG.tags ??= TAG_CATALOG;
   Handlebars.registerHelper("lhTagChips", (tags, source) => tagChips(tags, source));
-  game.settings.register("lhtrpg", "tagMigrationVersion", {
-    scope: "world",
-    config: false,
-    type: Number,
-    default: 0
-  });
 
   // Whatever the source (sheet, import, macro, drop from an old compendium), store canonical tags.
   const clean = tags => {
@@ -269,7 +263,6 @@ export function registerTags() {
       else foundry.utils.setProperty(changes, "system.tags", tags);
     });
   }
-  Hooks.once("ready", _migrateTags);
 }
 
 /** Update that normalizes a document's tags, or null if they're already canonical. */
@@ -295,10 +288,8 @@ async function _migrateDocs(docs) {
   return count;
 }
 
-async function _migrateTags() {
-  if (!game.user.isActiveGM) return;
-  if (game.settings.get("lhtrpg", "tagMigrationVersion") >= MIGRATION_VERSION) return;
-
+/** Normalize the tags of world items, actors (+ unlinked tokens) and unlocked world compendiums. */
+async function migrateTags() {
   const actors = [...game.actors];
   for (const scene of game.scenes) {
     for (const token of scene.tokens) if (!token.actorLink && token.actor) actors.push(token.actor);
@@ -315,7 +306,12 @@ async function _migrateTags() {
     }
   }
 
-  await game.settings.set("lhtrpg", "tagMigrationVersion", MIGRATION_VERSION);
   console.log(`Log Horizon TRPG | Normalized the tags of ${count} documents`);
   if (count) ui.notifications.info(game.i18n.format("LHTRPG.Tag.Migrated", { count }));
+  return true;
 }
+
+/** World migration (see helpers/migrations.mjs). */
+export const TAGS_MIGRATION = {
+  id: "tags", setting: "tagMigrationVersion", version: MIGRATION_VERSION, run: migrateTags
+};

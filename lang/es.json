@@ -641,6 +641,11 @@
         "OwnedOnly": "Solo puedes crear macros de items que pertenezcan a un actor.",
         "NoItem": "Tu actor controlado no tiene ningún item llamado {item}."
       }
+    },
+    "Migration": {
+      "Running": "Log Horizon TRPG: actualizando los datos del mundo… No cierres el mundo hasta que termine.",
+      "Done": "Log Horizon TRPG: datos del mundo actualizados.",
+      "Pending": "Log Horizon TRPG: algunas actualizaciones del mundo no se completaron ({list}). Se reintentarán la próxima vez que se cargue el mundo; mira la consola (F12) para más detalles."
     }
   }
 }

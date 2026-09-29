@@ -142,18 +142,13 @@ export async function swapHands(actor) {
 }
 
 /**
- * One-time equipment fixes (setting `handsMigrationVersion`), on the active GM, over world
- * characters only (monsters and unlinked tokens are left alone):
+ * One-time equipment fixes over world characters only (monsters and unlinked tokens are left alone):
  *  1. A [Two-Handed] main weapon with something in the off hand (the old sheet allowed a weapon
  *     and a shield at once): the off-hand item is unequipped.
  *  2. Items that aren't equipment (gear, potions…) marked as equipped, which the sheet hid: they
  *     go back to the inventory.
  */
-export async function migrateHands() {
-  const SETTING = "handsMigrationVersion";
-  const VERSION = 2;
-  const done = game.settings.get("lhtrpg", SETTING);
-  if (!game.user.isActiveGM || (done >= VERSION)) return;
+async function migrateHands(done) {
   const hands = [];
   const carried = [];
   for (const actor of game.actors.filter(a => a.type === "character")) {
@@ -171,7 +166,6 @@ export async function migrateHands() {
     if (hidden.length) carried.push(`${actor.name} (${hidden.map(i => i.name).join(", ")})`);
     if (updates.length) await actor.updateEmbeddedDocuments("Item", updates);
   }
-  await game.settings.set("lhtrpg", SETTING, VERSION);
   const messages = [];
   if (hands.length) messages.push(L("Notif.Migrated", { list: hands.join(", ") }));
   if (carried.length) messages.push(L("Notif.MigratedCarried", { list: carried.join("; ") }));
@@ -179,10 +173,10 @@ export async function migrateHands() {
     ui.notifications.warn(msg, { permanent: true });
     console.warn(`lhtrpg | ${msg}`);
   }
+  return true;
 }
 
-export function registerHandsSettings() {
-  game.settings.register("lhtrpg", "handsMigrationVersion", {
-    scope: "world", config: false, type: Number, default: 0
-  });
-}
+/** World migration (see helpers/migrations.mjs). */
+export const HANDS_MIGRATION = {
+  id: "hands", setting: "handsMigrationVersion", version: 2, run: migrateHands
+};

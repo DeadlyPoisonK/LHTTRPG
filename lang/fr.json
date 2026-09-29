@@ -641,6 +641,11 @@
         "OwnedOnly": "Vous ne pouvez créer que des boutons de macro pour les objets possédés par un personnage.",
         "NoItem": "Votre personnage contrôlé n'a pas d'objet nommé {item}."
       }
+    },
+    "Migration": {
+      "Running": "Log Horizon TRPG : mise à jour des données du monde… Ne fermez pas le monde avant la fin.",
+      "Done": "Log Horizon TRPG : données du monde mises à jour.",
+      "Pending": "Log Horizon TRPG : certaines mises à jour du monde n’ont pas pu être terminées ({list}). Elles seront retentées au prochain chargement du monde ; voir la console (F12) pour les détails."
     }
   }
 }
