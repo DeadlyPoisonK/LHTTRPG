@@ -17,7 +17,6 @@ export class LHTrpgActorMonsterSheet extends HandlebarsApplicationMixin(foundry.
     position: { width: 520, height: 550 },
     window: { resizable: true },
     form: { submitOnChange: true },
-    dragDrop: [{ dragSelector: ".items-list .item[data-item-id], [data-effect-id]", dropSelector: null }],
     actions: {
       editImage: LHTrpgActorMonsterSheet.#onEditImage,
       "monster-send-to-chat": LHTrpgActorMonsterSheet.#onSendToChat,
