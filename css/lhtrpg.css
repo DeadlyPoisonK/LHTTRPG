@@ -4445,9 +4445,10 @@
   opacity: 0.9;
 }
 
-/* Usable items: use card notes, Use button of the item sheet */
+/* Usable items and skills: use card notes, applied effects banner */
 .lhtrpg.chat-card .item-use-note,
-.lhtrpg.chat-card .item-use-applied {
+.lhtrpg.chat-card .item-use-applied,
+.lhtrpg.chat-card .skill-card-applied {
   margin: 0 0 6px;
   padding: 3px 6px;
   font-size: 12px;
@@ -4460,7 +4461,8 @@
   border: 1px solid #d9b44a;
 }
 
-.lhtrpg.chat-card .item-use-applied {
+.lhtrpg.chat-card .item-use-applied,
+.lhtrpg.chat-card .skill-card-applied {
   color: #1f4d2b;
   background-color: #dff3e3;
   border: 1px solid #8fcf9b;
@@ -4585,4 +4587,49 @@
   color: var(--color-text-primary, #111);
   font-size: 13px;
 }
+
+/* -------------------------------------------- */
+/*  On-use Effect Badge & Sustained Dialog      */
+/* -------------------------------------------- */
+
+.lh-on-use-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 11px;
+  background-color: rgba(47, 90, 58, 0.15);
+  color: #1f4d2b;
+  border: 1px solid rgba(143, 207, 155, 0.5);
+}
+
+.sustained-dialog-form {
+  padding: 0.5rem;
+}
+
+.sustained-dialog-form .dialog-hint {
+  margin-bottom: 0.75rem;
+  font-size: 13px;
+}
+
+.sustained-dialog-form .sustained-radios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sustained-dialog-form .radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.sustained-dialog-form .radio-label:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 

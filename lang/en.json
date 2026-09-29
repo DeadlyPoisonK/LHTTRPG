@@ -88,6 +88,8 @@
       "Label": "Effects",
       "Source": "Source",
       "Duration": "Duration",
+      "OnUse": "On use",
+      "OnUseHint": "Applied when using this skill/item",
       "New": "New Effect",
       "ModifiedTooltip": "Base {base}, with effects {effective}",
       "Category": {
@@ -127,7 +129,9 @@
       "Reason": {
         "EndOfProcess": "end of process",
         "EndOfRound": "end of round",
-        "EndOfScene": "end of scene"
+        "EndOfScene": "end of scene",
+        "SustainedLimit": "sustained limit ({tag})",
+        "SustainedLimitGeneric": "sustained skill limit"
       }
     },
     "EffectTarget": {
@@ -150,6 +154,13 @@
       "Warning": {
         "Derived": "Derived field: will be overwritten on recalculation",
         "Unknown": "Key not in catalog"
+      }
+    },
+    "Sustained": {
+      "Dialog": {
+        "Title": "Sustained Skills Limit",
+        "Hint": "Choose which one to end: {tag} allows {limit} active.",
+        "EndSelected": "End selected"
       }
     },
     "EffectCreate": "Create Effect",

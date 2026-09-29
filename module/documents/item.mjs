@@ -1,5 +1,6 @@
 import { prepareSkillRolls, skillRollable } from "../helpers/skill-rolls.mjs";
 import { OPTION_ICONS, OPTION_TYPES } from "../helpers/character-options.mjs";
+import { useSkillEffects } from "../helpers/sustained.mjs";
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -155,6 +156,20 @@ export class LHTrpgItem extends Item {
       ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.skillText)
       : "";
 
+    let appliedNames = "";
+    let canApplyEffects = false;
+    let skillUseFlag = null;
+
+    if (element.type === "skill") {
+      const nonTransferEffects = element.effects.filter(e => e.transfer === false);
+      if (nonTransferEffects.length > 0) {
+        const result = await useSkillEffects(element);
+        appliedNames = result.appliedNames;
+        canApplyEffects = result.canApplyEffects;
+        skillUseFlag = result.skillUse;
+      }
+    }
+
     let cardData = {
         ...element.toObject(false),
         owner: element.actor?.id,
@@ -170,10 +185,15 @@ export class LHTrpgItem extends Item {
         enrichedSkillText,
         // Skill cards: Check / Damage roll buttons (see the renderChatMessageHTML hook)
         uuid: element.uuid,
-        rollable: element.type === "skill" ? skillRollable(element) : {}
+        rollable: element.type === "skill" ? skillRollable(element) : {},
+        appliedNames,
+        canApplyEffects
     };
 
     chatData.content = await foundry.applications.handlebars.renderTemplate(this.chatTemplate[element.type], cardData);
+    if (skillUseFlag) {
+      foundry.utils.setProperty(chatData, "flags.lhtrpg.skillUse", skillUseFlag);
+    }
     return ChatMessage.create(chatData);
   }
 }

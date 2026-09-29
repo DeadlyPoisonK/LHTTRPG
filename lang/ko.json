@@ -88,6 +88,8 @@
       "Label": "효과",
       "Source": "원인",
       "Duration": "지속 시간",
+      "OnUse": "사용 시",
+      "OnUseHint": "이 스킬/아이템을 사용할 때 적용",
       "New": "새로운 효과",
       "ModifiedTooltip": "기본 {base}, 효과 적용 시 {effective}",
       "Category": {
@@ -127,7 +129,9 @@
       "Reason": {
         "EndOfProcess": "프로세스 종료",
         "EndOfRound": "라운드 종료",
-        "EndOfScene": "장면 종료"
+        "EndOfScene": "장면 종료",
+        "SustainedLimit": "{tag} 한도",
+        "SustainedLimitGeneric": "유지 스킬 한도"
       }
     },
     "EffectTarget": {
@@ -150,6 +154,13 @@
       "Warning": {
         "Derived": "파생 필드: 재계산 시 덮어쓰여집니다",
         "Unknown": "카탈로그에 없는 키"
+      }
+    },
+    "Sustained": {
+      "Dialog": {
+        "Title": "유지 스킬 한도",
+        "Hint": "종료할 스킬을 선택하세요: {tag}은(는) {limit}개까지 유지 가능합니다.",
+        "EndSelected": "선택한 스킬 종료"
       }
     },
     "EffectCreate": "효과 생성",

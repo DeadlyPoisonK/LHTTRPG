@@ -24,6 +24,7 @@ import { registerItemUse, useItem } from "./helpers/item-use.mjs";
 import { registerEffectTargets } from "./helpers/effect-targets.mjs";
 import { registerEffectDurations } from "./helpers/effect-durations.mjs";
 import { registerMigrations, runMigrations } from "./helpers/migrations.mjs";
+import { registerSustained, onApplySkillEffects } from "./helpers/sustained.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -112,6 +113,9 @@ Hooks.once('init', async function () {
   // Usable items (potions, scrolls…): Use button, use card, effects, [Consumable]
   registerItemUse();
 
+  // Sustained skills (Harmony, Servant Summon, Enchantment): limits, replacement, expiry
+  registerSustained();
+
   // Round Progression: Briefing / Setup / Main / Cleanup phases in the tracker
   registerCombatPhases();
 
@@ -143,7 +147,7 @@ Hooks.once("ready", async function () {
 });
 
 /* -------------------------------------------- */
-/*  Skill chat cards: Check / Damage buttons     */
+/*  Skill chat cards: Check / Damage / Effects  */
 /* -------------------------------------------- */
 
 Hooks.on("renderChatMessageHTML", (message, html) => {
@@ -153,6 +157,11 @@ Hooks.on("renderChatMessageHTML", (message, html) => {
     const item = uuid ? await fromUuid(uuid).catch(() => null) : null;
     if (!item) return ui.notifications.warn(game.i18n.localize("LHTRPG.Skill.Notif.Missing"));
     rollSkill(item, button.dataset.roll);
+  }));
+
+  html.querySelectorAll(".skill-card-effects").forEach(button => button.addEventListener("click", async event => {
+    event.preventDefault();
+    await onApplySkillEffects(message, button);
   }));
 });
 

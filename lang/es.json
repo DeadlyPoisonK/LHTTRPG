@@ -88,6 +88,8 @@
       "Label": "Efectos",
       "Source": "Origen",
       "Duration": "Duración",
+      "OnUse": "Al usar",
+      "OnUseHint": "Se aplica al usar esta skill/objeto",
       "New": "Nuevo efecto",
       "ModifiedTooltip": "Base {base}, con efectos {effective}",
       "Category": {
@@ -127,7 +129,9 @@
       "Reason": {
         "EndOfProcess": "fin del proceso",
         "EndOfRound": "fin de ronda",
-        "EndOfScene": "fin de escena"
+        "EndOfScene": "fin de escena",
+        "SustainedLimit": "límite de {tag}",
+        "SustainedLimitGeneric": "límite de skills sostenidas"
       }
     },
     "EffectTarget": {
@@ -150,6 +154,13 @@
       "Warning": {
         "Derived": "Campo derivado: se perderá al recalcular",
         "Unknown": "Clave fuera del catálogo"
+      }
+    },
+    "Sustained": {
+      "Dialog": {
+        "Title": "Límite de skills sostenidas",
+        "Hint": "Elige cuál terminar: {tag} permite {limit} activa(s).",
+        "EndSelected": "Terminar elegida"
       }
     },
     "EffectCreate": "Crear Efecto",

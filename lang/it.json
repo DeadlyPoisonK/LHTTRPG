@@ -88,6 +88,8 @@
       "Label": "Effetti",
       "Source": "Fonte",
       "Duration": "Durata",
+      "OnUse": "All'uso",
+      "OnUseHint": "Applicato quando si usa questa abilità/oggetto",
       "New": "Nuovo effetto",
       "ModifiedTooltip": "Base {base}, con effetti {effective}",
       "Category": {
@@ -127,7 +129,9 @@
       "Reason": {
         "EndOfProcess": "fine del processo",
         "EndOfRound": "fine del round",
-        "EndOfScene": "fine della scena"
+        "EndOfScene": "fine della scena",
+        "SustainedLimit": "limite di {tag}",
+        "SustainedLimitGeneric": "limite di abilità sostenute"
       }
     },
     "EffectTarget": {
@@ -150,6 +154,13 @@
       "Warning": {
         "Derived": "Campo derivato: verrà sovrascritto al ricalcolo",
         "Unknown": "Chiave non nel catalogo"
+      }
+    },
+    "Sustained": {
+      "Dialog": {
+        "Title": "Limite di abilità sostenute",
+        "Hint": "Scegli quale terminare: {tag} consente {limit} attiva/e.",
+        "EndSelected": "Termina selezionata"
       }
     },
     "EffectCreate": "Crea effetto",

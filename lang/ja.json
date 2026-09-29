@@ -88,6 +88,8 @@
       "Label": "効果",
       "Source": "ソース",
       "Duration": "持続時間",
+      "OnUse": "使用時",
+      "OnUseHint": "このスキル／アイテムの使用時に適用",
       "New": "新しい効果",
       "ModifiedTooltip": "基本値 {base}、効果適用時 {effective}",
       "Category": {
@@ -127,7 +129,9 @@
       "Reason": {
         "EndOfProcess": "プロセス終了",
         "EndOfRound": "ラウンド終了時",
-        "EndOfScene": "シーン終了時"
+        "EndOfScene": "シーン終了時",
+        "SustainedLimit": "{tag}の上限",
+        "SustainedLimitGeneric": "維持スキルの上限"
       }
     },
     "EffectTarget": {
@@ -150,6 +154,13 @@
       "Warning": {
         "Derived": "派生項目：再計算時にリセットされます",
         "Unknown": "カタログ外のキー"
+      }
+    },
+    "Sustained": {
+      "Dialog": {
+        "Title": "維持スキルの上限",
+        "Hint": "終了するスキルを選択してください: {tag}は{limit}個まで維持できます。",
+        "EndSelected": "選択したものを終了"
       }
     },
     "EffectCreate": "Create Effect",

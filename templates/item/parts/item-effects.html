@@ -24,7 +24,13 @@
             {{/with}}
           </div>
         </div>
-        <div class="effect-source">{{effect.sourceName}}</div>
+        <div class="effect-source">
+          {{#unless effect.transfer}}
+            <span class="lh-on-use-badge" title="{{localize 'LHTRPG.Effect.OnUseHint'}}"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Effect.OnUse'}}</span>
+          {{else}}
+            {{effect.sourceName}}
+          {{/unless}}
+        </div>
         <div class="effect-duration">{{lhEffectDuration effect}}</div>
         <div class="item-controls effect-controls flexrow">
           <a class="effect-control" data-action="toggle" title="{{localize 'LHTRPG.EffectToggle'}}">

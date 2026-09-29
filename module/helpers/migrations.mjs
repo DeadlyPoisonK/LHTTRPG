@@ -17,6 +17,7 @@ import { USABLE_MIGRATION } from "./item-use.mjs";
 import { TAGS_MIGRATION } from "./tags.mjs";
 import { HANDS_MIGRATION } from "./hands.mjs";
 import { EFFECTS_MIGRATION } from "./effect-targets.mjs";
+import { ON_USE_SKILLS_MIGRATION } from "./sustained.mjs";
 
 export const MIGRATIONS = [
   CHARACTER_OPTIONS_MIGRATION,   // legacy Race/Class/Subclass fields -> items
@@ -25,7 +26,8 @@ export const MIGRATIONS = [
   USABLE_MIGRATION,              // usable Gear -> "usable" type (replaces the item's system data)
   TAGS_MIGRATION,                // canonical tags
   HANDS_MIGRATION,               // Two-Handed + off hand, equipped non-equipment
-  EFFECTS_MIGRATION              // broken active effect keys -> valid effect targets
+  EFFECTS_MIGRATION,             // broken active effect keys -> valid effect targets
+  ON_USE_SKILLS_MIGRATION        // skills whose effects apply on use (transfer: false)
 ];
 
 /** Register the world setting of every migration. Call during the `init` hook. */

@@ -2,6 +2,7 @@ import { rollSkill, skillRollable } from "./skill-rolls.mjs";
 import { targetEntries } from "./combat-cards.mjs";
 import { canonicalTag } from "./tag-catalog.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
+import { getSustainedTag } from "./sustained.mjs";
 
 /**
  * Usable items (potions, food, scrolls, whistles, poisons…): item type "usable".
@@ -20,7 +21,7 @@ import { registerHandler, request } from "../piles/pile-socket.mjs";
 
 const USE_CARD = "systems/lhtrpg/templates/chat/use-card.hbs";
 /** Checks the target resists: the item's effects wait for the hit (Apply effects button). */
-const OPPOSED = ["evasion", "resistance"];
+export const OPPOSED = ["evasion", "resistance"];
 
 /** Timing (lower case) -> when it can be used in combat. */
 const TIMING_RULES = {
@@ -96,8 +97,8 @@ function timingProblem(item, actor) {
 }
 
 /** Whether the item only affects its user (Target: Self). */
-function isSelfTarget(item) {
-  return /^\s*self\b/i.test(item.system.target ?? "");
+export function isSelfTarget(item) {
+  return /^\s*\[?\s*self\b/i.test(item.system?.target ?? "");
 }
 
 /** The token the actor acts from: a controlled one, else its first one on the scene. */
@@ -178,14 +179,42 @@ function cardItem(message) {
 }
 
 /**
+ * Whether an existing effect's source matches the source of the incoming item.
+ * Matches on itemUuid, or falls back to itemName + casterUuid.
+ * @param {object} s        Existing effect's flags.lhtrpg.source
+ * @param {object} source   Incoming effect's flags.lhtrpg.source
+ * @returns {boolean}
+ */
+export function isMatchingSource(s, source) {
+  if (!s || !source) return false;
+  if (source.itemUuid && s.itemUuid && (s.itemUuid === source.itemUuid)) return true;
+  return Boolean(source.itemName && (s.itemName === source.itemName) && source.casterUuid && (s.casterUuid === source.casterUuid));
+}
+
+/**
  * Copy an item's Active Effects to these actors, as Combat Statuses (removed when the combat ends).
+ * For skills, copies only non-transfer effects (transfer === false).
+ * For usables, copies all effects.
+ * Skills replace any previous copy of the same skill on the target (no stacking); usables stack.
  * Actors the user doesn't own are handled by the GM.
  * @param {Item} item
  * @param {Actor[]} actors
+ * @param {object} [options]
+ * @param {string} [options.useId]
+ * @param {string} [options.sustained]
  * @returns {Promise<string[]>}   Names of the actors that received them
  */
-export async function applyItemEffects(item, actors) {
-  const effects = item.effects.map(effect => {
+export async function applyItemEffects(item, actors, { useId, sustained } = {}) {
+  const rawEffects = (item.type === "skill")
+    ? item.effects.filter(e => e.transfer === false)
+    : [...item.effects];
+
+  if (!rawEffects.length) return [];
+
+  const finalUseId = useId || foundry.utils.randomID();
+  const sustainedId = sustained ?? getSustainedTag(item)?.id;
+
+  const effects = rawEffects.map(effect => {
     const data = effect.toObject();
     delete data._id;
     data.origin = item.uuid;
@@ -193,18 +222,44 @@ export async function applyItemEffects(item, actors) {
     data.disabled = false;
     data.img ||= item.img;
     foundry.utils.setProperty(data, "flags.lhtrpg.itemUse", true);
-    const origExpires = effect.getFlag?.("lhtrpg", "expires") ?? effect._source?.flags?.lhtrpg?.expires;
-    const expires = (origExpires && origExpires !== "") ? origExpires : "endOfScene";
+
+    const source = {
+      itemUuid: item.uuid,
+      itemName: item.name,
+      casterUuid: item.actor?.uuid ?? "",
+      useId: finalUseId
+    };
+    if (sustainedId) source.sustained = sustainedId;
+    foundry.utils.setProperty(data, "flags.lhtrpg.source", source);
+
+    let expires;
+    if (sustainedId) {
+      expires = "endOfScene";
+    } else {
+      const origExpires = effect.getFlag?.("lhtrpg", "expires") ?? effect._source?.flags?.lhtrpg?.expires;
+      expires = (origExpires && origExpires !== "") ? origExpires : "endOfScene";
+    }
     foundry.utils.setProperty(data, "flags.lhtrpg.expires", expires);
     return data;
   });
-  if (!effects.length) return [];
 
   const names = [];
+  // A skill replaces its previous copy on the target (same type: no stacking); usables stack.
+  const replace = item.type === "skill";
+  const sampleSource = replace ? effects[0]?.flags?.lhtrpg?.source : null;
+
   for (const actor of new Set(actors)) {
-    if (actor.isOwner) await actor.createEmbeddedDocuments("ActiveEffect", effects);
-    else {
-      const result = await request("applyItemEffects", { actorUuid: actor.uuid, effects });
+    if (!actor) continue;
+    if (actor.isOwner) {
+      if (sampleSource) {
+        const toDeleteIds = actor.effects
+          .filter(e => isMatchingSource(e.getFlag?.("lhtrpg", "source") ?? e.flags?.lhtrpg?.source ?? e._source?.flags?.lhtrpg?.source, sampleSource))
+          .map(e => e.id);
+        if (toDeleteIds.length) await actor.deleteEmbeddedDocuments("ActiveEffect", toDeleteIds);
+      }
+      await actor.createEmbeddedDocuments("ActiveEffect", effects);
+    } else {
+      const result = await request("applyItemEffects", { actorUuid: actor.uuid, effects, replace });
       if (!result.ok) {
         ui.notifications.warn(game.i18n.localize(result.error ?? "LHTRPG.Piles.Error.Generic"));
         continue;
@@ -216,10 +271,18 @@ export async function applyItemEffects(item, actors) {
 }
 
 /** GM side of applyItemEffects, for actors the user doesn't own. */
-async function _onApplyEffectsRequest({ actorUuid, effects }) {
+async function _onApplyEffectsRequest({ actorUuid, effects, replace }) {
   const actor = await fromUuid(actorUuid);
   if (!(actor instanceof Actor) || !Array.isArray(effects)) return { ok: false };
-  const data = effects.filter(e => e?.flags?.lhtrpg?.itemUse);
+  const data = effects.filter(e => e?.flags?.lhtrpg?.itemUse && e?.flags?.lhtrpg?.source);
+  if (!data.length) return { ok: false };
+  const sampleSource = data[0]?.flags?.lhtrpg?.source;
+  if (replace && sampleSource) {
+    const toDeleteIds = actor.effects
+      .filter(e => isMatchingSource(e.getFlag?.("lhtrpg", "source") ?? e.flags?.lhtrpg?.source ?? e._source?.flags?.lhtrpg?.source, sampleSource))
+      .map(e => e.id);
+    if (toDeleteIds.length) await actor.deleteEmbeddedDocuments("ActiveEffect", toDeleteIds);
+  }
   await actor.createEmbeddedDocuments("ActiveEffect", data);
   return { ok: true };
 }

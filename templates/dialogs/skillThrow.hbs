@@ -24,10 +24,13 @@
 		{{#if system.limit}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Limit'}}</span><span class="chat-stat-value">{{system.limit}}</span></div>{{/if}}
 	</div>
 
-	{{#if (or rollable.check rollable.damage)}}
+	{{#if appliedNames}}<div class="item-use-applied skill-card-applied"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Item.Use.EffectsApplied' names=appliedNames}}</div>{{/if}}
+
+	{{#if (or rollable.check rollable.damage canApplyEffects)}}
 	<div class="chat-card-rolls">
 		{{#if rollable.check}}<button type="button" class="skill-card-roll" data-roll="check"><i class="fas fa-dice"></i> {{localize 'LHTRPG.Skill.Label.Check'}}</button>{{/if}}
 		{{#if rollable.damage}}<button type="button" class="skill-card-roll" data-roll="damage"><i class="fas fa-dice"></i> {{localize 'LHTRPG.Skill.Label.Damage'}}</button>{{/if}}
+		{{#if canApplyEffects}}<button type="button" class="skill-card-effects"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Item.Use.ApplyEffects'}}</button>{{/if}}
 	</div>
 	{{/if}}
 

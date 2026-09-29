@@ -33,7 +33,8 @@ export const EFFECT_EXPIRY_SHORT_LABELS = {
 export const EFFECT_EXPIRY_REASONS = {
   endOfProcess: "LHTRPG.EffectExpiry.Reason.EndOfProcess",
   endOfRound: "LHTRPG.EffectExpiry.Reason.EndOfRound",
-  endOfScene: "LHTRPG.EffectExpiry.Reason.EndOfScene"
+  endOfScene: "LHTRPG.EffectExpiry.Reason.EndOfScene",
+  sustainedLimit: "LHTRPG.EffectExpiry.Reason.SustainedLimit"
 };
 
 /**

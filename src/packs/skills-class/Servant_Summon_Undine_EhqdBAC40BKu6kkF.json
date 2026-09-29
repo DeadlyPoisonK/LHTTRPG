@@ -46,8 +46,12 @@
         }
       ],
       "tint": "#ffffff",
-      "transfer": true,
-      "flags": {},
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
       "_stats": {
         "coreVersion": "13.351",
         "systemId": "lhtrpg",
