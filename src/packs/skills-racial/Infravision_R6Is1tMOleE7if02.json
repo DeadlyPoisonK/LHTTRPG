@@ -34,7 +34,7 @@
       "_id": "gVpLhRgfw2dCBYvH",
       "changes": [
         {
-          "key": "system.fate.max",
+          "key": "system.fate.effect",
           "mode": 2,
           "value": "1",
           "priority": null

@@ -36,7 +36,7 @@
       "_id": "lkrKPglA5njAjMPK",
       "changes": [
         {
-          "key": "system.attributes.dex.value",
+          "key": "system.attributes.dex.effect",
           "mode": 2,
           "value": "3",
           "priority": null

@@ -36,7 +36,7 @@
       "_id": "CP89GvZbrbiS5cuR",
       "changes": [
         {
-          "key": "system.attributes.int.value",
+          "key": "system.attributes.int.effect",
           "mode": 2,
           "value": "4",
           "priority": null

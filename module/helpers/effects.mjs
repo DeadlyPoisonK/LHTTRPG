@@ -9,7 +9,9 @@ export function onManageActiveEffect(event, owner, target) {
   event?.preventDefault?.();
   const a = target ?? (event?.currentTarget instanceof HTMLElement ? event.currentTarget : null) ?? event?.target?.closest?.(".effect-control, [data-action]");
   const li = a?.closest("li");
-  const effect = li?.dataset?.effectId ? owner?.effects?.get(li.dataset.effectId) : null;
+  // Actor sheets also list the effects their items transfer: those rows carry the effect's uuid.
+  const effect = li?.dataset?.effectUuid ? fromUuidSync(li.dataset.effectUuid)
+    : (li?.dataset?.effectId ? owner?.effects?.get(li.dataset.effectId) : null);
   const action = a?.dataset?.action;
   switch ( action ) {
     case "create":

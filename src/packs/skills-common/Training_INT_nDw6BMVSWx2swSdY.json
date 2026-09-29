@@ -36,7 +36,7 @@
       "_id": "AQUyQ4uF4su0S9FM",
       "changes": [
         {
-          "key": "system.attributes.int.value",
+          "key": "system.attributes.int.effect",
           "mode": 2,
           "value": "3",
           "priority": null

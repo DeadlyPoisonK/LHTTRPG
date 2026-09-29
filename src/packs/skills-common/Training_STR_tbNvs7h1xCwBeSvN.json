@@ -36,7 +36,7 @@
       "_id": "yHtWqimUOrIUKK3s",
       "changes": [
         {
-          "key": "system.attributes.str.value",
+          "key": "system.attributes.str.effect",
           "mode": 2,
           "value": "3",
           "priority": null

@@ -36,25 +36,25 @@
       "_id": "DwS9vldd8BIF4HKQ",
       "changes": [
         {
-          "key": "system.attributes.dex.value",
+          "key": "system.attributes.dex.effect",
           "mode": 2,
           "value": "1",
           "priority": null
         },
         {
-          "key": "system.attributes.int.value",
+          "key": "system.attributes.int.effect",
           "mode": 2,
           "value": "1",
           "priority": null
         },
         {
-          "key": "system.attributes.pow.value",
+          "key": "system.attributes.pow.effect",
           "mode": 2,
           "value": "1",
           "priority": null
         },
         {
-          "key": "system.attributes.str.value",
+          "key": "system.attributes.str.effect",
           "mode": 2,
           "value": "1",
           "priority": null

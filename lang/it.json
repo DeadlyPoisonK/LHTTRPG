@@ -95,7 +95,8 @@
         "passive": "Effetti passivi",
         "inactive": "Effetti inattivi",
         "suppressed": "Effetti soppressi"
-      }
+      },
+      "Migrated": "Migrati {count} effetti attivi."
     },
     "EffectCreate": "Crea effetto",
     "EffectDelete": "Elimina effetto",

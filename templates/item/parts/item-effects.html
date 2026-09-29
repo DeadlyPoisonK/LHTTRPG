@@ -17,7 +17,12 @@
       <li class="item effect flexrow" data-effect-id="{{effect.id}}">
         <div class="item-name effect-name flexrow">
           <img class="item-image" src="{{effect.img}}"/>
-          <h4>{{effect.name}}</h4>
+          <div class="effect-title-group">
+            <h4>{{effect.name}}</h4>
+            {{#with (lhEffectSummary effect) as |summary|}}
+              <div class="effect-summary" title="{{lhEffectSummary effect plain=true}}">{{summary}}</div>
+            {{/with}}
+          </div>
         </div>
         <div class="effect-source">{{effect.sourceName}}</div>
         <div class="effect-duration">{{effect.duration.label}}</div>

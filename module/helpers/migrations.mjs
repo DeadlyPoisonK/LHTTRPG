@@ -16,6 +16,7 @@ import { STATUSES_MIGRATION } from "./statuses.mjs";
 import { USABLE_MIGRATION } from "./item-use.mjs";
 import { TAGS_MIGRATION } from "./tags.mjs";
 import { HANDS_MIGRATION } from "./hands.mjs";
+import { EFFECTS_MIGRATION } from "./effect-targets.mjs";
 
 export const MIGRATIONS = [
   CHARACTER_OPTIONS_MIGRATION,   // legacy Race/Class/Subclass fields -> items
@@ -23,7 +24,8 @@ export const MIGRATIONS = [
   STATUSES_MIGRATION,            // legacy status effects/fields -> LH status effects
   USABLE_MIGRATION,              // usable Gear -> "usable" type (replaces the item's system data)
   TAGS_MIGRATION,                // canonical tags
-  HANDS_MIGRATION                // Two-Handed + off hand, equipped non-equipment
+  HANDS_MIGRATION,               // Two-Handed + off hand, equipped non-equipment
+  EFFECTS_MIGRATION              // broken active effect keys -> valid effect targets
 ];
 
 /** Register the world setting of every migration. Call during the `init` hook. */

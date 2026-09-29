@@ -20,6 +20,7 @@ import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
 import { registerItemUse, useItem } from "./helpers/item-use.mjs";
+import { registerEffectTargets } from "./helpers/effect-targets.mjs";
 import { registerMigrations, runMigrations } from "./helpers/migrations.mjs";
 
 /* -------------------------------------------- */
@@ -64,6 +65,8 @@ Hooks.once('init', async function () {
   registerStatuses();
   // Tag catalog, tag editor helper and tag normalization
   registerTags();
+  // Effect targets catalog and summary helper
+  registerEffectTargets();
   // World data migrations: run in order on the active GM when the world is ready
   registerMigrations();
   // By default, track hate and skip defeated combatants

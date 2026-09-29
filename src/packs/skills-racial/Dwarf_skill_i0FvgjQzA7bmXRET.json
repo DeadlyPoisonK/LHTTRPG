@@ -36,7 +36,7 @@
       "_id": "zaTGvCCnk2GfolpB",
       "changes": [
         {
-          "key": "system.attributes.str.value",
+          "key": "system.attributes.str.effect",
           "mode": 2,
           "value": "2",
           "priority": null
@@ -80,7 +80,7 @@
       "_id": "f3Srrzqq2TEc60AV",
       "changes": [
         {
-          "key": "system.attributes.pow.value",
+          "key": "system.attributes.pow.effect",
           "mode": 2,
           "value": "2",
           "priority": null

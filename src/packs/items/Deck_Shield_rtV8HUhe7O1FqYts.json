@@ -39,7 +39,7 @@
       "_id": "jy8lTphVEKmPTVOZ",
       "changes": [
         {
-          "key": "system.inventory.maxSpace",
+          "key": "system.inventory.mod",
           "mode": 2,
           "value": "+8",
           "priority": null

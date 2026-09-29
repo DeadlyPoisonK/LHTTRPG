@@ -36,7 +36,7 @@
       "_id": "NM8GxIFwjDxjikl7",
       "changes": [
         {
-          "key": "system.attack.mod",
+          "key": "system.battle-status.power.attack.mod",
           "mode": 2,
           "value": "",
           "priority": null

@@ -1508,6 +1508,41 @@
   border: none;
 }
 
+/* Effect readable summary under the effect name */
+.lhtrpg .effects-list .effect-title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  text-align: left;
+}
+
+.lhtrpg .effects-list .effect-title-group h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.lhtrpg .effects-list .effect-summary {
+  font-size: 11px;
+  line-height: 1.2;
+  color: rgba(214, 255, 218, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.lhtrpg .effects-list .effect-summary em {
+  font-style: italic;
+  opacity: 0.85;
+}
+
 .lhtrpg .tag-list {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -36,7 +36,7 @@
       "_id": "H2w2TVG5FUWawG8g",
       "changes": [
         {
-          "key": "system.attributes.pow.value",
+          "key": "system.attributes.pow.effect",
           "mode": 2,
           "value": "3",
           "priority": null

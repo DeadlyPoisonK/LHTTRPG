@@ -36,7 +36,7 @@
       "_id": "I2vyZA2CvJ8wlci4",
       "changes": [
         {
-          "key": "system.attributes.dex.value",
+          "key": "system.attributes.dex.effect",
           "mode": 2,
           "value": "4",
           "priority": null

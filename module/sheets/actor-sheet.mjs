@@ -161,7 +161,8 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
     };
 
     // Prepare active effects and status panel
-    context.effects = prepareActiveEffectCategories(actor.effects);
+    // Own effects plus the ones its items transfer (applied from the item, not copied onto the actor).
+    context.effects = prepareActiveEffectCategories(actor.allApplicableEffects());
     context.statusPanel = getStatusPanel(actor);
 
     return context;

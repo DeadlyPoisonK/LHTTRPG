@@ -37,7 +37,7 @@
       "_id": "m86M6YGjvu1j3ldF",
       "changes": [
         {
-          "key": "",
+          "key": "system.checks.accuracy.mod",
           "mode": 2,
           "value": "+2",
           "priority": null

@@ -40,7 +40,7 @@
       "system": {},
       "changes": [
         {
-          "key": "system.healt.effect",
+          "key": "system.health.effect",
           "mode": 2,
           "value": "16",
           "priority": null

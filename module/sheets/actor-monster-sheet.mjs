@@ -84,7 +84,8 @@ export class LHTrpgActorMonsterSheet extends HandlebarsApplicationMixin(foundry.
       }));
 
     // Prepare active effects and status panel
-    context.effects = prepareActiveEffectCategories(actor.effects);
+    // Own effects plus the ones its items transfer (applied from the item, not copied onto the actor).
+    context.effects = prepareActiveEffectCategories(actor.allApplicableEffects());
     context.statusPanel = getStatusPanel(actor);
 
     // Evasion / Resistance dice options: 0D6 to 5D6

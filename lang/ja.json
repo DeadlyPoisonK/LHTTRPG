@@ -95,7 +95,8 @@
         "passive": "パッシブ効果",
         "inactive": "非アクティブ効果",
         "suppressed": "抑制された効果"
-      }
+      },
+      "Migrated": "{count}個のアクティブエフェクトを移行しました。"
     },
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
