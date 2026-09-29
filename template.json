@@ -218,6 +218,7 @@
       "accessory",
       "bag",
       "gear",
+      "usable",
       "ticket",
       "connection",
       "union",
@@ -325,6 +326,24 @@
         "itemBase",
         "infos"
       ]
+    },
+    "usable": {
+      "templates": [
+        "base",
+        "itemBase",
+        "infos"
+      ],
+      "check": {
+        "dice": 0,
+        "mod": 0,
+        "vs": ""
+      },
+      "damage": {
+        "dice": 0,
+        "mod": 0,
+        "type": "",
+        "recovery": false
+      }
     },
     "ticket": {
       "templates": [

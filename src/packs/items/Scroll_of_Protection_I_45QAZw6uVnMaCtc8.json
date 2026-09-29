@@ -1,6 +1,6 @@
 {
   "name": "Scroll of Protection I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Choose one: [Flame] [Cold] [Shock] [Holy] [Blight] or [Spirit]. The target gains [Cancel (Chosen Tag): 10]. You take [Fatigue: Base STR]. (CR15): This item has no effect.</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 400000,
   "ownership": {

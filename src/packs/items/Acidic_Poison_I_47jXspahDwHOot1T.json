@@ -1,6 +1,6 @@
 {
   "name": "Acidic Poison I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>[Toxin] [Consumable] [Blight]</p>\n<hr>\n<p>Deal [2D + 11] physical damage to the target. This damage always has the [Blight] tag, even if another effect would overwrite it.</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": "Opposed (2D+4 vs Resistance)"
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 2,
+      "mod": 11,
+      "type": "physical",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 300000,
   "ownership": {

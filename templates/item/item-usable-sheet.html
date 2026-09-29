@@ -1,0 +1,68 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{> "systems/lhtrpg/templates/item/parts/item-header.html"}}
+
+  <section class="sheet-stats">
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Rank'}}</label>
+      <div>
+        <input class="itemRank-input" type="text" name="system.rank" value="{{system.rank}}" placeholder="0"
+          data-dtype="Number" maxlength="2">
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Timing'}}</label>
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.timing}}
+    </div>
+
+    {{> "systems/lhtrpg/templates/item/parts/roll-check.html" noRoll=true}}
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Target'}}</label>
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.target}}
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Range'}}</label>
+      {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.range}}
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Price'}}</label>
+      <div>
+        <input class="itemPrice-input" type="text" name="system.price" value="{{system.price}}" placeholder="0"
+          data-dtype="Number">
+      </div>
+    </div>
+
+    {{> "systems/lhtrpg/templates/item/parts/roll-damage.html" noRoll=true}}
+
+    {{#if canUse}}
+    <div class="stat-div item-use-row">
+      <button type="button" class="item-use"><i class="fas fa-flask"></i> {{localize 'LHTRPG.Item.Use.Button'}}</button>
+    </div>
+    {{/if}}
+
+  </section>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize 'LHTRPG.Description.Label'}}</a>
+    <a class="item" data-tab="effects">{{localize 'LHTRPG.Effect.Label'}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body itemGear">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Effects Tab: copied to the target when the item is used --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/lhtrpg/templates/item/parts/item-effects.html"}}
+    </div>
+  </section>
+</form>

@@ -5,7 +5,8 @@ import { createAttackCard, createDamageCard, findAttackMessage, isAttack } from 
  * Skill Check and Damage, set directly on the skill sheet:
  *   system.check  = { stat, dice, mod, vs }            vs: "evasion" | "resistance" | "auto" | ""
  *   system.damage = { dice, mod, type, recovery }      type: "physical" | "magical" | ""
- * Monster skills (subtype "Monster", or any skill owned by a monster) roll their dice + modifier as is.
+ * Monster skills (subtype "Monster", or any skill owned by a monster) and usable items roll their
+ * dice + modifier as is.
  * Character skills (Basic / General / Combat) roll the character's check `stat` (its dice + total)
  * plus the extra dice/modifier, and their damage adds Attack Power (physical) or Magic Power (magical),
  * plus Recovery Power when `recovery` is set (healing: "3D + [Magic Power] + [Recovery]").
@@ -70,12 +71,13 @@ function parseStatText(text) {
 }
 
 /**
- * Whether a skill rolls as a monster skill (fixed dice + modifier).
+ * Whether a skill rolls as a monster skill (fixed dice + modifier). Usable items (potions,
+ * poisons…) also roll their own fixed values: "Opposed (8+2D vs Resistance)", "2D + 50".
  * @param {Item} item
  * @returns {boolean}
  */
 export function isMonsterSkill(item) {
-  return (item.system.subtype === "Monster") || (item.actor?.type === "monster");
+  return (item.type === "usable") || (item.system.subtype === "Monster") || (item.actor?.type === "monster");
 }
 
 /**
@@ -182,10 +184,13 @@ function skillRoller(item) {
  * Roll a skill's Check or Damage to chat.
  * A Check against Evasion / Resistance (or Automatic) with targeted tokens becomes an attack card,
  * and every Damage roll becomes a damage card (see combat-cards.mjs).
- * @param {Item} item                   The skill
+ * @param {Item} item                   The skill (or usable item)
  * @param {"check"|"damage"} which
+ * @param {object} [options]
+ * @param {object[]} [options.targets]  Damage card targets when the user targets nothing
+ *                                       (see targetEntries in combat-cards.mjs)
  */
-export async function rollSkill(item, which) {
+export async function rollSkill(item, which, { targets } = {}) {
   const system = item.system;
   const title = `${item.name} - ${game.i18n.localize(`LHTRPG.Skill.Label.${which === "check" ? "Check" : "Damage"}`)}`;
   const values = system[which];
@@ -232,6 +237,9 @@ export async function rollSkill(item, which) {
   }
 
   if (attack) return createAttackCard(item, actor, formula, flavor);
-  if (which === "damage") return createDamageCard(item, actor, formula, flavor, findAttackMessage(item));
+  if (which === "damage") {
+    const defaultTargets = (targets?.length && !game.user.targets.size) ? targets : undefined;
+    return createDamageCard(item, actor, formula, flavor, findAttackMessage(item), defaultTargets);
+  }
   return new Roll(formula).toMessage({ speaker: ChatMessage.getSpeaker({ actor }), flavor, rollMode });
 }

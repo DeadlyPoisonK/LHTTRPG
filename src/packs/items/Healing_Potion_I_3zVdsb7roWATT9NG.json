@@ -1,6 +1,6 @@
 {
   "name": "Healing Potion I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Recovers 25 points of target's [HP].</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 25,
+      "type": "",
+      "recovery": true
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

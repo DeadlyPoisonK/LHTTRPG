@@ -9,11 +9,12 @@
       "TypeArmor": "Armure",
       "TypeBag": "Sac",
       "TypeConnection": "Connexion",
-      "TypeGear": "Équipement",
+      "TypeGear": "Autre",
       "TypeShield": "Bouclier",
       "TypeSkill": "Compétence",
       "TypeTicket": "Ticket",
       "TypeUnion": "Union",
+      "TypeUsable": "Utilisable",
       "TypeWeapon": "Arme"
     }
   },

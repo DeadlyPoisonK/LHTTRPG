@@ -1,6 +1,6 @@
 {
   "name": "Demonic Electric Shock Light Sand I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Deal [2D + 5] magical damage to the target. This damage always has the [Shock] tag, even if another effect would overwrite it.</p>",
     "tags": [
@@ -20,9 +20,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 2,
+      "mod": 5,
+      "type": "magical",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 500000,
   "ownership": {

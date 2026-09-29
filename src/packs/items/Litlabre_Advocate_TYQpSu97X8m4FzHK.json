@@ -1,6 +1,6 @@
 {
   "name": "Litlabre Advocate",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Your [Fatigue] is reduced by -10. At the same time, you may use up to a maximum of three [Food] items. The target of the items used at this time will be you only. If you use three items, your [Fate] will be +2.\nYamato's southernmost region, the Retrable Islands, produce a secret egg wine. For a long time, the method of production was a mystery, but after the Catastrophe, the recipe was made public through exchanges with Adventurers.</p><hr><p>Royal Egg of the Sahuagin [Core Material] (620G) + Healing Potion (Intermediate) (220G) ×3 + Panacea (Intermediate) (220G) ×3 + [Magic Catalyst 19] (340G) ×3 + Crafting Cost (850G)</p>",
     "tags": [
@@ -23,9 +23,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 1300000,
   "ownership": {

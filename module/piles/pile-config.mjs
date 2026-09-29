@@ -11,12 +11,12 @@ export const PILE_MODES = {
 };
 
 // Item types that physically exist and can be carried, dropped, traded or sold.
-export const PHYSICAL_TYPES = ["weapon", "armor", "shield", "accessory", "bag", "gear", "ticket"];
+export const PHYSICAL_TYPES = ["weapon", "armor", "shield", "accessory", "bag", "usable", "gear", "ticket"];
 
 // Item types that take a slot in the character's general inventory grid when
 // unequipped (mirrors the carriedItems list of the character sheet). Tickets
 // live in their own slots and never use inventory space.
-export const SPACE_TYPES = ["weapon", "armor", "shield", "accessory", "bag", "gear"];
+export const SPACE_TYPES = ["weapon", "armor", "shield", "accessory", "bag", "usable", "gear"];
 
 // Item types that go in an equipment slot of the character sheet. Anything else (gear, potions…)
 // is only carried: it can't be equipped.
@@ -61,6 +61,7 @@ export const TYPE_ICONS = {
   shield: "systems/lhtrpg/assets/ui/items_icons/shield.svg",
   accessory: "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   bag: "systems/lhtrpg/assets/ui/items_icons/bag.svg",
+  usable: "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   gear: "systems/lhtrpg/assets/ui/items_icons/gear.svg",
   ticket: "icons/sundries/flags/banner-pink.webp"
 };

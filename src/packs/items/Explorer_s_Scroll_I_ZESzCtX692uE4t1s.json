@@ -1,6 +1,6 @@
 {
   "name": "Explorer's Scroll I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Choose one: [Flame] [Cold] [Shock] [Blight] [Spirit]. The target takes no damage from Props with the chosen tag. Treat this effect as a Combat Status. You take [Fatigue: (Base STR x 2)]. (CR12): This item has no effect.&nbsp;</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 3800000,
   "ownership": {

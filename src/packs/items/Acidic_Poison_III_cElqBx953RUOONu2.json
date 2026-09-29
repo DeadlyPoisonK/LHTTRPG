@@ -1,6 +1,6 @@
 {
   "name": "Acidic Poison III",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Deal [2D + 50] physical damage to the target. This damage always has the [Blight] tag, even if another effect would overwrite it.</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 2,
+      "mod": 50,
+      "type": "physical",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 3100000,
   "ownership": {

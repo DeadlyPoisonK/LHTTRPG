@@ -1,6 +1,6 @@
 {
   "name": "True Sight Card II",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>This item targets everything in range that has a [Detection Difficulty]. The target removes [Concealed] or [Hidden]. You do not have to apply this effect to your allies.&nbsp;</p>",
     "tags": [
@@ -20,9 +20,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 1900000,
   "ownership": {

@@ -1,6 +1,6 @@
 {
   "name": "Elixir: Daidara's Finger",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>The target's [Evasion Check] is reduced by 1, and all of the target's [Melee Attacks] with the range \"Close\" become \"1 Sq\" range. This effect is treated as a Combat Skill (CS).</p>\n<p>(1D: 5 or above): This item can be used without being consumed, as if it does not have the [Consumable] tag.</p>\n<hr>\n<ul>\n<li>Suspicious Pill [Core Material] (30G)</li>\n<li>Bottle of Strength (Beginner) &times; 2 (40G each)</li>\n<li>[Magic Catalyst 2] &times; 2 (20G each)</li>\n<li>Crafting Fee (55G)</li>\n</ul>",
     "tags": [
@@ -22,14 +22,24 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
       "origin": "Compendium.world.medicine.Item.HP2Xq5TLvjPWNntz",
       "duration": {
-        "rounds": 1,
+        "rounds": null,
         "startTime": null,
         "seconds": null,
         "combat": null,

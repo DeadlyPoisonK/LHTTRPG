@@ -9,11 +9,12 @@
       "TypeArmor": "방어구",
       "TypeBag": "가방",
       "TypeConnection": "커넥션",
-      "TypeGear": "장비",
+      "TypeGear": "기타",
       "TypeShield": "방패",
       "TypeSkill": "특기",
       "TypeTicket": "티켓",
       "TypeUnion": "유니온",
+      "TypeUsable": "사용 아이템",
       "TypeWeapon": "무기"
     }
   },

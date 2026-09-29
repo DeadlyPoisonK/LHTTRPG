@@ -26,7 +26,7 @@
     {
       "origin": "Compendium.world.miscellaneous.Item.h9JwRDFL96N8fWpJ",
       "duration": {
-        "rounds": 1,
+        "rounds": null,
         "startTime": null,
         "seconds": null,
         "combat": null,

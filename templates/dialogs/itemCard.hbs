@@ -39,7 +39,10 @@
 		{{/if}}
 		{{#if isGear}}
 			{{#if system.timing}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Timing'}}</span><span class="chat-stat-value">{{system.timing}}</span></div>{{/if}}
-			{{#if system.check}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Check'}}</span><span class="chat-stat-value">{{system.check}}</span></div>{{/if}}
+			{{#if system.checkLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Check'}}</span><span class="chat-stat-value">{{system.checkLabel}}</span></div>
+			{{else if system.check}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Check'}}</span><span class="chat-stat-value">{{system.check}}</span></div>{{/if}}
+			{{#if system.damageLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Damage'}}</span><span class="chat-stat-value">{{system.damageLabel}}</span></div>{{/if}}
+			{{#if system.target}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Target'}}</span><span class="chat-stat-value">{{system.target}}</span></div>{{/if}}
 			{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Range'}}</span><span class="chat-stat-value">{{system.range}}</span></div>{{/if}}
 		{{/if}}
 		{{#if isTicket}}

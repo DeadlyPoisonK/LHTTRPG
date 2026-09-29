@@ -44,31 +44,7 @@
       {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.timing}}
     </div>
 
-    <div class="stat-div skill-roll">
-      <label class="skill-roll-button lh-roll-button" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Skill.Label.Check'}}</label>
-      <div class="skill-roll-fields">
-        {{#if isMonsterSkill}}
-          <select name="system.check.dice" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
-            {{selectOptions skillDiceOptions selected=system.check.dice}}
-          </select>
-        {{else}}
-          {{!-- Character skill: the character's check, plus extra dice --}}
-          <select class="skill-roll-stat" name="system.check.stat" {{disabled (eq system.check.vs "auto")}}>
-            {{selectOptions checkStatOptions selected=system.check.stat blank="-" localize=true}}
-          </select>
-          <select name="system.check.dice" data-dtype="Number" title="{{localize 'LHTRPG.Skill.Label.ExtraDice'}}" {{disabled (eq system.check.vs "auto")}}>
-            {{selectOptions skillBonusDiceOptions selected=system.check.dice}}
-          </select>
-        {{/if}}
-        <span>+</span>
-        <input class="skill-roll-mod" type="number" step="1" name="system.check.mod" value="{{system.check.mod}}"
-          placeholder="0" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
-        <span class="skill-roll-vs">vs</span>
-        <select class="skill-roll-vs-select" name="system.check.vs">
-          {{selectOptions checkVsOptions selected=system.check.vs blank="-" localize=true}}
-        </select>
-      </div>
-    </div>
+    {{> "systems/lhtrpg/templates/item/parts/roll-check.html"}}
 
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Skill.Label.Target'}}</label>
@@ -90,33 +66,7 @@
       {{> "systems/lhtrpg/templates/item/parts/skill-field.html" f=skillFields.limit}}
     </div>
     
-    <div class="stat-div skill-roll">
-      <label class="skill-roll-button lh-roll-button" data-roll="damage" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}">{{localize 'LHTRPG.Skill.Label.Damage'}}</label>
-      <div class="skill-roll-fields">
-        <select name="system.damage.dice" data-dtype="Number">
-          {{selectOptions skillDamageDiceOptions selected=system.damage.dice}}
-        </select>
-        <span>+</span>
-        <input class="skill-roll-mod" type="number" step="1" name="system.damage.mod" value="{{system.damage.mod}}"
-          placeholder="0" data-dtype="Number">
-        <input type="hidden" name="system.damage.type" value="{{system.damage.type}}">
-        <div class="skill-roll-options">
-          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.AttackPower'}}"{{/unless}}>
-            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="physical" {{checked (eq system.damage.type "physical")}}>
-            {{localize 'LHTRPG.Skill.Label.DamagePhysical'}}
-          </label>
-          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.MagicPower'}}"{{/unless}}>
-            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="magical" {{checked (eq system.damage.type "magical")}}>
-            {{localize 'LHTRPG.Skill.Label.DamageMagical'}}
-          </label>
-          {{!-- Recovery combines with Physical / Magical --}}
-          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.RestorationPower'}}"{{/unless}}>
-            <input type="checkbox" name="system.damage.recovery" {{checked system.damage.recovery}}>
-            {{localize 'LHTRPG.Skill.Label.DamageRecovery'}}
-          </label>
-        </div>
-      </div>
-    </div>
+    {{> "systems/lhtrpg/templates/item/parts/roll-damage.html"}}
 
     <div class="stat-div checkType">
       <label>{{localize 'LHTRPG.Skill.Label.MacroEffect'}}</label>

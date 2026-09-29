@@ -10,11 +10,12 @@
       "TypeArmor": "Armadura",
       "TypeBag": "Bolsa",
       "TypeConnection": "Conexión",
-      "TypeGear": "Equipo",
+      "TypeGear": "Otros",
       "TypeShield": "Escudo",
       "TypeSkill": "Habilidad",
       "TypeTicket": "Ticket",
       "TypeUnion": "Unión",
+      "TypeUsable": "Usable",
       "TypeWeapon": "Arma"
     },
     "Item": {
@@ -22,7 +23,7 @@
       "armor": "Armadura",
       "bag": "Bolsa",
       "connection": "Conexión",
-      "gear": "Equipo",
+      "gear": "Otros",
       "shield": "Escudo",
       "skill": "Habilidad",
       "ticket": "Ticket",
@@ -30,7 +31,8 @@
       "weapon": "Arma",
       "race": "Raza",
       "class": "Clase",
-      "subclass": "Subclase"
+      "subclass": "Subclase",
+      "usable": "Usable"
     }
   },
   "IMPORT": {
@@ -108,6 +110,24 @@
         "Target": "Objetivo",
         "ThrowToChat": "Enviar al Chat",
         "Timing": "Momento"
+      },
+      "Use": {
+        "Button": "Usar",
+        "Label": "Usado",
+        "Consumed": "Consumido",
+        "EffectsApplied": "Efectos aplicados a: {names}",
+        "ApplyEffects": "Aplicar efectos",
+        "NoActor": "El item debe estar en el inventario de un personaje para usarse.",
+        "NoTargets": "Selecciona (target) los tokens que reciben los efectos.",
+        "Blocked": "No puedes usar {name} ahora: Timing {timing} ({reason}).",
+        "GMOverride": "Timing {timing} ({reason}): usado igualmente (GM).",
+        "Reason": {
+          "NotTurn": "no es tu Main Process",
+          "Phase": "fase actual: {phase}",
+          "OutOfCombat": "solo fuera de combate",
+          "Briefing": "solo antes de empezar el combate"
+        },
+        "Migrated": "{count} items de Equipo pasaron a ser Usables (pociones, pergaminos…)."
       }
     },
     "Label": {
@@ -426,8 +446,9 @@
         "shield": "Escudos",
         "accessory": "Accesorios",
         "bag": "Bolsas",
-        "gear": "Equipo",
-        "ticket": "Tickets"
+        "gear": "Otros",
+        "ticket": "Tickets",
+        "usable": "Usables"
       }
     },
     "Archetype": {

@@ -1,6 +1,6 @@
 {
   "name": "Majo no Ōnabe",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Reduce the target's [Fatigue] intensity by -60. The target may select one skill from the skills they currently possess that has the [Magic Attack] tag and increase its SR by 1 (cannot exceed the maximum SR. This effect is treated as a CS).\nVarious potions that raise magic power have been thrown into a big pot and boiled to a bubbling mess. Though the appearance is grotesque, for some reason it is extremely delicious. However, you'd be better off not knowing what the ingredients are.</p><hr><p>Snow Peach [Core Material] (440G) + Chicken Box (200G) + Panacea (Intermediate) (220G) + Vial of Magic Spirit (Intermediate) (260G) + [Magic Catalyst 15] (220G) ×3 + Crafting Cost (580G)</p>",
     "tags": [
@@ -23,9 +23,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 700000,
   "ownership": {

@@ -1,6 +1,6 @@
 {
   "name": "Bisen Peach Medicine",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>You gain [Barrier: 30]. You also enter the [Flight] state and gain the [Radiance] and [Fairy] tags. This effect lasts until the end of the scene. (CR14) This item has no effect.\nA magical potion made from peaches that have been ripened under the sun for a century, completely dissolved into a liquid. The potion has a faint, hazy appearance like spring mist, and a subtle scent of peach rises from it. However, its effects are intense; upon consumption, an aura of light radiates from the entire body, and for a short time, the user is elevated to a magical existence.</p><hr><p>Soft Stone [Core Material] (80G) + White Hitokata (Basic) (40G) ×2 + Elemental Card (Basic) (40G) + [Magic Catalyst 5] (40G) ×2 + Crafting Cost (110G)</p>",
     "tags": [
@@ -23,9 +23,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

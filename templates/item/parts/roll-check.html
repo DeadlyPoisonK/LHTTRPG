@@ -1,0 +1,26 @@
+{{!-- Check of a skill or usable item: character check + extra dice, or fixed dice (monsters, items). --}}
+    <div class="stat-div skill-roll">
+      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
+      <div class="skill-roll-fields">
+        {{#if isMonsterSkill}}
+          <select name="system.check.dice" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
+            {{selectOptions skillDiceOptions selected=system.check.dice}}
+          </select>
+        {{else}}
+          {{!-- Character skill: the character's check, plus extra dice --}}
+          <select class="skill-roll-stat" name="system.check.stat" {{disabled (eq system.check.vs "auto")}}>
+            {{selectOptions checkStatOptions selected=system.check.stat blank="-" localize=true}}
+          </select>
+          <select name="system.check.dice" data-dtype="Number" title="{{localize 'LHTRPG.Skill.Label.ExtraDice'}}" {{disabled (eq system.check.vs "auto")}}>
+            {{selectOptions skillBonusDiceOptions selected=system.check.dice}}
+          </select>
+        {{/if}}
+        <span>+</span>
+        <input class="skill-roll-mod" type="number" step="1" name="system.check.mod" value="{{system.check.mod}}"
+          placeholder="0" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
+        <span class="skill-roll-vs">vs</span>
+        <select class="skill-roll-vs-select" name="system.check.vs">
+          {{selectOptions checkVsOptions selected=system.check.vs blank="-" localize=true}}
+        </select>
+      </div>
+    </div>

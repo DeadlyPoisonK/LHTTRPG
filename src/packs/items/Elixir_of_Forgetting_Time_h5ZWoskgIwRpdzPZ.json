@@ -1,6 +1,6 @@
 {
   "name": "Elixir of Forgetting Time",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>You may perform the \"Timing: Setup\" action twice during the first round of this scene's setup process. [1D:5~6] This item is not consumed.\nTime Crystal Elixir A mysterious potion that crystallizes and dissolves time itself. Taking a single sip slows the user's perception of time, allowing them to perform various actions at twice the normal speed. However, overuse causes severe side effects, so the effect is set to wear off quickly.</p><hr><p>Universal Dissolver [Core Material] (340G) + Strong Impact Bottle (Intermediate) (260G) + Magic Essence Bottle (Intermediate) (26,0G) + Skill Medicine (Intermediate) (190G) + [Magic Catalyst 13] (170G) ×2 + Crafting Cost (610G)</p>",
     "tags": [
@@ -23,9 +23,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

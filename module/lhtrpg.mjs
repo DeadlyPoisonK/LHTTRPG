@@ -20,6 +20,7 @@ import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs"
 import { registerSkillBrowser } from "./apps/skill-browser.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
+import { registerItemUse } from "./helpers/item-use.mjs";
 import { migrateHands, registerHandsSettings } from "./helpers/hands.mjs";
 
 /* -------------------------------------------- */
@@ -98,6 +99,9 @@ Hooks.once('init', async function () {
 
   // Attack / damage chat cards: opposed Hit vs Dodge Checks and damage application
   registerCombatCards();
+
+  // Usable items (potions, scrolls…): Use button, use card, effects, [Consumable]
+  registerItemUse();
 
   // Round Progression: Briefing / Setup / Main / Cleanup phases in the tracker
   registerCombatPhases();

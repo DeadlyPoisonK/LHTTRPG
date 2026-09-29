@@ -1,6 +1,6 @@
 {
   "name": "R17 4th Dimension Vault Usage Ticket",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>You gain a special [inventory slot]20. You may freely place items into this [inventory slot]. When your rest time ends or you command it, this [inventory slot] will vanish along with the items stored inside, and the items will no longer be accessible during afterplay, nor will they be affected by external influences.\nA mysterious vault ticket that allows you to deposit your items in a vault that appears anywhere. While your items are deposited, no one knows where they are.</p><hr><p>Star Weasel Tail [Core Material] (560G) + Crow's Handbag (600G) + [Magic Catalyst 17] (280G) ×3 + Crafting Cost (700G)</p>",
     "tags": [
@@ -23,9 +23,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 5700000,
   "ownership": {

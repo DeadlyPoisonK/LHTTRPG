@@ -1,6 +1,6 @@
 {
   "name": "Sealing Poison I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>The subject can no longer give BS by their own actions. This effect is treated as BS and is automatically canceled when the target's next main process ends.</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 4000000,
   "ownership": {

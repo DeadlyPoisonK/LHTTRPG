@@ -16,6 +16,7 @@ export class LHTrpgItem extends Item {
     "accessory": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "bag": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "gear": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
+    "usable": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "ticket": "systems/lhtrpg/templates/dialogs/itemCard.hbs",
     "valuable": "systems/lhtrpg/templates/item/item-valuable-sheet.html",
     "connection": "systems/lhtrpg/templates/item/item-connection-sheet.html",
@@ -27,8 +28,12 @@ export class LHTrpgItem extends Item {
  * @type {boolean}
  */
   get areEffectsSuppressed() {
-    // Race / Class / Subclass effects apply as long as the character holds the item.
-    const requireEquipped = !["skill", "connection", "union", ...OPTION_TYPES].includes(this.type);
+    // Usable items (potions, scrolls…) don't affect whoever carries them: their effects are copied
+    // to the target when the item is used (see item-use.mjs).
+    if (this.type === "usable") return true;
+    // Race / Class / Subclass effects apply as long as the character holds the item, and so do the
+    // effects of other carried items (Gear such as the Cursed Stone), which are never equipped.
+    const requireEquipped = !["skill", "connection", "union", "gear", ...OPTION_TYPES].includes(this.type);
     if (requireEquipped && (this.system.equipped === false)) return true;
 
     return false;
@@ -48,7 +53,7 @@ export class LHTrpgItem extends Item {
   prepareDerivedData() {
     super.prepareDerivedData();
     // Skill Check / Damage: normalized values plus the labels shown on sheets and chat cards
-    if (this.type === "skill") prepareSkillRolls(this);
+    if (["skill", "usable"].includes(this.type)) prepareSkillRolls(this);
   }
 
   /**
@@ -118,7 +123,7 @@ export class LHTrpgItem extends Item {
   async _preUpdate(changed, options, user) {
     if ((await super._preUpdate(changed, options, user)) === false) return false;
     // Once the Check is set on the sheet, the legacy free-text Check is no longer used.
-    if ((this.type === "skill") && changed.system?.check && this._source.system.checkType) {
+    if (["skill", "usable"].includes(this.type) && changed.system?.check && this._source.system.checkType) {
       changed.system.checkType = "";
     }
   }
@@ -213,7 +218,7 @@ export class LHTrpgItem extends Item {
         isShield: element.type === "shield",
         isAccessory: element.type === "accessory",
         isBag: element.type === "bag",
-        isGear: element.type === "gear",
+        isGear: ["gear", "usable"].includes(element.type),
         isTicket: element.type === "ticket",
         enrichedDescription,
         enrichedSkillText,

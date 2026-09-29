@@ -111,7 +111,16 @@ function targetActor(target) {
 
 /** Card entries for the user's targeted tokens. */
 function userTargets() {
-  return [...game.user.targets].filter(t => t.actor).map(t => ({
+  return targetEntries(game.user.targets);
+}
+
+/**
+ * Card entries for these tokens (placeables).
+ * @param {Iterable<Token>} tokens
+ * @returns {object[]}
+ */
+export function targetEntries(tokens) {
+  return [...tokens].filter(t => t?.actor).map(t => ({
     tokenUuid: t.document.uuid,
     actorUuid: t.actor.uuid,
     name: t.document.name,
@@ -404,8 +413,9 @@ export function findAttackMessage(item) {
  * @param {string} formula
  * @param {string} flavor
  * @param {ChatMessage} [attackMessage]
+ * @param {object[]} [defaultTargets]   Targets when there is no attack card, instead of the user's
  */
-export async function createDamageCard(item, attacker, formula, flavor, attackMessage) {
+export async function createDamageCard(item, attacker, formula, flavor, attackMessage, defaultTargets) {
   const roll = await new Roll(formula).evaluate();
   const attack = attackMessage?.getFlag("lhtrpg", "attack");
   const targets = attack
@@ -414,7 +424,7 @@ export async function createDamageCard(item, attacker, formula, flavor, attackMe
       // Pending dodges are treated as failed: the attack was not dodged (yet).
       dodgeFailed: !attack.auto, applied: null
     }))
-    : userTargets().map(t => ({ ...t, dodgeFailed: false, applied: null }));
+    : (defaultTargets ?? userTargets()).map(t => ({ ...t, dodgeFailed: false, applied: null }));
 
   const { type, recovery } = item.system.damage;
   // No damage type set on the skill: weapon attacks go against Evasion, magic against Resistance.

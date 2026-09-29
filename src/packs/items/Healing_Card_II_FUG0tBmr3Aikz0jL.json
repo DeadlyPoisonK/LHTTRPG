@@ -1,6 +1,6 @@
 {
   "name": "Healing Card II",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>During the current Main Process, the target gains a +15 bonus to [Recovery]. The effect of multiple Healing Cards (regardless of grade) do not stack.&nbsp;</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 1400000,
   "ownership": {

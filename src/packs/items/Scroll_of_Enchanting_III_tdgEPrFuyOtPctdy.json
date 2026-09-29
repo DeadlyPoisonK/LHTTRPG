@@ -1,6 +1,6 @@
 {
   "name": "Scroll of Enchanting III",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Choose one: [Flame] [Cold] [Shock] [Holy] [Blight] or [Spirit]. The target's [Weapon Attack] deal magical damage of the chosen tag type. Treat this effect as a Combat Status. You take [Fatigue: Base STR].</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 5500000,
   "ownership": {

@@ -9,11 +9,12 @@
       "TypeArmor": "Armatura",
       "TypeBag": "Borsa",
       "TypeConnection": "Connessione",
-      "TypeGear": "Equipaggiamento",
+      "TypeGear": "Altro",
       "TypeShield": "Scudo",
       "TypeSkill": "Abilità",
       "TypeTicket": "Biglietto",
       "TypeUnion": "Unione",
+      "TypeUsable": "Utilizzabile",
       "TypeWeapon": "Arma"
     }
   },

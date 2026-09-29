@@ -1,6 +1,6 @@
 {
   "name": "Jewel of Seeing I",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Increase your Hate by +1. This jewel targets all Props within range that have the [Nature] tag as well as a [Detection Difficulty]. The target's [Concealed] status is removed. (Fate 1): All targeted Props also take a -2 penalty to their [Analysis Difficulty] and [Disable Difficulty]. (CR15): This item has no effect.</p>",
     "tags": [
@@ -20,9 +20,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

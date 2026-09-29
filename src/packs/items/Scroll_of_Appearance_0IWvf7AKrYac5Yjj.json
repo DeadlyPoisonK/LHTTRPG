@@ -1,6 +1,6 @@
 {
   "name": "Scroll of Appearance",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>This functions in the next scene. You can identify enemies with an identification difficulty of 14 or less as [Identified] and know their abilities. As a cost, you will receive [Fatigue: [STR Base Value] + 10].</p>\n<p>For sub-classes like Star Reader and Fortune Teller, the identification difficulty is not 14 or less, but 16 or less. This is a scroll that, when opened and concentrated upon, displays the form of the enemy you will likely encounter next. It reproduces the style of their attacks in full-color animation, allowing not only the discernment of their names and appearances but also their abilities.</p>\n<hr>\n<p>Seven-Colored Dye [Core Material] (30G) + Glimpse Scroll (Beginner) (30G) + [Magic Catalyst 1] (15G) &times; 3 + Crafting Cost (45G)</p>",
     "tags": [
@@ -22,9 +22,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 100000,
   "ownership": {

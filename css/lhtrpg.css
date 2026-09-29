@@ -2080,6 +2080,10 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   color: #222222;
 }
 
+.lhtrpg .inventory-list .item:hover .item-use {
+  color: #1d2a5c;
+}
+
 .lhtrpg .inventory-list .item:hover .item-delete,
 .lhtrpg .equip-slot .item:hover .item-delete {
   color: #c6515d;
@@ -2967,7 +2971,9 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   margin-bottom: 6px;
 }
 
-.lhtrpg.chat-card .chat-card-rolls .skill-card-roll {
+.lhtrpg.chat-card .chat-card-rolls .skill-card-roll,
+.lhtrpg.chat-card .chat-card-rolls .item-use-roll,
+.lhtrpg.chat-card .chat-card-rolls .item-use-effects {
   flex: 1;
   margin: 0;
   line-height: 24px;
@@ -2978,7 +2984,9 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   cursor: pointer;
 }
 
-.lhtrpg.chat-card .chat-card-rolls .skill-card-roll:hover {
+.lhtrpg.chat-card .chat-card-rolls .skill-card-roll:hover,
+.lhtrpg.chat-card .chat-card-rolls .item-use-roll:hover,
+.lhtrpg.chat-card .chat-card-rolls .item-use-effects:hover {
   background-color: #3f7a4e;
   text-shadow: 0 0 6px #d6ffda;
 }
@@ -4403,4 +4411,44 @@ div.app.lhtrpg.actor .skills-grid .skill-pending-badge {
   font-size: 12px;
   text-transform: none;
   opacity: 0.9;
+}
+
+/* Usable items: use card notes, Use button of the item sheet */
+.lhtrpg.chat-card .item-use-note,
+.lhtrpg.chat-card .item-use-applied {
+  margin: 0 0 6px;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.lhtrpg.chat-card .item-use-note {
+  color: #6b4a00;
+  background-color: #fff1c7;
+  border: 1px solid #d9b44a;
+}
+
+.lhtrpg.chat-card .item-use-applied {
+  color: #1f4d2b;
+  background-color: #dff3e3;
+  border: 1px solid #8fcf9b;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div.item-use-row {
+  flex-basis: 100%;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div.item-use-row .item-use {
+  width: 100%;
+  margin: 0;
+  line-height: 24px;
+  color: #d6ffda;
+  background-color: #2f5a3a;
+  border: 1px solid #8fcf9b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div.item-use-row .item-use:hover {
+  background-color: #3f7a4e;
 }

@@ -10,11 +10,12 @@
       "TypeArmor": "Armor",
       "TypeBag": "Bag",
       "TypeConnection": "Connection",
-      "TypeGear": "Gear",
+      "TypeGear": "Other",
       "TypeShield": "Shield",
       "TypeSkill": "Skill",
       "TypeTicket": "Ticket",
       "TypeUnion": "Union",
+      "TypeUsable": "Usable",
       "TypeWeapon": "Weapon"
     },
     "Item": {
@@ -22,7 +23,7 @@
       "armor": "Armor",
       "bag": "Bag",
       "connection": "Connection",
-      "gear": "Gear",
+      "gear": "Other",
       "shield": "Shield",
       "skill": "Skill",
       "ticket": "Ticket",
@@ -30,7 +31,8 @@
       "weapon": "Weapon",
       "race": "Race",
       "class": "Class",
-      "subclass": "Subclass"
+      "subclass": "Subclass",
+      "usable": "Usable"
     }
   },
   "IMPORT": {
@@ -125,6 +127,24 @@
         "Target": "Target",
         "ThrowToChat": "Send to Chat",
         "Timing": "Timing"
+      },
+      "Use": {
+        "Button": "Use",
+        "Label": "Used",
+        "Consumed": "Consumed",
+        "EffectsApplied": "Effects applied to: {names}",
+        "ApplyEffects": "Apply effects",
+        "NoActor": "This item must be carried by a character to be used.",
+        "NoTargets": "Target the tokens that receive the effects.",
+        "Blocked": "{name} can't be used now: Timing {timing} ({reason}).",
+        "GMOverride": "Timing {timing} ({reason}): used anyway (GM).",
+        "Reason": {
+          "NotTurn": "it is not your Main Process",
+          "Phase": "current phase: {phase}",
+          "OutOfCombat": "only outside combat",
+          "Briefing": "only before combat starts"
+        },
+        "Migrated": "{count} Gear items were turned into Usable items (potions, scrolls…)."
       }
     },
     "Label": {
@@ -447,8 +467,9 @@
         "shield": "Shields",
         "accessory": "Accessories",
         "bag": "Bags",
-        "gear": "Gear",
-        "ticket": "Tickets"
+        "gear": "Others",
+        "ticket": "Tickets",
+        "usable": "Usables"
       }
     },
     "Archetype": {

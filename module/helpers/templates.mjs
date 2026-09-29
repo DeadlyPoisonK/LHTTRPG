@@ -39,10 +39,13 @@
     "systems/lhtrpg/templates/item/parts/item-linked-skill.html",
     "systems/lhtrpg/templates/item/parts/item-grants.html",
     "systems/lhtrpg/templates/item/parts/skill-field.html",
+    "systems/lhtrpg/templates/item/parts/roll-check.html",
+    "systems/lhtrpg/templates/item/parts/roll-damage.html",
 
     // Combat chat cards
     "systems/lhtrpg/templates/chat/attack-card.hbs",
     "systems/lhtrpg/templates/chat/damage-card.hbs",
     "systems/lhtrpg/templates/chat/damage-applied.hbs",
+    "systems/lhtrpg/templates/chat/use-card.hbs",
   ]);
 };

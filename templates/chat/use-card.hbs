@@ -1,0 +1,38 @@
+<div class="lhtrpg chat-card item-chat-card item-use-card">
+	<header class="chat-card-header">
+		<img class="chat-card-img" src="{{img}}" alt="{{name}}" />
+		<div class="chat-card-title">
+			<h3>{{name}}</h3>
+			<span class="chat-card-type">{{localize 'LHTRPG.Item.Use.Label'}} · {{typeLabel}}{{#if consumed}} · <i class="fas fa-flask"></i> {{localize 'LHTRPG.Item.Use.Consumed'}}{{/if}}</span>
+		</div>
+	</header>
+
+	{{#if system.tags.length}}
+	<div class="chat-card-tags">
+		{{#each system.tags as |tag|}}<span class="tag">{{tag}}</span>{{/each}}
+	</div>
+	{{/if}}
+
+	<div class="chat-card-stats">
+		{{#if system.timing}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Timing'}}</span><span class="chat-stat-value">{{system.timing}}</span></div>{{/if}}
+		{{#if system.checkLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Check'}}</span><span class="chat-stat-value">{{system.checkLabel}}</span></div>{{/if}}
+		{{#if system.damageLabel}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Damage'}}</span><span class="chat-stat-value">{{system.damageLabel}}</span></div>{{/if}}
+		{{#if system.target}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Target'}}</span><span class="chat-stat-value">{{system.target}}</span></div>{{/if}}
+		{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Item.Label.Range'}}</span><span class="chat-stat-value">{{system.range}}</span></div>{{/if}}
+	</div>
+
+	{{#if note}}<div class="item-use-note"><i class="fas fa-triangle-exclamation"></i> {{note}}</div>{{/if}}
+	{{#if appliedNames}}<div class="item-use-applied"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Item.Use.EffectsApplied' names=appliedNames}}</div>{{/if}}
+
+	{{#if (or rollable.check rollable.damage canApplyEffects)}}
+	<div class="chat-card-rolls">
+		{{#if rollable.check}}<button type="button" class="item-use-roll" data-roll="check"><i class="fas fa-dice"></i> {{localize 'LHTRPG.Skill.Label.Check'}}</button>{{/if}}
+		{{#if rollable.damage}}<button type="button" class="item-use-roll" data-roll="damage"><i class="fas fa-dice"></i> {{#if system.damage.recovery}}{{localize 'LHTRPG.Skill.Label.DamageRecovery'}}{{else}}{{localize 'LHTRPG.Skill.Label.Damage'}}{{/if}}</button>{{/if}}
+		{{#if canApplyEffects}}<button type="button" class="item-use-effects"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Item.Use.ApplyEffects'}}</button>{{/if}}
+	</div>
+	{{/if}}
+
+	{{#if enrichedDescription}}
+	<div class="chat-card-description">{{{enrichedDescription}}}</div>
+	{{/if}}
+</div>

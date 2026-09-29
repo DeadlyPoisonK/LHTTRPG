@@ -1,6 +1,6 @@
 {
   "name": "Dun's Amber",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>[Trigger: Instant] You enter the [Riding: Amber Mountain Cat] status. While in the [Riding: Amber Mountain Cat] status, your [Magic Defense] is increased by +2, and you can use the EX Power \"Beast Dash\" and \"Beast Jump\". (CR11) This item has no effect.\nSmall bell said to have been carved from a magic stone left behind by an old mountain cat. It can call a young mountain cat if it is jingled.</p><hr><p>Ligurian Spirit Stone [Core Material] (30G) + Hollyhock Charm (60G) + [Magic Catalyst 1] (15G) ×3 + Crafting Cost (65G)</p>",
     "tags": [
@@ -22,9 +22,19 @@
     "mdef": 2,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

@@ -24,7 +24,15 @@ export class LHTrpgActiveEffect extends ActiveEffect {
      */
     determineSuppression() {
         this.isSuppressed = false;
-        if (this.disabled || (this.parent.documentName !== "Actor")) return;
+        if (this.disabled) return;
+        // Effect of an item held by the actor (transferred): the item decides (equipped, usable…).
+        if ((this.parent.documentName === "Item") && this.parent.parent) {
+            this.isSuppressed = this.parent.areEffectsSuppressed;
+            return;
+        }
+        if (this.parent.documentName !== "Actor") return;
+        // Copied from a usable item when it was used (item-use.mjs): not tied to the item any more.
+        if (this.getFlag("lhtrpg", "itemUse")) return;
         const [parentType, parentId, documentType, documentId] = this.origin?.split(".") ?? [];
         if ((parentType !== "Actor") || (parentId !== this.parent.id) || (documentType !== "Item")) return;
         const item = this.parent.items.get(documentId);

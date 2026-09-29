@@ -1,6 +1,6 @@
 {
   "name": "Skill Potion I: Endurance",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>+1 to the target's [Endurance] achievement value. This effect is treated as CS. [CR10] This [potion] has no effect.</p>",
     "tags": [
@@ -22,14 +22,24 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
       "origin": "Compendium.world.medicine.Item.FjJtcLLGUTUMe6vz",
       "duration": {
-        "rounds": 1,
+        "rounds": null,
         "startTime": null,
         "seconds": null,
         "combat": null,

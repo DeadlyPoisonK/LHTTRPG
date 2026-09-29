@@ -1,6 +1,6 @@
 {
   "name": "Moonlight Elixir",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>You immediately take 40 points of direct damage. After use, you can declare transparency when attacked. If you declare it, you take no damage from the attack and immediately become [Hidden]. This effect is treated as a condition, and once it is applied, it is removed. (CR21) This item has no effect.\nA powerful elixir that grants the ability to hide one's body, creating a dense night darkness as if the strong moonlight were melting. It has a translucent, rice-husk color resembling the moonlight dissolved, and is also used as a cosmetic.</p><hr><p>Transparent Blood [Core Material] (220G) + Unyielding Ointment (Basic) (190G) + Stealth Scroll (Basic) (100G) + [Magic Catalyst 10] (110G) ×2 + Crafting Cost (340G)</p>",
     "tags": [
@@ -22,9 +22,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 0,
   "ownership": {

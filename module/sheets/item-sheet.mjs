@@ -4,6 +4,7 @@ import {diceOptions} from "../helpers/dice.mjs";
 import {SKILL_MAX_DICE, CHECK_STATS, isMonsterSkill, rollSkill} from "../helpers/skill-rolls.mjs";
 import {ARCHETYPES, OPTION_TYPES} from "../helpers/character-options.mjs";
 import {prepareSkillFields, composeSkillField, CUSTOM} from "../helpers/skill-fields.mjs";
+import {canUseItem, useItem} from "../helpers/item-use.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -58,8 +59,8 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       "skillText": await foundry.applications.ux.TextEditor.implementation.enrichHTML(context.system.skillText ?? "", {async: true})
     };
 
-    // Skill Check / Damage: dice select options
-    if (itemData.type === 'skill') {
+    // Skill / usable item Check / Damage: dice select options
+    if (['skill', 'usable'].includes(itemData.type)) {
       context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
       // Character skills: check stat of the character, extra dice on top of it / of the Attack-Magic Power
       context.isMonsterSkill = isMonsterSkill(this.item);
@@ -70,6 +71,9 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
       // Timing / Target / Range / Cost / Limit dropdowns
       context.skillFields = prepareSkillFields(itemData.system);
     }
+
+    // Usable items: Use button, when carried by a character
+    if (itemData.type === 'usable') context.canUse = canUseItem(this.item);
 
     // Class archetype options
     if (itemData.type === 'class') context.archetypes = ARCHETYPES;
@@ -244,6 +248,12 @@ export class LHTrpgItemSheet extends foundry.appv1.sheets.ItemSheet {
     html.find('.skill-roll-button').click(ev => {
       ev.preventDefault();
       rollSkill(this.item, ev.currentTarget.dataset.roll);
+    });
+
+    // Use a usable item (potion, scroll…)
+    html.find('.item-use').click(ev => {
+      ev.preventDefault();
+      useItem(this.item);
     });
 
     // Starting skills: open a skill's sheet

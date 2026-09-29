@@ -1,6 +1,6 @@
 {
   "name": "Quick Card II",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>During the target's current Main Process, the target receives an extra minor action. The effect of multiple Quick Cards (regardless of grade) do not stack. (CR27): This item has no effect.&nbsp;</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 1700000,
   "ownership": {

@@ -1,6 +1,6 @@
 {
   "name": "(CR3) Ninja no manpuku meshi",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Your [Fatigue] is reduced by 20 points. This effect does not have to be received immediately upon use, and can be received at any time. However, if it is not received by the end of the scenario, it becomes ineffective.\nThe Iga Ninja's Rations are a food item carried by the ninjas of the Hidden Village of Iga when they are sent on missions to distant places. It resembles a large plum in appearance, but by simply eating one piece, the ninja can continue moving without feeling hungry for an entire day. Due to the inclusion of secret herbs and animal organs, the taste is incredibly bad, and improvement of the flavor is urgently needed.</p><hr><p>々 [Core Material](40G)+ (35G)×3+[ 3](25G)×3+Crafting Cost(115G)</p>",
     "tags": [
@@ -22,9 +22,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 3000000,
   "ownership": {

@@ -1,0 +1,28 @@
+{{!-- Damage / Recovery of a skill or usable item. --}}
+    <div class="stat-div skill-roll">
+      <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-roll="damage" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Damage'}}</label>
+      <div class="skill-roll-fields">
+        <select name="system.damage.dice" data-dtype="Number">
+          {{selectOptions skillDamageDiceOptions selected=system.damage.dice}}
+        </select>
+        <span>+</span>
+        <input class="skill-roll-mod" type="number" step="1" name="system.damage.mod" value="{{system.damage.mod}}"
+          placeholder="0" data-dtype="Number">
+        <input type="hidden" name="system.damage.type" value="{{system.damage.type}}">
+        <div class="skill-roll-options">
+          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.AttackPower'}}"{{/unless}}>
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="physical" {{checked (eq system.damage.type "physical")}}>
+            {{localize 'LHTRPG.Skill.Label.DamagePhysical'}}
+          </label>
+          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.MagicPower'}}"{{/unless}}>
+            <input type="checkbox" class="skill-roll-toggle" data-field="system.damage.type" data-value="magical" {{checked (eq system.damage.type "magical")}}>
+            {{localize 'LHTRPG.Skill.Label.DamageMagical'}}
+          </label>
+          {{!-- Recovery combines with Physical / Magical --}}
+          <label class="skill-roll-option" {{#unless isMonsterSkill}}title="+ {{localize 'LHTRPG.Tooltip.RestorationPower'}}"{{/unless}}>
+            <input type="checkbox" name="system.damage.recovery" {{checked system.damage.recovery}}>
+            {{localize 'LHTRPG.Skill.Label.DamageRecovery'}}
+          </label>
+        </div>
+      </div>
+    </div>

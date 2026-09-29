@@ -1,6 +1,6 @@
 {
   "name": "Utage no tēburukurosu",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>Reduces the intensity of the target's [Fatigue] by -20. The target is immune to [Dazed] or [Staggered] status effects received next. This effect is treated as a Condition, and once it is triggered, it is removed.\nA magic tablecloth said to be the life's work of a magician known as a gourmet. Spreading it out while picturing a feast makes the imagined dishes appear.</p><hr><p>[Core Material](100G)+ (50G)×4+[ 6](50G)×3+Crafting Cost(170G)</p>",
     "tags": [
@@ -22,9 +22,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 900000,
   "ownership": {

@@ -1,3 +1,4 @@
+import { useItem } from "../helpers/item-use.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 import {activateTagInput} from "../helpers/tags.mjs";
 import {getStatusPanel, activateStatusPanelListeners} from "../helpers/statuses.mjs";
@@ -130,6 +131,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     const itemsShield = [];
     const itemsAccessory = [];
     const itemsBag = [];
+    const itemsUsable = [];
     const itemsGear = [];
 
     const itemsTicketTreasure = [];
@@ -199,8 +201,11 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       else if (i.system.equipped === false && i.type === 'bag') {
         itemsBag.push(i);
       }
-      // Append to Gear.
-      // Gear can't be equipped: always carried in the general inventory.
+      // Append to Usables / Gear.
+      // Neither can be equipped: always carried in the general inventory.
+      else if (i.type === 'usable') {
+        itemsUsable.push(i);
+      }
       else if (i.type === 'gear') {
         itemsGear.push(i);
       }
@@ -247,6 +252,7 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
       "shields": itemsShield,
       "accessories": itemsAccessory,
       "bags": itemsBag,
+      "usables": itemsUsable,
       "gear": itemsGear,
     }
 
@@ -273,8 +279,11 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     // Unequipped items fill the general inventory grid, one slot each, up to
     // the bag-derived maxSpace. Remaining slots render as empty placeholders
     // so the right-hand panel always shows the actual carrying capacity.
-    const carriedItems = [].concat(itemsWeapon, itemsArmor, itemsShield, itemsAccessory, itemsBag, itemsGear);
-    for (const i of carriedItems) i.equippable = EQUIP_TYPES.includes(i.type);
+    const carriedItems = [].concat(itemsWeapon, itemsArmor, itemsShield, itemsAccessory, itemsBag, itemsUsable, itemsGear);
+    for (const i of carriedItems) {
+      i.equippable = EQUIP_TYPES.includes(i.type);
+      i.usable = (i.type === "usable") && this.isEditable;
+    }
     const maxSpace = context.system.inventory?.maxSpace ?? carriedItems.length;
     const inventorySlots = carriedItems.slice(0, maxSpace);
     for (let i = inventorySlots.length; i < maxSpace; i++) {
@@ -334,6 +343,14 @@ export class LHTrpgActorSheet extends foundry.appv1.sheets.ActorSheet {
     super.activateListeners(html);
 
     html.find('.item-throw').click(this._onItemThrow.bind(this));
+
+    // Use a potion, scroll… (usable items)
+    html.find('.item-use').click(ev => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const item = this.actor.items.get($(ev.currentTarget).parents(".item").data("itemId"));
+      if (item) useItem(item);
+    });
 
     // Send an equipment's linked skill to chat without opening the item.
     html.find('.linked-skill-throw-badge').click(async ev => {

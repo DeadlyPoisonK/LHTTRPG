@@ -1,6 +1,6 @@
 {
   "name": "Brave Scroll (Beginner)",
-  "type": "gear",
+  "type": "usable",
   "system": {
     "description": "<p>If the subject rolls a 1 on a skill check, the subject may reroll the die that resulted in a 1 only once per check. This effect is treated as CS and becomes invalid during battle [CR17] This item has no effect.</p>",
     "tags": [
@@ -21,9 +21,19 @@
     "mdef": 0,
     "accuracy": 0,
     "initiative": 0,
-    "check": ""
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    }
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/gear.svg",
+  "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [],
   "sort": 3600000,
   "ownership": {

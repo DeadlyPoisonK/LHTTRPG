@@ -9,11 +9,12 @@
       "TypeArmor": "防具",
       "TypeBag": "収納",
       "TypeConnection": "コネクション",
-      "TypeGear": "装備",
+      "TypeGear": "その他",
       "TypeShield": "盾",
       "TypeSkill": "特技",
       "TypeTicket": "チケット",
       "TypeUnion": "ユニオン",
+      "TypeUsable": "使用アイテム",
       "TypeWeapon": "武器"
     }
   },
