@@ -29,6 +29,7 @@
     "module/lhtrpg.mjs"
   ],
   "styles": [
+    "css/fonts.css",
     "css/lhtrpg.css",
     "css/piles.css"
   ],
