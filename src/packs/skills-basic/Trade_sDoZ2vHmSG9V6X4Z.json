@@ -31,7 +31,7 @@
     },
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/skills/social/diplomacy-handshake-blue.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -39,7 +39,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790657712435,
+    "modifiedTime": 1790746764750,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

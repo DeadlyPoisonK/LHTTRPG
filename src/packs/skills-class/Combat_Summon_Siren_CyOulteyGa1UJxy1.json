@@ -2,7 +2,7 @@
   "_id": "CyOulteyGa1UJxy1",
   "name": "Combat Summon: Siren",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You cannot target yourself with this skill. A willing target must make a [Safe Move (forced)] up to [Target's (Speed)] Sq.</p><p>(SR2): Increase the distance moved by +1. (Fate 1): The target does not have to be willing.</p>",

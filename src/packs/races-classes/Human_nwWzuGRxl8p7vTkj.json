@@ -3,7 +3,7 @@
   "name": "Human",
   "type": "race",
   "sort": 0,
-  "img": "icons/environment/people/group.webp",
+  "img": "systems/lhtrpg/assets/ui/icons/human.svg",
   "system": {
     "description": "",
     "tags": [],

@@ -2,7 +2,7 @@
   "_id": "sykaKHii5xatj2vu",
   "name": "Servant Summon: Slime",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Construct] tag. You get [Cancel (Magical Damage): (INT Mod) × SR].</p><p>(Effect): Allies within range that you can see [Target: Two / Range: 2 Sq] reduce their [Hate] by -1.</p>",

@@ -2,7 +2,7 @@
   "_id": "5NRJTPHgcgJCXBki",
   "name": "Surprise Attack",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "sort": 0,
   "system": {
     "description": "<p>Use this skill immediately after you succeed an action with the [Scout] tag. An enemy with [Mob] tag appearing in the next scene 1 enemy (selected by GM) is targeted. At the beginning of the next scene you will appear in the same Square as the target, after which the subject can be immediately set to [Dead] or [Incapcitated]. If [Mob] does not appear, this skill fails but does not use up the limit.</p>",

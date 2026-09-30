@@ -2,7 +2,7 @@
   "_id": "bRpxzakEsL2dfIZs",
   "name": "Victor",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
   "sort": 0,
   "system": {
     "description": "<p>Use this skill when you render an enemy [Incapacitated] or [Dead]. This skill may only target an ally other than yourself. The target may reduce their [Hate] by -1.</p>",

@@ -31,7 +31,7 @@
     },
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/skills/movement/figure-running-gray.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -39,7 +39,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790656140450,
+    "modifiedTime": 1790745964303,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

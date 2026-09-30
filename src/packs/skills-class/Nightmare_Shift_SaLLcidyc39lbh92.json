@@ -2,7 +2,7 @@
   "_id": "SaLLcidyc39lbh92",
   "name": "Nightmare Shift",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>If you use a [Melee Attack] of [Target: Single / Range: Close] in this main process, that attack is changed to [Range: 2Sq.]. Also, if the target of the attack fails [Dodge Check], you can [Teleport] to the same Sq. of the target when the main process ends.</p>",

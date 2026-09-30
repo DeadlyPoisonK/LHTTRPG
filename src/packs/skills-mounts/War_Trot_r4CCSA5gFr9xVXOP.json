@@ -2,7 +2,7 @@
   "_id": "r4CCSA5gFr9xVXOP",
   "name": "War Trot",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "sort": 0,
   "system": {
     "description": "<p>You may make a [Normal Move] of 3 Sq.</p><p>(Minor): The travel distance is + 2 Sq. <br>(Minor): During this movement, you can not be subject to [Hinder] ability of [Mob] enemy.</p>",

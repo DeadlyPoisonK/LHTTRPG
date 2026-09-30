@@ -31,7 +31,7 @@
     },
     "macroeffect": "uIW9aGui82UJfjzb"
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/skills/melee/hand-grip-sword-white-brown.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -39,7 +39,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790656060204,
+    "modifiedTime": 1790745586234,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

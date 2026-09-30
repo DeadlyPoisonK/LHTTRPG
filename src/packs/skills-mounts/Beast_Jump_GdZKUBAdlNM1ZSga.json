@@ -2,7 +2,7 @@
   "_id": "GdZKUBAdlNM1ZSga",
   "name": "Beast Jump",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Flying] tag and you may make a [Normal Move] of 2 Sq. After the move, you lose the [Flying] tag.</p><p>(Minor): After the end of the movement, you may do [Normal Move] up to 2 Sq.</p>",

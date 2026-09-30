@@ -2,7 +2,7 @@
   "_id": "uSE2xEJZ4yYgqrUw",
   "name": "Servant Summon: Golem",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Construct] tag. You get [Cancel (Physical Damage): (INT Mod) × SR].</p><p>(Effect): An ally within range that you can see [Target: Single / Range: 2 Sq] reduces their [Hate] by -2.</p>",

@@ -2,7 +2,7 @@
   "_id": "lwdAdE2wShaivWLG",
   "name": "Big Wave",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "sort": 0,
   "system": {
     "description": "<p>Lose the minor action immediately as a cost. [Underwater] and one Sq with prop with similar effect. You may instantaneously transfer to the selected Sq.</p>",

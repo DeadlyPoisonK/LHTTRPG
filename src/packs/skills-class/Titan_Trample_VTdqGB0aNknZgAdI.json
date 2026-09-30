@@ -2,7 +2,7 @@
   "_id": "VTdqGB0aNknZgAdI",
   "name": "Titan Trample",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You may make a [Normal Move] of 1 Sq. During this movement,you are immune to [Hinder] by [Mob] enemies</p><p>(Minor): The movement is +2 Sq.<br>(Fate 1): During this movement, enemies with [Mob] tag immediately become [Dead] who share the same square as you.</p>",

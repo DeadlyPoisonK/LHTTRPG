@@ -2,7 +2,7 @@
   "_id": "LLjR7SCLSH4pecJi",
   "name": "Servant Summon: Unicorn",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Mythic] tag. You gain a +[SRx5] bonus to [Recovery].</p><p>(Effect): Secondary targets within a range of [Target: Area (P) / Range: Close] centered on you remove one Bad Status they are currently affected by.</p>",
