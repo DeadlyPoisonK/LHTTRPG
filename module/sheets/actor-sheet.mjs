@@ -113,7 +113,7 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
 
     // Race / Class / Subclass items (header fields); the class item's image is the class logo.
     context.characterOptions = Object.fromEntries(OPTION_TYPES.map(type => [type, getOption(actor, type)]));
-    context.classImg = context.characterOptions.class?.img ?? actor.system.class?.img ?? "systems/lhtrpg/assets/ui/classes/none.webp";
+    context.classImg = context.characterOptions.class?.img ?? actor.system.class?.img ?? "systems/lhtrpg/assets/ui/classes/Enchanter_Logo.png";
 
     // "Browse" tile of each skill grid, with the picks left (creation, CR Up).
     if (this.isEditable) {
