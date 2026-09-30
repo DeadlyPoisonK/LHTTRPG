@@ -442,24 +442,24 @@ function _onStatusEffectChange(effect, created, userId) {
     }
   }
 
-  // Handle any other statuses on the effect (without statusData, e.g. from HUD or core multiselect)
+  // Other statuses (HUD, core multiselect): decided NOW, from the field as it is when the effect changes.
+  // Not queued: the plain status effect is also created/deleted BY the field sync, and reading the field
+  // later (after the user cleared it) would turn it back on, in a loop.
+  const updates = {};
   for (const statusId of effect.statuses) {
     if (handledStatuses.has(statusId)) continue;
     const status = STATUS_BY_ID.get(statusId);
     if (!status?.path) continue;
-    _queueFieldUpdate(actor, status, async () => {
-      const value = _fieldValue(actor, status);
-      if (value === undefined) return;
-      if (created && !_isFieldActive(status, value)) {
-        await actor.update({ [`system.${status.path}`]: _activeFieldValue(status) });
-      } else if (!created && _isFieldActive(status, value)) {
-        const hasOther = actor.effects.some(e => (e.id !== effect.id) && e.statuses.has(statusId));
-        if (!hasOther) {
-          await actor.update({ [`system.${status.path}`]: _inactiveFieldValue(status) });
-        }
-      }
-    });
+    const value = _fieldValue(actor, status);
+    if (value === undefined) continue;
+    if (created && !_isFieldActive(status, value)) {
+      updates[`system.${status.path}`] = _activeFieldValue(status);
+    } else if (!created && _isFieldActive(status, value)
+      && !actor.effects.some(e => (e.id !== effect.id) && e.statuses.has(statusId))) {
+      updates[`system.${status.path}`] = _inactiveFieldValue(status);
+    }
   }
+  if (!foundry.utils.isEmpty(updates)) actor.update(updates);
 }
 
 /**
