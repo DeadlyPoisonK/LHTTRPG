@@ -29,7 +29,7 @@
     },
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -37,7 +37,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790657669357,
+    "modifiedTime": 1790746688861,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

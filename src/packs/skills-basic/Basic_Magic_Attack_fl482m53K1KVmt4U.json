@@ -33,7 +33,7 @@
     },
     "macroeffect": "ANQS94Uf2wa5dCgP"
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/magic/light/projectile-smoke-blue.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -41,7 +41,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790655768188,
+    "modifiedTime": 1790745560103,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

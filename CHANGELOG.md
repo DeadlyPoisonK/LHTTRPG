@@ -4,6 +4,12 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
+## [Unreleased]
+
+### Changed
+- Compendium icons from [game-icons.net](https://game-icons.net) (CC BY 3.0): each race, and every
+  racial, archetype, class, subclass and mount skill, now shows the icon of its group.
+
 ## [2.0.1] - 2026-09-30
 
 ### Changed

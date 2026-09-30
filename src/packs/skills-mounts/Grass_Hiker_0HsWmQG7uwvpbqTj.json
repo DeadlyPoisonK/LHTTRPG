@@ -2,7 +2,7 @@
   "_id": "0HsWmQG7uwvpbqTj",
   "name": "Grass Hiker",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "sort": 0,
   "system": {
     "description": "<p>You may make a [Normal Move] of 3 Sq. If you in a terrain prop with the [Natural] tag, this movement becomes [Safe Move].</p><p>(Minor): The travel distance is +1 Sq.</p>",

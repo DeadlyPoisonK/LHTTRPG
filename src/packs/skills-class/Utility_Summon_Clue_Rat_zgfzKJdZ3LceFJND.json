@@ -2,7 +2,7 @@
   "_id": "zgfzKJdZ3LceFJND",
   "name": "Utility Summon: Clue Rat",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You may re-roll the check you just made.</p>",

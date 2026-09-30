@@ -2,7 +2,7 @@
   "_id": "7daXOegcShIAh7Fh",
   "name": "Utility Summon: Brownie",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>When the target rolls on [Exhaustion Table: Stamina, Item], they may roll twice and take either result.</p><p>(Bonus): You gain +8 [Max HP].</p>",

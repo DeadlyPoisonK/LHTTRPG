@@ -15,9 +15,20 @@
     },
     "cost": "-",
     "limit": "-",
+    "check": {
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 0,
+      "type": "",
+      "recovery": false
+    },
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/wolf-head.svg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -29,8 +40,8 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": null,
-    "lastModifiedBy": null,
+    "modifiedTime": 1790749715073,
+    "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null

@@ -2,7 +2,7 @@
   "_id": "hZVTafSe4tcwFBjM",
   "name": "Utility Summon: Unicorn",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Only for <Summoner>. You gain the [Riding: Unicorn] state. During the [Riding: Unicorn] state, EX Power «Horse Trot» and «Horse Charge» becomes available. In addition gain [Cancel (Holy, Melee Attack)] with a rating equal to [[POW mod] × «Servant Summon: Unicorn»'s SR].</p>",

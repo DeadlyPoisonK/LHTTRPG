@@ -2,7 +2,7 @@
   "name": "Horse Kick",
   "type": "skill",
   "_id": "XHhJN3WbwVjQf2EH",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "system": {
     "description": "<p>The Target makes a [Safe Move (forced)] up to 1 Sq.</p>\n<p>(Minor &amp; Mob): The target takes [Staggered].</p>",
     "tags": [

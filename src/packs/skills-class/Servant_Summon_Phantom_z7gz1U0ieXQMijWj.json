@@ -2,7 +2,7 @@
   "_id": "z7gz1U0ieXQMijWj",
   "name": "Servant Summon: Phantom",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Undead] tag. You do not lose [Hidden] even if you make a [Normal Move] or a [Safe Move].</p><p>(Effect): You are in the [Hidden] state.</p>",

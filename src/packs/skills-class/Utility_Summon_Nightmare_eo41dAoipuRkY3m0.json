@@ -2,7 +2,7 @@
   "_id": "eo41dAoipuRkY3m0",
   "name": "Utility Summon: Nightmare",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Only for <Summoner>. You gain the [Riding: Nightmare Horse] state. During the [Riding: Nightmare Horse] state, EX Power «Nightmare Walk» and «Nightmare Shift» becomes available. In addition when [Pursuit] or [Decay] is received, it is instantly removed. However, this can only occur a number of times equal to the SR of «Servant Summon: Phantom» for each use of this skill.</p>",

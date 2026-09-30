@@ -2,7 +2,7 @@
   "_id": "j4oPcUJNO1gPkFlI",
   "name": "Nightmare Walk",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You may make a [Normal Move] of 3 Sq. During this movement, if you are not targeted by [Hinder], you may make a extra [Normal Move] of 1 Sq.</p><p>(Minor): You can not be targeted by [Hinder] during this movement.</p>",

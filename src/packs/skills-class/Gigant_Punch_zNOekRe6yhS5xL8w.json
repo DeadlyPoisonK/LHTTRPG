@@ -2,7 +2,7 @@
   "_id": "zNOekRe6yhS5xL8w",
   "name": "Gigant Punch",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Deal [3D + (Magical Power)] physical damage. The damage of this attack is increased by + [«Servant Summon: Golem»'s SR × 5].</p>",

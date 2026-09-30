@@ -2,7 +2,7 @@
   "_id": "nfCj0251aVqMNTK9",
   "name": "Looter's Song",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
   "sort": 0,
   "system": {
     "description": "<p>Use this skill just after the target rolls on [Exhaustion Table: Stamina or Money]. Reduce the result of that roll by -3.</p><p>(Fate 1): If you have reached your Limit for this skill, you may pay this cost to use it again.</p>",

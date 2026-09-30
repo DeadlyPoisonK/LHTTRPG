@@ -110,7 +110,7 @@ This license applies strictly to the system code and does not cover the Log Hori
 - **Original Project Community**: Contributors who provided the initial community translations for French, Italian, Japanese, and Korean.
 - **Fonts**: Noto Serif JP and Edu SA Beginner (`assets/fonts/`), licensed under the SIL Open Font License 1.1 (`OFL.txt`).
 - **Interface Artwork**: The remaining UI assets (`assets/ui/**`, `assets/Logo_lhtrpg.webp`) come from Kyane's original system.
-- **Game Icons**: Status effect icons (`assets/ui/status/*.svg`) from [game-icons.net](https://game-icons.net) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) (background recolored). Authors: Lorc, Delapouite, Skoll, Sbed, and Zeromancer.
+- **Game Icons**: Status effect icons (`assets/ui/status/*.svg`) and compendium icons (`assets/ui/icons/*.svg`) from [game-icons.net](https://game-icons.net) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) (status backgrounds recolored). Authors: Lorc, Delapouite, Skoll, Sbed, Zeromancer, Kier Heyl, Cathelineau, and DarkZaitzev.
 
 <details>
 <summary>Status Icon Attributions (game-icons.net)</summary>
@@ -140,5 +140,40 @@ This license applies strictly to the system code and does not cover the Log Hori
 | hateTop | angry-eyes | Delapouite |
 | hateUnder | target-arrows | Lorc |
 | absent | exit-door | Delapouite |
+
+</details>
+
+<details>
+<summary>Compendium Icon Attributions (game-icons.net)</summary>
+
+| Used for | File | Icon Name | Author |
+| :--- | :--- | :--- | :--- |
+| Race: Human | human.svg | human-ear | Delapouite |
+| Race: Elf | elf-helmet.svg | elf-helmet | Kier Heyl |
+| Race: Dwarf | dwarf-helmet.svg | dwarf-helmet | Kier Heyl |
+| Race: Half Alv | half alv.svg | elf-ear | Delapouite |
+| Race: Werecat | cat.svg | cat | Lorc |
+| Race: Wolf Fang | wolf-head.svg | wolf-head | Lorc |
+| Race: Foxtail | fox-tail.svg | fox-tail | Delapouite |
+| Race: Race of Ritual | warlock-hood.svg | warlock-hood | Delapouite |
+| Archetype: Warrior | crested-helmet.svg | crested-helmet | Lorc |
+| Archetype: Weapon Master | all-for-one.svg | all-for-one | Lorc |
+| Archetype: Healer | healing-shield.svg | healing-shield | Delapouite |
+| Archetype: Mage | wizard-staff.svg | wizard-staff | Lorc |
+| Class: Guardian | bordered-shield.svg | bordered-shield | Lorc |
+| Class: Samurai | samurai-helmet.svg | samurai-helmet | Delapouite |
+| Class: Monk | headband-knot.svg | headband-knot | Delapouite |
+| Class: Cleric | pope-crown.svg | pope-crown | Delapouite |
+| Class: Druid | holy-oak.svg | holy-oak | Cathelineau |
+| Class: Kannagi | lotus.svg | lotus | Lorc |
+| Class: Assassin | assassin.svg | cloak-dagger | Lorc |
+| Class: Swashbuckler | sabers-choc.svg | sabers-choc | Lorc |
+| Class: Bard | guitar.svg | guitar | Lorc |
+| Class: Sorcerer | robe.svg | robe | Lorc |
+| Class: Summoner | plants-and-animals.svg | plants-and-animals | DarkZaitzev |
+| Class: Enchanter | heavy-collar.svg | heavy-collar | Delapouite |
+| Subclass skills | farmer.svg | farmer | Delapouite |
+| Mount skills | horse-head.svg | horse-head | Delapouite |
+| (not used yet) | wizard-face.svg | wizard-face | Delapouite |
 
 </details>

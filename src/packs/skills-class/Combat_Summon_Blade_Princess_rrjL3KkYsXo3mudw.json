@@ -2,7 +2,7 @@
   "_id": "rrjL3KkYsXo3mudw",
   "name": "Combat Summon: Blade Princess",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Deal [(SR)D + (Magic Power)] magical damage to the target. The effects of «Weapon Mastery: Blade» may be applied to this damage roll. This skill can be used without a [Blade] equipped.</p>",

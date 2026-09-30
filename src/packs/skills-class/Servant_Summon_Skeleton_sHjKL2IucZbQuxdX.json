@@ -2,7 +2,7 @@
   "_id": "sHjKL2IucZbQuxdX",
   "name": "Servant Summon: Skeleton",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>You gain the [Undead] tag. You gain a + (STR Mod) to Damage roll for Physical Attacks done by you.</p><p>(Effect): Secondary targets within range of [Target: [SR] / Range: 2 Sq.] from you take [Pursuit: 7]. If you are [Hidden] when you inflict [Pursuit] with this skill, you do not lose [Hidden].</p>",

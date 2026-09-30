@@ -2,7 +2,7 @@
   "_id": "G6vtzOWz2y5jBy3U",
   "name": "Servant Summon: Salamander II",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Acquired with CR16 or higher. You gain the [Fairy] and [Flame] tags. You gain a +[SRx7] bonus to the damage roll of attacks that have the [Flame] tag.</p><p>(Effect): A secondary target within a range of [Target: Single / Range: 4 Sq.] from you takes [INT mod] direct damage.</p>",

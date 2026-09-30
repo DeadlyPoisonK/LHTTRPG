@@ -3,7 +3,7 @@
   "name": "Race of Ritual",
   "type": "race",
   "sort": 0,
-  "img": "icons/environment/people/group.webp",
+  "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
   "system": {
     "description": "",
     "tags": [],

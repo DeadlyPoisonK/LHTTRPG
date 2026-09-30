@@ -2,7 +2,7 @@
   "_id": "h8Fzflcd8dZljrR7",
   "name": "Combat Summon: Medusa",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>This skill only produces an effect against [Mob] enemies. The target becomes [Incapacitated] or [Dead] (your choice).</p>",

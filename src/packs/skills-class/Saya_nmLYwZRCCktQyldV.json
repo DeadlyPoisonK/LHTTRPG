@@ -2,7 +2,7 @@
   "_id": "nmLYwZRCCktQyldV",
   "name": "Saya",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
   "sort": 0,
   "system": {
     "description": "<p>Deal [(SR+1)D + (Attack Power)] physical damage to the target.</p><p>You may make the target [Safe Move (Forced)] up to 1 Sq, but they must move closer to you.</p>",

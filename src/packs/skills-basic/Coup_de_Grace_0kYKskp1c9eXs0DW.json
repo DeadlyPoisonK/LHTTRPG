@@ -29,7 +29,7 @@
     },
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "icons/skills/wounds/injury-body-pain-gray.webp",
   "effects": [],
   "flags": {},
   "_stats": {
@@ -37,7 +37,7 @@
     "systemId": "lhtrpg",
     "systemVersion": "1.5.0",
     "createdTime": null,
-    "modifiedTime": 1790656098776,
+    "modifiedTime": 1790745951610,
     "lastModifiedBy": "466etVeGeuWPLsdS",
     "compendiumSource": null,
     "duplicateSource": null,

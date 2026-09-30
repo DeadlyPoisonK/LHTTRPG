@@ -2,7 +2,7 @@
   "_id": "UPoeNuhZrmcAxZC6",
   "name": "Utility Summon: Gremlin",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "sort": 0,
   "system": {
     "description": "<p>Use this skill just before making an [Analyze Check]. You gain a +2D bonus to the check.</p>",

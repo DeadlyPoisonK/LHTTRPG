@@ -1,7 +1,7 @@
 {
   "name": "Drag Fang",
   "type": "skill",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "system": {
     "description": "<p>If you do [Weapon Attack] with [Target: Single / Range: Close] in this main process and the target fails their [Dodge Check], you may [Safe Move] 1 Sq at the end of the main process . Also, at the same time your target is [Safe Move (force)] to the same Square as you.</p>",
     "tags": [

@@ -17,7 +17,7 @@
     "limit": "(SR)/Scenario",
     "macroeffect": ""
   },
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
   "effects": [],
   "sort": 400000,
   "ownership": {

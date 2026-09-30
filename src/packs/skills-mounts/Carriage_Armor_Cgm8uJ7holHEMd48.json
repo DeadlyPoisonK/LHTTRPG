@@ -2,7 +2,7 @@
   "name": "Carriage Armor",
   "type": "skill",
   "_id": "Cgm8uJ7holHEMd48",
-  "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
   "system": {
     "description": "<p>You gain [Barrier: (CR &times; 3) +10] and [goods] tag. If this [barrier] is lost, it also loses the [goods] tag.</p>",
     "tags": [
