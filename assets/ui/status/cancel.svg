@@ -1,6 +1,2 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="#1f8a70" stroke="#0f4d3e" stroke-width="3"/>
-  <rect x="5" y="5" width="54" height="27" rx="9" fill="#fff" fill-opacity="0.08"/>
-      <path d="M32 10l18 6v14c0 12-8 20-18 24-10-4-18-12-18-24V16z" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M23 32h18" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<!-- "cancel" by Sbed, https://game-icons.net, CC BY 3.0. Background recolored. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#1f8a70" d="M0 0h512v512H0z"/><path fill="#fff" d="M256 16C123.45 16 16 123.45 16 256s107.45 240 240 240 240-107.45 240-240S388.55 16 256 16zm0 60c99.41 0 180 80.59 180 180s-80.59 180-180 180S76 355.41 76 256 156.59 76 256 76zm-80.625 60c-.97-.005-2.006.112-3.063.313v-.032c-18.297 3.436-45.264 34.743-33.375 46.626l73.157 73.125-73.156 73.126c-14.63 14.625 29.275 58.534 43.906 43.906L256 299.906l73.156 73.156c14.63 14.628 58.537-29.28 43.906-43.906l-73.156-73.125 73.156-73.124c14.63-14.625-29.275-58.5-43.906-43.875L256 212.157l-73.156-73.125c-2.06-2.046-4.56-3.015-7.47-3.03z"/></svg>
