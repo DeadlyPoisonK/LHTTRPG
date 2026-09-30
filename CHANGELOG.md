@@ -4,7 +4,7 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
-## [2.0.1] - Unreleased
+## [2.0.1] - 2026-09-30
 
 ### Changed
 - Status icons replaced with icons from [game-icons.net](https://game-icons.net) (CC BY 3.0).
