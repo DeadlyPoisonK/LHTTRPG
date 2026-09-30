@@ -134,6 +134,11 @@ Handlebars.registerHelper('toUpperCase', function (str) {
   return str.toUpperCase();
 });
 
+// Used by templates/apps/option-browser.hbs (search index)
+Handlebars.registerHelper('toLowerCase', function (str) {
+  return String(str ?? "").toLowerCase();
+});
+
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
