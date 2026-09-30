@@ -4,6 +4,8 @@
  * to another player...). The GM validates every request before executing it.
  */
 
+import { isPrimaryGM } from "../helpers/clients.mjs";
+
 const SOCKET = "system.lhtrpg";
 const SCOPE = "piles";
 const TIMEOUT = 15000;
@@ -75,7 +77,8 @@ async function _onMessage(message) {
   if (message?.scope !== SCOPE) return;
 
   if (message.type === "request") {
-    if (!game.users.activeGM?.isSelf) return;
+    // Only one window of the active GM: the same GM may be logged in from several.
+    if (!isPrimaryGM()) return;
     const result = await _enqueue(message.action, message.payload, message.userId);
     game.socket.emit(SOCKET, { scope: SCOPE, type: "response", id: message.id, userId: message.userId, result });
   }

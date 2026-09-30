@@ -14,6 +14,7 @@
  */
 
 import { getOption } from "../helpers/character-options.mjs";
+import { isLocalChange } from "../helpers/clients.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -674,7 +675,7 @@ export function registerSkillBrowser() {
     options.lhtrpgPreviousRank = rankOf(actor);
   });
   Hooks.on("updateActor", (actor, changes, options, userId) => {
-    if ((userId !== game.user.id) || (options.lhtrpgPreviousRank === undefined)) return;
+    if (!isLocalChange(options, userId) || (options.lhtrpgPreviousRank === undefined)) return;
     const rank = rankOf(actor);
     if (rank < options.lhtrpgPreviousRank) rollbackPicks(actor, { aboveRank: rank, reason: "LHTRPG.SkillBrowser.Undo.HintRank" });
   });

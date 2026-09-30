@@ -25,6 +25,7 @@ import { registerEffectTargets } from "./helpers/effect-targets.mjs";
 import { registerEffectDurations } from "./helpers/effect-durations.mjs";
 import { registerMigrations, runMigrations } from "./helpers/migrations.mjs";
 import { registerSustained, onApplySkillEffects } from "./helpers/sustained.mjs";
+import { registerClients } from "./helpers/clients.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -72,6 +73,8 @@ Hooks.once('init', async function () {
   registerEffectTargets();
   // Log Horizon effect durations and expiry engine
   registerEffectDurations();
+  // Browser windows of the same user (a GM logged in twice acts once)
+  registerClients();
   // World data migrations: run in order on the active GM when the world is ready
   registerMigrations();
   // By default, track hate and skip defeated combatants

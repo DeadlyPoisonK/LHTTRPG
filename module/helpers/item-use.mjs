@@ -3,6 +3,7 @@ import { targetEntries } from "./combat-cards.mjs";
 import { canonicalTag } from "./tag-catalog.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
 import { getSustainedTag } from "./sustained.mjs";
+import { isPrimaryGM } from "./clients.mjs";
 
 /**
  * Usable items (potions, food, scrolls, whistles, poisons…): item type "usable".
@@ -289,7 +290,7 @@ async function _onApplyEffectsRequest({ actorUuid, effects, replace }) {
 
 /** A combat ended: the item Combat Statuses of its combatants end with the scene. */
 async function _onDeleteCombat(combat) {
-  if (!game.users.activeGM?.isSelf) return;
+  if (!isPrimaryGM()) return;
   const actors = new Set(combat.combatants.map(c => c.actor).filter(Boolean));
   for (const actor of actors) {
     const ids = actor.effects

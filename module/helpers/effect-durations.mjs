@@ -1,5 +1,6 @@
 import { PHASES } from "../documents/lhtrpgCombat.mjs";
 import { formatStatusPreview } from "../apps/effect-config.mjs";
+import { isPrimaryGM } from "./clients.mjs";
 
 /**
  * Log Horizon TRPG effect expiry engine and durations helper.
@@ -342,7 +343,7 @@ export function registerEffectDurations() {
   Hooks.on("preCreateActiveEffect", _onPreCreateActiveEffect);
 
   Hooks.on("lhtrpg.combatPhase", (combat, after, before) => {
-    if (!game.users?.activeGM?.isSelf) return;
+    if (!isPrimaryGM()) return;
     if (!before) return;
     if (!_isCombatPhaseForward(after, before)) return;
     queueExpiryTask(() => _processCombatPhaseExpiry(combat, after));
@@ -350,13 +351,13 @@ export function registerEffectDurations() {
 
   // A Main Process ended (the combatant became Post-Action) without a phase change.
   Hooks.on("updateCombat", (combat, changed) => {
-    if (!game.users?.activeGM?.isSelf) return;
+    if (!isPrimaryGM()) return;
     if (!foundry.utils.hasProperty(changed, "flags.lhtrpg.acted") || (combat.phase !== "main")) return;
     queueExpiryTask(() => _processCombatPhaseExpiry(combat));
   });
 
   Hooks.on("deleteCombat", combat => {
-    if (!game.users?.activeGM?.isSelf) return;
+    if (!isPrimaryGM()) return;
     queueExpiryTask(() => _processDeleteCombatExpiry(combat));
   });
 }

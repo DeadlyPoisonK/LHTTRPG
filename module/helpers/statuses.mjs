@@ -9,6 +9,7 @@
  */
 
 import { canonicalTag } from "./tag-catalog.mjs";
+import { isLocalChange } from "./clients.mjs";
 
 const ICONS_PATH = "systems/lhtrpg/assets/ui/status";
 
@@ -85,16 +86,16 @@ export function registerStatuses() {
   CONFIG.specialStatusEffects.DEFEATED = "dead";
 
   Hooks.on("updateActor", _onUpdateActor);
-  Hooks.on("createActiveEffect", (effect, options, userId) => _onStatusEffectChange(effect, true, userId));
-  Hooks.on("deleteActiveEffect", (effect, options, userId) => _onStatusEffectChange(effect, false, userId));
+  Hooks.on("createActiveEffect", (effect, options, userId) => _onStatusEffectChange(effect, true, options, userId));
+  Hooks.on("deleteActiveEffect", (effect, options, userId) => _onStatusEffectChange(effect, false, options, userId));
   for (const hook of ["createActiveEffect", "updateActiveEffect", "deleteActiveEffect"]) {
     Hooks.on(hook, _refreshHiddenTokens);
   }
   // Combat tracker "hide" <-> [Hidden]
   Hooks.on("updateCombatant", _onUpdateCombatant);
   Hooks.on("preCreateCombatant", _onPreCreateCombatant);
-  Hooks.on("createActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
-  Hooks.on("deleteActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, userId));
+  Hooks.on("createActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, options, userId));
+  Hooks.on("deleteActiveEffect", (effect, options, userId) => _syncCombatantsHidden(effect, options, userId));
 }
 
 /* -------------------------------------------- */
@@ -306,7 +307,7 @@ async function _syncEffectFromField(actor, status) {
 }
 
 function _onUpdateActor(actor, changes, options, userId) {
-  if ((userId !== game.user.id) || options.lhStatusMigration) return;
+  if (!isLocalChange(options, userId) || options.lhStatusMigration) return;
   for (const status of LH_STATUSES) {
     if (!status.path) continue;
     if (!foundry.utils.hasProperty(changes, `system.${status.path}`)) continue;
@@ -419,9 +420,9 @@ async function _applyStatusDataOnDelete(actor, status, statusData, deletedEffect
 /**
  * A status effect was added/removed (Token HUD, sheet, macro...): update the mirrored field.
  */
-function _onStatusEffectChange(effect, created, userId) {
-  // Only the user who triggered the change acts, to avoid duplicated updates.
-  if (userId !== game.user.id) return;
+function _onStatusEffectChange(effect, created, options, userId) {
+  // Only the window that made the change acts, to avoid duplicated updates.
+  if (!isLocalChange(options, userId)) return;
   const actor = effect.parent;
   if (!(actor instanceof Actor)) return;
 
@@ -482,7 +483,7 @@ function _refreshHiddenTokens(effect) {
  * Hiding/revealing a combatant from the combat tracker toggles [Hidden] on its token.
  */
 function _onUpdateCombatant(combatant, changes, options, userId) {
-  if ((userId !== game.user.id) || !("hidden" in changes)) return;
+  if (!isLocalChange(options, userId) || !("hidden" in changes)) return;
   const actor = combatant.actor;
   if (!actor || (actor.statuses.has(HIDDEN_STATUS) === changes.hidden)) return;
   actor.toggleStatusEffect(HIDDEN_STATUS, { active: changes.hidden });
@@ -500,8 +501,8 @@ function _onPreCreateCombatant(combatant) {
 /**
  * [Hidden] added/removed: hide/reveal the actor's combatants in every combat.
  */
-function _syncCombatantsHidden(effect, userId) {
-  if ((userId !== game.user.id) || !effect.statuses.has(HIDDEN_STATUS)) return;
+function _syncCombatantsHidden(effect, options, userId) {
+  if (!isLocalChange(options, userId) || !effect.statuses.has(HIDDEN_STATUS)) return;
   const actor = effect.parent;
   if (!(actor instanceof Actor)) return;
   const hidden = actor.statuses.has(HIDDEN_STATUS);

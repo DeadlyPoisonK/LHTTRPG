@@ -18,6 +18,7 @@ import { TAGS_MIGRATION } from "./tags.mjs";
 import { HANDS_MIGRATION } from "./hands.mjs";
 import { EFFECTS_MIGRATION } from "./effect-targets.mjs";
 import { ON_USE_SKILLS_MIGRATION } from "./sustained.mjs";
+import { clientsDiscovered, isPrimaryGM } from "./clients.mjs";
 
 export const MIGRATIONS = [
   CHARACTER_OPTIONS_MIGRATION,   // legacy Race/Class/Subclass fields -> items
@@ -50,7 +51,8 @@ let running = null;
  */
 export function runMigrations() {
   if (!game.user.isActiveGM) return Promise.resolve([]);
-  running ??= _run().finally(() => running = null);
+  // Once the other windows of this GM are known: only one of them migrates.
+  running ??= clientsDiscovered().then(() => isPrimaryGM() ? _run() : []).finally(() => running = null);
   return running;
 }
 

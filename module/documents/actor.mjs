@@ -3,6 +3,7 @@ import { syncChestImage } from "../piles/piles.mjs";
 import { completeChecksChange, legacyChecksUpdate, prepareMonsterChecks } from "../helpers/monster-checks.mjs";
 import { classStats, legacyOptionItems, raceStats } from "../helpers/character-options.mjs";
 import { getHands } from "../helpers/hands.mjs";
+import { isLocalChange } from "../helpers/clients.mjs";
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -62,7 +63,7 @@ export class LHTrpgActor extends Actor {
   _onUpdate(changed, options, userId) {
     super._onUpdate(changed, options, userId);
     // Chest opened/closed: swap the image of its tokens.
-    if ((this.type === PILE_TYPE) && (userId === game.user.id) && foundry.utils.hasProperty(changed, "system.chest")) {
+    if ((this.type === PILE_TYPE) && isLocalChange(options, userId) && foundry.utils.hasProperty(changed, "system.chest")) {
       syncChestImage(this, changed.system.chest);
     }
   }

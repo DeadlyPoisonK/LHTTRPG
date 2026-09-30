@@ -1,4 +1,6 @@
 import { registerHandler, request } from "../piles/pile-socket.mjs";
+// Identifies this browser window: the same user can be logged in from several.
+import { CLIENT_ID } from "../helpers/clients.mjs";
 
 /**
  * Log Horizon Round Progression:
@@ -20,8 +22,6 @@ import { registerHandler, request } from "../piles/pile-socket.mjs";
  */
 export const PHASES = ["setup", "main", "cleanup"];
 
-/** Identifies this browser window: the same user can be logged in from several. */
-const CLIENT_ID = foundry.utils.randomID();
 
 export class LHTrpgCombat extends Combat {
 

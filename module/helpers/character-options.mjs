@@ -8,6 +8,7 @@ import { getOptionIndex } from "../apps/option-browser.mjs";
 import { offerGrants } from "../apps/option-grants.mjs";
 import { chooseHumanStats, isHumanRace, offerBonusPoints } from "../apps/stat-allocation.mjs";
 import { offerClassSkills, rollbackPicks, waitForRollback } from "../apps/skill-browser.mjs";
+import { isLocalChange } from "./clients.mjs";
 
 /** Item types a character holds a single copy of. */
 export const OPTION_TYPES = ["race", "class", "subclass"];
@@ -227,7 +228,7 @@ export const CHARACTER_OPTIONS_MIGRATION = {
 export function registerCharacterOptions() {
   // A character holds a single Race, Class and Subclass: adding one replaces the previous one.
   Hooks.on("createItem", (item, options, userId) => {
-    if ((userId !== game.user.id) || !OPTION_TYPES.includes(item.type)) return;
+    if (!isLocalChange(options, userId) || !OPTION_TYPES.includes(item.type)) return;
     const actor = item.parent;
     if (!(actor instanceof Actor) || (actor.type !== "character")) return;
     const previous = actor.items.filter(i => (i.type === item.type) && (i.id !== item.id)).map(i => i.id);
@@ -256,7 +257,7 @@ export function registerCharacterOptions() {
   // Main Class removed (not replaced): offer to undo the skills chosen with it. Without a class the
   // character has no picks left to choose.
   Hooks.on("deleteItem", (item, options, userId) => {
-    if ((userId !== game.user.id) || (item.type !== "class")) return;
+    if (!isLocalChange(options, userId) || (item.type !== "class")) return;
     const actor = item.parent;
     if (!(actor instanceof Actor) || (actor.type !== "character")) return;
     if (!actor.items.some(i => i.type === "class")) rollbackPicks(actor, { reason: "LHTRPG.SkillBrowser.Undo.HintClass" });
