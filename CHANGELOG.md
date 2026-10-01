@@ -4,7 +4,7 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
-## [Unreleased]
+## [2.0.2] - 2026-10-01
 
 ### Changed
 - Compendium icons from [game-icons.net](https://game-icons.net) (CC BY 3.0): each race, and every
