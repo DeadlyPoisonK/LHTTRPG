@@ -3,7 +3,7 @@
   "name": "Half Alv",
   "type": "race",
   "sort": 0,
-  "img": "systems/lhtrpg/assets/ui/icons/half%20alv.svg",
+  "img": "systems/lhtrpg/assets/ui/icons/half-alv.svg",
   "system": {
     "description": "",
     "tags": [],
