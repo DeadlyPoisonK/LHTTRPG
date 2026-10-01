@@ -151,7 +151,7 @@ This license applies strictly to the system code and does not cover the Log Hori
 | Race: Human | human.svg | human-ear | Delapouite |
 | Race: Elf | elf-helmet.svg | elf-helmet | Kier Heyl |
 | Race: Dwarf | dwarf-helmet.svg | dwarf-helmet | Kier Heyl |
-| Race: Half Alv | half alv.svg | elf-ear | Delapouite |
+| Race: Half Alv | half-alv.svg | elf-ear | Delapouite |
 | Race: Werecat | cat.svg | cat | Lorc |
 | Race: Wolf Fang | wolf-head.svg | wolf-head | Lorc |
 | Race: Foxtail | fox-tail.svg | fox-tail | Delapouite |
