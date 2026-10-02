@@ -20,7 +20,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "rM3wP7vK2yT8zN1p",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "barrier",
+            "value": "@magic*2+@recovery"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Purification Barrier II",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "barrier"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!zx4s78D35XnoLmdd.rM3wP7vK2yT8zN1p"
+    }
+  ],
   "sort": 3800000,
   "ownership": {
     "default": 0

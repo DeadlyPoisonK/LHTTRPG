@@ -28,10 +28,136 @@
       "type": "",
       "recovery": false
     },
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "oneWeapon",
+        "value": "One-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "mAkk9FJdifBVsEHT",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtMost",
+              "value": 1
+            },
+            {
+              "type": "firstRound"
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Favored Weapon Style (SR1)",
+      "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!rJa0TVvri5OVaT5z.mAkk9FJdifBVsEHT"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "IbvBJMgn8EUce4eB",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Favored Weapon Style (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!rJa0TVvri5OVaT5z.IbvBJMgn8EUce4eB"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

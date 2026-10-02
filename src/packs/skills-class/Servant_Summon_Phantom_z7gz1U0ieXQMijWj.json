@@ -25,7 +25,102 @@
     "limit": "SR/Scene",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "yT3kC7rB2wL9zM4n",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Undead]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Phantom (Undead Tag)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!z7gz1U0ieXQMijWj.yT3kC7rB2wL9zM4n"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "vR8wM4vK1pT6zL2x",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "hidden"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Phantom (Hidden)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "hidden"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!z7gz1U0ieXQMijWj.vR8wM4vK1pT6zL2x"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

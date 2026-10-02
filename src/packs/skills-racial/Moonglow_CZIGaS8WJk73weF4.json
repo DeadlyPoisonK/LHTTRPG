@@ -29,7 +29,57 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/wolf-head.svg",
-  "effects": [],
+  "effects": [
+    {
+      "name": "Moonglow",
+      "img": "systems/lhtrpg/assets/ui/icons/wolf-head.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "r1K5mY7sX8vL2zP6",
+      "changes": [
+        {
+          "key": "system.battle-status.power.restoration.mod",
+          "mode": 2,
+          "value": "@str+5",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": false,
+      "statuses": [],
+      "flags": {
+        "lhtrpg": {
+          "expiry": {
+            "expires": "endOfProcess"
+          },
+          "expires": "endOfProcess"
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!CZIGaS8WJk73weF4.r1K5mY7sX8vL2zP6"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

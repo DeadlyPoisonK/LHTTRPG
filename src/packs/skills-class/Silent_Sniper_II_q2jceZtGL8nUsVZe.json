@@ -18,7 +18,126 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "rM5wP8vR2yT6zK1n",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@sr*7",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 20
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Ranged Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Silent Sniper II (CR11-20)",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!q2jceZtGL8nUsVZe.rM5wP8vR2yT6zK1n"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "bL3kC9rT7wP4zN8m",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@sr*9",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 21
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Ranged Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Silent Sniper II (CR21+)",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!q2jceZtGL8nUsVZe.bL3kC9rT7wP4zN8m"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

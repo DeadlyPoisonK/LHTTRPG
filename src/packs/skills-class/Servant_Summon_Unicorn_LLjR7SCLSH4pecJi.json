@@ -25,7 +25,104 @@
     "limit": "-",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "pK9vR4wX2yT8pL3z",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Mythic]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Unicorn (Mythic Tag)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!LLjR7SCLSH4pecJi.pK9vR4wX2yT8pL3z"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "fT3kC7rB1wP5zM8n",
+      "changes": [
+        {
+          "key": "system.battle-status.power.restoration.mod",
+          "mode": 2,
+          "value": "@sr*5",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Unicorn (Recovery)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!LLjR7SCLSH4pecJi.fT3kC7rB1wP5zM8n"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

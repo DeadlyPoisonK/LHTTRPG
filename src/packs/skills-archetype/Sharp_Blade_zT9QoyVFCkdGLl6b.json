@@ -29,7 +29,61 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "k1N5qW9zL4mY7pK2",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.check.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Sharp Blade",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!zT9QoyVFCkdGLl6b.k1N5qW9zL4mY7pK2"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

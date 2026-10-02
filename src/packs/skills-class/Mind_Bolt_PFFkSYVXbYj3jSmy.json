@@ -18,6 +18,19 @@
     },
     "cost": "Hate 1",
     "limit": "-",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": "@sr",
+      "vs": "resistance"
+    },
+    "damage": {
+      "dice": 3,
+      "mod": 0,
+      "type": "magical",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",

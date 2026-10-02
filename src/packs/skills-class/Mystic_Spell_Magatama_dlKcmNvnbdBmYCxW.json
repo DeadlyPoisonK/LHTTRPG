@@ -20,7 +20,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "qW3vK9pL5rN2tM8x",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "decay",
+            "value": 5
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Mystic Spell: Magatama",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "decay"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!dlKcmNvnbdBmYCxW.qW3vK9pL5rN2tM8x"
+    }
+  ],
   "sort": 2200000,
   "ownership": {
     "default": 0

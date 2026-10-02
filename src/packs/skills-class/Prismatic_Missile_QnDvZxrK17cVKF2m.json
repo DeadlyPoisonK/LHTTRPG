@@ -17,6 +17,19 @@
     },
     "cost": "Hate 3",
     "limit": "SR/Scene",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": 0,
+      "vs": "resistance"
+    },
+    "damage": {
+      "dice": "@sr+2",
+      "mod": 0,
+      "type": "magical",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",

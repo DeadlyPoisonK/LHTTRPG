@@ -19,15 +19,17 @@
     "cost": "Hate 2",
     "limit": "-",
     "check": {
+      "stat": "accuracy",
       "dice": 0,
       "mod": 0,
-      "vs": ""
+      "vs": "evasion"
     },
     "damage": {
-      "dice": 0,
+      "dice": "@sr+2",
       "mod": 0,
-      "type": "",
-      "recovery": false
+      "type": "physical",
+      "recovery": false,
+      "noPower": false
     },
     "macroeffect": ""
   },

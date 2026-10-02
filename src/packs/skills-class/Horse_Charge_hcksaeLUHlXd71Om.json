@@ -23,7 +23,59 @@
     "limit": "-",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "x4Nw8B1vM2pL9cN3",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@str",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "rollFilter": {
+            "skillTags": [
+              "Melee Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Horse Charge",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!hcksaeLUHlXd71Om.x4Nw8B1vM2pL9cN3"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

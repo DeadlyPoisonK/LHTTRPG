@@ -21,7 +21,71 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "K7vP2wN4tL9mQ1rS",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@dex",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Shadowless Kick",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.lH2KpDSXYNc7UmFV"
+              },
+              {
+                "name": "Silent Palm",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.tguzhcuOigWzWAw4"
+              },
+              {
+                "name": "Beat Up",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.ODjyXejEhhgDfp9r"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Excellent Arts",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!957LVMLDUw7CSgCr.K7vP2wN4tL9mQ1rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

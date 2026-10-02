@@ -25,7 +25,104 @@
     "limit": "-",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "pL1kC6rB3wT8zN2m",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Construct]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Golem (Construct Tag)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.pL1kC6rB3wT8zN2m"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "rM7wX2vR5yP4zK9n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": "@int*@sr",
+            "tag": "Physical Damage"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Golem (Cancel)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.rM7wX2vR5yP4zK9n"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

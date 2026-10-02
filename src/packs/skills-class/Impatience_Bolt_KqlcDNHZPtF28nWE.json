@@ -18,7 +18,53 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "m1Pq5B9vW2kL7xN4",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "rigor"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Impatience Bolt",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!KqlcDNHZPtF28nWE.m1Pq5B9vW2kL7xN4",
+      "statuses": [
+        "rigor"
+      ]
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

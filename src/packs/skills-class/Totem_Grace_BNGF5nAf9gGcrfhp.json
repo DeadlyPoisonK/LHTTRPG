@@ -42,7 +42,7 @@
         {
           "key": "system.battle-status.defense.phys.mod",
           "mode": 2,
-          "value": "2",
+          "value": "@pow",
           "priority": null
         }
       ],
@@ -61,7 +61,7 @@
         "exportSource": null
       },
       "name": "Totem Grace",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
       "system": {},
       "description": "",

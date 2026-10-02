@@ -18,7 +18,61 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "tK2vR6wX8yT4pL1z",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "rollFilter": {
+            "skillTags": [
+              "Melee Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Sore Spot",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!0oaKczKLkCYpwzgl.tK2vR6wX8yT4pL1z"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -18,7 +18,126 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "zP5yM1vR8wK3tL7x",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@sr*7",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 20
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Magic Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Robust Battery II (CR11-20)",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!sWnZbeLEesEXOEdJ.zP5yM1vR8wK3tL7x"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "tL9kC2rB6vW4zN1p",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@sr*9",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 21
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Magic Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Robust Battery II (CR21+)",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!sWnZbeLEesEXOEdJ.tL9kC2rB6vW4zN1p"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

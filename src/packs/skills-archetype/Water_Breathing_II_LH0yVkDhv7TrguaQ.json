@@ -31,7 +31,164 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "n6V2pL8sK4mY1zT7",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Aquatic]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Water Breathing II - Aquatic",
+      "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.n6V2pL8sK4mY1zT7"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "h3N7qW1zT8mK5pL2",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 20
+            }
+          ],
+          "statusData": {
+            "statusId": "cancel",
+            "value": 20,
+            "tag": "Aquatic"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Water Breathing II - Cancel (Aquatic) (CR11-20)",
+      "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.h3N7qW1zT8mK5pL2"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "x1K5mY9sL3vC7pT4",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 21
+            }
+          ],
+          "statusData": {
+            "statusId": "cancel",
+            "value": 30,
+            "tag": "Aquatic"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Water Breathing II - Cancel (Aquatic) (CR21+)",
+      "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.x1K5mY9sL3vC7pT4"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

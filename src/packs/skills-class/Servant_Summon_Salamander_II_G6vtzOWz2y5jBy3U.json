@@ -26,7 +26,115 @@
     "limit": "-",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "kM2wP6vR9yT4zK7n",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Fairy]",
+          "priority": null
+        },
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Flame]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Salamander II (Tags)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!G6vtzOWz2y5jBy3U.kM2wP6vR9yT4zK7n"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "xL8kC1rT5wP3zN9m",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@sr*7",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "rollFilter": {
+            "skillTags": [
+              "Flame"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Salamander II (Damage)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!G6vtzOWz2y5jBy3U.xL8kC1rT5wP3zN9m"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

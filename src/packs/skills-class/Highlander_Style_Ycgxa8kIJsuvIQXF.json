@@ -17,10 +17,125 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "equipped",
+        "value": "Two-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.guardian.Ycgxa8kIJsuvIQXF",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "S4mK8tL1vP7wN2rQ",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@pow",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "standby"
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Highlander Style (Standby Damage)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!Ycgxa8kIJsuvIQXF.S4mK8tL1vP7wN2rQ"
+    },
+    {
+      "origin": "Compendium.world.guardian.Ycgxa8kIJsuvIQXF",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "N2tL7vP4wK9mQ1rT",
+      "changes": [
+        {
+          "key": "system.checks.evasion.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            },
+            {
+              "type": "preAction"
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Highlander Style (Pre-Action Evasion)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!Ycgxa8kIJsuvIQXF.N2tL7vP4wK9mQ1rT"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -28,7 +28,12 @@
       "type": "",
       "recovery": false
     },
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "handsEmpty"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
   "effects": [
@@ -51,12 +56,6 @@
           "mode": 2,
           "value": "4",
           "priority": null
-        },
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
         }
       ],
       "tint": "#ffffff",
@@ -74,13 +73,119 @@
         "exportSource": null
       },
       "name": "Forestall Style",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
       "type": "base",
       "system": {},
       "description": "",
       "statuses": [],
       "sort": 0,
       "_key": "!items.effects!9QzlHV7TgzsKGPKA.oaZ9x7K0OBluYjwo"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "fstlEff002accur2",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Forestall Style (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff002accur2"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "fstlEff003magic4",
+      "changes": [
+        {
+          "key": "system.battle-status.power.magic.mod",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 3
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Forestall Style (SR3)",
+      "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff003magic4"
     }
   ],
   "sort": 0,

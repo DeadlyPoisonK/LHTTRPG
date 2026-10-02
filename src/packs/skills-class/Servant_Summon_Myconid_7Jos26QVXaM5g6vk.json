@@ -22,7 +22,104 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "tK4vR8wX1yT6pL3z",
+      "changes": [
+        {
+          "key": "system.tags",
+          "mode": 2,
+          "value": "[Nature]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Myconid (Nature Tag)",
+      "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!7Jos26QVXaM5g6vk.tK4vR8wX1yT6pL3z"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "bL9rC3vW7wP1zN5k",
+      "changes": [
+        {
+          "key": "system.battle-status.power.restoration.mod",
+          "mode": 2,
+          "value": "@int",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Summon: Myconid (Recovery)",
+      "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!7Jos26QVXaM5g6vk.bL9rC3vW7wP1zN5k"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

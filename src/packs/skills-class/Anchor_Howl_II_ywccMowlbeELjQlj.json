@@ -15,10 +15,72 @@
     },
     "cost": "Hate 1",
     "limit": "-",
+    "check": {
+      "stat": "",
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": "@str.base",
+      "type": "",
+      "recovery": true,
+      "noPower": true
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "x7Nw4B1vQ9pL2cK8",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfRound",
+          "statusData": {
+            "statusId": "cancel",
+            "value": "@str",
+            "tag": ""
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Anchor Howl II",
+      "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!ywccMowlbeELjQlj.x7Nw4B1vQ9pL2cK8"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

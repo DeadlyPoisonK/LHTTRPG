@@ -17,6 +17,19 @@
     },
     "cost": "Hate 2",
     "limit": "-",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": 0,
+      "vs": "evasion"
+    },
+    "damage": {
+      "dice": "@sr*2",
+      "mod": "@magic",
+      "type": "physical",
+      "recovery": false,
+      "noPower": true
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",

@@ -31,7 +31,171 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/elf-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "EffEvrgrnCR1To10",
+      "changes": [
+        {
+          "key": "system.battle-status.defense.magic.mod",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 10
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Evergreen (CR1-10)",
+      "img": "systems/lhtrpg/assets/ui/icons/elf-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!5uHxsPDJPkzbgVBD.EffEvrgrnCR1To10"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "EffEvrgrnCR11To2",
+      "changes": [
+        {
+          "key": "system.battle-status.defense.magic.mod",
+          "mode": 2,
+          "value": "8",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 11
+            },
+            {
+              "type": "crAtMost",
+              "value": 20
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Evergreen (CR11-20)",
+      "img": "systems/lhtrpg/assets/ui/icons/elf-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!5uHxsPDJPkzbgVBD.EffEvrgrnCR11To2"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "EffEvrgrnCR21Pls",
+      "changes": [
+        {
+          "key": "system.battle-status.defense.magic.mod",
+          "mode": 2,
+          "value": "12",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 21
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Evergreen (CR21+)",
+      "img": "systems/lhtrpg/assets/ui/icons/elf-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!5uHxsPDJPkzbgVBD.EffEvrgrnCR21Pls"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

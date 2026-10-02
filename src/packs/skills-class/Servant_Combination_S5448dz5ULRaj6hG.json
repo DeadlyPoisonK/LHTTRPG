@@ -18,7 +18,174 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "rT7kC2rB6vL1zM5p",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "weakness",
+            "value": "@sr*2",
+            "tag": ""
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 10
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Combination (CR1-10)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "weakness"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!S5448dz5ULRaj6hG.rT7kC2rB6vL1zM5p"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "bM1wP8vR4yT7zK3n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "weakness",
+            "value": "@sr*4",
+            "tag": ""
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 11
+            },
+            {
+              "type": "crAtMost",
+              "value": 20
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Combination (CR11-20)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "weakness"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!S5448dz5ULRaj6hG.bM1wP8vR4yT7zK3n"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "vL9kC3rT5wP2zN8x",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "weakness",
+            "value": "@sr*6",
+            "tag": ""
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 21
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Servant Combination (CR21+)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "weakness"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!S5448dz5ULRaj6hG.vL9kC3rT5wP2zN8x"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -18,7 +18,65 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "p1Nw4B9vM2pL7cN5",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "@magic",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfRound",
+          "rollFilter": {
+            "skills": [
+              {
+                "uuid": "Compendium.lhtrpg.skills-class.Item.GzNcnf9VUHuiVSNJ",
+                "name": "Reactive Heal"
+              },
+              {
+                "name": "Reactive Area Heal"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Invoke React",
+      "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!mmJ1DrF8cFCLmdoW.p1Nw4B9vM2pL7cN5"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -20,7 +20,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "pT4zR7wK1vM9yL3x",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "decay",
+            "value": "@int*2"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Pain Needle",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "decay"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!7UoGB4ml78i9YALe.pT4zR7wK1vM9yL3x"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

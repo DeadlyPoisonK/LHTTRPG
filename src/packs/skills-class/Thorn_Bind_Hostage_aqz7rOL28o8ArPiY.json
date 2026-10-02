@@ -20,7 +20,102 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "jL1kC8rB5wT3zM7m",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@int+8"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Thorn Bind Hostage (Pursuit 1)",
+      "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!aqz7rOL28o8ArPiY.jL1kC8rB5wT3zM7m"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "rR4wX9vR2yP5zK1n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@int+8"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Thorn Bind Hostage (Pursuit 2)",
+      "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!aqz7rOL28o8ArPiY.rR4wX9vR2yP5zK1n"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

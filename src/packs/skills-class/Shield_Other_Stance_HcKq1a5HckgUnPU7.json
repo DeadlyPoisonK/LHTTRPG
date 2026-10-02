@@ -21,7 +21,56 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "jT2kC6rB1wP8zM5n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": "@int*@sr",
+            "tag": ""
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Shield Other Stance (Cancel)",
+      "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!HcKq1a5HckgUnPU7.jT2kC6rB1wP8zM5n"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

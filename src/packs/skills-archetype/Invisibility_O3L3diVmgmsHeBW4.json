@@ -31,7 +31,54 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "r3N7qW1zL8mY5pK2",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "hidden"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Invisibility",
+      "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "hidden"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!O3L3diVmgmsHeBW4.r3N7qW1zL8mY5pK2"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

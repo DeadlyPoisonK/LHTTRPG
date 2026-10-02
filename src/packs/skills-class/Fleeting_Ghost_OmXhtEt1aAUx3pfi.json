@@ -18,7 +18,53 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "w2Ly7N1vK4wB9cM5",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "hidden"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Fleeting Ghost",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!OmXhtEt1aAUx3pfi.w2Ly7N1vK4wB9cM5",
+      "statuses": [
+        "hidden"
+      ]
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

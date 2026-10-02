@@ -20,7 +20,59 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "p5Nw1B9vM7pL2cN8",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.mod",
+          "mode": 2,
+          "value": "8",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Lightning Step",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!Cb1QMtExp92Wr6yu.p5Nw1B9vM7pL2cN8"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

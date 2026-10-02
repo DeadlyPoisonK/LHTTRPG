@@ -18,7 +18,52 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.guardian.rtFub6GOJcvw7ZNN",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "P8vK2wL4tM7qN1rS",
+      "changes": [
+        {
+          "key": "system.health.effect",
+          "mode": 2,
+          "value": "8",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Mulligan",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!rtFub6GOJcvw7ZNN.P8vK2wL4tM7qN1rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

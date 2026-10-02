@@ -17,10 +17,126 @@
     },
     "cost": "Hate 2",
     "limit": "-",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": 0,
+      "vs": "evasion"
+    },
+    "damage": {
+      "dice": "@sr+1",
+      "mod": 0,
+      "type": "physical",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "mK3vR9wX2yT7pL1z",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "dazed"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "hateUnder"
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Round Windmill (Dazed)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "dazed"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!ApcS6AnESe0AoyZL.mK3vR9wX2yT7pL1z"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "jT8kC1rB5wP3zM6n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "staggered"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "hateTop"
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Round Windmill (Staggered)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "staggered"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!ApcS6AnESe0AoyZL.jT8kC1rB5wP3zM6n"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

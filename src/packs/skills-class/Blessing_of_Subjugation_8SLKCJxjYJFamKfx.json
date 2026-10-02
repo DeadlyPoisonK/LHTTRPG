@@ -18,7 +18,56 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "k2Mv9P1xL5wB8cY4",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Blessing of Subjugation",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!8SLKCJxjYJFamKfx.k2Mv9P1xL5wB8cY4"
+    }
+  ],
   "sort": 300000,
   "ownership": {
     "default": 0

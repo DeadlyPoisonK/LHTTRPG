@@ -16,15 +16,17 @@
     "cost": "-",
     "limit": "1/Scenario",
     "check": {
+      "stat": "",
       "dice": 0,
       "mod": 0,
       "vs": ""
     },
     "damage": {
       "dice": 0,
-      "mod": 0,
+      "mod": "@str.base*2",
       "type": "",
-      "recovery": false
+      "recovery": true,
+      "noPower": true
     },
     "macroeffect": ""
   },

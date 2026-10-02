@@ -18,7 +18,63 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "y8Nw2B5vL1pK7xM3",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess",
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack",
+              "Magic Attack",
+              "Special Attack"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Battle Commander",
+      "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!4f15Th8qDJlMlBv8.y8Nw2B5vL1pK7xM3"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

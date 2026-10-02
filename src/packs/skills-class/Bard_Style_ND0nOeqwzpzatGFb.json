@@ -17,10 +17,69 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "equipped",
+        "value": "Instrument"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "X4mB8qL1wR9tV7kP",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 2,
+          "value": "-@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skillTags": [
+              "Instrument"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Bard Style",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!ND0nOeqwzpzatGFb.X4mB8qL1wR9tV7kP"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -31,7 +31,56 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
-  "effects": [],
+  "effects": [
+    {
+      "name": "Tattoo Pattern: Chariot",
+      "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "w6V2pL9sK3mY7zT4",
+      "changes": [
+        {
+          "key": "system.battle-status.initiative.mod",
+          "mode": 2,
+          "value": "6",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": false,
+      "statuses": [],
+      "flags": {
+        "lhtrpg": {
+          "expiry": {
+            "expires": "endOfScene"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!KjepRSiV8QZoS5S2.w6V2pL9sK3mY7zT4"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

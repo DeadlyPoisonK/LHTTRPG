@@ -15,6 +15,19 @@
     },
     "cost": "Hate 4",
     "limit": "(SR)/Scenario",
+    "check": {
+      "stat": "",
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 3,
+      "mod": 0,
+      "type": "magical",
+      "recovery": true,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",

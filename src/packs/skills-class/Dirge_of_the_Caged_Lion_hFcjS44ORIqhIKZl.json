@@ -19,6 +19,19 @@
     },
     "cost": "Hate Refer",
     "limit": "-",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": 0,
+      "vs": "resistance"
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 5,
+      "type": "direct",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",

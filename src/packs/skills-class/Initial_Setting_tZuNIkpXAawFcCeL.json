@@ -21,7 +21,54 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "c5Mw8B1vL9pK4xN2",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Initial Setting",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!tZuNIkpXAawFcCeL.c5Mw8B1vL9pK4xN2"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

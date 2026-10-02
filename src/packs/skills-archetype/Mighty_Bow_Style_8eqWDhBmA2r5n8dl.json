@@ -28,10 +28,72 @@
       "type": "",
       "recovery": false
     },
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "equipped",
+        "value": "Bow"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "k0XrWNCgnqa8N0Ke",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.range",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ],
+            "weaponTags": [
+              "Bow"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Mighty Bow Style (Bow range)",
+      "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!8eqWDhBmA2r5n8dl.k0XrWNCgnqa8N0Ke"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

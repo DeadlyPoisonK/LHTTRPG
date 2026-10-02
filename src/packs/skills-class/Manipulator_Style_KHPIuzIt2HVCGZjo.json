@@ -17,10 +17,71 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "handFree"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.summoner.KHPIuzIt2HVCGZjo",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "T7vL2wP4mK9tN1rS",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 5,
+          "value": "0",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Call Servant",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.Md5Q1YzhL3yxBayF"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Manipulator Style (Hate Cost)",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!KHPIuzIt2HVCGZjo.T7vL2wP4mK9tN1rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

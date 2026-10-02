@@ -21,7 +21,128 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.sorcerer.uv6vHrohVZnfLsLa",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "P7vL2wK4tM9mQ1rS",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.note",
+          "mode": 0,
+          "value": "Ignores [Cancel: Flame]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Flare Arrow",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.i7p4D76crcu1csM7"
+              },
+              {
+                "name": "Orb of Lava",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.CkG8Wg2xgXXFFi63"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Volcano Owners (Ignore Cancel: Flame)",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!uv6vHrohVZnfLsLa.P7vL2wK4tM9mQ1rS"
+    },
+    {
+      "origin": "Compendium.world.sorcerer.uv6vHrohVZnfLsLa",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "L1tL8vP4wK7qN2rS",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ],
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Burned Stake",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.MPtj6oqwp633p1vN"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Volcano Owners (Burned Stake Hate Cost)",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!uv6vHrohVZnfLsLa.L1tL8vP4wK7qN2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

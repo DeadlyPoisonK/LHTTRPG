@@ -17,6 +17,19 @@
     },
     "cost": "Refer",
     "limit": "-",
+    "check": {
+      "stat": "",
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 0,
+      "mod": "@pow.base",
+      "type": "",
+      "recovery": true,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",

@@ -21,7 +21,102 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "b8Nw1B4vL9pK2xM5",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@attack+@sr*2"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Cross Slash (1)",
+      "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!Nj5f0RgMxnCwhoIm.b8Nw1B4vL9pK2xM5"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "k3Xw7B2vM5pL1cN9",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@attack+@sr*2"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Cross Slash (2)",
+      "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!Nj5f0RgMxnCwhoIm.k3Xw7B2vM5pL1cN9"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

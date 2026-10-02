@@ -17,10 +17,70 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "oneWeapon",
+        "value": "Throwing"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.swashbuckler.I3DzLjgowu5gj0tR",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "M7vP1wL4tK9qN2rS",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Juggler Style (Accuracy)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!I3DzLjgowu5gj0tR.M7vP1wL4tK9qN2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

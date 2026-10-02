@@ -29,7 +29,52 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/dwarf-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "GQP8lRTjW1K8w193",
+      "changes": [
+        {
+          "key": "system.checks.analysis.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Maester's Eye",
+      "img": "systems/lhtrpg/assets/ui/icons/dwarf-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!EiYiC12DaFi0MIPl.GQP8lRTjW1K8w193"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

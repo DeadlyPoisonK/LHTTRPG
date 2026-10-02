@@ -15,6 +15,19 @@
     },
     "cost": "Hate 1",
     "limit": "(SR)/Scene",
+    "check": {
+      "stat": "",
+      "dice": 0,
+      "mod": 0,
+      "vs": ""
+    },
+    "damage": {
+      "dice": 2,
+      "mod": 0,
+      "type": "",
+      "recovery": true,
+      "noPower": true
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",

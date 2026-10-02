@@ -31,7 +31,56 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
-  "effects": [],
+  "effects": [
+    {
+      "name": "Tattoo Pattern: Strength",
+      "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "p8K4mY6sX2vL9zN5",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "3",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": false,
+      "statuses": [],
+      "flags": {
+        "lhtrpg": {
+          "expiry": {
+            "expires": "endOfScene"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!xKR0Py4jUdK5Xjjd.p8K4mY6sX2vL9zN5"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

@@ -18,7 +18,126 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.bard.omnqmst0W3C6y5Qi",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "V7mK2tL4wP9vQ1rS",
+      "changes": [
+        {
+          "key": "system.checks.negotiation.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "key": "system.checks.operation.mod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtMost",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Troubadour (SR1)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!omnqmst0W3C6y5Qi.V7mK2tL4wP9vQ1rS"
+    },
+    {
+      "origin": "Compendium.world.bard.omnqmst0W3C6y5Qi",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "R4tL8vP1mK7wN2rS",
+      "changes": [
+        {
+          "key": "system.checks.negotiation.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.operation.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Troubadour (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!omnqmst0W3C6y5Qi.R4tL8vP1mK7wN2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

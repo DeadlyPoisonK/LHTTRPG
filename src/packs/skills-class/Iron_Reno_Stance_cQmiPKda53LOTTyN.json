@@ -22,7 +22,101 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "k8Ly1N5vK4wB9cM2",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "cancel",
+            "value": "@int+@sr*5",
+            "tag": ""
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Iron Reno Stance (Cancel)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!cQmiPKda53LOTTyN.k8Ly1N5vK4wB9cM2",
+      "statuses": [
+        "cancel"
+      ]
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "b2Mw7B4vL1pK8xN5",
+      "changes": [
+        {
+          "key": "system.checks.evasion.dice",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Iron Reno Stance (Evasion Penalty)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!cQmiPKda53LOTTyN.b2Mw7B4vL1pK8xN5"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

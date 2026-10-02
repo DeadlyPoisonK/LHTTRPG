@@ -20,7 +20,63 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.summoner.AHv19ALfCWCWWqsq",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "P1tL8vK4qM7wN2rS",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skillTags": [
+              "Fairy",
+              "Undead",
+              "Construct",
+              "Mythic"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Summoning Mastery",
+      "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!AHv19ALfCWCWWqsq.P1tL8vK4qM7wN2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

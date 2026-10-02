@@ -18,7 +18,62 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "wN8kC2rT6vL4yM1z",
+      "changes": [
+        {
+          "key": "system.checks.accuracy.mod",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        },
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfProcess"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Radiant Blow",
+      "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!rDI2LrKaascfQJyS.wN8kC2rT6vL4yM1z"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

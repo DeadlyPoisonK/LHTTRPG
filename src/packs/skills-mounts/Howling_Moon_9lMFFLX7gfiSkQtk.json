@@ -23,7 +23,55 @@
     "limit": "1/Scene",
     "macroeffect": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "name": "Howling Moon",
+      "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "j4N8qW2zL6mK9pT3",
+      "changes": [],
+      "description": "",
+      "transfer": false,
+      "statuses": [
+        "pursuit"
+      ],
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@pow+5"
+          },
+          "expiry": {
+            "expires": "endOfScene"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!9lMFFLX7gfiSkQtk.j4N8qW2zL6mK9pT3"
+    }
+  ],
   "flags": {},
   "ownership": {
     "default": 0

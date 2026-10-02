@@ -45,7 +45,7 @@
       "_id": "NMOMewxMWRO1sC8n",
       "changes": [
         {
-          "key": "system.checks.athletics.mod",
+          "key": "system.checks.athletics.dice",
           "mode": 2,
           "value": "1",
           "priority": null
@@ -65,7 +65,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Athletics +1",
+      "name": "Athletics +1D",
       "img": "icons/svg/aura.svg",
       "type": "base",
       "system": {},

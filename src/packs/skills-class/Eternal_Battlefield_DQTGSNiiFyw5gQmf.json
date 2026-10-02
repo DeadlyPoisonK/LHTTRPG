@@ -56,8 +56,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "+2 Accuracy",
-      "img": "icons/svg/aura.svg",
+      "name": "Eternal Battlefield (Accuracy)",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
       "type": "base",
       "system": {},
       "description": "",
@@ -68,15 +68,15 @@
     {
       "origin": "Compendium.world.samurai.DQTGSNiiFyw5gQmf",
       "duration": {
-        "startTime": 240,
+        "startTime": null,
         "seconds": null,
         "combat": null,
         "rounds": null,
-        "turns": 1,
+        "turns": null,
         "startRound": null,
         "startTurn": null
       },
-      "disabled": true,
+      "disabled": false,
       "_id": "3YhtfXZsX1vWiQsd",
       "changes": [
         {
@@ -88,7 +88,15 @@
       ],
       "tint": "#ffffff",
       "transfer": true,
-      "flags": {},
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "firstRound"
+            }
+          ]
+        }
+      },
       "_stats": {
         "coreVersion": "13.351",
         "systemId": "lhtrpg",
@@ -100,8 +108,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "+5 Iniciative",
-      "img": "icons/svg/aura.svg",
+      "name": "Eternal Battlefield (Initiative: Round 1)",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
       "type": "base",
       "system": {},
       "description": "",

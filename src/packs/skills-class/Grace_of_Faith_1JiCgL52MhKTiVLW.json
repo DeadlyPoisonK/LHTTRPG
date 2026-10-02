@@ -54,8 +54,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Accuracy +2",
-      "img": "icons/svg/aura.svg",
+      "name": "Grace of Faith (Accuracy)",
+      "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
       "system": {},
       "description": "",
@@ -98,8 +98,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Resistance +1",
-      "img": "icons/svg/aura.svg",
+      "name": "Grace of Faith (Resistance)",
+      "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
       "system": {},
       "description": "",

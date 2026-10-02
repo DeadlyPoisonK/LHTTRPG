@@ -31,7 +31,54 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "f4V8pL2sK6mY9zN3",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "hidden"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Road Mirage",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "hidden"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!1l31WrnLeRBIZEbH.f4V8pL2sK6mY9zN3"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

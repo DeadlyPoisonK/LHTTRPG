@@ -20,7 +20,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/farmer.svg",
-  "effects": [],
+  "effects": [
+    {
+      "name": "Energy Drain",
+      "img": "systems/lhtrpg/assets/ui/icons/farmer.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "t2K6mY8sX4vL1zP7",
+      "changes": [],
+      "description": "",
+      "transfer": false,
+      "statuses": [
+        "decay"
+      ],
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "decay",
+            "value": "@str*2"
+          },
+          "expiry": {
+            "expires": "endOfScene"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!eSJksPB91XP3fq6e.t2K6mY8sX4vL1zP7"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

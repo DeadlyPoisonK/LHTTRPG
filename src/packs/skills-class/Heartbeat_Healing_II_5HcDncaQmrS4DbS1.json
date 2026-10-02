@@ -20,7 +20,54 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "b7Mw2B9vL1pK5xN8",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "regen",
+            "value": "@magic*2"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Heartbeat Healing II",
+      "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
+      "type": "base",
+      "system": {},
+      "sort": 0,
+      "_key": "!items.effects!5HcDncaQmrS4DbS1.b7Mw2B9vL1pK5xN8",
+      "statuses": [
+        "regen"
+      ]
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

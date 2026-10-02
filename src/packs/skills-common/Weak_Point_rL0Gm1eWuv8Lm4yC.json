@@ -18,7 +18,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/farmer.svg",
-  "effects": [],
+  "effects": [
+    {
+      "name": "Weak Point",
+      "img": "systems/lhtrpg/assets/ui/icons/farmer.svg",
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "b9V3pL7sK2mY6zT1",
+      "changes": [],
+      "description": "",
+      "transfer": false,
+      "statuses": [
+        "pursuit"
+      ],
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "pursuit",
+            "value": "@int"
+          },
+          "expiry": {
+            "expires": "endOfScene"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "exportSource": null
+      },
+      "sort": 0,
+      "_key": "!items.effects!rL0Gm1eWuv8Lm4yC.b9V3pL7sK2mY6zT1"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

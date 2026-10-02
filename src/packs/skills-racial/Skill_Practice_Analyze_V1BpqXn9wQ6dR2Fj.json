@@ -31,7 +31,52 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/human.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "EffSklPrcAnlz001",
+      "changes": [
+        {
+          "key": "system.checks.analysis.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Skill Practice: Analyze",
+      "img": "systems/lhtrpg/assets/ui/icons/human.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!V1BpqXn9wQ6dR2Fj.EffSklPrcAnlz001"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

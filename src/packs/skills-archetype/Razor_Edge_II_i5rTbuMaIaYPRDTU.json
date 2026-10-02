@@ -18,15 +18,17 @@
     "cost": "Hate 1",
     "limit": "-",
     "check": {
+      "stat": "accuracy",
       "dice": 0,
       "mod": 0,
-      "vs": ""
+      "vs": "evasion"
     },
     "damage": {
-      "dice": 0,
+      "dice": 2,
       "mod": 0,
-      "type": "",
-      "recovery": false
+      "type": "physical",
+      "recovery": false,
+      "noPower": false
     },
     "macroeffect": ""
   },

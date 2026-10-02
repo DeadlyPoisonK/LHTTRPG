@@ -48,7 +48,16 @@
       ],
       "tint": "#ffffff",
       "transfer": true,
-      "flags": {},
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtMost",
+              "value": 1
+            }
+          ]
+        }
+      },
       "_stats": {
         "coreVersion": "13.351",
         "systemId": "lhtrpg",
@@ -60,14 +69,73 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Summon Shikigami",
-      "img": "icons/svg/aura.svg",
+      "name": "Summon Shikigami (SR1)",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
       "system": {},
       "description": "",
       "statuses": [],
       "sort": 0,
       "_key": "!items.effects!oyyQscesgBsg1ynX.8PF4wVdxYBHwM7Zv"
+    },
+    {
+      "origin": "Compendium.world.kannagi.oyyQscesgBsg1ynX",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "W9vL2tP4mK7qN1rS",
+      "changes": [
+        {
+          "key": "system.checks.athletics.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.perception.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Summon Shikigami (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!oyyQscesgBsg1ynX.W9vL2tP4mK7qN1rS"
     }
   ],
   "sort": 3000000,

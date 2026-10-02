@@ -20,7 +20,61 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "N8tP1wL4mK7vQ2rS",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skillTags": [
+              "Flame"
+            ],
+            "exclusive": "Energy Mastery"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Energy Mastery: Flame",
+      "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!DO96XfmXINX8mogq.N8tP1wL4mK7vQ2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

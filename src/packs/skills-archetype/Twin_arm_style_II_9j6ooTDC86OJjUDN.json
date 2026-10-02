@@ -28,10 +28,127 @@
       "type": "",
       "recovery": false
     },
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "twoWeapons",
+        "value": "One-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "CBCIIMDwAj6ZPGN6",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "6",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            },
+            {
+              "type": "srAtMost",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Twin arm style II (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!9j6ooTDC86OJjUDN.CBCIIMDwAj6ZPGN6"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "kiFDjH1zq2Bpclu8",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "@dex",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 3
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Twin arm style II (SR3)",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!9j6ooTDC86OJjUDN.kiFDjH1zq2Bpclu8"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

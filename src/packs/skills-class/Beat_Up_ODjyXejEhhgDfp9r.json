@@ -15,6 +15,19 @@
     },
     "cost": "-",
     "limit": "-",
+    "check": {
+      "stat": "",
+      "dice": 0,
+      "mod": 0,
+      "vs": "auto"
+    },
+    "damage": {
+      "dice": 0,
+      "mod": 5,
+      "type": "direct",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",

@@ -28,38 +28,57 @@
       "type": "",
       "recovery": false
     },
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "twoWeapons",
+        "value": "One-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
   "effects": [
     {
-      "origin": "Compendium.world.weapon-master-archetype-class.pR8SOT8bjjsmsRlr",
+      "origin": null,
       "duration": {
+        "rounds": null,
         "startTime": null,
         "seconds": null,
         "combat": null,
-        "rounds": 1,
         "turns": null,
         "startRound": null,
         "startTurn": null
       },
       "disabled": false,
-      "_id": "NM8GxIFwjDxjikl7",
+      "_id": "tarmEff001apmod3",
       "changes": [
         {
           "key": "system.battle-status.power.attack.mod",
           "mode": 2,
-          "value": "",
+          "value": "3",
           "priority": null
         }
       ],
       "tint": "#ffffff",
       "transfer": true,
-      "flags": {},
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            },
+            {
+              "type": "srAtMost",
+              "value": 2
+            }
+          ]
+        }
+      },
       "_stats": {
         "coreVersion": "13.351",
         "systemId": "lhtrpg",
-        "systemVersion": "1.5.0",
+        "systemVersion": "2.0.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null,
@@ -67,14 +86,67 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "New Effect",
-      "img": "icons/svg/aura.svg",
+      "name": "Twin Arm Style (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
       "system": {},
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!pR8SOT8bjjsmsRlr.NM8GxIFwjDxjikl7"
+      "_key": "!items.effects!pR8SOT8bjjsmsRlr.tarmEff001apmod3"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "tarmEff002apmod6",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "6",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 3
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Twin Arm Style (SR3)",
+      "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!pR8SOT8bjjsmsRlr.tarmEff002apmod6"
     }
   ],
   "sort": 0,

@@ -29,7 +29,52 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/half-alv.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "EffNatvOprcwZLSD",
+      "changes": [
+        {
+          "key": "system.checks.operation.dice",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Native Operator",
+      "img": "systems/lhtrpg/assets/ui/icons/half-alv.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!cwZLSDZ4mFtTDpMR.EffNatvOprcwZLSD"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

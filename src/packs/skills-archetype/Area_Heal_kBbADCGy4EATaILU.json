@@ -16,15 +16,17 @@
     "cost": "Hate 2",
     "limit": "(SR)/Scene",
     "check": {
+      "stat": "",
       "dice": 0,
       "mod": 0,
       "vs": ""
     },
     "damage": {
-      "dice": 0,
+      "dice": 3,
       "mod": 0,
-      "type": "",
-      "recovery": false
+      "type": "magical",
+      "recovery": true,
+      "noPower": false
     },
     "macroeffect": ""
   },

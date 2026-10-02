@@ -49,7 +49,7 @@
         {
           "key": "system.battle-status.power.restoration.mod",
           "mode": 2,
-          "value": "3",
+          "value": "@sr*3",
           "priority": null
         }
       ],

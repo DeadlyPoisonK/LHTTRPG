@@ -18,7 +18,55 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "x9Ly2N5vK1wB7cM3",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "statusData": {
+            "statusId": "barrier",
+            "value": "@recovery+@sr*4"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Chiming Bell Barrier",
+      "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "barrier"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!knBCgNBM1olvWUVc.x9Ly2N5vK1wB7cM3"
+    }
+  ],
   "sort": 2600000,
   "ownership": {
     "default": 0

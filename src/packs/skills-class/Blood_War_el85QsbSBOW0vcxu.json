@@ -18,7 +18,54 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "v5Mw2B8vL1pK9xN4",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfRound",
+          "statusData": {
+            "statusId": "rigor"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Blood War",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "rigor"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!el85QsbSBOW0vcxu.v5Mw2B8vL1pK9xN4"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

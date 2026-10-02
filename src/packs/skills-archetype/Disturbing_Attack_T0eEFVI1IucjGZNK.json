@@ -16,15 +16,17 @@
     "cost": "Hate 1",
     "limit": "1/Scene",
     "check": {
+      "stat": "",
       "dice": 0,
       "mod": 0,
-      "vs": ""
+      "vs": "auto"
     },
     "damage": {
       "dice": 0,
-      "mod": 0,
-      "type": "",
-      "recovery": false
+      "mod": "@attack",
+      "type": "direct",
+      "recovery": false,
+      "noPower": false
     },
     "macroeffect": ""
   },

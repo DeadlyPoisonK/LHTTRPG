@@ -20,7 +20,290 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "bM4wR7vK1yT8zP2x",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": 10,
+            "tag": "Non-Close Attacks"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtMost",
+              "value": 7
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Rondo of the Wind-Clad Maiden (CR1-7)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!lAWru4PfucyxuqaE.bM4wR7vK1yT8zP2x"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "vT9kC3rB5wL2zN8p",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": 20,
+            "tag": "Non-Close Attacks"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 8
+            },
+            {
+              "type": "crAtMost",
+              "value": 14
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Rondo of the Wind-Clad Maiden (CR8-14)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!lAWru4PfucyxuqaE.vT9kC3rB5wL2zN8p"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "fR2yM8vP4wK1tL6z",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": 30,
+            "tag": "Non-Close Attacks"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 15
+            },
+            {
+              "type": "crAtMost",
+              "value": 21
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Rondo of the Wind-Clad Maiden (CR15-21)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!lAWru4PfucyxuqaE.fR2yM8vP4wK1tL6z"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "xL5kC1rT7vW9zN3p",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": 40,
+            "tag": "Non-Close Attacks"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 22
+            },
+            {
+              "type": "crAtMost",
+              "value": 28
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Rondo of the Wind-Clad Maiden (CR22-28)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!lAWru4PfucyxuqaE.xL5kC1rT7vW9zN3p"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "qM7wP2vR6yT4zK8n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "cancel",
+            "value": 50,
+            "tag": "Non-Close Attacks"
+          },
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "crAtLeast",
+              "value": 29
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Rondo of the Wind-Clad Maiden (CR29+)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "cancel"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!lAWru4PfucyxuqaE.qM7wP2vR6yT4zK8n"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

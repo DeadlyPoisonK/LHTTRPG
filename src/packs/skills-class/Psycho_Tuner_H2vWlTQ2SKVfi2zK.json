@@ -21,7 +21,67 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.enchanter.H2vWlTQ2SKVfi2zK",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "N7tL2vP4wK9mR1qS",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.note",
+          "mode": 0,
+          "value": "Ignores [Cancel: Spirit]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Mind Bolt",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.PFFkSYVXbYj3jSmy"
+              },
+              {
+                "name": "Nightmare Sphere",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.Jc3oXpmbJs68dQgB"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Psycho Tuner (Ignore Cancel: Spirit)",
+      "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!H2vWlTQ2SKVfi2zK.N7tL2vP4wK9mR1qS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

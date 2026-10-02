@@ -18,7 +18,167 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "tP6yM2vR8wX1nK4z",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 1
+            }
+          ],
+          "statusData": {
+            "statusId": "pursuit",
+            "value": 10
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Orion Delay Blow (1)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.tP6yM2vR8wX1nK4z"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "wL9kC3rB7vT5zN2p",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ],
+          "statusData": {
+            "statusId": "pursuit",
+            "value": 10
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Orion Delay Blow (2)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.wL9kC3rB7vT5zN2p"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "jR1vT4wL8pM2yX6q",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "expires": "endOfScene",
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 3
+            }
+          ],
+          "statusData": {
+            "statusId": "pursuit",
+            "value": 10
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Orion Delay Blow (3)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "pursuit"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.jR1vT4wL8pM2yX6q"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

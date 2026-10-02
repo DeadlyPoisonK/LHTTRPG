@@ -17,18 +17,24 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "equipped",
+        "value": "Two-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
   "effects": [
     {
       "origin": "Compendium.world.assassin.M19PN1rz4kP9h2FG",
       "duration": {
-        "rounds": 0,
+        "rounds": null,
         "startTime": null,
         "seconds": null,
         "combat": null,
-        "turns": 1,
+        "turns": null,
         "startRound": null,
         "startTurn": null
       },
@@ -36,15 +42,23 @@
       "_id": "wWOr6pgfaIrPXRMB",
       "changes": [
         {
-          "key": "system.checks.accuracy.dice",
+          "key": "lhtrpg.roll.check.dice",
           "mode": 2,
-          "value": "2",
+          "value": "@sr+1",
           "priority": null
         }
       ],
       "tint": "#ffffff",
       "transfer": true,
-      "flags": {},
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "selfStatuses": [
+              "hidden"
+            ]
+          }
+        }
+      },
       "_stats": {
         "coreVersion": "13.351",
         "systemId": "lhtrpg",
@@ -56,8 +70,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Grim Reaper Style",
-      "img": "icons/svg/aura.svg",
+      "name": "Grim Reaper Style (Hit Check: Hidden)",
+      "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
       "system": {},
       "description": "",

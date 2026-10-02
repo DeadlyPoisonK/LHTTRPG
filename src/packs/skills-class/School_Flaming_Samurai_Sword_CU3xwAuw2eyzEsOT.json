@@ -17,10 +17,138 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "oneWeapon",
+        "value": "One-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.samurai.CU3xwAuw2eyzEsOT",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "M9tL2wP4vK7qN1rS",
+      "changes": [
+        {
+          "key": "system.checks.evasion.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.resistance.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtMost",
+              "value": 1
+            },
+            {
+              "type": "firstRound"
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "School: Flaming Samurai Sword (Round 1)",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!CU3xwAuw2eyzEsOT.M9tL2wP4vK7qN1rS"
+    },
+    {
+      "origin": "Compendium.world.samurai.CU3xwAuw2eyzEsOT",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "V4mK8tL1wP7vQ2rS",
+      "changes": [
+        {
+          "key": "system.checks.evasion.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.checks.resistance.mod",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ]
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "School: Flaming Samurai Sword (SR2)",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!CU3xwAuw2eyzEsOT.V4mK8tL1wP7vQ2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

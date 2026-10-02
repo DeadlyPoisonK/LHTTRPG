@@ -18,7 +18,67 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.cleric.otX3p1oYOERYjMyv",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "Q1wL8tK4mP7vN2rS",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "uuid": "Compendium.lhtrpg.skills-class.Item.GzNcnf9VUHuiVSNJ",
+                "name": "Reactive Heal"
+              },
+              {
+                "name": "Reactive Area Heal",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.DZ0yaaO8248umTPv"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Reactive Mastery",
+      "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!otX3p1oYOERYjMyv.Q1wL8tK4mP7vN2rS"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

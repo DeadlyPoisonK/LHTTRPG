@@ -18,6 +18,19 @@
     },
     "cost": "Hate 2",
     "limit": "-",
+    "check": {
+      "stat": "accuracy",
+      "dice": 0,
+      "mod": 0,
+      "vs": "evasion"
+    },
+    "damage": {
+      "dice": 3,
+      "mod": 0,
+      "type": "physical",
+      "recovery": false,
+      "noPower": false
+    },
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",

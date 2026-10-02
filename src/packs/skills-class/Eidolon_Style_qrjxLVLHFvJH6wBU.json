@@ -17,7 +17,12 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "handsEmpty"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
   "effects": [
@@ -38,13 +43,13 @@
         {
           "key": "system.battle-status.power.attack.mod",
           "mode": 2,
-          "value": "11",
+          "value": "@cr+@int*2",
           "priority": null
         },
         {
           "key": "system.battle-status.power.magic.mod",
           "mode": 2,
-          "value": "11",
+          "value": "@cr+@int*2",
           "priority": null
         }
       ],
@@ -62,8 +67,8 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Eidolon",
-      "img": "icons/svg/aura.svg",
+      "name": "Eidolon Style",
+      "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
       "system": {},
       "description": "",

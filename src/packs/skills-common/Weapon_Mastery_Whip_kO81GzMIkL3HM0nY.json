@@ -20,7 +20,64 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "aOxyhs5YJwfOL0Ic",
+      "changes": [
+        {
+          "key": "lhtrpg.roll.damage.dice",
+          "mode": 2,
+          "value": "@sr",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ],
+            "weaponTags": [
+              "Whip"
+            ],
+            "exclusive": "Weapon Mastery"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Weapon Mastery: Whip",
+      "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!kO81GzMIkL3HM0nY.aOxyhs5YJwfOL0Ic"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

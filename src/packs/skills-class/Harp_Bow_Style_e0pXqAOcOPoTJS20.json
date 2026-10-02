@@ -17,10 +17,198 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "equipped",
+        "value": "Bow"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": "Compendium.world.bard.e0pXqAOcOPoTJS20",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "V1wN8tL4qM7pK2rS",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.hateCost",
+          "mode": 5,
+          "value": "0",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Maestro Echo",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.bUDC9Yn5VSpyhmyj"
+              },
+              {
+                "name": "Exceptional Blow",
+                "uuid": "Compendium.lhtrpg.skills-archetype.Item.liKd3F5bllHugD9U"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Harp Bow Style (Hate Cost)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.V1wN8tL4qM7pK2rS"
+    },
+    {
+      "origin": "Compendium.world.bard.e0pXqAOcOPoTJS20",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "P9tL2mK4vR7wN1qT",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.note",
+          "mode": 0,
+          "value": "Can be used with [Range: 4 Sq]",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 3
+            }
+          ],
+          "rollFilter": {
+            "skills": [
+              {
+                "name": "Repeat Note",
+                "uuid": "Compendium.lhtrpg.skills-class.Item.QPdM1tvsAkQMHX09"
+              }
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Harp Bow Style (Repeat Note: 4 Sq)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.P9tL2mK4vR7wN1qT"
+    },
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "epEFqMU2DolQBZ1X",
+      "changes": [
+        {
+          "key": "lhtrpg.skill.range",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {
+        "lhtrpg": {
+          "conditions": [
+            {
+              "type": "srAtLeast",
+              "value": 2
+            }
+          ],
+          "rollFilter": {
+            "skillTags": [
+              "Weapon Attack"
+            ],
+            "weaponTags": [
+              "Bow"
+            ]
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Harp Bow Style (SR2: Bow range)",
+      "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.epEFqMU2DolQBZ1X"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0

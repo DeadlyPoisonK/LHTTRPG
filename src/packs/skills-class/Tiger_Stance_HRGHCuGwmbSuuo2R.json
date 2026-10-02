@@ -21,7 +21,56 @@
     "macroeffect": ""
   },
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
-  "effects": [],
+  "effects": [
+    {
+      "origin": null,
+      "duration": {
+        "rounds": null,
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "bT6kC1rB7wP4zM2n",
+      "changes": [],
+      "tint": "#ffffff",
+      "transfer": false,
+      "flags": {
+        "lhtrpg": {
+          "statusData": {
+            "statusId": "weakness",
+            "value": "@dex",
+            "tag": "Boss, Raid"
+          },
+          "expires": "endOfScene"
+        }
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "2.0.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "Tiger Stance (Weakness)",
+      "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [
+        "weakness"
+      ],
+      "sort": 0,
+      "_key": "!items.effects!HRGHCuGwmbSuuo2R.bT6kC1rB7wP4zM2n"
+    }
+  ],
   "sort": 0,
   "ownership": {
     "default": 0
