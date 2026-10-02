@@ -1738,7 +1738,7 @@
 }
 
 .lhtrpg .equip-slot .item-name {
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .lhtrpg .equip-slot .empty-slot {
