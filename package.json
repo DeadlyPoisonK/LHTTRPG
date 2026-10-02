@@ -8,7 +8,8 @@
     "packs:unpack": "node tools/packs.mjs unpack",
     "packs:tags": "node tools/normalize-tags.mjs",
     "packs:effects": "node tools/migrate-effects.mjs",
-    "check:i18n": "node tools/check-i18n.mjs"
+    "check:i18n": "node tools/check-i18n.mjs",
+    "packs:audit-skills": "node tools/audit-skills.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.4"

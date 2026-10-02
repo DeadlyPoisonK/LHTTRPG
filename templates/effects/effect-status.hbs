@@ -18,7 +18,8 @@
     <div class="form-group lh-status-rating-group" {{#unless isRated}}hidden{{/unless}}>
         <label>{{localize "LHTRPG.EffectConfig.Rating"}}</label>
         <div class="form-fields">
-            <input type="number" name="flags.lhtrpg.statusData.value" value="{{statusData.value}}" min="1" step="1" placeholder="1">
+            <input type="text" name="flags.lhtrpg.statusData.value" value="{{statusData.value}}" placeholder="1"
+                data-tooltip="{{localize 'LHTRPG.EffectConfig.RatingFormulaHint'}}">
         </div>
     </div>
 

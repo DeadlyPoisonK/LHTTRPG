@@ -96,7 +96,8 @@
         "temporary": "일시적 효과",
         "passive": "패시브 효과",
         "inactive": "비활성화 효과",
-        "suppressed": "억제된 효과"
+        "suppressed": "억제된 효과",
+        "unmet": "조건 미충족"
       },
       "Migrated": "{count}개의 액티브 이펙트를 마이그레이션했습니다."
     },
@@ -109,7 +110,10 @@
       "Tag": "태그",
       "HintRated": "대상이 이미 이 상태를 가지고 있다면 더 높은 수치가 유지됩니다.",
       "HintList": "추가 항목으로 더해집니다.",
-      "Preview": "미리보기"
+      "Preview": "미리보기",
+      "ConditionsTab": "조건",
+      "FormulaHint": "값에는 수식을 쓸 수 있습니다: @sr (SR), @cr (CR), @dex (DEX 수정치), @dex.base (DEX 기본값). 예: @sr*3, @sr+1, floor(@cr/2).",
+      "RatingFormulaHint": "숫자, 또는 스킬 사용 시 계산되는 수식 (@sr*5)"
     },
     "EffectDuration": {
       "Label": "지속시간 (LH)",
@@ -145,7 +149,8 @@
         "checks": "판정",
         "checkDice": "판정 주사위",
         "battle": "전투 수치",
-        "other": "기타"
+        "other": "기타",
+        "roll": "스킬 판정"
       },
       "Chip": {
         "Character": "PC",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "파생 필드: 재계산 시 덮어쓰여집니다",
         "Unknown": "카탈로그에 없는 키"
-      }
+      },
+      "RollCheckMod": "스킬 판정 보너스",
+      "RollCheckDice": "스킬 판정 보너스 (주사위)",
+      "RollDamageMod": "스킬 대미지/회복 보너스",
+      "RollDamageDice": "스킬 대미지/회복 보너스 (주사위)",
+      "SkillHateCost": "스킬 헤이트 비용",
+      "SkillRange": "스킬 사정거리 (Sq)",
+      "SkillNote": "스킬 메모"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "대상",
         "Timing": "타이밍",
         "ExtraDice": "추가 주사위",
-        "DamageRecovery": "회복"
+        "DamageRecovery": "회복",
+        "ModFormulaHint": "숫자 또는 수식: @sr*5, @sr+2, @cr…",
+        "ModifiedHint": "효과로 변경됨",
+        "DiceFormulaHint": "숫자 또는 수식: @sr, @sr+3, @sr*2…",
+        "DamageNoPower": "파워 없음",
+        "DamageNoPowerHint": "공격력 / 마력 / 회복력을 더하지 않음: 주사위와 수정치만 (수식으로 @attack, @magic, @recovery를 더할 수 있음)"
       },
       "Type": {
         "Basic": "기본동작",
@@ -823,6 +840,81 @@
       "Mob": "무리 적.",
       "Boss": "보스 적.",
       "NightVision": "어둠에 방해받지 않음."
+    },
+    "Condition": {
+      "Title": "조건",
+      "Add": "조건 추가",
+      "Delete": "조건 삭제",
+      "TagPlaceholder": "태그",
+      "HintSkill": "이 스킬의 효과는 모든 조건을 만족하는 동안에만 적용됩니다 (예: 맨손이 필요한 스타일).",
+      "HintEffect": "이 효과는 모든 조건을 만족하는 동안에만 적용됩니다 (예: \"(SR2): …\" 단계). 사용 시 적용되는 효과는 사용자를 기준으로 판정합니다.",
+      "Type": {
+        "srAtLeast": "SR 이상",
+        "srAtMost": "SR 이하",
+        "crAtLeast": "CR 이상",
+        "crAtMost": "CR 이하",
+        "equipped": "태그 장비",
+        "notEquipped": "태그 미장비",
+        "handsEmpty": "양손이 비어 있음",
+        "handFree": "한 손 이상 비어 있음",
+        "oneWeapon": "무기 하나만 장비",
+        "twoWeapons": "무기 두 개 장비",
+        "armorEmpty": "방어구 슬롯 비어 있음",
+        "status": "상태가 있음",
+        "notStatus": "상태가 없음",
+        "hateTop": "헤이트 상위",
+        "hateUnder": "헤이트 하위",
+        "inCombat": "전투 중",
+        "firstRound": "전투 첫 라운드",
+        "preAction": "미행동 (이번 라운드에 행동하지 않음)",
+        "standby": "이번 라운드에 대기 선언"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "[{value}] 장비",
+        "notEquipped": "[{value}] 미장비",
+        "handsEmpty": "맨손",
+        "handFree": "한 손 비어 있음",
+        "oneWeapon": "[{value}] 무기 하나만",
+        "oneWeaponAny": "무기 하나만",
+        "twoWeapons": "[{value}] 무기 두 개",
+        "twoWeaponsAny": "무기 두 개",
+        "armorEmpty": "방어구 없음",
+        "status": "[{value}] 상태일 때",
+        "notStatus": "[{value}] 상태가 아닐 때",
+        "hateTop": "[헤이트 상위]",
+        "hateUnder": "[헤이트 하위]",
+        "inCombat": "전투 중",
+        "firstRound": "첫 라운드",
+        "preAction": "[미행동]",
+        "standby": "[대기 중]"
+      }
+    },
+    "RollFilter": {
+      "Title": "스킬 필터",
+      "Hint": "굴림 보너스와 스킬 수정(헤이트 비용, 사정거리, 메모)용: 어떤 스킬에 적용할지. 빈 칸은 거르지 않으며, 채운 칸은 모두 만족해야 합니다.",
+      "Skills": "스킬",
+      "DropHint": "여기에 스킬을 드롭",
+      "ByName": "이름으로 일치",
+      "Remove": "제거",
+      "AddByName": "이름으로 스킬 추가",
+      "SkillTags": "스킬 태그",
+      "WeaponTags": "무기 태그",
+      "TargetTags": "대상 태그",
+      "SelfStatuses": "다음 상태일 때만",
+      "Exclusive": "배타 그룹",
+      "ExclusiveHint": "같은 그룹의 보너스는 한 굴림에 가장 높은 것 하나만 적용됩니다 (예: Weapon Mastery).",
+      "Summary": {
+        "Weapon": "무기 {tags}",
+        "Target": "대상 {tags}",
+        "Status": "{statuses} 상태일 때",
+        "Exclusive": "굴림당 {group} 하나"
+      },
+      "CardBonuses": "효과 보너스",
+      "DamageTypes": "대미지 종류"
     }
   }
 }

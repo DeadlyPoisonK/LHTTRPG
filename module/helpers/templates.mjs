@@ -50,6 +50,8 @@
     // ActiveEffect sheets
     "systems/lhtrpg/templates/effects/effect-changes.hbs",
     "systems/lhtrpg/templates/effects/effect-status.hbs",
-    "systems/lhtrpg/templates/effects/effect-duration.hbs"
+    "systems/lhtrpg/templates/effects/effect-duration.hbs",
+    "systems/lhtrpg/templates/effects/effect-conditions.hbs",
+    "systems/lhtrpg/templates/effects/effect-roll-filter.hbs"
   ]);
 };

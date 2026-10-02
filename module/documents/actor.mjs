@@ -82,8 +82,39 @@ export class LHTrpgActor extends Actor {
   applyActiveEffects() {
     // The Active Effects do not have access to their parent at preparation time so we wait until this stage to determine whether they are suppressed or not.
     // Also the effects of its items, which the item may suppress (unequipped, usable items…).
+    // Conditions on statuses (see helpers/effect-conditions.mjs) read the statuses of the effects that
+    // aren't conditional themselves: the actor's own are only gathered while the effects are applied.
+    this._lhStatuses = new Set();
+    for (const effect of this.allApplicableEffects()) {
+      if (effect.disabled || effect.sourceItem?.areEffectsSuppressed || effect.getFlag("lhtrpg", "conditions")?.length || effect.sourceItem?.system?.conditions?.length) continue;
+      for (const status of effect.statuses) this._lhStatuses.add(status);
+    }
     for (const effect of this.allApplicableEffects()) effect.determineSuppression();
+    this._lhStatuses = null;
+    // Changes whose formula reads attributes, applied in prepareDerivedData (see _applyDeferredChanges).
+    this._lhDeferredChanges = [];
+    // Bonuses to the rolls of some skills (see helpers/roll-bonuses.mjs)
+    this.rollBonuses = [];
     return super.applyActiveEffects();
+  }
+
+  /**
+   * Apply the effect changes whose formula reads attribute modifiers ("@dex*2"), once they are computed
+   * and before the checks and battle statuses that add up the `.mod` fields (see LHTrpgActiveEffect#apply).
+   */
+  _applyDeferredChanges() {
+    const changes = this._lhDeferredChanges ?? [];
+    this._lhDeferredChanges = [];
+    if (!changes.length) return;
+    const overrides = {};
+    this._lhDeferredPass = true;
+    try {
+      for (const change of changes) Object.assign(overrides, change.effect.apply(this, change));
+    }
+    finally {
+      this._lhDeferredPass = false;
+    }
+    foundry.utils.mergeObject(this.overrides, foundry.utils.expandObject(overrides));
   }
 
   /** @override */
@@ -147,6 +178,9 @@ export class LHTrpgActor extends Actor {
     for (const attribute of Object.values(system.attributes)) {
       if (attribute.mod !== undefined) attribute.mod = Math.floor(attribute.total / 3);
     }
+
+    // Effects whose formulas read the modifiers above
+    this._applyDeferredChanges();
 
     // Abilities Scores
     this._computeChecks();

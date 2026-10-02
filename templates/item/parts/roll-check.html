@@ -3,24 +3,29 @@
       <label {{#unless noRoll}}class="skill-roll-button lh-roll-button" data-action="rollSkill" data-roll="check" title="{{localize 'LHTRPG.ButtonLabel.Roll'}}"{{/unless}}>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
       <div class="skill-roll-fields">
         {{#if isMonsterSkill}}
-          <select name="system.check.dice" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
-            {{selectOptions skillDiceOptions selected=system.check.dice}}
-          </select>
+          <input class="skill-roll-dice lh-formula-mod" type="text" name="system.check.dice" list="lh-skill-dice"
+            value="{{#if system.check.diceFormula}}{{system.check.diceFormula}}{{else}}{{system.check.dice}}{{/if}}"
+            placeholder="0" data-tooltip="{{localize 'LHTRPG.Skill.Label.DiceFormulaHint'}}" {{disabled (eq system.check.vs "auto")}}><span>D</span>
         {{else}}
           {{!-- Character skill: the character's check, plus extra dice --}}
           <select class="skill-roll-stat" name="system.check.stat" {{disabled (eq system.check.vs "auto")}}>
             {{selectOptions checkStatOptions selected=system.check.stat blank="-" localize=true}}
           </select>
-          <select name="system.check.dice" data-dtype="Number" title="{{localize 'LHTRPG.Skill.Label.ExtraDice'}}" {{disabled (eq system.check.vs "auto")}}>
-            {{selectOptions skillBonusDiceOptions selected=system.check.dice}}
-          </select>
+          <span>+</span>
+          <input class="skill-roll-dice lh-formula-mod" type="text" name="system.check.dice" list="lh-skill-dice"
+            value="{{#if system.check.diceFormula}}{{system.check.diceFormula}}{{else}}{{system.check.dice}}{{/if}}"
+            placeholder="0" data-tooltip="{{localize 'LHTRPG.Skill.Label.ExtraDice'}} — {{localize 'LHTRPG.Skill.Label.DiceFormulaHint'}}" {{disabled (eq system.check.vs "auto")}}><span>D</span>
         {{/if}}
         <span>+</span>
-        <input class="skill-roll-mod" type="number" step="1" name="system.check.mod" value="{{system.check.mod}}"
-          placeholder="0" data-dtype="Number" {{disabled (eq system.check.vs "auto")}}>
+        <input class="skill-roll-mod lh-formula-mod" type="text" name="system.check.mod"
+          value="{{#if system.check.formula}}{{system.check.formula}}{{else}}{{system.check.mod}}{{/if}}"
+          placeholder="0" data-tooltip="{{localize 'LHTRPG.Skill.Label.ModFormulaHint'}}" {{disabled (eq system.check.vs "auto")}}>
         <span class="skill-roll-vs">vs</span>
         <select class="skill-roll-vs-select" name="system.check.vs">
           {{selectOptions checkVsOptions selected=system.check.vs blank="-" localize=true}}
         </select>
       </div>
+      <datalist id="lh-skill-dice">
+        {{#each skillDiceSuggestions as |v|}}<option value="{{v}}"></option>{{/each}}
+      </datalist>
     </div>

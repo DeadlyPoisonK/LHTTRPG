@@ -34,6 +34,26 @@ export function mainWeapon(actor) {
   return getHands(actor).main;
 }
 
+/**
+ * Range in Sq from a skill / weapon Range text: "Close" -> 0, "4Sq" -> 4, "Weapon" -> the range of
+ * the user's main weapon. null when it can't be checked ("-", "Refer", unknown).
+ * @param {string|number} text
+ * @param {Actor} [actor]        The user, for "Weapon"
+ * @returns {number|null}
+ */
+export function parseRange(text, actor) {
+  if (typeof text === "number") return Math.max(text, 0);
+  const t = String(text ?? "").trim();
+  if (/close|至近|근접/i.test(t)) return 0;
+  const sq = t.match(/(\d+)\s*sq/i) ?? t.match(/^(\d+)$/);
+  if (sq) return Number(sq[1]);
+  if (/weapon|武器|무기/i.test(t) && actor) {
+    const main = mainWeapon(actor);
+    return main ? parseRange(main.system.range || "Close") : null;
+  }
+  return null;
+}
+
 const L = (key, data) => data ? game.i18n.format(`LHTRPG.Hands.${key}`, data) : game.i18n.localize(`LHTRPG.Hands.${key}`);
 
 /**

@@ -4633,3 +4633,190 @@
 }
 
 
+/* -------------------------------------------- */
+/*  Effect conditions (effect-conditions.mjs)   */
+/* -------------------------------------------- */
+
+.lh-conditions {
+  margin: 4px 0 8px;
+}
+
+.lh-conditions .lh-conditions-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.lh-conditions .lh-conditions-header .inline-control {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  padding: 0 4px;
+}
+
+.lh-conditions .hint,
+.lh-roll-filter .hint {
+  margin: 2px 0 4px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.lh-conditions .lh-condition-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lh-conditions .lh-condition-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0;
+}
+
+.lh-conditions .lh-condition-row select {
+  flex: 1 1 55%;
+}
+
+.lh-conditions .lh-condition-row input,
+.lh-conditions .lh-condition-row .lh-condition-spacer {
+  flex: 1 1 35%;
+  min-width: 0;
+}
+
+.lh-conditions .lh-condition-row .inline-control {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.lhtrpg .effects-list .effect-unmet {
+  font-size: 11px;
+  line-height: 1.2;
+  color: #e8a3a3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lhtrpg-effect-config .lh-formula-hint {
+  margin: 4px 0 0;
+  font-size: 11px;
+}
+
+/* Roll filter of roll bonuses (roll-bonuses.mjs) */
+.lh-roll-filter {
+  margin-top: 10px;
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border-light-2, #8884);
+}
+
+.lh-roll-filter .lh-roll-filter-drop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 28px;
+  padding: 4px;
+  border: 1px dashed var(--color-border-light-2, #888);
+  border-radius: 4px;
+}
+
+.lh-roll-filter .lh-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(143, 207, 155, 0.2);
+}
+
+.lh-roll-filter .lh-filter-empty {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.lh-roll-filter .lh-roll-filter-add {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.lh-roll-filter .lh-roll-filter-add .inline-control {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.lh-roll-filter .lh-filter-statuses {
+  gap: 12px;
+}
+
+.lh-combat-card .lh-card-bonuses {
+  margin: 2px 0 4px;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+/* Check / Damage modifier: a number or a formula ("@sr*5") */
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields input.skill-roll-mod.lh-formula-mod {
+  width: 72px;
+  padding: 0 4px;
+}
+
+/* Skills changed by the owner's effects: Hate cost, range, notes (roll-bonuses.mjs skillModifiers) */
+.lhtrpg.sheet.item .sheet-stats .lh-skill-mods {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin: 2px 0;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 3px;
+  background: rgba(143, 207, 155, 0.15);
+}
+
+.lhtrpg.chat-card .lh-modified {
+  font-weight: bold;
+  color: #a8f0b5;
+  text-decoration: underline dotted;
+}
+
+.lhtrpg.chat-card .lh-skill-notes {
+  list-style: none;
+  margin: 4px 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.lhtrpg.chat-card .lh-skill-notes .lh-note-source {
+  opacity: 0.7;
+}
+
+/* Check / Damage dice: a number or a formula ("@sr+3") */
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields input.skill-roll-dice {
+  width: 52px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields select.skill-roll-type {
+  width: auto;
+  min-width: 0;
+}
+
+/* Damage row: dice / modifier formulas + type + options wrap to a second line when they don't fit */
+.lhtrpg.sheet.item .sheet-stats .stat-div.skill-roll .skill-roll-fields {
+  flex-wrap: wrap;
+  row-gap: 2px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-options {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+
+.lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-option {
+  white-space: nowrap;
+}

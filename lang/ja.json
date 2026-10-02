@@ -96,7 +96,8 @@
         "temporary": "一時的効果",
         "passive": "パッシブ効果",
         "inactive": "非アクティブ効果",
-        "suppressed": "抑制された効果"
+        "suppressed": "抑制された効果",
+        "unmet": "条件未達"
       },
       "Migrated": "{count}個のアクティブエフェクトを移行しました。"
     },
@@ -109,7 +110,10 @@
       "Tag": "タグ",
       "HintRated": "対象がすでにこのステータスを持っている場合、より高い値が残ります。",
       "HintList": "追加のエントリとして追加されます。",
-      "Preview": "プレビュー"
+      "Preview": "プレビュー",
+      "ConditionsTab": "条件",
+      "FormulaHint": "値には式を使えます: @sr (SR)、@cr (CR)、@dex (DEX修正)、@dex.base (DEX基本値)。例: @sr*3、@sr+1、floor(@cr/2)。",
+      "RatingFormulaHint": "数値、またはスキル使用時に計算される式（@sr*5）"
     },
     "EffectDuration": {
       "Label": "持続時間 (LH)",
@@ -145,7 +149,8 @@
         "checks": "判定",
         "checkDice": "判定ダイス",
         "battle": "戦闘値",
-        "other": "その他"
+        "other": "その他",
+        "roll": "スキル判定"
       },
       "Chip": {
         "Character": "PC",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "派生項目：再計算時にリセットされます",
         "Unknown": "カタログ外のキー"
-      }
+      },
+      "RollCheckMod": "スキル判定ボーナス",
+      "RollCheckDice": "スキル判定ボーナス（ダイス）",
+      "RollDamageMod": "スキルのダメージ/回復ボーナス",
+      "RollDamageDice": "スキルのダメージ/回復ボーナス（ダイス）",
+      "SkillHateCost": "スキルのヘイトコスト",
+      "SkillRange": "スキルの射程（Sq）",
+      "SkillNote": "スキルの注記"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "対象",
         "Timing": "タイミング",
         "ExtraDice": "追加ダイス",
-        "DamageRecovery": "回復"
+        "DamageRecovery": "回復",
+        "ModFormulaHint": "数値または式: @sr*5、@sr+2、@cr…",
+        "ModifiedHint": "効果によって変更",
+        "DiceFormulaHint": "数値または式: @sr、@sr+3、@sr*2…",
+        "DamageNoPower": "パワーなし",
+        "DamageNoPowerHint": "攻撃力・魔力・回復力を加えない：ダイスと修正値のみ（式で @attack、@magic、@recovery を加えられます）"
       },
       "Type": {
         "Basic": "基本動作",
@@ -823,6 +840,81 @@
       "Mob": "モブエネミー。",
       "Boss": "ボス敵。",
       "NightVision": "暗闇に妨げられない。"
+    },
+    "Condition": {
+      "Title": "条件",
+      "Add": "条件を追加",
+      "Delete": "条件を削除",
+      "TagPlaceholder": "タグ",
+      "HintSkill": "このスキルの効果は、すべての条件を満たしている間だけ適用されます（例: 素手が必要なスタイル）。",
+      "HintEffect": "この効果は、すべての条件を満たしている間だけ適用されます（例: 「(SR2): …」の段階）。使用時に適用される効果は使用者で判定します。",
+      "Type": {
+        "srAtLeast": "SR以上",
+        "srAtMost": "SR以下",
+        "crAtLeast": "CR以上",
+        "crAtMost": "CR以下",
+        "equipped": "タグを装備",
+        "notEquipped": "タグを装備していない",
+        "handsEmpty": "両手が空",
+        "handFree": "片手以上が空",
+        "oneWeapon": "武器を1つだけ装備",
+        "twoWeapons": "武器を2つ装備",
+        "armorEmpty": "防具スロットが空",
+        "status": "状態がある",
+        "notStatus": "状態がない",
+        "hateTop": "ヘイトトップ",
+        "hateUnder": "ヘイトアンダー",
+        "inCombat": "戦闘中",
+        "firstRound": "戦闘の第1ラウンド",
+        "preAction": "未行動（このラウンド未行動）",
+        "standby": "このラウンドに待機を宣言"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "[{value}]を装備",
+        "notEquipped": "[{value}]を装備していない",
+        "handsEmpty": "両手が空",
+        "handFree": "片手が空",
+        "oneWeapon": "[{value}]の武器1つのみ",
+        "oneWeaponAny": "武器1つのみ",
+        "twoWeapons": "[{value}]の武器2つ",
+        "twoWeaponsAny": "武器2つ",
+        "armorEmpty": "防具なし",
+        "status": "[{value}]の間",
+        "notStatus": "[{value}]がない",
+        "hateTop": "[ヘイトトップ]",
+        "hateUnder": "[ヘイトアンダー]",
+        "inCombat": "戦闘中",
+        "firstRound": "第1ラウンド",
+        "preAction": "[未行動]",
+        "standby": "[待機]"
+      }
+    },
+    "RollFilter": {
+      "Title": "スキルフィルター",
+      "Hint": "ロールボーナスとスキル修正（ヘイトコスト、射程、注記）用: どのスキルに適用するか。空欄は絞り込まず、入力した項目はすべて満たす必要があります。",
+      "Skills": "スキル",
+      "DropHint": "ここにスキルをドロップ",
+      "ByName": "名前で一致",
+      "Remove": "外す",
+      "AddByName": "名前でスキルを追加",
+      "SkillTags": "スキルのタグ",
+      "WeaponTags": "武器のタグ",
+      "TargetTags": "対象のタグ",
+      "SelfStatuses": "次の状態の間のみ",
+      "Exclusive": "排他グループ",
+      "ExclusiveHint": "同じグループのボーナスは、1回のロールに最も高いものだけが適用されます（例: Weapon Mastery）。",
+      "Summary": {
+        "Weapon": "武器{tags}",
+        "Target": "対{tags}",
+        "Status": "{statuses}の間",
+        "Exclusive": "{group}は1ロールに1つ"
+      },
+      "CardBonuses": "効果によるボーナス",
+      "DamageTypes": "ダメージ種別"
     }
   }
 }

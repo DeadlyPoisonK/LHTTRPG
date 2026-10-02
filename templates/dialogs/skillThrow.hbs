@@ -19,10 +19,16 @@
 		{{#if system.skillRank.max}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.SR'}}</span><span class="chat-stat-value">{{system.skillRank.value}}/{{system.skillRank.max}}</span></div>{{/if}}
 		{{#if system.timing}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Timing'}}</span><span class="chat-stat-value">{{system.timing}}</span></div>{{/if}}
 		{{#if system.target}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Target'}}</span><span class="chat-stat-value">{{system.target}}</span></div>{{/if}}
-		{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Range'}}</span><span class="chat-stat-value">{{system.range}}</span></div>{{/if}}
-		{{#if system.cost}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{system.cost}}</span></div>{{/if}}
+		{{#if system.range}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Range'}}</span><span class="chat-stat-value">{{#if mods.range}}<span class="lh-modified" data-tooltip="{{mods.range.sourceText}}">{{mods.range.text}}</span>{{else}}{{system.range}}{{/if}}</span></div>{{/if}}
+		{{#if system.cost}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Cost'}}</span><span class="chat-stat-value">{{#if mods.cost}}<span class="lh-modified" data-tooltip="{{mods.cost.sourceText}}">{{mods.cost.text}}</span>{{else}}{{system.cost}}{{/if}}</span></div>{{/if}}
 		{{#if system.limit}}<div class="chat-stat"><span class="chat-stat-label">{{localize 'LHTRPG.Skill.Label.Limit'}}</span><span class="chat-stat-value">{{system.limit}}</span></div>{{/if}}
 	</div>
+
+	{{#if mods.notes.length}}
+	<ul class="lh-skill-notes">
+		{{#each mods.notes as |note|}}<li><i class="fas fa-circle-info"></i> {{note.text}} <span class="lh-note-source">({{note.label}})</span></li>{{/each}}
+	</ul>
+	{{/if}}
 
 	{{#if appliedNames}}<div class="item-use-applied skill-card-applied"><i class="fas fa-bolt"></i> {{localize 'LHTRPG.Item.Use.EffectsApplied' names=appliedNames}}</div>{{/if}}
 

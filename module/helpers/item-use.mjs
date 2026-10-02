@@ -4,6 +4,8 @@ import { canonicalTag } from "./tag-catalog.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
 import { getSustainedTag } from "./sustained.mjs";
 import { isPrimaryGM } from "./clients.mjs";
+import { evaluateFormula, formulaData, isFormula, resolveChanges } from "./effect-formulas.mjs";
+import { effectConditions, unmetCondition } from "./effect-conditions.mjs";
 
 /**
  * Usable items (potions, food, scrolls, whistles, poisons…): item type "usable".
@@ -206,9 +208,10 @@ export function isMatchingSource(s, source) {
  * @returns {Promise<string[]>}   Names of the actors that received them
  */
 export async function applyItemEffects(item, actors, { useId, sustained } = {}) {
-  const rawEffects = (item.type === "skill")
+  // Effects whose conditions the caster doesn't meet (Skill Rank tiers…) are left out.
+  const rawEffects = ((item.type === "skill")
     ? item.effects.filter(e => e.transfer === false)
-    : [...item.effects];
+    : [...item.effects]).filter(e => !unmetCondition(effectConditions(e, item), item.actor, item));
 
   if (!rawEffects.length) return [];
 
@@ -222,6 +225,12 @@ export async function applyItemEffects(item, actors, { useId, sustained } = {}) 
     data.transfer = false;
     data.disabled = false;
     data.img ||= item.img;
+    // Formulas ("@sr*3") take the caster's values now; the copy no longer depends on the skill.
+    const values = formulaData(item.actor, item);
+    data.changes = resolveChanges(data.changes, values);
+    const statusData = data.flags?.lhtrpg?.statusData;
+    if (isFormula(statusData?.value)) statusData.value = Math.max(1, evaluateFormula(statusData.value, values) ?? 1);
+    delete data.flags?.lhtrpg?.conditions;
     foundry.utils.setProperty(data, "flags.lhtrpg.itemUse", true);
 
     const source = {

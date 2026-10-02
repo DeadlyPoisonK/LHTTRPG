@@ -8,6 +8,9 @@ import {
 import { SuggestInput } from "../helpers/suggest-input.mjs";
 import { LH_STATUSES, LH_STATUS_GROUPS } from "../helpers/statuses.mjs";
 import { canonicalTag, findTag, tagKey, TAG_CATALOG, tagDescription } from "../helpers/tag-catalog.mjs";
+import { activateConditionInputs, conditionsContext, conditionsFromForm } from "../helpers/effect-conditions.mjs";
+import { formulaLabel, isFormula } from "../helpers/effect-formulas.mjs";
+import { hasRollFilter, rollFilter, rollFilterContext, rollFilterFromForm } from "../helpers/roll-bonuses.mjs";
 
 const GROUP_ORDER = {
   attributes: 0,
@@ -15,7 +18,8 @@ const GROUP_ORDER = {
   checks: 2,
   checkDice: 3,
   battle: 4,
-  other: 5
+  roll: 5,
+  other: 6
 };
 
 /**
@@ -50,7 +54,7 @@ export function formatStatusPreview(statusId, value, tag) {
   if (!statusId) return "—";
   const statusInfo = LH_STATUSES.find(s => s.id === statusId);
   const label = globalThis.game?.i18n?.localize ? game.i18n.localize(`LHTRPG.StatusEffect.${statusId}`) : statusId;
-  const rating = Math.max(1, Math.floor(Number(value) || 0) || 1);
+  const rating = isFormula(value) ? `[${formulaLabel(value)}]` : Math.max(1, Math.floor(Number(value) || 0) || 1);
   const cleanTag = (tag ?? "").trim();
 
   if (statusInfo?.tagged) {
@@ -72,7 +76,13 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
 
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["lhtrpg-effect-config"]
+    classes: ["lhtrpg-effect-config"],
+    actions: {
+      addCondition: LHTrpgActiveEffectConfig.#onAddCondition,
+      deleteCondition: LHTrpgActiveEffectConfig.#onDeleteCondition,
+      addFilterSkill: LHTrpgActiveEffectConfig.#onAddFilterSkill,
+      removeFilterSkill: LHTrpgActiveEffectConfig.#onRemoveFilterSkill
+    }
   };
 
   /** @override */
@@ -82,7 +92,8 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
         { id: "details", icon: "fa-solid fa-book" },
         { id: "duration", icon: "fa-solid fa-clock" },
         { id: "changes", icon: "fa-solid fa-gears" },
-        { id: "lhStatus", icon: "fa-solid fa-heart-crack", label: "LHTRPG.EffectConfig.StatusTab" }
+        { id: "lhStatus", icon: "fa-solid fa-heart-crack", label: "LHTRPG.EffectConfig.StatusTab" },
+        { id: "lhConditions", icon: "fa-solid fa-list-check", label: "LHTRPG.EffectConfig.ConditionsTab" }
       ],
       initial: "details",
       labelPrefix: "EFFECT.TABS"
@@ -103,6 +114,9 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
     },
     lhStatus: {
       template: "systems/lhtrpg/templates/effects/effect-status.hbs"
+    },
+    lhConditions: {
+      template: "systems/lhtrpg/templates/effects/effect-conditions-tab.hbs"
     },
     footer: foundry.applications.sheets.ActiveEffectConfig.PARTS.footer
   };
@@ -163,6 +177,11 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       }
 
       context.preview = formatStatusPreview(statusId, statusData.value, statusData.tag);
+    } else if (partId === "lhConditions") {
+      context.conditions = conditionsContext(context.source?.flags?.lhtrpg?.conditions, {
+        prefix: "flags.lhtrpg.conditions", hint: "LHTRPG.Condition.HintEffect", editable: context.editable
+      });
+      context.rollFilter = rollFilterContext(context.source, context.editable);
     } else if (partId === "duration") {
       let expires = context.source?.flags?.lhtrpg?.expires;
       if (expires === undefined) {
@@ -299,6 +318,22 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
         if (infoEl) infoEl.innerHTML = renderTargetInfoHtml(info);
       });
     }
+
+    // Conditions: another type may take another kind of value (number / tag / none)
+    activateConditionInputs(this.element.querySelector(".lh-conditions-tab") ?? this.element, () => this.submit());
+
+    // Roll filter: skills are added by dropping them, or by name (Enter)
+    const drop = this.element.querySelector(".lh-roll-filter-drop");
+    if (drop && this.isEditable && !drop.dataset.bound) {
+      drop.dataset.bound = "1";
+      drop.addEventListener("dragover", event => event.preventDefault());
+      drop.addEventListener("drop", event => this._onDropFilterSkill(event));
+    }
+    this.element.querySelector(".lh-filter-skill-name")?.addEventListener("keydown", event => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      this.#addFilterSkillByName(event.currentTarget.value);
+    });
 
     // LH Status tab listeners
     const statusTab = this.element.querySelector(".tab.lh-status");
@@ -442,7 +477,9 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
 
       // Flags are merged on update: keys that no longer apply must be deleted explicitly.
       if (statusInfo?.rated || statusInfo?.list) {
-        cleanData.value = Math.max(1, Math.floor(Number(rawStatusData.value) || 0) || 1);
+        // A number, or a formula ("@sr*5") resolved when a skill applies the effect (item-use.mjs)
+        const raw = String(rawStatusData.value ?? "").trim();
+        cleanData.value = raw.includes("@") ? raw : Math.max(1, Math.floor(Number(raw) || 0) || 1);
       } else cleanData["-=value"] = null;
       if (statusInfo?.tagged) {
         const rawTag = String(rawStatusData.tag ?? "").trim();
@@ -469,7 +506,107 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
       }
     }
 
+    // Conditions come as {0: {...}, 1: {...}}
+    const conditions = foundry.utils.getProperty(submitData, "flags.lhtrpg.conditions");
+    if (conditions) foundry.utils.setProperty(submitData, "flags.lhtrpg.conditions", conditionsFromForm(conditions));
+
+    // Roll filter: tags as text, statuses as checkboxes; its skills aren't in the form. Effects without
+    // one don't get an empty one.
+    const rawFilter = foundry.utils.getProperty(submitData, "flags.lhtrpg.rollFilter");
+    if (rawFilter) {
+      const filter = rollFilterFromForm(rawFilter, rollFilter(this.document).skills);
+      if (hasRollFilter(filter) || this.document.getFlag("lhtrpg", "rollFilter")) {
+        foundry.utils.setProperty(submitData, "flags.lhtrpg.rollFilter", filter);
+      }
+      else delete submitData.flags.lhtrpg.rollFilter;
+    }
+
     return submitData;
+  }
+
+  /**
+   * The conditions in the form (unsaved edits included).
+   * @returns {object[]}
+   */
+  _formConditions() {
+    const submitData = this._processFormData(null, this.form, new foundry.applications.ux.FormDataExtended(this.form));
+    return foundry.utils.getProperty(submitData, "flags.lhtrpg.conditions")
+      ?? conditionsFromForm(this.document.getFlag("lhtrpg", "conditions"));
+  }
+
+  /** Add a condition (Skill Rank tier by default). */
+  static async #onAddCondition() {
+    const conditions = this._formConditions();
+    conditions.push({ type: "srAtLeast", value: 2 });
+    return this.submit({ updateData: { flags: { lhtrpg: { conditions } } } });
+  }
+
+  /** Remove a condition. */
+  static async #onDeleteCondition(event, target) {
+    const conditions = this._formConditions();
+    conditions.splice(Number(target.closest("[data-index]")?.dataset.index) || 0, 1);
+    return this.submit({ updateData: { flags: { lhtrpg: { conditions } } } });
+  }
+
+  /**
+   * Save the roll filter's skills (with the rest of the form).
+   * @param {object[]} skills
+   */
+  _submitFilterSkills(skills) {
+    return this.submit({ updateData: { flags: { lhtrpg: { rollFilter: { skills } } } } });
+  }
+
+  /**
+   * A skill dropped on the roll filter: kept by its compendium source (or uuid) and its name.
+   * @param {DragEvent} event
+   */
+  async _onDropFilterSkill(event) {
+    event.preventDefault();
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+    if (data?.type !== "Item") return;
+    const item = await Item.implementation.fromDropData(data);
+    if (!item) return;
+    const uuid = item.pack ? item.uuid : (item._stats?.compendiumSource ?? item.uuid);
+    const skills = rollFilter(this.document).skills;
+    if (skills.some(s => s.uuid === uuid)) return;
+    return this._submitFilterSkills([...skills, { uuid, name: item.name }]);
+  }
+
+  /**
+   * Add a skill to the roll filter by name: the compendium skill of that name if there is one (system
+   * compendiums first), else just the name.
+   * @param {string} name
+   */
+  async #addFilterSkillByName(name) {
+    name = String(name ?? "").replace(/[«»]/g, "").trim();
+    if (!name) return;
+    const wanted = name.toLowerCase();
+    let entry = { name };
+    // The system's compendiums first: world compendiums may hold copies of the same skills.
+    const packs = game.packs.filter(p => p.documentName === "Item")
+      .sort((a, b) => (b.metadata.packageType === "system") - (a.metadata.packageType === "system"));
+    for (const pack of packs) {
+      const found = pack.index.find(e => (e.type === "skill") && (e.name.toLowerCase() === wanted));
+      if (found) {
+        entry = { uuid: found.uuid ?? pack.getUuid(found._id), name: found.name };
+        break;
+      }
+    }
+    const skills = rollFilter(this.document).skills;
+    if (skills.some(s => (entry.uuid && (s.uuid === entry.uuid)) || (s.name.toLowerCase() === entry.name.toLowerCase()))) return;
+    return this._submitFilterSkills([...skills, entry]);
+  }
+
+  /** Add the skill typed in the name field. */
+  static async #onAddFilterSkill() {
+    return this.#addFilterSkillByName(this.element.querySelector(".lh-filter-skill-name")?.value);
+  }
+
+  /** Remove a skill from the roll filter. */
+  static async #onRemoveFilterSkill(event, target) {
+    const skills = rollFilter(this.document).skills;
+    skills.splice(Number(target.closest("[data-index]")?.dataset.index) || 0, 1);
+    return this._submitFilterSkills(skills);
   }
 
   /** @override */

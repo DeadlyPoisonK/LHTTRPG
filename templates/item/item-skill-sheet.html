@@ -68,6 +68,15 @@
     
     {{> "systems/lhtrpg/templates/item/parts/roll-damage.html"}}
 
+    {{#if (or skillMods.cost skillMods.range skillMods.notes.length)}}
+    <div class="lh-skill-mods" data-tooltip="{{localize 'LHTRPG.Skill.Label.ModifiedHint'}}">
+      <i class="fas fa-wand-magic-sparkles"></i>
+      {{#if skillMods.cost}}<span>{{localize 'LHTRPG.Skill.Label.Cost'}}: {{skillMods.cost.text}} ({{skillMods.cost.sourceText}})</span>{{/if}}
+      {{#if skillMods.range}}<span>{{localize 'LHTRPG.Skill.Label.Range'}}: {{skillMods.range.text}} ({{skillMods.range.sourceText}})</span>{{/if}}
+      {{#each skillMods.notes as |note|}}<span>{{note.text}} ({{note.label}})</span>{{/each}}
+    </div>
+    {{/if}}
+
     <div class="stat-div checkType">
       <label>{{localize 'LHTRPG.Skill.Label.MacroEffect'}}</label>
       <input class="macroeffect-input" type="text" name="system.macroeffect" value="{{system.macroeffect}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.MacroEffect'}}" data-dtype="text">
@@ -93,7 +102,7 @@
 
     {{!-- Attributes Tab --}}
     <div class="tab effects" data-group="primary" data-tab="effects">
-      {{!-- As you add new fields, add them in here! --}}
+      {{> "systems/lhtrpg/templates/effects/effect-conditions.hbs"}}
       {{> "systems/lhtrpg/templates/item/parts/item-effects.html"}}
     </div>
   </section>

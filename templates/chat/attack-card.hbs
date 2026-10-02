@@ -10,6 +10,7 @@
 
 	{{#unless auto}}
 	{{{rollHTML}}}
+	{{#if bonuses}}<div class="lh-card-bonuses" data-tooltip="LHTRPG.RollFilter.CardBonuses"><i class="fas fa-circle-plus"></i> {{bonuses}}</div>{{/if}}
 	{{#if attack.critical}}<div class="lh-outcome critical">{{localize 'LHTRPG.Combat.Critical'}}</div>{{/if}}
 	{{#if attack.fumble}}<div class="lh-outcome fumble">{{localize 'LHTRPG.Combat.Fumble'}}</div>{{/if}}
 	{{/unless}}

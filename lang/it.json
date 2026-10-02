@@ -96,7 +96,8 @@
         "temporary": "Effetti temporanei",
         "passive": "Effetti passivi",
         "inactive": "Effetti inattivi",
-        "suppressed": "Effetti soppressi"
+        "suppressed": "Effetti soppressi",
+        "unmet": "Condizione non soddisfatta"
       },
       "Migrated": "Migrati {count} effetti attivi."
     },
@@ -109,7 +110,10 @@
       "Tag": "Tag",
       "HintRated": "Se il bersaglio ha già questo stato, rimane il Rating più alto.",
       "HintList": "Aggiunto come voce aggiuntiva.",
-      "Preview": "Anteprima"
+      "Preview": "Anteprima",
+      "ConditionsTab": "Condizioni",
+      "FormulaHint": "I valori possono essere formule: @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (punteggio DEX). Es.: @sr*3, @sr+1, floor(@cr/2).",
+      "RatingFormulaHint": "Un numero, o una formula (@sr*5) risolta quando si usa l’abilità"
     },
     "EffectDuration": {
       "Label": "Durata (LH)",
@@ -145,7 +149,8 @@
         "checks": "Prove",
         "checkDice": "Dadi di prova",
         "battle": "Stato di combattimento",
-        "other": "Altro"
+        "other": "Altro",
+        "roll": "Tiri delle abilità"
       },
       "Chip": {
         "Character": "PG",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "Campo derivato: verrà sovrascritto al ricalcolo",
         "Unknown": "Chiave non nel catalogo"
-      }
+      },
+      "RollCheckMod": "Bonus alla Prova dell’abilità",
+      "RollCheckDice": "Bonus alla Prova dell’abilità (dadi)",
+      "RollDamageMod": "Bonus a Danno/Cura dell’abilità",
+      "RollDamageDice": "Bonus a Danno/Cura dell’abilità (dadi)",
+      "SkillHateCost": "Costo in Hate delle abilità",
+      "SkillRange": "Gittata delle abilità (Sq)",
+      "SkillNote": "Nota sulle abilità"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "Bersaglio",
         "Timing": "Tempistica",
         "ExtraDice": "Dadi extra",
-        "DamageRecovery": "Recupero"
+        "DamageRecovery": "Recupero",
+        "ModFormulaHint": "Un numero o una formula: @sr*5, @sr+2, @cr…",
+        "ModifiedHint": "Modificato dai tuoi effetti",
+        "DiceFormulaHint": "Un numero o una formula: @sr, @sr+3, @sr*2…",
+        "DamageNoPower": "Senza potere",
+        "DamageNoPowerHint": "Non aggiunge Attack / Magic / Recovery Power: solo dadi e modificatore (una formula può aggiungere @attack, @magic, @recovery)"
       },
       "Type": {
         "Basic": "Base",
@@ -823,6 +840,81 @@
       "Mob": "Nemico Mob.",
       "Boss": "Nemico Boss.",
       "NightVision": "Non ostacolato dalla oscurità."
+    },
+    "Condition": {
+      "Title": "Condizioni",
+      "Add": "Aggiungi condizione",
+      "Delete": "Elimina condizione",
+      "TagPlaceholder": "Tag",
+      "HintSkill": "Gli effetti di questa abilità si applicano solo finché tutte le condizioni sono soddisfatte (es. uno Style che richiede le mani libere).",
+      "HintEffect": "Questo effetto si applica solo finché tutte le condizioni sono soddisfatte (es. livelli \"(SR2): …\"). Gli effetti applicati all’uso vengono verificati su chi li usa.",
+      "Type": {
+        "srAtLeast": "SR minimo",
+        "srAtMost": "SR massimo",
+        "crAtLeast": "CR minimo",
+        "crAtMost": "CR massimo",
+        "equipped": "Equipaggiato con tag",
+        "notEquipped": "Non equipaggiato con tag",
+        "handsEmpty": "Entrambe le mani libere",
+        "handFree": "Almeno una mano libera",
+        "oneWeapon": "Una sola arma in mano",
+        "twoWeapons": "Due armi in mano",
+        "armorEmpty": "Slot armatura vuoto",
+        "status": "Ha lo stato",
+        "notStatus": "Non ha lo stato",
+        "hateTop": "Hate Top",
+        "hateUnder": "Hate Under",
+        "inCombat": "In combattimento",
+        "firstRound": "Primo round del combattimento",
+        "preAction": "Pre-Action (non ha agito in questo round)",
+        "standby": "Ha dichiarato Standby in questo round"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "Equipaggiato con [{value}]",
+        "notEquipped": "Senza [{value}] equipaggiato",
+        "handsEmpty": "Mani libere",
+        "handFree": "Una mano libera",
+        "oneWeapon": "Una sola arma [{value}]",
+        "oneWeaponAny": "Una sola arma",
+        "twoWeapons": "Due armi [{value}]",
+        "twoWeaponsAny": "Due armi",
+        "armorEmpty": "Senza armatura",
+        "status": "Con [{value}]",
+        "notStatus": "Senza [{value}]",
+        "hateTop": "[Hate Top]",
+        "hateUnder": "[Hate Under]",
+        "inCombat": "In combattimento",
+        "firstRound": "Primo round",
+        "preAction": "[Pre-Action]",
+        "standby": "[Standby]"
+      }
+    },
+    "RollFilter": {
+      "Title": "Filtro abilità",
+      "Hint": "Per i bonus ai tiri e i modificatori delle abilità (costo in Hate, gittata, nota): a quali abilità si applicano. I campi vuoti non filtrano; quelli compilati devono corrispondere tutti.",
+      "Skills": "Abilità",
+      "DropHint": "Trascina qui le abilità",
+      "ByName": "Per nome",
+      "Remove": "Rimuovi",
+      "AddByName": "Aggiungi abilità per nome",
+      "SkillTags": "Tag dell’abilità",
+      "WeaponTags": "Tag dell’arma",
+      "TargetTags": "Tag del bersaglio",
+      "SelfStatuses": "Solo mentre",
+      "Exclusive": "Gruppo esclusivo",
+      "ExclusiveHint": "A un tiro si applica solo il bonus più alto dello stesso gruppo (es. Weapon Mastery).",
+      "Summary": {
+        "Weapon": "arma {tags}",
+        "Target": "contro {tags}",
+        "Status": "mentre {statuses}",
+        "Exclusive": "un solo {group} per tiro"
+      },
+      "CardBonuses": "Bonus degli effetti",
+      "DamageTypes": "Tipi di danno"
     }
   }
 }

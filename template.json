@@ -273,8 +273,10 @@
         "dice": 0,
         "mod": 0,
         "type": "",
-        "recovery": false
-      }
+        "recovery": false,
+        "noPower": false
+      },
+      "conditions": []
     },
     "weapon": {
       "templates": [

@@ -96,7 +96,8 @@
         "temporary": "Efectos temporales",
         "passive": "Efectos pasivos",
         "inactive": "Efectos inactivos",
-        "suppressed": "Efectos suprimidos"
+        "suppressed": "Efectos suprimidos",
+        "unmet": "Condición no cumplida"
       },
       "Migrated": "Migrados {count} efectos activos."
     },
@@ -109,7 +110,10 @@
       "Tag": "Tag",
       "HintRated": "Si el objetivo ya tiene el estado, queda el Rating mayor.",
       "HintList": "Se añade como una entrada más.",
-      "Preview": "Vista previa"
+      "Preview": "Vista previa",
+      "ConditionsTab": "Condiciones",
+      "FormulaHint": "Los valores pueden ser fórmulas: @sr (Skill Rank), @cr (Character Rank), @dex (mod de DEX), @dex.base (valor de DEX). Ej.: @sr*3, @sr+1, floor(@cr/2).",
+      "RatingFormulaHint": "Un número, o una fórmula (@sr*5) que se resuelve al usar la skill"
     },
     "EffectDuration": {
       "Label": "Duración (LH)",
@@ -145,7 +149,8 @@
         "checks": "Tiradas",
         "checkDice": "Dados de tirada",
         "battle": "Combate",
-        "other": "Otros"
+        "other": "Otros",
+        "roll": "Tiradas de skills"
       },
       "Chip": {
         "Character": "PJ",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "Campo derivado: se perderá al recalcular",
         "Unknown": "Clave fuera del catálogo"
-      }
+      },
+      "RollCheckMod": "Bono al Check de skills",
+      "RollCheckDice": "Bono al Check de skills (dados)",
+      "RollDamageMod": "Bono al Daño/Curación de skills",
+      "RollDamageDice": "Bono al Daño/Curación de skills (dados)",
+      "SkillHateCost": "Coste de Hate de skills",
+      "SkillRange": "Rango de skills (Sq)",
+      "SkillNote": "Nota en skills"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "Objetivo",
         "Timing": "Momento",
         "ExtraDice": "Dados extra",
-        "DamageRecovery": "Recuperación"
+        "DamageRecovery": "Recuperación",
+        "ModFormulaHint": "Un número o una fórmula: @sr*5, @sr+2, @cr…",
+        "ModifiedHint": "Cambiado por tus efectos",
+        "DiceFormulaHint": "Un número o una fórmula: @sr, @sr+3, @sr*2…",
+        "DamageNoPower": "Sin poder",
+        "DamageNoPowerHint": "No sumar Attack / Magic / Recovery Power: solo dados y modificador (una fórmula puede sumar @attack, @magic, @recovery)"
       },
       "Type": {
         "Basic": "Básico",
@@ -823,6 +840,81 @@
       "Mob": "Enemigo Mob.",
       "Boss": "Enemigo jefe.",
       "NightVision": "La oscuridad no le afecta."
+    },
+    "Condition": {
+      "Title": "Condiciones",
+      "Add": "Añadir condición",
+      "Delete": "Borrar condición",
+      "TagPlaceholder": "Tag",
+      "HintSkill": "Los efectos de esta skill solo se aplican mientras se cumplan todas las condiciones (p. ej. un Style que exige manos vacías).",
+      "HintEffect": "Este efecto solo se aplica mientras se cumplan todas las condiciones (p. ej. tramos \"(SR2): …\"). Los efectos que se aplican al usar se comprueban con quien la usa.",
+      "Type": {
+        "srAtLeast": "SR mínimo",
+        "srAtMost": "SR máximo",
+        "crAtLeast": "CR mínimo",
+        "crAtMost": "CR máximo",
+        "equipped": "Equipado con tag",
+        "notEquipped": "Sin equipar tag",
+        "handsEmpty": "Ambas manos vacías",
+        "handFree": "Al menos una mano vacía",
+        "oneWeapon": "Solo un arma en mano",
+        "twoWeapons": "Dos armas en mano",
+        "armorEmpty": "Sin armadura",
+        "status": "Tiene el estado",
+        "notStatus": "No tiene el estado",
+        "hateTop": "Hate Top",
+        "hateUnder": "Hate Under",
+        "inCombat": "En combate",
+        "firstRound": "Primera ronda del combate",
+        "preAction": "Pre-Action (no ha actuado esta ronda)",
+        "standby": "Declaró Standby esta ronda"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "Equipado con [{value}]",
+        "notEquipped": "Sin [{value}] equipado",
+        "handsEmpty": "Manos vacías",
+        "handFree": "Una mano vacía",
+        "oneWeapon": "Solo un arma [{value}]",
+        "oneWeaponAny": "Solo un arma",
+        "twoWeapons": "Dos armas [{value}]",
+        "twoWeaponsAny": "Dos armas",
+        "armorEmpty": "Sin armadura",
+        "status": "Con [{value}]",
+        "notStatus": "Sin [{value}]",
+        "hateTop": "[Hate Top]",
+        "hateUnder": "[Hate Under]",
+        "inCombat": "En combate",
+        "firstRound": "Primera ronda",
+        "preAction": "[Pre-Action]",
+        "standby": "[Standby]"
+      }
+    },
+    "RollFilter": {
+      "Title": "Filtro de skills",
+      "Hint": "Para los bonos de tirada y los modificadores de skills (coste de Hate, rango, nota): a qué skills se aplican. Los campos vacíos no filtran; los rellenos deben cumplirse todos.",
+      "Skills": "Skills",
+      "DropHint": "Arrastra skills aquí",
+      "ByName": "Por nombre",
+      "Remove": "Quitar",
+      "AddByName": "Añadir skill por nombre",
+      "SkillTags": "Tags de la skill",
+      "WeaponTags": "Tags del arma",
+      "TargetTags": "Tags del objetivo",
+      "SelfStatuses": "Solo mientras",
+      "Exclusive": "Grupo exclusivo",
+      "ExclusiveHint": "En una tirada solo se aplica el bono mayor del mismo grupo (p. ej. Weapon Mastery).",
+      "Summary": {
+        "Weapon": "arma {tags}",
+        "Target": "vs {tags}",
+        "Status": "mientras {statuses}",
+        "Exclusive": "un {group} por tirada"
+      },
+      "CardBonuses": "Bonos de efectos",
+      "DamageTypes": "Tipos de daño"
     }
   }
 }

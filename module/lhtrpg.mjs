@@ -22,6 +22,7 @@ import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
 import { registerItemUse, useItem } from "./helpers/item-use.mjs";
 import { registerEffectTargets } from "./helpers/effect-targets.mjs";
+import { registerEffectConditions } from "./helpers/effect-conditions.mjs";
 import { registerEffectDurations } from "./helpers/effect-durations.mjs";
 import { registerMigrations, runMigrations } from "./helpers/migrations.mjs";
 import { registerSustained, onApplySkillEffects } from "./helpers/sustained.mjs";
@@ -71,6 +72,7 @@ Hooks.once('init', async function () {
   registerTags();
   // Effect targets catalog and summary helper
   registerEffectTargets();
+  registerEffectConditions();
   // Log Horizon effect durations and expiry engine
   registerEffectDurations();
   // Browser windows of the same user (a GM logged in twice acts once)

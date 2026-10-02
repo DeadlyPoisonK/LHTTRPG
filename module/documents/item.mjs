@@ -1,4 +1,5 @@
 import { prepareSkillRolls, skillRollable } from "../helpers/skill-rolls.mjs";
+import { skillModifiers } from "../helpers/roll-bonuses.mjs";
 import { OPTION_ICONS, OPTION_TYPES } from "../helpers/character-options.mjs";
 import { useSkillEffects } from "../helpers/sustained.mjs";
 
@@ -187,7 +188,9 @@ export class LHTrpgItem extends Item {
         uuid: element.uuid,
         rollable: element.type === "skill" ? skillRollable(element) : {},
         appliedNames,
-        canApplyEffects
+        canApplyEffects,
+        // Hate cost / range / notes changed by the user's effects (see roll-bonuses.mjs)
+        mods: element.type === "skill" ? skillModifiers(element.actor, element) : null
     };
 
     chatData.content = await foundry.applications.handlebars.renderTemplate(this.chatTemplate[element.type], cardData);

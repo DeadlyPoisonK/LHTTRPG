@@ -55,6 +55,12 @@ export function prepareActiveEffectCategories(effects) {
         label: "LHTRPG.Effect.Category.inactive",
         effects: []
       },
+      // Suppressed because a condition of the effect or its skill is not met (see effect-conditions.mjs)
+      unmet: {
+        type: "unmet",
+        label: "LHTRPG.Effect.Category.unmet",
+        effects: []
+      },
       suppressed: {
         type: "suppressed",
         label: "LHTRPG.Effect.Category.suppressed",
@@ -65,12 +71,14 @@ export function prepareActiveEffectCategories(effects) {
     // Iterate over active effects, classifying them into categories
     for ( let e of effects ) {
       e.sourceName; // Trigger a lookup for the source name
-      if ( e.isSuppressed ) categories.suppressed.effects.push(e);
+      if ( e.unmetCondition ) categories.unmet.effects.push(e);
+      else if ( e.isSuppressed ) categories.suppressed.effects.push(e);
       else if ( e.disabled ) categories.inactive.effects.push(e);
       else if ( e.isTemporary ) categories.temporary.effects.push(e);
       else categories.passive.effects.push(e);
     }
 
     categories.suppressed.hidden = true;
+    categories.unmet.hidden = !categories.unmet.effects.length;
     return categories;
 }

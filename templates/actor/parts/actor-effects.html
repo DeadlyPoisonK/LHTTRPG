@@ -26,6 +26,9 @@
             {{#with (lhEffectSummary effect) as |summary|}}
               <div class="effect-summary" title="{{lhEffectSummary effect plain=true}}">{{summary}}</div>
             {{/with}}
+            {{#if effect.unmetCondition}}
+              <div class="effect-unmet"><i class="fas fa-ban"></i> {{lhConditionLabel effect.unmetCondition}}</div>
+            {{/if}}
           </div>
         </div>
         <div class="effect-source">{{effect.sourceName}}</div>

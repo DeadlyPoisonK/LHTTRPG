@@ -1,0 +1,68 @@
+{{!-- Roll filter of an effect's roll bonuses (flags.lhtrpg.rollFilter). See roll-bonuses.mjs.
+      Context: rollFilter = { editable, skills, skillTags, weaponTags, targetTags, exclusive, exclusiveGroups, statuses } --}}
+<div class="lh-roll-filter">
+  <div class="lh-conditions-header">
+    <span class="lh-conditions-title">{{localize "LHTRPG.RollFilter.Title"}}</span>
+  </div>
+  <p class="hint">{{localize "LHTRPG.RollFilter.Hint"}}</p>
+
+  <div class="form-group stacked lh-roll-filter-skills">
+    <label>{{localize "LHTRPG.RollFilter.Skills"}}</label>
+    <div class="lh-roll-filter-drop" data-tooltip="{{localize 'LHTRPG.RollFilter.DropHint'}}">
+      {{#each rollFilter.skills as |skill|}}
+      <span class="lh-filter-chip" data-index="{{skill.index}}" {{#if skill.uuid}}data-tooltip="{{skill.uuid}}"{{/if}}>
+        «{{skill.name}}»{{#unless skill.uuid}} <i class="fa-solid fa-font" data-tooltip="{{localize 'LHTRPG.RollFilter.ByName'}}"></i>{{/unless}}
+        {{#if ../rollFilter.editable}}<a data-action="removeFilterSkill" aria-label="{{localize 'LHTRPG.RollFilter.Remove'}}"><i class="fa-solid fa-xmark"></i></a>{{/if}}
+      </span>
+      {{else}}
+      <span class="lh-filter-empty">{{localize "LHTRPG.RollFilter.DropHint"}}</span>
+      {{/each}}
+    </div>
+    {{#if rollFilter.editable}}
+    <div class="lh-roll-filter-add">
+      <input type="text" class="lh-filter-skill-name" placeholder="{{localize 'LHTRPG.RollFilter.AddByName'}}">
+      <button type="button" class="inline-control icon fa-regular fa-square-plus" data-action="addFilterSkill"
+        aria-label="{{localize 'LHTRPG.RollFilter.AddByName'}}"></button>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.SkillTags"}}</label>
+    <input type="text" name="flags.lhtrpg.rollFilter.skillTags" value="{{rollFilter.skillTags}}" {{#unless rollFilter.editable}}disabled{{/unless}}>
+  </div>
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.WeaponTags"}}</label>
+    <input type="text" name="flags.lhtrpg.rollFilter.weaponTags" value="{{rollFilter.weaponTags}}" {{#unless rollFilter.editable}}disabled{{/unless}}>
+  </div>
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.TargetTags"}}</label>
+    <input type="text" name="flags.lhtrpg.rollFilter.targetTags" value="{{rollFilter.targetTags}}" {{#unless rollFilter.editable}}disabled{{/unless}}>
+  </div>
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.SelfStatuses"}}</label>
+    <div class="form-fields lh-filter-statuses">
+      {{#each rollFilter.statuses as |status|}}
+      <label class="checkbox"><input type="checkbox" name="flags.lhtrpg.rollFilter.selfStatuses.{{status.id}}" {{checked status.checked}}
+        {{#unless ../rollFilter.editable}}disabled{{/unless}}> {{localize status.label}}</label>
+      {{/each}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.DamageTypes"}}</label>
+    <div class="form-fields lh-filter-statuses">
+      {{#each rollFilter.damageTypes as |type|}}
+      <label class="checkbox"><input type="checkbox" name="flags.lhtrpg.rollFilter.damageTypes.{{type.id}}" {{checked type.checked}}
+        {{#unless ../rollFilter.editable}}disabled{{/unless}}> {{localize type.label}}</label>
+      {{/each}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>{{localize "LHTRPG.RollFilter.Exclusive"}}</label>
+    <input type="text" name="flags.lhtrpg.rollFilter.exclusive" value="{{rollFilter.exclusive}}" list="lh-exclusive-groups"
+      data-tooltip="{{localize 'LHTRPG.RollFilter.ExclusiveHint'}}" {{#unless rollFilter.editable}}disabled{{/unless}}>
+    <datalist id="lh-exclusive-groups">
+      {{#each rollFilter.exclusiveGroups as |group|}}<option value="{{group}}"></option>{{/each}}
+    </datalist>
+  </div>
+</div>

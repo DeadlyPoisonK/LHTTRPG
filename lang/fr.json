@@ -96,7 +96,8 @@
         "temporary": "Effets temporaires",
         "passive": "Effets passifs",
         "inactive": "Effets inactifs",
-        "suppressed": "Effets supprimés"
+        "suppressed": "Effets supprimés",
+        "unmet": "Condition non remplie"
       },
       "Migrated": "Migration de {count} effet(s) actif(s)."
     },
@@ -109,7 +110,10 @@
       "Tag": "Tag",
       "HintRated": "Si la cible a déjà cet état, la valeur la plus élevée est conservée.",
       "HintList": "Ajouté comme une entrée supplémentaire.",
-      "Preview": "Aperçu"
+      "Preview": "Aperçu",
+      "ConditionsTab": "Conditions",
+      "FormulaHint": "Les valeurs peuvent être des formules : @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (score DEX). Ex. : @sr*3, @sr+1, floor(@cr/2).",
+      "RatingFormulaHint": "Un nombre, ou une formule (@sr*5) résolue à l’utilisation de la compétence"
     },
     "EffectDuration": {
       "Label": "Durée (LH)",
@@ -145,7 +149,8 @@
         "checks": "Tests",
         "checkDice": "Dés de test",
         "battle": "Statut de combat",
-        "other": "Autre"
+        "other": "Autre",
+        "roll": "Jets de compétences"
       },
       "Chip": {
         "Character": "PJ",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "Champ dérivé : sera écrasé lors du recalcul",
         "Unknown": "Clé hors catalogue"
-      }
+      },
+      "RollCheckMod": "Bonus au Test de compétence",
+      "RollCheckDice": "Bonus au Test de compétence (dés)",
+      "RollDamageMod": "Bonus aux Dégâts/Soins de compétence",
+      "RollDamageDice": "Bonus aux Dégâts/Soins de compétence (dés)",
+      "SkillHateCost": "Coût en Hate des compétences",
+      "SkillRange": "Portée des compétences (Sq)",
+      "SkillNote": "Note sur les compétences"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "Cible",
         "Timing": "Timing",
         "ExtraDice": "Dés supplémentaires",
-        "DamageRecovery": "Restauration"
+        "DamageRecovery": "Restauration",
+        "ModFormulaHint": "Un nombre ou une formule : @sr*5, @sr+2, @cr…",
+        "ModifiedHint": "Modifié par vos effets",
+        "DiceFormulaHint": "Un nombre ou une formule : @sr, @sr+3, @sr*2…",
+        "DamageNoPower": "Sans puissance",
+        "DamageNoPowerHint": "N’ajoute pas Attack / Magic / Recovery Power : seulement les dés et le modificateur (une formule peut ajouter @attack, @magic, @recovery)"
       },
       "Type": {
         "Basic": "De base",
@@ -823,6 +840,81 @@
       "Mob": "Ennemi de type Mob.",
       "Boss": "Ennemi de type Boss.",
       "NightVision": "Pas entravé par la nuit."
+    },
+    "Condition": {
+      "Title": "Conditions",
+      "Add": "Ajouter une condition",
+      "Delete": "Supprimer la condition",
+      "TagPlaceholder": "Tag",
+      "HintSkill": "Les effets de cette compétence ne s’appliquent que si toutes les conditions sont remplies (ex. un Style qui exige les mains vides).",
+      "HintEffect": "Cet effet ne s’applique que si toutes les conditions sont remplies (ex. paliers « (SR2) : … »). Les effets appliqués à l’utilisation sont vérifiés sur l’utilisateur.",
+      "Type": {
+        "srAtLeast": "SR minimum",
+        "srAtMost": "SR maximum",
+        "crAtLeast": "CR minimum",
+        "crAtMost": "CR maximum",
+        "equipped": "Équipé avec le tag",
+        "notEquipped": "Non équipé avec le tag",
+        "handsEmpty": "Deux mains vides",
+        "handFree": "Au moins une main vide",
+        "oneWeapon": "Une seule arme en main",
+        "twoWeapons": "Deux armes en main",
+        "armorEmpty": "Emplacement d’armure vide",
+        "status": "A l’état",
+        "notStatus": "N’a pas l’état",
+        "hateTop": "Hate Top",
+        "hateUnder": "Hate Under",
+        "inCombat": "En combat",
+        "firstRound": "Premier round du combat",
+        "preAction": "Pre-Action (n’a pas agi ce round)",
+        "standby": "A déclaré Standby ce round"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "Équipé de [{value}]",
+        "notEquipped": "Sans [{value}] équipé",
+        "handsEmpty": "Mains vides",
+        "handFree": "Une main vide",
+        "oneWeapon": "Une seule arme [{value}]",
+        "oneWeaponAny": "Une seule arme",
+        "twoWeapons": "Deux armes [{value}]",
+        "twoWeaponsAny": "Deux armes",
+        "armorEmpty": "Sans armure",
+        "status": "Avec [{value}]",
+        "notStatus": "Sans [{value}]",
+        "hateTop": "[Hate Top]",
+        "hateUnder": "[Hate Under]",
+        "inCombat": "En combat",
+        "firstRound": "Premier round",
+        "preAction": "[Pre-Action]",
+        "standby": "[Standby]"
+      }
+    },
+    "RollFilter": {
+      "Title": "Filtre de compétences",
+      "Hint": "Pour les bonus de jet et les modificateurs de compétence (coût en Hate, portée, note) : à quelles compétences ils s’appliquent. Les champs vides ne filtrent pas ; ceux remplis doivent tous correspondre.",
+      "Skills": "Compétences",
+      "DropHint": "Déposez des compétences ici",
+      "ByName": "Par nom",
+      "Remove": "Retirer",
+      "AddByName": "Ajouter une compétence par nom",
+      "SkillTags": "Tags de la compétence",
+      "WeaponTags": "Tags de l’arme",
+      "TargetTags": "Tags de la cible",
+      "SelfStatuses": "Seulement si",
+      "Exclusive": "Groupe exclusif",
+      "ExclusiveHint": "Seul le bonus le plus élevé d’un même groupe s’applique à un jet (ex. Weapon Mastery).",
+      "Summary": {
+        "Weapon": "arme {tags}",
+        "Target": "contre {tags}",
+        "Status": "si {statuses}",
+        "Exclusive": "un seul {group} par jet"
+      },
+      "CardBonuses": "Bonus des effets",
+      "DamageTypes": "Types de dégâts"
     }
   }
 }

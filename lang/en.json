@@ -96,7 +96,8 @@
         "temporary": "Temporary Effects",
         "passive": "Passive Effects",
         "inactive": "Inactive Effects",
-        "suppressed": "Suppressed Effects"
+        "suppressed": "Suppressed Effects",
+        "unmet": "Condition Not Met"
       },
       "Migrated": "Migrated {count} active effect(s)."
     },
@@ -109,7 +110,10 @@
       "Tag": "Tag",
       "HintRated": "If the target already has this status, the highest Rating remains.",
       "HintList": "Added as an additional entry.",
-      "Preview": "Preview"
+      "Preview": "Preview",
+      "ConditionsTab": "Conditions",
+      "FormulaHint": "Values can be formulas: @sr (Skill Rank), @cr (Character Rank), @dex (DEX mod), @dex.base (DEX score). E.g. @sr*3, @sr+1, floor(@cr/2).",
+      "RatingFormulaHint": "A number, or a formula (@sr*5) resolved when the skill is used"
     },
     "EffectDuration": {
       "Label": "Duration (LH)",
@@ -145,7 +149,8 @@
         "checks": "Checks",
         "checkDice": "Check Dice",
         "battle": "Battle Status",
-        "other": "Other"
+        "other": "Other",
+        "roll": "Skill Rolls"
       },
       "Chip": {
         "Character": "PC",
@@ -154,7 +159,14 @@
       "Warning": {
         "Derived": "Derived field: will be overwritten on recalculation",
         "Unknown": "Key not in catalog"
-      }
+      },
+      "RollCheckMod": "Skill Check bonus",
+      "RollCheckDice": "Skill Check bonus (dice)",
+      "RollDamageMod": "Skill Damage/Recovery bonus",
+      "RollDamageDice": "Skill Damage/Recovery bonus (dice)",
+      "SkillHateCost": "Skill Hate cost",
+      "SkillRange": "Skill range (Sq)",
+      "SkillNote": "Skill note"
     },
     "Sustained": {
       "Dialog": {
@@ -269,7 +281,12 @@
         "Target": "Target",
         "Timing": "Timing",
         "ExtraDice": "Extra dice",
-        "DamageRecovery": "Recovery"
+        "DamageRecovery": "Recovery",
+        "ModFormulaHint": "A number or a formula: @sr*5, @sr+2, @cr…",
+        "ModifiedHint": "Changed by your effects",
+        "DiceFormulaHint": "A number or a formula: @sr, @sr+3, @sr*2…",
+        "DamageNoPower": "No power",
+        "DamageNoPowerHint": "Don't add Attack / Magic / Recovery Power: only the dice and modifier (a formula can add @attack, @magic, @recovery)"
       },
       "Type": {
         "Basic": "Basic",
@@ -823,6 +840,81 @@
       "Mob": "Mob enemy.",
       "Boss": "Boss enemy.",
       "NightVision": "Not hindered by darkness."
+    },
+    "Condition": {
+      "Title": "Conditions",
+      "Add": "Add condition",
+      "Delete": "Delete condition",
+      "TagPlaceholder": "Tag",
+      "HintSkill": "The effects of this skill only apply while every condition is met (e.g. a Style that needs empty hands).",
+      "HintEffect": "This effect only applies while every condition is met (e.g. \"(SR2): …\" tiers). Effects applied on use check them against the user.",
+      "Type": {
+        "srAtLeast": "SR at least",
+        "srAtMost": "SR at most",
+        "crAtLeast": "CR at least",
+        "crAtMost": "CR at most",
+        "equipped": "Equipped with tag",
+        "notEquipped": "Not equipped with tag",
+        "handsEmpty": "Both hand slots empty",
+        "handFree": "At least one empty hand slot",
+        "oneWeapon": "Only one weapon in hand",
+        "twoWeapons": "Two weapons in hand",
+        "armorEmpty": "Armor slot empty",
+        "status": "Has status",
+        "notStatus": "Doesn't have status",
+        "hateTop": "Hate Top",
+        "hateUnder": "Hate Under",
+        "inCombat": "In combat",
+        "firstRound": "First round of combat",
+        "preAction": "Pre-Action (hasn't acted this round)",
+        "standby": "Declared Standby this round"
+      },
+      "Summary": {
+        "srAtLeast": "SR ≥ {value}",
+        "srAtMost": "SR ≤ {value}",
+        "crAtLeast": "CR ≥ {value}",
+        "crAtMost": "CR ≤ {value}",
+        "equipped": "Equipped with [{value}]",
+        "notEquipped": "Not equipped with [{value}]",
+        "handsEmpty": "Empty hands",
+        "handFree": "One empty hand",
+        "oneWeapon": "Only one [{value}] weapon",
+        "oneWeaponAny": "Only one weapon",
+        "twoWeapons": "Two [{value}] weapons",
+        "twoWeaponsAny": "Two weapons",
+        "armorEmpty": "No armor",
+        "status": "While [{value}]",
+        "notStatus": "Without [{value}]",
+        "hateTop": "[Hate Top]",
+        "hateUnder": "[Hate Under]",
+        "inCombat": "In combat",
+        "firstRound": "First round",
+        "preAction": "[Pre-Action]",
+        "standby": "[Standby]"
+      }
+    },
+    "RollFilter": {
+      "Title": "Skill filter",
+      "Hint": "For roll bonuses and skill modifiers (Hate cost, range, note): which skills they apply to. Empty fields don't filter; filled ones must all match.",
+      "Skills": "Skills",
+      "DropHint": "Drop skills here",
+      "ByName": "Matched by name",
+      "Remove": "Remove",
+      "AddByName": "Add a skill by name",
+      "SkillTags": "Skill tags",
+      "WeaponTags": "Weapon tags",
+      "TargetTags": "Target tags",
+      "SelfStatuses": "Only while",
+      "Exclusive": "Exclusive group",
+      "ExclusiveHint": "Only the highest bonus of the same group applies to a roll (e.g. Weapon Mastery).",
+      "Summary": {
+        "Weapon": "weapon {tags}",
+        "Target": "vs {tags}",
+        "Status": "while {statuses}",
+        "Exclusive": "one {group} per roll"
+      },
+      "CardBonuses": "Bonuses from effects",
+      "DamageTypes": "Damage types"
     }
   }
 }

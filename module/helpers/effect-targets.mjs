@@ -12,6 +12,10 @@
  * This module is pure (no global game/CONFIG/foundry calls at import time) so it can be run in Node.
  */
 
+import { evaluateFormula, formulaData, formulaLabel, isFormula } from "./effect-formulas.mjs";
+import { conditionLabel } from "./effect-conditions.mjs";
+import { isSkillFilterKey, rollFilter, rollFilterLabel } from "./roll-bonuses.mjs";
+
 /**
  * Known effect target destinations in Log Horizon TRPG.
  * @type {{ key: string, label: string, group: "attributes"|"resources"|"checks"|"checkDice"|"battle"|"other", actorTypes: string[], kind: "number"|"dice"|"tags" }[]}
@@ -78,6 +82,16 @@ export const EFFECT_TARGETS = [
   { key: "system.battle-status.defense.magic", label: "LHTRPG.Monster.MDef", group: "battle", actorTypes: ["monster"], kind: "number" },
   { key: "system.battle-status.speed", label: "LHTRPG.Monster.Speed", group: "battle", actorTypes: ["monster"], kind: "number" },
   { key: "system.battle-status.initiative", label: "LHTRPG.Monster.Initiative", group: "battle", actorTypes: ["monster"], kind: "number" },
+
+  // --- Roll bonuses (roll-bonuses.mjs): rolls of the skills matching the effect's roll filter ---
+  { key: "lhtrpg.roll.check.mod", label: "LHTRPG.EffectTarget.RollCheckMod", group: "roll", actorTypes: ["character", "monster"], kind: "number" },
+  { key: "lhtrpg.roll.check.dice", label: "LHTRPG.EffectTarget.RollCheckDice", group: "roll", actorTypes: ["character", "monster"], kind: "dice" },
+  { key: "lhtrpg.roll.damage.mod", label: "LHTRPG.EffectTarget.RollDamageMod", group: "roll", actorTypes: ["character", "monster"], kind: "number" },
+  { key: "lhtrpg.roll.damage.dice", label: "LHTRPG.EffectTarget.RollDamageDice", group: "roll", actorTypes: ["character", "monster"], kind: "dice" },
+  // Skill modifiers (same filter): Hate cost, range, a note
+  { key: "lhtrpg.skill.hateCost", label: "LHTRPG.EffectTarget.SkillHateCost", group: "roll", actorTypes: ["character", "monster"], kind: "number" },
+  { key: "lhtrpg.skill.range", label: "LHTRPG.EffectTarget.SkillRange", group: "roll", actorTypes: ["character", "monster"], kind: "number" },
+  { key: "lhtrpg.skill.note", label: "LHTRPG.EffectTarget.SkillNote", group: "roll", actorTypes: ["character", "monster"], kind: "text" },
 
   // --- Other ---
   { key: "system.infos.hate", label: "LHTRPG.Label.Hate", group: "other", actorTypes: ["character"], kind: "number" },
@@ -286,7 +300,7 @@ export function migrateEffectChanges(changes, actorType = "character") {
  * @param {object} change
  * @returns {string|null}
  */
-function formatChangeSummary(change) {
+function formatChangeSummary(change, data) {
   if (!change?.key) return null;
   const key = String(change.key).trim();
   if (!key) return null;
@@ -307,6 +321,18 @@ function formatChangeSummary(change) {
   if (!rawVal) return label;
 
   const mode = Number(change.mode ?? 2); // Default to ADD (2)
+
+  // Formulas: "Recovery +[SR×3] (6)", "Accuracy +[SR]D (2D)"; the value only when the effect has an actor.
+  if (isFormula(rawVal) && !["tags", "text"].includes(target?.kind)) {
+    const dice = target?.kind === "dice" ? "D" : "";
+    const sign = { 1: "×", 3: "≤ ", 4: "≥ ", 5: "= " }[mode] ?? "+";
+    const value = data ? evaluateFormula(rawVal, data) : null;
+    const result = (value === null) ? "" : ` (${value}${dice})`;
+    return `${label} ${sign}[${escape(formulaLabel(rawVal))}]${dice}${result}`;
+  }
+
+  // Text (skill notes): "Note: Ignores [Cancel: Cold]"
+  if (target?.kind === "text") return `${label}: ${escape(rawVal)}`;
 
   // Tags: +[Tag]
   if (target?.kind === "tags" || key === "system.tags") {
@@ -375,6 +401,7 @@ function formatChangeSummary(change) {
  * @returns {Handlebars.SafeString|string}
  */
 export function lhEffectSummary(changesOrEffect, options) {
+  const escapeText = globalThis.foundry?.utils?.escapeHTML ?? (s => s);
   const changes = Array.isArray(changesOrEffect?.changes)
     ? changesOrEffect.changes
     : Array.isArray(changesOrEffect)
@@ -396,23 +423,35 @@ export function lhEffectSummary(changesOrEffect, options) {
     }
 
     const tag = (statusData.tag !== undefined && statusData.tag !== null) ? String(statusData.tag).trim() : "";
+    // A formula rating ("@sr*5") is resolved when the skill applies the effect: "[Decay: SR×5]"
+    const rating = isFormula(statusData.value) ? formulaLabel(statusData.value) : statusData.value;
     const hasValue = (statusData.value !== undefined && statusData.value !== null && statusData.value !== "");
 
     if (tag) {
-      statusPart = `[${label} (${tag}): ${statusData.value ?? 1}]`;
+      statusPart = `[${label} (${tag}): ${rating ?? 1}]`;
     } else if (hasValue) {
-      statusPart = `[${label}: ${statusData.value}]`;
+      statusPart = `[${label}: ${rating}]`;
     } else {
       statusPart = `[${label}]`;
     }
   }
 
+  // Formulas show their value for effects on (or carried by) an actor.
+  const isEffect = typeof changesOrEffect?.getFlag === "function";
+  const actor = isEffect ? (changesOrEffect.parent?.documentName === "Actor" ? changesOrEffect.parent : changesOrEffect.parent?.parent) : null;
+  const data = (actor?.documentName === "Actor") ? formulaData(actor, changesOrEffect.sourceItem ?? null) : null;
+
   const parts = [];
   if (statusPart) parts.push(statusPart);
   for (const change of changes) {
-    const s = formatChangeSummary(change);
+    const s = formatChangeSummary(change, data);
     if (s) parts.push(s);
   }
+
+  // Conditions of the effect itself (SR / CR tiers…); those of its skill show on the skill sheet.
+  const conditions = changesOrEffect?.flags?.lhtrpg?.conditions ?? changesOrEffect?._source?.flags?.lhtrpg?.conditions;
+  const conditionText = (Array.isArray(conditions) && conditions.length && globalThis.game?.i18n)
+    ? conditions.map(conditionLabel).filter(Boolean).join(", ") : "";
 
   const expires = changesOrEffect?.flags?.lhtrpg?.expires
     ?? (typeof changesOrEffect?.getFlag === "function" ? changesOrEffect.getFlag("lhtrpg", "expires") : null)
@@ -424,14 +463,17 @@ export function lhEffectSummary(changesOrEffect, options) {
     endOfScene: "LHTRPG.EffectDuration.EndOfScene"
   };
 
-  if (!parts.length) {
+  if (!parts.length && !conditionText) {
     if (options?.hash?.plain && expires && EXPIRY_LABELS[expires]) {
       const durLabel = globalThis.game?.i18n?.localize ? game.i18n.localize(EXPIRY_LABELS[expires]) : expires;
       return durLabel ? `(${durLabel})` : "";
     }
     return "";
   }
-  const joined = parts.join(", ");
+  // Roll bonuses: the skills they apply to ("→ «Reactive Heal»")
+  const filterText = changes.some(c => isSkillFilterKey(c?.key)) ? rollFilterLabel(rollFilter(changesOrEffect)) : "";
+  const joined = [parts.join(", "), filterText ? `→ ${escapeText(filterText)}` : "", conditionText ? `(${conditionText})` : ""]
+    .filter(Boolean).join(" ");
   if (options?.hash?.plain) {
     let plain = joined.replace(/<[^>]*>/g, "");
     if (expires && EXPIRY_LABELS[expires]) {

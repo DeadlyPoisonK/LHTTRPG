@@ -2,10 +2,12 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
 import { activateTagInput } from "../helpers/tags.mjs";
 import { canonicalTags } from "../helpers/tag-catalog.mjs";
 import { diceOptions } from "../helpers/dice.mjs";
-import { SKILL_MAX_DICE, CHECK_STATS, isMonsterSkill, rollSkill } from "../helpers/skill-rolls.mjs";
+import { SKILL_MAX_DICE, CHECK_STATS, DAMAGE_TYPES, isMonsterSkill, rollSkill } from "../helpers/skill-rolls.mjs";
 import { ARCHETYPES, OPTION_TYPES } from "../helpers/character-options.mjs";
 import { prepareSkillFields, composeSkillField, CUSTOM } from "../helpers/skill-fields.mjs";
 import { canUseItem, useItem } from "../helpers/item-use.mjs";
+import { activateConditionInputs, conditionsContext, conditionsFromForm } from "../helpers/effect-conditions.mjs";
+import { skillModifiers } from "../helpers/roll-bonuses.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -35,7 +37,9 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
       create: LHTrpgItemSheet.#onManageActiveEffect,
       edit: LHTrpgItemSheet.#onManageActiveEffect,
       delete: LHTrpgItemSheet.#onManageActiveEffect,
-      toggle: LHTrpgItemSheet.#onManageActiveEffect
+      toggle: LHTrpgItemSheet.#onManageActiveEffect,
+      addCondition: LHTrpgItemSheet.#onAddCondition,
+      deleteCondition: LHTrpgItemSheet.#onDeleteCondition
     }
   };
 
@@ -100,12 +104,15 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
       context.skillDiceOptions = diceOptions(SKILL_MAX_DICE);
       // Character skills: check stat of the character, extra dice on top of it / of the Attack-Magic Power
       context.isMonsterSkill = isMonsterSkill(item);
-      context.skillBonusDiceOptions = Object.fromEntries(Object.keys(context.skillDiceOptions).map(n => [n, `+${n}D`]));
       context.checkStatOptions = Object.fromEntries(CHECK_STATS.map(s => [s, `LHTRPG.Check.${s.capitalize()}`]));
       context.checkVsOptions = { evasion: "LHTRPG.Check.Evasion", resistance: "LHTRPG.Check.Resistance", auto: "LHTRPG.Skill.Label.CheckAuto" };
-      context.skillDamageDiceOptions = context.isMonsterSkill ? context.skillDiceOptions : context.skillBonusDiceOptions;
+      // Dice: a number or a formula (suggestions for the text field)
+      context.skillDiceSuggestions = [...Object.keys(context.skillDiceOptions), "@sr", "@sr+1", "@sr+2", "@sr+3", "@sr*2"];
+      context.damageTypeOptions = Object.fromEntries(DAMAGE_TYPES.map(t => [t, `LHTRPG.Combat.Type.${t}`]));
       // Timing / Target / Range / Cost / Limit dropdowns
       context.skillFields = prepareSkillFields(item.system);
+      // Hate cost / range / notes changed by the owner's effects (see roll-bonuses.mjs)
+      if (item.type === "skill") context.skillMods = skillModifiers(actor, item);
     }
 
     // Usable items: Use button, when carried by a character
@@ -125,6 +132,12 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
       : null;
 
     context.effects = prepareActiveEffectCategories(item.effects);
+    // Skills: conditions for all their effects (the Styles' "only produces an effect when…")
+    if (item.type === "skill") {
+      context.conditions = conditionsContext(item.system.conditions, {
+        prefix: "system.conditions", hint: "LHTRPG.Condition.HintSkill", editable: this.isEditable
+      });
+    }
     return context;
   }
 
@@ -176,6 +189,18 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
         foundry.utils.setProperty(data, name, 0);
       }
     }
+    // Check / Damage dice and modifiers: a number, or a formula ("@sr+3", "@sr*5", see effect-formulas.mjs)
+    for (const name of ["system.check.mod", "system.damage.mod", "system.check.dice", "system.damage.dice"]) {
+      const value = foundry.utils.getProperty(data, name);
+      if (value === undefined) continue;
+      const text = String(value ?? "").trim();
+      let number = Math.trunc(Number(text)) || 0;
+      if (name.endsWith(".dice")) number = Math.clamp(number, 0, SKILL_MAX_DICE);
+      foundry.utils.setProperty(data, name, text.includes("@") ? text : number);
+    }
+    // Conditions come as {0: {...}, 1: {...}}
+    const conditions = foundry.utils.getProperty(data, "system.conditions");
+    if (conditions) foundry.utils.setProperty(data, "system.conditions", conditionsFromForm(conditions));
     return data;
   }
 
@@ -227,18 +252,8 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
       tab.classList.toggle("active", tab.dataset.tab === activeTab);
     }
 
-    // Damage type (Physical/Magical): exclusive options,
-    // unchecking the current one leaves none. The hidden input carries the value when the form submits.
-    for (const toggle of this.element.querySelectorAll(".skill-roll-toggle")) {
-      toggle.addEventListener("change", ev => {
-        const input = ev.currentTarget;
-        const hidden = this.element.querySelector(`input[type=hidden][name="${input.dataset.field}"]`);
-        if (hidden) {
-          hidden.value = input.checked ? input.dataset.value : "";
-          hidden.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-      });
-    }
+    // Skill conditions: a new type clears the old value
+    activateConditionInputs(this.element);
 
     // Timing / Target / Range / Cost / Limit: rebuild the stored string from the dropdown parts
     // before the form submits (these handlers run before the form's delegated change handler).
@@ -489,6 +504,22 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
     if (!this.isEditable) return;
     const uuid = target.closest(".grant-skill")?.dataset.uuid;
     await this.item.update({ "system.skills": (this.item.system.skills ?? []).filter(u => u !== uuid) });
+  }
+
+  /** Add a condition to the skill (see effect-conditions.mjs). */
+  static async #onAddCondition() {
+    const conditions = conditionsFromForm(this.item.system.conditions);
+    conditions.push({ type: "equipped", value: "" });
+    await this.item.update({ "system.conditions": conditions });
+  }
+
+  /** Remove a condition of the skill. */
+  static async #onDeleteCondition(event, target) {
+    const index = Number(target.closest("[data-index]")?.dataset.index);
+    const conditions = conditionsFromForm(this.item.system.conditions);
+    if (!Number.isInteger(index) || !conditions[index]) return;
+    conditions.splice(index, 1);
+    await this.item.update({ "system.conditions": conditions });
   }
 
   static async #onManageActiveEffect(event, target) {

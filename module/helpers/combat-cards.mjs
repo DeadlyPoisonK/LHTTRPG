@@ -16,7 +16,9 @@
 import { diceFormula } from "./dice.mjs";
 import { registerHandler, request } from "../piles/pile-socket.mjs";
 import { listStatusEntries } from "./statuses.mjs";
-import { mainWeapon } from "./hands.mjs";
+import { mainWeapon, parseRange } from "./hands.mjs";
+import { skillModifiers } from "./roll-bonuses.mjs";
+import { hateRank } from "./effect-conditions.mjs";
 
 const TEMPLATES = {
   attack: "systems/lhtrpg/templates/chat/attack-card.hbs",
@@ -76,24 +78,6 @@ function resolveHit(attack, dodge) {
 /*  Hate                                        */
 /* -------------------------------------------- */
 
-/**
- * "top" / "under" for a character, from its [Hate Top] / [Hate Under] status, or else from the
- * Hate of the characters fighting in the current combat. null for monsters or outside combat.
- * @param {Actor} actor
- */
-function hateRank(actor) {
-  if (actor?.type !== "character") return null;
-  if (actor.statuses.has("hateTop")) return "top";
-  if (actor.statuses.has("hateUnder")) return "under";
-  const out = a => a.statuses.has("incapacitated") || a.statuses.has("dead");
-  const party = (game.combat?.combatants ?? [])
-    .map(c => c.actor)
-    .filter(a => (a?.type === "character") && !out(a));
-  if (!party.some(a => a.uuid === actor.uuid)) return null;
-  const top = Math.max(...party.map(a => toInt(a.system.infos?.hate)));
-  return toInt(actor.system.infos?.hate) >= top ? "top" : "under";
-}
-
 /** A monster's Hate Multiplier ("x2", "2", "×1.5"), 0 for anything else. */
 function hateMultiplier(actor) {
   if (actor?.type !== "monster") return 0;
@@ -149,26 +133,6 @@ async function rollDodge(actor, vs) {
 /* -------------------------------------------- */
 /*  Range                                       */
 /* -------------------------------------------- */
-
-/**
- * Range in Sq from a skill / weapon Range text: "Close" -> 0, "4Sq" -> 4, "Weapon" -> the range of
- * the user's main weapon. null when it can't be checked ("-", "Refer", unknown).
- * @param {string|number} text
- * @param {Actor} [actor]        The user, for "Weapon"
- * @returns {number|null}
- */
-function parseRange(text, actor) {
-  if (typeof text === "number") return Math.max(text, 0);
-  const t = String(text ?? "").trim();
-  if (/close|至近|근접/i.test(t)) return 0;
-  const sq = t.match(/(\d+)\s*sq/i) ?? t.match(/^(\d+)$/);
-  if (sq) return Number(sq[1]);
-  if (/weapon|武器|무기/i.test(t) && actor) {
-    const main = mainWeapon(actor);
-    return main ? parseRange(main.system.range || "Close") : null;
-  }
-  return null;
-}
 
 /** The token an actor acts from: a controlled one, else its first token on the scene. */
 function actorToken(actor) {
@@ -311,16 +275,20 @@ export function isAttack(item) {
  * @param {Actor|null} attacker
  * @param {string|null} formula    Hit Check formula, null for an Automatic check
  * @param {string} flavor
+ * @param {object} [options]
+ * @param {string} [options.bonuses]   Roll bonuses added to the check (see roll-bonuses.mjs)
  */
-export async function createAttackCard(item, attacker, formula, flavor) {
+export async function createAttackCard(item, attacker, formula, flavor, { bonuses = "" } = {}) {
   const vs = item.system.check.vs;
   const auto = vs === "auto";
 
   // Range: every target must be within the skill's range, else the attack can't be declared.
-  const range = parseRange(item.system.range, attacker ?? item.actor);
+  // Range bonuses of the attacker's effects (see roll-bonuses.mjs skillModifiers)
+  const rangeMod = skillModifiers(attacker ?? item.actor, item).range;
+  const range = rangeMod ? rangeMod.value : parseRange(item.system.range, attacker ?? item.actor);
   // "Weapon" also shows the weapon's actual range: "Weapon (Close)".
-  let rangeLabel = item.system.range;
-  if ((range !== null) && !/^\s*(close|\d+\s*sq)\s*$/i.test(rangeLabel ?? "")) {
+  let rangeLabel = rangeMod ? rangeMod.text : item.system.range;
+  if (!rangeMod && (range !== null) && !/^\s*(close|\d+\s*sq)\s*$/i.test(rangeLabel ?? "")) {
     rangeLabel += ` (${range ? `${range}Sq` : L("Close")})`;
   }
   const origin = actorToken(attacker ?? item.actor);
@@ -358,6 +326,7 @@ export async function createAttackCard(item, attacker, formula, flavor) {
     skillName: item.name,
     img: item.img,
     flavor,
+    bonuses,
     range: rangeLabel,
     weapon: attackWeapon(item, attacker)?.name ?? null,
     vs: auto ? "" : vs,
@@ -415,7 +384,7 @@ export function findAttackMessage(item) {
  * @param {ChatMessage} [attackMessage]
  * @param {object[]} [defaultTargets]   Targets when there is no attack card, instead of the user's
  */
-export async function createDamageCard(item, attacker, formula, flavor, attackMessage, defaultTargets) {
+export async function createDamageCard(item, attacker, formula, flavor, attackMessage, defaultTargets, { bonuses = "" } = {}) {
   const roll = await new Roll(formula).evaluate();
   const attack = attackMessage?.getFlag("lhtrpg", "attack");
   const targets = attack
@@ -434,6 +403,7 @@ export async function createDamageCard(item, attacker, formula, flavor, attackMe
     skillName: item.name,
     img: item.img,
     flavor,
+    bonuses,
     total: roll.total,
     type: type || fallbackType,
     recovery,

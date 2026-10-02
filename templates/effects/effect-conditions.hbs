@@ -1,0 +1,41 @@
+{{!-- Conditions of a skill (system.conditions) or of an effect (flags.lhtrpg.conditions). See effect-conditions.mjs.
+      Context: conditions = { rows, prefix, types, tags, hint, editable } --}}
+<div class="lh-conditions">
+  <div class="lh-conditions-header">
+    <span class="lh-conditions-title">{{localize "LHTRPG.Condition.Title"}}</span>
+    {{#if conditions.editable}}
+    <button type="button" class="inline-control icon fa-regular fa-square-plus" data-action="addCondition"
+      data-tooltip="{{localize 'LHTRPG.Condition.Add'}}" aria-label="{{localize 'LHTRPG.Condition.Add'}}"></button>
+    {{/if}}
+  </div>
+  <p class="hint">{{conditions.hint}}</p>
+  <ol class="lh-condition-list">
+    {{#each conditions.rows as |row|}}
+    <li class="lh-condition-row" data-index="{{row.index}}">
+      <select name="{{../conditions.prefix}}.{{row.index}}.type" class="lh-condition-type" {{#unless ../conditions.editable}}disabled{{/unless}}>
+        {{selectOptions ../conditions.types selected=row.type}}
+      </select>
+      {{#if row.number}}
+      <input type="number" name="{{../conditions.prefix}}.{{row.index}}.value" value="{{row.value}}" min="0" step="1"
+        {{#unless ../conditions.editable}}disabled{{/unless}}>
+      {{else if row.tag}}
+      <input type="text" name="{{../conditions.prefix}}.{{row.index}}.value" value="{{row.value}}" list="lh-condition-tags"
+        placeholder="{{localize 'LHTRPG.Condition.TagPlaceholder'}}" {{#unless ../conditions.editable}}disabled{{/unless}}>
+      {{else if row.status}}
+      <select name="{{../conditions.prefix}}.{{row.index}}.value" {{#unless ../conditions.editable}}disabled{{/unless}}>
+        {{selectOptions ../conditions.statuses selected=row.value blank="—"}}
+      </select>
+      {{else}}
+      <span class="lh-condition-spacer"></span>
+      {{/if}}
+      {{#if ../conditions.editable}}
+      <button type="button" class="inline-control icon fa-solid fa-trash" data-action="deleteCondition"
+        aria-label="{{localize 'LHTRPG.Condition.Delete'}}"></button>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ol>
+  <datalist id="lh-condition-tags">
+    {{#each conditions.tags as |tag|}}<option value="{{tag}}"></option>{{/each}}
+  </datalist>
+</div>
