@@ -112,7 +112,7 @@
       "HintList": "Ajouté comme une entrée supplémentaire.",
       "Preview": "Aperçu",
       "ConditionsTab": "Conditions",
-      "FormulaHint": "Les valeurs peuvent être des formules : @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (score DEX). Ex. : @sr*3, @sr+1, floor(@cr/2).",
+      "FormulaHint": "Les valeurs peuvent être des formules : @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (score DEX), @weapon.attack / @weapon.magic (Attack / Magic Power de l'arme principale), @offhand.attack (arme de l'autre main). Ex. : @sr*3, @sr+1, floor(@cr/2).",
       "RatingFormulaHint": "Un nombre, ou une formule (@sr*5) résolue à l’utilisation de la compétence"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "Bonus des effets",
       "DamageTypes": "Types de dégâts"
+    },
+    "SkillRefresh": {
+      "Title": "Actualiser les compétences depuis le compendium",
+      "TitleActor": "Actualiser les compétences : {name}",
+      "SheetControl": "Actualiser les compétences depuis le compendium",
+      "MenuLabel": "Actualiser les compétences des personnages",
+      "MenuHint": "Met à jour les compétences que les personnages possèdent déjà avec le compendium actuel du système (effets, conditions, Test/Dégâts). Affiche les changements avant de les appliquer.",
+      "Hint": "Chaque compétence est mise à jour sur place depuis son entrée du compendium du système. Conservés : le SR actuel, sa propre macro, les images personnalisées et, si coché, la description. La version précédente est sauvegardée et peut être restaurée avec Annuler.",
+      "Summary": "{pending} compétence(s) modifiée(s), {upToDate} déjà à jour.",
+      "ByName": "par nom",
+      "ByNameHint": "Associée par nom (la compétence n'était pas liée au compendium du système). Elle sera liée désormais.",
+      "LinkOnly": "seulement le lien au compendium",
+      "KeepDescription": "Conserver la description actuelle",
+      "WasDisabled": "Des effets désactivés à la main seront remplacés : {names}",
+      "UpToDate": "{count} à jour",
+      "Unmatched": "Absentes du compendium (inchangées) : {names}",
+      "UnmatchedHint": "Compétences maison ou renommées : aucune compétence du système ne porte ce nom.",
+      "Backups": "{count} avec une version précédente",
+      "Apply": "Mettre à jour la sélection",
+      "Undo": "Annuler la dernière actualisation ({count})",
+      "UndoConfirm": "Restaurer la version précédente de {count} compétence(s) ?",
+      "Done": "{count} compétence(s) actualisée(s) depuis le compendium.",
+      "Undone": "{count} compétence(s) restaurée(s).",
+      "Field": {
+        "description": "description",
+        "tags": "tags",
+        "timing": "timing",
+        "checkType": "type de test",
+        "range": "portée",
+        "target": "cible",
+        "subtype": "type",
+        "cost": "coût",
+        "limit": "limite",
+        "check": "Test",
+        "damage": "Dégâts",
+        "conditions": "conditions",
+        "skillRank": "SR max",
+        "macroeffect": "macro",
+        "name": "nom",
+        "img": "image",
+        "effects": "effets"
+      }
     }
   }
 }

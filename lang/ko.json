@@ -112,7 +112,7 @@
       "HintList": "추가 항목으로 더해집니다.",
       "Preview": "미리보기",
       "ConditionsTab": "조건",
-      "FormulaHint": "값에는 수식을 쓸 수 있습니다: @sr (SR), @cr (CR), @dex (DEX 수정치), @dex.base (DEX 기본값). 예: @sr*3, @sr+1, floor(@cr/2).",
+      "FormulaHint": "값에는 수식을 쓸 수 있습니다: @sr (SR), @cr (CR), @dex (DEX 수정치), @dex.base (DEX 기본값), @weapon.attack / @weapon.magic (주무기의 공격력/마력), @offhand.attack (다른 손의 무기). 예: @sr*3, @sr+1, floor(@cr/2).",
       "RatingFormulaHint": "숫자, 또는 스킬 사용 시 계산되는 수식 (@sr*5)"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "효과 보너스",
       "DamageTypes": "대미지 종류"
+    },
+    "SkillRefresh": {
+      "Title": "컴펜디움에서 특기 갱신",
+      "TitleActor": "특기 갱신: {name}",
+      "SheetControl": "컴펜디움에서 특기 갱신",
+      "MenuLabel": "캐릭터 특기 갱신",
+      "MenuHint": "캐릭터가 이미 가진 특기를 시스템의 현재 컴펜디움(효과, 조건, 판정/대미지)으로 갱신합니다. 적용하기 전에 변경 사항을 보여 줍니다.",
+      "Hint": "각 특기는 시스템 컴펜디움의 항목에서 그 자리에서 갱신됩니다. 유지되는 것: 현재 SR, 자체 매크로, 사용자 이미지, 체크한 경우 설명. 이전 버전은 저장되며 '되돌리기'로 복원할 수 있습니다.",
+      "Summary": "변경 {pending}개, 이미 최신 {upToDate}개.",
+      "ByName": "이름으로 연결",
+      "ByNameHint": "이름으로 연결했습니다(이 특기는 시스템 컴펜디움에 연결되어 있지 않았습니다). 앞으로는 연결됩니다.",
+      "LinkOnly": "컴펜디움 연결만",
+      "KeepDescription": "현재 설명 유지",
+      "WasDisabled": "수동으로 끈 효과가 교체됩니다: {names}",
+      "UpToDate": "최신 {count}개",
+      "Unmatched": "컴펜디움에 없음(변경 안 함): {names}",
+      "UnmatchedHint": "자작이거나 이름을 바꾼 특기: 이 이름의 시스템 특기가 없습니다.",
+      "Backups": "이전 버전 있음 {count}개",
+      "Apply": "선택한 특기 갱신",
+      "Undo": "마지막 갱신 되돌리기 ({count})",
+      "UndoConfirm": "{count}개 특기를 이전 버전으로 복원할까요?",
+      "Done": "{count}개 특기를 컴펜디움에서 갱신했습니다.",
+      "Undone": "{count}개 특기를 복원했습니다.",
+      "Field": {
+        "description": "설명",
+        "tags": "태그",
+        "timing": "타이밍",
+        "checkType": "판정",
+        "range": "사거리",
+        "target": "대상",
+        "subtype": "종류",
+        "cost": "코스트",
+        "limit": "제한",
+        "check": "판정",
+        "damage": "대미지",
+        "conditions": "조건",
+        "skillRank": "최대 SR",
+        "macroeffect": "매크로",
+        "name": "이름",
+        "img": "이미지",
+        "effects": "효과"
+      }
     }
   }
 }

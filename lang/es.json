@@ -112,7 +112,7 @@
       "HintList": "Se añade como una entrada más.",
       "Preview": "Vista previa",
       "ConditionsTab": "Condiciones",
-      "FormulaHint": "Los valores pueden ser fórmulas: @sr (Skill Rank), @cr (Character Rank), @dex (mod de DEX), @dex.base (valor de DEX). Ej.: @sr*3, @sr+1, floor(@cr/2).",
+      "FormulaHint": "Los valores pueden ser fórmulas: @sr (Skill Rank), @cr (Character Rank), @dex (mod de DEX), @dex.base (valor de DEX), @weapon.attack / @weapon.magic (Attack / Magic Power del arma principal), @offhand.attack (arma de la otra mano). Ej.: @sr*3, @sr+1, floor(@cr/2).",
       "RatingFormulaHint": "Un número, o una fórmula (@sr*5) que se resuelve al usar la skill"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "Bonos de efectos",
       "DamageTypes": "Tipos de daño"
+    },
+    "SkillRefresh": {
+      "Title": "Actualizar skills desde el compendio",
+      "TitleActor": "Actualizar skills: {name}",
+      "SheetControl": "Actualizar skills desde el compendio",
+      "MenuLabel": "Actualizar skills de los personajes",
+      "MenuHint": "Actualiza las skills que los personajes ya tienen con el compendio actual del sistema (efectos, condiciones, Check/Daño). Muestra los cambios antes de aplicarlos.",
+      "Hint": "Cada skill se actualiza en su sitio desde su entrada del compendio del sistema. Se conservan: el SR actual, su macro propia, las imágenes personalizadas y, si se marca, la descripción. La versión anterior se guarda y se puede restaurar con Deshacer.",
+      "Summary": "{pending} skill(s) con cambios, {upToDate} ya al día.",
+      "ByName": "por nombre",
+      "ByNameHint": "Emparejada por nombre (la skill no estaba enlazada al compendio del sistema). A partir de ahora quedará enlazada.",
+      "LinkOnly": "solo el enlace al compendio",
+      "KeepDescription": "Conservar la descripción actual",
+      "WasDisabled": "Se reemplazan efectos desactivados a mano: {names}",
+      "UpToDate": "{count} al día",
+      "Unmatched": "Sin equivalente en el compendio (no se tocan): {names}",
+      "UnmatchedHint": "Skills propias o renombradas: no hay una skill del sistema con este nombre.",
+      "Backups": "{count} con versión anterior",
+      "Apply": "Actualizar las marcadas",
+      "Undo": "Deshacer última actualización ({count})",
+      "UndoConfirm": "¿Restaurar la versión anterior de {count} skill(s)?",
+      "Done": "{count} skill(s) actualizadas desde el compendio.",
+      "Undone": "{count} skill(s) restauradas.",
+      "Field": {
+        "description": "descripción",
+        "tags": "tags",
+        "timing": "momento",
+        "checkType": "tipo de chequeo",
+        "range": "alcance",
+        "target": "objetivo",
+        "subtype": "tipo",
+        "cost": "coste",
+        "limit": "límite",
+        "check": "Check",
+        "damage": "Daño",
+        "conditions": "condiciones",
+        "skillRank": "SR máx.",
+        "macroeffect": "macro",
+        "name": "nombre",
+        "img": "imagen",
+        "effects": "efectos"
+      }
     }
   }
 }

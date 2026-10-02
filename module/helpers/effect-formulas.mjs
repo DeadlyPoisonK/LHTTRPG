@@ -7,12 +7,19 @@
  *   @str.mod, @str.base  Attribute modifier / score (same for dex, pow, int); "@str" alone = modifier
  *   @attack, @magic, @recovery  Attack / Magic / Recovery Power (characters). Only for skill rolls and roll
  *                        bonuses (evaluated when rolling): while effects apply they aren't computed yet.
+ *   @weapon.attack, @weapon.magic    Attack / Magic Power of the main-hand weapon (see hands.mjs), 0 without one
+ *   @offhand.attack, @offhand.magic  Same for the weapon in the other hand (a shield there counts as none).
+ *                        Usable anywhere: the items are prepared before the actor's effects apply. The Attack
+ *                        Power base already is the main weapon's, so "Attack Power becomes [Weapon's x2]" is
+ *                        "+@weapon.attack" on Attack Power, and "[both weapons' combined]" is "+@offhand.attack".
  *
  * On a character the attribute modifiers are computed after the effects are applied (prepareDerivedData),
  * so changes that read them are deferred: LHTrpgActiveEffect#apply keeps them aside and the actor applies
  * them right after computing the modifiers, before checks and battle statuses (see actor.mjs).
  * Effects copied to a target when a skill is used get their formulas resolved at that moment (item-use.mjs).
  */
+
+import { getHands } from "./hands.mjs";
 
 const ATTRIBUTES = ["str", "dex", "pow", "int"];
 const ATTRIBUTE_REF = /@(str|dex|pow|int)\b/i;
@@ -47,7 +54,15 @@ export function formulaData(actor, item) {
   data.attack = Number(power.attack?.total) || 0;
   data.magic = Number(power.magic?.total) || 0;
   data.recovery = Number(power.restoration?.total) || 0;
+  const { main, off } = getHands(actor);
+  data.weapon = weaponPowers(main);
+  data.offhand = weaponPowers((off?.type === "weapon") ? off : null);
   return data;
+}
+
+/** Attack / Magic Power of a weapon (0 without one). */
+function weaponPowers(weapon) {
+  return { attack: Number(weapon?.system.attack) || 0, magic: Number(weapon?.system.magic) || 0 };
 }
 
 /**
@@ -76,6 +91,10 @@ export function evaluateFormula(value, data) {
  */
 export function formulaLabel(value) {
   return String(value)
+    .replace(/@weapon\.attack\b/g, "Weapon Attack Power")
+    .replace(/@weapon\.magic\b/g, "Weapon Magic Power")
+    .replace(/@offhand\.attack\b/g, "Off-hand Attack Power")
+    .replace(/@offhand\.magic\b/g, "Off-hand Magic Power")
     .replace(/@srMax\b/g, "SR max")
     .replace(/@sr\b/g, "SR")
     .replace(/@cr\b/g, "CR")

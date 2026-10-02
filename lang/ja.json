@@ -112,7 +112,7 @@
       "HintList": "追加のエントリとして追加されます。",
       "Preview": "プレビュー",
       "ConditionsTab": "条件",
-      "FormulaHint": "値には式を使えます: @sr (SR)、@cr (CR)、@dex (DEX修正)、@dex.base (DEX基本値)。例: @sr*3、@sr+1、floor(@cr/2)。",
+      "FormulaHint": "値には式を使えます: @sr (SR)、@cr (CR)、@dex (DEX修正)、@dex.base (DEX基本値)、@weapon.attack / @weapon.magic (メイン武器の攻撃力/魔力)、@offhand.attack (もう片手の武器)。例: @sr*3、@sr+1、floor(@cr/2)。",
       "RatingFormulaHint": "数値、またはスキル使用時に計算される式（@sr*5）"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "効果によるボーナス",
       "DamageTypes": "ダメージ種別"
+    },
+    "SkillRefresh": {
+      "Title": "コンペンディウムから特技を更新",
+      "TitleActor": "特技を更新：{name}",
+      "SheetControl": "コンペンディウムから特技を更新",
+      "MenuLabel": "キャラクターの特技を更新",
+      "MenuHint": "キャラクターが既に持っている特技を、システムの現在のコンペンディウム（効果、条件、判定/ダメージ）で更新します。適用前に変更点を表示します。",
+      "Hint": "各特技はシステムのコンペンディウムの項目からその場で更新されます。保持されるもの：現在のSR、独自のマクロ、カスタム画像、チェックした場合は説明文。以前の版は保存され、「元に戻す」で復元できます。",
+      "Summary": "変更あり {pending} 件、更新済み {upToDate} 件。",
+      "ByName": "名前で照合",
+      "ByNameHint": "名前で照合しました（この特技はシステムのコンペンディウムにリンクされていませんでした）。今後はリンクされます。",
+      "LinkOnly": "コンペンディウムへのリンクのみ",
+      "KeepDescription": "現在の説明文を保持",
+      "WasDisabled": "手動で無効にした効果が置き換えられます：{names}",
+      "UpToDate": "{count} 件は最新",
+      "Unmatched": "コンペンディウムにない（変更なし）：{names}",
+      "UnmatchedHint": "自作または名前を変えた特技：この名前のシステム特技はありません。",
+      "Backups": "{count} 件に以前の版あり",
+      "Apply": "選択した特技を更新",
+      "Undo": "直前の更新を元に戻す（{count}）",
+      "UndoConfirm": "{count} 件の特技を以前の版に戻しますか？",
+      "Done": "{count} 件の特技をコンペンディウムから更新しました。",
+      "Undone": "{count} 件の特技を復元しました。",
+      "Field": {
+        "description": "説明文",
+        "tags": "タグ",
+        "timing": "タイミング",
+        "checkType": "判定",
+        "range": "射程",
+        "target": "対象",
+        "subtype": "種別",
+        "cost": "コスト",
+        "limit": "制限",
+        "check": "判定",
+        "damage": "ダメージ",
+        "conditions": "条件",
+        "skillRank": "最大SR",
+        "macroeffect": "マクロ",
+        "name": "名前",
+        "img": "画像",
+        "effects": "効果"
+      }
     }
   }
 }

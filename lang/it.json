@@ -112,7 +112,7 @@
       "HintList": "Aggiunto come voce aggiuntiva.",
       "Preview": "Anteprima",
       "ConditionsTab": "Condizioni",
-      "FormulaHint": "I valori possono essere formule: @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (punteggio DEX). Es.: @sr*3, @sr+1, floor(@cr/2).",
+      "FormulaHint": "I valori possono essere formule: @sr (Skill Rank), @cr (Character Rank), @dex (mod DEX), @dex.base (punteggio DEX), @weapon.attack / @weapon.magic (Attack / Magic Power dell'arma principale), @offhand.attack (arma dell'altra mano). Es.: @sr*3, @sr+1, floor(@cr/2).",
       "RatingFormulaHint": "Un numero, o una formula (@sr*5) risolta quando si usa l’abilità"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "Bonus degli effetti",
       "DamageTypes": "Tipi di danno"
+    },
+    "SkillRefresh": {
+      "Title": "Aggiorna le abilità dal compendio",
+      "TitleActor": "Aggiorna le abilità: {name}",
+      "SheetControl": "Aggiorna le abilità dal compendio",
+      "MenuLabel": "Aggiorna le abilità dei personaggi",
+      "MenuHint": "Aggiorna le abilità che i personaggi hanno già con il compendio attuale del sistema (effetti, condizioni, Prova/Danno). Mostra le modifiche prima di applicarle.",
+      "Hint": "Ogni abilità viene aggiornata sul posto dalla sua voce del compendio del sistema. Si conservano: lo SR attuale, la sua macro, le immagini personalizzate e, se spuntata, la descrizione. La versione precedente viene salvata e si può ripristinare con Annulla.",
+      "Summary": "{pending} abilità con modifiche, {upToDate} già aggiornate.",
+      "ByName": "per nome",
+      "ByNameHint": "Abbinata per nome (l'abilità non era collegata al compendio del sistema). D'ora in poi sarà collegata.",
+      "LinkOnly": "solo il collegamento al compendio",
+      "KeepDescription": "Mantieni la descrizione attuale",
+      "WasDisabled": "Verranno sostituiti effetti disattivati a mano: {names}",
+      "UpToDate": "{count} aggiornate",
+      "Unmatched": "Non presenti nel compendio (invariate): {names}",
+      "UnmatchedHint": "Abilità homebrew o rinominate: nessuna abilità del sistema ha questo nome.",
+      "Backups": "{count} con una versione precedente",
+      "Apply": "Aggiorna le selezionate",
+      "Undo": "Annulla l'ultimo aggiornamento ({count})",
+      "UndoConfirm": "Ripristinare la versione precedente di {count} abilità?",
+      "Done": "{count} abilità aggiornate dal compendio.",
+      "Undone": "{count} abilità ripristinate.",
+      "Field": {
+        "description": "descrizione",
+        "tags": "tag",
+        "timing": "tempistica",
+        "checkType": "tipo di prova",
+        "range": "gittata",
+        "target": "bersaglio",
+        "subtype": "tipo",
+        "cost": "costo",
+        "limit": "limite",
+        "check": "Prova",
+        "damage": "Danno",
+        "conditions": "condizioni",
+        "skillRank": "SR max",
+        "macroeffect": "macro",
+        "name": "nome",
+        "img": "immagine",
+        "effects": "effetti"
+      }
     }
   }
 }

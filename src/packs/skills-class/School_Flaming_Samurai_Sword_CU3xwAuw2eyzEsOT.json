@@ -28,6 +28,50 @@
   "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
   "effects": [
     {
+      "origin": null,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "36Qt1Kh4qn25qT83",
+      "changes": [
+        {
+          "key": "system.battle-status.power.attack.mod",
+          "mode": 2,
+          "value": "@weapon.attack",
+          "priority": null
+        }
+      ],
+      "tint": "#ffffff",
+      "transfer": true,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "lhtrpg",
+        "systemVersion": "1.5.0",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "name": "School: Flaming Samurai Sword (Attack Power)",
+      "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
+      "type": "base",
+      "system": {},
+      "description": "",
+      "statuses": [],
+      "sort": 0,
+      "_key": "!items.effects!CU3xwAuw2eyzEsOT.36Qt1Kh4qn25qT83"
+    },
+    {
       "origin": "Compendium.world.samurai.CU3xwAuw2eyzEsOT",
       "duration": {
         "startTime": null,

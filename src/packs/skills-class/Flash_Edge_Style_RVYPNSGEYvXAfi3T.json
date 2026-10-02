@@ -17,12 +17,18 @@
     },
     "cost": "-",
     "limit": "-",
-    "macroeffect": ""
+    "macroeffect": "",
+    "conditions": [
+      {
+        "type": "twoWeapons",
+        "value": "One-Handed"
+      }
+    ]
   },
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
   "effects": [
     {
-      "origin": "Compendium.world.swashbuckler.RVYPNSGEYvXAfi3T",
+      "origin": null,
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -32,13 +38,13 @@
         "startRound": null,
         "startTurn": null
       },
-      "disabled": true,
-      "_id": "kRJINpkOdzuYSdeD",
+      "disabled": false,
+      "_id": "fWfJiLMOKj5iZER4",
       "changes": [
         {
           "key": "system.battle-status.power.attack.mod",
           "mode": 2,
-          "value": "0",
+          "value": "@offhand.attack",
           "priority": null
         }
       ],
@@ -56,14 +62,14 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "name": "Two Weapons Bonus",
-      "img": "icons/svg/aura.svg",
+      "name": "Flash Edge Style (Attack Power)",
+      "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
       "system": {},
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!RVYPNSGEYvXAfi3T.kRJINpkOdzuYSdeD"
+      "_key": "!items.effects!RVYPNSGEYvXAfi3T.fWfJiLMOKj5iZER4"
     }
   ],
   "sort": 0,

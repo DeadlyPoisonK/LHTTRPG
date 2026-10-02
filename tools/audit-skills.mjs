@@ -59,7 +59,9 @@ function compendiumUuids() {
 
 /** A formula can be evaluated: only @variables, numbers, operators and Math functions. */
 function validFormula(value) {
-  const expr = String(value).replace(/@(srMax|sr|cr|attack|magic|recovery|str|dex|pow|int)(\.(mod|base))?\b/g, "1");
+  const expr = String(value)
+    .replace(/@(weapon|offhand)\.(attack|magic)\b/g, "1")
+    .replace(/@(srMax|sr|cr|attack|magic|recovery|str|dex|pow|int)(\.(mod|base))?\b/g, "1");
   if (!/^[\d\s+\-*/().,]*(?:(floor|ceil|round|max|min|abs)[\d\s+\-*/().,]*)*$/.test(expr)) return false;
   try {
     const result = Function("floor", "ceil", "round", "max", "min", "abs", `return (${expr});`)(Math.floor, Math.ceil, Math.round, Math.max, Math.min, Math.abs);

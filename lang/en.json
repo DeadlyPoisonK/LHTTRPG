@@ -112,7 +112,7 @@
       "HintList": "Added as an additional entry.",
       "Preview": "Preview",
       "ConditionsTab": "Conditions",
-      "FormulaHint": "Values can be formulas: @sr (Skill Rank), @cr (Character Rank), @dex (DEX mod), @dex.base (DEX score). E.g. @sr*3, @sr+1, floor(@cr/2).",
+      "FormulaHint": "Values can be formulas: @sr (Skill Rank), @cr (Character Rank), @dex (DEX mod), @dex.base (DEX score), @weapon.attack / @weapon.magic (main weapon's Attack / Magic Power), @offhand.attack (other hand's weapon). E.g. @sr*3, @sr+1, floor(@cr/2).",
       "RatingFormulaHint": "A number, or a formula (@sr*5) resolved when the skill is used"
     },
     "EffectDuration": {
@@ -915,6 +915,48 @@
       },
       "CardBonuses": "Bonuses from effects",
       "DamageTypes": "Damage types"
+    },
+    "SkillRefresh": {
+      "Title": "Refresh skills from the compendium",
+      "TitleActor": "Refresh skills: {name}",
+      "SheetControl": "Refresh skills from the compendium",
+      "MenuLabel": "Refresh characters' skills",
+      "MenuHint": "Update the skills characters already have with the current system compendium (effects, conditions, Check/Damage). Shows the changes before applying them.",
+      "Hint": "Each skill is updated in place from its system compendium entry. Kept: current SR, its own macro, custom images and, if ticked, the description. The previous version is saved and can be restored with Undo.",
+      "Summary": "{pending} skill(s) with changes, {upToDate} already up to date.",
+      "ByName": "by name",
+      "ByNameHint": "Matched by name (the skill has no link to the system compendium). From now on it will be linked.",
+      "LinkOnly": "only the link to the compendium",
+      "KeepDescription": "Keep the current description",
+      "WasDisabled": "Effects switched off by hand will be replaced: {names}",
+      "UpToDate": "{count} up to date",
+      "Unmatched": "Not in the compendium (untouched): {names}",
+      "UnmatchedHint": "Homebrew or renamed skills: there is no system skill with this name.",
+      "Backups": "{count} with a previous version",
+      "Apply": "Update selected",
+      "Undo": "Undo last refresh ({count})",
+      "UndoConfirm": "Restore the previous version of {count} skill(s)?",
+      "Done": "{count} skill(s) refreshed from the compendium.",
+      "Undone": "{count} skill(s) restored.",
+      "Field": {
+        "description": "description",
+        "tags": "tags",
+        "timing": "timing",
+        "checkType": "check type",
+        "range": "range",
+        "target": "target",
+        "subtype": "type",
+        "cost": "cost",
+        "limit": "limit",
+        "check": "Check",
+        "damage": "Damage",
+        "conditions": "conditions",
+        "skillRank": "max SR",
+        "macroeffect": "macro",
+        "name": "name",
+        "img": "image",
+        "effects": "effects"
+      }
     }
   }
 }
