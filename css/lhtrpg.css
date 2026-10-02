@@ -4820,3 +4820,93 @@
 .lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-option {
   white-space: nowrap;
 }
+
+/* Refresh skills from the compendium (GM tool) */
+.lhtrpg.skill-refresh .skill-refresh-body {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.lhtrpg.skill-refresh .refresh-hint,
+.lhtrpg.skill-refresh .refresh-summary {
+  margin: 0 0 6px;
+}
+
+.lhtrpg.skill-refresh .refresh-actor {
+  margin-bottom: 8px;
+}
+
+.lhtrpg.skill-refresh .refresh-actor-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 2px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lhtrpg.skill-refresh .refresh-actor-name img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  object-fit: cover;
+}
+
+.lhtrpg.skill-refresh .refresh-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lhtrpg.skill-refresh .refresh-skill {
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lhtrpg.skill-refresh .refresh-skill-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lhtrpg.skill-refresh .refresh-skill-head img {
+  width: 22px;
+  height: 22px;
+  border: none;
+}
+
+.lhtrpg.skill-refresh .refresh-by-name {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.lhtrpg.skill-refresh .refresh-choice {
+  margin: 2px 0 2px 28px;
+  width: calc(100% - 28px);
+}
+
+.lhtrpg.skill-refresh .refresh-changes,
+.lhtrpg.skill-refresh .refresh-keep,
+.lhtrpg.skill-refresh .refresh-warning {
+  display: block;
+  margin-left: 28px;
+  font-size: 12px;
+}
+
+.lhtrpg.skill-refresh .refresh-changes {
+  opacity: 0.75;
+}
+
+.lhtrpg.skill-refresh .refresh-warning {
+  color: #e0a040;
+}
+
+.lhtrpg.skill-refresh .refresh-footnote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  font-size: 11px;
+  opacity: 0.7;
+}

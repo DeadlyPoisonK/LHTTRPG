@@ -18,6 +18,7 @@ import { registerPiles } from "./piles/piles.mjs";
 import { registerCharacterOptions } from "./helpers/character-options.mjs";
 import { OptionBrowser, registerOptionBrowser } from "./apps/option-browser.mjs";
 import { registerSkillBrowser } from "./apps/skill-browser.mjs";
+import { registerSkillRefresh } from "./apps/skill-refresh.mjs";
 import { rollSkill } from "./helpers/skill-rolls.mjs";
 import { registerCombatCards } from "./helpers/combat-cards.mjs";
 import { registerItemUse, useItem } from "./helpers/item-use.mjs";
@@ -111,6 +112,8 @@ Hooks.once('init', async function () {
   registerCharacterOptions();
   registerOptionBrowser();
   registerSkillBrowser();
+  // GM tool: refresh the skills characters own from the system compendiums
+  registerSkillRefresh();
 
   // Attack / damage chat cards: opposed Hit vs Dodge Checks and damage application
   registerCombatCards();

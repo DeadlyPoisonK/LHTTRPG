@@ -1,0 +1,45 @@
+<div class="skill-refresh-body">
+  <p class="refresh-hint">{{localize "LHTRPG.SkillRefresh.Hint"}}</p>
+  <p class="refresh-summary">{{localize "LHTRPG.SkillRefresh.Summary" pending=pending upToDate=upToDate}}</p>
+  {{#each rows}}
+  <section class="refresh-actor">
+    {{#unless ../single}}
+    <h3 class="refresh-actor-name"><img src="{{actorImg}}" alt="">{{actorName}}</h3>
+    {{/unless}}
+    {{#if skills.length}}
+    <ul class="refresh-list">
+      {{#each skills}}
+      <li class="refresh-skill">
+        <label class="refresh-skill-head">
+          <input type="checkbox" name="apply.{{key}}" checked>
+          <img src="{{img}}" alt="">
+          <span class="refresh-skill-name">{{name}}</span>
+          {{#if byName}}<span class="refresh-by-name" data-tooltip="{{localize 'LHTRPG.SkillRefresh.ByNameHint'}}">{{localize "LHTRPG.SkillRefresh.ByName"}}</span>{{/if}}
+        </label>
+        {{#if choice}}
+        <select name="choice.{{key}}" class="refresh-choice">
+          {{#each options}}<option value="{{value}}">{{label}}</option>{{/each}}
+        </select>
+        {{/if}}
+        <div class="refresh-changes">{{#if changes}}{{changes}}{{else}}{{localize "LHTRPG.SkillRefresh.LinkOnly"}}{{/if}}</div>
+        {{#if hasDescription}}
+        <label class="refresh-keep">
+          <input type="checkbox" name="keep.{{key}}" {{checked keepDescription}}>
+          {{localize "LHTRPG.SkillRefresh.KeepDescription"}}
+        </label>
+        {{/if}}
+        {{#if disabled}}
+        <div class="refresh-warning"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "LHTRPG.SkillRefresh.WasDisabled" names=disabled}}</div>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    <div class="refresh-footnote">
+      {{#if upToDate}}<span>{{localize "LHTRPG.SkillRefresh.UpToDate" count=upToDate}}</span>{{/if}}
+      {{#if unmatched}}<span data-tooltip="{{localize 'LHTRPG.SkillRefresh.UnmatchedHint'}}">{{localize "LHTRPG.SkillRefresh.Unmatched" names=unmatched}}</span>{{/if}}
+      {{#if backups}}<span>{{localize "LHTRPG.SkillRefresh.Backups" count=backups}}</span>{{/if}}
+    </div>
+  </section>
+  {{/each}}
+</div>

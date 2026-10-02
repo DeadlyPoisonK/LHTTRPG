@@ -11,6 +11,7 @@ import { equipInHand, getHands, swapHands, unequipHand } from "../helpers/hands.
 import { EQUIP_TYPES } from "../piles/pile-config.mjs";
 import { diceFormula } from "../helpers/dice.mjs";
 import { effectModified } from "../helpers/sheet-values.mjs";
+import { refreshSkills } from "../apps/skill-refresh.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -32,9 +33,18 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
   static DEFAULT_OPTIONS = {
     classes: ["lhtrpg", "sheet", "actor"],
     position: { width: 700, height: 700 },
-    window: { resizable: false },
+    window: {
+      resizable: false,
+      controls: [{
+        icon: "fa-solid fa-rotate",
+        label: "LHTRPG.SkillRefresh.SheetControl",
+        action: "refresh-skills",
+        visible: () => game.user.isGM
+      }]
+    },
     form: { submitOnChange: true },
     actions: {
+      "refresh-skills": LHTrpgActorSheet.#onRefreshSkills,
       editImage: LHTrpgActorSheet.#onEditImage,
       "item-throw": LHTrpgActorSheet.#onItemThrow,
       "item-use": LHTrpgActorSheet.#onItemUse,
@@ -727,6 +737,11 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
       left: this.position.left + 10
     });
     return fp.browse();
+  }
+
+  /** GM: refresh this character's skills from the system compendiums. */
+  static #onRefreshSkills() {
+    refreshSkills(this.actor);
   }
 
   static #onItemThrow(event, target) {

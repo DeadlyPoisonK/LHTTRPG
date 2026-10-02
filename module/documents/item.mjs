@@ -115,7 +115,9 @@ export class LHTrpgItem extends Item {
   async _preUpdate(changed, options, user) {
     if ((await super._preUpdate(changed, options, user)) === false) return false;
     // Once the Check is set on the sheet, the legacy free-text Check is no longer used.
-    if (["skill", "usable"].includes(this.type) && changed.system?.check && this._source.system.checkType) {
+    // (not when the whole skill is copied from elsewhere: refresh from the compendium, undo)
+    if (["skill", "usable"].includes(this.type) && changed.system?.check && this._source.system.checkType
+      && !options.lhKeepCheckType) {
       changed.system.checkType = "";
     }
   }
