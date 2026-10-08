@@ -38,6 +38,29 @@ export class LHTrpgActiveEffect extends ActiveEffect {
     /* --------------------------------------------- */
 
     /**
+     * Effects applied when a skill or item is used are temporary even without a core duration: they last until
+     * their Log Horizon expiry (end of process / round / scene) or, without one, the end of the scene.
+     * @inheritdoc
+     */
+    get isTemporary() {
+        return super.isTemporary || !!this.getFlag("lhtrpg", "expires") || !!this.getFlag("lhtrpg", "itemUse");
+    }
+
+    /* --------------------------------------------- */
+
+    /**
+     * The item that carries the effect, or the skill / item whose use applied it; else the core origin lookup
+     * (compendium effects come with no origin, which core shows as "None").
+     * @inheritdoc
+     */
+    get sourceName() {
+        if (this.parent?.documentName === "Item") return this.parent.name;
+        return this.getFlag("lhtrpg", "source")?.itemName || super.sourceName;
+    }
+
+    /* --------------------------------------------- */
+
+    /**
      * Formula values ("@sr*3") are evaluated against the actor and the source item. On a character, those
      * reading attributes wait for its modifiers: they are kept in `actor._lhDeferredChanges` and applied by
      * the actor (`_applyDeferredChanges`) with `actor._lhDeferredPass` set. Roll bonuses go to

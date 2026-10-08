@@ -4795,7 +4795,7 @@
 
 /* Check / Damage dice: a number or a formula ("@sr+3") */
 .lhtrpg.sheet.item .sheet-stats .stat-div .skill-roll-fields input.skill-roll-dice {
-  width: 52px;
+  width: 72px;
   padding: 0 4px;
   text-align: center;
 }
