@@ -20,6 +20,7 @@ An unofficial game system for playing [Log Horizon TRPG](https://en.wikipedia.or
 - **Opposed Checks and Combat Cards**: Chat cards for opposed Hit vs. Dodge checks (Evasion / Resistance) with automatic damage mitigation (Physical/Magic Defense, Cancel, Barrier, HP), Hate Damage, Pursuit, Weakness, and one-click Undo.
 - **Usable and Consumable Items**: Items with a dedicated "Use" action, phase timing checks, active effect transfer, and automatic consumption for `[Consumable]` items.
 - **Active Effects Destination Editor**: Active Effect editor that suggests valid targets for characters and monsters, so effects don't point at fields that don't exist.
+- **Automated Skills**: compendium skills scale with SR, CR and attributes, check their equipment and tier conditions, add bonuses to other skills' rolls, and come with their Check and Damage ready to roll. A GM tool updates the skills characters already have. See the [Automated Skills guide](docs/automated-skills.md).
 - **Skill Effects and Sustained Limits**: Skills can apply their effects when used, enforcing the sustained-skill limits (Harmony: 1, Servant Summon: 1, Enchantment: 2) with a dialog to pick which one to replace.
 - **Log Horizon Statuses and Token HUD Sync**: All 23 Log Horizon statuses (Life, Bad, Combat, Other) as token status effects, with Ratings and tags, kept in sync with the sheet both ways; `[Hidden]` hides the token from other players.
 - **Log Horizon Effect Durations**: Effects can expire at the end of the process, the round, or the scene.

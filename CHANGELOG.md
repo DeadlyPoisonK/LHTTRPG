@@ -4,6 +4,21 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
+## [Unreleased]
+
+### Added
+- Automated skills: effect values with formulas (`@sr`, `@cr`, attributes, weapon powers), conditions per
+  skill and per effect (SR/CR tiers, equipment, statuses, combat), bonuses to other skills' rolls with a skill
+  filter, and changes to other skills (Hate cost, range, notes). Compendium skills filled in: Constant bonuses,
+  Check / Damage of active skills, and effects applied when used.
+- GM tool to refresh the skills characters already have from the system compendium, with preview and undo.
+- [Automated Skills guide](docs/automated-skills.md) (also in [Spanish](docs/automated-skills.es.md)).
+
+### Fixed
+- The dice field of a skill's Check / Damage cut formulas such as `@sr+3`.
+- Effects applied when a skill is used are listed as temporary (and shown on the token) even without a core
+  duration, and the effects list shows the skill that gives each effect instead of "None".
+
 ## [2.0.2] - 2026-10-01
 
 ### Changed
