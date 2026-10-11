@@ -110,6 +110,7 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
     },
     changes: {
       template: "systems/lhtrpg/templates/effects/effect-changes.hbs",
+      templates: ["systems/lhtrpg/templates/effects/effect-change.hbs"],
       scrollable: ["ol[data-changes]"]
     },
     lhStatus: {
@@ -143,11 +144,7 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
   /** @override */
   async _preparePartContext(partId, context, options) {
     context = await super._preparePartContext(partId, context, options);
-    if (partId === "changes") {
-      const targetActorTypes = this.targetActorTypes;
-      context.targetActorTypes = targetActorTypes;
-      context.changeInfos = (context.source?.changes ?? []).map(c => getEffectKeyInfo(c?.key, targetActorTypes));
-    } else if (partId === "lhStatus") {
+    if (partId === "lhStatus") {
       const statusData = context.source?.flags?.lhtrpg?.statusData ?? {};
       const statusId = statusData.statusId ?? "";
       const statusInfo = LH_STATUSES.find(s => s.id === statusId);
@@ -203,6 +200,19 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
     return context;
   }
 
+  /**
+   * Core's change row, with the destination label / warnings below the key. Change types with their own
+   * renderer keep it.
+   * @override
+   */
+  async _renderChange(context) {
+    // Core prepares the row context (field paths, value as text, changeType) as it renders its own.
+    const html = await super._renderChange(context);
+    if (context.changeType?.render) return html;
+    context.info = getEffectKeyInfo(context.change.key, this.targetActorTypes);
+    return foundry.applications.handlebars.renderTemplate("systems/lhtrpg/templates/effects/effect-change.hbs", context);
+  }
+
   /** @override */
   async _onRender(context, options) {
     await super._onRender(context, options);
@@ -217,7 +227,7 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
 
     const rows = this.element.querySelectorAll("ol[data-changes] li[data-index]");
     for (const row of rows) {
-      const keyInput = row.querySelector('input[name$=".key"]');
+      const keyInput = row.querySelector('input[name^="system.changes."][name$=".key"]');
       if (!keyInput) continue;
       const infoEl = row.querySelector(".lh-effect-target-info");
 
@@ -300,11 +310,11 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
           const info = getEffectKeyInfo(option.value, targetActorTypes);
           if (infoEl) infoEl.innerHTML = renderTargetInfoHtml(info);
 
-          // If mode is empty or CUSTOM (0), default to ADD (2)
-          const modeEl = row.querySelector('[name$=".mode"]');
-          if (modeEl && (!modeEl.value || modeEl.value === "0")) {
-            modeEl.value = "2";
-            modeEl.dispatchEvent(new Event("change", { bubbles: true }));
+          // If the type is empty or Custom, default to Add
+          const typeEl = row.querySelector('[name$=".type"]');
+          if (typeEl && (!typeEl.value || typeEl.value === "custom")) {
+            typeEl.value = "add";
+            typeEl.dispatchEvent(new Event("change", { bubbles: true }));
           }
           // Not "input": the SuggestInput would take it as typing and reopen the menu.
           keyInput.dispatchEvent(new Event("change", { bubbles: true }));

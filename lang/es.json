@@ -128,6 +128,9 @@
       "EndOfRound": "Fin de ronda",
       "EndOfScene": "Fin de escena",
       "Hint": "Fin del proceso: caduca al terminar el proceso en curso (el Main Process del personaje activo, o el Setup/Cleanup Process). Fin de ronda: caduca al empezar la ronda siguiente. Fin de escena: caduca al terminar el combate. Fuera de combate no caducan solas.",
+      "Legend": "Duración de Log Horizon",
+      "CoreLegend": "Duración de Foundry",
+      "CoreHint": "La cuenta Foundry en tiempo o rondas de combate, y solo en los efectos de un actor. Los efectos de Log Horizon normalmente usan la duración de arriba: deja esto vacío. Los efectos que se aplican al usar una skill u objeto no la conservan.",
       "Short": {
         "EndOfProcess": "Fin proceso",
         "EndOfRound": "Fin de ronda",

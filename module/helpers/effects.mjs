@@ -19,7 +19,8 @@ export function onManageActiveEffect(event, owner, target) {
         name: game.i18n.localize("LHTRPG.Effect.New"),
         img: "icons/svg/aura.svg",
         origin: owner.uuid,
-        "duration.rounds": li?.dataset?.effectType === "temporary" ? 1 : undefined,
+        // Temporary: until the end of the round (Log Horizon duration, see effect-durations.mjs)
+        "flags.lhtrpg.expires": li?.dataset?.effectType === "temporary" ? "endOfRound" : undefined,
         disabled: li?.dataset?.effectType === "inactive"
       }]);
     case "edit":
@@ -72,6 +73,8 @@ export function prepareActiveEffectCategories(effects) {
     for ( let e of effects ) {
       e.sourceName; // Trigger a lookup for the source name
       if ( e.unmetCondition ) categories.unmet.effects.push(e);
+      // Expired by its core duration: shown with the inactive ones, not hidden
+      else if ( e.isSuppressed && !e._lhSuppressed && e.duration?.expired ) categories.inactive.effects.push(e);
       else if ( e.isSuppressed ) categories.suppressed.effects.push(e);
       else if ( e.disabled ) categories.inactive.effects.push(e);
       else if ( e.isTemporary ) categories.temporary.effects.push(e);

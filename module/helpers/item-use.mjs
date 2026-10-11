@@ -225,6 +225,9 @@ export async function applyItemEffects(item, actors, { useId, sustained } = {}) 
     data.transfer = false;
     data.disabled = false;
     data.img ||= item.img;
+    // The copy lasts its Log Horizon duration (below), not the item effect's core one: it starts now.
+    delete data.start;
+    delete data.duration;
     // Formulas ("@sr*3") take the caster's values now; the copy no longer depends on the skill.
     const values = formulaData(item.actor, item);
     data.system.changes = resolveChanges(data.system.changes, values);

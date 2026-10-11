@@ -69,11 +69,26 @@ export class LHTrpgActiveEffect extends ActiveEffect {
     /* --------------------------------------------- */
 
     /**
-     * Suppressed by the system (see determineSuppression) or, as in core, expired.
+     * Core only tracks (and expires) the core duration of effects on an actor that have one. Effects that are
+     * temporary just by their Log Horizon duration are left to effect-durations.mjs (with no core duration, core
+     * would expire them on any time advance or combat event); item effects are templates or passives, and the
+     * durations some carry from v13 never counted.
+     * @inheritdoc
+     */
+    get isExpiryTrackable() {
+        return super.isExpiryTrackable && (this.parent?.documentName === "Actor")
+            && (!!this.duration.expiry || Number.isFinite(this.duration.value));
+    }
+
+    /* --------------------------------------------- */
+
+    /**
+     * Suppressed by the system (see determineSuppression) or, as in core, expired (only effects on an actor
+     * expire: see isExpiryTrackable).
      * @inheritdoc
      */
     get isSuppressed() {
-        return this._lhSuppressed || super.isSuppressed;
+        return this._lhSuppressed || ((this.parent?.documentName === "Actor") && super.isSuppressed);
     }
 
     /* --------------------------------------------- */

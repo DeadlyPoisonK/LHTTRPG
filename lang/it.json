@@ -128,6 +128,9 @@
       "EndOfRound": "Fine del round",
       "EndOfScene": "Fine della scena",
       "Hint": "Fine del processo: scade al termine del processo in corso (il Main Process del personaggio attivo, o il Setup/Cleanup Process). Fine del round: scade all'inizio del round successivo. Fine della scena: scade al termine del combattimento. Fuori dal combattimento le durate non scadono da sole.",
+      "Legend": "Durata di Log Horizon",
+      "CoreLegend": "Durata di Foundry",
+      "CoreHint": "Conteggiata da Foundry in tempo o round di combattimento, e solo sugli effetti di un attore. Gli effetti di Log Horizon usano normalmente la durata qui sopra: lascia vuoto. Gli effetti applicati usando un'abilità o un oggetto non la mantengono.",
       "Short": {
         "EndOfProcess": "Fine proc.",
         "EndOfRound": "Fine round",
