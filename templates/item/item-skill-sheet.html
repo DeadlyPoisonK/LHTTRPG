@@ -6,14 +6,8 @@
       <div class="grid grid-3col">
         <div class="resource flexcol">
           <label class="resource-label">{{localize 'LHTRPG.Label.Type'}}</label>
-          <select name="system.subtype" value="{{system.subtype}}">
-            {{#select system.subtype}}
-              <option value="Basic">{{localize 'LHTRPG.Skill.Type.Basic'}}</option>
-              <option value="General">{{localize 'LHTRPG.Skill.Type.General'}}</option>
-              <option value="Combat">{{localize 'LHTRPG.Skill.Type.Combat'}}</option>
-              <option value="Monster">{{localize 'LHTRPG.Skill.Type.Monster'}}</option>
-              <option value="Item">{{localize 'LHTRPG.Skill.Type.Item'}}</option>
-            {{/select}}
+          <select name="system.subtype">
+            {{selectOptions subtypeOptions selected=system.subtype localize=true}}
           </select>
         </div>
         <div class="resource grid-span-2">

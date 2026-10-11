@@ -6,13 +6,8 @@
     <div class="stat-div">
       <label>{{localize 'LHTRPG.Label.Type'}}</label>
       <div>
-        <select name="system.subtype" value="{{system.subtype}}">
-          {{#select system.subtype}}
-            <option value="Treasure">{{localize 'LHTRPG.Ticket.Type.Treasure'}}</option>
-            <option value="Fate">{{localize 'LHTRPG.Ticket.Type.Fate'}}</option>
-            <option value="Connection">{{localize 'LHTRPG.Ticket.Type.Connection'}}</option>
-            <option value="Reset">{{localize 'LHTRPG.Ticket.Type.Reset'}}</option>
-          {{/select}}
+        <select name="system.subtype">
+          {{selectOptions subtypeOptions selected=system.subtype localize=true}}
         </select>
       </div>
     </div>

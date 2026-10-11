@@ -15,7 +15,7 @@
  *   exclusive     "Weapon Mastery"  only the highest bonus of the group applies to a roll
  * Fields left empty don't filter; filled ones must all match.
  *
- * LHTrpgActiveEffect#apply collects them in `actor.rollBonuses` (active, unsuppressed effects only) and
+ * The actor collects them in `actor.rollBonuses` (active, unsuppressed effects only, see actor.mjs) and
  * rollSkill (skill-rolls.mjs) adds those that match to the roll, listing them in the flavor.
  *
  * Skill modifiers use the same filter to change other skills (see skillModifiers):
@@ -24,7 +24,7 @@
  *   lhtrpg.skill.note       text shown with the skill ("Ignores [Cancel: Cold]")
  * They are shown on the skill sheet and chat card, and the range is used by the attack card.
  */
-import { evaluateFormula, formulaData, isFormula } from "./effect-formulas.mjs";
+import { changeType, evaluateFormula, formulaData, isFormula } from "./effect-formulas.mjs";
 import { canonicalTags, tagKey } from "./tag-catalog.mjs";
 import { mainWeapon, parseRange } from "./hands.mjs";
 
@@ -52,9 +52,9 @@ function parseRollKey(key) {
   return { roll, part };
 }
 
-/** Collect a roll bonus / skill modifier change (from LHTrpgActiveEffect#apply). */
+/** Collect a roll bonus / skill modifier change (from LHTrpgActor#_prepareEffects). */
 export function collectRollBonus(actor, effect, change) {
-  (actor.rollBonuses ??= []).push({ effect, key: change.key, value: change.value, mode: Number(change.mode ?? 2) });
+  (actor.rollBonuses ??= []).push({ effect, key: change.key, value: change.value, type: changeType(change) });
 }
 
 /** The value of a collected change: a number or a formula (with the SR of the effect's skill). */
@@ -186,7 +186,7 @@ export function skillModifiers(actor, item) {
     }
     else if ((field === "hateCost") && hate) {
       const value = bonusValue(actor, bonus);
-      if (bonus.mode === CONST.ACTIVE_EFFECT_MODES.OVERRIDE) costSet = (costSet === null) ? value : Math.min(costSet, value);
+      if (bonus.type === "override") costSet = (costSet === null) ? value : Math.min(costSet, value);
       else costAdd += value;
       costSources.push(label);
     }

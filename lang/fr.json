@@ -99,7 +99,13 @@
         "suppressed": "Effets supprimés",
         "unmet": "Condition non remplie"
       },
-      "Migrated": "Migration de {count} effet(s) actif(s)."
+      "Migrated": "Migration de {count} effet(s) actif(s).",
+      "Phase": {
+        "attributes": {
+          "label": "Après les attributs",
+          "hint": "Appliqué une fois les modificateurs d'attribut calculés, avant les tests et les statuts de combat. Les formules qui lisent les attributs (@dex, @str.base…) l'utilisent d'elles-mêmes."
+        }
+      }
     },
     "EffectConfig": {
       "Title": "Configuration de l'effet actif",

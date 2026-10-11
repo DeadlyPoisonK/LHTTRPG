@@ -2,7 +2,7 @@
 import { LHTrpgActor } from "./documents/actor.mjs";
 import { LHTrpgItem } from "./documents/item.mjs";
 import { LHTrpgCombat, registerCombatPhases } from "./documents/lhtrpgCombat.mjs";
-import { LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs"
+import { ATTRIBUTES_PHASE, LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs"
 // Import sheet classes.
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
 import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
@@ -65,6 +65,11 @@ Hooks.once('init', async function () {
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
+  // Changes applied once the attribute modifiers are computed (see LHTrpgActiveEffect#shouldApplyChange)
+  CONFIG.ActiveEffect.phases[ATTRIBUTES_PHASE] = {
+    label: "LHTRPG.Effect.Phase.attributes.label",
+    hint: "LHTRPG.Effect.Phase.attributes.hint"
+  };
   CONFIG.Token.objectClass = LHTrpgToken;
 
   // Log Horizon statuses (Token HUD, token icons, sheet sync, [Hidden])

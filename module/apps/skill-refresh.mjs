@@ -13,6 +13,8 @@
  * Opened from the character sheet header menu (one character) and from the system settings (all characters).
  */
 
+import { changeType } from "../helpers/effect-formulas.mjs";
+
 const { DialogV2 } = foundry.applications.api;
 
 /** Rules data taken from the compendium entry. */
@@ -72,7 +74,7 @@ function effectSignature(effect) {
     transfer: data.transfer,
     disabled: data.disabled,
     statuses: [...(data.statuses ?? [])].sort(),
-    changes: (data.changes ?? []).map(c => [c.key, Number(c.mode), String(c.value), c.priority ?? null]),
+    changes: (data.system?.changes ?? data.changes ?? []).map(c => [c.key, changeType(c), String(c.value), c.priority ?? null]),
     lhtrpg: data.flags?.lhtrpg ?? {}
   });
 }

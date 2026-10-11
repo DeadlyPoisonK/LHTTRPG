@@ -99,7 +99,13 @@
         "suppressed": "Suppressed Effects",
         "unmet": "Condition Not Met"
       },
-      "Migrated": "Migrated {count} active effect(s)."
+      "Migrated": "Migrated {count} active effect(s).",
+      "Phase": {
+        "attributes": {
+          "label": "After attributes",
+          "hint": "Applied once the attribute modifiers are computed, before checks and battle statuses. Formulas that read attributes (@dex, @str.base…) use it on their own."
+        }
+      }
     },
     "EffectConfig": {
       "Title": "Active Effect Configuration",

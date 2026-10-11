@@ -4,6 +4,8 @@ import { completeChecksChange, legacyChecksUpdate, prepareMonsterChecks } from "
 import { classStats, legacyOptionItems, raceStats } from "../helpers/character-options.mjs";
 import { getHands } from "../helpers/hands.mjs";
 import { isLocalChange } from "../helpers/clients.mjs";
+import { collectRollBonus, isSkillFilterKey } from "../helpers/roll-bonuses.mjs";
+import { ATTRIBUTES_PHASE } from "./lhtrpgActiveEffect.mjs";
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -78,10 +80,26 @@ export class LHTrpgActor extends Actor {
     yield* super.allApplicableEffects();
   }
 
-  /** @override */
-  applyActiveEffects() {
-    // The Active Effects do not have access to their parent at preparation time so we wait until this stage to determine whether they are suppressed or not.
-    // Also the effects of its items, which the item may suppress (unequipped, usable items…).
+  /** @inheritdoc */
+  _clearData() {
+    super._clearData();
+    // Bonuses to the rolls of some skills (see helpers/roll-bonuses.mjs)
+    this.rollBonuses = [];
+  }
+
+  /** @inheritdoc */
+  applyActiveEffects(phase) {
+    if (phase === "initial") this._prepareEffects();
+    return super.applyActiveEffects(phase);
+  }
+
+  /**
+   * Before the first phase of each preparation: whether each effect is suppressed, and the roll bonuses.
+   * The Active Effects do not have access to their parent at preparation time so we wait until this stage to
+   * determine whether they are suppressed or not. Also the effects of its items, which the item may suppress
+   * (unequipped, usable items…).
+   */
+  _prepareEffects() {
     // Conditions on statuses (see helpers/effect-conditions.mjs) read the statuses of the effects that
     // aren't conditional themselves: the actor's own are only gathered while the effects are applied.
     this._lhStatuses = new Set();
@@ -91,34 +109,18 @@ export class LHTrpgActor extends Actor {
     }
     for (const effect of this.allApplicableEffects()) effect.determineSuppression();
     this._lhStatuses = null;
-    // Changes whose formula reads attributes, applied in prepareDerivedData (see _applyDeferredChanges).
-    this._lhDeferredChanges = [];
-    // Bonuses to the rolls of some skills (see helpers/roll-bonuses.mjs)
-    this.rollBonuses = [];
-    return super.applyActiveEffects();
-  }
-
-  /**
-   * Apply the effect changes whose formula reads attribute modifiers ("@dex*2"), once they are computed
-   * and before the checks and battle statuses that add up the `.mod` fields (see LHTrpgActiveEffect#apply).
-   */
-  _applyDeferredChanges() {
-    const changes = this._lhDeferredChanges ?? [];
-    this._lhDeferredChanges = [];
-    if (!changes.length) return;
-    const overrides = {};
-    this._lhDeferredPass = true;
-    try {
-      for (const change of changes) Object.assign(overrides, change.effect.apply(this, change));
+    // Roll bonuses and skill modifiers: kept on the actor, evaluated when used (see LHTrpgActiveEffect#shouldApplyChange).
+    for (const effect of this.allApplicableEffects()) {
+      if (!effect.active) continue;
+      for (const change of effect.system.changes) {
+        if (isSkillFilterKey(change.key)) collectRollBonus(this, effect, change);
+      }
     }
-    finally {
-      this._lhDeferredPass = false;
-    }
-    foundry.utils.mergeObject(this.overrides, foundry.utils.expandObject(overrides));
   }
 
   /** @override */
   prepareBaseData() {
+    super.prepareBaseData();
     // Legacy text checks ("1+2D") must be { dice, mod } before effects add to them.
     if (this.type === 'monster') prepareMonsterChecks(this.system);
   }
@@ -138,7 +140,10 @@ export class LHTrpgActor extends Actor {
     const system = this.system;
     // Monsters set their values directly on the sheet: only their Evasion/Resistance need preparing.
     // (They have no class/race/infos, so the character computations below would throw.)
-    if (this.type === 'monster') return prepareMonsterChecks(system);
+    if (this.type === 'monster') {
+      this.applyActiveEffects(ATTRIBUTES_PHASE);
+      return prepareMonsterChecks(system);
+    }
     if (this.type !== 'character') return;
 
     const { str, dex, pow, int } = system.attributes;
@@ -179,8 +184,8 @@ export class LHTrpgActor extends Actor {
       if (attribute.mod !== undefined) attribute.mod = Math.floor(attribute.total / 3);
     }
 
-    // Effects whose formulas read the modifiers above
-    this._applyDeferredChanges();
+    // Effects whose formulas read the modifiers above (see LHTrpgActiveEffect#shouldApplyChange)
+    this.applyActiveEffects(ATTRIBUTES_PHASE);
 
     // Abilities Scores
     this._computeChecks();

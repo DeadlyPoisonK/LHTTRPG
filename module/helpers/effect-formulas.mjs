@@ -13,9 +13,9 @@
  *                        Power base already is the main weapon's, so "Attack Power becomes [Weapon's x2]" is
  *                        "+@weapon.attack" on Attack Power, and "[both weapons' combined]" is "+@offhand.attack".
  *
- * On a character the attribute modifiers are computed after the effects are applied (prepareDerivedData),
- * so changes that read them are deferred: LHTrpgActiveEffect#apply keeps them aside and the actor applies
- * them right after computing the modifiers, before checks and battle statuses (see actor.mjs).
+ * Formulas are evaluated by LHTrpgActiveEffect.applyChange. On a character the attribute modifiers are computed
+ * after the effects are applied (prepareDerivedData), so changes that read them go to a phase of their own
+ * (ATTRIBUTES_PHASE), applied right after computing the modifiers, before checks and battle statuses (see actor.mjs).
  * Effects copied to a target when a skill is used get their formulas resolved at that moment (item-use.mjs).
  */
 
@@ -23,6 +23,19 @@ import { getHands } from "./hands.mjs";
 
 const ATTRIBUTES = ["str", "dex", "pow", "int"];
 const ATTRIBUTE_REF = /@(str|dex|pow|int)\b/i;
+
+const MODE_TYPES = { 0: "custom", 1: "multiply", 2: "add", 3: "downgrade", 4: "upgrade", 5: "override" };
+
+/**
+ * The type of an effect change ("add", "override"…), also for data from before v14 (numeric `mode`).
+ * @param {object} change
+ * @returns {string}
+ */
+export function changeType(change) {
+  if (typeof change?.type === "string") return change.type;
+  const mode = Number(change?.mode ?? 2);
+  return MODE_TYPES[mode] ?? `custom.${mode}`;
+}
 
 /** Whether a change value is a formula (holds a @variable). */
 export function isFormula(value) {
@@ -118,6 +131,6 @@ export function resolveChanges(changes, data) {
   return (changes ?? []).map(change => {
     if (!isFormula(change.value)) return change;
     const result = evaluateFormula(change.value, data);
-    return { ...change, value: String(result ?? 0) };
+    return { ...change, value: result ?? 0 };
   });
 }

@@ -227,7 +227,7 @@ export async function applyItemEffects(item, actors, { useId, sustained } = {}) 
     data.img ||= item.img;
     // Formulas ("@sr*3") take the caster's values now; the copy no longer depends on the skill.
     const values = formulaData(item.actor, item);
-    data.changes = resolveChanges(data.changes, values);
+    data.system.changes = resolveChanges(data.system.changes, values);
     const statusData = data.flags?.lhtrpg?.statusData;
     if (isFormula(statusData?.value)) statusData.value = Math.max(1, evaluateFormula(statusData.value, values) ?? 1);
     delete data.flags?.lhtrpg?.conditions;

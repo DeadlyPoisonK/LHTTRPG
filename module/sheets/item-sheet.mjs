@@ -11,6 +11,12 @@ import { skillModifiers } from "../helpers/roll-bonuses.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
+/** Type dropdown of skills and tickets (labels: LHTRPG.Skill.Type.X, LHTRPG.Ticket.Type.X). */
+const SUBTYPES = {
+  skill: ["Basic", "General", "Combat", "Monster", "Item"],
+  ticket: ["Treasure", "Fate", "Connection", "Reset"]
+};
+
 /**
  * Sheet for items in AppV2.
  * Supports all 14 item types, dynamically selecting the template in _configureRenderParts.
@@ -114,6 +120,10 @@ export class LHTrpgItemSheet extends HandlebarsApplicationMixin(foundry.applicat
       // Hate cost / range / notes changed by the owner's effects (see roll-bonuses.mjs)
       if (item.type === "skill") context.skillMods = skillModifiers(actor, item);
     }
+
+    // Skill / Ticket type dropdown
+    const subtypes = SUBTYPES[item.type];
+    if (subtypes) context.subtypeOptions = Object.fromEntries(subtypes.map(t => [t, `LHTRPG.${item.type.capitalize()}.Type.${t}`]));
 
     // Usable items: Use button, when carried by a character
     if (item.type === "usable") context.canUse = canUseItem(item);

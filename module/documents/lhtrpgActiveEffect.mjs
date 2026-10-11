@@ -1,6 +1,13 @@
 import { evaluateFormula, formulaData, isFormula, readsAttributes } from "../helpers/effect-formulas.mjs";
 import { effectConditions, unmetCondition } from "../helpers/effect-conditions.mjs";
-import { collectRollBonus, isSkillFilterKey } from "../helpers/roll-bonuses.mjs";
+import { isSkillFilterKey } from "../helpers/roll-bonuses.mjs";
+
+/**
+ * Change phase of the formulas that read attribute modifiers ("@dex*2"): on a character they are computed in
+ * prepareDerivedData, so these changes apply there (see LHTrpgActor#prepareDerivedData), before the checks and
+ * battle statuses that add up the `.mod` fields.
+ */
+export const ATTRIBUTES_PHASE = "attributes";
 
 /**
  * Extend the base ActiveEffect class to implement system-specific logic.
@@ -9,10 +16,11 @@ import { collectRollBonus, isSkillFilterKey } from "../helpers/roll-bonuses.mjs"
 export class LHTrpgActiveEffect extends ActiveEffect {
 
     /**
-     * Is this active effect currently suppressed?
+     * Whether the system suppresses this effect: its item (unequipped…) or an unmet condition.
+     * See determineSuppression.
      * @type {boolean}
      */
-    isSuppressed = false;
+    _lhSuppressed = false;
 
     /**
      * The condition (see effect-conditions.mjs) that suppresses this effect, if any.
@@ -61,52 +69,65 @@ export class LHTrpgActiveEffect extends ActiveEffect {
     /* --------------------------------------------- */
 
     /**
-     * Formula values ("@sr*3") are evaluated against the actor and the source item. On a character, those
-     * reading attributes wait for its modifiers: they are kept in `actor._lhDeferredChanges` and applied by
-     * the actor (`_applyDeferredChanges`) with `actor._lhDeferredPass` set. Roll bonuses go to
-     * `actor.rollBonuses` instead.
+     * Suppressed by the system (see determineSuppression) or, as in core, expired.
      * @inheritdoc
      */
-    apply(actor, change) {
-        if (this.isSuppressed) return null;
-        // Roll bonuses and skill modifiers (see roll-bonuses.mjs): kept on the actor, evaluated when used.
-        if (isSkillFilterKey(change.key)) {
-            collectRollBonus(actor, this, change);
-            return {};
+    get isSuppressed() {
+        return this._lhSuppressed || super.isSuppressed;
+    }
+
+    /* --------------------------------------------- */
+
+    /**
+     * Roll bonuses and skill modifiers are not applied: the actor collects them (see LHTrpgActor#_prepareEffects).
+     * On a character, the changes whose formula reads attributes wait for the attributes phase.
+     * @inheritdoc
+     */
+    shouldApplyChange(change, options) {
+        if (isSkillFilterKey(change.key)) return false;
+        if ((change.phase === "initial") && (this.target?.type === "character") && readsAttributes(change.value)) {
+            return options?.phase === ATTRIBUTES_PHASE;
         }
-        if (isFormula(change.value)) {
-            if ((actor.type === "character") && readsAttributes(change.value) && !actor._lhDeferredPass) {
-                (actor._lhDeferredChanges ??= []).push(change);
-                return {};
-            }
-            const value = evaluateFormula(change.value, formulaData(actor, this.sourceItem));
+        return super.shouldApplyChange(change, options);
+    }
+
+    /* --------------------------------------------- */
+
+    /**
+     * Formula values ("@sr*3") are evaluated against the actor and the source item of the change's effect.
+     * @inheritdoc
+     */
+    static applyChange(targetDoc, change, options) {
+        const effect = change.effect;
+        if (effect && isFormula(change.value)) {
+            const value = evaluateFormula(change.value, formulaData(effect.target ?? targetDoc, effect.sourceItem));
             if (value === null) {
-                console.warn(`lhtrpg | Invalid formula "${change.value}" in effect "${this.name}" (${this.uuid})`);
+                console.warn(`lhtrpg | Invalid formula "${change.value}" in effect "${effect.name}" (${effect.uuid})`);
                 return {};
             }
-            change = { ...change, value: String(value) };
+            change = { ...change, value };
         }
-        return super.apply(actor, change);
+        return super.applyChange(targetDoc, change, options);
     }
 
     /**
      * Determine whether this Active Effect is suppressed or not.
      */
     determineSuppression() {
-        this.isSuppressed = false;
+        this._lhSuppressed = false;
         this.unmetCondition = null;
         if (this.disabled) return;
         const item = this.sourceItem;
         // Effect of an item held by the actor (transferred, or copied with it as origin): the item decides
         // (equipped, usable…).
         if (item) {
-            this.isSuppressed = item.areEffectsSuppressed;
-            if (this.isSuppressed) return;
+            this._lhSuppressed = item.areEffectsSuppressed;
+            if (this._lhSuppressed) return;
         }
         if (this.parent?.documentName === "Item" && !this.parent.parent) return;
         const actor = this.parent?.documentName === "Actor" ? this.parent : this.parent?.parent;
         this.unmetCondition = unmetCondition(effectConditions(this, item), actor, item);
-        this.isSuppressed = !!this.unmetCondition;
+        this._lhSuppressed = !!this.unmetCondition;
     }
 
 

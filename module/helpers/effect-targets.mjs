@@ -12,7 +12,7 @@
  * This module is pure (no global game/CONFIG/foundry calls at import time) so it can be run in Node.
  */
 
-import { evaluateFormula, formulaData, formulaLabel, isFormula } from "./effect-formulas.mjs";
+import { changeType, evaluateFormula, formulaData, formulaLabel, isFormula } from "./effect-formulas.mjs";
 import { conditionLabel } from "./effect-conditions.mjs";
 import { isSkillFilterKey, rollFilter, rollFilterLabel } from "./roll-bonuses.mjs";
 
@@ -320,12 +320,19 @@ function formatChangeSummary(change, data) {
   const rawVal = String(change.value ?? "").trim();
   if (!rawVal) return label;
 
-  const mode = Number(change.mode ?? 2); // Default to ADD (2)
+  // "add" shows a sign, the other types a prefix ("subtract" is shown as a negative addition).
+  const type = changeType(change);
+  const prefix = { multiply: "×", downgrade: "≤ ", upgrade: "≥ ", override: "= " }[type];
+  const signed = num => {
+    if (prefix) return `${prefix}${num}`;
+    if (type === "subtract") num = -num;
+    return num >= 0 ? `+${num}` : `${num}`;
+  };
 
   // Formulas: "Recovery +[SR×3] (6)", "Accuracy +[SR]D (2D)"; the value only when the effect has an actor.
   if (isFormula(rawVal) && !["tags", "text"].includes(target?.kind)) {
     const dice = target?.kind === "dice" ? "D" : "";
-    const sign = { 1: "×", 3: "≤ ", 4: "≥ ", 5: "= " }[mode] ?? "+";
+    const sign = prefix ?? ((type === "subtract") ? "-" : "+");
     const value = data ? evaluateFormula(rawVal, data) : null;
     const result = (value === null) ? "" : ` (${value}${dice})`;
     return `${label} ${sign}[${escape(formulaLabel(rawVal))}]${dice}${result}`;
@@ -345,50 +352,18 @@ function formatChangeSummary(change, data) {
   if (target?.kind === "dice") {
     const match = rawVal.match(/^([+-]?\d+)\s*d?$/i);
     const num = match ? Number(match[1]) : Number(rawVal);
-    let valPart;
-    if (Number.isFinite(num)) {
-      switch (mode) {
-        case 1: valPart = `×${num}D`; break;
-        case 3: valPart = `≤ ${num}D`; break;
-        case 4: valPart = `≥ ${num}D`; break;
-        case 5: valPart = `= ${num}D`; break;
-        case 2:
-        default:
-          valPart = num >= 0 ? `+${num}D` : `${num}D`;
-          break;
-      }
-    } else {
-      valPart = rawVal.startsWith("+") || rawVal.startsWith("-") ? rawVal : `+${rawVal}`;
-    }
+    const valPart = Number.isFinite(num)
+      ? `${signed(num)}D`
+      : (rawVal.startsWith("+") || rawVal.startsWith("-") ? rawVal : `+${rawVal}`);
     return `${label} ${valPart}`.trim();
   }
 
   // Numeric fields and fallback for unknown keys
   const num = Number(rawVal);
   let valPart;
-  if (Number.isFinite(num)) {
-    switch (mode) {
-      case 1: valPart = `×${num}`; break;
-      case 3: valPart = `≤ ${num}`; break;
-      case 4: valPart = `≥ ${num}`; break;
-      case 5: valPart = `= ${num}`; break;
-      case 2:
-      default:
-        valPart = num >= 0 ? `+${num}` : `${num}`;
-        break;
-    }
-  } else {
-    switch (mode) {
-      case 1: valPart = `×${escape(rawVal)}`; break;
-      case 3: valPart = `≤ ${escape(rawVal)}`; break;
-      case 4: valPart = `≥ ${escape(rawVal)}`; break;
-      case 5: valPart = `= ${escape(rawVal)}`; break;
-      case 2:
-      default:
-        valPart = rawVal.startsWith("+") || rawVal.startsWith("-") ? escape(rawVal) : `+${escape(rawVal)}`;
-        break;
-    }
-  }
+  if (Number.isFinite(num)) valPart = signed(num);
+  else if (prefix) valPart = `${prefix}${escape(rawVal)}`;
+  else valPart = rawVal.startsWith("+") || rawVal.startsWith("-") ? escape(rawVal) : `+${escape(rawVal)}`;
 
   return `${label} ${valPart}`.trim();
 }
@@ -402,11 +377,13 @@ function formatChangeSummary(change, data) {
  */
 export function lhEffectSummary(changesOrEffect, options) {
   const escapeText = globalThis.foundry?.utils?.escapeHTML ?? (s => s);
-  const changes = Array.isArray(changesOrEffect?.changes)
-    ? changesOrEffect.changes
-    : Array.isArray(changesOrEffect)
-      ? changesOrEffect
-      : [];
+  const changes = Array.isArray(changesOrEffect?.system?.changes)
+    ? changesOrEffect.system.changes
+    : Array.isArray(changesOrEffect?.changes)
+      ? changesOrEffect.changes
+      : Array.isArray(changesOrEffect)
+        ? changesOrEffect
+        : [];
 
   const statusData = changesOrEffect?.flags?.lhtrpg?.statusData
     ?? (typeof changesOrEffect?.getFlag === "function" ? changesOrEffect.getFlag("lhtrpg", "statusData") : null)
@@ -513,10 +490,10 @@ async function _migrateDocEffects(doc, actorType) {
   // Effects directly on the document
   const updates = [];
   for (const effect of doc.effects ?? []) {
-    const sourceChanges = effect._source?.changes;
+    const sourceChanges = effect._source?.system?.changes;
     if (!Array.isArray(sourceChanges)) continue;
     const { changes, changed } = migrateEffectChanges(sourceChanges, actorType);
-    if (changed) updates.push({ _id: effect.id, changes });
+    if (changed) updates.push({ _id: effect.id, "system.changes": changes });
   }
   if (updates.length) {
     try {
@@ -533,10 +510,10 @@ async function _migrateDocEffects(doc, actorType) {
     for (const item of doc.items) {
       const itemUpdates = [];
       for (const effect of item.effects ?? []) {
-        const sourceChanges = effect._source?.changes;
+        const sourceChanges = effect._source?.system?.changes;
         if (!Array.isArray(sourceChanges)) continue;
         const { changes, changed } = migrateEffectChanges(sourceChanges, actorType);
-        if (changed) itemUpdates.push({ _id: effect.id, changes });
+        if (changed) itemUpdates.push({ _id: effect.id, "system.changes": changes });
       }
       if (itemUpdates.length) {
         try {
@@ -556,7 +533,7 @@ async function _migrateDocEffects(doc, actorType) {
 /** Comparable form of a list of changes (keys already migrated for the actor type). */
 function _changesSignature(changes, actorType) {
   return JSON.stringify(migrateEffectChanges(changes, actorType).changes
-    .map(c => [c.key, Number(c.mode), String(c.value ?? "").trim()]));
+    .map(c => [c.key, changeType(c), String(c.value ?? "").trim()]));
 }
 
 /**
@@ -569,9 +546,9 @@ function _changesSignature(changes, actorType) {
  */
 async function _deleteLegacyEffectCopies(actor) {
   const transferred = new Set(actor.items.contents.flatMap(item => item.effects.contents
-    .filter(e => e.transfer).map(e => `${e.name}|${_changesSignature(e._source.changes, actor.type)}`)));
+    .filter(e => e.transfer).map(e => `${e.name}|${_changesSignature(e._source.system?.changes, actor.type)}`)));
   const ids = actor.effects
-    .filter(e => transferred.has(`${e.name}|${_changesSignature(e._source.changes, actor.type)}`))
+    .filter(e => transferred.has(`${e.name}|${_changesSignature(e._source.system?.changes, actor.type)}`))
     .map(e => e.id);
   if (!ids.length) return { count: 0, failed: 0 };
   try {

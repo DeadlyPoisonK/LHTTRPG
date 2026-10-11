@@ -99,7 +99,13 @@
         "suppressed": "Efectos suprimidos",
         "unmet": "Condición no cumplida"
       },
-      "Migrated": "Migrados {count} efectos activos."
+      "Migrated": "Migrados {count} efectos activos.",
+      "Phase": {
+        "attributes": {
+          "label": "Tras los atributos",
+          "hint": "Se aplica cuando ya están calculados los modificadores de atributo, antes de las pruebas y los estados de combate. Las fórmulas que leen atributos (@dex, @str.base…) lo usan solas."
+        }
+      }
     },
     "EffectConfig": {
       "Title": "Configuración de Efecto Activo",

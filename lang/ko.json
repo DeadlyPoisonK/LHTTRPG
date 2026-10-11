@@ -99,7 +99,13 @@
         "suppressed": "억제된 효과",
         "unmet": "조건 미충족"
       },
-      "Migrated": "{count}개의 액티브 이펙트를 마이그레이션했습니다."
+      "Migrated": "{count}개의 액티브 이펙트를 마이그레이션했습니다.",
+      "Phase": {
+        "attributes": {
+          "label": "능력치 이후",
+          "hint": "능력치 수정치가 계산된 뒤, 판정과 전투 스테이터스 이전에 적용됩니다. 능력치를 참조하는 식(@dex, @str.base…)은 자동으로 이 단계를 사용합니다."
+        }
+      }
     },
     "EffectConfig": {
       "Title": "액티브 이펙트 설정",
