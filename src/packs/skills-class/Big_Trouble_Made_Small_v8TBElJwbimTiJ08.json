@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "F3nL8yR2sW9vT1kQ",
-      "changes": [
-        {
-          "key": "system.fate.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Big Trouble Made Small",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.fate.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!v8TBElJwbimTiJ08.F3nL8yR2sW9vT1kQ"
+      "_key": "!items.effects!v8TBElJwbimTiJ08.F3nL8yR2sW9vT1kQ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 3400000,

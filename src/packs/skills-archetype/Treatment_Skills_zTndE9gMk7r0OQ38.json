@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "trmtEff001recint",
-      "changes": [
-        {
-          "key": "system.battle-status.power.restoration.mod",
-          "mode": 2,
-          "value": "@int",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Treatment Skills",
       "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.restoration.mod",
+            "type": "add",
+            "value": "@int",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!zTndE9gMk7r0OQ38.trmtEff001recint"
+      "_key": "!items.effects!zTndE9gMk7r0OQ38.trmtEff001recint",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

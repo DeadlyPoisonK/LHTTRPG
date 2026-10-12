@@ -37,27 +37,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
-      "origin": "Compendium.world.medicine.Item.Lnc2IYEezmo7ZQfA",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "Analysis +1",
       "_id": "A9mrPF5KPKuJs2r6",
-      "changes": [
-        {
-          "key": "system.checks.analysis.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -76,9 +65,21 @@
       },
       "img": "icons/consumables/potions/potion-flash-open-blue.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.analysis.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!Lnc2IYEezmo7ZQfA.A9mrPF5KPKuJs2r6"
+      "_key": "!items.effects!Lnc2IYEezmo7ZQfA.A9mrPF5KPKuJs2r6",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

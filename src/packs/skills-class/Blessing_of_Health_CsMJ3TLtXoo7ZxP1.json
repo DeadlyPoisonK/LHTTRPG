@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "l4Pq9B1vW5kL2xN8",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.dice",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -66,11 +55,23 @@
       "name": "Blessing of Health",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.dice",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!CsMJ3TLtXoo7ZxP1.l4Pq9B1vW5kL2xN8"
+      "_key": "!items.effects!CsMJ3TLtXoo7ZxP1.l4Pq9B1vW5kL2xN8",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 400000,

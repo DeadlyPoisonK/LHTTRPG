@@ -31,26 +31,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
   "effects": [
     {
-      "origin": "Compendium.world.warrior-archetype-class.d9E5ZdyG8ARBjo7j",
+      "origin": null,
       "duration": {
-        "rounds": 1,
-        "startTime": 240,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "_id": "Lq7huwqUdx8b8M0k",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -72,11 +61,23 @@
       "name": "1D Hitcheck",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!d9E5ZdyG8ARBjo7j.Lq7huwqUdx8b8M0k"
+      "_key": "!items.effects!d9E5ZdyG8ARBjo7j.Lq7huwqUdx8b8M0k",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

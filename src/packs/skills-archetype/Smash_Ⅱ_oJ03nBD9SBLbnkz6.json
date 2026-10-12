@@ -33,24 +33,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "a5V9pL3sN7mK1zT8",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -83,33 +72,34 @@
       "name": "Smash Ⅱ (CR11-16)",
       "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*4",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!oJ03nBD9SBLbnkz6.a5V9pL3sN7mK1zT8"
+      "_key": "!items.effects!oJ03nBD9SBLbnkz6.a5V9pL3sN7mK1zT8",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "e2N6qW8zK3mY5pL1",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -146,33 +136,34 @@
       "name": "Smash Ⅱ (CR17-22)",
       "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!oJ03nBD9SBLbnkz6.e2N6qW8zK3mY5pL1"
+      "_key": "!items.effects!oJ03nBD9SBLbnkz6.e2N6qW8zK3mY5pL1",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "u9K1mY7sL5vC2pT6",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*7",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -205,11 +196,23 @@
       "name": "Smash Ⅱ (CR23+)",
       "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*7",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!oJ03nBD9SBLbnkz6.u9K1mY7sL5vC2pT6"
+      "_key": "!items.effects!oJ03nBD9SBLbnkz6.u9K1mY7sL5vC2pT6",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -33,24 +33,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "d5V9pL3sK8mY1zT6",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -83,33 +72,34 @@
       "name": "Pinpoint II (CR11-20)",
       "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!n5iNiLzvlsupyd2o.d5V9pL3sK8mY1zT6"
+      "_key": "!items.effects!n5iNiLzvlsupyd2o.d5V9pL3sK8mY1zT6",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "s2N6qW8zL1mY4pK9",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*7",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -142,11 +132,23 @@
       "name": "Pinpoint II (CR21+)",
       "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*7",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!n5iNiLzvlsupyd2o.s2N6qW8zL1mY4pK9"
+      "_key": "!items.effects!n5iNiLzvlsupyd2o.s2N6qW8zL1mY4pK9",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

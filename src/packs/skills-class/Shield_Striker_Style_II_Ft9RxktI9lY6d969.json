@@ -28,26 +28,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
   "effects": [
     {
-      "origin": "Compendium.world.guardian.Ft9RxktI9lY6d969",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "R7vP1wL4tK9mN2qS",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@str",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -74,33 +63,34 @@
       "name": "Shield Striker Style II (Attack Power)",
       "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@str",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ft9RxktI9lY6d969.R7vP1wL4tK9mN2qS"
+      "_key": "!items.effects!Ft9RxktI9lY6d969.R7vP1wL4tK9mN2qS",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "UV0YTM400g7Gu5Db",
-      "changes": [
-        {
-          "key": "system.battle-status.defense.phys.mod",
-          "mode": 2,
-          "value": "@int",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -127,11 +117,23 @@
       "name": "Shield Striker Style II (SR3: Physical Defense)",
       "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.defense.phys.mod",
+            "type": "add",
+            "value": "@int",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ft9RxktI9lY6d969.UV0YTM400g7Gu5Db"
+      "_key": "!items.effects!Ft9RxktI9lY6d969.UV0YTM400g7Gu5Db",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

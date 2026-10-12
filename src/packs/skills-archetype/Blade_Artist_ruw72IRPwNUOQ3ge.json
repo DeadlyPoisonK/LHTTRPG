@@ -33,26 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
   "effects": [
     {
-      "origin": "Compendium.world.weapon-master-archetype-class.ruw72IRPwNUOQ3ge",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "ISBOm3pbP4ELivnT",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "+1D [Hit Checks].",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!ruw72IRPwNUOQ3ge.ISBOm3pbP4ELivnT"
+      "_key": "!items.effects!ruw72IRPwNUOQ3ge.ISBOm3pbP4ELivnT",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

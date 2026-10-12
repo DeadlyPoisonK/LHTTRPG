@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "resiEff001recpow",
-      "changes": [
-        {
-          "key": "system.battle-status.power.restoration.mod",
-          "mode": 2,
-          "value": "@pow",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Resilience",
       "img": "systems/lhtrpg/assets/ui/icons/crested-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.restoration.mod",
+            "type": "add",
+            "value": "@pow",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!XhFxN7V1K2SFG8EF.resiEff001recpow"
+      "_key": "!items.effects!XhFxN7V1K2SFG8EF.resiEff001recpow",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

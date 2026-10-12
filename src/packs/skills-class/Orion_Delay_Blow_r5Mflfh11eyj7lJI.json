@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "tP6yM2vR8wX1nK4z",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -64,28 +60,28 @@
       "name": "Orion Delay Blow (1)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "pursuit"
       ],
       "sort": 0,
-      "_key": "!items.effects!r5Mflfh11eyj7lJI.tP6yM2vR8wX1nK4z"
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.tP6yM2vR8wX1nK4z",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "wL9kC3rB7vT5zN2p",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -117,28 +113,28 @@
       "name": "Orion Delay Blow (2)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "pursuit"
       ],
       "sort": 0,
-      "_key": "!items.effects!r5Mflfh11eyj7lJI.wL9kC3rB7vT5zN2p"
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.wL9kC3rB7vT5zN2p",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "jR1vT4wL8pM2yX6q",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -170,13 +166,17 @@
       "name": "Orion Delay Blow (3)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "pursuit"
       ],
       "sort": 0,
-      "_key": "!items.effects!r5Mflfh11eyj7lJI.jR1vT4wL8pM2yX6q"
+      "_key": "!items.effects!r5Mflfh11eyj7lJI.jR1vT4wL8pM2yX6q",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

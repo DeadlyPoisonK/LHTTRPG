@@ -35,17 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "r3N7qW1zL8mY5pK2",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -70,13 +66,17 @@
       "name": "Invisibility",
       "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "hidden"
       ],
       "sort": 0,
-      "_key": "!items.effects!O3L3diVmgmsHeBW4.r3N7qW1zL8mY5pK2"
+      "_key": "!items.effects!O3L3diVmgmsHeBW4.r3N7qW1zL8mY5pK2",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

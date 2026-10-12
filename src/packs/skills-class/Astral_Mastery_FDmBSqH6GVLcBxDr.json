@@ -24,24 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "A9vP7tN2mK5qJ8zL",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.dice",
-          "mode": 2,
-          "value": "@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -67,11 +56,23 @@
       "name": "Astral Mastery",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.dice",
+            "type": "add",
+            "value": "@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!FDmBSqH6GVLcBxDr.A9vP7tN2mK5qJ8zL"
+      "_key": "!items.effects!FDmBSqH6GVLcBxDr.A9vP7tN2mK5qJ8zL",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

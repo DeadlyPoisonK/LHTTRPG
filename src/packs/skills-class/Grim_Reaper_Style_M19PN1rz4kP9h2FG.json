@@ -28,26 +28,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
   "effects": [
     {
-      "origin": "Compendium.world.assassin.M19PN1rz4kP9h2FG",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "wWOr6pgfaIrPXRMB",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.check.dice",
-          "mode": 2,
-          "value": "@sr+1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -73,11 +62,23 @@
       "name": "Grim Reaper Style (Hit Check: Hidden)",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.check.dice",
+            "type": "add",
+            "value": "@sr+1",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!M19PN1rz4kP9h2FG.wWOr6pgfaIrPXRMB"
+      "_key": "!items.effects!M19PN1rz4kP9h2FG.wWOr6pgfaIrPXRMB",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

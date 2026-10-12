@@ -33,32 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/half-alv.svg",
   "effects": [
     {
-      "origin": "Compendium.world.racial-half-alv.lq4PO0ZGtaJApmZm",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "hoZsaIe8rXOyQLRZ",
-      "changes": [
-        {
-          "key": "system.attributes.dex.effect",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        },
-        {
-          "key": "system.attributes.int.effect",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -76,11 +59,30 @@
       "name": "DEX & INT +2",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.dex.effect",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.attributes.int.effect",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!lq4PO0ZGtaJApmZm.hoZsaIe8rXOyQLRZ"
+      "_key": "!items.effects!lq4PO0ZGtaJApmZm.hoZsaIe8rXOyQLRZ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

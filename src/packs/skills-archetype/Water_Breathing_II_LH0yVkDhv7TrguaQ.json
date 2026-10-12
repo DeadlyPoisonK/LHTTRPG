@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "n6V2pL8sK4mY1zT7",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Aquatic]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -74,26 +63,34 @@
       "name": "Water Breathing II - Aquatic",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Aquatic]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!LH0yVkDhv7TrguaQ.n6V2pL8sK4mY1zT7"
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.n6V2pL8sK4mY1zT7",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "h3N7qW1zT8mK5pL2",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -126,28 +123,28 @@
       "name": "Water Breathing II - Cancel (Aquatic) (CR11-20)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "cancel"
       ],
       "sort": 0,
-      "_key": "!items.effects!LH0yVkDhv7TrguaQ.h3N7qW1zT8mK5pL2"
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.h3N7qW1zT8mK5pL2",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "x1K5mY9sL3vC7pT4",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -180,13 +177,17 @@
       "name": "Water Breathing II - Cancel (Aquatic) (CR21+)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "cancel"
       ],
       "sort": 0,
-      "_key": "!items.effects!LH0yVkDhv7TrguaQ.x1K5mY9sL3vC7pT4"
+      "_key": "!items.effects!LH0yVkDhv7TrguaQ.x1K5mY9sL3vC7pT4",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

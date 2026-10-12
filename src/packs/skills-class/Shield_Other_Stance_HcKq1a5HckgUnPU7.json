@@ -25,17 +25,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "jT2kC6rB1wP8zM5n",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -62,13 +58,17 @@
       "name": "Shield Other Stance (Cancel)",
       "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "cancel"
       ],
       "sort": 0,
-      "_key": "!items.effects!HcKq1a5HckgUnPU7.jT2kC6rB1wP8zM5n"
+      "_key": "!items.effects!HcKq1a5HckgUnPU7.jT2kC6rB1wP8zM5n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

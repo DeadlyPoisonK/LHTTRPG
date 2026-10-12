@@ -24,17 +24,13 @@
       "img": "systems/lhtrpg/assets/ui/icons/farmer.svg",
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "b9V3pL7sK2mY6zT1",
-      "changes": [],
       "description": "",
       "transfer": false,
       "statuses": [
@@ -64,7 +60,12 @@
         "exportSource": null
       },
       "sort": 0,
-      "_key": "!items.effects!rL0Gm1eWuv8Lm4yC.b9V3pL7sK2mY6zT1"
+      "_key": "!items.effects!rL0Gm1eWuv8Lm4yC.b9V3pL7sK2mY6zT1",
+      "system": {
+        "changes": []
+      },
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -41,30 +41,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "tmplEff001evares",
-      "changes": [
-        {
-          "key": "system.checks.evasion.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.resistance.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -82,33 +65,41 @@
       "name": "Templar Style",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.evasion.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.resistance.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!CbiqPCWcAgo5kJuG.tmplEff001evares"
+      "_key": "!items.effects!CbiqPCWcAgo5kJuG.tmplEff001evares",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "tmplEff002pdefst",
-      "changes": [
-        {
-          "key": "system.battle-status.defense.phys.mod",
-          "mode": 2,
-          "value": "@str",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -135,11 +126,23 @@
       "name": "Templar Style (SR2)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.defense.phys.mod",
+            "type": "add",
+            "value": "@str",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!CbiqPCWcAgo5kJuG.tmplEff002pdefst"
+      "_key": "!items.effects!CbiqPCWcAgo5kJuG.tmplEff002pdefst",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

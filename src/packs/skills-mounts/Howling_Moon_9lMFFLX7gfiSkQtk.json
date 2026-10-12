@@ -29,17 +29,13 @@
       "img": "systems/lhtrpg/assets/ui/icons/horse-head.svg",
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "j4N8qW2zL6mK9pT3",
-      "changes": [],
       "description": "",
       "transfer": false,
       "statuses": [
@@ -69,7 +65,12 @@
         "exportSource": null
       },
       "sort": 0,
-      "_key": "!items.effects!9lMFFLX7gfiSkQtk.j4N8qW2zL6mK9pT3"
+      "_key": "!items.effects!9lMFFLX7gfiSkQtk.j4N8qW2zL6mK9pT3",
+      "system": {
+        "changes": []
+      },
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

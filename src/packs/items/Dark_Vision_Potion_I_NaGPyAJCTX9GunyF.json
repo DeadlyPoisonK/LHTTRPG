@@ -36,27 +36,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
-      "origin": "Compendium.world.medicine.Item.NaGPyAJCTX9GunyF",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "Dark Vision Potion I",
       "_id": "y26ggYwU8N9dJS84",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "Night Vision",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -75,9 +64,21 @@
       },
       "img": "icons/consumables/potions/flask-ornate-skull-green.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "Night Vision",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!NaGPyAJCTX9GunyF.y26ggYwU8N9dJS84"
+      "_key": "!items.effects!NaGPyAJCTX9GunyF.y26ggYwU8N9dJS84",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

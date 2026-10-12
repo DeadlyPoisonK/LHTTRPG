@@ -33,26 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/dwarf-helmet.svg",
   "effects": [
     {
-      "origin": "Compendium.world.racial-dwarf.i0FvgjQzA7bmXRET",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "zaTGvCCnk2GfolpB",
-      "changes": [
-        {
-          "key": "system.attributes.str.effect",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,33 +59,34 @@
       "name": "STR+2",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.str.effect",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!i0FvgjQzA7bmXRET.zaTGvCCnk2GfolpB"
+      "_key": "!items.effects!i0FvgjQzA7bmXRET.zaTGvCCnk2GfolpB",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.racial-dwarf.i0FvgjQzA7bmXRET",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "f3Srrzqq2TEc60AV",
-      "changes": [
-        {
-          "key": "system.attributes.pow.effect",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -114,11 +104,23 @@
       "name": "POW+2",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.pow.effect",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!i0FvgjQzA7bmXRET.f3Srrzqq2TEc60AV"
+      "_key": "!items.effects!i0FvgjQzA7bmXRET.f3Srrzqq2TEc60AV",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

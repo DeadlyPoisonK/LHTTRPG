@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "jHIjpELBaRESPfDj",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*3",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -78,11 +67,23 @@
       "name": "Silent Predator",
       "img": "systems/lhtrpg/assets/ui/icons/wolf-head.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*3",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!xij0iPFy8XY00tgb.jHIjpELBaRESPfDj"
+      "_key": "!items.effects!xij0iPFy8XY00tgb.jHIjpELBaRESPfDj",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

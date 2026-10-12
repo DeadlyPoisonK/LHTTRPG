@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "MPj2eF8vMIWyuvKS",
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "8",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Hermit Blood (Bonus HP)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!ajIyJ0MHzJc8iLyd.MPj2eF8vMIWyuvKS"
+      "_key": "!items.effects!ajIyJ0MHzJc8iLyd.MPj2eF8vMIWyuvKS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

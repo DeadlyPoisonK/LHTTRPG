@@ -25,24 +25,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "x5Nw1B8vM9pL2cN4",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -70,31 +59,32 @@
       "name": "Keen Edge II (CR 1-20)",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*4",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!VIbVpmkaJ7FOWi7i.x5Nw1B8vM9pL2cN4"
+      "_key": "!items.effects!VIbVpmkaJ7FOWi7i.x5Nw1B8vM9pL2cN4",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "m7Pq4B2vW1kL8xN9",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -122,9 +112,21 @@
       "name": "Keen Edge II (CR 21+)",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!VIbVpmkaJ7FOWi7i.m7Pq4B2vW1kL8xN9"
+      "_key": "!items.effects!VIbVpmkaJ7FOWi7i.m7Pq4B2vW1kL8xN9",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

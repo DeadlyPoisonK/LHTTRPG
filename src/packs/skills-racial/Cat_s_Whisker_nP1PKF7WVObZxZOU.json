@@ -33,24 +33,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "PBMIZyW5yMYvgyys",
-      "changes": [
-        {
-          "key": "system.checks.perception.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -68,11 +57,23 @@
       "name": "Cat's Whisker",
       "img": "systems/lhtrpg/assets/ui/icons/cat.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.perception.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!nP1PKF7WVObZxZOU.PBMIZyW5yMYvgyys"
+      "_key": "!items.effects!nP1PKF7WVObZxZOU.PBMIZyW5yMYvgyys",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

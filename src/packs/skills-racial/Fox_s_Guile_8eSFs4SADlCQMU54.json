@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qxx8bgHlXjmuGrgk",
-      "changes": [
-        {
-          "key": "system.attributes.pow.effect",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Fox's Guile",
       "img": "systems/lhtrpg/assets/ui/icons/fox-tail.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.pow.effect",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!8eSFs4SADlCQMU54.qxx8bgHlXjmuGrgk"
+      "_key": "!items.effects!8eSFs4SADlCQMU54.qxx8bgHlXjmuGrgk",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

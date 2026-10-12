@@ -24,17 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "b7Mw2B9vL1pK5xN8",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -60,12 +56,16 @@
       "name": "Heartbeat Healing II",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "sort": 0,
       "_key": "!items.effects!5HcDncaQmrS4DbS1.b7Mw2B9vL1pK5xN8",
       "statuses": [
         "regen"
-      ]
+      ],
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

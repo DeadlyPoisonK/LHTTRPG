@@ -24,26 +24,15 @@
   },
   "effects": [
     {
-      "origin": "Compendium.world.summoner.7daXOegcShIAh7Fh",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "W4mP8tL1vK7qR2rS",
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "8",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -61,11 +50,23 @@
       "name": "Utility Summon: Brownie",
       "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!7daXOegcShIAh7Fh.W4mP8tL1vK7qR2rS"
+      "_key": "!items.effects!7daXOegcShIAh7Fh.W4mP8tL1vK7qR2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

@@ -395,15 +395,11 @@
   "effects": [
     {
       "flags": {},
-      "changes": [],
       "duration": {
-        "startTime": 348,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": 4,
-        "startTurn": 7
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "_id": "KiJXeFyh3gq9SUeX",
       "disabled": false,
@@ -424,11 +420,15 @@
       "name": "Barrier",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!actors.effects!2XQ0riyKt6rm2PLv.KiJXeFyh3gq9SUeX"
+      "_key": "!actors.effects!2XQ0riyKt6rm2PLv.KiJXeFyh3gq9SUeX",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

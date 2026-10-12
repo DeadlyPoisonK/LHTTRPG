@@ -26,24 +26,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "mK9vR3wX7yT1pL4z",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Nature]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -65,33 +54,34 @@
       "name": "Servant Summon: Forest Bear (Nature Tag)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Nature]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ize5W9GpSXpRqzUq.mK9vR3wX7yT1pL4z"
+      "_key": "!items.effects!Ize5W9GpSXpRqzUq.mK9vR3wX7yT1pL4z",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "wT2kC8rB4wP6zM1n",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -124,33 +114,34 @@
       "name": "Servant Summon: Forest Bear (CR1-10 Damage)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*4",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ize5W9GpSXpRqzUq.wT2kC8rB4wP6zM1n"
+      "_key": "!items.effects!Ize5W9GpSXpRqzUq.wT2kC8rB4wP6zM1n",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qL6yM1vR9yT5zK3p",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -187,33 +178,34 @@
       "name": "Servant Summon: Forest Bear (CR11-20 Damage)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ize5W9GpSXpRqzUq.qL6yM1vR9yT5zK3p"
+      "_key": "!items.effects!Ize5W9GpSXpRqzUq.qL6yM1vR9yT5zK3p",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "fR8kC4rT2wP7zN9x",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*7",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -246,26 +238,34 @@
       "name": "Servant Summon: Forest Bear (CR21+ Damage)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*7",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Ize5W9GpSXpRqzUq.fR8kC4rT2wP7zN9x"
+      "_key": "!items.effects!Ize5W9GpSXpRqzUq.fR8kC4rT2wP7zN9x",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "zM3wP9vK5yT1zL8n",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -291,13 +291,17 @@
       "name": "Servant Summon: Forest Bear (Barrier)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "barrier"
       ],
       "sort": 0,
-      "_key": "!items.effects!Ize5W9GpSXpRqzUq.zM3wP9vK5yT1zL8n"
+      "_key": "!items.effects!Ize5W9GpSXpRqzUq.zM3wP9vK5yT1zL8n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

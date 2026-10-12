@@ -26,24 +26,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "zM6wP1vR8yT5zK2n",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Nature]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -65,33 +54,34 @@
       "name": "Servant Summon: Wild Boar II (Nature Tag)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Nature]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!s2gEprQxpXSSUeSd.zM6wP1vR8yT5zK2n"
+      "_key": "!items.effects!s2gEprQxpXSSUeSd.zM6wP1vR8yT5zK2n",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "wL4kC9rT2wP6zN7m",
-      "changes": [
-        {
-          "key": "system.battle-status.speed.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -113,11 +103,23 @@
       "name": "Servant Summon: Wild Boar II (Speed)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.speed.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!s2gEprQxpXSSUeSd.wL4kC9rT2wP6zN7m"
+      "_key": "!items.effects!s2gEprQxpXSSUeSd.wL4kC9rT2wP6zN7m",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

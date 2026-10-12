@@ -32,7 +32,7 @@ function processEffects(effects, actorType, packName, docName, fileName) {
     totalEffectsScanned++;
     if (packName === "bestiary") monsterPackEffectsCount++;
 
-    const sourceChanges = effect.changes;
+    const sourceChanges = effect.system?.changes ?? effect.changes;
     if (!Array.isArray(sourceChanges)) continue;
 
     const { changes: newChanges, changed } = migrateEffectChanges(sourceChanges, actorType);
@@ -58,11 +58,12 @@ function processEffects(effects, actorType, packName, docName, fileName) {
         }
       }
 
-      effect.changes = newChanges;
+      if (Array.isArray(effect.system?.changes)) effect.system.changes = newChanges;
+      else effect.changes = newChanges;
     }
 
     // Audit remaining keys against the catalog and for derived fields
-    for (const change of effect.changes ?? []) {
+    for (const change of effect.system?.changes ?? effect.changes ?? []) {
       const key = change?.key ? String(change.key).trim() : "";
       if (!key) continue;
       const target = findEffectTarget(key);

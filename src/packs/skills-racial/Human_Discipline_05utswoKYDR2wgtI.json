@@ -33,44 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/human.svg",
   "effects": [
     {
-      "origin": "Compendium.world.racial-humano.05utswoKYDR2wgtI",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "DwS9vldd8BIF4HKQ",
-      "changes": [
-        {
-          "key": "system.attributes.dex.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.attributes.int.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.attributes.pow.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.attributes.str.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -88,11 +59,44 @@
       "name": "+1 All Stats",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.dex.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.attributes.int.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.attributes.pow.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.attributes.str.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!05utswoKYDR2wgtI.DwS9vldd8BIF4HKQ"
+      "_key": "!items.effects!05utswoKYDR2wgtI.DwS9vldd8BIF4HKQ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

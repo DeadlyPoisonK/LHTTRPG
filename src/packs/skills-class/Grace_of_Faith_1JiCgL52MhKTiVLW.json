@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
   "effects": [
     {
-      "origin": "Compendium.world.cleric.1JiCgL52MhKTiVLW",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "15g8y6qPPQZ5chrQ",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,33 +46,34 @@
       "name": "Grace of Faith (Accuracy)",
       "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!1JiCgL52MhKTiVLW.15g8y6qPPQZ5chrQ"
+      "_key": "!items.effects!1JiCgL52MhKTiVLW.15g8y6qPPQZ5chrQ",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.cleric.1JiCgL52MhKTiVLW",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "tBhSmjBfxUr9vMHI",
-      "changes": [
-        {
-          "key": "system.checks.resistance.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -101,11 +91,23 @@
       "name": "Grace of Faith (Resistance)",
       "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.resistance.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!1JiCgL52MhKTiVLW.tBhSmjBfxUr9vMHI"
+      "_key": "!items.effects!1JiCgL52MhKTiVLW.tBhSmjBfxUr9vMHI",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
   "effects": [
     {
-      "origin": "Compendium.world.monk.ek41KLzHofIGfm6y",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "K4mP8tL1wN7vQ2rS",
-      "changes": [
-        {
-          "key": "system.checks.athletics.dice",
-          "mode": 2,
-          "value": "@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Kung-fu Action",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.dice",
+            "type": "add",
+            "value": "@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!ek41KLzHofIGfm6y.K4mP8tL1wN7vQ2rS"
+      "_key": "!items.effects!ek41KLzHofIGfm6y.K4mP8tL1wN7vQ2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

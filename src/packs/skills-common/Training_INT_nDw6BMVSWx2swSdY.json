@@ -22,26 +22,15 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
   "effects": [
     {
-      "origin": "Compendium.world.common-skill.nDw6BMVSWx2swSdY",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "AQUyQ4uF4su0S9FM",
-      "changes": [
-        {
-          "key": "system.attributes.int.effect",
-          "mode": 2,
-          "value": "3",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -59,11 +48,23 @@
       "name": "INT +3",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.int.effect",
+            "type": "add",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!nDw6BMVSWx2swSdY.AQUyQ4uF4su0S9FM"
+      "_key": "!items.effects!nDw6BMVSWx2swSdY.AQUyQ4uF4su0S9FM",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

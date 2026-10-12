@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "tK2vR6wX8yT4pL1z",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.dice",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -66,11 +55,23 @@
       "name": "Sore Spot",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.dice",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!0oaKczKLkCYpwzgl.tK2vR6wX8yT4pL1z"
+      "_key": "!items.effects!0oaKczKLkCYpwzgl.tK2vR6wX8yT4pL1z",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

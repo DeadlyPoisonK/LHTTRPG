@@ -23,27 +23,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   "effects": [
     {
-      "origin": "Compendium.world.accessories.Item.Q8hntqCDJvO6jbm0",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "Knowledge +2",
       "_id": "ug1A5n5XDhcbO1cO",
-      "changes": [
-        {
-          "key": "system.checks.knowledge.mod",
-          "mode": 2,
-          "value": "+2",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -62,9 +51,21 @@
       },
       "img": "icons/sundries/books/book-symbol-axe-brown.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.knowledge.mod",
+            "type": "add",
+            "value": "+2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!Q8hntqCDJvO6jbm0.ug1A5n5XDhcbO1cO"
+      "_key": "!items.effects!Q8hntqCDJvO6jbm0.ug1A5n5XDhcbO1cO",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

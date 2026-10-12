@@ -24,17 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qW3vK9pL5rN2tM8x",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -60,13 +56,17 @@
       "name": "Mystic Spell: Magatama",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "decay"
       ],
       "sort": 0,
-      "_key": "!items.effects!dlKcmNvnbdBmYCxW.qW3vK9pL5rN2tM8x"
+      "_key": "!items.effects!dlKcmNvnbdBmYCxW.qW3vK9pL5rN2tM8x",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 2200000,

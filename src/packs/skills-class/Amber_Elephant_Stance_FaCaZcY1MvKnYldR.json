@@ -25,24 +25,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "j2BvC9mK4pL7xW1e",
-      "changes": [
-        {
-          "key": "system.battle-status.speed.mod",
-          "mode": 2,
-          "value": "-1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -64,11 +53,23 @@
       "name": "Amber Elephant Stance",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.speed.mod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!FaCaZcY1MvKnYldR.j2BvC9mK4pL7xW1e"
+      "_key": "!items.effects!FaCaZcY1MvKnYldR.j2BvC9mK4pL7xW1e",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

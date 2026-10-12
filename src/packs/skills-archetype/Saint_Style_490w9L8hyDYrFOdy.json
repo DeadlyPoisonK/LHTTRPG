@@ -40,24 +40,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "6UoWaFomZiGuT8pP",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -84,11 +73,23 @@
       "name": "Saint Style (SR2)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!490w9L8hyDYrFOdy.6UoWaFomZiGuT8pP"
+      "_key": "!items.effects!490w9L8hyDYrFOdy.6UoWaFomZiGuT8pP",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

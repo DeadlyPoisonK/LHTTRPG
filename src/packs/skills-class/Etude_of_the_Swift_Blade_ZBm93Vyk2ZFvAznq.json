@@ -25,24 +25,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "m8Pq2B5vW9kL1xN4",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -64,9 +53,21 @@
       "name": "Etude of the Swift Blade",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": "@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!ZBm93Vyk2ZFvAznq.m8Pq2B5vW9kL1xN4"
+      "_key": "!items.effects!ZBm93Vyk2ZFvAznq.m8Pq2B5vW9kL1xN4",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

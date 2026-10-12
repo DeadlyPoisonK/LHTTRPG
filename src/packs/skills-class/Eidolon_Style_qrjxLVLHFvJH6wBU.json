@@ -27,32 +27,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
   "effects": [
     {
-      "origin": "Compendium.world.enchanter.qrjxLVLHFvJH6wBU",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "3EVJBIqxsR5RGbb7",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@cr+@int*2",
-          "priority": null
-        },
-        {
-          "key": "system.battle-status.power.magic.mod",
-          "mode": 2,
-          "value": "@cr+@int*2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +53,30 @@
       "name": "Eidolon Style",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@cr+@int*2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.battle-status.power.magic.mod",
+            "type": "add",
+            "value": "@cr+@int*2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!qrjxLVLHFvJH6wBU.3EVJBIqxsR5RGbb7"
+      "_key": "!items.effects!qrjxLVLHFvJH6wBU.3EVJBIqxsR5RGbb7",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

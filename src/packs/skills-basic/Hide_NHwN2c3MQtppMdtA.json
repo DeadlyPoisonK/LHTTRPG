@@ -36,17 +36,13 @@
       "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "g8V4pL2sK7mY3zN1",
-      "changes": [],
       "description": "",
       "transfer": false,
       "statuses": [
@@ -75,7 +71,12 @@
         "exportSource": null
       },
       "sort": 0,
-      "_key": "!items.effects!NHwN2c3MQtppMdtA.g8V4pL2sK7mY3zN1"
+      "_key": "!items.effects!NHwN2c3MQtppMdtA.g8V4pL2sK7mY3zN1",
+      "system": {
+        "changes": []
+      },
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

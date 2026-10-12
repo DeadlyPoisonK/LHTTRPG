@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "EffSklPrcAthl001",
-      "changes": [
-        {
-          "key": "system.checks.athletics.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Skill Practice: Athletics",
       "img": "systems/lhtrpg/assets/ui/icons/human.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!QZlR1G7B7peqzz7u.EffSklPrcAthl001"
+      "_key": "!items.effects!QZlR1G7B7peqzz7u.EffSklPrcAthl001",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

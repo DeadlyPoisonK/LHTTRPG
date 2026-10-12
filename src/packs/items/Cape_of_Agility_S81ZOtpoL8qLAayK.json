@@ -24,26 +24,15 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   "effects": [
     {
-      "origin": "Compendium.world.accessories.S81ZOtpoL8qLAayK",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "ozmesnzfUYgjgUnN",
-      "changes": [
-        {
-          "key": "system.checks.athletics.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -61,11 +50,23 @@
       "name": "Athletics +1",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!S81ZOtpoL8qLAayK.ozmesnzfUYgjgUnN"
+      "_key": "!items.effects!S81ZOtpoL8qLAayK.ozmesnzfUYgjgUnN",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

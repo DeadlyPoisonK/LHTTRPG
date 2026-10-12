@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "riskEff001bonush",
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "10",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Risk Management (Bonus HP)",
       "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 10,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!FTwg8b1aFXJT66wY.riskEff001bonush"
+      "_key": "!items.effects!FTwg8b1aFXJT66wY.riskEff001bonush",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

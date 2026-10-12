@@ -22,26 +22,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
   "effects": [
     {
-      "origin": "Compendium.world.summoner.AHv19ALfCWCWWqsq",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "P1tL8vK4qM7wN2rS",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.dice",
-          "mode": 2,
-          "value": "@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -70,11 +59,23 @@
       "name": "Summoning Mastery",
       "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.dice",
+            "type": "add",
+            "value": "@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!AHv19ALfCWCWWqsq.P1tL8vK4qM7wN2rS"
+      "_key": "!items.effects!AHv19ALfCWCWWqsq.P1tL8vK4qM7wN2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

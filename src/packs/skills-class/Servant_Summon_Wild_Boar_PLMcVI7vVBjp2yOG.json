@@ -26,24 +26,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "yR7yM3vK6pT9zL1x",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Nature]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -65,33 +54,34 @@
       "name": "Servant Summon: Wild Boar (Nature Tag)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Nature]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!PLMcVI7vVBjp2yOG.yR7yM3vK6pT9zL1x"
+      "_key": "!items.effects!PLMcVI7vVBjp2yOG.yR7yM3vK6pT9zL1x",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qL1rC8vW5wP4zN3k",
-      "changes": [
-        {
-          "key": "system.battle-status.speed.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -113,11 +103,23 @@
       "name": "Servant Summon: Wild Boar (Speed)",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.speed.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!PLMcVI7vVBjp2yOG.qL1rC8vW5wP4zN3k"
+      "_key": "!items.effects!PLMcVI7vVBjp2yOG.qL1rC8vW5wP4zN3k",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

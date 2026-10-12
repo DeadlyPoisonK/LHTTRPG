@@ -24,24 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "q8M8sMJTqkZzRSoQ",
-      "changes": [
-        {
-          "key": "system.battle-status.power.magic.mod",
-          "mode": 2,
-          "value": "@sr*2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -59,11 +48,23 @@
       "name": "Magic Mastery",
       "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.magic.mod",
+            "type": "add",
+            "value": "@sr*2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!OE226ClfICNAzm6P.q8M8sMJTqkZzRSoQ"
+      "_key": "!items.effects!OE226ClfICNAzm6P.q8M8sMJTqkZzRSoQ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

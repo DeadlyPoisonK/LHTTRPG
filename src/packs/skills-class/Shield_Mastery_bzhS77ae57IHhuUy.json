@@ -28,30 +28,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "LN9cXMKFvApFtmm7",
-      "changes": [
-        {
-          "key": "system.battle-status.defense.phys.mod",
-          "mode": 2,
-          "value": "@sr*2",
-          "priority": null
-        },
-        {
-          "key": "system.battle-status.defense.magic.mod",
-          "mode": 2,
-          "value": "@sr*2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -69,11 +52,30 @@
       "name": "Shield Mastery",
       "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.defense.phys.mod",
+            "type": "add",
+            "value": "@sr*2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.battle-status.defense.magic.mod",
+            "type": "add",
+            "value": "@sr*2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!bzhS77ae57IHhuUy.LN9cXMKFvApFtmm7"
+      "_key": "!items.effects!bzhS77ae57IHhuUy.LN9cXMKFvApFtmm7",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

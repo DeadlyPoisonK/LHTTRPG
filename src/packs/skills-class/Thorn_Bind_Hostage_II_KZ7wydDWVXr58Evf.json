@@ -24,17 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qK3vR7wX2yT9pL5z",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -60,28 +56,28 @@
       "name": "Thorn Bind Hostage II (Pursuit 1)",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "pursuit"
       ],
       "sort": 0,
-      "_key": "!items.effects!KZ7wydDWVXr58Evf.qK3vR7wX2yT9pL5z"
+      "_key": "!items.effects!KZ7wydDWVXr58Evf.qK3vR7wX2yT9pL5z",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "mK7rC4vW1wP6zN8k",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -107,13 +103,17 @@
       "name": "Thorn Bind Hostage II (Pursuit 2)",
       "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "pursuit"
       ],
       "sort": 0,
-      "_key": "!items.effects!KZ7wydDWVXr58Evf.mK7rC4vW1wP6zN8k"
+      "_key": "!items.effects!KZ7wydDWVXr58Evf.mK7rC4vW1wP6zN8k",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -22,30 +22,29 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
   "effects": [
     {
-      "origin": "Compendium.world.common-skill.Item.Thw0yW4ro29i7tJ2",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "+16 HP",
       "img": "icons/svg/aura.svg",
       "_id": "FVvbt5NpcTuO8HVi",
       "type": "base",
-      "system": {},
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "16",
-          "priority": null
-        }
-      ],
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 16,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "tint": "#ffffff",
       "transfer": true,
@@ -63,7 +62,9 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "_key": "!items.effects!Thw0yW4ro29i7tJ2.FVvbt5NpcTuO8HVi"
+      "_key": "!items.effects!Thw0yW4ro29i7tJ2.FVvbt5NpcTuO8HVi",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

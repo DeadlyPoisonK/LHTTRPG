@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
   "effects": [
     {
-      "origin": "Compendium.world.kannagi.MaYuRCQzLGYuRmMw",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "5yAAczPtCpH8dZaX",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Guardian of Souls",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!MaYuRCQzLGYuRmMw.5yAAczPtCpH8dZaX"
+      "_key": "!items.effects!MaYuRCQzLGYuRmMw.5yAAczPtCpH8dZaX",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 1100000,

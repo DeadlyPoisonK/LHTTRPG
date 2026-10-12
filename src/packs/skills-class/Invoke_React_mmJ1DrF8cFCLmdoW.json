@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "p1Nw4B9vM2pL7cN5",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@magic",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -72,9 +61,21 @@
       "name": "Invoke React",
       "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@magic",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!mmJ1DrF8cFCLmdoW.p1Nw4B9vM2pL7cN5"
+      "_key": "!items.effects!mmJ1DrF8cFCLmdoW.p1Nw4B9vM2pL7cN5",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

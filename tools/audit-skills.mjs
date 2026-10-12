@@ -78,13 +78,14 @@ function problems(doc, uuids) {
   for (const c of doc.system.conditions ?? []) if (!CONDITION_IDS.has(c?.type)) issues.push(`skill condition "${c?.type}"`);
   for (const effect of doc.effects ?? []) {
     const name = effect.name || "(no name)";
-    if (!effect.changes?.length && !effect.statuses?.length && !effect.flags?.lhtrpg?.statusData) issues.push(`${name}: no changes`);
-    for (const change of effect.changes ?? []) {
+    const changes = effect.system?.changes ?? effect.changes ?? [];
+    if (!changes.length && !effect.statuses?.length && !effect.flags?.lhtrpg?.statusData) issues.push(`${name}: no changes`);
+    for (const change of changes) {
       const target = findEffectTarget(change.key);
       const virtual = String(change.key).startsWith("lhtrpg.");
       if (!change.key) issues.push(`${name}: empty key`);
       else if (!target) issues.push(`${name}: key outside the catalog (${change.key})`);
-      if (target && (target.kind !== "text") && !virtual && (Number(change.mode) === 0)) {
+      if (target && (target.kind !== "text") && !virtual && ((change.type ?? (Number(change.mode) === 0 ? "custom" : "")) === "custom")) {
         issues.push(`${name}: Custom mode on ${change.key} (does nothing)`);
       }
       const value = String(change.value ?? "").trim();

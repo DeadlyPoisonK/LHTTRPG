@@ -30,24 +30,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "H8qP1wN4tL7vM2kR",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@dex*2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -65,33 +54,34 @@
       "name": "Black Widow Style (Attack Power)",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@dex*2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!LgaGAmXZKLi2J3Zf.H8qP1wN4tL7vM2kR"
+      "_key": "!items.effects!LgaGAmXZKLi2J3Zf.H8qP1wN4tL7vM2kR",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "V3mL8tK2qP9wN5rT",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -117,11 +107,23 @@
       "name": "Black Widow Style (Damage while Hidden)",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!LgaGAmXZKLi2J3Zf.V3mL8tK2qP9wN5rT"
+      "_key": "!items.effects!LgaGAmXZKLi2J3Zf.V3mL8tK2qP9wN5rT",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

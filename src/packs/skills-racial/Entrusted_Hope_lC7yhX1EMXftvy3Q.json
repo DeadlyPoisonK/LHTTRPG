@@ -31,38 +31,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/human.svg",
   "effects": [
     {
-      "origin": "Compendium.world.racial-humano.lC7yhX1EMXftvy3Q",
+      "origin": null,
       "duration": {
-        "startTime": 240,
-        "seconds": null,
-        "combat": null,
-        "rounds": 1,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "_id": "160Iq5AVNEdv84Pf",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.evasion.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.resistance.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -80,37 +57,62 @@
       "name": "+1D Checks",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.evasion.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.resistance.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!lC7yhX1EMXftvy3Q.160Iq5AVNEdv84Pf"
+      "_key": "!items.effects!lC7yhX1EMXftvy3Q.160Iq5AVNEdv84Pf",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.racial-humano.Item.lC7yhX1EMXftvy3Q",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "+8 HP",
       "img": "icons/svg/aura.svg",
       "_id": "hsupQ2iH8nVpFior",
       "type": "base",
-      "system": {},
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "8",
-          "priority": null
-        }
-      ],
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "tint": "#ffffff",
       "transfer": true,
@@ -128,7 +130,9 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "_key": "!items.effects!lC7yhX1EMXftvy3Q.hsupQ2iH8nVpFior"
+      "_key": "!items.effects!lC7yhX1EMXftvy3Q.hsupQ2iH8nVpFior",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

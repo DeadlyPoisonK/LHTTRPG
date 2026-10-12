@@ -41,24 +41,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "WLOLRaj78phDVfEG",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@weapon.attack",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -76,33 +65,34 @@
       "name": "Favored Weapon Style (Attack Power)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@weapon.attack",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!rJa0TVvri5OVaT5z.WLOLRaj78phDVfEG"
+      "_key": "!items.effects!rJa0TVvri5OVaT5z.WLOLRaj78phDVfEG",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "mAkk9FJdifBVsEHT",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.hateCost",
-          "mode": 2,
-          "value": "-1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -137,33 +127,34 @@
       "name": "Favored Weapon Style (SR1)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.hateCost",
+            "type": "add",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!rJa0TVvri5OVaT5z.mAkk9FJdifBVsEHT"
+      "_key": "!items.effects!rJa0TVvri5OVaT5z.mAkk9FJdifBVsEHT",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "IbvBJMgn8EUce4eB",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.hateCost",
-          "mode": 2,
-          "value": "-1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -195,11 +186,23 @@
       "name": "Favored Weapon Style (SR2)",
       "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.hateCost",
+            "type": "add",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!rJa0TVvri5OVaT5z.IbvBJMgn8EUce4eB"
+      "_key": "!items.effects!rJa0TVvri5OVaT5z.IbvBJMgn8EUce4eB",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

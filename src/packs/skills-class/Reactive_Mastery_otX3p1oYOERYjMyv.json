@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
   "effects": [
     {
-      "origin": "Compendium.world.cleric.otX3p1oYOERYjMyv",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "Q1wL8tK4mP7vN2rS",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.dice",
-          "mode": 2,
-          "value": "@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -72,11 +61,23 @@
       "name": "Reactive Mastery",
       "img": "systems/lhtrpg/assets/ui/icons/pope-crown.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.dice",
+            "type": "add",
+            "value": "@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!otX3p1oYOERYjMyv.Q1wL8tK4mP7vN2rS"
+      "_key": "!items.effects!otX3p1oYOERYjMyv.Q1wL8tK4mP7vN2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "m1Pq5B9vW2kL7xN4",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -57,12 +53,16 @@
       "name": "Impatience Bolt",
       "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "sort": 0,
       "_key": "!items.effects!KqlcDNHZPtF28nWE.m1Pq5B9vW2kL7xN4",
       "statuses": [
         "rigor"
-      ]
+      ],
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

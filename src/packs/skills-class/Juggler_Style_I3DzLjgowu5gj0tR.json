@@ -30,24 +30,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "0mebwDFsE2C6kP0Q",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@weapon.attack",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -65,33 +54,34 @@
       "name": "Juggler Style (Attack Power)",
       "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@weapon.attack",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!I3DzLjgowu5gj0tR.0mebwDFsE2C6kP0Q"
+      "_key": "!items.effects!I3DzLjgowu5gj0tR.0mebwDFsE2C6kP0Q",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.swashbuckler.I3DzLjgowu5gj0tR",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "M7vP1wL4tK9qN2rS",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -118,11 +108,23 @@
       "name": "Juggler Style (Accuracy)",
       "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!I3DzLjgowu5gj0tR.M7vP1wL4tK9qN2rS"
+      "_key": "!items.effects!I3DzLjgowu5gj0tR.M7vP1wL4tK9qN2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

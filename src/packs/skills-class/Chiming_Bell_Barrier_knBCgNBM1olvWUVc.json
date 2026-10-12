@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "x9Ly2N5vK1wB7cM3",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -58,13 +54,17 @@
       "name": "Chiming Bell Barrier",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "barrier"
       ],
       "sort": 0,
-      "_key": "!items.effects!knBCgNBM1olvWUVc.x9Ly2N5vK1wB7cM3"
+      "_key": "!items.effects!knBCgNBM1olvWUVc.x9Ly2N5vK1wB7cM3",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 2600000,

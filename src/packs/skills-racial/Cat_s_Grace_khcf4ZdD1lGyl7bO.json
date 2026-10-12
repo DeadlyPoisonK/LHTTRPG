@@ -33,26 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/cat.svg",
   "effects": [
     {
-      "origin": "Compendium.world.racial-werecat.khcf4ZdD1lGyl7bO",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "I2vyZA2CvJ8wlci4",
-      "changes": [
-        {
-          "key": "system.attributes.dex.effect",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "+4 DEX",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.dex.effect",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!khcf4ZdD1lGyl7bO.I2vyZA2CvJ8wlci4"
+      "_key": "!items.effects!khcf4ZdD1lGyl7bO.I2vyZA2CvJ8wlci4",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

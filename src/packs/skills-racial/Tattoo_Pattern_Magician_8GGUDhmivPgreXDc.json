@@ -37,24 +37,13 @@
       "img": "systems/lhtrpg/assets/ui/icons/warlock-hood.svg",
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "c3N7qW1zL5mK8pT2",
-      "changes": [
-        {
-          "key": "system.battle-status.power.magic.mod",
-          "mode": 2,
-          "value": "3",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": false,
       "statuses": [],
@@ -78,7 +67,20 @@
         "exportSource": null
       },
       "sort": 0,
-      "_key": "!items.effects!8GGUDhmivPgreXDc.c3N7qW1zL5mK8pT2"
+      "_key": "!items.effects!8GGUDhmivPgreXDc.c3N7qW1zL5mK8pT2",
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.magic.mod",
+            "type": "add",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

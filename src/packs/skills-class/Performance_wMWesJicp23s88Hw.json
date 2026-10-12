@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "uI4bVgHS1LC8tu4s",
-      "changes": [
-        {
-          "key": "system.checks.athletics.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Performance (Athletics)",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!wMWesJicp23s88Hw.uI4bVgHS1LC8tu4s"
+      "_key": "!items.effects!wMWesJicp23s88Hw.uI4bVgHS1LC8tu4s",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

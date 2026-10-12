@@ -24,24 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "L9xpyJP62qHUoH2a",
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "8",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -59,11 +48,23 @@
       "name": "Great Patience (Bonus HP)",
       "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Jgh4nozcU5roZPAz.L9xpyJP62qHUoH2a"
+      "_key": "!items.effects!Jgh4nozcU5roZPAz.L9xpyJP62qHUoH2a",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -22,26 +22,15 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/skill.svg",
   "effects": [
     {
-      "origin": "Compendium.world.common-skill.Xd0Tn4utRLiGBx4E",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "lkrKPglA5njAjMPK",
-      "changes": [
-        {
-          "key": "system.attributes.dex.effect",
-          "mode": 2,
-          "value": "3",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -59,11 +48,23 @@
       "name": "DEX +3",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.dex.effect",
+            "type": "add",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!Xd0Tn4utRLiGBx4E.lkrKPglA5njAjMPK"
+      "_key": "!items.effects!Xd0Tn4utRLiGBx4E.lkrKPglA5njAjMPK",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -24,24 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "w3Ly8N1vK5wB9cM2",
-      "changes": [
-        {
-          "key": "system.checks.evasion.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -63,11 +52,23 @@
       "name": "Block Missile",
       "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.evasion.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!3M1zIATA8V6Ie9I1.w3Ly8N1vK5wB9cM2"
+      "_key": "!items.effects!3M1zIATA8V6Ie9I1.w3Ly8N1vK5wB9cM2",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

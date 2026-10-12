@@ -24,27 +24,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   "effects": [
     {
-      "origin": "Compendium.world.accessories.Item.rtV8HUhe7O1FqYts",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "name": "Deck Shield",
       "_id": "jy8lTphVEKmPTVOZ",
-      "changes": [
-        {
-          "key": "system.inventory.mod",
-          "mode": 2,
-          "value": "+8",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -63,9 +52,21 @@
       },
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.inventory.mod",
+            "type": "add",
+            "value": "+8",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!rtV8HUhe7O1FqYts.jy8lTphVEKmPTVOZ"
+      "_key": "!items.effects!rtV8HUhe7O1FqYts.jy8lTphVEKmPTVOZ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

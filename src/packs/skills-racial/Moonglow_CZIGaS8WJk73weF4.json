@@ -35,24 +35,13 @@
       "img": "systems/lhtrpg/assets/ui/icons/wolf-head.svg",
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "r1K5mY7sX8vL2zP6",
-      "changes": [
-        {
-          "key": "system.battle-status.power.restoration.mod",
-          "mode": 2,
-          "value": "@str+5",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": false,
       "statuses": [],
@@ -77,7 +66,20 @@
         "exportSource": null
       },
       "sort": 0,
-      "_key": "!items.effects!CZIGaS8WJk73weF4.r1K5mY7sX8vL2zP6"
+      "_key": "!items.effects!CZIGaS8WJk73weF4.r1K5mY7sX8vL2zP6",
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.restoration.mod",
+            "type": "add",
+            "value": "@str+5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

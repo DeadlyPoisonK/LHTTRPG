@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "mR5kL8wX2vP9tJ3n",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -59,13 +55,17 @@
       "name": "Mirror of Stone",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "cancel"
       ],
       "sort": 0,
-      "_key": "!items.effects!i7MXXDGB8TK75hys.mR5kL8wX2vP9tJ3n"
+      "_key": "!items.effects!i7MXXDGB8TK75hys.mR5kL8wX2vP9tJ3n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 2400000,

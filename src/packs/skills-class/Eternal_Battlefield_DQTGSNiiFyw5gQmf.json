@@ -22,26 +22,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
   "effects": [
     {
-      "origin": "Compendium.world.samurai.DQTGSNiiFyw5gQmf",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "JhAgFL8nb8UTs1hF",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -59,33 +48,34 @@
       "name": "Eternal Battlefield (Accuracy)",
       "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!DQTGSNiiFyw5gQmf.JhAgFL8nb8UTs1hF"
+      "_key": "!items.effects!DQTGSNiiFyw5gQmf.JhAgFL8nb8UTs1hF",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.samurai.DQTGSNiiFyw5gQmf",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "3YhtfXZsX1vWiQsd",
-      "changes": [
-        {
-          "key": "system.battle-status.initiative.mod",
-          "mode": 2,
-          "value": "5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -111,11 +101,23 @@
       "name": "Eternal Battlefield (Initiative: Round 1)",
       "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.initiative.mod",
+            "type": "add",
+            "value": 5,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!DQTGSNiiFyw5gQmf.3YhtfXZsX1vWiQsd"
+      "_key": "!items.effects!DQTGSNiiFyw5gQmf.3YhtfXZsX1vWiQsd",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

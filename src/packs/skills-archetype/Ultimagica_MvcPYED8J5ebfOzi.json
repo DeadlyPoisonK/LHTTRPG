@@ -31,26 +31,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
   "effects": [
     {
-      "origin": "Compendium.world.mage-archetype-class.MvcPYED8J5ebfOzi",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qaHE9rbYDRpjjShi",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -68,11 +57,23 @@
       "name": "+1 Hitcheck",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!MvcPYED8J5ebfOzi.qaHE9rbYDRpjjShi"
+      "_key": "!items.effects!MvcPYED8J5ebfOzi.qaHE9rbYDRpjjShi",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

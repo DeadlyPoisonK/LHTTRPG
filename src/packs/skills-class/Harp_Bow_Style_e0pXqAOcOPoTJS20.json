@@ -28,26 +28,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
   "effects": [
     {
-      "origin": "Compendium.world.bard.e0pXqAOcOPoTJS20",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "V1wN8tL4qM7pK2rS",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.hateCost",
-          "mode": 5,
-          "value": "0",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -80,33 +69,34 @@
       "name": "Harp Bow Style (Hate Cost)",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.hateCost",
+            "type": "override",
+            "value": 0,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!e0pXqAOcOPoTJS20.V1wN8tL4qM7pK2rS"
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.V1wN8tL4qM7pK2rS",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.bard.e0pXqAOcOPoTJS20",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "P9tL2mK4vR7wN1qT",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.note",
-          "mode": 0,
-          "value": "Can be used with [Range: 4 Sq]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -141,33 +131,34 @@
       "name": "Harp Bow Style (Repeat Note: 4 Sq)",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.note",
+            "type": "custom",
+            "value": "Can be used with [Range: 4 Sq]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!e0pXqAOcOPoTJS20.P9tL2mK4vR7wN1qT"
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.P9tL2mK4vR7wN1qT",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "epEFqMU2DolQBZ1X",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.range",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -202,11 +193,23 @@
       "name": "Harp Bow Style (SR2: Bow range)",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.range",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!e0pXqAOcOPoTJS20.epEFqMU2DolQBZ1X"
+      "_key": "!items.effects!e0pXqAOcOPoTJS20.epEFqMU2DolQBZ1X",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

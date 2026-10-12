@@ -24,24 +24,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "xJ8nR2vT5yM1wP6k",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*@dex",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -68,11 +57,23 @@
       "name": "Mobility Attack II",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*@dex",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!NZrXlbsDPLlPCDj4.xJ8nR2vT5yM1wP6k"
+      "_key": "!items.effects!NZrXlbsDPLlPCDj4.xJ8nR2vT5yM1wP6k",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

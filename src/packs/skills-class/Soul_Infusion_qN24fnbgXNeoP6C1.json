@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
   "effects": [
     {
-      "origin": "Compendium.world.monk.qN24fnbgXNeoP6C1",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "T4mK8tL1vP7wQ2rS",
-      "changes": [
-        {
-          "key": "system.fate.effect",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Soul Infusion",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.fate.effect",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!qN24fnbgXNeoP6C1.T4mK8tL1vP7wQ2rS"
+      "_key": "!items.effects!qN24fnbgXNeoP6C1.T4mK8tL1vP7wQ2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

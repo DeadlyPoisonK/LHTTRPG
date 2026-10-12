@@ -35,17 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "f4V8pL2sK6mY9zN3",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -70,13 +66,17 @@
       "name": "Road Mirage",
       "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "hidden"
       ],
       "sort": 0,
-      "_key": "!items.effects!1l31WrnLeRBIZEbH.f4V8pL2sK6mY9zN3"
+      "_key": "!items.effects!1l31WrnLeRBIZEbH.f4V8pL2sK6mY9zN3",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

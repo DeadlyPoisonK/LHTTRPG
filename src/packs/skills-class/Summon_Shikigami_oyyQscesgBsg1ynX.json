@@ -20,32 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
   "effects": [
     {
-      "origin": "Compendium.world.kannagi.oyyQscesgBsg1ynX",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "8PF4wVdxYBHwM7Zv",
-      "changes": [
-        {
-          "key": "system.checks.athletics.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        },
-        {
-          "key": "system.checks.perception.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -72,39 +55,41 @@
       "name": "Summon Shikigami (SR1)",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.perception.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!oyyQscesgBsg1ynX.8PF4wVdxYBHwM7Zv"
+      "_key": "!items.effects!oyyQscesgBsg1ynX.8PF4wVdxYBHwM7Zv",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.kannagi.oyyQscesgBsg1ynX",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "W9vL2tP4mK7qN1rS",
-      "changes": [
-        {
-          "key": "system.checks.athletics.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.perception.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -131,11 +116,30 @@
       "name": "Summon Shikigami (SR2)",
       "img": "systems/lhtrpg/assets/ui/icons/lotus.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.perception.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!oyyQscesgBsg1ynX.W9vL2tP4mK7qN1rS"
+      "_key": "!items.effects!oyyQscesgBsg1ynX.W9vL2tP4mK7qN1rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 3000000,

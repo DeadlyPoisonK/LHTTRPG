@@ -39,17 +39,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "b9Mw4B1vL5pK2xN7",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -74,12 +70,16 @@
       "name": "Lullaby of the Moonlit Mermaid",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "sort": 0,
       "_key": "!items.effects!zV2r1VtDZHH8StoB.b9Mw4B1vL5pK2xN7",
       "statuses": [
         "dazed"
-      ]
+      ],
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -35,24 +35,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "FtWrifEiWhCdXK1j",
-      "changes": [
-        {
-          "key": "system.battle-status.initiative.mod",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "Forest Dancer",
       "img": "systems/lhtrpg/assets/ui/icons/elf-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.initiative.mod",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!64hCwml1SCXcFXEM.FtWrifEiWhCdXK1j"
+      "_key": "!items.effects!64hCwml1SCXcFXEM.FtWrifEiWhCdXK1j",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

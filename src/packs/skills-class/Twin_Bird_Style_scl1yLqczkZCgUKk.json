@@ -30,24 +30,13 @@
     {
       "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "EtAjVcxOLDYEiNvX",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "@offhand.attack",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -65,33 +54,34 @@
       "name": "Twin Bird Style (Attack Power)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": "@offhand.attack",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!scl1yLqczkZCgUKk.EtAjVcxOLDYEiNvX"
+      "_key": "!items.effects!scl1yLqczkZCgUKk.EtAjVcxOLDYEiNvX",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.monk.scl1yLqczkZCgUKk",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "K9wL2tP4vM7qN1rS",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -118,33 +108,34 @@
       "name": "Twin Bird Style (Accuracy)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!scl1yLqczkZCgUKk.K9wL2tP4vM7qN1rS"
+      "_key": "!items.effects!scl1yLqczkZCgUKk.K9wL2tP4vM7qN1rS",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.monk.scl1yLqczkZCgUKk",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "T1tL8vK4qP7wN2rS",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.range",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -179,11 +170,23 @@
       "name": "Twin Bird Style (Shadowless Kick Range)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.range",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!scl1yLqczkZCgUKk.T1tL8vK4qP7wN2rS"
+      "_key": "!items.effects!scl1yLqczkZCgUKk.T1tL8vK4qP7wN2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

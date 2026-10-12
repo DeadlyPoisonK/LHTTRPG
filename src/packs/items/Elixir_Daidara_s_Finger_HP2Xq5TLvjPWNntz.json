@@ -37,33 +37,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
-      "origin": "Compendium.world.medicine.Item.HP2Xq5TLvjPWNntz",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "name": "Daidara's Finger",
       "_id": "TVR9A7l5fPnRHAPv",
-      "changes": [
-        {
-          "key": "system.checks.evasion.mod",
-          "mode": 2,
-          "value": "-1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.resistance.mod",
-          "mode": 2,
-          "value": "-1",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -82,9 +65,28 @@
       },
       "img": "icons/consumables/potions/round-decorated-snake-green.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.evasion.mod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.resistance.mod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!HP2Xq5TLvjPWNntz.TVR9A7l5fPnRHAPv"
+      "_key": "!items.effects!HP2Xq5TLvjPWNntz.TVR9A7l5fPnRHAPv",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

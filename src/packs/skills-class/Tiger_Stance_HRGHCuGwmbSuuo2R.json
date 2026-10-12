@@ -25,17 +25,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "bT6kC1rB7wP4zM2n",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -62,13 +58,17 @@
       "name": "Tiger Stance (Weakness)",
       "img": "systems/lhtrpg/assets/ui/icons/headband-knot.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "weakness"
       ],
       "sort": 0,
-      "_key": "!items.effects!HRGHCuGwmbSuuo2R.bT6kC1rB7wP4zM2n"
+      "_key": "!items.effects!HRGHCuGwmbSuuo2R.bT6kC1rB7wP4zM2n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

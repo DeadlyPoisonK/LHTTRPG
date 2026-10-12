@@ -38,26 +38,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
   "effects": [
     {
-      "origin": "Compendium.world.mage-archetype-class.9QzlHV7TgzsKGPKA",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "oaZ9x7K0OBluYjwo",
-      "changes": [
-        {
-          "key": "system.battle-status.initiative.mod",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -75,33 +64,34 @@
       "name": "Forestall Style",
       "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.initiative.mod",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!9QzlHV7TgzsKGPKA.oaZ9x7K0OBluYjwo"
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.oaZ9x7K0OBluYjwo",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "fstlEff002accur2",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -128,33 +118,34 @@
       "name": "Forestall Style (SR2)",
       "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff002accur2"
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff002accur2",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "fstlEff003magic4",
-      "changes": [
-        {
-          "key": "system.battle-status.power.magic.mod",
-          "mode": 2,
-          "value": "4",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -181,11 +172,23 @@
       "name": "Forestall Style (SR3)",
       "img": "systems/lhtrpg/assets/ui/icons/wizard-staff.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.magic.mod",
+            "type": "add",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff003magic4"
+      "_key": "!items.effects!9QzlHV7TgzsKGPKA.fstlEff003magic4",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

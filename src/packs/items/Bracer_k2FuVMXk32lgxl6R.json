@@ -24,26 +24,15 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   "effects": [
     {
-      "origin": "Compendium.world.accessories.k2FuVMXk32lgxl6R",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "csM6ybpvhAJvawAz",
-      "changes": [
-        {
-          "key": "system.battle-status.power.attack.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -61,11 +50,23 @@
       "name": "Attack +1",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.attack.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!k2FuVMXk32lgxl6R.csM6ybpvhAJvawAz"
+      "_key": "!items.effects!k2FuVMXk32lgxl6R.csM6ybpvhAJvawAz",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

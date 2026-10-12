@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "v5Mw2B8vL1pK9xN4",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -57,13 +53,17 @@
       "name": "Blood War",
       "img": "systems/lhtrpg/assets/ui/icons/samurai-helmet.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "rigor"
       ],
       "sort": 0,
-      "_key": "!items.effects!el85QsbSBOW0vcxu.v5Mw2B8vL1pK9xN4"
+      "_key": "!items.effects!el85QsbSBOW0vcxu.v5Mw2B8vL1pK9xN4",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

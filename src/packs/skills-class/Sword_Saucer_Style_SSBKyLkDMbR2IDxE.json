@@ -28,32 +28,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
   "effects": [
     {
-      "origin": "Compendium.world.sorcerer.SSBKyLkDMbR2IDxE",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "L7vP2wK4tN9mQ1rS",
-      "changes": [
-        {
-          "key": "system.checks.evasion.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        },
-        {
-          "key": "system.checks.resistance.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -80,33 +63,41 @@
       "name": "Sword Saucer Style (Evasion & Resistance)",
       "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.evasion.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.checks.resistance.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!SSBKyLkDMbR2IDxE.L7vP2wK4tN9mQ1rS"
+      "_key": "!items.effects!SSBKyLkDMbR2IDxE.L7vP2wK4tN9mQ1rS",
+      "start": null,
+      "showIcon": 1
     },
     {
-      "origin": "Compendium.world.sorcerer.SSBKyLkDMbR2IDxE",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "N4tL8vP1wK7qR2rS",
-      "changes": [
-        {
-          "key": "system.battle-status.defense.phys.mod",
-          "mode": 2,
-          "value": "@int",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -133,11 +124,23 @@
       "name": "Sword Saucer Style (Physical Defense)",
       "img": "systems/lhtrpg/assets/ui/icons/robe.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.defense.phys.mod",
+            "type": "add",
+            "value": "@int",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!SSBKyLkDMbR2IDxE.N4tL8vP1wK7qR2rS"
+      "_key": "!items.effects!SSBKyLkDMbR2IDxE.N4tL8vP1wK7qR2rS",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -29,24 +29,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "pL1kC6rB3wT8zN2m",
-      "changes": [
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Construct]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -68,26 +57,34 @@
       "name": "Servant Summon: Golem (Construct Tag)",
       "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Construct]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.pL1kC6rB3wT8zN2m"
+      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.pL1kC6rB3wT8zN2m",
+      "start": null,
+      "showIcon": 1
     },
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "rM7wX2vR5yP4zK9n",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -114,13 +111,17 @@
       "name": "Servant Summon: Golem (Cancel)",
       "img": "systems/lhtrpg/assets/ui/icons/plants-and-animals.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "description": "",
       "statuses": [
         "cancel"
       ],
       "sort": 0,
-      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.rM7wX2vR5yP4zK9n"
+      "_key": "!items.effects!uSE2xEJZ4yYgqrUw.rM7wX2vR5yP4zK9n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

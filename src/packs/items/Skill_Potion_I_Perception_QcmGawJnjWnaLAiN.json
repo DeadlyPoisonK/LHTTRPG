@@ -37,27 +37,16 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/usable.svg",
   "effects": [
     {
-      "origin": "Compendium.world.medicine.Item.QcmGawJnjWnaLAiN",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "name": "Perception+1",
       "_id": "PN9i7Sshvqw2qiax",
-      "changes": [
-        {
-          "key": "system.checks.perception.mod",
-          "mode": 2,
-          "value": "+1",
-          "priority": null
-        }
-      ],
       "description": "",
       "transfer": true,
       "statuses": [],
@@ -76,9 +65,21 @@
       },
       "img": "icons/consumables/potions/potion-flash-open-blue.webp",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.perception.mod",
+            "type": "add",
+            "value": "+1",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "sort": 0,
-      "_key": "!items.effects!QcmGawJnjWnaLAiN.PN9i7Sshvqw2qiax"
+      "_key": "!items.effects!QcmGawJnjWnaLAiN.PN9i7Sshvqw2qiax",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

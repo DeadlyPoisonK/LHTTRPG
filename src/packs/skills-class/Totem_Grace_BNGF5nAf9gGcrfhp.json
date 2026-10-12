@@ -20,32 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
   "effects": [
     {
-      "origin": "Compendium.world.druid.BNGF5nAf9gGcrfhp",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "loIIj8LNTA46VvJN",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "3",
-          "priority": null
-        },
-        {
-          "key": "system.battle-status.defense.phys.mod",
-          "mode": 2,
-          "value": "@pow",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -63,11 +46,30 @@
       "name": "Totem Grace",
       "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.battle-status.defense.phys.mod",
+            "type": "add",
+            "value": "@pow",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!BNGF5nAf9gGcrfhp.loIIj8LNTA46VvJN"
+      "_key": "!items.effects!BNGF5nAf9gGcrfhp.loIIj8LNTA46VvJN",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

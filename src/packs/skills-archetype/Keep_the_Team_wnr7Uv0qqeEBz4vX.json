@@ -33,26 +33,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/healing-shield.svg",
   "effects": [
     {
-      "origin": "Compendium.world.healer-archetype-class.wnr7Uv0qqeEBz4vX",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "qZegJFD2eFoanmKe",
-      "changes": [
-        {
-          "key": "system.health.effect",
-          "mode": 2,
-          "value": "10",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -70,11 +59,23 @@
       "name": "HP+10",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.health.effect",
+            "type": "add",
+            "value": 10,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!wnr7Uv0qqeEBz4vX.qZegJFD2eFoanmKe"
+      "_key": "!items.effects!wnr7Uv0qqeEBz4vX.qZegJFD2eFoanmKe",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

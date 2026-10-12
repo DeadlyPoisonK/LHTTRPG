@@ -22,17 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "k9Ly3N5vK2wB8cM1",
-      "changes": [],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -58,12 +54,16 @@
       "name": "Early Thrust II",
       "img": "systems/lhtrpg/assets/ui/icons/sabers-choc.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": []
+      },
       "sort": 0,
       "_key": "!items.effects!d0EBodW3Lc9Wkbzi.k9Ly3N5vK2wB8cM1",
       "statuses": [
         "pursuit"
-      ]
+      ],
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

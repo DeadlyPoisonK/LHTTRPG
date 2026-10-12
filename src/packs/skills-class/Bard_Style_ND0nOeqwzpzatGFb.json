@@ -30,24 +30,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "X4mB8qL1wR9tV7kP",
-      "changes": [
-        {
-          "key": "lhtrpg.skill.hateCost",
-          "mode": 2,
-          "value": "-@sr",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {
@@ -73,11 +62,23 @@
       "name": "Bard Style",
       "img": "systems/lhtrpg/assets/ui/icons/guitar.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.skill.hateCost",
+            "type": "add",
+            "value": "-@sr",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!ND0nOeqwzpzatGFb.X4mB8qL1wR9tV7kP"
+      "_key": "!items.effects!ND0nOeqwzpzatGFb.X4mB8qL1wR9tV7kP",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

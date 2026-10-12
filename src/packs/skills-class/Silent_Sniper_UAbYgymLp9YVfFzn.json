@@ -22,24 +22,13 @@
     {
       "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "vR7yM1vK5pT9zL3x",
-      "changes": [
-        {
-          "key": "lhtrpg.roll.damage.mod",
-          "mode": 2,
-          "value": "@sr*5",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -66,11 +55,23 @@
       "name": "Silent Sniper",
       "img": "systems/lhtrpg/assets/ui/icons/assassin.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "lhtrpg.roll.damage.mod",
+            "type": "add",
+            "value": "@sr*5",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!UAbYgymLp9YVfFzn.vR7yM1vK5pT9zL3x"
+      "_key": "!items.effects!UAbYgymLp9YVfFzn.vR7yM1vK5pT9zL3x",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

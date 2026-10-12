@@ -31,26 +31,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/all-for-one.svg",
   "effects": [
     {
-      "origin": "Compendium.world.weapon-master-archetype-class.nbNjgqhKtBspDzCH",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "NMOMewxMWRO1sC8n",
-      "changes": [
-        {
-          "key": "system.checks.athletics.dice",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -68,11 +57,23 @@
       "name": "Athletics +1D",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.athletics.dice",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!nbNjgqhKtBspDzCH.NMOMewxMWRO1sC8n"
+      "_key": "!items.effects!nbNjgqhKtBspDzCH.NMOMewxMWRO1sC8n",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "flags": {},

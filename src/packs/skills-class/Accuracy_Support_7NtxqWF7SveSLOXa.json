@@ -34,26 +34,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/heavy-collar.svg",
   "effects": [
     {
-      "origin": "Compendium.world.Item-S9DgLTfDll6QhrKy.7NtxqWF7SveSLOXa",
+      "origin": null,
       "duration": {
-        "rounds": 1,
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "_id": "m86M6YGjvu1j3ldF",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "+2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -71,11 +60,23 @@
       "name": "New Effect",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": "+2",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!7NtxqWF7SveSLOXa.m86M6YGjvu1j3ldF"
+      "_key": "!items.effects!7NtxqWF7SveSLOXa.m86M6YGjvu1j3ldF",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

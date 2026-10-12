@@ -23,26 +23,15 @@
   "img": "systems/lhtrpg/assets/ui/items_icons/accessory.svg",
   "effects": [
     {
-      "origin": "Compendium.world.accessories.HEXaNZQ6lzzQUfKL",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "KFddbBUxGBRi9fBN",
-      "changes": [
-        {
-          "key": "system.checks.perception.mod",
-          "mode": 2,
-          "value": "1",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -60,11 +49,23 @@
       "name": "Perception +1",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.perception.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!HEXaNZQ6lzzQUfKL.KFddbBUxGBRi9fBN"
+      "_key": "!items.effects!HEXaNZQ6lzzQUfKL.KFddbBUxGBRi9fBN",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

@@ -24,32 +24,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/holy-oak.svg",
   "effects": [
     {
-      "origin": "Compendium.world.druid.XeRGlQPhVm4XPJ2c",
+      "origin": null,
       "duration": {
-        "rounds": null,
-        "startTime": 240,
-        "seconds": null,
-        "combat": null,
-        "turns": 1,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": true,
       "_id": "BdmEjLAXvWG2j2Ya",
-      "changes": [
-        {
-          "key": "system.battle-status.power.restoration.mod",
-          "mode": 2,
-          "value": "6",
-          "priority": null
-        },
-        {
-          "key": "system.tags",
-          "mode": 2,
-          "value": "[Nature]",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": false,
       "flags": {
@@ -71,11 +54,30 @@
       "name": "Servant Summon: Alraune",
       "img": "icons/svg/aura.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.battle-status.power.restoration.mod",
+            "type": "add",
+            "value": 6,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.tags",
+            "type": "add",
+            "value": "[Nature]",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!XeRGlQPhVm4XPJ2c.BdmEjLAXvWG2j2Ya"
+      "_key": "!items.effects!XeRGlQPhVm4XPJ2c.BdmEjLAXvWG2j2Ya",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,

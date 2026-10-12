@@ -20,26 +20,15 @@
   "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
   "effects": [
     {
-      "origin": "Compendium.world.guardian.4hJtuI2sEskQeXrN",
+      "origin": null,
       "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
       },
       "disabled": false,
       "_id": "syNRI1jRIEafrynZ",
-      "changes": [
-        {
-          "key": "system.checks.accuracy.mod",
-          "mode": 2,
-          "value": "2",
-          "priority": null
-        }
-      ],
       "tint": "#ffffff",
       "transfer": true,
       "flags": {},
@@ -57,11 +46,23 @@
       "name": "Battle Master",
       "img": "systems/lhtrpg/assets/ui/icons/bordered-shield.svg",
       "type": "base",
-      "system": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.checks.accuracy.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
       "description": "",
       "statuses": [],
       "sort": 0,
-      "_key": "!items.effects!4hJtuI2sEskQeXrN.syNRI1jRIEafrynZ"
+      "_key": "!items.effects!4hJtuI2sEskQeXrN.syNRI1jRIEafrynZ",
+      "start": null,
+      "showIcon": 1
     }
   ],
   "sort": 0,
