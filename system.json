@@ -2,7 +2,7 @@
   "id": "lhtrpg",
   "title": "Log Horizon TRPG (ログ・ホライズンTRPG)",
   "description": "A system for playing Log Horizon TRPG. <em>Database Database Just living in the Database</em>",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "compatibility": {
     "minimum": 14,
     "verified": "14.369"
@@ -207,7 +207,7 @@
   "secondaryTokenAttribute": "fate",
   "url": "https://github.com/DeadlyPoisonK/LHTTRPG",
   "manifest": "https://github.com/DeadlyPoisonK/LHTTRPG/releases/latest/download/system.json",
-  "download": "https://github.com/DeadlyPoisonK/LHTTRPG/releases/download/v2.1.0/lhtrpg.zip",
+  "download": "https://github.com/DeadlyPoisonK/LHTTRPG/releases/download/v2.1.1/lhtrpg.zip",
   "license": "LICENSE.txt",
   "packFolders": [
     {
