@@ -190,7 +190,7 @@ In **Changes**, the **Attribute Key** field is a picker: type part of the name (
 
 ![Destination picker of the Changes tab](images/skills/effect-key-picker.webp)
 
-Use the mode **Add** and put the value. The value can be a **formula** (the hint under the table reminds you
+Use the type **Add** and put the value. The value can be a **formula** (the hint under the table reminds you
 of the variables):
 
 | Skill text | Destination | Value |

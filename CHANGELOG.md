@@ -4,7 +4,19 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
-## [Unreleased]
+## [2.1.0] - 2026-10-11
+
+Requires Foundry VTT **v14** (verified 14.369). Foundry v13 stays on 2.0.x. Back up your world before you
+update: a world migrated to v14 cannot be opened again in v13.
+
+### Changed
+- Ported to Foundry v14: Active Effects use the new `system.changes` format (change type and phase), with a
+  system phase for formulas that read attributes; the effect editor uses the v14 Changes and Duration tabs.
+- Log Horizon durations (end of process, round or scene) still decide when an effect ends. The Foundry duration
+  is optional and only counts on effects that belong to an actor.
+- Compendium effects stored in the v14 format.
+- Loot piles dropped on the canvas are created on the Level being viewed, and only characters on the same Level
+  can reach them.
 
 ### Added
 - Automated skills: effect values with formulas (`@sr`, `@cr`, attributes, weapon powers), conditions per
@@ -18,6 +30,12 @@ released by the original author, Kyane (Tenyryas): see the
 - The dice field of a skill's Check / Damage cut formulas such as `@sr+3`.
 - Effects applied when a skill is used are listed as temporary (and shown on the token) even without a core
   duration, and the effects list shows the skill that gives each effect instead of "None".
+- The Edu SA Beginner font never loaded since 2.0.0 (a stray `*/` in the font stylesheet); numbers, tab titles
+  and chat card titles used a fallback font.
+
+### Note for worlds coming from 2.0.x
+Effects on actors that still carry a Foundry duration in rounds from v13 are now counted by Foundry: they expire
+and move to the **Inactive** category. Delete or re-enable them as needed.
 
 ## [2.0.2] - 2026-10-01
 

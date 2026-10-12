@@ -2,7 +2,7 @@
 
 ログ・ホライズンTRPG
 
-[![Foundry VTT](https://img.shields.io/badge/Foundry%20VTT-v13-orange)](https://foundryvtt.com/)
+[![Foundry VTT](https://img.shields.io/badge/Foundry%20VTT-v14-orange)](https://foundryvtt.com/)
 [![Latest release](https://img.shields.io/github/v/release/DeadlyPoisonK/LHTTRPG)](https://github.com/DeadlyPoisonK/LHTTRPG/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.txt)
 
@@ -58,9 +58,12 @@ https://github.com/DeadlyPoisonK/LHTTRPG/releases/latest/download/system.json
 
 ## Compatibility
 
-- **Foundry VTT v13**: Fully verified and supported (verified up to 13.351).
-- **Foundry VTT v14**: Unverified. The system loads in v14, but Active Effects and certain features may not function correctly. Dedicated v14 compatibility is planned for version **2.1**.
-- **Important Warning**: A world opened or migrated in Foundry v14 **cannot be opened again in v13**. Always make a full backup of your world data before testing on newer Foundry versions.
+- **Foundry VTT v14**: Version **2.1** and later (verified up to 14.369).
+- **Foundry VTT v13**: Version **2.0.x**. The package browser of a v13 installation offers the last compatible
+  version on its own. To install it by hand, use the manifest
+  `https://github.com/DeadlyPoisonK/LHTTRPG/releases/download/v2.0.2/system.json`.
+- **Important Warning**: A world opened or migrated in Foundry v14 **cannot be opened again in v13**. Always make
+  a full backup of your world data before updating Foundry.
 
 ## Content & Sources
 

@@ -2,7 +2,7 @@
 
 ログ・ホライズンTRPG
 
-[![Foundry VTT](https://img.shields.io/badge/Foundry%20VTT-v13-orange)](https://foundryvtt.com/)
+[![Foundry VTT](https://img.shields.io/badge/Foundry%20VTT-v14-orange)](https://foundryvtt.com/)
 [![Última versión](https://img.shields.io/github/v/release/DeadlyPoisonK/LHTTRPG)](https://github.com/DeadlyPoisonK/LHTTRPG/releases)
 [![Licencia: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.txt)
 
@@ -56,9 +56,12 @@ https://github.com/DeadlyPoisonK/LHTTRPG/releases/latest/download/system.json
 
 ## Compatibilidad
 
-- **Foundry VTT v13**: verificado y soportado (verificado hasta 13.351).
-- **Foundry VTT v14**: sin verificar. El sistema carga en v14, pero los Active Effects y algunas funciones pueden fallar. El soporte de v14 llega en la versión **2.1**.
-- **Importante**: un mundo abierto o migrado en Foundry v14 **no se puede volver a abrir en v13**. Haz siempre una copia de seguridad completa del mundo antes de probar versiones nuevas de Foundry.
+- **Foundry VTT v14**: versión **2.1** en adelante (verificado hasta 14.369).
+- **Foundry VTT v13**: versión **2.0.x**. El buscador de paquetes de una instalación v13 ofrece solo la última
+  versión compatible. Para instalarla a mano, usa el manifiesto
+  `https://github.com/DeadlyPoisonK/LHTTRPG/releases/download/v2.0.2/system.json`.
+- **Importante**: un mundo abierto o migrado en Foundry v14 **no se puede volver a abrir en v13**. Haz siempre una
+  copia de seguridad completa del mundo antes de actualizar Foundry.
 
 ## Contenido y fuentes
 

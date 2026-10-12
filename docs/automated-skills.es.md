@@ -197,7 +197,7 @@ En **Changes**, el campo **Attribute Key** es un selector: escribe parte del nom
 
 ![Selector de destinos de la pestaña Changes](images/skills/effect-key-picker.webp)
 
-Usa el modo **Add** y escribe el valor. El valor puede ser una **fórmula** (la pista bajo la tabla recuerda las
+Usa el tipo **Add** y escribe el valor. El valor puede ser una **fórmula** (la pista bajo la tabla recuerda las
 variables):
 
 | Texto de la skill | Destino | Valor |
