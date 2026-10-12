@@ -891,7 +891,6 @@
 }
 
 .lhtrpg.sheet.actor .sheet-body .stats .attributes .check h4:lang(ja) {
-
   font-size: 18px;
 }
 
@@ -2060,7 +2059,6 @@
   border: none;
   background-image: url("../assets/ui/inventory/item-bg.webp");
   background-size: contain;
-  border: none;
   background-repeat: no-repeat;
 }
 
