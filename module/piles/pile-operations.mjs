@@ -270,9 +270,10 @@ function tokenContains(token, x, y) {
   return (x >= token.x) && (x < token.x + (token.width * size)) && (y >= token.y) && (y < token.y + (token.height * size));
 }
 
-async function dropItem({ sourceUuid, itemId, itemUuid, quantity, sceneId, x, y }, user) {
+async function dropItem({ sourceUuid, itemId, itemUuid, quantity, sceneId, x, y, level, elevation }, user) {
   const scene = game.scenes.get(sceneId);
   if (!scene) return fail("LHTRPG.Piles.Error.Generic");
+  if (!scene.levels.has(level)) level = scene.initialLevel.id;
 
   let source = null;
   let item;
@@ -295,7 +296,8 @@ async function dropItem({ sourceUuid, itemId, itemUuid, quantity, sceneId, x, y 
   const who = source?.name ?? user.name;
 
   // Dropped over an existing pile: put it inside.
-  const existing = scene.tokens.find(t => isPile(t.actor) && !isMerchant(t.actor) && tokenContains(t, x, y));
+  const existing = scene.tokens.find(t => isPile(t.actor) && !isMerchant(t.actor) && (t.level === level)
+    && tokenContains(t, x, y));
   if (existing) {
     const pile = existing.actor;
     if (source) {
@@ -312,7 +314,9 @@ async function dropItem({ sourceUuid, itemId, itemUuid, quantity, sceneId, x, y 
   // Otherwise, a new loot pile on the floor.
   const base = await getDefaultLootActor();
   const point = scene.grid.getTopLeftPoint({ x, y });
-  const tokenData = (await base.getTokenDocument({ x: point.x, y: point.y, actorLink: false })).toObject();
+  const tokenData = (await base.getTokenDocument({
+    x: point.x, y: point.y, level, elevation: Number(elevation) || 0, actorLink: false
+  })).toObject();
   const itemData = prepareItemData(item, qty);
   itemData._id = foundry.utils.randomID();
   tokenData.delta = { system: { mode: "loot", deleteWhenEmpty: true }, items: [itemData] };

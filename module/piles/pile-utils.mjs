@@ -118,7 +118,8 @@ export function isWithinReach(pile, actor) {
   if (maxDistance < 0) return true;
   const pileTokens = actorTokens(pile);
   const tokens = actorTokens(actor);
-  return pileTokens.some(p => tokens.some(t => (t.parent === p.parent) && (tokenDistance(p, t) <= maxDistance)));
+  return pileTokens.some(p => tokens.some(t => (t.parent === p.parent) && (t.level === p.level)
+    && (tokenDistance(p, t) <= maxDistance)));
 }
 
 /**

@@ -264,7 +264,12 @@ async function _dropItem(data, item, parent) {
     quantity = await promptQuantity(item.name, itemQuantity(item));
     if (!quantity) return;
   }
-  const payload = { sceneId: canvas.scene.id, x: data.x, y: data.y, quantity };
+  // The viewed Level (v14), like core does when an actor is dropped.
+  const level = canvas.level;
+  const payload = {
+    sceneId: canvas.scene.id, x: data.x, y: data.y, quantity,
+    level: level?.id, elevation: data.elevation ?? level?.elevation.base
+  };
   if (parent instanceof Actor) Object.assign(payload, { sourceUuid: parent.uuid, itemId: item.id });
   else payload.itemUuid = data.uuid;
   notify(await request("dropItem", payload));
