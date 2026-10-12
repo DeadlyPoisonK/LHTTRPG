@@ -259,8 +259,7 @@ export class LHTrpgActorMonsterSheet extends HandlebarsApplicationMixin(foundry.
     if (!values) return;
     return new Roll(diceFormula(values)).toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`,
-      rollMode: game.settings.get("core", "rollMode")
+      flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${name}`)}`
     });
   }
 

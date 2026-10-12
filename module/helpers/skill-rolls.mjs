@@ -260,13 +260,12 @@ export async function rollSkill(item, which, { targets } = {}) {
     if (type) flavor += ` (${game.i18n.localize(type)})`;
   }
 
-  const rollMode = game.settings.get("core", "rollMode");
   const attack = (which === "check") && isAttack(item);
   // Automatic success: nothing to roll, just announce it (or hit every target).
   if ((which === "check") && (values.vs === "auto")) {
     if (attack) return createAttackCard(item, item.actor, null, flavor);
     const data = { speaker: ChatMessage.getSpeaker({ actor: item.actor }), flavor: title, content: game.i18n.localize(VS_LABELS.auto) };
-    ChatMessage.applyRollMode(data, rollMode);
+    ChatMessage.applyMode(data);
     return ChatMessage.create(data);
   }
 
@@ -305,5 +304,5 @@ export async function rollSkill(item, which, { targets } = {}) {
     return createDamageCard(item, actor, formula, flavor, attackMessage, defaultTargets, { bonuses: bonusText });
   }
   if (bonusText) flavor += ` (${bonusText})`;
-  return new Roll(formula).toMessage({ speaker: ChatMessage.getSpeaker({ actor }), flavor, rollMode });
+  return new Roll(formula).toMessage({ speaker: ChatMessage.getSpeaker({ actor }), flavor });
 }

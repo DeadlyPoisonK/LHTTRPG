@@ -162,7 +162,7 @@ export async function useItem(item) {
     content: await foundry.applications.handlebars.renderTemplate(USE_CARD, cardData),
     flags: { lhtrpg: { use: { item: itemData, actorUuid: actor.uuid, self } } }
   };
-  ChatMessage.applyRollMode(messageData, game.settings.get("core", "rollMode"));
+  ChatMessage.applyMode(messageData);
   const message = await ChatMessage.create(messageData);
 
   if (consumed) await item.delete();
@@ -395,7 +395,7 @@ async function _migrateItems(items, failed) {
   for (const item of items) {
     if ((item.type !== "gear") || !isUsableGear(item._source.system)) continue;
     try {
-      const update = { type: "usable", "==system": usableSystem(item._source.system) };
+      const update = { type: "usable", system: _replace(usableSystem(item._source.system)) };
       if (item._source.img === GEAR_ICON) update.img = USABLE_ICON;
       await item.update(update, { render: false });
       names.push(item.name);

@@ -579,7 +579,7 @@ export async function migrateActorStatuses(actor) {
     const pursuits = _listValue(badStatus.pursuits);
     if ((pursuit > 0) && !pursuits.length) pursuits.push(pursuit);
     fieldUpdates["system.bad-status.pursuits"] = pursuits;
-    fieldUpdates["system.bad-status.-=pursuit"] = null;
+    fieldUpdates["system.bad-status.pursuit"] = _del;
   }
   // v5: Weakness and Cancel went from a single Rating to a list of `{ value, tag }`
   for (const [old, list] of [["weakness", "weaknesses"], ["cancel", "cancels"]]) {
@@ -588,7 +588,7 @@ export async function migrateActorStatuses(actor) {
     const entries = _listValue(badStatus[list], true);
     if ((rating > 0) && !entries.length) entries.push({ value: rating, tag: "" });
     fieldUpdates[`system.bad-status.${list}`] = entries;
-    fieldUpdates[`system.bad-status.-=${old}`] = null;
+    fieldUpdates[`system.bad-status.${old}`] = _del;
   }
   for (const { status } of cub) {
     if (status.path) {

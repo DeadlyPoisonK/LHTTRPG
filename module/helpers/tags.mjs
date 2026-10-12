@@ -170,7 +170,7 @@ export function registerTags() {
   const clean = tags => {
     if (!Array.isArray(tags)) return null;
     const out = canonicalTags(tags);
-    return foundry.utils.objectsEqual(out, tags) ? null : out;
+    return foundry.utils.equals(out, tags) ? null : out;
   };
   for (const type of ["Item", "Actor"]) {
     Hooks.on(`preCreate${type}`, doc => {
@@ -201,7 +201,7 @@ function tagsUpdate(doc) {
   const tags = doc._source?.system?.tags;
   if (!Array.isArray(tags)) return null;
   const clean = canonicalTags(tags);
-  return foundry.utils.objectsEqual(clean, tags) ? null : { "system.tags": clean };
+  return foundry.utils.equals(clean, tags) ? null : { "system.tags": clean };
 }
 
 async function _migrateDocs(docs) {

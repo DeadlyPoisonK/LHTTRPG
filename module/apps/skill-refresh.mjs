@@ -82,8 +82,7 @@ function effectSignature(effect) {
 /** The old value is the same as the compendium one (extra keys in old objects do not count). */
 function sameValue(current, wanted) {
   if ((wanted === undefined) || (wanted === null)) return true;
-  // (foundry.utils.objectsEqual does not take arrays)
-  if (Array.isArray(wanted)) return JSON.stringify(current ?? []) === JSON.stringify(wanted);
+  if (Array.isArray(wanted)) return foundry.utils.equals(current ?? [], wanted);
   if (typeof wanted === "object") {
     if ((typeof current !== "object") || (current === null)) return false;
     return foundry.utils.isEmpty(foundry.utils.diffObject(current, wanted));
@@ -261,7 +260,7 @@ async function undoRefresh(actors) {
         img: data.img,
         system: data.system,
         "_stats.compendiumSource": data._stats?.compendiumSource ?? null,
-        [`flags.lhtrpg.-=${BACKUP_FLAG}`]: null
+        [`flags.lhtrpg.${BACKUP_FLAG}`]: _del
       }, { lhKeepCheckType: true });
       await replaceEffects(item, data.effects ?? []);
       count++;

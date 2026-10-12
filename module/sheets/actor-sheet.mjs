@@ -515,31 +515,31 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
     const item = target => this.actor.items.get(field(target)?.dataset.itemId);
     new foundry.applications.ux.ContextMenu(element, ".option-menu", [
       {
-        name: "LHTRPG.CharacterOptions.Change",
+        label: "LHTRPG.CharacterOptions.Change",
         icon: '<i class="fa-solid fa-magnifying-glass"></i>',
-        callback: target => OptionBrowser.open(this.actor, field(target).dataset.optionType)
+        onClick: (event, target) => OptionBrowser.open(this.actor, field(target).dataset.optionType)
       },
       {
-        name: "LHTRPG.StatAllocation.Human.Menu",
+        label: "LHTRPG.StatAllocation.Human.Menu",
         icon: '<i class="fa-solid fa-person"></i>',
-        condition: target => isHumanRace(item(target)),
-        callback: target => chooseHumanStats(item(target))
+        visible: target => isHumanRace(item(target)),
+        onClick: (event, target) => chooseHumanStats(item(target))
       },
       {
-        name: "LHTRPG.StatAllocation.Bonus.Menu",
+        label: "LHTRPG.StatAllocation.Bonus.Menu",
         icon: '<i class="fa-solid fa-chart-simple"></i>',
-        condition: target => field(target).dataset.optionType === "class",
-        callback: () => allocateBonusPoints(this.actor)
+        visible: target => field(target).dataset.optionType === "class",
+        onClick: () => allocateBonusPoints(this.actor)
       },
       {
-        name: "LHTRPG.ButtonLabel.Edit",
+        label: "LHTRPG.ButtonLabel.Edit",
         icon: '<i class="fa-solid fa-pen-to-square"></i>',
-        callback: target => item(target)?.sheet.render(true)
+        onClick: (event, target) => item(target)?.sheet.render(true)
       },
       {
-        name: "LHTRPG.ButtonLabel.Delete",
+        label: "LHTRPG.ButtonLabel.Delete",
         icon: '<i class="fa-solid fa-trash"></i>',
-        callback: target => item(target)?.deleteDialog()
+        onClick: (event, target) => item(target)?.deleteDialog()
       }
     ], { eventName: "click", jQuery: false, fixed: true });
   }
@@ -716,8 +716,7 @@ export class LHTrpgActorSheet extends HandlebarsApplicationMixin(foundry.applica
     const formula = diceFormula({ dice, mod: (Number(bonus) || 0) + (Number(mod) || 0) });
     return new Roll(formula).toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${skillName}`)}`,
-      rollMode: game.settings.get("core", "rollMode")
+      flavor: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(`LHTRPG.Check.${skillName}`)}`
     });
   }
 

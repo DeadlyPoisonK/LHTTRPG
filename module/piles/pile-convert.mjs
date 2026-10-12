@@ -70,7 +70,7 @@ function itemChanges(items, mode, ip, dropNonPhysical) {
       continue;
     }
     const update = { _id: item.id, "system.equipped": false };
-    if (item.flags?.["item-piles"]) update["flags.-=item-piles"] = null;
+    if (item.flags?.["item-piles"]) update["flags.item-piles"] = _del;
     if (mode === "merchant") update[`flags.lhtrpg.${STOCK_FLAG}`] = infinite ? -1 : itemQuantity(item);
     updates.push(update);
   }
@@ -99,11 +99,11 @@ export async function convertActorToPile(actor, { mode, dropNonPhysical = true }
   const LIMITED = CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED;
   await actor.update({
     type: PILE_TYPE,
-    "==system": system,
+    system: _replace(system),
     "ownership.default": Math.max(actor.ownership.default ?? 0, LIMITED),
     "flags.lhtrpg.preConversion": { type: source.type, system: source.system, itemPiles: source.flags?.["item-piles"] ?? null }
   });
-  if (actor.flags?.["item-piles"]) await actor.update({ "flags.-=item-piles": null });
+  if (actor.flags?.["item-piles"]) await actor.update({ "flags.item-piles": _del });
 
   // Piles can't hold effects of their own (old statuses, buffs...).
   if (actor.effects.size) await actor.deleteEmbeddedDocuments("ActiveEffect", actor.effects.map(e => e.id));
@@ -136,8 +136,8 @@ async function convertTokenDelta(token, mode, baseIp, dropNonPhysical) {
 
   // Clean the old per-token data (character/monster fields, Item Piles flags).
   const cleanup = {};
-  for (const key of Object.keys(deltaSource.system ?? {})) cleanup[`system.-=${key}`] = null;
-  if (deltaSource.flags?.["item-piles"]) cleanup["flags.-=item-piles"] = null;
+  for (const key of Object.keys(deltaSource.system ?? {})) cleanup[`system.${key}`] = _del;
+  if (deltaSource.flags?.["item-piles"]) cleanup["flags.item-piles"] = _del;
   if (!foundry.utils.isEmpty(cleanup)) await delta.update(cleanup);
 
   // Per-token pile settings, only where they differ from the base actor.

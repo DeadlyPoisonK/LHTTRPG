@@ -472,7 +472,7 @@ export function registerCombatPhases() {
 	});
 
 	Hooks.on("renderCombatTracker", _onRenderCombatTracker);
-	Hooks.on("getCombatTrackerEntryContext", _addStandbyContextOption);
+	Hooks.on("getCombatTrackerContextOptions", _addStandbyContextOption);
 }
 
 function _onRenderCombatTracker(app, html) {
@@ -551,13 +551,13 @@ function _renderCombatantStates(combat, html) {
 
 function _addStandbyContextOption(app, options) {
 	options.unshift({
-		name: "LHTRPG.Combat.Standby",
+		label: "LHTRPG.Combat.Standby",
 		icon: '<i class="fa-solid fa-hourglass-half"></i>',
-		condition: li => {
+		visible: li => {
 			const combat = app.viewed;
 			const combatant = combat?.combatants.get(li.dataset.combatantId);
 			return game.user.isGM && combat instanceof LHTrpgCombat && combat.canStandby(combatant);
 		},
-		callback: () => app.viewed.declareStandby()
+		onClick: () => app.viewed.declareStandby()
 	});
 }

@@ -477,7 +477,7 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
     if (lhFlags) delete lhFlags.statusData;
 
     if (!newStatusId) {
-      if (prevStatusId) foundry.utils.setProperty(submitData, "flags.lhtrpg.-=statusData", null);
+      if (prevStatusId) foundry.utils.setProperty(submitData, "flags.lhtrpg.statusData", _del);
       const statuses = new Set(submitData.statuses ?? this.document.statuses);
       if (prevStatusId) statuses.delete(prevStatusId);
       submitData.statuses = Array.from(statuses);
@@ -490,11 +490,11 @@ export class LHTrpgActiveEffectConfig extends foundry.applications.sheets.Active
         // A number, or a formula ("@sr*5") resolved when a skill applies the effect (item-use.mjs)
         const raw = String(rawStatusData.value ?? "").trim();
         cleanData.value = raw.includes("@") ? raw : Math.max(1, Math.floor(Number(raw) || 0) || 1);
-      } else cleanData["-=value"] = null;
+      } else cleanData.value = _del;
       if (statusInfo?.tagged) {
         const rawTag = String(rawStatusData.tag ?? "").trim();
         cleanData.tag = rawTag ? canonicalTag(rawTag) : "";
-      } else cleanData["-=tag"] = null;
+      } else cleanData.tag = _del;
 
       foundry.utils.setProperty(submitData, "flags.lhtrpg.statusData", cleanData);
 

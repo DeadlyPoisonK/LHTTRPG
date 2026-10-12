@@ -342,7 +342,7 @@ export async function createAttackCard(item, attacker, formula, flavor, { bonuse
     rolls,
     flags: { lhtrpg: { attack: data } }
   };
-  ChatMessage.applyRollMode(messageData, game.settings.get("core", "rollMode"));
+  ChatMessage.applyMode(messageData);
   return ChatMessage.create(messageData);
 }
 
@@ -418,7 +418,7 @@ export async function createDamageCard(item, attacker, formula, flavor, attackMe
     rolls: [roll],
     flags: { lhtrpg: { damage: data } }
   };
-  ChatMessage.applyRollMode(messageData, game.settings.get("core", "rollMode"));
+  ChatMessage.applyMode(messageData);
   return ChatMessage.create(messageData);
 }
 
