@@ -4,6 +4,20 @@ All notable changes to this system since it is maintained by DeadlyPoisonK. Vers
 released by the original author, Kyane (Tenyryas): see the
 [original repository](https://github.com/Tenyryas/lhtrpg).
 
+## [2.0.3] - 2026-10-12
+
+Foundry v13 release (branch `v13`). For v14, the font fix is already in 2.1.0 and the CSS fixes come in
+the next 2.1.x.
+
+### Fixed
+- Inventory, equipment and skill tiles: item frames are no longer cut off and icons sit inside them; with a
+  large inventory the item count and gold stay inside the sheet; the "+" (create item) menu no longer covers
+  its button. Thanks to Tenyryas ([#1](https://github.com/DeadlyPoisonK/LHTTRPG/pull/1)).
+- Sub-tabs: removed stray borders and every tab has the same width; defense icons are centered in the stats
+  tab, and the Japanese attribute rows no longer overlap.
+- The Edu SA Beginner font never loaded since 2.0.0 (a stray `*/` in the font stylesheet); numbers, tab titles
+  and chat card titles used a fallback font.
+
 ## [2.1.0] - 2026-10-11
 
 Requires Foundry VTT **v14** (verified 14.369). Foundry v13 stays on 2.0.x. Back up your world before you
